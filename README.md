@@ -64,5 +64,3 @@ We're aiming for 100% of students to have 100% mastery of the material. This is 
 
 ### So, why do things this way?
  First, and most importantly, in software development, each concept builds upon the previous concept, so absolute mastery of each concept is necessary before moving on. Second, teaching adults over the course of 6 months is a unique situation, and the adults we accept into the program are expected to have the work ethic needed to forge their own path.
-
-For a more in-depth vision of mastery learning at NSS you can read the article [An Alternative for Teaching Software Development](http://www.stevebrownlee.com/alternative-teaching-software-development/)
