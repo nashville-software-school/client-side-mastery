@@ -74,7 +74,7 @@ If you want to have a featured article - one that has slightly different styling
 
 # Practice
 
-You need to create a component for car dealerships to display details about individual cars on their websites. Here are their requirements.
+You need to create a component for car dealerships to display details about individual cars on their websites. Here are their requirements. Follow the conventions of BEM to define all of the classes needed.
 
 1. Each car listing component should be 300px wide, have an ivory background, a 1px khaki border, and 5px of padding on each side.
 1. Each component will display the make and model of the car at the top. Text color must be SlateGray and 18px in size.
