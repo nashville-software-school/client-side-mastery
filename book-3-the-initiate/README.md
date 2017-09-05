@@ -1,6 +1,10 @@
-# Foundations of Software Development
+# Book 3 - The Initiate
 
-You will spend the beginning part of the course gaining knowledge and competance in the foundational skills that you will be (a) in the rest of the course, and (b) throughout your entire career as a software developer.
+In this book, you will build a strong foundation of skills and practices that will serve you throughout the course, and the entirety of your career as a software developer. Once complete, you will be ready to begin your initiation into the world of modern development - using all the tools and libraries that are popular today.
+
+You will learn not only the basics of coding, design, and teamwork skills, but you will also unlock the secrets and power of your computer, making it bend to your will. Your computer is the instrument of the craft, and to become a true professional, you must have proficiency and knowledge of it.
+
+Keyboard shortcuts, terminal usage, and knowledge of bash commands are all needed.
 
 * Chapter 1 - [Command Line Basics](./chapters/CLI_BASICS.md)
 * Chapter 2 - [Semantic HTML](./chapters/HTML_SEMANTIC.md)
@@ -33,7 +37,7 @@ You will spend the beginning part of the course gaining knowledge and competance
 
 **Chatty Project Tickets Assigned**
 
-Once you are strong on these foundational concepts, you will move along to [JavaScript Mastery](../volume-3-javascript-mastery/README.md).
+Once you are strong on these foundational concepts, you will move along to [Book 4 - The Apprentice](../book-4-the-apprentice/README.md).
 
 ---
 
