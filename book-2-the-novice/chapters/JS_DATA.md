@@ -123,31 +123,82 @@ for (let year in RainfallDatabase) {
 1. [JavaScript Storage Interface sessionStorage localStorage Tutorial](https://www.youtube.com/watch?v=klLMeL7I4O0)
 1. [How To Store A JavaScript Array in Local Storage](https://www.youtube.com/watch?v=RbfG7NLKDgQ)
 
-
 # Practice: Home Inventory Data
 
 To practice working with data, you are going to build a home inventory program. You will create a database of unique, or cool, items in your home, their location, and why they are special.
 
 ## Defining Data Collections
 
+Each item in your home will be defined as an object with the following keys.
 
+```js
+// Example objects
+const vintageInkwell = {
+  "name": "Vintage Ink Well",
+  "type": "crafts",
+  "location": "Writing desk",
+  "description": "I enjoy this inkwell because it belonged to my grandfather and holds enough ink to survive weeks of writing."
+}
+
+const writingDesk = {
+  "name": "Shaker Writing Desk",
+  "type": "furniture",
+  "location": "Bedroom",
+  "description": "This antique desk is special because I found and purchased it with my wife at an Ohio Amish auction."
+}
+```
+
+Define at least 10 objects in your home, of at least 3 different types - i.e. crafts, electronics, furniture, etc.
 
 ### Arrays
 
+Define arrays for each type that you have defined.
 
+```js
+// Example arrays
+let crafts = []
+let furniture = []
+let electronics = []
+```
 
 ### Arrays of Objects
 
+Next, place each object that you have defined into the appropriate array.
 
+```js
+crafts.push(vintageInkwell)
+furniture.push(writingDesk)
+```
 
 ## The Database
+
+Now that you have collections of data stored in discrete JavaScript arrays, it's time to define our database object which will contain all of the data.
+
+```js
+// Example database
+const HomeInventory = {
+  "furniture": furniture,
+  "crafts": crafts,
+  "electronics": electronics
+}
+```
 
 ### Unique Identifiers
 
 ## Local Storage
 
-### JSON.stringify
+Now it's time to make your database persistent. Making the data persistent is important because if you just use the code you've written so far, and make changes to the data sets, each time you reload your application in the browser, all of your modifications are gone.
 
-### JSON.parse
+Putting your database in the browser's local storage allows you to make modifications over time and have the data always be up to date with all of your changes.
+
+### JSON.stringify to Store the Data
+
+The `JSON` object allows you to take an in-memory object, and convert it to a string representation of the object that can be saved in local storage. 
+
+```js
+const HomeInventoryString = JSON.stringify(HomeInventory)
+```
+
+### JSON.parse to Read the Data
 
 
