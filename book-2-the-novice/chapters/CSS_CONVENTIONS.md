@@ -64,6 +64,7 @@ If you want to have a featured article - one that has slightly different styling
 
 1. [CSS for BEM](https://en.bem.info/methodology/css/)
 1. [BEM 101](https://css-tricks.com/bem-101/)
+1. [Battling BEM – 5 common problems and how to avoid them](https://medium.com/fed-or-dead/battling-bem-5-common-problems-and-how-to-avoid-them-5bbd23dee319)
 
 # Videos to Watch
 
