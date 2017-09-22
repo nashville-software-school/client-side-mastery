@@ -4,6 +4,8 @@ When we use the word scope in programming, we are talking about some code's acce
 
 Yet the code inside the walls has a special power. It can see outside the walls and access, or modify, that code - as long as that code, itself, is not contained in an equal, or lower scope. More on that in a bit.
 
+To use the true power of [block scopes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block), you need to use the `let` and `const` keywords for declaring variables. If you use `var`, block scope no longer applies, because those variables declared with `var` get [hoisted](https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/). Always use `let` and `const` for variable declarations to avoid unintended side-effects of hoisting.
+
 ## Scopes You Know
 
 You've already encountered several type of scope definitions in the course so far.
@@ -49,7 +51,7 @@ if (dog === "Great Dane")
 {  // Beginning of `if` scope
 
     /*
-        This code can look out into the "higher" scope
+        This code can look out into the "outer" scope
         and modify a variable defined out there.
     */
     const monthlyFoodCost += 23.00
@@ -59,6 +61,8 @@ if (dog === "Great Dane")
 
 ## Function Scope
 
+JavaScript functions also have a block scope, but they also have something called *lexical scope*, also known as *static scope*. We will cover lexical scope later, so for now, we just look at it's block scope.
+
 ```js
 const userWord = document.getElementById("word").innerHTML
 
@@ -66,16 +70,21 @@ function containsVowels (wordParameter)
 {  // Beginning of `function` scope
 
     /*
-        Remember that JavaScript evaluates from right to left.
-        If a, e, i, o, or u are in the word that was passed
-        in as a parameter, the `match()` method would evaluate
-        as `true`, and then `true` would be returned.
+        The `doesItHaveOne` variable can only be accessed
+        within the curly braces of this function. The match()
+        method on a string will return `null` if there
+        are no matches, otherwise, an array will be returned.
     */
-    return wordParameter.match("/aeiou/gi")
+    const doesItHaveOne = wordParameter.match(/aeiou/gi)
+
+    return doesItHaveOne === null
 
 }  // End of `function` scope
 
 const itContainedVowels = containsVowels(userWord)
+
+console.log(itContainedVowels) // true or false
+console.log(doesItHaveOne) // doesItHaveOne is undefined
 ```
 
 ## Introducing Block Scope
@@ -88,17 +97,17 @@ const product = "Mirror"
 
 {
     const order = []
-    order.push(product) // This is fine. Product in higher scope
+    order.push(product) // This is fine. `product` variable in outer scope
 }
 
 /*
     Nope... 
-    Undefined exception thrown. Can't look into lower scopes.
+    Undefined exception thrown. Can't look into inner scopes.
 */
 order.clear() 
 ```
 
-# Videos to Watch
+## Videos to Watch
 
 1. [Keeping Track of "This" in JavaScript](https://www.youtube.com/watch?v=JduQUNn7L4w)
 1. []()
@@ -108,4 +117,180 @@ order.clear()
 
 
 
-# Lexskopistan Exercises
+## Lexscopistan
+
+Welcome to Lexscopistan. A country filled with rich forests, steep mountains, fertile plains, and powerful rivers.
+
+![lexscopistan](./images/lexscopistan.jpg)
+
+The people of Lexscopistan are primarily a nomadic people, with only a handful of permanent settlements and cities. It's capital is Nimap on the northern coast, with a port on the Sea of Mole-Lomit.
+
+Lexscopistanians excel at being able to construct, tear down, and quickly move small, modular settlements they call *sküpes*. The purpose of a sküpe is to process natural resources - timber, minerals, game for meat & furs, water, and crops.
+
+Lexscopistanians set up a sküpe in 1-3 days, including a large, modular wooden barricade surrounding it. This protects them from wild predators and strong winds. Nothing can penetrate this barricade, as it is made out of wood from the *likmura* tree, reknowned for its strength and longevity once treated.
+
+Inside, the Lexscopistanians erect workshops, forges, and living spaces to be used while they gather and process a resource. Right outside the barricade, always on the southern side, large storage containers are used to store the processed goods. Each storage container can hold 21 bushels of food, 150 gallon of water, 15 logs of wood, 567 kilograms of minerals & gems, or 85 furs.
+
+There are two types of sküpes.
+
+## **Staåk-sküpe**
+
+![](./images/staak-skupe.png)
+
+This type is smaller, and more mobile, and is used to very quickly gather renewable resources like water and game. An staåk-sküpe usually only stays constructed in a single location for a few days before it is deconstructed and moved.
+
+Staåk-sküpes are equipped with 10 storage containers.
+
+
+## **Hïep-sküpe**
+
+![](./images/hiep-skupe.png)
+
+This type is larger, sturdier, and is used to not only enclose the workshops and living spaces for Lexscopistanians, but also the resource they are gathering. A hïep-sküpe is used for processing timber and minerals which can take weeks, or sometimes, months to gather and process.
+
+Staåk-sküpes are equipped with 30 storage containers.
+
+## Resource Collecting Application
+
+Your job is to build code representations of resources and sküpes to process those resources. Let's look at an example.
+
+### Staåk-sküpe Operations
+
+```js
+// A field containing four types of crops to process
+// It exists outside of the staåk sküpe.
+let agriculturalField = [
+    {
+        "type": "Corn",
+        "plants": 368
+    }, 
+    {
+        "type": "Wheat",
+        "plants": 452
+    }, 
+    {
+        "type": "Kale",
+        "plants": 212
+    }, 
+    {
+        "type": "Turnip",
+        "plants": 84
+    }
+]
+
+/*
+    Create a sküpe function to process each tree.
+
+    Lexscopistanian food processors can produce 1 bushel of a
+    crop for every 22 plants
+*/
+const cropStaakSkupe = function (rawCrops) {
+    /*
+        Use the array map() method to build up a new array
+        populated with processed crops. Remember that the map
+        method iterates over an array, one item at a time, 
+        and runs the logic in the provided function on each 
+        iteration.
+    */
+    const processedCrops = rawCrops.map(
+        /*
+            Arrow function with an expression body
+            https://mzl.la/1rrAsL3
+        */
+        currentCrop => {
+            /*
+                For each crop, return a new object representing
+                the bushels to store in the containers
+            */
+            return {
+                "type": currentCrop.type,
+                "bushels": Math.floor(currentCrop.plants / 22)
+            }
+        }
+    )
+
+    /*
+        processedCrops is only available within this 
+        function's block scope
+    */
+    return processedCrops
+}
+
+/*
+    Staåk sküpes have 10 storage containers. Is there are more
+    efficient way to generate the storage container objects than
+    manually writing the code for all 10?
+*/
+const CropStorageContainers = [
+    { "id": 1, "type": "Crop", "bushels": [] },
+    { "id": 2, "type": "Crop", "bushels": [] },
+    { "id": 3, "type": "Crop", "bushels": [] },
+    { "id": 4, "type": "Crop", "bushels": [] },
+    { "id": 5, "type": "Crop", "bushels": [] },
+    { "id": 6, "type": "Crop", "bushels": [] },
+    { "id": 7, "type": "Crop", "bushels": [] },
+    { "id": 8, "type": "Crop", "bushels": [] },
+    { "id": 9, "type": "Crop", "bushels": [] },
+    { "id": 10, "type": "Crop", "bushels": [] }
+]
+
+let allBushels = cropStaakSkupe(agriculturalField)
+
+/*
+    Now that the crops have been processed into bushels, you
+    need to place them in the storage containers. Keep in mind
+    that storage containers can hold 21 bushels of food, each.
+
+    1. Iterate over the `allBushels` array
+    2. Look at each object, and get the value of the `bushels`
+       property 
+    3. Do a `for` loop that iterates up to that value
+    4. Insert a new object into a storage container. The object
+       should describe the type of bushel.
+
+         e.g. { "crop": "Wheat" }
+
+    5. Make sure you keep count of how many bushels are in the
+       container, and once it reaches 22, start placing the 
+       objects in the next container.
+*/
+```
+
+
+### Hïep-sküpe Operations
+
+Hïep-sküpes contain the resource they are processing inside the barricade, so their representation in code looks a bit different.
+
+```js
+const gemHiepSkupe = function () { // No parameter needed
+                                   // Resource contained inside
+
+    const GemMine = [
+        {
+            "type": "Onyx",
+
+        }
+    ]
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
