@@ -119,6 +119,8 @@ order.clear()
 
 ## Lexscopistan
 
+> **Objective:** This exercise will have you creating many different _kinds_ of scope and several levels of nesting (i.e. scopes within scopes). It should provide you with many opportunities to access variable in an outer scope, and see how you are prevented from accessing variables in an inner scope.
+
 Welcome to Lexscopistan. A country filled with rich forests, steep mountains, fertile plains, and powerful rivers.
 
 ![lexscopistan](./images/lexscopistan.jpg)
@@ -254,6 +256,11 @@ let allBushels = cropStaakSkupe(agriculturalField)
        container, and once it reaches 22, start placing the 
        objects in the next container.
 */
+allBushels.forEach(
+    /*
+      Write your function for placing bushels into containers here
+    */
+)
 ```
 
 
@@ -265,14 +272,90 @@ Hïep-sküpes contain the resource they are processing inside the barricade, so 
 const gemHiepSkupe = function () { // No parameter needed
                                    // Resource contained inside
 
+
+    /*
+        The gem mine does not exist outside the barricade of the
+        hïep-sküpes. The Lexscopistanians build the barricade
+        around their facility AND the resource.
+
+        a.k.a.
+        Instead of being located in an outer scope to the
+        function, the gem mine is enclosed by the scope of 
+        the `gemHiepSkupe`.
+    */
     const GemMine = [
         {
             "type": "Onyx",
-
+            "kilograms": 453
+        },
+        {
+            "type": "Amethyst",
+            "kilograms": 523
+        },
+        {
+            "type": "Bloodstone",
+            "kilograms": 242
+        },
+        {
+            "type": "Emerald",
+            "kilograms": 169
         }
     ]
+
+    /*
+        Instead of processing the entirety of the resources in
+        bulk - which is what the staak-skupe does - this sküpe
+        will return an object that has a method for processing
+        each type of mineral.
+
+        We're exposing the functionality of this skupe to code
+        in the outer scope, so that the order in which minerals
+        are processed can be customized.
+
+        Hïep-sküpes workshops can process 5 kilograms of a
+        mineral with each work order.
+    */
+    return {
+        "process": function (requestedMineral) {
+            /*
+                Subtract 5 from the total kilograms available in
+                the gem mine, but make sure you stop when there
+                are no minerals left.
+            */
+            if ( /* There are more than 5 of the mineral remaining */ ) {
+                /*
+                    You can reference the `GemMine` variable here
+                    because it lives in an outer scope:
+                      e.g. GemMine[requestedMineral]
+                */
+            }
+        }
+    }
 }
 
+/*
+    The SkupeManager variable represents the object with the
+    `process` method on it.
+*/
+const SkupeManager = gemHiepSkupe()
+
+/*
+    Process the gems in any order you like until there none
+    left in the gem mine.
+*/
+
+
+/*
+    Create 30 storage containers, which is how many a hïep-sküpe
+    is equipped with.
+*/
+
+
+/*
+    Place the gems in the storage containers, making sure that
+    once a container has 567 kilograms of gems, you move to the
+    next one.
+*/
 ```
 
 
