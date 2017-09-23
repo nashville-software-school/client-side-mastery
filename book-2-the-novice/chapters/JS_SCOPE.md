@@ -159,8 +159,42 @@ Your job is to build code representations of resources and sküpes to process th
 ### Staåk-sküpe Operations
 
 ```js
-// A field containing four types of crops to process
-// It exists outside of the staåk sküpe.
+/*
+    Generator functions can be used to generate a value, or object,
+    on demand, until a certain condition is met. The function below
+    defines a generator for crop storage containers. Since staak skupes
+    are used to collect crops, and they use 10 storage containers, 
+    instances of this generator will stop producing containers after the
+    10th one.
+*/
+const cropContainerGenerator = function* () {
+    let currentContainer = 1
+    const maximumContainers = 10
+
+    while (currentContainer <= maximumContainers) {
+        yield { "id": currentContainer, "type": "Crop", "bushels": [] }
+        currentContainer++
+    }
+}
+
+/*
+    Create an instance of the crop container generator function.
+    `cropContainerFactory` will generate 10 containers.
+
+    > cropContainerFactory.next().value
+    { "id": 1, "type": "Crop", "bushels": [] }
+
+    > cropContainerFactory.next().value
+    { "id": 2, "type": "Crop", "bushels": [] }
+
+    etc..
+*/
+const cropContainerFactory = cropContainerGenerator()
+
+/*
+    A field containing four types of crops to process
+    It exists outside of the staåk sküpe.
+*/
 let agriculturalField = [
     {
         "type": "Corn",
@@ -196,56 +230,57 @@ const cropStaakSkupe = function (rawCrops) {
     */
     const processedCrops = rawCrops.map(
         /*
-            Arrow function with an expression body
-            https://mzl.la/1rrAsL3
+            For each crop, return a new object representing
+            the bushels to store in the containers.
+
+            This is an example of an arrow function with an
+            expression body.
+                https://mzl.la/1rrAsL3
         */
-        currentCrop => {
-            /*
-                For each crop, return a new object representing
-                the bushels to store in the containers
-            */
-            return {
-                "type": currentCrop.type,
-                "bushels": Math.floor(currentCrop.plants / 22)
-            }
-        }
+        currentCrop => ({
+            "type": currentCrop.type,
+            "bushels": Math.floor(currentCrop.plants / 22)
+        })
     )
 
     /*
-        processedCrops is only available within this 
-        function's block scope
+        `processedCrops` is only available within the block 
+        scope of this function
     */
     return processedCrops
 }
 
 /*
-    Staåk sküpes have 10 storage containers. Is there are more
-    efficient way to generate the storage container objects than
-    manually writing the code for all 10?
+    Remember that JavaScript is object-oriented, so everything
+    is an object - including functions. Since functions are
+    objects, then you can add key/value pairs to them
 */
-const CropStorageContainers = [
-    { "id": 1, "type": "Crop", "bushels": [] },
-    { "id": 2, "type": "Crop", "bushels": [] },
-    { "id": 3, "type": "Crop", "bushels": [] },
-    { "id": 4, "type": "Crop", "bushels": [] },
-    { "id": 5, "type": "Crop", "bushels": [] },
-    { "id": 6, "type": "Crop", "bushels": [] },
-    { "id": 7, "type": "Crop", "bushels": [] },
-    { "id": 8, "type": "Crop", "bushels": [] },
-    { "id": 9, "type": "Crop", "bushels": [] },
-    { "id": 10, "type": "Crop", "bushels": [] }
-]
+cropStaakSkupe.containers = []
 
+
+/*
+    Construct the sküpe, and import all of the gathered 
+    resources to be processed. The end result is a collection
+    of bushels that need to be stored.
+
+    a.k.a.
+    Invoke the function, and store its return value - an array
+    of objects - in the `allBushels` variable.
+*/
 let allBushels = cropStaakSkupe(agriculturalField)
+
 
 /*
     Now that the crops have been processed into bushels, you
     need to place them in the storage containers. Keep in mind
-    that storage containers can hold 21 bushels of food, each.
+    that storage containers can hold 21 bushels of food.
 
-    1. Iterate over the `allBushels` array
-    2. Look at each object, and get the value of the `bushels`
-       property 
+    1. Open the first container by invoking the `cropContainerFactory`
+       generator function.
+    2. Iterate over the `allBushels` array
+    3. Look at each object, which holds information about the type of
+       resource, and how many bushels were produced, and get the value 
+       of the `bushels` property 
     3. Do a `for` loop that iterates up to that value
     4. Insert a new object into a storage container. The object
        should describe the type of bushel.
@@ -253,14 +288,52 @@ let allBushels = cropStaakSkupe(agriculturalField)
          e.g. { "crop": "Wheat" }
 
     5. Make sure you keep count of how many bushels are in the
-       container, and once it reaches 22, start placing the 
+       container, and once it reaches 21, start placing the 
        objects in the next container.
 */
+
+// Open the first container
+let currentContainer = cropContainerFactory.next().value
+
+// Iterate over the `allBushels` array
 allBushels.forEach(
-    /*
-      Write your function for placing bushels into containers here
-    */
+
+    // Look at each processed crop object
+    currentBushel => {
+
+        // Do a `for` loop that iterates up to number of bushels
+        for (let i = 0; i < currentBushel.bushels; i++) {
+
+            // Insert a new object into a storage container
+            const bushel = {"type": currentBushel.type}
+            currentContainer.bushels.push(bushel)
+
+            // Once capacity is reached, use next storage container
+            if (currentContainer.bushels.length === 21) {
+                cropStaakSkupe.containers.push(currentContainer)
+                currentContainer = cropContainerFactory.next().value
+            }
+        }
+    }
 )
+
+
+/*
+    Try to console.log() any of the values defined in the block scope
+    above, such as `i`, `bushel`, or `currentBushel`
+*/
+
+
+/*
+    If there is a partially fille container left over, add it to the
+    collection of sküpe storage containers.
+*/
+if (currentContainer.bushels.length > 0) {
+    cropStaakSkupe.containers.push(currentContainer)
+}
+
+// Take a look at what's in your containers
+console.log(cropStaakSkupe.containers)
 ```
 
 
@@ -357,14 +430,6 @@ const SkupeManager = gemHiepSkupe()
     next one.
 */
 ```
-
-
-
-
-
-
-
-
 
 
 

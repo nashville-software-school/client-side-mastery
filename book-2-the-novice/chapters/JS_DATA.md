@@ -176,7 +176,7 @@ Now that you have collections of data stored in discrete JavaScript arrays, it's
 
 ```js
 // Example database
-const HomeInventory = {
+let HomeInventory = {
   "furniture": furniture,
   "crafts": crafts,
   "electronics": electronics
@@ -196,9 +196,18 @@ Putting your database in the browser's local storage allows you to make modifica
 The `JSON` object allows you to take an in-memory object, and convert it to a string representation of the object that can be saved in local storage. 
 
 ```js
-const HomeInventoryString = JSON.stringify(HomeInventory)
+const homeInventoryString = JSON.stringify(HomeInventory)
+localStorage.setItem("homeInventory", homeInventoryString)
 ```
 
 ### JSON.parse to Read the Data
 
+To get the value back out of local storage.
 
+```js
+const storedInventory = localStorage.getItem("homeInventory")
+let HomeInventory = JSON.parse(storedInventory)
+
+// or, in combined syntax
+const storedInventory = JSON.parse(localStorage.getItem("homeInventory"))
+```
