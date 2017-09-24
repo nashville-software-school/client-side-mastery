@@ -22,15 +22,15 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 * Chapter 11 - [Manipulating the Browser DOM](./chapters/JS_WORKING_WITH_DOM.md)
 * Chapter 12 - [Modular Code Introduction](./chapters/DESIGN_MODULARITY.md)
 * Chapter 13 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+* Chapter 14 - [How to Research Code](./chapters/MISC_RESEARCH.md)
 
 **Sprint 1 - Company Website**
 
-* Chapter 14 - [Scope & Memory in JavaScript](./chapters/JS_SCOPE.md)
-* Chapter 15 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
-* Chapter 16 - [Joining Related Data Objects](./chapters/JS_JOINING_DATA.md)
-* Chapter 17 - [Handling Browser Events](./chapters/JS_EVENTS.md)
-* Chapter 18 - [How to Research Code](./chapters/MISC_RESEARCH.md)
-* Chapter 19 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
+* Chapter 15 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
+* Chapter 16 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
+* Chapter 17 - [Scope & Memory in JavaScript](./chapters/JS_SCOPE.md)
+* Chapter 18 - [Joining Related Data Objects](./chapters/JS_JOINING_DATA.md)
+* Chapter 19 - [Handling Browser Events](./chapters/JS_EVENTS.md)
 * Chapter 20 - [CSS Naming Conventions](./chapters/CSS_CONVENTIONS.md)
 * Chapter 21 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
 * Chapter 22 - [JavaScript Maps & Modules](./chapters/JS_MODULES.md)
