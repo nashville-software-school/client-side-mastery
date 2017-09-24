@@ -119,6 +119,7 @@ for (let year in RainfallDatabase) {
 1. [Javascript - How to Access Javascript Object Property Names Using A for in LOOP](https://www.youtube.com/watch?v=fDBuAnu0fvo)
 1. [JavaScript Array Reduce in 4 Minutes](https://www.youtube.com/watch?v=tsIAyUQc8Ig)
 1. [JavaScript Reduce Method - Explained with Many Examples](https://www.youtube.com/watch?v=7tAueErVUQU)
+1. **NSS Learning Team video** [JavaScript Array Methods](https://www.youtube.com/watch?v=y2LSiUm29hc&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC&index=2)
 1. [.call() and .apply() - OOP in JavaScript #2](https://www.youtube.com/watch?v=qLhokqv0zxg)
 1. [JavaScript Storage Interface sessionStorage localStorage Tutorial](https://www.youtube.com/watch?v=klLMeL7I4O0)
 1. [How To Store A JavaScript Array in Local Storage](https://www.youtube.com/watch?v=RbfG7NLKDgQ)
