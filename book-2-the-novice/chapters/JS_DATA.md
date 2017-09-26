@@ -126,7 +126,13 @@ for (let year in RainfallDatabase) {
 
 # Practice: Home Inventory Data
 
-To practice working with data, you are going to build a home inventory program. You will create a database of unique, or cool, items in your home, their location, and why they are special.
+To practice working with data, you are going to build a home inventory program. You will create a database of unique, or cool, items in your home, their location, and why they are special. By the end of this practice exercise, you will be able to store a JSON database in the local storage of your browser so that it can be retrieved, and modified again, at any time in the future.
+
+## Setup
+
+In a new directory of your choosing, create an HTML file with a name of `index.html`, and a JavaScript file with a name of `storage.js`. Use a `<script>` tag to load your JavaScript file in the HTML.
+
+In the JavaScript file, you are going to build the database using the guide below.
 
 ## Defining Data Collections
 
@@ -184,8 +190,6 @@ let HomeInventory = {
 }
 ```
 
-### Unique Identifiers
-
 ## Local Storage
 
 Now it's time to make your database persistent. Making the data persistent is important because if you just use the code you've written so far, and make changes to the data sets, each time you reload your application in the browser, all of your modifications are gone.
@@ -212,3 +216,14 @@ let HomeInventory = JSON.parse(storedInventory)
 // or, in combined syntax
 const storedInventory = JSON.parse(localStorage.getItem("homeInventory"))
 ```
+
+## Adding to your Database
+
+Now that you have stored your database, create a 2nd JavaScript file named `additional-storage.js` and include it in your HTML.
+
+Write the code in this new file to complete the following tasks.
+
+1. Load the database from local storage.
+1. Parse the string into a JavaScript object.
+1. Add one new object to each type array in your database (e.g. add a new piece of furniture).
+1. Store the new database back into local storage.
