@@ -37,6 +37,18 @@ Suggested extensions to install
 
 ## For OSX Users Only
 
+### Xcode Command Line Tools
+
+Since you are going to be learning how to be a professional software developer, you will be using your computer terminal heavily. OSX users need to install some baseline tools to use more advanced things later in the course.
+
+Type this command into your terminal, and then wait a while.
+
+```sh
+xcode-select --install
+```
+
+### Command Line Launcher
+
 Set up VS Code to be [launched from the command line](https://code.visualstudio.com/docs/setup/mac).
 
 ### Homebrew
