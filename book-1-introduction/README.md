@@ -83,7 +83,20 @@ Follow the [Github instructions](https://help.github.com/articles/generating-a-n
 
 ### Install Git Bash
 
-Git Bash is a terminal that will allow you to easily work with git and Github. [Download](https://git-for-windows.github.io/) the the installation package and run it.
+Visit the [Git powershell](http://www.git-scm.com/downloads) download page click the "Download for Windows" button, and once complete, install the software. Powershell is a command line utility that allows you to run most Unix command inside a Windows environment. This will help you have the same vernacular as the rest of the class, since having a *nix environment is preferred and is how the class is taught.
+
+### Chocolatey Package Manager
+
+Windows, like OSX, does not have a built in package manager (a fancy term for a piece of software that lets you easily install other software that you need as a developer). There will be times, many weeks into class, as you gain confidence and skill, that you will want to use a package manager. Therefore, if you feel up to the task - meaning, you were able to install all the required software easily - you may want to install Chocolately.
+
+Here's the [official page](https://chocolatey.org/), but it's instructions are written to an audience of existing software developers and may be confusing for a layperson. Here's the basic instructions.
+
+1. Press your Windows key.
+1. Type `cmd` into the search box.
+1. You'll see a black box as the first search result named `cmd`.
+1. Right click that icon and select the "Run as administrator" option. This opens up the _**Windows Command Line**_.
+1. When that starts, copy the following command with Ctrl+C, and once that's done paste it into the command line by right-clicking anywhere in that window.
+  `@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin`
 
 ### Create SSH key
 
