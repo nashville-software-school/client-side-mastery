@@ -74,8 +74,23 @@ mg MyAwesomeApp
 
 It will create the directory and then immeidate `cd` to it.
 
+## What is a Shell?
 
-# Videos to Watch
+At its base, a shell is simply a macro processor that executes commands. The term macro processor means functionality where text and symbols are expanded to create larger expressions.
+
+A Unix shell is both a command interpreter and a programming language. As a command interpreter, the shell provides the user interface to the rich set of GNU utilities. The programming language features allow these utilities to be combined. Files containing commands can be created, and become commands themselves. These new commands have the same status as system commands in directories such as /bin, allowing users or groups to establish custom environments to automate their common tasks.
+
+Shells may be used interactively or non-interactively. In interactive mode, they accept input typed from the keyboard. When executing non-interactively, shells execute commands read from a file.
+
+A shell allows execution of GNU commands, both synchronously and asynchronously. The shell waits for synchronous commands to complete before accepting more input; asynchronous commands continue to execute in parallel with the shell while it reads and executes additional commands. The redirection constructs permit fine-grained control of the input and output of those commands. Moreover, the shell allows control over the contents of commands’ environments.
+
+Shells also provide a small set of built-in commands (builtins) implementing functionality impossible or inconvenient to obtain via separate utilities. For example, cd, break, continue, and exec cannot be implemented outside of the shell because they directly manipulate the shell itself. The history, getopts, kill, or pwd builtins, among others, could be implemented in separate utilities, but they are more convenient to use as builtin commands. All of the shell builtins are described in subsequent sections.
+
+While executing commands is essential, most of the power (and complexity) of shells is due to their embedded programming languages. Like any high-level language, the shell provides variables, flow control constructs, quoting, and functions.
+
+Shells offer features geared specifically for interactive use rather than to augment the programming language. These interactive features include job control, command line editing, command history and aliases. Each of these features is described in this manual.
+
+## Videos to Watch
 
 1. [Bash Basics Part 1 of 8 | Access and Navigation](https://youtu.be/eH8Z9zeywq0?t=885)
 1. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
@@ -83,11 +98,10 @@ It will create the directory and then immeidate `cd` to it.
 1. Go through the CodeAcademy [command line course](https://www.codecademy.com/learn/learn-the-command-line).
 1. [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
 
-
-# Practice
+## Practice
 
 1. Create the following directory structure in your `workspace` directory.
-    ```
+    ```sh
     workspace
     +-- cli
         +-- practice
@@ -95,15 +109,15 @@ It will create the directory and then immeidate `cd` to it.
     ```
 1. `cd` to the `create` directory with one command `cd ~/workspace/cli/practice/create`. Remember to use tab completion.
 1. While in this directory, create a new file named `foo` in the `cli` directory. Do not `cd` to `cli`, but rather use your navigation abilities. 
-    ```
+    ```sh
     touch ../../foo
     ```
 1. Put some simple content in the file using the `echo` command.
-    ```
+    ```sh
     echo 'Foo, I am your father' > ../../foo
     ```
 1. Now use the `cat` command to read those contents.
-    ```
+    ```sh
     cat ../../foo
     ```
 1. Do not change directories, and create a file named `bar` in the `practice` directory.
@@ -120,12 +134,11 @@ It will create the directory and then immeidate `cd` to it.
 
 1. Another process that is done many times during the course is initializing a new git repo on your machine.
 
-    ```
+    ```sh
     git init
     git remote add origin GithubRemoteURL
     touch .gitignore
     ```
 
     Make a function that automates this for you, where you simply type in the function name followed by the new repo URL.
-2. Once you have that working, augment the function to autopopulate the `.gitignore` with standard files and functions that should be ignored with the `echo` command.
-
+1. Once you have that working, augment the function to autopopulate the `.gitignore` with standard files and functions that should be ignored with the `echo` command.
