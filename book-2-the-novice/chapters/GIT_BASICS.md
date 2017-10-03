@@ -89,7 +89,22 @@ Go to Chrome and enter in your site's URL, e.g. `https://stevebrownlee.github.io
 
 ### Building Your Personal Site
 
-Your instruction will provide you with some initial tickets that you will use to build the first version of your personal website.
+Your instruction will provide you with some initial tickets that you will use to build the first version of your personal website. Make sure you add your lead instructor to the list of collaborator on your Github repository so that the tickets can be copied to your project.
+
+Once the issues are copied, add them to your backlog.
+
+### Setting up a Project with a Backlog
+
+1. Open your personal site repository on Github.
+1. Click the *Projects* tab.
+1. Click *Create a project*.
+1. Name your project **_Personal site_**.
+1. Add the following columns to your project.
+    1. Backlog
+    1. Doing
+    1. Done
+
+![new github repo](./images/WhyTBXRKR8.gif)
 
 ## Additional Reading
 
