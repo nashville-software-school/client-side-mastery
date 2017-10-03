@@ -81,11 +81,9 @@ Follow the [Github instructions](https://help.github.com/articles/generating-a-n
 
 ## For Windows Users Only
 
-### Babun Shell for Windows
+### Install Git Bash
 
-Babun is a shell, or terminal, for the Windows operating system that has many cool developer tools built into it.
-
-[Download the program](http://babun.github.io/) and follow the instructions. If you have questions, talk to your instruction team.
+Git Bash is a terminal that will allow you to easily work with git and Github. [Download](https://git-for-windows.github.io/) the the installation package and run it.
 
 ### Create SSH key
 
