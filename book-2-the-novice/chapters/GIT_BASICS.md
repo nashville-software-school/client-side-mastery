@@ -4,10 +4,10 @@ A distributed version control system for keeping a history of your code.
 
 ## Creating a Personal Site Repository
 
-1. Create a directory to store your application's code
+1. Create a directory to store your application's code. Replace *githubusername* with your actual Github username.
     ```sh
     cd
-    mkdir -p workspace/personal-site
+    mkdir -p workspace/githubusername.github.io
     ```
 1. `cd` to that directory
 1. Type in the `git init` command
@@ -43,7 +43,6 @@ Once you make your commit, do a `git status` one more time, and git will tell yo
 ![committed](./images/MubF1SNxS2.gif)
 
 
-+ `git push -u origin master` to push the latest commit(s) to your repo on GitHub. After this longhand command, you can use just `git push`  
 + `git log` to see all of your commits for this repo. `q` to quit git log (if log is long enough)
 
 # Backing Up and Sharing Code on Github
@@ -58,16 +57,18 @@ When you are ready to share your code with your teammates, or the general public
 
 The first thing you need to do is create a new repository on Github's platform that you will use to backup the code on your laptop. Once the repository is created, you will need to copy the connection string for it.
 
-Since this is for your personal site, the name of the repository, you need to follow a special pattern. For example, my username is `stevebrownlee`, so I would type `stevebrownlee.github.io` into the **Repository name** field.
+1. Since this is for your personal site, the name of the repository, you need to follow a special pattern. For example, my username is `stevebrownlee`, so I would type `stevebrownlee.github.io` into the **Repository name** field.
+1. Click the button to create the repository.
+1. Copy the connection string to your clipboard.
 
-Read the detailed instructions on the [Github pages](https://pages.github.com/) site.
+![new github repo](./images/dmQdEprRdY.gif)
 
 ### Add the Connection String Locally
 
 Now you tell your local repository where you would like it to send the code when you're ready to back it up.
 
 ```sh
-git remote add origin add-connection-string-here
+git remote add origin paste-connection-string-here
 ```
 
 Now it's time to do the backup. You use the `git push origin master` command to do that.
@@ -81,6 +82,14 @@ git push origin master
 Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your two files in it.
 
 ![new github repo](./images/oVUMivLlIM.gif)
+
+### Viewing Your New Site
+
+Go to Chrome and enter in your site's URL, e.g. `https://stevebrownlee.github.io`. You should see a blank page, because there is no content in your `index.html`.
+
+### Building Your Personal Site
+
+Your instruction will provide you with some initial tickets that you will use to build the first version of your personal website.
 
 ## Additional Reading
 
