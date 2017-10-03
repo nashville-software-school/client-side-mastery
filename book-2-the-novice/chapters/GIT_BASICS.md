@@ -2,9 +2,13 @@
 
 A distributed version control system for keeping a history of your code.
 
-## Creating a Repository
+## Creating a Personal Site Repository
 
 1. Create a directory to store your application's code
+    ```sh
+    cd
+    mkdir -p workspace/personal-site
+    ```
 1. `cd` to that directory
 1. Type in the `git init` command
 1. You now have a git repository
@@ -30,7 +34,7 @@ Then type `git status` again and git will have a new messages that those two fil
 
 Next, you need to commit your changes. Every time you make a commit, git will keep track of how the code looked at that moment in time, in case you ever need to go back to a previous version. You commit your changes with the following command.
 
-```
+```sh
 git commit -m "A descriptive message about what changes you made in this commit"
 ```
 
@@ -54,19 +58,21 @@ When you are ready to share your code with your teammates, or the general public
 
 The first thing you need to do is create a new repository on Github's platform that you will use to backup the code on your laptop. Once the repository is created, you will need to copy the connection string for it.
 
-![new github repo](./images/mtm0VF02LH.gif)
+Since this is for your personal site, the name of the repository, you need to follow a special pattern. For example, my username is `stevebrownlee`, so I would type `stevebrownlee.github.io` into the **Repository name** field.
+
+Read the detailed instructions on the [Github pages](https://pages.github.com/) site.
 
 ### Add the Connection String Locally
 
 Now you tell your local repository where you would like it to send the code when you're ready to back it up.
 
-```
+```sh
 git remote add origin add-connection-string-here
 ```
 
 Now it's time to do the backup. You use the `git push origin master` command to do that.
 
-```
+```sh
 git push origin master
 ```
 
@@ -74,9 +80,8 @@ git push origin master
 
 Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your two files in it.
 
-
 ![new github repo](./images/oVUMivLlIM.gif)
 
 ## Additional Reading
 
-* [git - the simple guide](http://rogerdudler.github.io/git-guide/)
++ [git - the simple guide](http://rogerdudler.github.io/git-guide/)

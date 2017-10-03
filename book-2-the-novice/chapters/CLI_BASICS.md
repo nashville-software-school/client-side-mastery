@@ -53,22 +53,22 @@ A function let's you combine mutiple commands, and accept parameters for those c
 
 During the course, you will often be creating directories on your file system, and then immediately navigating to that directory.
 
-```
+```sh
 mkdir MyAwesomeApp
 cd MyAwesomeApp
 ```
 
 Let's create a bash function to accelerate that workflow. Open `.zshrc` and enter in the following function.
 
- ```
-mg() { 
+ ```sh
+mg() {
   [ -n "$1" ] && mkdir -p "$@" && cd $_;
 }
  ```
 
 `mg` is shorthand for `make and goto`. Source your init file, and then try it out.
 
-```
+```sh
 mg MyAwesomeApp
 ```
 
