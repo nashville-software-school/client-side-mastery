@@ -8,6 +8,10 @@ Up until now, you didn't have the power to destroy your machine, but within the 
 
 ## Everyone
 
+### Node
+
+Visit the [Node.js](https://www.nodejs.org) site and install the current version of Node - not the LTS release.
+
 ### Install Slack
 
 Do not use the browser-based interface for Slack. Download and use the client. Let us know if you did not get an invitation to the Nashville Software School Slack organization, and we'll send you one immediately.
@@ -67,6 +71,15 @@ Visit the [homebrew home page](http://brew.sh/) and follow the single instructio
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     ```
 
+### Show Hidden Files
+
+While you have your terminal open, enter in the following command.
+
+```sh
+defaults write com.apple.finder AppleShowAllFiles YES
+```
+
+This will allow you to view hidden files in the Finder app.
 
 ### Create SSH key
 
