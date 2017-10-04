@@ -125,13 +125,13 @@ For this exercise, you need to create a single JavaScript function named `addExc
 
 1. If you haven't done so yet, create the `workspace/javascript/overly-excited` directory structure in your home directory. Open your terminal and enter in the following command.
 
-    ```
+    ```sh
     mkdir -p ~/workspace/javascript/overly-excited
     ```
 
 1. Now that you have created the directory, you want to change to that directory so that you can add files to it.
 
-    ```
+    ```sh
     cd ~/workspace/javascript/overly-excited
     ```
 
@@ -139,7 +139,7 @@ For this exercise, you need to create a single JavaScript function named `addExc
 1. Create an `overly-excited.js` file in this directory with the touch command.
 1. Copy the following code and paste it into the `index.html` file. Notice that the `overly-excited.js` file is properly linked so that when you load this HTML file in a web browser, the logic in that file will be executed.
 
-    ```
+    ```html
     <!DOCTYPE html>
     <html>
     <head>
@@ -180,11 +180,11 @@ Paste the following code into overly-excited.js
 
 ```js
 // Create an array that contains the words in the sentence
-var sentence = [];
+let sentence = [];
 
 /*
-    The addExcitement function should be an impure function, and accept 
-    the array as the sole argument. It should iterate over the array 
+    The addExcitement function should be an impure function, and accept
+    the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
 function addExcitement (theWordArray) {
@@ -278,5 +278,5 @@ Watch the video about arrow functions, and see if you can rewrite `addExcitement
 ```js
 // Complete this arrow function template to make your
 // function work with it.
-addExcitement = () => { };
+let addExcitement = () => { };
 ```
