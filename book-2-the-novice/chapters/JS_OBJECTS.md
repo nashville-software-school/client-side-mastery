@@ -1,6 +1,6 @@
 # Objects in JavaScript
 
-Everything in JavaScript is an object. Well, except the 6 primitive types of string, symbol, integer, float, boolean, null, and undefined.
+Everything in JavaScript is an object. Well, except the 7 primitive types of string, symbol, integer, float, boolean, null, and undefined.
 
 Everything **else** is an object.
 
