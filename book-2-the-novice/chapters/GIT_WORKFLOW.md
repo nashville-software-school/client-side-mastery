@@ -4,6 +4,10 @@
 
 ## Rule Number 1
 
+Always create a `.gitignore` file before you start any work on any feature.
+
+## Rule Number 2
+
 Always work on a feature branch `git checkout -b newBranchName`
 
 ## Workflow Overview
