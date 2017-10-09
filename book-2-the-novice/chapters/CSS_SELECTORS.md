@@ -4,7 +4,7 @@ CSS uses selectors to determine which elements the current set of styling should
 
 ## By Id
 
-##### HTML
+### HTML
 
 ```html
 <body>
@@ -12,7 +12,7 @@ CSS uses selectors to determine which elements the current set of styling should
 </body>
 ```
 
-##### CSS
+### CSS
 
 ```css
 #intro {
@@ -29,7 +29,7 @@ CSS uses selectors to determine which elements the current set of styling should
 </body>
 ```
 
-##### CSS
+### CSS
 
 ```css
 .title {
@@ -40,11 +40,11 @@ CSS uses selectors to determine which elements the current set of styling should
 
 ## Descendant Selector
 
-##### HTML
+### HTML
 
 ```html
 <body>
-  <article class="article__container">
+  <article class="article">
     <section class="article__header">
       Welcome to my blog
     </section>
@@ -56,25 +56,28 @@ CSS uses selectors to determine which elements the current set of styling should
       art party scenester pabst chillwave. Distillery 8-bit 
       pabst fashion axe, tousled cloud bread bushwick roof party 
       franzen quinoa fixie.
-      <div class="aside_box--dark dashed">
-        <div class="article__header">
-          Very important box header
-        </div>
-        Messenger bag sriracha tote bag intelligentsia air plant
-        leggings.
+    </section>
+    <aside class="aside_box--dark dashed">
+      <div class="article__header">
+        Very important box header
       </div>
+      Messenger bag sriracha tote bag intelligentsia air plant
+      leggings.
+    </aside>
+    <section class="article__footer">
+      Author: Steve Brownlee
     </section>
   </article>
 </body>
 ```
 
-##### CSS
+### CSS
 
 ```css
 /*
   This will select both of the article__header elements
 */
-.article__container .article__header {
+.article .article__header {
     font-size: 1.85em;
     line-height: 1.2em;
 }
@@ -82,13 +85,36 @@ CSS uses selectors to determine which elements the current set of styling should
 /*
   This will select only the section and ignore the div
 */
-.article__container > .article__header {
+.article > .article__header {
     font-size: 1.85em;
     line-height: 1.2em;
 }
 ```
 
-# Videos to Watch
+## Sibling Selector
+
+```css
+/*
+  This will select only a section that directly follows another section
+*/
+section + section {
+  margin: 20px 0 10px 0;
+}
+
+
+/*
+  This will select all sibling sections regardless if they are direct
+*/
+section ~ section {
+  margin: 20px 0 10px 0;
+}
+```
+
+## Additional Reading
+
+1. [Child and Sibling Selectors](https://css-tricks.com/child-and-sibling-selectors/)
+
+## Videos to Watch
 
 1. [ID's vs Classes](https://www.youtube.com/watch?v=9UNmumTYuq8)
 1. [W3Schools CSS Selectors Tutorial](https://www.youtube.com/watch?v=EeZKHmNJipE)
