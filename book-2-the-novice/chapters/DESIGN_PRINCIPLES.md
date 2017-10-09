@@ -10,16 +10,16 @@ Planning what you are going to do before you do it is the most important factor 
 1. Code for extension. Write code that can easily be extended in the future.
 1. Try to reduce coupling.
 
-# How to Plan
+## How to Plan
 
-## Whiteboard
+### Whiteboard
 
 1. Start by writing down all of the features that are needed for the application.
 1. Then discuss what you think is needed to complete each feature. Write down those tasks.
 1. Next, determine your dependency tree. Draw lines between tasks to visualize the dependencies.
-1. Whichever task no depndencies, or has the least, is usually the task that you should start with.
+1. Whichever task has no dependencies, or has the least, is usually the task that you should start with.
 
-## Code Comments
+### Code Comments
 
 Next, create some boilerplate HTML, CSS, and JavaScript files. In those files, use comments to plan what code you will need to write.
 
@@ -57,23 +57,22 @@ Next, create some boilerplate HTML, CSS, and JavaScript files. In those files, u
 // Iterate the `products` array and add a new DOM element for each product
 ```
 
-## Code & Refactor
+### Code & Refactor
 
 1. Start writing code to implement all of the features, and completes all of the tasks that you defined initially.
 1. Review your code with a critical eye, or better yet, pull in a teammate to review your code and see if any improvements can be made.
 1. Refactor the code, if needed.
 1. Repeat steps 1-3
 
-## Unit Testing
+### Unit Testing
 
 You will learn about something called unit testing. Unit testing provides a way for you to write code that verifies expected behavior of your actual, working code for your product or site.
 
 It protects you from people inadvertantly making code changes that break critical functionality, and protects your business from introducing bugs into the product.
 
+## Principles
 
-# Principles
-
-## Encapsulation
+### Encapsulation
 
 Here's a very official sounding definition of encapsulation
 
@@ -108,11 +107,10 @@ let ConfirmationEmailService = {
 
 You have now encapsulated a very complex abstraction into a single module, and a single method call for other developers to use.
 
-## Single Responsibility Principle
+### Single Responsibility Principle
 
 There is one and only one reason to change a class. More specifically, this principle states that every module or class should have responsibility over a single part of the functionality. Think of your classes as Actors in your software, and what the responsibility of each is.
 
 Once you've defined each Actor and what reponsibility it has in the system, you use those Actors as the foundation for keeping your code DRY, encapsulating all implementation logic within that Actor, and then making sure each method that defines the behavior of the Actor does one thing only.
 
 This means that we should start to think small. Each complex problem cannot easily be solved as a whole. It is much easier to first divide the problem in smaller sub-problems. Each sub-problem has a reduced complexity compared to the overall problem and can then be tackled separately.
-
