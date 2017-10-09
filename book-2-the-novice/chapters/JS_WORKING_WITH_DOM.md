@@ -128,3 +128,59 @@ for (var loopTracker = 0; loopTracker < ???; loopTracker += 1) {
 ```
 
 Update the code to iterate the two arrays provided (`bands` and `vegetables`) and output each element in the arrays into their corresponding HTML `<div>` element. Ensure that each item is in a block element (e.g. li, div, p, etc...)
+
+## Practice - Home Inventory
+
+### Setup
+
+```bash
+mkdir -p ~/workspace/exercises/javascript/inventory-dom && cd $_
+touch index.html
+touch inventory.js
+```
+
+### Requirements
+
+Paste the following code into the `<body>` of the HTML file.
+
+```html
+<html>
+    <head>
+        <title>My Home Inventory</title>
+    </head>
+
+    <body>
+        <article class="inventory">
+
+        </article>
+    </body>
+
+    <!-- Insert your script tag here -->
+</html>
+```
+
+Paste the following code into your JavaScript file.
+
+```js
+const HomeInventory = JSON.parse(localStorage.getItem("homeInventory"))
+```
+
+Your task is to iterate over each object in your home inventory database, and insert a new `section` tag in the `article` tag to represent each item. Each section should follow the format below.
+
+```html
+<section class="furniture">
+    <h2 class="furniture__name">
+        Shaker Writing Desk
+    </h2>
+    <div class="furniture__location">
+        Location: Bedroom
+    </div>
+    <div class="furniture__description">
+        This antique desk is special because I found and purchased it with my wife at an Ohio Amish auction.
+    </div>
+</section>
+```
+
+### Optional Stretch Goal
+
+Have a CSS class for each `type` of object in your inventory. Styles of your choice.
