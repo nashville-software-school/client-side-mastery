@@ -9,7 +9,7 @@
 ## reduce
 
 ## Confused? This may help. 
-(http://github.com/nashville-software-school/client-side-mastery/book-2-the-novice/assets/array_methods.png)
+![emojis](http://github.com/nashville-software-school/client-side-mastery/book-2-the-novice/assets/array_methods.png)
 
 ## Videos to Watch
 
