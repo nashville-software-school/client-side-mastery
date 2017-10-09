@@ -30,11 +30,12 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 * Chapter 16 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
 * Chapter 17 - [Scope & Memory in JavaScript](./chapters/JS_SCOPE.md)
 * Chapter 18 - [Joining Related Data Objects](./chapters/JS_JOINING_DATA.md)
-* Chapter 19 - [Handling Browser Events](./chapters/JS_EVENTS.md)
-* Chapter 20 - [CSS Naming Conventions](./chapters/CSS_CONVENTIONS.md)
-* Chapter 21 - [JavaScript Maps](./chapters/JS_MAPS.md)
-* Chapter 22 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
-* Chapter 23 - [JavaScript Modules](./chapters/JS_MODULES.md)
+* Chapter 19 - [Filtering Data with Array Method](./chapters/JS_ARRAY_METHODS.md)
+* Chapter 20 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 21 - [CSS Naming Conventions](./chapters/CSS_CONVENTIONS.md)
+* Chapter 22 - [JavaScript Maps](./chapters/JS_MAPS.md)
+* Chapter 23 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
+* Chapter 24 - [JavaScript Modules](./chapters/JS_MODULES.md)
 
 **Chatty Project Tickets Assigned**
 
