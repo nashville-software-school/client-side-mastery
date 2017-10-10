@@ -70,6 +70,27 @@ const bananaElement = document.getElementById("banana")
 bananaElement.innerHTML = "Mango"
 ```
 
+## String Templates
+
+Up to this point, you've used `+` to concatenate strings together. Modern JavaScript allows you to use a feature called string templates to build a string by inserting variables directly into the string itself with a special syntax.
+
+```js
+// Old way
+const monkey = "Coco"
+const dolphin = "Winter"
+
+console.log("We saw " + monkey + " the monkey, and " + dolphin + " the dolphin today")
+```
+
+```js
+// New way
+const monkey = "Coco"
+const dolphin = "Winter"
+
+// That first character in the string is called a backtick. It's by the esc key.
+console.log(`We saw ${monkey} the monkey, and ${dolphin} the dolphin today`)
+```
+
 ## Videos to Watch
 
 1. [JavaScript Tutorial For Beginners #33 - Traversing the DOM](https://www.youtube.com/watch?v=SowaJlX1uKA)
