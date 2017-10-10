@@ -103,8 +103,8 @@ Paste the following code into the `<body>` of the HTML file.
 Paste the following code into your JavaScript file.
 
 ```js
-var bands = ["Boyz II Men", "NSync", "New Kids on the Block", "98 Degrees", "One Direction"];
-var vegetables = ["Carrots", "Kale", "Zucchini", "Broccoli", "Squash"];
+let bands = ["Boyz II Men", "NSync", "New Kids on the Block", "98 Degrees", "One Direction"];
+let vegetables = ["Carrots", "Kale", "Zucchini", "Broccoli", "Squash"];
 
 // Get a reference to the appropriate DOM element for bands
 const bandElement = document.getElementById(???);
@@ -113,7 +113,7 @@ const bandElement = document.getElementById(???);
 const veggieElement = ???;
 
 // Execute a for loop that will iterate over the arrays
-for (var loopTracker = 0; loopTracker < ???; loopTracker += 1) {
+for (let loopTracker = 0; loopTracker < ???; loopTracker += 1) {
 
   // Get a reference to the current item in the bands array
   const currentBand = ???;
