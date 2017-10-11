@@ -8,7 +8,7 @@ Up to this point in the course, you've had a single JavaScript file for each of 
 
 For example, you may have code for building your database and getting information out of it, as well as code that deals with making your data available in the DOM for human beings to consume. To modularize this code, you take all code that deals with the database and put it in one file, and the DOM manipulation code in a different one.
 
-> database.js
+> databaseFactory.js
 
 ```js
 const FlowerDatabase = [
@@ -29,7 +29,7 @@ const getFlower = function (id) {
 }
 ```
 
-> domHandler.js
+> domController.js
 
 ```js
 // Use a method defined in a different JavaScript module
