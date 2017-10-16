@@ -119,12 +119,112 @@ console.log(rawIngredients)
 ] // Source data unchanged
 ```
 
-
 ## reduce
 
-## Confused? This may help. 
+The `reduce()` method is for aggregating the data into a single value.
+
+```js
+const monthlyRainfall = [23, 32, 27, 20, 20, 31, 33, 26, 19, 12]
+
+// ES6+ syntax
+const totalRainfall = monthlyRainfall.reduce(
+    (currentTotal, next) => currentTotal + next
+)
+
+// Traditional syntax
+const totalRainfall = monthlyRainfall.reduce(
+    function (currentTotal, next) {
+        return currentTotal + next
+    }
+)
+```
+
+## Other Helpful Methods
+
+* [reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) - Reverses the order of items in the array
+* [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every) - Determine if every item in an array passes a condition
+* [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) - Determine if some of the items in an array passes a condition
+
+[Mozilla Developer Network documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) on every method available on arrays.
+
+## For the Visual Learners
+
 ![emojis](./images/array_methods.png)
 
 ## Videos to Watch
 
-## Practice
+* [6 JavaScript Native Array Functions in 5 Minutes](https://www.youtube.com/watch?v=9ar5ZpBW7NE)
+* [Common Array Methods - Beau teaches JavaScript](https://www.youtube.com/watch?v=MeZVVxLn26E)
+
+## Practice - Solar System
+
+### Setup
+
+These commands are a helpful quick start. You may choose to ignore them completely and create your own directory structure. If you choose to use this recommendation, just copy the commands below and paste. It doesn't matter what directory you are currently in.
+
+```bash
+mkdir -p ~/workspace/exercises/spa/array-methods && cd $_
+touch index.html
+touch array-methods.js
+```
+
+### Requirements
+
+1. Copy the code below into the JavaScript file, and follow the instructions in the comments.
+
+```javascript
+const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
+
+/*
+    Use the forEach method to add the name of each planet
+    to a section element in your HTML with an id of "planets".
+    Use string templates to construct the DOM elements.
+*/
+const planetEl = document.getElementById("planets")
+
+/*
+    Use the map method to create a new array where the 
+    first letter of each planet is capitalized. Use the
+    `toUpperCase()` method on strings.
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+*/
+
+
+/*
+    Use the filter method to create a new array that
+    contains planets with the letter 'e'. Use the `includes()`
+    method on strings.
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+*/
+
+
+// Use the reduce method to create a sentence from the words in the following array
+const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
+```
+
+## Advanced Practice: Chaining Methods
+
+### Setup
+
+These commands are a helpful quick start. You may choose to ignore them completely and create your own directory structure. If you choose to use this recommendation, just copy the commands below and paste. It doesn't matter what directory you are currently in.
+
+```bash
+mkdir -p ~/workspace/exercises/javascript/chaining-methods && cd $_
+touch index.html
+touch chaining.js
+```
+
+### Requirements
+
+Using one single line of JavaScript code, complete the following tasks on the array of integers below.
+
+1. Sort the numbers in descending order (10, 9, 8, 7, etc).
+1. Remove any integers greater than 19.
+1. Multiply each remaining number by 1.5 and then subtract 1.
+1. Then output (either in the DOM or the console) the sum of all the resulting numbers.
+
+```js
+const integers = [13, 25, 6, 3, 11, 2, 18, 7, 21, 1, 29, 20, 12, 8];
+```
