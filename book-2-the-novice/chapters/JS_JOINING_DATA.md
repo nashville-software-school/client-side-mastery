@@ -9,6 +9,14 @@ Database normalization, or simply normalization, is the process of organizing th
 When you normalize your database, you end up with multiple collections of data. Let's look at an example.
 
 ```js
+/*
+    This database is not normalized. Notice how the strings "Candy" and "Electronics"
+    are duplicated several times. Storing the data like this has two ramifications.
+
+    1. More storage space is needed.
+    2. Updating the data is an "expensive operation", because the entire array has
+       to be iterated, and each item has to be updated correctly.
+*/
 const Database = {
     "products": [
         {
@@ -17,22 +25,22 @@ const Database = {
             "type": "Candy"
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "iPad",
             "type": "Electronics"
         },
         {
-            "id": 1,
+            "id": 3,
             "name": "Snickers",
             "type": "Candy"
         },
         {
-            "id": 1,
+            "id": 4,
             "name": "Baby Ruth",
             "type": "Candy"
         },
         {
-            "id": 1,
+            "id": 5,
             "name": "Xbox One",
             "type": "Electronics"
         }
@@ -42,6 +50,11 @@ const Database = {
 
 ### One to Many
 
+The first step towards normalization is to find strings that are repeated many times in the source data, and putting those strings into their own collection. In the example below, "Candy" and "Electronics" are now stored once, and have a unique, numeric identifier. The number 2 takes up far less storage space than the string "Electronics".
+
+Then, I use that unique identifier in place of the string in the `products` data set.
+
+In this, more normalized, database, if I want to change the name of the type for candies to "Confectionary", then I only need to update it in **one place** in the database, instead of iterating over each item, determining if the current value is "Candy" and then changing it to "Confectionary".
 
 ```js
 const Database = {
@@ -85,7 +98,5 @@ const Database = {
 }
 ```
 
-
 ### Many to Many
-
 
