@@ -62,7 +62,7 @@ const rawIngredients = ["cow", "potato", "chicken", "corn"]
     methods defined anonymously, rather than defined
     separately as it was in the previous example.
 */
-rawIngredients.map(function (ingredient) {
+const cookedIngredients = rawIngredients.map(function (ingredient) {
     switch (ingredient) {
         case "cow":
             return "hamburger"
@@ -78,9 +78,47 @@ rawIngredients.map(function (ingredient) {
             break
     }
 })
+
+console.log(cookedIngredients)
+> ​​​​​[ 'hamburger', 'fries', 'drumstick', 'popcorn' ]​​​​​
+
+console.log(rawIngredients)
+> ['cow', 'potato', 'chicken', 'corn'] // Source data unchanged
 ```
 
 ## filter
+
+The `filter()` method is when you want to weed out some of the source data that doesn't meet the criteria for a solution.
+
+```js
+const rawIngredients = [
+    { "name": "cow", "type": "meat" },
+    { "name": "potato", "type": "vegetable" },
+    { "name": "chicken", "type": "meat" },
+    { "name": "corn", "type": "vegetable" }
+]
+
+/*
+    You can also use the new ES6+ function declaration
+    syntax for your anonymous function.
+*/
+const vegetarianIngredients = rawIngredients.filter(ingredient => {
+    const isVegetarian = (ingredient.type === "vegetable")
+    return isVegetarian
+})
+
+console.log(vegetarianIngredients)
+> ​​​​​[ { name: 'potato', type: 'vegetable' },​​​​​
+  ​​​​​  { name: 'corn', type: 'vegetable' } ]​​​​​
+
+console.log(rawIngredients)
+> [ { 'name': 'cow', 'type': 'meat' },
+    { 'name': 'potato', 'type': 'vegetable' },
+    { 'name': 'chicken', 'type': 'meat' },
+    { 'name': 'corn', 'type': 'vegetable' }
+] // Source data unchanged
+```
+
 
 ## reduce
 
