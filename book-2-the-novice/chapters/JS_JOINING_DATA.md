@@ -1,5 +1,9 @@
 # Joining Data in Separate Objects
 
+## Visualizing Relationships Between Data Sets
+
+Entity Relationship Diagrams are used to visualize the relationships in a database. As human, we are visual creatures, and the ERD is the only way for us to understand a large, complex database made of thousands, millions, or billions of points of data.
+
 ## Reduce Storage with Normalization
 
 Database normalization, or simply normalization, is the process of organizing the columns (attributes) and tables (relations) of a relational database to reduce data redundancy and improve data integrity. Normalization is also the process of simplifying the design of a database so that it achieves the optimal structure.
@@ -20,27 +24,27 @@ When you normalize your database, you end up with multiple collections of data. 
 const Database = {
     "products": [
         {
-            "id": 1,
+            "productId": 1,
             "name": "Lollipop",
             "type": "Candy"
         },
         {
-            "id": 2,
+            "productId": 2,
             "name": "iPad",
             "type": "Electronics"
         },
         {
-            "id": 3,
+            "productId": 3,
             "name": "Snickers",
             "type": "Candy"
         },
         {
-            "id": 4,
+            "productId": 4,
             "name": "Baby Ruth",
             "type": "Candy"
         },
         {
-            "id": 5,
+            "productId": 5,
             "name": "Xbox One",
             "type": "Electronics"
         }
@@ -64,41 +68,43 @@ The numeric, unique identifier that we create for each object in our database is
 
 The `productType` property on each `product` object is called a foreign key. It is a primary key value, but that primary key was defined on another, foreign table.
 
+![](./images/one-to-many.png)
+
 ```js
 const Database = {
     "productTypes": [
         {
-            "id": 1,
+            "productTypeId": 1,
             "name": "Candy"
         },
         {
-            "id": 2,
+            "productTypeId": 2,
             "name": "Electronics"
         }
     ],
     "products": [
         {
-            "id": 1, // Primary key for lollipop
+            "productId": 1, // Primary key for lollipop
             "name": "Lollipop",
             "productType": 1 // Foreign key to Candy
         },
         {
-            "id": 2,  // Primary key for iPad
+            "productId": 2,  // Primary key for iPad
             "name": "iPad",
             "productType": 2  // Foreign key to Electronics
         },
         {
-            "id": 3,
+            "productId": 3,
             "name": "Snickers",
             "productType": 1
         },
         {
-            "id": 4,
+            "productId": 4,
             "name": "Baby Ruth",
             "productType": 1
         },
         {
-            "id": 5,
+            "productId": 5,
             "name": "Xbox One",
             "productType": 2
         }
@@ -137,60 +143,61 @@ Also, each family member will be assigned more than one task. Dad is responsible
 
 This is a many-to-many relationship. This will require us to have a data set whose purpose is simply to store those relationships. This allows us maximum flexibility because we can assign any number of family members to a task, and assign any number of taks to a family member.
 
+![](./images/many-to-many.png)
+
 ```js
 const Family = [
     {
-        "id": 1,
+        "familyId": 1,
         "name": "Mom"
     },
     {
-        "id": 2,
+        "familyId": 2,
         "name": "Dad"
     },
     {
-        "id": 3,
+        "familyId": 3,
         "name": "Sarah"
     },
     {
-        "id": 4,
+        "familyId": 4,
         "name": "Blake"
     },
     {
-        "id": 5,
+        "familyId": 5,
         "name": "Sophia"
     },
     {
-        "id": 6,
+        "familyId": 6,
         "name": "Michael"
     }
 ]
 
 const Chores = [
     {
-        "id": 1,
+        "choreId": 1,
         "task": "Paint Garage"
     },
     {
-        "id": 2,
+        "choreId": 2,
         "task": "Take out the trash"
     },
     {
-        "id": 3,
+        "choreId": 3,
         "task": "Do the laundry"
     },
     {
-        "id": 4,
+        "choreId": 4,
         "task": "Clean the bedrooms"
     },
     {
-        "id": 5,
+        "choreId": 5,
         "task": "Family game night"
     },
     {
-        "id": 6,
+        "choreId": 6,
         "task": "Feed the dog"
-    },
-    {
+    }
 ]
 
 /*
@@ -203,27 +210,32 @@ const Chores = [
 */
 const FamilyChores = [
     {
-        "familyMemberId": 1,
+        "familyId": 1,
         "choreId": 4
     },
     {
-        "familyMemberId": 1,
+        "familyId": 1,
         "choreId": 5
     },
     {
-        "familyMemberId": 2,
+        "familyId": 2,
         "choreId": 5
     },
     {
-        "familyMemberId": 2,
+        "familyId": 2,
         "choreId": 3
     }
 ]
+
+const FamilyDatabase = {
+    "family": Family,
+    "chores": Chores,
+    "familyChores": FamilyChores
+}
 ```
 
 ## Videos to Watch
 
 1. [Beginner SQL - 14 - One to Many Relationship](https://www.youtube.com/watch?v=mOkplknUNiU)
 1. [Beginner SQL - 16 - Many to Many Relationship](https://www.youtube.com/watch?v=iLn-lIpm5dU)
-1. [Entity Relationship Diagram (ERD) Tutorial - Part 1
-](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+1. [Entity Relationship Diagram (ERD) Tutorial - Part 1](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
