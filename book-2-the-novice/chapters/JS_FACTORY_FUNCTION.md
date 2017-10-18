@@ -71,6 +71,12 @@ const getNextColor = function* () {
 
 // Create an instance of the generator
 const colorFactory = getNextColor()
+
+// Get the first generated item in the collection
+colorFactory.next.value()  // Red
+
+// Get the next generated item in the collection
+colorFactory.next.value()  // Yellow
 ```
 
 ![generator function](./images/3eMQtdSEY2.gif)
