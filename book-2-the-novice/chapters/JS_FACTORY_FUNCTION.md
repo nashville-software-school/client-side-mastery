@@ -52,8 +52,8 @@ const getNextColor = function () {
     return currentColor
 }
 
-console.log(getColor())  // Red
-console.log(getColor())  // Red
+console.log(getNextColor())  // Red
+console.log(getNextColor())  // Red
 ```
 
 Conversely, the variables in a generator function do not get released between executions.
