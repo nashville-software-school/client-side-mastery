@@ -23,7 +23,7 @@ const generateTrashCan = function (volume = 10) {
         },
         "volume": {
             enumerable: true,
-            value: 10
+            value: volume
         },
         "color": {
             enumerable: true,
