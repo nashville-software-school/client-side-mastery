@@ -38,7 +38,7 @@ for (let i = 0; i <=10; i++)
     loop's scope, and is therefore not capable of accessing
     anything inside it
 */
-console.log(tenPlus)  
+console.log(tenPlus)
 ```
 
 ## If Scope
@@ -104,7 +104,7 @@ const product = "Mirror"
     Nope... 
     Undefined exception thrown. Can't look into inner scopes.
 */
-order.clear() 
+order.clear()
 ```
 
 ## Videos to Watch
@@ -127,42 +127,42 @@ Welcome to Lexscopistan. A country filled with rich forests, steep mountains, fe
 
 The people of Lexscopistan are primarily a nomadic people, with only a handful of permanent settlements and cities. It's capital is Nimap on the northern coast, with a port on the Sea of Mole-Lomit.
 
-Lexscopistanians excel at being able to construct, tear down, and quickly move small, modular settlements they call *sküpes*. The purpose of a sküpe is to process natural resources - timber, minerals, game for meat & furs, water, and crops.
+Lexscopistanians excel at being able to construct, tear down, and quickly move small, modular settlements they call *skopes*. The purpose of a skope is to process natural resources - timber, minerals, game for meat & furs, water, and crops.
 
-Lexscopistanians set up a sküpe in 1-3 days, including a large, modular wooden barricade surrounding it. This protects them from wild predators and strong winds. Nothing can penetrate this barricade, as it is made out of wood from the *likmura* tree, reknowned for its strength and longevity once treated.
+Lexscopistanians set up a skope in 1-3 days, including a large, modular wooden barricade surrounding it. This protects them from wild predators and strong winds. Nothing can penetrate this barricade, as it is made out of wood from the *likmura* tree, reknowned for its strength and longevity once treated.
 
 Inside, the Lexscopistanians erect workshops, forges, and living spaces to be used while they gather and process a resource. Right outside the barricade, always on the southern side, large storage containers are used to store the processed goods. Each storage container can hold 21 bushels of food, 150 gallon of water, 15 logs of wood, 567 kilograms of minerals & gems, or 85 furs.
 
-There are two types of sküpes.
+There are two types of skopes.
 
-## **Staåk-sküpe**
+## **Stack-skope**
 
 ![](./images/staak-skupe.png)
 
-This type is smaller, and more mobile, and is used to very quickly gather renewable resources like water and game. An staåk-sküpe usually only stays constructed in a single location for a few days before it is deconstructed and moved.
+This type is smaller, and more mobile, and is used to very quickly gather renewable resources like water and game. An stack-skope usually only stays constructed in a single location for a few days before it is deconstructed and moved.
 
-Staåk-sküpes are equipped with 10 storage containers.
+Stack-skopes are equipped with 10 storage containers.
 
 
-## **Hïep-sküpe**
+## **Heap-skope**
 
 ![](./images/hiep-skupe.png)
 
-This type is larger, sturdier, and is used to not only enclose the workshops and living spaces for Lexscopistanians, but also the resource they are gathering. A hïep-sküpe is used for processing timber and minerals which can take weeks, or sometimes, months to gather and process.
+This type is larger, sturdier, and is used to not only enclose the workshops and living spaces for Lexscopistanians, but also the resource they are gathering. A heap-skope is used for processing timber and minerals which can take weeks, or sometimes, months to gather and process.
 
-Staåk-sküpes are equipped with 30 storage containers.
+Stack-skopes are equipped with 30 storage containers.
 
 ## Resource Collecting Application
 
-Your job is to build code representations of resources and sküpes to process those resources. Let's look at an example.
+Your job is to build code representations of resources and skopes to process those resources. Let's look at an example.
 
-### Staåk-sküpe Operations
+### Stack-skope Operations
 
 ```js
 /*
     Generator functions can be used to generate a value, or object,
     on demand, until a certain condition is met. The function below
-    defines a generator for crop storage containers. Since staak skupes
+    defines a generator for crop storage containers. Since stack skupes
     are used to collect crops, and they use 10 storage containers, 
     instances of this generator will stop producing containers after the
     10th one.
@@ -193,21 +193,21 @@ const cropContainerFactory = cropContainerGenerator()
 
 /*
     A field containing four types of crops to process
-    It exists outside of the staåk sküpe.
+    It exists outside of the stack skope.
 */
 let agriculturalField = [
     {
         "type": "Corn",
         "plants": 368
-    }, 
+    },
     {
         "type": "Wheat",
         "plants": 452
-    }, 
+    },
     {
         "type": "Kale",
         "plants": 212
-    }, 
+    },
     {
         "type": "Turnip",
         "plants": 84
@@ -215,12 +215,12 @@ let agriculturalField = [
 ]
 
 /*
-    Create a sküpe function to process each tree.
+    Create a skope function to process each tree.
 
     Lexscopistanian food processors can produce 1 bushel of a
     crop for every 22 plants
 */
-const cropStaakSkupe = function (rawCrops) {
+const cropStackSkupe = function (rawCrops) {
     /*
         Use the array map() method to build up a new array
         populated with processed crops. Remember that the map
@@ -255,11 +255,11 @@ const cropStaakSkupe = function (rawCrops) {
     is an object - including functions. Since functions are
     objects, then you can add key/value pairs to them
 */
-cropStaakSkupe.containers = []
+cropStackSkupe.containers = []
 
 
 /*
-    Construct the sküpe, and import all of the gathered 
+    Construct the skope, and import all of the gathered
     resources to be processed. The end result is a collection
     of bushels that need to be stored.
 
@@ -267,7 +267,7 @@ cropStaakSkupe.containers = []
     Invoke the function, and store its return value - an array
     of objects - in the `allBushels` variable.
 */
-let allBushels = cropStaakSkupe(agriculturalField)
+let allBushels = cropStackSkupe(agriculturalField)
 
 
 /*
@@ -279,7 +279,7 @@ let allBushels = cropStaakSkupe(agriculturalField)
        generator function.
     2. Iterate over the `allBushels` array
     3. Look at each object, which holds information about the type of
-       resource, and how many bushels were produced, and get the value 
+       resource, and how many bushels were produced, and get the value
        of the `bushels` property 
     3. Do a `for` loop that iterates up to that value
     4. Insert a new object into a storage container. The object
@@ -310,7 +310,7 @@ allBushels.forEach(
 
             // Once capacity is reached, use next storage container
             if (currentContainer.bushels.length === 21) {
-                cropStaakSkupe.containers.push(currentContainer)
+                cropStackSkupe.containers.push(currentContainer)
                 currentContainer = cropContainerFactory.next().value
             }
         }
@@ -325,68 +325,65 @@ allBushels.forEach(
 
 
 /*
-    If there is a partially fille container left over, add it to the
-    collection of sküpe storage containers.
+    If there is a partially filled container left over, add it to the
+    collection of skope storage containers.
 */
 if (currentContainer.bushels.length > 0) {
-    cropStaakSkupe.containers.push(currentContainer)
+    cropStackSkupe.containers.push(currentContainer)
 }
 
 // Take a look at what's in your containers
-console.log(cropStaakSkupe.containers)
+console.log(cropStackSkope.containers)
 ```
 
+### Heap-skope Operations
 
-### Hïep-sküpe Operations
-
-Hïep-sküpes contain the resource they are processing inside the barricade, so their representation in code looks a bit different.
+Heap-skopes contain the resource they are processing inside the barricade, so their representation in code looks a bit different.
 
 ```js
-const gemHiepSkupe = function () { // No parameter needed
+const gemHeapSkope = function () { // No parameter needed
                                    // Resource contained inside
 
 
     /*
         The gem mine does not exist outside the barricade of the
-        hïep-sküpes. The Lexscopistanians build the barricade
+        heap-skopes. The Lexscopistanians build the barricade
         around their facility AND the resource.
 
         a.k.a.
         Instead of being located in an outer scope to the
-        function, the gem mine is enclosed by the scope of 
-        the `gemHiepSkupe`.
+        function, the gem mine is enclosed by the scope of
+        the `gemHeapSkope` function.
     */
-    const GemMine = [
-        {
-            "type": "Onyx",
+    const GemMine = {
+        "Onyx": {
             "kilograms": 453
         },
-        {
-            "type": "Amethyst",
-            "kilograms": 523
+        "Amethyst": {
+            "kilograms": 453
         },
-        {
-            "type": "Bloodstone",
-            "kilograms": 242
+        "Bloodstone": {
+            "kilograms": 453
         },
-        {
-            "type": "Emerald",
-            "kilograms": 169
+        "Emerald": {
+            "kilograms": 453
         }
-    ]
+    }
 
     /*
         Instead of processing the entirety of the resources in
-        bulk - which is what the staak-skupe does - this sküpe
+        bulk - which is what the stack-skope does - this skope
         will return an object that has a method for processing
         each type of mineral.
 
-        We're exposing the functionality of this skupe to code
+        We're exposing the functionality of this skope to code
         in the outer scope, so that the order in which minerals
         are processed can be customized.
 
-        Hïep-sküpes workshops can process 5 kilograms of a
-        mineral with each work order.
+        Heap-skopes workshops can process 5 kilograms of a
+        mineral with each work order. So every time the `process`
+        function is invoked, subtract 5 from the amount of the
+        requested mineral from the enclosed GemMine above.
     */
     return {
         "process": function (requestedMineral) {
@@ -395,22 +392,27 @@ const gemHiepSkupe = function () { // No parameter needed
                 the gem mine, but make sure you stop when there
                 are no minerals left.
             */
-            if ( /* There are more than 5 of the mineral remaining */ ) {
+            if ( /* 5kg, or more, of the mineral remaining? */ ) {
                 /*
                     You can reference the `GemMine` variable here
                     because it lives in an outer scope:
-                      e.g. GemMine[requestedMineral]
+                      e.g. GemMine[requestedMineral].kilograms
                 */
+            }
+
+            return {
+                "mineral": requestedMineral,
+                "amount": 0 // Change this to the correct amount
             }
         }
     }
 }
 
 /*
-    The SkupeManager variable represents the object with the
+    The SkopeManager variable represents the object with the
     `process` method on it.
 */
-const SkupeManager = gemHiepSkupe()
+const SkopeManager = gemHeapSkope()
 
 /*
     Process the gems in any order you like until there none
@@ -419,7 +421,7 @@ const SkupeManager = gemHiepSkupe()
 
 
 /*
-    Create 30 storage containers, which is how many a hïep-sküpe
+    Create 30 storage containers, which is how many a heap-skope
     is equipped with.
 */
 
