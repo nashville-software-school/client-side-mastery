@@ -131,7 +131,7 @@ Lexscopistanians excel at being able to construct, tear down, and quickly move s
 
 Lexscopistanians set up a skope in 1-3 days, including a large, modular wooden barricade surrounding it. This protects them from wild predators and strong winds. Nothing can penetrate this barricade, as it is made out of wood from the *likmura* tree, reknowned for its strength and longevity once treated.
 
-Inside, the Lexscopistanians erect workshops, forges, and living spaces to be used while they gather and process a resource. Right outside the barricade, always on the southern side, large storage containers are used to store the processed goods. Each storage container can hold 21 bushels of food, 150 gallon of water, 15 logs of wood, 567 kilograms of minerals & gems, or 85 furs.
+Inside, the Lexscopistanians erect workshops, forges, and living spaces to be used while they gather and process a resource. Right outside the barricade, always on the southern side, large storage containers are used to store the processed goods. Each storage container can hold 21 bushels of food, 150 gallon of water, 15 logs of wood, 565 kilograms of minerals & gems, or 85 furs.
 
 There are two types of skopes.
 
@@ -428,7 +428,7 @@ const SkopeManager = gemHeapSkope()
 
 /*
     Place the gems in the storage containers, making sure that
-    once a container has 567 kilograms of gems, you move to the
+    once a container has 565 kilograms of gems, you move to the
     next one.
 */
 ```
