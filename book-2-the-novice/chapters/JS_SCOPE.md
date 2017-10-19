@@ -135,28 +135,28 @@ Inside, the Lexscopistanians erect workshops, forges, and living spaces to be us
 
 There are two types of skopes.
 
-## **Stack-skope**
+## **Stâck-skope**
 
 ![](./images/staak-skupe.png)
 
-This type is smaller, and more mobile, and is used to very quickly gather renewable resources like water and game. An stack-skope usually only stays constructed in a single location for a few days before it is deconstructed and moved.
+This type is smaller, and more mobile, and is used to very quickly gather renewable resources like water and game. An stâck-skope usually only stays constructed in a single location for a few days before it is deconstructed and moved.
 
-Stack-skopes are equipped with 10 storage containers.
+Stâck-skopes are equipped with 10 storage containers.
 
 
-## **Heap-skope**
+## **Hëap-skope**
 
 ![](./images/hiep-skupe.png)
 
-This type is larger, sturdier, and is used to not only enclose the workshops and living spaces for Lexscopistanians, but also the resource they are gathering. A heap-skope is used for processing timber and minerals which can take weeks, or sometimes, months to gather and process.
+This type is larger, sturdier, and is used to not only enclose the workshops and living spaces for Lexscopistanians, but also the resource they are gathering. A hëap-skope is used for processing timber and minerals which can take weeks, or sometimes, months to gather and process.
 
-Stack-skopes are equipped with 30 storage containers.
+Stâck-skopes are equipped with 30 storage containers.
 
 ## Resource Collecting Application
 
 Your job is to build code representations of resources and skopes to process those resources. Let's look at an example.
 
-### Stack-skope Operations
+### Stâck-skope Operations
 
 ```js
 /*
@@ -220,7 +220,7 @@ let agriculturalField = [
     Lexscopistanian food processors can produce 1 bushel of a
     crop for every 22 plants
 */
-const cropStackSkupe = function (rawCrops) {
+const cropStackSkope = function (rawCrops) {
     /*
         Use the array map() method to build up a new array
         populated with processed crops. Remember that the map
@@ -255,7 +255,7 @@ const cropStackSkupe = function (rawCrops) {
     is an object - including functions. Since functions are
     objects, then you can add key/value pairs to them
 */
-cropStackSkupe.containers = []
+cropStackSkope.containers = []
 
 
 /*
@@ -267,7 +267,7 @@ cropStackSkupe.containers = []
     Invoke the function, and store its return value - an array
     of objects - in the `allBushels` variable.
 */
-let allBushels = cropStackSkupe(agriculturalField)
+let allBushels = cropStackSkope(agriculturalField)
 
 
 /*
@@ -310,7 +310,7 @@ allBushels.forEach(
 
             // Once capacity is reached, use next storage container
             if (currentContainer.bushels.length === 21) {
-                cropStackSkupe.containers.push(currentContainer)
+                cropStackSkope.containers.push(currentContainer)
                 currentContainer = cropContainerFactory.next().value
             }
         }
@@ -329,16 +329,16 @@ allBushels.forEach(
     collection of skope storage containers.
 */
 if (currentContainer.bushels.length > 0) {
-    cropStackSkupe.containers.push(currentContainer)
+    cropStackSkope.containers.push(currentContainer)
 }
 
 // Take a look at what's in your containers
 console.log(cropStackSkope.containers)
 ```
 
-### Heap-skope Operations
+### Hëap-skope Operations
 
-Heap-skopes contain the resource they are processing inside the barricade, so their representation in code looks a bit different.
+Hëap-skopes contain the resource they are processing inside the barricade, so their representation in code looks a bit different.
 
 ```js
 const gemHeapSkope = function () { // No parameter needed
@@ -347,7 +347,7 @@ const gemHeapSkope = function () { // No parameter needed
 
     /*
         The gem mine does not exist outside the barricade of the
-        heap-skopes. The Lexscopistanians build the barricade
+        hëap-skopes. The Lexscopistanians build the barricade
         around their facility AND the resource.
 
         a.k.a.
@@ -372,7 +372,7 @@ const gemHeapSkope = function () { // No parameter needed
 
     /*
         Instead of processing the entirety of the resources in
-        bulk - which is what the stack-skope does - this skope
+        bulk - which is what the stâck-skope does - this skope
         will return an object that has a method for processing
         each type of mineral.
 
@@ -380,7 +380,7 @@ const gemHeapSkope = function () { // No parameter needed
         in the outer scope, so that the order in which minerals
         are processed can be customized.
 
-        Heap-skopes workshops can process 5 kilograms of a
+        Hëap-skopes workshops can process 5 kilograms of a
         mineral with each work order. So every time the `process`
         function is invoked, subtract 5 from the amount of the
         requested mineral from the enclosed GemMine above.
@@ -421,7 +421,7 @@ const SkopeManager = gemHeapSkope()
 
 
 /*
-    Create 30 storage containers, which is how many a heap-skope
+    Create 30 storage containers, which is how many a hëap-skope
     is equipped with.
 */
 
