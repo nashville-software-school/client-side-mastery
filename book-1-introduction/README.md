@@ -30,11 +30,12 @@ Visit the [Visual Studio Code](https://code.visualstudio.com/) website to downlo
 
 Suggested extensions to install
 
-1. ESlint
-1. FontSize Shortcuts
-1. Git History
-1. Quokka.js
-1. Debugger for Chrome
+1. [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+1. [FontSize Shortcuts](https://marketplace.visualstudio.com/items?itemName=fosshaas.fontsize-shortcuts)
+1. [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+1. [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
+1. [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+1. [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 ---
 
@@ -62,11 +63,11 @@ Visit the [homebrew home page](http://brew.sh/) and follow the single instructio
 
 1. If you haven't install Homebrew from the previous step, please complete that first.
 1. Install zsh which is a powerful replacement for the standard bash terminal by typing the following command into the terminal
-    ```
+    ```sh
     brew install zsh zsh-completions
     ```
 1. Install [Oh My Zsh](http://ohmyz.sh/) which is a framework for Z shell which makes the terminal a pleasure to work in. Use the following command.
-    ```
+    ```sh
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     ```
 
