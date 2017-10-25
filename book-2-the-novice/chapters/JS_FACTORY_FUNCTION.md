@@ -128,7 +128,13 @@ const instructor = blogObjectFactory("Our instructor", "This guy is a jerk", "ns
 
 In this exercise, you start with a collection of reindeer names. Your task is to add each reindeer name to an HTML `article` element with an `id` of `colored-reindeer`.
 
-In your JavaScript file, paste in the following code.
+ After you read the instructions, your goal is to have three functions.
+
+1. A generator function to yield colors.
+1. A factory function to build a new reindeer object. This function will need to use the generator.
+1. The main builder function (see below) which will call the factory function and then place each object in an array.
+
+To start you off, paste in the following code into your JavaScript file.
 
 ```js
 const coloredReindeerBuilder = function () {
