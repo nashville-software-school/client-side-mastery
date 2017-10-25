@@ -147,7 +147,7 @@ Stâck-skopes are equipped with 10 storage containers.
 
 This type is larger, sturdier, and is used to not only enclose the workshops and living spaces for Lexscopistanians, but also the resource they are gathering. A hëap-skope is used for processing timber and minerals which can take weeks, or sometimes, months to gather and process.
 
-Stâck-skopes are equipped with 30 storage containers.
+Hëap-skopes are equipped with 30 storage containers.
 
 ## Resource Collecting Application
 
