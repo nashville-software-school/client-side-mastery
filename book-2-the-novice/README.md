@@ -30,6 +30,7 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 * Chapter 16 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
 * Chapter 17 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
 * Chapter 18 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 18 - [Using Forms in Single Page Applications](./chapters/FORMS_SPA.md)
 * Chapter 19 - [CSS Naming Conventions](./chapters/CSS_CONVENTIONS.md)
 * Chapter 20 - [Scope & Memory in JavaScript](./chapters/JS_SCOPE.md)
 * Chapter 21 - [Joining Related Data Objects](./chapters/JS_JOINING_DATA.md)
