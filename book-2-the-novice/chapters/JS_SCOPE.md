@@ -418,7 +418,7 @@ const SkopeManager = gemHeapSkope()
 
 
 /*
-    Create 30 storage containers, which is how many a hëap-skope
+    Create a generator for 30 storage containers, which is how many a hëap-skope
     is equipped with.
 */
 
