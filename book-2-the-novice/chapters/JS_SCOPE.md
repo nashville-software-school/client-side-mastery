@@ -430,7 +430,51 @@ const SkopeManager = gemHeapSkope()
 */
 ```
 
-
 ## Final Result
 
 ![Heap Skope Containers](./images/b5BH16c0JO.gif)
+
+## Do You Understand Scope
+
+### Build Your Own Stâck Skope
+
+You are now in charge of building another Stâck Skope whose job is to go to the nearest forest and process the 37 trees available to convert into logs. Lexscopistanian food processors can produce 4 usable logs from every tree.
+
+1. There are 9 trees of Oak available
+1. There are 12 trees of Pine available
+1. There are 6 trees of Ash available
+1. There are 10 trees of Balsa available
+
+Define the forest. Refer to the agricultural field defined above for guidance.
+
+```js
+const forest = []
+```
+
+Define your Stâck Skope.
+
+```js
+const cropStackSkope = function (trees) {
+    // Functionality to convert each tree into 4 logs
+
+    // Start filling up the 10 available storage containers
+}
+```
+
+### Build Your Own Hëap Skope
+
+Now buildi another Hëap Skope whose job is to go to the nearest mountain, where our geologists have discovered that we can build 2 mines. They must be separate mines because the veins originate on opposite sides of the mountain. One mine will produce iron, and copper. The other mine will produce gold, and coal.
+
+The geologists have detected the following amounts in each mine.
+
+#### Mine 1
+
+1. There is 5302kg of coal
+1. There is 2775kg of gold
+
+#### Mine 2
+
+1. There is 3928kg of iron
+1. There is 901kg of copper
+
+Remember, Hëap Skopes enclose all of the resources they are in charge of processing.
