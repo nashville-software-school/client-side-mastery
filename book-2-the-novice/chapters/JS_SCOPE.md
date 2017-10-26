@@ -429,3 +429,8 @@ const SkopeManager = gemHeapSkope()
     next one.
 */
 ```
+
+
+## Final Result
+
+![Heap Skope Containers](./images/b5BH16c0JO.gif)
