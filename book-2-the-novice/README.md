@@ -38,7 +38,7 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 * Chapter 24 - [JavaScript Modules](./chapters/JS_MODULES.md)
 * Chapter 25 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
 
-**Chatty Project Tickets Assigned**
+**Sprint 2 - Nutshell**
 
 Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
 
