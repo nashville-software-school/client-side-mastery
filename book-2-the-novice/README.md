@@ -34,9 +34,9 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 * Chapter 20 - [CSS Naming Conventions](./chapters/CSS_CONVENTIONS.md)
 * Chapter 21 - [Scope & Memory in JavaScript](./chapters/JS_SCOPE.md)
 * Chapter 22 - [Joining Related Data Objects](./chapters/JS_JOINING_DATA.md)
-* Chapter 23 - [JavaScript Maps](./chapters/JS_MAPS.md)
-* Chapter 24 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
-* Chapter 25 - [JavaScript Modules](./chapters/JS_MODULES.md)
+* Chapter 23 - [Task Automation with Grunt](./chapters/AUTOMATION_GRUNT.md)
+* Chapter 24 - [JavaScript Modules](./chapters/JS_MODULES.md)
+* Chapter 25 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
 
 **Chatty Project Tickets Assigned**
 
