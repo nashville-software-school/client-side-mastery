@@ -36,7 +36,8 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 * Chapter 22 - [Joining Related Data Objects](./chapters/JS_JOINING_DATA.md)
 * Chapter 23 - [Task Automation with Grunt](./chapters/AUTOMATION_GRUNT.md)
 * Chapter 24 - [JavaScript Modules](./chapters/JS_MODULES.md)
-* Chapter 25 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
+* Chapter 25 - [Editing Existing Data](./chapters/DATA_EDITING.md)
+* Chapter 26 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
 
 **Sprint 2 - Nutshell**
 
