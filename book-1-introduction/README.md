@@ -26,7 +26,15 @@ Github is the primary site that software developers throughout the world use to 
 
 ### Visual Studio Code
 
-Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor.
+Visual Studio Code is the editor we will all be working on to start the course.
+
+Mac users can run this command from the terminal app to install it.
+
+```sh
+brew cask install visual-studio-code
+```
+
+Windows users must visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor.
 
 Suggested extensions to install
 
