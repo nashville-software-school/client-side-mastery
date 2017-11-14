@@ -1,56 +1,46 @@
 # Asynchronous Programming with XHR
 
-```js
-let songs = []
+We're going to use jQuery to learn asynchronous programming. Asynchronous programming will feel a bit weird at first, because up until this point, you are used to your code working in a clear, one-directional path. Sure, you've learned to split code up into modules, but if you can follow the path of logic through the modules, it's fairly easy to comprehend how the code works.
 
-function xhrWasSuccessful () {
-  // A bit more about what `this` is here. What is the execution context?
-  console.log(this.responseText);
+Async throws a wrench into all of that. The first thing you need to understand is that requesting resources from somewhere on the Internet can take anywhere between 200ms and 5 seconds.
 
-  // Parse the text into an array defined in an outer scope
-  songs = JSON.parse(this.responseText)
-}
+Let's look at an example workflow.
 
-function xhrFailed () {
-  console.log(this.status, this.responseText);
-}
+1. Request weather information for the next 3 days from the Weather Underground service.
+1. When that request completes, build an HTML representation of that data, and update the DOM.
+1. Attach an event listener to the container of all the representations to detect when a user clicks on one.
 
-// Create an XHR object
-var myRequest = new XMLHttpRequest();
-
-// XHR objects emit events when their operation is complete, or an error occurs
-myRequest.addEventListener("load", xhrWasSuccessful);
-myRequest.addEventListener("error", xhrFailed);
-
-// Then tell the XHR object exactly what to do
-myRequest.open("GET", "songs.json");
-
-// Tell the XHR object to start
-myRequest.send();
-```
+Here's some pseudo code.
 
 ```js
-// Contents of songs.json file
-{
-  "songs": [
-    {
-      "title": "The Walk",
-      "artist": "Mayer Hawthorne",
-      "album": "How Do You Do"
-    },
-    {
-      "title": "Medicine",
-      "artist": "Grace Potter",
-      "album": "Grace Potter and the Nocturnals"
-    },
-    {
-      "title": "Legs",
-      "artist": "ZZ Top",
-      "album": "Eliminator"
-    }
-  ]
-}
+const weatherEl = document.querySelector(".weather")
+
+$.ajax({
+  method: "GET",
+  url: "http://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1"
+}).then(function (weatherData) {
+  let weatherInfo = "<section id='weatherContainer'>"
+
+  // Add a <div> for each day in the forecast inside the container
+  weatherData.list.forEach(day => {
+    weatherInfo += `
+      <div class="${day.dt}">
+        ${day.main.temp_min} - ${day.main.temp_max}
+      </div>
+    `
+  })
+
+  weatherInfo += "</section>"
+  weatherEl.innerHTML = weatherInfo
+})
+
+// When user clicks on any of the individual day elements, show the class name
+document.querySelector(".weatherContainer").addEventListener("click", function (event) {
+  console.log(event.target.className)
+})
 ```
+
+This looks like it should work. Yet, it won't. JavaScript will throw an exception saying that it can't invoke `addEventListener` on *undefined*. When JavaScript executes that last line of code, the asynchronous operation of loading the weather data isn't complete yet, so the `.weatherContainer` element doesn't exist yet.
 
 ## Videos to Watch
 
