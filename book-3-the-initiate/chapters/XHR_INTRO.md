@@ -42,9 +42,25 @@ document.querySelector(".weatherContainer").addEventListener("click", function (
 
 This looks like it should work. Yet, it won't. JavaScript will throw an exception saying that it can't invoke `addEventListener` on *undefined*. When JavaScript executes that last line of code, the asynchronous operation of loading the weather data isn't complete yet, so the `.weatherContainer` element doesn't exist yet.
 
+When you make JavaScript perform an XHR, it uses a mechanism called the *event loop* to make the HTTP request, wait for the response, and then execute a callback function that was provided with the request. You are already familiar with this mechanism because you've used event listeners.
+
+When you add an event listener to a DOM element, you provide a callback function that will be executed when that event is triggered. The function isn't executed immediately when JavaScript attaches the listener.
+
+```js
+document.querySelector(".firstName").addEventListener(
+  "keypress",
+  function (event) {    // This function is not executed until a key is pressed
+    console.log(event)
+  }
+)
+```
+
+XHRs work similarly. When an XHR request gets a response, an event is fired. That event is the `load` event. jQuery abstracts that event listener away for you. You don't have to listen for that event. What you do is pass a callback function to the `done()` method on the XHR itself. Inside jQuery, it listens for the `load` event, and when that happens, your callback function is executed.
+
 ## Videos to Watch
 
 1. NSS Learning Team video [JavaScript XHR and Callbacks](https://www.youtube.com/watch?v=2R28EX9QShI&index=6&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC) which shows you how to use callback functions, or lambas, to ensure that asynchronous operations execute in the right order.
+1. [What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
 ## Practice
 
