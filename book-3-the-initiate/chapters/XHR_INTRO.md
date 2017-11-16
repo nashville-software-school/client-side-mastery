@@ -68,8 +68,9 @@ Your job is to build a department store's web page that lists products, the name
 
 The two JSON representations above should be in two files: `products.json`, and `categories.json` (see below). Use jQuery's `ajax()` method to read the data from those files, and then build HTML representations of the data.
 
+> Contents of `products.json` file
+
 ```js
-// Contents of products.json file
 {
   "products": [
     {
@@ -136,8 +137,9 @@ The two JSON representations above should be in two files: `products.json`, and 
 }
 ```
 
+> Contents of `categories.json` file
+
 ```js
-// Contents of categories.json file
 {
   "categories": [
     {
