@@ -64,11 +64,9 @@ XHRs work similarly. When an XHR request gets a response, an event is fired. Tha
 
 ## Practice
 
-Your job is to build a department store's web page that lists products, the name of the department each one is in, and the price. Additionally, put a `<select>` element at the top of the page that contains all possible values of the `season_discount` key in the categories file. As soon as you select one of the seasons, all prices on the page should immediately be discounted by the corresponding percentage.
+Your job is to build a department store's web page that lists products, the name of the department each one is in, and the price.
 
-For example, when _Spring_ is chosen, all products in the corresponding Household category should have their prices updated with a 15% discount off the base price.
-
-The two JSON representations above should be in two files: `products.json`, and `categories.json`. You should load both files via XHRs and store the contents in two different JavaScript variables in your code.
+The two JSON representations above should be in two files: `products.json`, and `categories.json` (see below). Use jQuery's `ajax()` method to read the data from those files, and then build HTML representations of the data.
 
 ```js
 // Contents of products.json file
@@ -163,3 +161,9 @@ The two JSON representations above should be in two files: `products.json`, and 
   ]
 }
 ```
+
+## Discounts
+
+Now that you've populate the view with all of the products, put a `<select>` element at the top of the page that contains all possible values of the `season_discount` key in the categories file. As soon as you select one of the seasons, all prices on the page should immediately be discounted by the corresponding percentage.
+
+For example, when _Spring_ is chosen, all products in the corresponding Household category should have their prices updated with a 15% discount off the base price.
