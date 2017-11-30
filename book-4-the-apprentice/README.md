@@ -13,7 +13,10 @@ In this book, you will build be learning how to use all of the concepts and tool
 
 * Chapter 7 - [CSS Preprocessor](./chapters/SASS.md)
 * Chapter 8 - [Angular Basics](./chapters/ANGULAR_BASICS.md)
-* Chapter 9 - [Angular Factories](./chapters/ANGULAR_FACTORIES.md)
-* Chapter 9 - [Integrating Authentication with Angular](./chapters/ANGULAR_AUTHENTICATION.md)
+* Chapter 9 - [Angular Routing and Factories](./chapters/ANGULAR_FACTORIES.md)
+* Chapter 10 - [Integrating Authentication with Angular](./chapters/ANGULAR_AUTHENTICATION.md)
+* Chapter 11 - [Including Partials into other Partials](./chapters/ANGULAR_INCLUDE.md)
+
+**Capstones**
 
 After completing this book, you will be considered apprentice developers, and will be ready to move on to the final three months of the course. Those final months are your apprenticeship, where you will be trained on how to work on a professional software development team.
