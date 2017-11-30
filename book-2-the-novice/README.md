@@ -26,21 +26,6 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 
 **Sprint 1 - Company Website**
 
-* Chapter 15 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
-* Chapter 16 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
-* Chapter 17 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
-* Chapter 18 - [Handling Browser Events](./chapters/JS_EVENTS.md)
-* Chapter 19 - [Using Forms in Single Page Applications](./chapters/FORMS_SPA.md)
-* Chapter 20 - [CSS Naming Conventions](./chapters/CSS_CONVENTIONS.md)
-* Chapter 21 - [Scope & Memory in JavaScript](./chapters/JS_SCOPE.md)
-* Chapter 22 - [Joining Related Data Objects](./chapters/JS_JOINING_DATA.md)
-* Chapter 23 - [Task Automation with Grunt](./chapters/AUTOMATION_GRUNT.md)
-* Chapter 24 - [JavaScript Modules](./chapters/JS_MODULES.md)
-* Chapter 25 - [Editing Existing Data](./chapters/DATA_EDITING.md)
-* Chapter 26 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
-
-**Sprint 2 - Nutshell**
-
 Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
 
 ---
