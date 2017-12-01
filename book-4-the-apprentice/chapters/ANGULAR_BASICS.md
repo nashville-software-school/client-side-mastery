@@ -209,3 +209,71 @@ Check out this bad boy. Angular can automatically group option elements in the s
 * [A Better Way to Learn Angular](https://thinkster.io/a-better-way-to-learn-angularjs/)
 * [Angular on Code Academy](https://www.codecademy.com/courses/javascript-advanced-en-2hJ3J/0/1)
 * [Angular in 30 Minutes](http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/)
+
+## Practice
+
+You will be writing a simplistic employee management SPA using Angular. You will need to use the `ng-app`, `ng-controller`, `ng-repeat` with the `orderBy` filter, `ng-if`, and `ng-click` directives to complete this.
+
+### Setup
+
+1. Create a new directory named `angular-employees`.
+1. Create `app`, and `lib` sub-directories.
+1. Initialize `lib` with a package.json and install angular from npm.
+1. Create an `index.html` file in the main directory.
+1. Create an `EmployeeCtrl.js` file in the `app` directory.
+1. In that file, create the initial module, and name it `EmployeeMgmt`.
+1. Then create an Angular controller, and name it `EmployeeCtrl`.
+1. Bind the module to the body of your HTML with the `ng-app` directive.
+1. Create a `<section>` tag in your HTML and bind it to the controller with the `ng-controller` directive.
+1. Paste the code below into your Angular controller.
+
+### Requirements
+
+1. Display all employees' full names in an unordered list.
+1. Ensure that employees are ordered by start date, ascending.
+1. Put a button next to each employee labeled `Fire Employee`.
+1. When that button is clicked, change the value of the `employmentEnd` property of that employee to `Date.now()`.
+1. Ensure that only current employees are displayed in the DOM.
+
+
+
+
+```js
+$scope.employees = [
+    {
+        "id": 1,
+        "firstName": "Erin",
+        "lastName": "Orstrom",
+        "employmentStart": 1512140013765,
+        "employmentEnd": null
+    },
+    {
+        "id": 2,
+        "firstName": "Wayne",
+        "lastName": "Hutchinson",
+        "employmentStart": 1512139999102,
+        "employmentEnd": null
+    },
+    {
+        "id": 3,
+        "firstName": "Sarah",
+        "lastName": "Story",
+        "employmentStart": 1512139999729,
+        "employmentEnd": null
+    },
+    {
+        "id": 4,
+        "firstName": "Sulaiman",
+        "lastName": "Allan",
+        "employmentStart": 1512140294571,
+        "employmentEnd": null
+    },
+    {
+        "id": 5,
+        "firstName": "Ben",
+        "lastName": "Marks",
+        "employmentStart": 1512200192934,
+        "employmentEnd": null
+    }
+]
+```
