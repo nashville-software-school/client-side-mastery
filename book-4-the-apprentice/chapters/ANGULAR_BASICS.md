@@ -2,22 +2,24 @@
 
 ## Installation
 
-Create a new folder and do your base project setup with npm and Grunt. However, this time, instead of making a `javascripts` folder, make an `app` folder which will hold all of your JavaScript files. Make sure you update your Gruntfile accordingly.
+Create a new directory named `angular-basics`. Instead of making a `scripts` sub-directory, make an `app` sub-directory which will hold all of your JavaScript files. Also make a `lib` sub-directory to hold all third-party dependencies, and the task runner configuration.
+
+Time to install Angular.
 
 ```bash
 cd lib
 npm install angular --save
 ```
 
-Check your bower.json to make sure you are using a version of angular that is 1.6.x or greater.  Your package.json dependencies should look like the following (instead of an x you will have some number between 0 and 9):
+Check your `package.json` to make sure you are using a version of angular that is 1.6.x or greater.  Your `package.json` dependencies should look like the following (instead of an x you will have some number between 0 and 9):
 
 ```bash
-  dependencies: {
+dependencies: {
     angular: '^1.6.x'
-  }
+}
 ```
 
-Then include Angular in your HTML file.
+Then include the Angular library in your HTML file.
 
 ```html
 <script src="lib/node_modules/angular/angular.min.js"></script>
@@ -32,7 +34,7 @@ var app = angular.module("TodoApp", []);
 The next thing you want to do is create a controller, which is an Angular function where you write related logic for a feature. To start off with, we'll create a controller for displaying, creating, and deleting Todo items.
 
 ```js
-app.controller("TodoCtrl", function($scope) {
+app.controller("TodoCtrl", function ($scope) {
 
 });
 ```
@@ -96,7 +98,7 @@ Now refresh your browser, start typing in the input field and bathe in the aweso
 
 ## Looping over collections
 
-Remember the `{{#each}} {{/each}}` helper in Handlebars? Well, Angular does something very similar. To show this off, let's create an array of Todo items in our controller scope.
+With Angular, the JavaScript code is no longer in charge of how data is displayed, but rather the HTML. The controller simply manages the state of your application's data. Let's put some data in the controller.
 
 ```js
 app.controller("TodoCtrl", function($scope) {
@@ -112,7 +114,7 @@ app.controller("TodoCtrl", function($scope) {
 });
 ```
 
-To output these in our HTML, we use the `ng-repeat` helper. The syntax is different than Handlebars, though.
+To display these in our HTML, we use the `ng-repeat` directive.
 
 ```html
 <div>
