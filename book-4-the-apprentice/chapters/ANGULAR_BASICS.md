@@ -151,22 +151,19 @@ $scope.killTodo = function(todo) {
 
 Try it out.
 
-## Using $http instead of $.ajax()
+## Conditions with ng-if
 
-Angular, of course, provides their own XHR method, so instead of using `$.ajax()` like we've been doing, we must **use all the Angular** and use the built-in `$http` object.
+It doesn't make sense to display tasks that are already done. Let's put a condition on the `<li>` element that ensures it only gets built if the current task is incomplete.
 
-Let's look at an example call to Firebase.
-
-```js
-$http
-  .get("https://socks.firebaseio.com/songs/.json")
-  .then(
-    function(firebaseObjectOfObjects) {
-      for (let songId in firebaseObjectOfObjects) {
-        console.log(firebaseObjectOfObjects[songId])
-      }
-    }
-  );
+```html
+<div>
+  <ul ng-repeat="todo in todos">
+    <li ng-inf="todo.complete === 'incomplete'">
+        {{ todo.name }}
+        <button ng-click="killTodo(todo)">Finish</button>
+    </li>
+  </ul>
+</div>
 ```
 
 ## Filtering
@@ -203,6 +200,24 @@ Check out this bad boy. Angular can automatically group option elements in the s
 </div>
 ```
 
+## Using $http instead of $.ajax()
+
+Angular, of course, provides their own XHR method, so instead of using `$.ajax()` like we've been doing, we must **use all the Angular** and use the built-in `$http` object.
+
+Let's look at an example call to Firebase.
+
+```js
+$http
+    .get("https://socks.firebaseio.com/songs/.json")
+    .then(
+        function(firebaseObjectOfObjects) {
+            for (let songId in firebaseObjectOfObjects) {
+                console.log(firebaseObjectOfObjects[songId])
+            }
+        }
+    )
+```
+
 ## Resources
 
 * [Angular for beginners](http://medialoot.com/blog/angularjs-for-absolute-beginners/)
@@ -237,41 +252,33 @@ You will be writing a simplistic employee management SPA using Angular. You will
 1. When that button is clicked, change the value of the `employmentEnd` property of that employee to `Date.now()`.
 1. Ensure that only current employees are displayed in the DOM.
 
-
-
-
 ```js
 $scope.employees = [
     {
-        "id": 1,
         "firstName": "Erin",
         "lastName": "Orstrom",
         "employmentStart": 1512140013765,
         "employmentEnd": null
     },
     {
-        "id": 2,
         "firstName": "Wayne",
         "lastName": "Hutchinson",
         "employmentStart": 1512139999102,
         "employmentEnd": null
     },
     {
-        "id": 3,
         "firstName": "Sarah",
         "lastName": "Story",
         "employmentStart": 1512139999729,
         "employmentEnd": null
     },
     {
-        "id": 4,
         "firstName": "Sulaiman",
         "lastName": "Allan",
         "employmentStart": 1512140294571,
         "employmentEnd": null
     },
     {
-        "id": 5,
         "firstName": "Ben",
         "lastName": "Marks",
         "employmentStart": 1512200192934,
@@ -279,3 +286,29 @@ $scope.employees = [
     }
 ]
 ```
+
+### Adding Employees
+
+Now, put a form in the section that contains two text inputs - one for first name, and one for last name - with a button. When the form submits, it should add a new employee object to the `$scope.employees` array.
+
+This should get you started.
+
+```html
+<h2>New employee</h2>
+<form ng-submit="">
+    First name: <input type="text" ng-model="">
+    Last name: <input type="text" ng-model="">
+    <button>Hire employee</button>
+</form>
+```
+
+### Nevertheless, they Persisted
+
+You're now able to add to the array of employees, but everytime you refresh the page, those in-memory objects are wiped out and you start with the original objects again. Not ideal.
+
+The next step is for you to create a new Firebase application to store the employees.
+
+Once you create the Firebase application, use `$http` to **GET** the employees and then add the employees that get returned to the `$scope.employees` array. Then update the function you wrote to add an employee array, to do a **POST** to your Firebase table.
+
+```js
+$http
