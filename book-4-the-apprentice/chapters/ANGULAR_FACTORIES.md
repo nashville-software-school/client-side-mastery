@@ -17,7 +17,7 @@ Next, you add the `ng-view` helper to an empty element on your page. Later, when
 Next, add `ng-route` to your angular application.  Inside app.js add the following.
 
 ```js
-const app = angular.module("SongApp", [require('angular-route']);
+const app = angular.module("EmployeeApp", [require('angular-route']);
 ```
 
 ### Partials
@@ -81,15 +81,16 @@ Notice anything strange about the anchor tag there? That's a strange looking URL
 Now that you have a partial, let's start using Angular routing to show it in the element with the `ng-view` attribute. First, we add an add in a new configuration object for our application, and set `$routeProvider` as a dependency.  Add this into your app.js file.
 
 ```js
-app.config(["$routeProvider",
-    function ($routeProvider) {
-        $routeProvider.
-            when("/employees/list", {
+angular.module("EmployeeApp").config(function ($routeProvider) {
+    /**
+     * Configure all Angular application routes here
+     */
+    $routeProvider
+        .when("/employees/list", {
             templateUrl: "app/employees/partials/list.html",
             controller: "EmployeeListCtrl"
         })
-    }
-])
+})
 ```
 
 ### Employee List Controller
@@ -125,18 +126,20 @@ It should display your list of employees.
 Add a new route for `/employees/new` and load the employee form partial.
 
 ```js
-app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/employees/list', {
-        templateUrl: 'app/employees/partials/list.html',
-        controller: 'EmployeeListCtrl'
-      }).
-      when('/employees/new', {
-        templateUrl: 'app/employees/partials/create.html',
-        controller: 'EmployeeCreateCtrl'
-      });
-  }]);
+angular.module("EmployeeApp").config(function ($routeProvider) {
+    /**
+     * Configure all Angular application routes here
+     */
+    $routeProvider
+        .when("/employees/list", {
+            templateUrl: "app/employees/partials/list.html",
+            controller: "EmployeeListCtrl"
+        })
+        .when('/employees/new', {
+            templateUrl: 'app/employees/partials/create.html',
+            controller: 'EmployeeCreateCtrl'
+        })
+})
 ```
 
 > **File:** app/employees/partials/create.html
@@ -158,21 +161,18 @@ app.config(['$routeProvider',
 ```js
 angular
 .module("EmployeeApp")
-.controller("EmployeeCreateCtrl", function ($scope, $http) {
+.controller("EmployeeCreateCtrl", function ($scope, EmployeeFactory) {
     $scope.newEmployee = {}
 
-    $scope.addEmployee = function () {
-        $http({
-            method: "POST",
-            url: "https://{firebase URL}/employees/.json",
-            data: {
-                "firstName": $scope.newEmployee.firstName,
-                "lastName": $scope.newEmployee.lastName,
-                "employmentStart": Date.now(),
-                "employmentEnd": 0
-            }
-        })
-        .then(() => {
+    $scope.hireEmployee = function () {
+        const employee = {
+            "firstName": $scope.newEmployee.firstName,
+            "lastName": $scope.newEmployee.lastName,
+            "employmentStart": Date.now(),
+            "employmentEnd": 0
+        }
+
+        EmployeeFactory.add(employee).then(() => {
             $scope.newEmployee.firstName = ""
             $scope.newEmployee.lastName = ""
         })
@@ -185,18 +185,21 @@ angular
 If you want to redirect the user to a particular route if they enter one that you currently don't have a view for, you can use the `otherwise` method on the route provider.
 
 ```js
-app.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.
-    when('/employees/list', {
-      templateUrl: 'app/employees/partials/list.html',
-      controller: 'EmployeeListCtrl'
-    }).
-    when('/employees/new', {
-      templateUrl: 'app/employees/partials/create.html',
-      controller: 'EmployeeCreateCtrl'
-    }).
-    otherwise('/employees/list');
-}]);
+angular.module("EmployeeApp").config(function ($routeProvider) {
+    /**
+     * Configure all Angular application routes here
+     */
+    $routeProvider
+        .when("/employees/list", {
+            templateUrl: "app/employees/partials/list.html",
+            controller: "EmployeeListCtrl"
+        })
+        .when('/employees/new', {
+            templateUrl: 'app/employees/partials/create.html',
+            controller: 'EmployeeCreateCtrl'
+        })
+        .otherwise('/employees/list')
+})
 ```
 
 Now, if a route is visited at the URL `http://localhost/#!/employees/garbage` then the employee list view will be loaded instead.
@@ -207,7 +210,7 @@ Now, you may be wondering at this point if it's possible to break up this contro
 
 ## Factories
 
-A factory is a way that you can send data between different controllers. Since each controller has its own scope, and another controller cannot access it, a factory acts as the intermediary, an escrow, between controllers.
+A factory is responsible for data operations, and initializing data state. Controllers can then use factories to get data, and manipulate it for a specific purpose, or representation. Since each controller has its own scope, and another controller cannot access it, a factory acts as the intermediary, an escrow, between controllers.
 
 Here's an example.
 
@@ -216,13 +219,23 @@ Let's say that you have two controllers, `EmployeeListCtrl`, which will contain 
 You want one, common, mechanism that both controllers can use to get the list of employees. The factory is born. Let's look at a very simplistic construct, before we get to the XHR example.  First we will create a factories folder in the app folder.  Then we will add an `EmployeeFactory.js` file to that folder.  Inside that file we will add the following:
 
 ```js
-app.factory("EmployeeFactory", function() {
+angular
+.module("EmployeeApp")
+.factory("EmployeeFactory", function ($http) {
     return Object.create(null, {
         "list": {
             value: function () {
                 return $http({
                     method: "GET",
                     url: "https://{firebase URL}/employees/.json"
+                }).then(response => {
+                    const data = response.data
+
+                    // Make an array of objects so we can use filters
+                    return Object.keys(data).map(key => {
+                        data[key].id = key
+                        return data[key]
+                    })
                 })
             }
         },
@@ -236,7 +249,7 @@ app.factory("EmployeeFactory", function() {
         },
         "add": {
             value: function (employee) {
-                $http({
+                return $http({
                     method: "POST",
                     url: "https://{firebase URL}/employees/.json",
                     data: {
@@ -254,6 +267,8 @@ app.factory("EmployeeFactory", function() {
 
 Now, in each of your controllers, you can get all employees, which is what you want in `EmployeeListCtrl`, just get one employee, which is what you want in `EmployeeDetailCtrl`, or add a new employee, which is what you want in `EmployeeCreateCtrl`. The factory is a singleton, meaning there's only, ever, one instance of this factory created, so you'll never have to worry about which version of the employee list you're working with, because there's only one version. Period.
 
+Now update your controllers to use the factory methods.
+
 > **File:** EmployeeListCtrl.js
 
 ```js
@@ -262,10 +277,8 @@ angular
 .controller("EmployeeListCtrl", function ($scope, EmployeeFactory) {
     $scope.employees = []
 
-    EmployeeFactory.list().then(response => {
-        $scope.employees = Object.keys(response.data).map(e => {
-            return response.data[e]
-        })
+    EmployeeFactory.list(true).then(data => {
+        $scope.employees = data
     })
 })
 ```
@@ -294,22 +307,83 @@ angular
 })
 ```
 
-Next we will need to change the controllers on our routes to reflect the above changes.  In `app.js` change the `$routeProvider` configuration to the following:
+![Angular Architecture](../assets/angular-architecture.png)
 
-```js
-angular.module("EmployeeApp").config(["$routeProvider",
-    function ($routeProvider) {
-        $routeProvider.
-            when("/employees/list", {
-                templateUrl: "app/employees/partials/list.html",
-                controller: "EmployeeListCtrl"
-            })
-            .when('/employees/new', {
-              templateUrl: 'app/employees/partials/create.html',
-              controller: 'EmployeeCreateCtrl'
-            })
-    }
-])
+## Employee Details with Route Parameters
+
+You can capture URL parameters into JavaScript variables. For example, in Angular, you can configure a route that detects the following URL...
+
+```sh
+http://localhost:8080/employees/detail/-L-Im-wJVwZJAWG6oOAV
 ```
 
-![Angular Architecture](../assets/angular-architecture.png)
+...and in the controller, immediately access the value of `-L-Im-wJVwZJAWG6oOAV` that's at the end of the URL. Let's see how you do it.
+
+First, define a controller, and inject the Angular dependency of `$routeParams`. This allows you to capture any URL parameter that were captured.
+
+> **FIle:** app/employees/controllers/EmployeeDetailCtrl.js
+
+```js
+angular.module("EmployeeApp")
+.controller("EmployeeDetailCtrl", function ($scope, $routeParams) {
+
+})
+```
+
+### Capture Route Parameter
+
+Configure a new route in your `app.js`. Notice that the URL has a colon in front of `employeeId`. The colon is the magic. It tells Angular routing that anything located at that location in the URL should be captured and be made available in the `$routeParams` object that was injected into the controller.
+
+The new route binds the `detail.html` partial to the `EmployeeDetailCtrl` controller.
+
+```js
+angular.module("EmployeeApp").config(function ($routeProvider) {
+    /**
+     * Configure all Angular application routes here
+     */
+    $routeProvider.
+        when("/employees/list", {
+            templateUrl: "app/employees/partials/list.html",
+            controller: "EmployeeListCtrl"
+        })
+        .when('/employees/new', {
+            templateUrl: 'app/employees/partials/create.html',
+            controller: 'EmployeeCreateCtrl'
+        })
+        .when('/employees/detail/:employeeId', { // <-- Magic happens here
+            templateUrl: 'app/employees/partials/detail.html',
+            controller: 'EmployeeDetailCtrl'
+        })
+        .otherwise('/employees/list')
+})
+```
+
+### Use Route Parameter
+
+Now in the controller, let's use the route parameter to request the employee details.
+
+```js
+angular
+.module("EmployeeApp")
+.controller("EmployeeDetailCtrl",
+    function ($scope, $routeParams,EmployeeFactory) {
+        $scope.employee = {}
+
+        EmployeeFactory.single($routeParams.employeeId).then(employee => {
+            $scope.employee = employee
+        })
+    }
+)
+```
+
+### Displaying Employee Info
+
+Now put the following HTML in your `detail.html` partial.
+
+```html
+<h1>{{ employee.firstName }} {{ employee.lastName }}</h1>
+
+<h3>Started on {{ employee.employmentStart | date:"fullDate" }}</h3>
+```
+
+Go to the employee list and click on one of the employees.
