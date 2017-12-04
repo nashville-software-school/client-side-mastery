@@ -244,6 +244,8 @@ angular
                 return $http({
                     method: "GET",
                     url: `https://{firebase URL}/employees/${key}/.json`
+                }).then(response => {
+                    return response.data
                 })
             }
         },
