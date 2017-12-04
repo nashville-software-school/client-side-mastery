@@ -14,10 +14,10 @@ Next, you add the `ng-view` helper to an empty element on your page. Later, when
 <div ng-view></div>
 ```
 
-Next, add `ng-route` to your angular application.  Inside app.js add the following.
+Next, add the dependency to the `angular-route` package to your application.  Inside `app.js` update your definition of your app module to the following.
 
 ```js
-const app = angular.module("EmployeeApp", [require('angular-route']);
+angular.module("EmployeeApp", ["ngRoute"])
 ```
 
 ### Partials
