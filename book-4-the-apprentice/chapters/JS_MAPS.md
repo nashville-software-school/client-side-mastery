@@ -49,7 +49,6 @@ console.log(friends.has("John"))   // false
 
 ## Add Properties to an Object Without Modifying the Object
 
-
 A huge, but often misunderstood, difference between Object and Map is that the key on a Map can be an Object.
 
 ![WAT??](https://i.giphy.com/media/3o84szkYYORHu98qIw/giphy-downsized.gif)
@@ -66,7 +65,7 @@ That object works fine because the keys are simple strings. What if you wanted t
 
 ```js
 const friend = {
-    { "first_name": "Meg", "last_name": "Ducharme" } : "Meg" 
+    { "first_name": "Meg", "last_name": "Ducharme" } : "Meg"
 }
 // Uncaught SyntaxError: Unexpected token {
 ```
@@ -99,6 +98,43 @@ const totalRainfall = rainfall.inches.reduce(
     (curr, next) => curr + next
 )
 
-rainfallMetaData.set(rainfall, totalRainfall)
-rainfallMetaData.get(rainfall)  // 44
+rainfallMetaData.set(rainfall, {totalRainfall})
+rainfallMetaData.get(rainfall)  // { totalRainfall: 44 }
+```
+
+Now you can store as much meta-data about the raw data that you want. This is what the `rainfallMetaData` Map ends up looking like.
+
+![](../assets/map-visualization.png)
+
+## Practical Use
+
+Consider, for a moment, your personal site. Specifically, your blog entries. Imagine that you want your blog view to show the title of each article, and a short synopsis of each article when it is rendered, instead of the entirety of the article content. You also want to show what order each article is in the timeline of all articles.
+
+```html
+My First Week at NSS
+Post 1 of 22
+
+It's been a whirlwind of getting to know how computers work and the basics ...
+```
+
+To make this work, whenever you render your blog, you need to perform certain calculations.
+
+```js
+const totalArticles = BlogFactory.articles.length
+
+for (let i = 0; i < BlogFactory.articles.length; i++) {
+    const currentArticle = BlogFactory.articles[i]
+
+    const articleHTMLRepresentation = `
+        <h1>${currentArticle.title}</h1>
+        <div>
+            Post ${i + 1} of ${totalArticles}
+        </div>
+        <div>
+            ${currentArticle.content.substring(0,77)}
+        </div>
+    `
+
+    document.querySelector(".articles").innerHTML += articleHTMLRepresentation
+}
 ```
