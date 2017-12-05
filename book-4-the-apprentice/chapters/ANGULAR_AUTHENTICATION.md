@@ -1,211 +1,329 @@
-# Angular Basics
+# Angular and Authentication
 
-## Installation
+## Handling authentication in Angular/Firebase application
 
-Create a new folder and do your base project setup with npm and Grunt. However, this time, instead of making a `javascripts` folder, make an `app` folder which will hold all of your JavaScript files. Make sure you update your Gruntfile accordingly.
+### Getting Firebase Credentials
 
-```bash
-cd lib
-npm install angular --save
+To interface with the Firebase credentialing system, we need to have the Firebase npm package installed. Switch to your `lib` directory and run the following command.
+
+```sh
+npm install firebase --save
 ```
 
-Check your bower.json to make sure you are using a version of angular that is 1.6.x or greater.  Your package.json dependencies should look like the following (instead of an x you will have some number between 0 and 9):
+Access your Firebase console and click *Authentication*.  Then click *Sign-In Method*.  Then click on the method you want to enable.  In this case we will click on *Email/Password*.  Flip the toggle to Enable and hit save.
 
-```bash
-  dependencies: {
-    angular: '^1.6.x'
+Everytime we create a Firebase project we must include our `apiKey` information somewhere secure.  To do this we will create a `app.config.js` file in the app folder and add in the credentials firebase gives us.  The file should contain the following code, but containing your configuration details.
+
+```js
+app.constant("FIREBASE_CONFIG", {
+    apiKey: "YourApiKeyHere",
+    authDomain: "YourAuthDomainHere",
+    databaseURL: "YourDatabaseURLHere",
+    storageBucket: "YourStorageBuckethere",
+    messagingSenderId: "YourMessagingSenderIdHere"
+  })
+```
+
+Then we will add `app/app.config.js` to our `.gitignore` so the keys don't get pushed to github.  In the app folder we will create a `app.config.js.example` file that looks like this:
+
+```js
+app.constant("FIREBASE_CONFIG", {
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    storageBucket: "",
+    messagingSenderId: ""
+})
+```
+
+We will **not** add this to our `.gitignore`.  This way if anyone pulls our code down all they need to do is rename the file to `app.config.js` and add in their firebase credentials and they will be good to run the project (its worth adding this information in your README.md where you list instructions for how to run the project.)
+
+### Register a User
+
+Create the following files and add the JS files as script tags to your index.html:
+
+> **File:** app/auth/controllers/AuthCtrl.js
+
+```js
+app.controller("AuthCtrl", function($scope, AuthFactory) {
+  $scope.auth = {}
+
+  $scope.registerUser = function(registerNewUser) {
+    AuthFactory.registerWithEmail(registerNewUser).then(function(didRegister) {
+      console.log(didRegister)
+    })
   }
+})
 ```
 
-Then include Angular in your HTML file.
-
-```html
-<script src="lib/node_modules/angular/angular.min.js"></script>
-```
-
-Next, create the file `app/Todo.js` and set up your Angular application with the following code.
+> **File:** app/auth/factories/AuthFactory.js
 
 ```js
-var app = angular.module("TodoApp", []);
+angular.module("EmployeeApp")
+.factory("AuthFactory", function($http) {
+    let currentUserData = null
+
+    return Object.create(null, {
+        isAuthenticated: {
+            value: () => {
+                return firebase.auth().currentUser ? true : false
+            }
+        },
+        getUser: {
+            value: () => {
+                return firebase.auth().currentUser
+            }
+        },
+        logout: {
+            value: () => {
+                firebase.auth().signOut()
+            }
+        },
+        authenticate: {
+            value: credentials => {
+                return firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
+            }
+        },
+        registerWithEmail: {
+            value: user => {
+                return firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+            }
+        }
+    })
+})
 ```
 
-The next thing you want to do is create a controller, which is an Angular function where you write related logic for a feature. To start off with, we'll create a controller for displaying, creating, and deleting Todo items.
+> **File:** app/auth/partials/auth.html
 
 ```js
-app.controller("TodoCtrl", function($scope) {
-
-});
-```
-
-## Scope
-
-We've talked about how, in JavaScript, scope drives what variables are accessible at certain points in your code: global scope, function scope, etc. Well, in Angular, the `$scope` object is kind of magical. It will not only contain all of the variables and functions that you want to use inside a controller, but it also automatically bound to variable interpolations in your HTML.  It works just like Handlebars did where a variable in JavaScript could be written with two curly braces in HTML (e.g. `{{ myVariable }}`).
-
-So let's start with a basic example of one-way data binding in Angular.
-
-```js
-app.controller("TodoCtrl", function($scope) {
-  $scope.title = "Welcome to your task list";
-});
-```
-
-In your HTML, there's a couple things that need to be in place to start working with that variable.
-
-1. We need to bind the Angular application to our DOM. The simplest way to do this is on the `<body>` element.
-1. We need to bind a controller to a corresponding DOM element. We'll just bind it to a `<section>` element.
-
-```html
-<body ng-app="TodoApp">
-  <section ng-controller="TodoCtrl">
-
-  </section>
-</body>
-```
-
-Now we can start injecting variable interpolations, just like Handlebars.
-
-```html
-<body ng-app="TodoApp">
-  <section ng-controller="TodoCtrl">
-    <h1>{{ title }}</h1>
-  </section>
-</body>
-```
-
-## Two-way binding
-
-Now let's look at what a magical unicorn looks like. Two-way data binding. Put an input field in your HTML, and use the `ng-model` attribute on it with a value of `macaroni` (just a random variable name for this exercise). Right beneath it, we'll put a standard interpolation of macaroni.
-
-```html
 <div>
-  <input type="text" ng-model="macaroni" />
-  <div> {{ macaroni }} </div>
+    <input type="email" placeholder="Email address" ng-model="auth.email"  autofocus>
+    <input type="password" placeholder="Password" ng-model="auth.password">
+    <button ng-click="registerUser(auth)">Register</button>
 </div>
 ```
 
-Then add a macaroni variable to your controller's scope.
+Then we will need to do a little cleanup on our `app.js`.  We will be breaking this file into two parts so we can inject the firebase credentials.  We also need to add a new route in $routeProvider for authentication.  Modify/create the following files.
+
+> **File:** app/app.config.js
 
 ```js
-app.controller("TodoCtrl", function($scope) {
-  $scope.title = "Welcome to your task list";
-  $scope.macaroni = "";
-});
+angular.module("EmployeeApp").constant("FIREBASE_CONFIG", {
+    apiKey: "your info",
+    authDomain: "your info",
+    databaseURL: "your info",
+    projectId: "your info",
+    storageBucket: "your info",
+    messagingSenderId: "your info"
+})
+
+angular.module("EmployeeApp").run(function (FIREBASE_CONFIG) {
+    firebase.initializeApp(FIREBASE_CONFIG)
+})
+
+angular.module("EmployeeApp").config(function ($routeProvider) {
+    /**
+     * Configure all Angular application routes here
+     */
+    $routeProvider.
+        when("/employees/list", {
+            templateUrl: "app/employees/partials/list.html",
+            controller: "EmployeeListCtrl"
+        })
+        .when('/employees/new', {
+            templateUrl: 'app/employees/partials/create.html',
+            controller: 'EmployeeCreateCtrl'
+        })
+        .when('/employees/detail/:employeeId', {
+            templateUrl: 'app/employees/partials/detail.html',
+            controller: 'EmployeeDetailCtrl'
+        })
+        .when('/auth', {
+            templateUrl: 'app/auth/partials/register.html',
+            controller: 'AuthCtrl'
+        })
+        .otherwise('/auth')
+
+})
 ```
 
-Now refresh your browser, start typing in the input field and bathe in the awesomeness of the magical unicorn of two-way data binding.
-
-## Looping over collections
-
-Remember the `{{#each}} {{/each}}` helper in Handlebars? Well, Angular does something very similar. To show this off, let's create an array of Todo items in our controller scope.
-
-```js
-app.controller("TodoCtrl", function($scope) {
-  $scope.title = "Welcome to your task list";
-  $scope.macaroni = "";
-
-  $scope.todos = [
-    { name: "Mow the lawn", complete: "incomplete" },
-    { name: "Cut the grass", complete: "complete" },
-    { name: "Kill the ants", complete: "incomplete" },
-    { name: "Trim the weeds", complete: "complete" }
-  ];
-});
-```
-
-To output these in our HTML, we use the `ng-repeat` helper. The syntax is different than Handlebars, though.
+Add in the script tag from the firstbase console.  Your script tags should be in the following order:
 
 ```html
-<div>
-  <ul ng-repeat="todo in todos">
-    <li>{{ todo.name }}</li>
-  </ul>
-</div>
+<script src="./lib/node_modules/angular/angular.min.js"></script>
+<script src="./lib/node_modules/firebase/firebase.js"></script>
+<script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+<script src="./app/app.js"></script>
+<script src="./app/app.config.js"></script>
+
+<script src="./app/auth/factories/AuthFactory.js"></script>
+<script src="./app/auth/controllers/AuthCtrl.js"></script>
+
+<script src="./app/employees/factories/EmployeeFactory.js"></script>
+<script src="./app/employees/controllers/EmployeeListCtrl.js"></script>
+<script src="./app/employees/controllers/EmployeeCreateCtrl.js"></script>
+<script src="./app/employees/controllers/EmployeeDetailCtrl.js"></script>
 ```
 
-## Handling click events
+Now try registering a new user.  You should get no errors in your console and if sucessful you should see a big firebase object in your chrome console and a new user in the authentication tab of your firebase console.
 
-So let's put in an affordance to delete each Todo. A button after each one, and the button will use the `ng-click` helper to bind to a function in our controller.
+### Login a User
+
+Now that we have registration working lets get the user logged in.  First we will need to add another button to our auth.html file:
 
 ```html
-<div>
-  <ul ng-repeat="todo in todos">
-    <li>{{ todo.name }} <button ng-click="killTodo(todo)">Finish</button></li>
-  </ul>
-</div>
+<button ng-click="loginUser(auth)">Login</button>
 ```
 
-Add the `killTodo` function to the controller.
+Next we will add the $scope.loginUser function to our AuthCtrl.  We will have this function call a helper function called logMeIn that will do the actual logging in.  The reason for this is for a nicer user experience we want our user to get automatically logged in after they register.  Since this will require the same login code it makes more sense to make a helper function for login instead of duplicating code.  So our AuthCtrl now looks like this:
 
 ```js
-$scope.killTodo = function(todo) {
-  // Do you see the PFM here of full object comparison?
-  var todoIndex = $scope.todos.indexOf(todo);
+angular.module("EmployeeApp")
+.controller("AuthCtrl", function($scope, $location, AuthFactory) {
+    $scope.auth = {}
 
-  if (todoIndex >= 0) {
-    $scope.todos.splice(todoIndex, 1);
-  }
-};
-```
-
-Try it out.
-
-## Using $http instead of $.ajax()
-
-Angular, of course, provides their own XHR method, so instead of using `$.ajax()` like we've been doing, we must **use all the Angular** and use the built-in `$http` object.
-
-Let's look at an example call to Firebase.
-
-```js
-$http
-  .get("https://socks.firebaseio.com/songs/.json")
-  .then(
-    function(firebaseObjectOfObjects) {
-      for (let songId in firebaseObjectOfObjects) {
-        console.log(firebaseObjectOfObjects[songId])
-      }
+    $scope.logMeIn = function (credentials) {
+        AuthFactory.authenticate(credentials).then(function (didLogin) {
+            $scope.login = {}
+            $scope.register = {}
+            $location.url("/employees/list")
+        })
     }
-  );
+
+    $scope.registerUser = function(registerNewUser) {
+      AuthFactory.registerWithEmail(registerNewUser).then(function (didRegister) {
+        logMeIn(registerNewUser)
+      })
+    }
+
+})
 ```
 
-## Filtering
+Now try registering a user AND logging a user in.  If done sucessfully you should notice a Firebase token appear in your local storage.
 
-Let's filter our list of Todos. Add an input field where we can enter in some text.
+### User Logout
+
+The final functionality we need for authentication is the ability to logout a user.  This is easily done with a built in firebase method. To demonstrate this we will add a simple nav bar in the `index.html`. Add the following code just above the div with `ng-view` directive attribute.  This ensures that the nav bar is always available no matter what partial is being displayed.
 
 ```html
-<input type="text" ng-model="searchText" />
+<nav ng-controller="AuthCtrl">
+    <button ng-click="logoutUser()">Logout</button>
+</nav>
 ```
 
-Now we add the `filter` condition to our `ng-repeat` helper. Since we used `ng-model` above to create a two-way binding on the `searchText` variable, Angular will automatically match your search string against **any** key in the Todo
+The logout button will call a logoutUser function in our AuthCtrl.  This function should look like this:
 
-```html
-<div>
-  <ul ng-repeat="todo in todos | filter: searchText">
-    <li>{{todo.name}}</li>
-  </ul>
-</div>
+```js
+$scope.logoutUser = function(){
+    AuthFactory.logout()
+    $location.url('/auth')
+}
 ```
 
-Refresh your page and start typing in something in the search field and watch the list of todos get immediately filtered.
+We already have the logout function in our `AuthFactory` so we should be able to logout. Time to try it. Authenticate, then click the logout button and you should see that the local storage token has been deleted and your browser will go back to the `/auth` route.
 
-## Grouping
+### Final Cleanup
 
-Check out this bad boy. Angular can automatically group option elements in the select element based on a key name on the object.
+We now have the ability to register, login, and logout a user but there is still a tiny bit more we can do.  Mainly we want to make sure that users can only see different pages if they are logged in and can only see the auth page when they are not logged in.
 
-```html
-<div>
-  Grouped tasks:
-  <select
-      ng-model="theTodo"
-      ng-options="value.name group by value.complete for value in todos">
-  </select>
-</div>
+First lets tackle how to hide the page content if the user is not logged in.  To do this we will start with a simple helper function that checks if a user is logged in.  We will put this code at the top of our `app.config.js` file.
+
+```js
+let isAuth = AuthFactory => new Promise ((resolve, reject) => {
+    if (AuthFactory.isAuthenticated()){
+        console.log("User is authenticated, resolve route promise")
+        resolve()
+    } else {
+        console.log("User is not authenticated, reject route promise")
+        reject()
+    }
+})
 ```
 
-## Resources
+Next we will run this function on all of our routes.  This makes our route configuration look like this.
 
-* [Angular for beginners](http://medialoot.com/blog/angularjs-for-absolute-beginners/)
-* [Angular tutorial](https://www.airpair.com/angularjs/posts/angularjs-tutorial)
-* [Angular in one day](http://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/)
-* [A Better Way to Learn Angular](https://thinkster.io/a-better-way-to-learn-angularjs/)
-* [Angular on Code Academy](https://www.codecademy.com/courses/javascript-advanced-en-2hJ3J/0/1)
-* [Angular in 30 Minutes](http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/)
+```js
+angular.module("EmployeeApp").config(function ($routeProvider) {
+    /**
+     * Configure all Angular application routes here
+     */
+    $routeProvider.
+        when("/employees/list", {
+            templateUrl: "app/employees/partials/list.html",
+            controller: "EmployeeListCtrl",
+            resolve: { isAuth }
+        })
+        .when('/employees/new', {
+            templateUrl: 'app/employees/partials/create.html',
+            controller: 'EmployeeCreateCtrl',
+            resolve: { isAuth }
+        })
+        .when('/employees/detail/:employeeId', {
+            templateUrl: 'app/employees/partials/detail.html',
+            controller: 'EmployeeDetailCtrl',
+            resolve: { isAuth }
+        })
+        .when('/auth', {
+            templateUrl: 'app/auth/partials/register.html',
+            controller: 'AuthCtrl'
+        })
+        .otherwise('/auth')
+})
+```
+
+Lastly, update the AuthFactory to implement the Firebase authentication observer
+
+```js
+angular.module("EmployeeApp")
+.factory("AuthFactory", function ($http, $timeout, $location) {
+    let currentUserData = null
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            currentUserData = user
+            console.log("User is authenticated")
+            $timeout(function () {
+                $location.url("/employees/list")
+            }, 500);
+
+        } else {
+            currentUserData = null
+            console.log("User is not authenticated")
+            $timeout(function () {
+                $location.url("/auth")
+            }, 500);
+        }
+    })
+
+    return Object.create(null, {
+        isAuthenticated: {
+            value: () => {
+                const user = currentUserData
+                return user ? true : false
+            }
+        },
+        getUser: {
+            value: () => firebase.auth().currentUser
+        },
+        logout: {
+            value: () => firebase.auth().signOut()
+        },
+        authenticate: {
+            value: credentials =>
+                firebase.auth()
+                        .signInWithEmailAndPassword(
+                            credentials.email,
+                            credentials.password
+                        )
+        },
+        registerWithEmail: {
+            value: user =>
+                firebase.auth()
+                        .createUserWithEmailAndPassword(
+                            user.email,
+                            user.password
+                        )
+        }
+    })
+})
+```

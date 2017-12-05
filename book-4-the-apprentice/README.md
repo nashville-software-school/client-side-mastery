@@ -7,15 +7,14 @@ In this book, you will build be learning how to use all of the concepts and tool
 * Chapter 3 - [Asynchronous Operations with XHR](./chapters/XHR_INTRO.md)
 * Chapter 4 - [Persistent Storage with Firebase](./chapters/FIREBASE_INTRO.md)
 * Chapter 5 - [Coordinating Asynchronous Operations with Promises](./chapters/PROMISES.md)
-* Chapter 6 - [Authentication](./chapters/AUTHENTICATION.md)
 
 **Sprint 3: Community Coordinator**
 
-* Chapter 7 - [CSS Preprocessor](./chapters/SASS.md)
-* Chapter 8 - [Angular Basics](./chapters/ANGULAR_BASICS.md)
-* Chapter 9 - [Angular Routing and Factories](./chapters/ANGULAR_FACTORIES.md)
-* Chapter 10 - [Integrating Authentication with Angular](./chapters/ANGULAR_AUTHENTICATION.md)
-* Chapter 11 - [Including Partials into other Partials](./chapters/ANGULAR_INCLUDE.md)
+* Chapter 6 - [CSS Preprocessor](./chapters/SASS.md)
+* Chapter 7 - [Angular Basics](./chapters/ANGULAR_BASICS.md)
+* Chapter 8 - [Angular Routing and Factories](./chapters/ANGULAR_FACTORIES.md)
+* Chapter 9 - [Integrating Authentication with Angular](./chapters/ANGULAR_AUTHENTICATION.md)
+* Chapter 10 - [Including Partials into other Partials](./chapters/ANGULAR_INCLUDE.md)
 
 **Capstones**
 
