@@ -1,12 +1,12 @@
-# Hardware
+# Settings up your Computer and Hardware
+
+## Hardware
 
 Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive RIGHT NOW and start backing up your entire hard drive.
 
 **Seriously, right now!**
 
-# Things you need to install
-
-## Everyone
+## Software
 
 ### Node
 

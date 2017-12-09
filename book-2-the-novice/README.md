@@ -17,7 +17,7 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 * Chapter 6 - [Debugging Your Code](./chapters/MISC_DEBUGGING.md)
 * Chapter 7 - [Objects](./chapters/JS_OBJECTS.md)
 * Chapter 8 - [Command Line Personalization](./chapters/CLI_PERSONALIZATION.md)
-* Chapter 9 - [Objects as Databases](./chapters/JS_DATA.md)
+* Chapter 9 - [Working with Data](./chapters/JS_DATA.md)
 * Chapter 10 - [CSS Selectors](./chapters/CSS_SELECTORS.md)
 * Chapter 11 - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
 * Chapter 12 - [Manipulating the Browser DOM](./chapters/JS_WORKING_WITH_DOM.md)

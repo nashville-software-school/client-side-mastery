@@ -106,6 +106,10 @@ Now you can store as much meta-data about the raw data that you want. This is wh
 
 ![](../assets/map-visualization.png)
 
+By storing this metadata about the data when it's first retrieved, we avoid having to perform costly calculations every time someone wants to view the metadata. In a small application with limited data, you won't see many savings, but consider an application that retrieves hundreds, thousands, or tens of thousands of data points. Performing the calculations needed to get the sum, the average, and the standard deviation **every time** the user chooses to view it, then you run into memory issues, and performance degradation.
+
+It would be much more efficient to perform those calculations once, when the data is initially loaded, and store them.
+
 ## Practical Use
 
 Consider, for a moment, your personal site. Specifically, your blog entries. Imagine that you want your blog view to show the title of each article, and a short synopsis of each article when it is rendered, instead of the entirety of the article content. You also want to show what order each article is in the timeline of all articles.
@@ -137,4 +141,80 @@ for (let i = 0; i < BlogFactory.articles.length; i++) {
 
     document.querySelector(".articles").innerHTML += articleHTMLRepresentation
 }
+```
+
+Again, these aren't major calculations, but we can optimize this process with a Map.
+
+1. Calculation of total articles.
+1. Substring of each article.
+1. Building HTML representation of each article.
+
+> **File:** scripts/articles/factory.js
+
+```js
+const ArticleMap = new WeakMap()
+
+const Articles = Object.create(null, {
+    "init": {
+        value: function () {
+            ArticleMap.set(this, {})
+        }
+    },
+    "condensed": {
+        get: () => ArticleMap.get(this).condensed
+    }
+    "all": {
+        value: function () {
+            return $.ajax({
+                method: "GET",
+                url: "https://blog.firebaseio.com/articles/.json"
+            }).then(response => {
+                const articles = response.data
+                const totalArticles = Object.keys(articles).length
+                const counter = 1
+
+                const articleArray = Object.keys(articles).map(key => {
+                    const currentArticle = articles[key]
+
+                    const condensedArticle = {
+                        id: key,
+                        blurb: `
+                            <article class="article" id="article!${key}>
+                                <h1>${currentArticle.title}</h1>
+                                <div>
+                                    Post ${counter} of ${totalArticles}
+                                </div>
+                                <div>
+                                    ${currentArticle.content.substring(0,77)}
+                                </div>
+                            </article>
+                        `
+                    }
+                    counter++
+
+                    return condensedArticle
+                })
+
+                ArticleMap.get(this).condensed = articleArray
+                document.dispatchEvent(new Event("articles.loaded"))
+
+                return this.cache
+            })
+        }
+    }
+})
+```
+
+> **File:** scripts/articles/controller.js
+
+```js
+const factory = require("articles/factory")
+
+document.addEventListener("articles.loaded", () => {
+    document.querySelector(".articleList").innerHTML = factory.condensed.join(",")
+})
+
+factory.init()
+factory.all()
+
 ```

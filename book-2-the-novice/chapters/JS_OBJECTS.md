@@ -10,7 +10,7 @@ Functions? Yep, those two.
 
 Classes? Sure, just fancy object definitions.
 
-Want to see what JavaScript defines as an [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)? Open Chrome, open the Developer Tools, go to the Console tab, type in `{}` and see what gets displayed. These functions will be available to any custom object that you define in your system that is linked to the base Object.
+Want to see what JavaScript defines as an [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)? Open Chrome, open the Developer Tools, go to the Console tab, type in `{}` and see what gets displayed. These functions will be available to any standard object that you define in your system.
 
 ![javascript object](./images/2oKwHtFH0d.gif)
 
@@ -25,9 +25,9 @@ Want to see what JavaScript defines as an [Object](https://developer.mozilla.org
 ](https://www.youtube.com/watch?v=doXpW5AD60Q)
 1. [Object.create - Object Creation in JavaScript P6 - FunFunFunction #57](https://www.youtube.com/watch?v=CDFN1VatiJA)
 
-# Practice
+## Practice
 
-## Coins to Cash
+### Coins to Cash
 
 ```
 mkdir -p ~/workspace/javascript/exercises/coins-to-cash && cd $_
@@ -41,14 +41,14 @@ code .
 ```
 
 
-Define an object and store it in a variable named `piggyBank`. The object should have the following keys defined. 
+Define an object and store it in a variable named `piggyBank`. The object should have the following keys defined.
 
 * quarters
 * nickels
 * dimes
 * pennies
 
-For each coin type, give yourself as many as you like. 
+For each coin type, give yourself as many as you like.
 
 ```js
 // I like pennies
@@ -62,14 +62,14 @@ When done, output the value to the browser console.
 
 For example, if my piggy bank only held those pennies from above, when I type the variable name of `dolllarAmount` into the console, the output would be.
 
-```
+```sh
 > dollarAmount
 $3.42
 ```
 
-## Cash to Coins
+### Cash to Coins
 
-```
+```sh
 mkdir -p ~/workspace/javascript/exercises/cash-to-coins && cd $_
 echo '<html>
   <body>
@@ -102,7 +102,7 @@ That should produce the following output.
 }
 ```
 
-## Student Grades
+### Student Grades
 
 ```bash
 mkdir -p ~/workspace/javascript/exercises/grades && cd $_
@@ -115,7 +115,7 @@ touch grades.js
 code .
 ```
 
-## Requirements
+#### Requirements
 
 Loop over an array of student grades (values from 50-100) and keep track of how many students get each grade in an object named `grades`.
 
