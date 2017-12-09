@@ -86,6 +86,13 @@ colorFactory.next().value  // Yellow
 A good, practical use case for these types of objects is for when you need to create a new object, on demand, that has a unique identifier. Let's look at an example of a generator function that produced a UUID every time the `next()` method is invoked on it.
 
 ```js
+/*
+    We will be using the following generator function to generate unique
+    identifiers for objects in our database while we use local storage. Do
+    not worry about understanding the code inside it - it's not important.
+    What is important is the output, and understanding how we use that
+    output in the factory function.
+*/
 const uuidGenerator = function* () {
     while (true) {
         let time = new Date().getTime()
@@ -104,7 +111,7 @@ const blogPostId = uuidGenerator()
 // Factory function that returns a blog article object
 const blogObjectFactory = function (title, entry, ...tags) {
     return Object.create(null, {
-        "id": { value: blogIdFactory.next().value, enumerable: true },
+        "id": { value: blogPostId.next().value, enumerable: true },
         "title": { value: title, enumerable: true },
         "body": { value: entry, enumerable: true },
         "tags": { value: tags, enumerable: true },
