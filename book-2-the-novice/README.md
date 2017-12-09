@@ -15,14 +15,15 @@ Keyboard shortcuts, terminal usage, and knowledge of bash commands are all neede
 **Personal Site Project Tickets Assigned**
 
 * Chapter 6 - [Debugging Your Code](./chapters/MISC_DEBUGGING.md)
-* Chapter 7 - [Objects](./chapters/JS_OBJECTS.md)
+* Chapter 7 - [Simple Objects](./chapters/JS_OBJECTS.md)
 * Chapter 8 - [Command Line Personalization](./chapters/CLI_PERSONALIZATION.md)
 * Chapter 9 - [Working with Data](./chapters/JS_DATA.md)
 * Chapter 10 - [CSS Selectors](./chapters/CSS_SELECTORS.md)
-* Chapter 11 - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
-* Chapter 12 - [Manipulating the Browser DOM](./chapters/JS_WORKING_WITH_DOM.md)
-* Chapter 13 - [Modular Code Introduction](./chapters/DESIGN_MODULARITY.md)
-* Chapter 14 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+* Chapter 11 - [Powerful Objects](./chapters/JS_OBJECT_CREATE.md)
+* Chapter 12 - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
+* Chapter 13 - [Manipulating the Browser DOM](./chapters/JS_WORKING_WITH_DOM.md)
+* Chapter 14 - [Modular Code Introduction](./chapters/DESIGN_MODULARITY.md)
+* Chapter 15 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
 **Sprint 1 - Company Website**
 

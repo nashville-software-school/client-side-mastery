@@ -83,21 +83,23 @@ colorFactory.next().value  // Yellow
 
 ## Combining Generator and Factory Functions
 
-A good, practical use case for these types of objects is for when you need to create a new object, on demand, that has a unique identifier. Let's look at an example.
+A good, practical use case for these types of objects is for when you need to create a new object, on demand, that has a unique identifier. Let's look at an example of a generator function that produced a UUID every time the `next()` method is invoked on it.
 
 ```js
-// A generator that never ends!
-const blogIdGenerator = function* () {
-    let uniqueId = 1
-
+const uuidGenerator = function* () {
     while (true) {
-        yield uniqueId
-        uniqueId += 1
+        let time = new Date().getTime()
+        let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (char) {
+            const random = (time + Math.random() * 16) % 16 | 0
+            time = Math.floor(time / 16)
+            return (char === 'x' ? random : (random & 0x3 | 0x8)).toString(16)
+        })
+        yield uuid
     }
 }
 
 // Create instance of generator
-const blogIdFactory = blogIdGenerator()
+const blogPostId = uuidGenerator()
 
 // Factory function that returns a blog article object
 const blogObjectFactory = function (title, entry, ...tags) {
