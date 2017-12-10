@@ -26,6 +26,12 @@ Now you're going to learn about `Object.create()`, and once you see how much pow
 ![realize the power](images/object-create-realize.gif)
 > *The moment when a JavaScript developer realizes the true power of Object.create()*
 
+### Read Only Properties
+
+### Defining Behavior
+
+### Inheritance
+
 ## With Great Power Comes Great Responsibility
 
 Now that we've covered the power, flexibility, and control that `Object.create()` gives you, you must remember to use your new power responsibly.
