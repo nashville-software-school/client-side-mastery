@@ -15,11 +15,13 @@ You can also use them to select an element based on how a user has interacted wi
 1. active
 1. visited
 
-# Related Articles
+## Related/Fun Resources
 
 1. [Meet the Pseudo Class Selectors](https://css-tricks.com/pseudo-class-selectors/)
+1. [30 Cool CSS Animations You Have To See](https://www.hongkiat.com/blog/creative-css-animations/)
+1. [Bubble-y Text Fader](https://codepen.io/thousand/pen/BcwAD)
 
-# Videos to Watch
+## Videos to Watch
 
 1. [CSS Pseudo Element Selectors Tutorial](https://www.youtube.com/watch?v=3hX5F2upeFQ)
 1. [W3Schools CSS Pseudo-classes Tutorial](https://www.youtube.com/watch?v=gtY7VBru06Y)

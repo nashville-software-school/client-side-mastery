@@ -28,6 +28,52 @@ Now you're going to learn about `Object.create()`, and once you see how much pow
 
 ### Read Only Properties
 
+When you use `{}` to create an object, you have zero control how properties are created, deleted, or changed. Here's an object with very sensitive data in it.
+
+```js
+const veryImportantInfo = {
+    "socialSecurity": "934-11-0201",
+    "bankAccountNumber": "4483271255",
+    "bankRoutingNumber": "458979043"
+}
+```
+
+Another developer on your team is tasked with using that object in her code, so she writes a function for that purpose.
+
+```js
+const requestFunds = function (customerInfo) {
+    // Note: Banks require that the account number and routing number be combined into a single value
+    customerInfo.bankAccountNumber = customerInfo.bankAccountNumber + customerInfo.bankRoutingNumber
+    const transactionInfo = customerInfo.bankAccountNumber
+
+    // Awesome code that performs the transaction goes here...
+}
+```
+
+The requirements she got for her feature required that the account number and the routing number be combined into a single string for the transaction to be successful. So while her code works perfectly fine, she inadvertantly modified YOUR OBJECT! It wasn't malicious, just a standard bug introduced when a developer isn't focused.
+
+```js
+const requestFunds = function (customerInfo) {
+    // Note: Banks require that the account number and routing number be combined into a single value
+    customerInfo.bankAccountNumber = customerInfo.bankAccountNumber + customerInfo.bankRoutingNumber
+    const transactionInfo = customerInfo.bankAccountNumber
+
+    // Awesome code that performs the transaction goes here...
+}
+
+const veryImportantInfo = {
+    "socialSecurity": "934-11-0201",
+    "bankAccountNumber": "4483271255",
+    "bankRoutingNumber": "458979043"
+}
+
+requestFunds(veryImportantInfo)
+
+console.log(veryImportantInfo.bankAccountNumber)   // 4483271255458979043 --> Yikes!
+```
+
+![panic!](./images/panic.gif)
+
 ### Defining Behavior
 
 ### Inheritance
@@ -38,7 +84,7 @@ Now that we've covered the power, flexibility, and control that `Object.create()
 
 Just because you can wield the Force, doesn't mean you should use it for everything.
 
-![with power comes responsibility](images/object-create-responsibility.gif)
+![with power comes responsibility](./images/object-create-responsibility.gif)
 
 > *A new JavaScript developer using `Object.create()` when it's not needed, and a simpler implementation is more appropriate.*
 
