@@ -13,68 +13,89 @@ What do I mean by actor? To understand that, let's look at the definition of one
 
 You need to read the [SOLID: Part 1](https://code.tutsplus.com/tutorials/solid-part-1-the-single-responsibility-principle--net-36074) article which covers the SRP and the term *Actor*.
 
-## Using the Power of Object.create()
-
-Up to this point, we've been using the simplistic method for creating objects, which gives us no power, or control, on how it gets manipulated.
-
-```js
-const boringObject = {}
-```
-
-Now you're going to learn about `Object.create()`, and once you see how much power it gives you, you will start to understand how it can help you comply with the SRP.
-
-![realize the power](images/object-create-realize.gif)
-> *The moment when a JavaScript developer realizes the true power of Object.create()*
-
-### Read Only Properties
-
-When you use `{}` to create an object, you have zero control how properties are created, deleted, or changed. Here's an object with very sensitive data in it.
-
-```js
-const veryImportantInfo = {
-    "socialSecurity": "934-11-0201",
-    "bankAccountNumber": "4483271255",
-    "bankRoutingNumber": "458979043"
-}
-```
-
-Another developer on your team is tasked with using that object in her code, so she writes a function for that purpose.
-
-```js
-const requestFunds = function (customerInfo) {
-    // Note: Banks require that the account number and routing number be combined into a single value
-    customerInfo.bankAccountNumber = customerInfo.bankAccountNumber + customerInfo.bankRoutingNumber
-    const transactionInfo = customerInfo.bankAccountNumber
-
-    // Awesome code that performs the transaction goes here...
-}
-```
-
-The requirements she got for her feature required that the account number and the routing number be combined into a single string for the transaction to be successful. So while her code works perfectly fine, she inadvertantly modified YOUR OBJECT! It wasn't malicious, just a standard bug introduced when a developer isn't focused.
-
-```js
-const requestFunds = function (customerInfo) {
-    // Note: Banks require that the account number and routing number be combined into a single value
-    customerInfo.bankAccountNumber = customerInfo.bankAccountNumber + customerInfo.bankRoutingNumber
-    const transactionInfo = customerInfo.bankAccountNumber
-
-    // Awesome code that performs the transaction goes here...
-}
-
-const veryImportantInfo = {
-    "socialSecurity": "934-11-0201",
-    "bankAccountNumber": "4483271255",
-    "bankRoutingNumber": "458979043"
-}
-
-requestFunds(veryImportantInfo)
-
-console.log(veryImportantInfo.bankAccountNumber)   // 4483271255458979043 --> Yikes!
-```
-
-![panic!](./images/panic.gif)
 
 ### Defining Behavior
+
+Using `Object.create` strengthens the idea that the object you are creating is an actor in your application. An actor can exhibit behaviors, and can expose interfaces for other code to interact with it. Up to this point in the course, you have been defining your databases with standard object creation. Start thinking of your database as an actor in the system. I'll use the home inventory database as an example.
+
+```js
+const HomeInventoryDatabase = Object.create(null, {
+    furniture: {
+        value: []
+    },
+    crafts: {
+        value: []
+    },
+    electronics: {
+        value: []
+    }
+})
+```
+
+Now that the database is rewritten with `Object.create`, consider the actions we want to perform on the database. In the exercises, there were two actions:
+
+1. Saving it to local storage as a string
+1. Loading the local storage string and turning it back into an object
+
+Let's define those actions on the object itself.
+
+```js
+const HomeInventoryDatabase = Object.create(null, {
+    furniture: {
+        value: []
+    },
+    crafts: {
+        value: []
+    },
+    electronics: {
+        value: []
+    },
+    save: {
+        value: function () {
+
+        }
+    },
+    load: {
+        value: function () {
+
+        }
+    }
+})
+```
+
+Notice that the `value` of the two new properties are functions. Functions define behavior on objects. When professional developers talk about functions on objects, they use the word "method". In this case, our database has a save method, and a load method. Time to put the logic in them that define the behavior.
+
+```js
+const HomeInventoryDatabase = Object.create(null, {
+    furniture: {
+        value: [],
+        enumerable: true
+    },
+    crafts: {
+        value: [],
+        enumerable: true
+    },
+    electronics: {
+        value: [],
+        enumerable: true
+    },
+    save: {
+        value: function () {
+            localStorage.setItem("HomeInventory", JSON.stringify(this))
+        }
+    },
+    load: {
+        value: function () {
+            const storageObject = localStorage.getItem("HomeInventory")
+            this.furniture = storageObject.furniture
+            this.crafts = storageObject.crafts
+            this.electronics = storageObject.electronics
+        }
+    }
+})
+```
+
+### Custom get/set Logic
 
 ### Inheritance
 
