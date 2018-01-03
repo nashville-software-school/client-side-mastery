@@ -10,7 +10,7 @@ Up until now, you didn't have the power to destroy your machine, but within the 
 
 ### Node
 
-Visit the [Node.js](https://www.nodejs.org) site and install the current version of Node - not the LTS release.
+Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 
 ### Install Slack
 
