@@ -241,7 +241,7 @@ const loadDatabase = function (localStorageKey) {
 }
 ```
 
-## Saving and Loading the Database
+## Saving the Database
 
 Now you can use those two functions to save, and load, your home inventory database from localStorage. The only one that you're going to use right now is the `saveDatabase` function.
 
@@ -249,8 +249,7 @@ Here's what your `database.js` file should look like.
 
 ```js
 /*
-    Try to load the database from localStorage. If it doesn't
-    exist, create an empty object to initialize it.
+    Initialize the database in memory as an object
 */
 const HomeInventoryDatabase = {}
 
@@ -261,6 +260,10 @@ const HomeInventoryDatabase = {}
 HomeInventoryDatabase.furniture = []
 HomeInventoryDatabase.crafts = []
 HomeInventoryDatabase.electronics = []
+
+/*
+    Time to create some data that will inserted into the database
+*/
 
 // The ink well is a craft data item
 const vintageInkwell = {

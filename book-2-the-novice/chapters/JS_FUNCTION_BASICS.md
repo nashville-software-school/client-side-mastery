@@ -144,9 +144,10 @@ Your job is to write a function that accepts any band name as an argument. The f
 const bandNumber = 1
 
 const take_a_number = function () {
-    // Increment bandNumber
-
-    // Concatenate the number and the band name
+    /*
+        Write your awesome code here. See comments
+        below for what should be returned.
+    */
 }
 
 const scum = take_a_number("Galactic Scum")
@@ -266,7 +267,6 @@ Your job is to read the following English statement and write the equivalent in 
 > The walrus danced! through the trees! in the light! of the
 > The walrus danced! through the trees! in the light! of the moon!
 > ...
-
 
 ## Even More Excited
 
