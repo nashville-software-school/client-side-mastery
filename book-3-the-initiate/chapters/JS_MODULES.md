@@ -1,8 +1,8 @@
 # Browserify Modules
 
-Browserify allows you to build modules of JavaScript logic that export functionality that can be imported by any other module.
+Browserify allows you to build modules of JavaScript logic that export functionality that can be imported by any other module. Let's define a module that represents a car factory that has the unique ability of building a car of any make and model.
 
-Let's define a module that represents a car factory that has the unique ability of building a car of any make and model.
+![browserify visualization](./images/browserify.png)
 
 ```js
 /*
@@ -133,7 +133,7 @@ Your task is to simulate a product listing page like you would find on Etsy, Ama
 1. Display a product. Each product should have a title, short description, price, quantity, and an image.
 1. Display the application information in a navigation bar at the top of the page.
     1. The name of the company - Betsy
-    1. Three links: *Categories*, *Orders*, and *Log Out*
+    1. Three links: *Categories*, *Orders*, and *Log Out* (_these links won't actually do anything, you're just practicing making the navigation bar a component)
 1. Display 3 product reviews beneath the product listing. You can use [hipster ipsum](https://hipsum.co/) for the reviews themselves.
 
 Each of those features is a separate component, and you must write your code as modular as possible with Browserify.

@@ -2,11 +2,10 @@
 
 ## Query DOM
 
-There are 3 main methods on the `document` object in JavaScript for querying information from the document object model of your HTML.
+There are 2 main methods on the `document` object in JavaScript that you will be using for querying information from the Document Object Model (DOM) of your HTML.
 
+1. **querySelector** - This is the method you will be using the most. It lets you use CSS selectors to select DOM elements.
 1. **getElementById** - This will return 1 DOM element or undefined.
-1. **getElementsByClassName** - This will always return a collection. The collection will have 0-_n_ elements in it. 
-1. **getElementsByTagName** - This will always return a collection. The collection will have 0-_n_ elements in it.
 
 > **See for yourself:** The code below is in a [DOM Query JSFiddle](https://jsfiddle.net/chortlehoort/m3twofe2/) that you can run yourself. Just make sure you have your dev tools open to see the output.
 
@@ -28,6 +27,24 @@ There are 3 main methods on the `document` object in JavaScript for querying inf
 </html>
 ```
 
+### querySelector
+
+There are two elements that have a class name of `fruit`. To get a reference to the first element, use the following code.
+
+```js
+const firstFruit = document.querySelector(".fruit")
+```
+
+![querySelector](./images/querySelector.png)
+
+To get a reference to both, use the following code.
+
+```js
+const allFruit = document.queryAllSelector(".fruit")
+```
+
+![querySelectorAll](./images/querySelectorAll.png)
+
 ### By Id
 
 To get a DOM element by its `id` attribute.
@@ -36,29 +53,9 @@ To get a DOM element by its `id` attribute.
 const bananaElement = document.getElementById("banana")
 ```
 
-![](./images/getElementById.png)
+![get by ID](./images/getElementById.png)
 
-### By Class
-
-To get DOM elements by their `class` attribute. The following method will select both elements that have a class attribute with a value of fruit - so two elements.
-
-```js
-const fruitElements = document.getElementsByClassName("fruit")
-```
-
-![](./images/getElementsByClassName.png)
-
-### By Tag
-
-To get a DOM element by its tag. The following method will select **all** section tags.
-
-```js
-const sectionElements = document.getElementsByTagName("section")
-```
-
-![](./images/getElementsByTagName.png)
-
-## Manipulate DOM
+## Updating DOM Element Content
 
 To update the contents of a DOM element, you simply need to assign a value to the `innerHTML` property of that element.
 
@@ -95,8 +92,7 @@ console.log(`We saw ${monkey} the monkey, and ${dolphin} the dolphin today`)
 
 1. [JavaScript Tutorial For Beginners #33 - Traversing the DOM](https://www.youtube.com/watch?v=SowaJlX1uKA)
 1. [Javascript Tutorial Part 8: Javascript getElementById](https://www.youtube.com/watch?v=Rk3bekL3TLc)
-1. [JavaScript Tutorial for Beginners - 29 - getElementsByClassName](https://www.youtube.com/watch?v=ChLd2yFp-lA)
-1. [JavaScript Tutorial for Beginners - 27 - getElementsByTagName method](https://www.youtube.com/watch?v=SwMgOMfelC8)
+1. [JavaScript: Browser - querySelector(), querySelectorAll()](https://www.youtube.com/watch?v=k69s-XlnVnE)
 1. [JavaScript Tutorial for Beginners - 30 - Replace content using innerHTML](https://www.youtube.com/watch?v=dlaYyZ6vW48)
 
 ## Practice - Boy Bands and Vegetables
