@@ -180,7 +180,7 @@ Your job is to define the different objects and resources, their structure, and 
 
 ## Challenge
 
-After you have defined all the objects for representing the data, write a corresponding function for each one whose purpose is to change the state of the object.
+After you have defined all the objects for representing the data, write a corresponding function for each one whose purpose is to change the state of the object. Then invoke each function, and pass a reference to the correct object to it and modify a property.
 
 Example:
 

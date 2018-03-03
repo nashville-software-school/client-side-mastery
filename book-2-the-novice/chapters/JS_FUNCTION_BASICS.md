@@ -4,55 +4,55 @@ Functions are reusable code. JavaScript written without functions executes one l
 
 ```js
 // Display the first and last name of the following people
-let first_name = "Jamal";
-let last_name = "Haynes";
+let firstName = "Jamal";
+let lastName = "Haynes";
 
-console.log(`${first_name} ${last_name}`);
+console.log(`${firstName} ${lastName}`);
 
-let first_name = "Debra";
-let last_name = "Gordon";
+let firstName = "Debra";
+let lastName = "Gordon";
 
-console.log(`${first_name} ${last_name}`);
+console.log(`${firstName} ${lastName}`);
 
-let first_name = "Svetlana";
-let last_name = "Irinov";
+let firstName = "Svetlana";
+let lastName = "Irinov";
 
-console.log(`${first_name} ${last_name}`);
+console.log(`${firstName} ${lastName}`);
 
-let first_name = "Sequina";
-let last_name = "Rodriguez";
+let firstName = "Sequina";
+let lastName = "Rodriguez";
 
-console.log(`${first_name} ${last_name}`);
+console.log(`${firstName} ${lastName}`);
 ```
 
 The inefficiencies of this code are obvious - from needlessly repeating the same code, to the high probability of human error as we increase the number of times we need to perform the operation.
 
 ```js
-let first_name = "Jessawynne";
-let last_name = "Parker";
+let firstName = "Jessawynne";
+let lastName = "Parker";
 
-// Oops, I misspelled first_name. My program now has an error, or bug, in it.
-console.log(`${fist_name} ${last_name}`);
+// Oops, I misspelled firstName. My program now has an error, or bug, in it.
+console.log(`${fist_name} ${lastName}`);
 ```
 
 When the same lines of code need to be repeated, even just once, then you put those lines of code in a function. You provide a name for a function, and it needs to be descriptive enough to understand what its purpose is.
 
 ```js
-function displayName (first_name, last_name) {
+function displayName (firstName, lastName) {
   /*
     Since the code needed to display a person's name is written
     only once, we never have to worry about a developer
     misspelling a word, or missing a character because she
     needed to write the code for the 34th time.
   */
-  console.log(`${first_name} ${last_name}`);
+  console.log(`${firstName} ${lastName}`)
 }
 
-displayName("Jamal", "Haynes");
-displayName("Debra", "Gordon");
-displayName("Svetlana", "Irinov");
-displayName("Sequina", "Rodriguez");
-displayName("Jessawynne", "Parker");
+displayName("Jamal", "Haynes")
+displayName("Debra", "Gordon")
+displayName("Svetlana", "Irinov")
+displayName("Sequina", "Rodriguez")
+displayName("Jessawynne", "Parker")
 ```
 
 ## Pure Functions
@@ -114,7 +114,7 @@ const updateDOM = function (message) {
 
 ## Practice: ChickenMonkey
 
-Write a program that prints the numbers from 1 to 100. But for multiples of three print "Chicken" instead of the number and for the multiples of five print "Monkey". For numbers which are multiples of both three and five print "ChickenMonkey".
+Write a program that prints the numbers from 1 to 100. But for multiples of five (5, 10, 15, etc.) print "Chicken" instead of the number and for the multiples of seven (7, 14, 21, etc.) print "Monkey". For numbers which are multiples of both five and seven print "ChickenMonkey".
 
 To determine if a number can be evenly divided by 3 or 5, use the JavaScript [remainder](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder) operator.
 
@@ -143,17 +143,17 @@ Your job is to write a function that accepts any band name as an argument. The f
 ```js
 const bandNumber = 1
 
-const take_a_number = function () {
+const takeNumber = function () {
     /*
         Write your awesome code here. See comments
         below for what should be returned.
     */
 }
 
-const scum = take_a_number("Galactic Scum")
+const scum = takeNumber("Galactic Scum")
 console.log(scum)  // This should print "1. Galactic Scum" in the console
 
-const under = take_a_number("Underdogs")
+const under = takeNumber("Underdogs")
 console.log(under)  // This should print "2. Underdogs" in the console
 ```
 
@@ -319,7 +319,7 @@ Invoke your function for a second time, passing in the new sentence variable and
 addExcitement(nextSentence, "&");
 ```
 
-## Arrow Functions
+# Challenge: Arrow Functions
 
 Watch the video about arrow functions, and see if you can rewrite `addExcitement` using that syntax.
 

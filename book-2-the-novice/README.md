@@ -7,16 +7,15 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 ## Chapters
 
 * Chapter 1 - [Command Line Basics](./chapters/CLI_BASICS.md)
-* Chapter 2 - [Semantic HTML Components](./chapters/HTML_SEMANTIC.md)
+* Chapter 2 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
 * Chapter 3 - [How to Research Code](./chapters/MISC_RESEARCH.md)
 * Chapter 4 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
 * Chapter 5 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
 * Chapter 6 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
 * Chapter 7 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
-* Chapter 8 - [Thinking in Components](./chapters/HTML_COMPONENTS.md)
-* Chapter 9 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
-* Chapter 10 - [Data in Software Applications](./chapters/JS_DATA.md)
-* Chapter 11 - [Query DOM Components](./chapters/JS_WORKING_WITH_DOM.md)
+* Chapter 8 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
+* Chapter 9 - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter 10 - [Query DOM Components](./chapters/JS_WORKING_WITH_DOM.md)
 
 ## Group Project - Intelligence Report
 
