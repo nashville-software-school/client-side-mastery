@@ -12,10 +12,10 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 4 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
 * Chapter 5 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
 * Chapter 6 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
-* Chapter 7 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
-* Chapter 8 - [Data in Software Applications](./chapters/JS_DATA.md)
-* Chapter 9 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
-* Chapter 10 - [Thinking in Components](./chapters/HTML_COMPONENTS.md)
+* Chapter 7 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
+* Chapter 8 - [Thinking in Components](./chapters/HTML_COMPONENTS.md)
+* Chapter 9 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
+* Chapter 10 - [Data in Software Applications](./chapters/JS_DATA.md)
 * Chapter 11 - [Query DOM Components](./chapters/JS_WORKING_WITH_DOM.md)
 
 ## Group Project - Intelligence Report
@@ -28,5 +28,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 * Supplement - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
+* Supplement - [Data and Metadata](./chapters/METADATA.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
