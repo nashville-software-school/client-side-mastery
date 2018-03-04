@@ -14,7 +14,9 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 11 - [Editing Existing Data](./chapters/DATA_EDITING.md)
 * Chapter 12 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
 
-**Sprint 2 - Nutshell**
+> ## Sprint 2 - Nutshell
+
+## Supplementary Content
 
 * Supplement 1 - [Using Forms in Single Page Applications](./chapters/FORMS_SPA.md)
 

@@ -16,14 +16,16 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 8 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
 * Chapter 9 - [Data in Software Applications](./chapters/JS_DATA.md)
 * Chapter 10 - [Query DOM Components](./chapters/JS_WORKING_WITH_DOM.md)
+* Chapter 11 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
-## Group Project - Intelligence Report
+> ### Sprint 1 - Intelligence Report
 
 * Chapter 12 - [Modular Code Introduction](./chapters/DESIGN_MODULARITY.md)
 * Chapter 13 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
-* Chapter 14 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
-## Sprint 1 - Dynamic Intelligence Report
+> ### Sprint 2 - Dynamic Intelligence Report
+
+## Supplementary Content
 
 * Supplement - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
