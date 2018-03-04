@@ -74,6 +74,8 @@ console.log(veryImportantInfo.bankAccountNumber)   // 4483271255458979043 --> Yi
 
 ![panic!](./images/panic.gif)
 
+## Read-only Properties
+
 Using the power of `Object.create()` you can prevent another developer from changing the value of any property on an object. The create method allows you to specify whether a property can be changed with the `writable` property. By setting it to false, that value cannot be changed. It is now a read-only property.
 
 ```js
@@ -232,7 +234,13 @@ key::after {
 > createElement.js
 
 ```js
+// Obtain a reference to the patient list container
 const patientList = document.querySelector("#patient-list")
+
+/*
+    Create an in-memory DOM Node that will contain all elements
+    which will display information about Juan
+*/
 const patientElementContainer = document.createDocumentFragment()
 
 // Create an article element to contain all of the properties
@@ -259,7 +267,63 @@ for (let key in JuanRodriguezPatient) { /* eslint no-undef: "off" */
     patient.appendChild(property)
 }
 
+// Attach the `article` element to the document fragment
 patientElementContainer.appendChild(patient)
+
+// Add the document fragment to the DOM
 patientList.appendChild(patientElementContainer)
 ```
 
+Here's the resulting DOM in the browser.
+
+![](./images/juan-info.png)
+
+__Oops!__
+
+`FullName` and `Age` are methods of the `JuanRodriguezPatient` object - not properties. I don't want them displayed. This can't be achieved with ordinary object creation. We have to use `Object.create()`.
+
+Let's make those methods non-enumerable, and the properties enumerable.
+
+```js
+const JuanRodriguezPatient = Object.create({}, {
+    firstName: {
+        value: "Juan",
+        enumerable: true
+    },
+    lastName: {
+        value: "Rodriguez",
+        enumerable: true
+    },
+    dob: {
+        value: "12/13/1985",
+        enumerable: true
+    },
+    address: {
+        value: "127.0.0.1",
+        enumerable: true
+    },
+    gender: {
+        value: "M",
+        enumerable: true
+    },
+    fullName: {
+        value: function () {
+            return `${this.firstName} ${this.lastName}`
+        }
+    },
+    age: {
+        value: function () {
+            const dob = new Date(this.dob)
+            const yearBirth = dob.getFullYear()
+            const now = new Date()
+            const yearNow = now.getFullYear()
+
+            return yearNow - yearBirth
+        }
+    }
+}
+```
+
+Here's the output when we use `Object.create` to make those methods non-enumerable.
+
+![](./images/juan-correct.png)
