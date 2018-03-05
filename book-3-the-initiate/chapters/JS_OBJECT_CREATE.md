@@ -324,6 +324,6 @@ const JuanRodriguezPatient = Object.create({}, {
 }
 ```
 
-Here's the output when we use `Object.create` to make those methods non-enumerable.
+Here's the output when we use `Object.create()` to make those methods non-enumerable.
 
 ![](./images/juan-correct.png)

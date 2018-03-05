@@ -130,7 +130,7 @@ const employee = {
 }
 ```
 
-Those property value define the state of this employee that we're representing in code.
+Those property values define the __*initial state*__ of this employee that we're representing in code.
 
 ```js
 employee.role = "Sales Manager"
