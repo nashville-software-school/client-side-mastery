@@ -18,12 +18,12 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 10 - [Query DOM Components](./chapters/JS_WORKING_WITH_DOM.md)
 * Chapter 11 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
-> ### Sprint 1 - Intelligence Report
+> ### __Sprint 1__ - Intelligence Report
 
 * Chapter 12 - [Modular Code Introduction](./chapters/DESIGN_MODULARITY.md)
 * Chapter 13 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 
-> ### Sprint 2 - Dynamic Intelligence Report
+> ### __Sprint 2__ - Dynamic Intelligence Report
 
 ## Supplementary Content
 

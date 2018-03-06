@@ -118,7 +118,7 @@ Try it out for yourself. Create a new Quokka file, paste the above object into i
 
 ![read only properties](./images/NOmZNJeNBT.gif)
 
-### Hidden(ish) Properties
+### Non-Enumerble Properties
 
 When you use a `for..in` loop to iterate over the keys of an object, only enumerable keys will be used. Let's see what that means. If you open a Quokka file and create an object using curly braces, and then iterate over its keys, nothing will appear.
 
@@ -193,7 +193,7 @@ const JuanRodriguezPatient = {
 }
 ```
 
-In my application, I want to display all properties and their value into the DOM. Let's image that this is a nurse's report to see a list of all active patients in a doctor's office.
+In my application, I want to display all properties and their value into the DOM. Let's imagine that we are building a nurse's report to see a list of all active patients in a doctor's office.
 
 > index.html
 
@@ -327,3 +327,5 @@ const JuanRodriguezPatient = Object.create({}, {
 Here's the output when we use `Object.create()` to make those methods non-enumerable.
 
 ![](./images/juan-correct.png)
+
+You can view the working code in [JSFiddle](https://jsfiddle.net/chortlehoort/csf4qodj/).
