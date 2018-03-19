@@ -1,8 +1,13 @@
 # Browserify Modules
 
-Browserify allows you to build modules of JavaScript logic that export functionality that can be imported by any other module. Let's define a module that represents a car factory that has the unique ability of building a car of any make and model.
+Browserify allows you to build modules of JavaScript logic that export functionality that can be imported by any other module. When building a modular application, consider that each module is an independent utility that does one specific thing. When another module needs the functionality of one of the other utilities, they can import it.
 
 ![browserify visualization](./images/browserify.png)
+
+Let's look at an example.
+
+First, we'll define a module that represents a car factory that has the unique ability of building a car of any make and model.
+
 
 ```js
 /*
@@ -126,23 +131,34 @@ console.log(garage.inventory)
 
     `npm install grunt-browserify --save-dev`
 
+## Practice: Contact List
+
+Build four components:
+
+1. A **ContactCollection** component that loads existing contacts from storage, and saves new ones. Each new contact should have an auto-generated identifier.
+1. A **Contact** component that displays a person's name, phone number, and address.
+1. A **ContactList** component that displays all contacts. It should import the **Contact** component and the **ContactCollection** component.
+1. A **ContactForm** component that, when filled out and a submit button is pressed, adds a new contact to storage. It should import the **ContactCollection** component.
+
+In `main.js`, import the **ContactList** component and the **ContactForm** component.
+
+The user should see the contact form at the top of the view, and the list of contacts underneath it.
+
+> **Bonus:** Are there any other modules that could be made? Do any modules have more than one possible responsibility? Perhaps something that is a general utility function.
+
 ## Practice: Product Ordering
 
 Your task is to simulate a product listing page like you would find on Etsy, Amazon, or Ebay. This application should implement the following features.
 
-1. Display a product. Each product should have a title, short description, price, quantity, and an image.
+1. Display an individual product component. Each product should have a title, short description, price, quantity, and an image.
 1. Display the application information in a navigation bar at the top of the page.
     1. The name of the company - Betsy
     1. Three links: *Categories*, *Orders*, and *Log Out* (_these links won't actually do anything, you're just practicing making the navigation bar a component)
-1. Display 3 product reviews beneath the product listing. You can use [hipster ipsum](https://hipsum.co/) for the reviews themselves.
+1. Display a review list component that contains a maximum of 3 product review components beneath a product. You can use [hipster ipsum](https://hipsum.co/) for the reviews themselves.
 
-Each of those features is a separate component, and you must write your code as modular as possible with Browserify.
+### Component/Module Map
 
-1. One module contains the product information (i.e. productFactory)
-1. One module displays the product information (i.e. product Controller)
-1. One module builds the navigation bar
-1. One module contains the review information (i.e. reviewFactory)
-1. One module displays the review information (i.e. reviewController)
+![dependency map](./images/product-exercise-dependecies.png)
 
 ## Technical Requirements
 
