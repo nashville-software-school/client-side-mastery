@@ -133,7 +133,7 @@ for (let x = 1; y < cookies.length; x++) {
 ### Conjunction Function
 
 ```js
-const conjuction = function (firstWord, secondWord) {
+const conjunction = function (firstWord, secondWord) {
     const conjoinedWord = `${firstWord} ${secondWord}`
 }
 
@@ -149,7 +149,7 @@ console.log(conjoinedWord)
         "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"]
         "series": {
             "start": "1968",
-            "end": "1973
+            "end": "1973"
         }
     }
 
