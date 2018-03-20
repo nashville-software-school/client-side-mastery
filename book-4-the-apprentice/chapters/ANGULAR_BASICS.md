@@ -158,7 +158,7 @@ It doesn't make sense to display tasks that are already done. Let's put a condit
 ```html
 <div>
   <ul ng-repeat="todo in todos">
-    <li ng-inf="todo.complete === 'incomplete'">
+    <li ng-if="todo.complete === 'incomplete'">
         {{ todo.name }}
         <button ng-click="killTodo(todo)">Finish</button>
     </li>
