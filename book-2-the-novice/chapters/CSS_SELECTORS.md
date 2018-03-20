@@ -50,11 +50,11 @@ CSS uses selectors to determine which elements the current set of styling should
     </section>
     <section class="article__content">
       Copper mug small batch meh plaid flexitarian. Before they
-      sold out occupy chartreuse hot chicken, la croix 
-      fingerstache offal VHS air plant. Humblebrag blue bottle 
-      cred af jean shorts etsy copper mug chicharrones cronut 
-      art party scenester pabst chillwave. Distillery 8-bit 
-      pabst fashion axe, tousled cloud bread bushwick roof party 
+      sold out occupy chartreuse hot chicken, la croix
+      fingerstache offal VHS air plant. Humblebrag blue bottle
+      cred af jean shorts etsy copper mug chicharrones cronut
+      art party scenester pabst chillwave. Distillery 8-bit
+      pabst fashion axe, tousled cloud bread bushwick roof party
       franzen quinoa fixie.
     </section>
     <aside class="aside_box--dark dashed">
@@ -149,7 +149,6 @@ Paste the code below into your HTML document.
 1. Any `h4` that is a direct child of grandparent should have a 1px border with rounded corners.
 1. Elements with a class of `promo` should have bold text that is also colored gold.
 1. Without adding any other attributes to the `input` fields in the footer, write a CSS selector that makes any text input field have a height of `25px`.
-
 
 ```html
 <header>

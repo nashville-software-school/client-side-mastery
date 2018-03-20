@@ -8,9 +8,23 @@ Up to this point in the course, you've had a single JavaScript file for each of 
 
 For example, you may have code for building your database and getting information out of it, as well as code that deals with making your data available in the DOM for human beings to consume. To modularize this code, you take all code that deals with the database and put it in one file, and the DOM manipulation code in a different one.
 
-> databaseFactory.js
+This serves two purposes:
+
+1. It makes your code easier to read since each file will contain less code, and code that all deals with the same responsibility.
+2. It makes it easier to maintain since it reduces the chance that two developers will be working in the same file, thus reducing merge conflicts.
+
+Let's look at a simple example.
+
+> database.js
 
 ```js
+/*
+    Purpose:
+    This file contains all code related to manipulating,
+    or accessing the main flower database. Code not serving
+    this purpose should not be added to this file.
+*/
+
 const FlowerDatabase = [
     {
       "id": 1,
@@ -25,18 +39,53 @@ const FlowerDatabase = [
 ];
 
 const getFlower = function (id) {
-    return FlowerDatabase.filter((flower) => flower.id === id)
+    return FlowerDatabase.find(flower => flower.id === id)
+}
+
+const saveFlower = function (flower) {
+    // Verify that the state of the flower meets requirements
+    if (
+        flower.commonName.length > 0
+        && flower.hasOwnProperty("id")
+        && flower.hasOwnProperty("commonName")
+        && flower.hasOwnProperty("species")
+        && (FlowerDatabase.find(f => f.id === flower.id) || null) === null
+    ) {
+        FlowerDatabase.push(flower)
+    } else {
+        throw "Flower not saved. Missing, or incorrect, required properties."
+    }
 }
 ```
 
 > domController.js
 
 ```js
-// Use a method defined in a different JavaScript module
+/*
+    Purpose:
+    This file contains all code related to gathering user
+    input from the DOM, or adding adding information from
+    the database into the DOM
+*/
+
+/*
+    You can use a function defined in another JavaScript
+    file because, to the browser, all JavaScript files are
+    seen as a single, continuous program
+*/
 const flower = getFlower(1)
 
 // Update the DOM
-document.getElementById("currentFlower").innerHTML = `${flower.commonName}`;
+document.querySelector("#currentFlower").innerHTML = `${flower.commonName}`
+
+// Add a new flower to the database
+const tulip = {
+    "id": 3,  // See what happens when you change this to 1
+    "commonName": "Tulip",
+    "species": ["Tylennis oriander"]
+}
+
+saveFlower(tulip)
 ```
 
 ## Splitting CSS into Different Files

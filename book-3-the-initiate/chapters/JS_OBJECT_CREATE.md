@@ -23,6 +23,7 @@ const boringObject = {}
 Now you're going to learn about `Object.create()`, and once you see how much power it gives you, you will start to understand how it can help you comply with the SRP.
 
 ![realize the power](images/object-create-realize.gif)
+
 > *The moment when a JavaScript developer realizes the true power of Object.create()*
 
 ### Read Only Properties
@@ -73,6 +74,8 @@ console.log(veryImportantInfo.bankAccountNumber)   // 4483271255458979043 --> Yi
 
 ![panic!](./images/panic.gif)
 
+## Read-only Properties
+
 Using the power of `Object.create()` you can prevent another developer from changing the value of any property on an object. The create method allows you to specify whether a property can be changed with the `writable` property. By setting it to false, that value cannot be changed. It is now a read-only property.
 
 ```js
@@ -115,7 +118,7 @@ Try it out for yourself. Create a new Quokka file, paste the above object into i
 
 ![read only properties](./images/NOmZNJeNBT.gif)
 
-### Hidden(ish) Properties
+### Non-Enumerble Properties
 
 When you use a `for..in` loop to iterate over the keys of an object, only enumerable keys will be used. Let's see what that means. If you open a Quokka file and create an object using curly braces, and then iterate over its keys, nothing will appear.
 
@@ -134,14 +137,16 @@ Now, after you define the object, add a key named `stale` with a value of `true`
 ```js
 const boring = {}
 boring.stale = true
-boring.wait = function () { console.log("waiting for the paint to dry ")}
+boring.wait = function () {
+    console.log("waiting for the paint to dry ")
+}
 
 for (let key in boring) {
     console.log(key)
 }
 ```
 
-What's weird about this is that a standard object inherits from the Big Object in JavaScript. It inherits `toString`, `hasOwnProperty` and several other keys. Why don't those show up in the console?? It's because they are non-enumerable. You can also provide that level of control with `Object.create`, but can't with standard object creation.
+What's weird about this is that a standard object inherits from the Big Object in JavaScript. It inherits `toString`, `hasOwnProperty` and several other keys. Why don't those show up in the console?? It's because they are non-enumerable. You can also provide that level of control with `Object.create()`, but can't with standard object creation.
 
 Be aware that the `enumerable` configuration for a property is also `false` by default - just like `writable`, so if you want an enumerable property, you have to specify it.
 
@@ -168,5 +173,159 @@ You may be wondering at this point, "So... what's the point? Why do I care if a 
 That's a great question. Let's consider an object that has property values that we want to display in the DOM, but it also has method properties.
 
 ```js
+const JuanRodriguezPatient = {
+    firstName: "Juan",
+    lastName: "Rodriguez",
+    dob: "12/13/1985",
+    address: "127.0.0.1",
+    gender: "M",
+    fullName: function () {
+        return `${this.firstName} ${this.lastName}`
+    },
+    age: function () {
+        const dob = new Date(this.dob)
+        const yearBirth = dob.getFullYear()
+        const now = new Date()
+        const yearNow = now.getFullYear()
 
+        return yearNow - yearBirth
+    }
+}
 ```
+
+In my application, I want to display all properties and their value into the DOM. Let's imagine that we are building a nurse's report to see a list of all active patients in a doctor's office.
+
+> index.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nashville Software School</title>
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+  <div id="patient-list"></div>
+
+  <script src="juan.js"></script>
+  <script src="createElement.js"></script>
+</body>
+</html>
+```
+
+> styles.css
+
+```css
+key {
+    font-weight: bolder;
+    margin: 0 20px 0 0;
+    min-width: 100px;
+    display: inline-block;
+}
+
+key::after {
+    content: ":"
+}
+```
+
+> createElement.js
+
+```js
+// Obtain a reference to the patient list container
+const patientList = document.querySelector("#patient-list")
+
+/*
+    Create an in-memory DOM Node that will contain all elements
+    which will display information about Juan
+*/
+const patientElementContainer = document.createDocumentFragment()
+
+// Create an article element to contain all of the properties
+const patient = document.createElement("article")
+
+for (let key in JuanRodriguezPatient) { /* eslint no-undef: "off" */
+
+    // The container element for each property
+    const property = document.createElement("section")
+
+    // Span element to hold the name of the property
+    const keyElement = document.createElement("key")
+    keyElement.textContent = `${key.charAt(0).toLocaleUpperCase() + key.slice(1)}`
+
+    // Span element to hold the value of the property
+    const valueElement = document.createElement("value")
+    valueElement.textContent = `${JuanRodriguezPatient[key]}`
+
+    // Add the two spans to the property <div>
+    property.appendChild(keyElement)
+    property.appendChild(valueElement)
+
+    // Add the property <div> to the patient <div>
+    patient.appendChild(property)
+}
+
+// Attach the `article` element to the document fragment
+patientElementContainer.appendChild(patient)
+
+// Add the document fragment to the DOM
+patientList.appendChild(patientElementContainer)
+```
+
+Here's the resulting DOM in the browser.
+
+![](./images/juan-info.png)
+
+__Oops!__
+
+`FullName` and `Age` are methods of the `JuanRodriguezPatient` object - not properties. I don't want them displayed. This can't be achieved with ordinary object creation. We have to use `Object.create()`.
+
+Let's make those methods non-enumerable, and the properties enumerable.
+
+```js
+const JuanRodriguezPatient = Object.create({}, {
+    firstName: {
+        value: "Juan",
+        enumerable: true
+    },
+    lastName: {
+        value: "Rodriguez",
+        enumerable: true
+    },
+    dob: {
+        value: "12/13/1985",
+        enumerable: true
+    },
+    address: {
+        value: "127.0.0.1",
+        enumerable: true
+    },
+    gender: {
+        value: "M",
+        enumerable: true
+    },
+    fullName: {
+        value: function () {
+            return `${this.firstName} ${this.lastName}`
+        }
+    },
+    age: {
+        value: function () {
+            const dob = new Date(this.dob)
+            const yearBirth = dob.getFullYear()
+            const now = new Date()
+            const yearNow = now.getFullYear()
+
+            return yearNow - yearBirth
+        }
+    }
+}
+```
+
+Here's the output when we use `Object.create()` to make those methods non-enumerable.
+
+![](./images/juan-correct.png)
+
+You can view the working code in [JSFiddle](https://jsfiddle.net/chortlehoort/csf4qodj/).

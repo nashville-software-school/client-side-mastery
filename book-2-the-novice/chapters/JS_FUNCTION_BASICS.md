@@ -4,55 +4,55 @@ Functions are reusable code. JavaScript written without functions executes one l
 
 ```js
 // Display the first and last name of the following people
-let first_name = "Jamal";
-let last_name = "Haynes";
+let firstName = "Jamal";
+let lastName = "Haynes";
 
-console.log(`${first_name} ${last_name}`);
+console.log(`${firstName} ${lastName}`);
 
-let first_name = "Debra";
-let last_name = "Gordon";
+let firstName = "Debra";
+let lastName = "Gordon";
 
-console.log(`${first_name} ${last_name}`);
+console.log(`${firstName} ${lastName}`);
 
-let first_name = "Svetlana";
-let last_name = "Irinov";
+let firstName = "Svetlana";
+let lastName = "Irinov";
 
-console.log(`${first_name} ${last_name}`);
+console.log(`${firstName} ${lastName}`);
 
-let first_name = "Sequina";
-let last_name = "Rodriguez";
+let firstName = "Sequina";
+let lastName = "Rodriguez";
 
-console.log(`${first_name} ${last_name}`);
+console.log(`${firstName} ${lastName}`);
 ```
 
 The inefficiencies of this code are obvious - from needlessly repeating the same code, to the high probability of human error as we increase the number of times we need to perform the operation.
 
 ```js
-let first_name = "Jessawynne";
-let last_name = "Parker";
+let firstName = "Jessawynne";
+let lastName = "Parker";
 
-// Oops, I misspelled first_name. My program now has an error, or bug, in it.
-console.log(`${fist_name} ${last_name}`); 
+// Oops, I misspelled firstName. My program now has an error, or bug, in it.
+console.log(`${fist_name} ${lastName}`);
 ```
 
 When the same lines of code need to be repeated, even just once, then you put those lines of code in a function. You provide a name for a function, and it needs to be descriptive enough to understand what its purpose is.
 
 ```js
-function displayName (first_name, last_name) {
+function displayName (firstName, lastName) {
   /*
     Since the code needed to display a person's name is written
-    only once, we never have to worry about a developer 
+    only once, we never have to worry about a developer
     misspelling a word, or missing a character because she
     needed to write the code for the 34th time.
   */
-  console.log(`${first_name} ${last_name}`);
+  console.log(`${firstName} ${lastName}`)
 }
 
-displayName("Jamal", "Haynes");
-displayName("Debra", "Gordon");
-displayName("Svetlana", "Irinov");
-displayName("Sequina", "Rodriguez");
-displayName("Jessawynne", "Parker");
+displayName("Jamal", "Haynes")
+displayName("Debra", "Gordon")
+displayName("Svetlana", "Irinov")
+displayName("Sequina", "Rodriguez")
+displayName("Jessawynne", "Parker")
 ```
 
 ## Pure Functions
@@ -100,24 +100,64 @@ const updateDOM = function (message) {
 }
 ```
 
-# Videos to Watch
+## Videos to Watch
 
 1. NSS Learning Team video showing the usage of [functions as sub-programs](https://www.youtube.com/watch?v=XBVombfX-lQ&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC&index=1)
 1. [Functions Introduction to JavaScript Learn JavaScript](https://www.youtube.com/watch?v=cX4tVeJXp3Y)
 1. [Javascript Tutorial For Beginners - #3 Javascript Functions Tutorial](https://www.youtube.com/watch?v=AY6X5jZZ_JE)
-1. [What the Function: Introduction to Javascript Functions - 1 of 3
-](https://www.youtube.com/watch?v=hVHl20w0glE)
-1. [What the Function: Writing Your Own JavaScript Functions - 2 of 3
-](https://www.youtube.com/watch?v=Q_GZtTwhjFQ)
-1. [What the Function: Higher Order Functions - 3 of 3
-](https://www.youtube.com/watch?v=jE7MAh2EgSQ)
+1. [What the Function: Introduction to Javascript Functions - 1 of 3](https://www.youtube.com/watch?v=hVHl20w0glE)
+1. [What the Function: Writing Your Own JavaScript Functions - 2 of 3](https://www.youtube.com/watch?v=Q_GZtTwhjFQ)
+1. [What the Function: Higher Order Functions - 3 of 3](https://www.youtube.com/watch?v=jE7MAh2EgSQ)
 1. [ES6 Arrow Functions in JavaScript tutorial](https://www.youtube.com/watch?v=_pfXEv9cFGE)
-1. [Understanding Closures (In Under 10 Minutes!)
-](https://www.youtube.com/watch?v=rBBwrBRoOOY)
-1. [Javascript Closures Tutorial - What makes Javascript Weird...and Awesome Pt 3
-](https://www.youtube.com/watch?v=ZqGFKcCcO-Y)
+1. [Understanding Closures (In Under 10 Minutes!)](https://www.youtube.com/watch?v=rBBwrBRoOOY)
+1. [Javascript Closures Tutorial - What makes Javascript Weird...and Awesome Pt 3](https://www.youtube.com/watch?v=ZqGFKcCcO-Y)
 
-# Overly Excited Function Exercises
+## Practice: ChickenMonkey
+
+Write a program that prints the numbers from 1 to 100. But for multiples of five (5, 10, 15, etc.) print "Chicken" instead of the number and for the multiples of seven (7, 14, 21, etc.) print "Monkey". For numbers which are multiples of both five and seven print "ChickenMonkey".
+
+To determine if a number can be evenly divided by 3 or 5, use the JavaScript [remainder](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder) operator.
+
+For example...
+
+```js
+// Only show even numbers
+const numbers = [1,2,3,4,5,6,7]
+
+for (let i = 0; i < numbers.length; i++) {
+    const currentNumber = numbers[i]
+
+    // Take the current number, divide by 2, and check if the remainder is 0
+    if (currentNumber % 2 === 0) {
+        console.log(currentNumber) // Only 2, 4, 6 will appear
+    }
+}
+```
+
+## Practice: Take a Number - Battle of the Bands
+
+A local nightclub is having a Battle of the Bands night in a few months. They expect many bands to sign up because the grand prize is $20,000. To make things easier on the nightclub management, they want each band to be assigned a number so that they can easily keep track of the order in which the bands will perform.
+
+Your job is to write a function that accepts any band name as an argument. The function will increment a global variable by one each time it is invoked, and return that number, and the band name concatenated together.
+
+```js
+const bandNumber = 1
+
+const takeNumber = function () {
+    /*
+        Write your awesome code here. See comments
+        below for what should be returned.
+    */
+}
+
+const scum = takeNumber("Galactic Scum")
+console.log(scum)  // This should print "1. Galactic Scum" in the console
+
+const under = takeNumber("Underdogs")
+console.log(under)  // This should print "2. Underdogs" in the console
+```
+
+## Practice: Overly Excited
 
 ## Requirements
 
@@ -160,27 +200,27 @@ For this exercise, you need to create a single JavaScript function named `addExc
 
 Create an `addExcitement` function that should `console.log()` rows of words. It should take an array containing the words of a sentence and output them in the developer console.
 
-> **Example output:**  
->  
-> The   
-> The walrus    
-> The walrus danced      
-> The walrus danced through     
-> The walrus danced through the     
-> The walrus danced through the trees         
-> The walrus danced through the trees in            
-> The walrus danced through the trees in the        
-> The walrus danced through the trees in the light  
-> The walrus danced through the trees in the light of   
-> The walrus danced through the trees in the light of the    
-> The walrus danced through the trees in the light of the moon  
+> **Example output:**
+>
+> The
+> The walrus
+> The walrus danced
+> The walrus danced through
+> The walrus danced through the
+> The walrus danced through the trees
+> The walrus danced through the trees in
+> The walrus danced through the trees in the
+> The walrus danced through the trees in the light
+> The walrus danced through the trees in the light of
+> The walrus danced through the trees in the light of the
+> The walrus danced through the trees in the light of the moon
 > ...
 
 Paste the following code into overly-excited.js
 
 ```js
 // Create an array that contains the words in the sentence
-let sentence = [];
+let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
 /*
     The addExcitement function should be an impure function, and accept
@@ -189,10 +229,19 @@ let sentence = [];
 */
 function addExcitement (theWordArray) {
 
+    // Each time the for loop executes, you're going to add one more word to this string
+    let buildMeUp = ""
+
+    for (let i = 0; i < theWordArray.length; i++) {
+        // Concatenate the new word onto buildMeUp
+
+        // Print buildMeUp to the console
+    }
+
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence);
+addExcitement(sentence)
 ```
 
 ## Adding Conditions to the Loop
@@ -203,41 +252,40 @@ Your job is to read the following English statement and write the equivalent in 
 
 > If the current value of the [counter variable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) can be evenly divided by 3 - using the JavaScript [remainder](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder) operator - then add a single exclamation point (!) to the output.
 
-> **Example output:**  
->  
-> The               
-> The walrus            
-> The walrus danced!                
-> The walrus danced! through            
-> The walrus danced! through the            
-> The walrus danced! through the trees!         
-> The walrus danced! through the trees! in          
-> The walrus danced! through the trees! in the          
-> The walrus danced! through the trees! in the light!           
-> The walrus danced! through the trees! in the light! of            
-> The walrus danced! through the trees! in the light! of the        
-> The walrus danced! through the trees! in the light! of the moon!      
+> **Example output:**
+>
+> The
+> The walrus
+> The walrus danced!
+> The walrus danced! through
+> The walrus danced! through the
+> The walrus danced! through the trees!
+> The walrus danced! through the trees! in
+> The walrus danced! through the trees! in the
+> The walrus danced! through the trees! in the light!
+> The walrus danced! through the trees! in the light! of
+> The walrus danced! through the trees! in the light! of the
+> The walrus danced! through the trees! in the light! of the moon!
 > ...
-
 
 ## Even More Excited
 
-Add logic in the `addExcitement` function to the increase the number of exclamation points after every third word. The number of exclamation points (!) will be determined by how many times the counter variable can be divided by 3. 
+Add logic in the `addExcitement` function to the increase the number of exclamation points after every third word. The number of exclamation points (!) will be determined by how many times the counter variable can be divided by 3.
 
-> **Example output:**  
->  
-> The                   
-> The walrus            
-> The walrus danced!            
-> The walrus danced! through            
-> The walrus danced! through the            
-> The walrus danced! through the trees!!            
-> The walrus danced! through the trees!! in         
-> The walrus danced! through the trees!! in the             
-> The walrus danced! through the trees!! in the light!!!            
-> The walrus danced! through the trees!! in the light!!! of             
-> The walrus danced! through the trees!! in the light!!! of the             
-> The walrus danced! through the trees!! in the light!!! of the moon!!!!            
+> **Example output:**
+>
+> The
+> The walrus
+> The walrus danced!
+> The walrus danced! through
+> The walrus danced! through the
+> The walrus danced! through the trees!!
+> The walrus danced! through the trees!! in
+> The walrus danced! through the trees!! in the
+> The walrus danced! through the trees!! in the light!!!
+> The walrus danced! through the trees!! in the light!!! of
+> The walrus danced! through the trees!! in the light!!! of the
+> The walrus danced! through the trees!! in the light!!! of the moon!!!!
 > ...
 
 ## Function Arguments
@@ -249,16 +297,16 @@ Add a new argument to the function so that a developer can specify which charact
 addExcitement(sentence, "?");
 ```
 
-> **Example output:**  
->  
-> The                   
-> The walrus            
-> The walrus danced?            
-> The walrus danced? through            
-> The walrus danced? through the            
-> The walrus danced? through the trees?? 
+> **Example output:**
 >
-> etc.. 
+> The
+> The walrus
+> The walrus danced?
+> The walrus danced? through
+> The walrus danced? through the
+> The walrus danced? through the trees??
+>
+> etc..
 
 ## Another Sentence
 
@@ -271,7 +319,7 @@ Invoke your function for a second time, passing in the new sentence variable and
 addExcitement(nextSentence, "&");
 ```
 
-## Arrow Functions
+# Challenge: Arrow Functions
 
 Watch the video about arrow functions, and see if you can rewrite `addExcitement` using that syntax.
 

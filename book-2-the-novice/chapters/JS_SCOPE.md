@@ -114,9 +114,9 @@ order.clear()
 1. [Environment, Scope and Closures in JS / Intro to JavaScript ES6 programming, lesson 16](https://www.youtube.com/watch?v=LhSCEWHazAU)
 1. [Keeping Track of "This" in JavaScript](https://www.youtube.com/watch?v=JduQUNn7L4w)
 
-## Lexscopistan Exercises
+## Scope Exercises
 
-Some Lexscopistanian developers were contracted to build some code, but there weren't quite clear yet on how scope works. Your job to fix their code to stop all the error from being thrown.
+Some software developers were contracted to build some code, but there weren't quite clear yet on how scope works. Your job to fix their code to stop all the error from being thrown.
 
 ### C is for Cookie
 

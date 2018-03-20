@@ -138,17 +138,26 @@ In the JavaScript file, you are going to build the database using the guide belo
 
 A database is a collection of data sets which are often related to each other. Start by defining the collections of data. This is how you will be defining databases in JavaScript until you learn how to use 3rd-party database systems later in the course.
 
+You're going to be using a standard object as the database, so let's create that now.
+
 ```js
-const HomeInventoryDatabase = {
-    furniture: [],
-    crafts: [],
-    electronics: []
+// Define the database as an object
+const HomeInventoryDatabase = {}
+```
+
+Next, we're going to add some keys to our database object. One for each set of data. I want to store information about furniture, crafting items, and electronics that I have in my home.
+
+```js
+// Define the arrays (a.k.a. tables) in the database to store each type of items
+HomeInventoryDatabase.furniture = []
+HomeInventoryDatabase.crafts = []
+HomeInventoryDatabase.electronics = []
 }
 ```
 
 With this data structure, `furniture` is going to be a set of similar data, likewise for `crafts` and `electronics`. We use these sets of data to store similar information together so that when we want to display information to a human, getting the information is fast and easy.
 
-In professional database systems, each of those set (i.e. furniture, crafts, and electronics) are called tables of data. A database is a collection of tables.
+In professional database systems, each of those unique sets (i.e. furniture, crafts, and electronics) are called tables of data. A database is a collection of tables.
 
 ### Defining Data Items
 
@@ -183,54 +192,97 @@ HomeInventoryDatabase.furniture.push(writingDesk)
 
 ## Local Storage
 
-Now it's time to make your database persistent. Making the data persistent is important because if you just use the code you've written so far, and make changes to the data sets, each time you reload your application in the browser, all of your modifications are gone.
+Now it's time to make your database persistent. Persistence is an important part of storing your data because you want any changes you make to your data to continue to exist in any processes that make those changes.
 
-Putting your database in the browser's local storage allows you to make modifications over time and have the data always be up to date with all of your changes.
+You're going to be using a mechanism in the browser called [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage) to save your data. Once your database is safely in local storage, you will be able to write more code in the future to add, remove, or edit items in the database and those changes will be permanent, no matter how many applications use it.
 
 ### JSON.stringify to Store the Data
 
-The `JSON` object allows you to take an in-memory object, and convert it to a string representation of the object that can be saved in local storage.
+As your applications become more complex and you start accepting user input, you will need to change your database and then immediately save it to local storage. It only takes two lines of code to accomplish this, but we want to keep our code DRY, and never write the same line of code twice.
+
+Time to write a function.
 
 ```js
-/*
-    Convert the Object into a string.
-    Local storage can only store strings.
-*/
-const HomeInventoryDatabaseString = JSON.stringify(HomeInventory)
+const saveDatabase = function (database) {
 
-/*
-    Create a key in local storage named HomeInventory, and store the string
-    version of your inventory database as the value
-*/
-localStorage.setItem("HomeInventory", homeInventoryString)
+}
+```
+
+This function will perform the steps necessary to save the database to local storage.
+
+Next, the `JSON.stringify` method allows you to take an in-memory object, and convert it to a string representation of the object that can be saved in local storage. This is important, because only strings can be saved in local storage.
+
+```js
+const saveDatabase = function (databaseObject, localStorageKey) {
+    /*
+        Convert the Object into a string.
+    */
+    const stringifiedDatabase = JSON.stringify(databaseObject)
+
+    /*
+        Create a key in local storage, and store the string
+        version of your inventory database as the value
+    */
+    localStorage.setItem(localStorageKey, stringifiedDatabase)
+}
 ```
 
 ### JSON.parse to Read the Data
 
-To get the value back out of local storage so that it can be used in our application as an actual object again, we need to use the `getItem()` method. We send in an argument value that is the name of the key we want to retrieve.
+To get the value back out of local storage so that it can be used in our application as an actual object again, we need to use the `localStorage.getItem()` method. We send in an argument value that is the name of the key we want to retrieve. Let's put these instructions in a function named `loadDatabase`.
 
 ```js
-// Get the string version of the database
-const databaseString = localStorage.getItem("HomeInventory")
+const loadDatabase = function (localStorageKey) {
+    // Get the string version of the database
+    const databaseString = localStorage.getItem(localStorageKey)
 
-// Use JSON.parse() to convert the string back into an object
-const HomeInventoryDatabase = JSON.parse(databaseString)
+    // Use JSON.parse() to convert the string back into an object
+    return JSON.parse(databaseString)
+}
 ```
 
-The above two JavaScript statements can be combined once you feel comfortable with understanding how they work.
+## Saving the Database
+
+Now you can use those two functions to save, and load, your home inventory database from localStorage. The only one that you're going to use right now is the `saveDatabase` function.
+
+Here's what your `database.js` file should look like.
 
 ```js
-// or, in combined syntax
-const HomeInventoryDatabase = JSON.parse(localStorage.getItem("HomeInventory"))
+/*
+    Initialize the database in memory as an object
+*/
+const HomeInventoryDatabase = {}
+
+/*
+    Initilize all of the tables (i.e. arrays) that you want to
+    use in your database.
+*/
+HomeInventoryDatabase.furniture = []
+HomeInventoryDatabase.crafts = []
+HomeInventoryDatabase.electronics = []
+
+/*
+    Time to create some data that will inserted into the database
+*/
+
+// The ink well is a craft data item
+const vintageInkwell = {
+  name: "Vintage Ink Well",
+  location: "Writing desk",
+  description: "I enjoy this inkwell because it belonged to my grandfather and holds enough ink to survive weeks of writing."
+}
+
+// The writing desk is a furniture data item
+const writingDesk = {
+  name: "Shaker Writing Desk",
+  location: "Bedroom",
+  description: "This antique desk is special because I found and purchased it with my wife at an Ohio Amish auction."
+}
+
+// Add the data to the appropriate tables
+HomeInventoryDatabase.crafts.push(vintageInkwell)
+HomeInventoryDatabase.furniture.push(writingDesk)
+
+// Persist the database to localStorage
+saveDatabase(HomeInventoryDatabase, "HomeInventory")
 ```
-
-## Adding to your Database
-
-Now that you have stored your database, create a 2nd JavaScript file named `additional-storage.js` and include it in your HTML.
-
-Write the code in this new file to complete the following tasks.
-
-1. Load the database from local storage.
-1. Parse the string into a JavaScript object.
-1. Add one new object to each type array in your database (e.g. add a new piece of furniture).
-1. Store the new database back into local storage.

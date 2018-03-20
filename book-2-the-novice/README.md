@@ -4,32 +4,32 @@ In this book, you will build a strong foundation of skills and practices that wi
 
 You will learn not only the basics of coding, design, and teamwork skills, but you will also unlock the secrets and power of your computer, making it bend to your will. Your computer is the instrument of the craft, and to become a true professional, you must have proficiency and knowledge of it.
 
-Keyboard shortcuts, terminal usage, and knowledge of bash commands are all needed.
+## Chapters
 
 * Chapter 1 - [Command Line Basics](./chapters/CLI_BASICS.md)
-* Chapter 2 - [Semantic HTML](./chapters/HTML_SEMANTIC.md)
+* Chapter 2 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
 * Chapter 3 - [How to Research Code](./chapters/MISC_RESEARCH.md)
-* Chapter 4 - [Git Basics](./chapters/GIT_BASICS.md)
-* Chapter 5 - [Pure & Impure Functions](./chapters/JS_FUNCTION_BASICS.md)
+* Chapter 4 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
+* Chapter 5 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
+* Chapter 6 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
+* Chapter 7 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
+* Chapter 8 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
+* Chapter 9 - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter 10 - [Query DOM Components](./chapters/JS_WORKING_WITH_DOM.md)
+* Chapter 11 - [Scope: For That Minty Fresh Code](./chapters/JS_SCOPE.md)
+* Chapter 12 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
-**Personal Site Project Tickets Assigned**
+> ### __Sprint 1__ - Intelligence Report
 
-* Chapter 6 - [Debugging Your Code](./chapters/MISC_DEBUGGING.md)
-* Chapter 7 - [Simple Objects](./chapters/JS_OBJECTS.md)
-* Chapter 8 - [Command Line Personalization](./chapters/CLI_PERSONALIZATION.md)
-* Chapter 9 - [Working with Data](./chapters/JS_DATA.md)
-* Chapter 10 - [CSS Selectors](./chapters/CSS_SELECTORS.md)
-* Chapter 11 - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
-* Chapter 12 - [Manipulating the Browser DOM](./chapters/JS_WORKING_WITH_DOM.md)
 * Chapter 13 - [Modular Code Introduction](./chapters/DESIGN_MODULARITY.md)
-* Chapter 14 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+* Chapter 14 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 
-**Sprint 1 - Company Website**
+> ### __Sprint 2__ - Dynamic Intelligence Report
+
+## Supplementary Content
+
+* Supplement - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
+* Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
+* Supplement - [Data and Metadata](./chapters/METADATA.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
-
----
-
-## Foundation Concepts Graph
-
-![Foundations](./assets/foundations.png)
