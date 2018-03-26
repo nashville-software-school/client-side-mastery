@@ -2,11 +2,12 @@
 
 In this book, you will build be learning how to use all of the concepts and tooling that you have been exposed to in order to build a modern single page application that consumes data from a remote, persistent storage system - also known as APIs.
 
+* Chapter 1 -  
+* Chapter 2 - [Building Your Own API](./chapters/JSON_SERVER_API.md)
 * Chapter 3 - [Asynchronous Operations with XHR](./chapters/XHR_INTRO.md)
-* Chapter 4 - [Persistent Storage with Firebase](./chapters/FIREBASE_INTRO.md)
-* Chapter 5 - [Coordinating Asynchronous Operations with Promises](./chapters/PROMISES.md)
+* Chapter 4 - [Coordinating Operations with Promises](./chapters/PROMISES.md)
 
-> ## __Sprint 3__: Community Coordinator
+> ## Sprint 3: Community Coordinator
 
 * Chapter 7 - [React Basics](./chapters/REACT_BASICS.md)
 * Chapter 8 - [Angular Routing and Factories](./chapters/ANGULAR_FACTORIES.md)

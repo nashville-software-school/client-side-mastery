@@ -159,9 +159,9 @@ Conversely, this is not a good example of using a standard object.
 
 ```js
 const Article = {
-    id: "​​​​​5a347edb-0691-4471-8049-c4b619e6dba7​​​​​",
+    id: "5a347edb-0691-4471-8049-c4b619e6dba7",
     title: "Object in JavaScript are cool!",
-    date: ​​​​​1512877301083​​​​​,
+    date: 1512877301083,
     author: "Steve Brownlee",
     content: "Using Object.create() gives you such incredible control when creating objects in your system that are actors with properties and behaviors",
     tags: ["nss", "objects", "javascript"]
@@ -179,7 +179,7 @@ Let's exert some control.
 ```js
 const Article = Object.create(null, {
     id: {
-        value: "​​​​​5a347edb-0691-4471-8049-c4b619e6dba7​​​​​",
+        value: "5a347edb-0691-4471-8049-c4b619e6dba7",
         enumerable: true
     },
     title: {
@@ -195,7 +195,7 @@ const Article = Object.create(null, {
         enumerable: true
     },
     date: {
-        value: ​​​​​1512877301083​​​​​,
+        value: 1512877301083,
         enumerable: true
     },
     _tags: {
@@ -234,3 +234,4 @@ const Article = Object.create(null, {
 ```
 
 Now the article is an actor in the system. It has not-writable properties, a custom get/set for the `tags` property, a publish behavior, and provides a HTML representation method to ensure that it is rendered the same way by any external code.
+

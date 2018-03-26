@@ -239,3 +239,33 @@ const FamilyDatabase = {
 1. [Beginner SQL - 14 - One to Many Relationship](https://www.youtube.com/watch?v=mOkplknUNiU)
 1. [Beginner SQL - 16 - Many to Many Relationship](https://www.youtube.com/watch?v=iLn-lIpm5dU)
 1. [Entity Relationship Diagram (ERD) Tutorial - Part 1](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+
+## Practice
+
+### Follow the Money
+
+You need to design a database to represent the financial relationship between political candidates and corporate entities. Since corporations can contribute to political campaigns, your job is to help see how politicians are being funded, and if that funding is directly translating into bills that politicians [sponsor](https://en.wikipedia.org/wiki/Sponsor_(legislative)).
+
+1. Politicians can receive donations from many corporations.
+1. Corporations can donate to multiple candidates, on multiple dates.
+1. Politicians can draft many bills.
+1. A bill can only be sponsored by one politician.
+
+The resources in this system are as follows:
+
+1. Politician
+1. Corporation
+1. Donation
+1. LegislativeBill
+
+Create an ERD that visualizes the correct relationships between these four resources.
+
+### Bonus Feature
+
+1. Create a JSON file for each resource.
+1. Define a few entries for each resource. Each resource must have a unique primary key.
+1. Establish relationships between the resources by storing primary key values as foreign keys on related objects.
+1. Put all resources into an `HonestAbeDatabase` object, serialize it as a string, and save it to `localStorage`.
+
+### Extra Bonus Feature
+

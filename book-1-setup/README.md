@@ -1,10 +1,20 @@
-# Settings up your Computer and Hardware
+# Setting up your Computer and Hardware
 
 ## Hardware
 
 Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive RIGHT NOW and start backing up your entire hard drive.
 
 **Seriously, right now!**
+
+## Online Services
+
+### Create a Github account
+
+Github is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
+
+### Create an AWS Free Tier account
+
+You will be learning how to use several services provided on the [Amazon Web Services](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) platform. The free tier provides you with one year of all the resources you will need to deploy your finished products to a custom domain name for future employers to see.
 
 ## Software
 
@@ -19,10 +29,6 @@ Do not use the browser-based interface for Slack. Download and use the client. L
 ### Google Chrome
 
 [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
-
-### Create a Github account
-
-Github is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
 
 ### Visual Studio Code
 
@@ -42,7 +48,6 @@ Suggested extensions to install
 1. [FontSize Shortcuts](https://marketplace.visualstudio.com/items?itemName=fosshaas.fontsize-shortcuts)
 1. [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 1. [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
-1. [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 1. [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 ---
@@ -127,3 +132,4 @@ SSH is a technology that allows you to create a very secure connection between y
 1. A private key file that you never, ever, ever, ever, ever share with anyone. It is usually named `id_rsa`.
 
 Follow the [Github instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows) for creating a new SSH key, and providing your public key to Github, so that you can establish a secure connection between your computer and Github's computers.
+

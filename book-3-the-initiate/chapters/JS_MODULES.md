@@ -95,7 +95,7 @@ const garageSupervisor = Object.create(null, {
     }
 })
 
-module.exports = garage
+module.exports = garageSupervisor
 ```
 
 Now let's import this module into our main module and use its methods.
