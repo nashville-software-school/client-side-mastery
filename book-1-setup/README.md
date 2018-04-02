@@ -1,4 +1,8 @@
-# Setting up your Computer and Hardware
+# Things You Need
+
+## Journal
+
+Get a nice journal and a comfortable pen, and start keeping a daily journal of what you are learning every day. Writing you thoughts on a regular basis [increases your ability to remember it](https://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html). There are even studies that found writing is [beneficial for your health](https://www.apa.org/monitor/sep01/keepdiary.aspx).
 
 ## Hardware
 
@@ -8,13 +12,17 @@ Up until now, you didn't have the power to destroy your machine, but within the 
 
 ## Online Services
 
-### Create a Github account
+### Github
 
 Github is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
 
-### Create an AWS Free Tier account
+### AWS Free Tier account
 
 You will be learning how to use several services provided on the [Amazon Web Services](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) platform. The free tier provides you with one year of all the resources you will need to deploy your finished products to a custom domain name for future employers to see.
+
+### Jobtrack
+
+Create an account at [Jobtrack](https://jobtrack.io/) so that you can keep track of contacts you make throughout the next 6 months. In about 4.5 months, you will also use this to track jobs that you've applied to, and other information about interviews, hiring managers, etc.
 
 ## Software
 
