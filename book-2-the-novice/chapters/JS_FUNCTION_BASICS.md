@@ -203,16 +203,27 @@ Create an `addExcitement` function that should `console.log()` rows of words. It
 > **Example output:**
 >
 > The
+>
 > The walrus
+>
 > The walrus danced
+>
 > The walrus danced through
+>
 > The walrus danced through the
+>
 > The walrus danced through the trees
+>
 > The walrus danced through the trees in
+>
 > The walrus danced through the trees in the
+>
 > The walrus danced through the trees in the light
+>
 > The walrus danced through the trees in the light of
+>
 > The walrus danced through the trees in the light of the
+>
 > The walrus danced through the trees in the light of the moon
 > ...
 
@@ -255,16 +266,27 @@ Your job is to read the following English statement and write the equivalent in 
 > **Example output:**
 >
 > The
+>
 > The walrus
+>
 > The walrus danced!
+>
 > The walrus danced! through
+>
 > The walrus danced! through the
+>
 > The walrus danced! through the trees!
+>
 > The walrus danced! through the trees! in
+>
 > The walrus danced! through the trees! in the
+>
 > The walrus danced! through the trees! in the light!
+>
 > The walrus danced! through the trees! in the light! of
+>
 > The walrus danced! through the trees! in the light! of the
+>
 > The walrus danced! through the trees! in the light! of the moon!
 > ...
 
@@ -275,16 +297,27 @@ Add logic in the `addExcitement` function to the increase the number of exclamat
 > **Example output:**
 >
 > The
+>
 > The walrus
+>
 > The walrus danced!
+>
 > The walrus danced! through
+>
 > The walrus danced! through the
+>
 > The walrus danced! through the trees!!
+>
 > The walrus danced! through the trees!! in
+>
 > The walrus danced! through the trees!! in the
+>
 > The walrus danced! through the trees!! in the light!!!
+>
 > The walrus danced! through the trees!! in the light!!! of
+>
 > The walrus danced! through the trees!! in the light!!! of the
+>
 > The walrus danced! through the trees!! in the light!!! of the moon!!!!
 > ...
 
@@ -300,10 +333,15 @@ addExcitement(sentence, "?");
 > **Example output:**
 >
 > The
+>
 > The walrus
+>
 > The walrus danced?
+>
 > The walrus danced? through
+>
 > The walrus danced? through the
+>
 > The walrus danced? through the trees??
 >
 > etc..
