@@ -15,7 +15,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 7 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
 * Chapter 8 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
 * Chapter 9 - [Data in Software Applications](./chapters/JS_DATA.md)
-* Chapter 10 - [Query DOM Components](./chapters/JS_WORKING_WITH_DOM.md)
+* Chapter 10 - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
 * Chapter 11 - [Scope: For That Minty Fresh Code](./chapters/JS_SCOPE.md)
 * Chapter 12 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 

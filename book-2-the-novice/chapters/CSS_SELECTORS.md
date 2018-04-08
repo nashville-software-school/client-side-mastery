@@ -150,6 +150,8 @@ Paste the code below into your HTML document.
 1. Elements with a class of `promo` should have bold text that is also colored gold.
 1. Without adding any other attributes to the `input` fields in the footer, write a CSS selector that makes any text input field have a height of `25px`.
 
+> **Note:** You are not allowed to add `id` and `class` attributes to any component
+
 ```html
 <header>
   <ul>
