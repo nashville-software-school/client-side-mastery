@@ -306,3 +306,8 @@ code .
 1. That component itself should contain three `<p>` components. One for the name, location, and description.
 1. Attach the `p` components as children of the `section`.
 1. Attach the `section` as a child of the `article`.
+
+## Advanced Challenge
+
+1. Write a function that performs the operation of creating your DOM components
+1. Define an argument to the function that will filter the data to one of the data sets. For example, if I pass a string value of "crafts" to the function, only items in the `crafts` table in the database should appear.
