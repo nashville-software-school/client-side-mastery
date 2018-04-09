@@ -152,7 +152,6 @@ Next, we're going to add some keys to our database object. One for each set of d
 HomeInventoryDatabase.furniture = []
 HomeInventoryDatabase.crafts = []
 HomeInventoryDatabase.electronics = []
-}
 ```
 
 With this data structure, `furniture` is going to be a set of similar data, likewise for `crafts` and `electronics`. We use these sets of data to store similar information together so that when we want to display information to a human, getting the information is fast and easy.
