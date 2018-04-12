@@ -59,3 +59,20 @@ Then follow the steps that they provided to test the code.
 After your pull request is approved, you can open it on Github and click the merge button.
 
 ![](https://help.github.com/assets/images/help/pull_requests/pullrequest-mergebutton.png)
+
+## A Few Tips
+
+### Merge master into your current branch 
+If you are on a branch and a teammate created something you need, you can pull down master and then merge the master into your branch to get access to that new code.
+
+```sh
+git add .
+git commit -m "commit message"
+git checkout master
+git pull origin master
+git checkout NAMEOFYOURBRANCH
+git merge master
+```
+
+### Tracked files follow you. 
+If you are working on two branches (maybe a style branch and a feature branch), your tracked files will follow you, branch to branch. To avoid that, make sure to add/commit before you check out to a different branch.
