@@ -76,3 +76,14 @@ git merge master
 
 ### Tracked files follow you. 
 If you are working on two branches (maybe a style branch and a feature branch), your tracked files will follow you, branch to branch. To avoid that, make sure to add/commit before you check out to a different branch.
+
+### Fetch vs. Pull
+When a teammate needs you to check their branch, you need to get that branch's changes to your local machine - 
+```sh
+git fetch --all
+git checkout BRANCHNAME
+```
+If a teammate makes changes on that branch and pushes them back up to Github, you already have their branch on your local machine. You just need to get their updated changes -
+```sh
+git pull origin BRANCHNAME
+```
