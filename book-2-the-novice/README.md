@@ -24,7 +24,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 13 - [Modular Code Introduction](./chapters/DESIGN_MODULARITY.md)
 * Chapter 14 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 
-> ### __Sprint 2__ - Dynamic Intelligence Report
+> ### __Sprint 2__ - Dynamic Intelligence Report (Deployed to AWS)
 
 ## Supplementary Content
 
