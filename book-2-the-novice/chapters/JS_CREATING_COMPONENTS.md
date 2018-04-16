@@ -18,6 +18,7 @@ const list = document.createElement('ul')
 
 // Create a list item for our list
 const listItem = document.createElement('li')
+listItem.className = "president"
 listItem.textContent = "George Bush"
 
 // Put the list item on the unordered list
@@ -30,45 +31,11 @@ When you insert the `list` object to the DOM, it will generate the following HTM
 
 ```html
 <ul>
-    <li>George Bush</li>
-</ul>
-```
-
-## createAttribute()
-
-If you want your DOM element to have HTML attributes - like `id` or `class` - you can use the `createAttribute()` method on the virtual element.
-
-```js
-// Create an unordered list component element
-const list = document.createElement('ul')
-
-// Create an attribute for the list component
-const listClass = document.createAttribute('class')
-listClass.value = 'unordered-list'
-
-// Add the attribute to the component
-list.setAttributeNode(listClass)
-
-// Create a child list item component for President Bush
-const bush = document.createElement('li')
-bush.textContent = "George Bush"
-const bushClass = document.createAttribute('class')
-bushClass.value = 'president'
-bush.setAttributeNode(bushClass)
-
-// Assign the list item component on the unordered list
-list.appendChild(bush)
-
-console.log(list)
-```
-
-```html
-<ul class="unordered-list">
     <li class="president">George Bush</li>
 </ul>
 ```
 
-### Practice
+## Practice Creating Elements
 
 You're going to create a simple list of chat messages that you might have with one of your family members. Maybe it's that wacky aunt that you see every Christmas and Fourth of July.
 
@@ -111,6 +78,6 @@ fragment.appendChild(aurelius)
 document.querySelector("#emperorList").appendChild(fragment)
 ```
 
-### Document Fragment Practice
+### Practice Document Fragment
 
 Update your code from the previous exercise to add the chat messages to the `messages` elements via a document fragment.
