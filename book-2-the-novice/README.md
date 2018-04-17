@@ -12,17 +12,18 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 4 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
 * Chapter 5 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
 * Chapter 6 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
-* Chapter 7 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
-* Chapter 8 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
-* Chapter 9 - [Data in Software Applications](./chapters/JS_DATA.md)
-* Chapter 10 - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
-* Chapter 11 - [Scope: For That Minty Fresh Code](./chapters/JS_SCOPE.md)
-* Chapter 12 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+* Chapter 7 - [Scope: For That Minty Fresh Code](./chapters/JS_SCOPE.md)
+* Chapter 8 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
+* Chapter 9 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
+* Chapter 10 - [Intro to Object.create()](./chapters/JS_OBJECT_CREATE_INTRO.md)
+* Chapter 11 - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
 
 > ### __Sprint 1__ - Intelligence Report
 
-* Chapter 13 - [Modular Code Introduction](./chapters/DESIGN_MODULARITY.md)
-* Chapter 14 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
+* Chapter 12 - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter 13 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
+* Chapter 14 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
+* Chapter 15 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
 > ### __Sprint 2__ - Dynamic Intelligence Report (Deployed to AWS)
 

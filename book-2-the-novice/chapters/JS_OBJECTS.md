@@ -70,53 +70,6 @@ const expenseReport = {
 }
 ```
 
-## Object.create()
-
-You can also use `Object.create()` to initialize an object. Let's rewrite the `expense` object with this method.
-
-```js
-const expense = Object.create({}, {
-    dateCreated: {
-        enumerable: true,
-        writable: false,
-        value: "01/01/2017"
-    },
-    location: {
-        enumerable: true,
-        writable: false,
-        value: "Bob's Burgers"
-    },
-    dollarAmount: {
-        enumerable: true,
-        writable: false,
-        value: 14.34
-    },
-    purpose: {
-        enumerable: true,
-        writable: false,
-        value: "Lunch with very important client"
-    },
-    code: {
-        enumerable: false,
-        writable: true,
-        value: "1001A"
-    }
-})
-```
-
-You might be thinking this right now.
-
-> "Um, this seems like way too much code to write when I can just do it the other way. Why would I ever do this?"
-
-You use `Object.create()` when you want to have fine-grained control over the state and behavior of an object. Using simple object create with `{}`, you don't have much control. You'll learn more about this as your continue through the course.
-
-For now, using simple object creation is fine.
-
-> **Googling Tip**:
->
-> [Writable and enumerable properties](http://bfy.tw/Gu9L)
->
-
 ## Object State
 
 Ok, I mentioned "object state" above, and you might not understand what I mean by that. Stated as simply as possible, when you hear the words _object state_, it means that you want to know what the values of an object's properties are _**at this moment in time**_. That means an object's state can change, i.e. a property's value can be reassigned.

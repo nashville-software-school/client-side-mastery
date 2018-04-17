@@ -202,14 +202,16 @@ As your applications become more complex and you start accepting user input, you
 Time to write a function.
 
 ```js
-const saveDatabase = function (database) {
+const saveDatabase = function (databaseObject) {
 
 }
 ```
 
-This function will perform the steps necessary to save the database to local storage.
+This is not the final version of the function. Keep reading to see how you will be augmenting this function to perform the steps necessary to save the database to local storage.
 
-Next, the `JSON.stringify` method allows you to take an in-memory object, and convert it to a string representation of the object that can be saved in local storage. This is important, because only strings can be saved in local storage.
+The first step, is to refactor the function to receive an argument specifying the label for our database to be used in localStorage.
+
+In the code below, you will see how to use the `JSON.stringify` method which allows you to take an in-memory object, and convert it to a string representation of the object that can be saved in local storage. This is important, because only strings can be saved in local storage.
 
 ```js
 const saveDatabase = function (databaseObject, localStorageKey) {
