@@ -32,6 +32,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Supplement - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
+* Supplement - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
 * Supplement - [Deploy to AWS S3](./chapters/AWS_S3.md)
 * Supplement - [Deploy to AWS EC2](./chapters/AWS_EC2.md)
 
