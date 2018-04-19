@@ -334,19 +334,36 @@ You can view the working code in [JSFiddle](https://jsfiddle.net/chortlehoort/cs
 
 Your job is to create an object that represents a financial advisor and has the following properties and methods.
 
-1. Company (enumerable, writable)
-1. Specialty (enumerable, writable)
-1. Name (enumerable)
-1. Portfolio (non-enumerable) - Should display the stocks the advisor currently holds
-1. Worth (enumerable, read-only)
-1. Purchase (non-enumerable) - This method takes a stock ticker symbol, a quantity, and a price as arguments
-1. Sell (non-enumerable) - This method takes a stock ticker symbol, a quantity, and a price as arguments
+1. Company (enumerable, writable, property)
+1. Specialty (enumerable, writable, property)
+1. Name (enumerable, property)
+1. Portfolio (non-enumerable, property) - Should display the stocks the advisor currently holds
+1. Worth (non-enumerable, method)
+1. Purchase (non-enumerable, method) - This method takes a stock ticker symbol, a quantity, and a price as arguments
+1. Sell (non-enumerable, method) - This method takes a stock ticker symbol, a quantity, and a price as arguments
 
-When `sell()` or `purchase()` are invoked, then the stock portfolio should be modified accordingly. Consider making the portfolio an object itself (if you are feeling brave, try your hand at a `Map()`)
+When `sell()` or `purchase()` are invoked, then the stock portfolio should be modified accordingly. Start off with making `portfolio` property an array that holds transactions.
 
-![advisor](./images/EonA3QH9Ve.gif)
+When you invoke the `worth()` method, it should look at every transaction and calculate the advisor's net worth.
 
-## Bonus Goal
+## Challenge
 
 1. Use `document.createElement` to build & display an HTML component to display the advisor's name, company, and specialty.
 1. Iterate over the advisor's portfolio and use `document.createDocumentFragment` along with `document.createElement` to display some HTML components representing each stock owned by the advisor.
+
+## Advanced Challenge
+
+Change the `portfolio` property value from an array to an object. Instead of it being a record of transactions, it should only store the advisor's current assets. Each invocation of `sell` or `purchase` should modify the advisor's holdings.
+
+```js
+{
+    "AAPL": {
+        "shares": 152,
+        "valuation": 30400
+    },
+    "MSFT": {
+        "shares": 290,
+        "valuation": 49300
+    }
+}
+```

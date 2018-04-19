@@ -148,7 +148,78 @@ document.querySelector("body").addEventListener("click", function(event) {
 1. NSS Learning Team video [Basic JavaScript Event Listeners](https://www.youtube.com/watch?v=4XvM096cQF4&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC&index=3)
 1. NSS Learning Team video [JavaScript Event Listener Types](https://www.youtube.com/watch?v=5zlueGaybjc&index=4&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC)
 
-## Practice - Dynamic Cards
+## Practice
+
+Setup the following files.
+
+> index.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nashville Software School</title>
+</head>
+
+<body>
+
+  <article id="powerList">
+    <section id="flight" class="power disabled">
+        Flight
+    </section>
+    <section id="mindreading" class="power disabled">
+        Mind Reading
+    </section>
+    <section id="xray" class="power disabled">
+        X-ray Vision
+    </section>
+  </article>
+
+  <button id="activate-flight">Activate Flight</button>
+  <button id="activate-mindreading">Activate Mind Reading</button>
+  <button id="activate-xray">Active X-ray Vision</button>
+
+  <button id="activate-all">Active All Powers</button>
+  <button id="deactivate-all">Deactive All Powers</button>
+
+
+  <script src="powers.js"></script>
+</body>
+</html>
+```
+
+> powers.js
+
+```js
+/*
+    In the following code, replace `event` with the correct string to handle
+    a click event on the button. Then write the function that has instructions
+    for activating the corresponding power. The function should...
+        1. Remove the `disabled` class
+        2. Add the `enabled` class
+
+*/
+document.querySelector("#activate-flight").addEventListener(event, handlerFunction)
+
+/*
+    Now write two more event handlers that activate the other two powers
+    when the corresponding buttons are clicked.
+*/
+
+
+/*
+    Write two more event handlers for activating and deactivating all powers
+    when the corresponding buttons are clicked. You will need to use the
+    `document.querySelectorAll()` method for these.
+*/
+```
+
+> **Googling Tip:** [Adding classes to DOM components](http://lmgtfy.com/?q=javascript+add+class+to+DOM+element)
+
+> **Googling Tip:** [Iterating over DOM components identified with querySelectorAll](http://lmgtfy.com/?q=iterating+over+elements+querySelectorAll)
+
+## Challenge - Dynamic Cards
 
 ### Setup
 
@@ -164,10 +235,26 @@ touch cards.css
 ### Requirements
 
 1. Create an HTML page that contains a text area and a button labeled *Create*.
-1. When the user enters in text into the text area and then clicks the create button, create a new card element in the DOM that includes it's own delete button. You decide the height/width of the card.
+1. When the user enters in text into the text area and then clicks the create button, use a factory function that creates a new DOM component that has a border, and includes it's own delete button.
+1. Insert that new component into the DOM.
 1. When the user clicks the *Delete* button, the containing card, and no other cards, should then be removed from the DOM. Not just made invisible, actually [removed](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild) from the DOM.
 
-### Notes
+> **Pro tip:** The card's `id` attribute, and the button's `id` attribute should share some common value. Then, when the button is clicked, find the corresponding parent DOM component. Remember the `split()` method on a string? That will be helpful.
+
+```html
+<article class="card" id="card--1">
+    <div>Hey, I entered some text</div>
+    <div>
+        <button id="delete--1">Delete This Card</button>
+    </div>
+</article>
+<article class="card" id="card--2">
+    <div>Hey, I entered some text</div>
+    <div>
+        <button id="delete--2">Delete This Card</button>
+    </div>
+</article>
+```
 
 1. In order to know which delete button the user clicked on, each one **must** have a unique value in its `id` attribute.
 1. Remember your factory and generator functions. Generator should yield a unique identifier. Factory should generate DOM string.
