@@ -255,7 +255,3 @@ touch cards.css
     </div>
 </article>
 ```
-
-1. In order to know which delete button the user clicked on, each one **must** have a unique value in its `id` attribute.
-1. Remember your factory and generator functions. Generator should yield a unique identifier. Factory should generate DOM string.
-1. You can't attach an event listener to an element until it has been added to the DOM.
