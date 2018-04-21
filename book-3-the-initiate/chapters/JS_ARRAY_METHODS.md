@@ -156,14 +156,14 @@ const totalRainfall = monthlyRainfall.reduce(
 * [6 JavaScript Native Array Functions in 5 Minutes](https://www.youtube.com/watch?v=9ar5ZpBW7NE)
 * [Common Array Methods - Beau teaches JavaScript](https://www.youtube.com/watch?v=MeZVVxLn26E)
 
-## Practice - Solar System
+## Practice: Solar System
 
 ### Setup
 
 These commands are a helpful quick start. You may choose to ignore them completely and create your own directory structure. If you choose to use this recommendation, just copy the commands below and paste. It doesn't matter what directory you are currently in.
 
 ```bash
-mkdir -p ~/workspace/exercises/spa/array-methods && cd $_
+mkdir -p ~/workspace/javascript/exercises/array-methods && cd $_
 touch index.html
 touch array-methods.js
 ```
@@ -183,7 +183,7 @@ const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uran
 const planetEl = document.getElementById("planets")
 
 /*
-    Use the map method to create a new array where the 
+    Use the map method to create a new array where the
     first letter of each planet is capitalized. Use the
     `toUpperCase()` method on strings.
 
@@ -204,7 +204,16 @@ const planetEl = document.getElementById("planets")
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 ```
 
-## Advanced Practice: Chaining Methods
+## More Practice: Trimming the Fat
+
+You have been tasked with building a list of email addresses for all of our customers, so we can spam them with email about Miffles the Vampire Weiner Dog.
+
+Copy the contents of the [customers.json](./data/customers.json) file into a local project.
+
+From that object extract just the customers' email addresses and store them in a new array
+
+
+## Challenge: Chaining Methods
 
 ### Setup
 
