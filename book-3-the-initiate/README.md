@@ -8,14 +8,18 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 4 - [Handling Browser Events](./chapters/JS_EVENTS.md)
 * Chapter 5 - [Task Automation with Grunt](./chapters/AUTOMATION_GRUNT.md)
 * Chapter 6 - [JavaScript Modules](./chapters/JS_MODULES.md)
-* Chapter 7 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
-* Chapter 8 - [Asynchronicity](./chapters/JSON_SERVER_API.md)
-* Chapter 9 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
-* Chapter 10 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
-* Chapter 11 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
-* Chapter 12 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
+* Chapter 7 - [Designing Software Features](./chapters/DESIGN_FEATURES.md)
 
-> ## Sprint 2 - Nutshell
+> ## Sprint 3 - Task Tracker (Drag & Drop)
+
+* Chapter 8 - [jQuery](./chapters/JQUERY.md)
+* Chapter 9 - [Asynchronicity](./chapters/JSON_SERVER_API.md)
+* Chapter 10 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
+* Chapter 12 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
+* Chapter 12 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
+* Chapter 13 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
+
+> ## Sprint 4 - Nutshell
 
 ## Supplementary Content
 

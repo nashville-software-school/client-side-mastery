@@ -2,16 +2,14 @@
 
 In this book, you will build be learning how to use all of the concepts and tooling that you have been exposed to in order to build a modern single page application that consumes data from a remote, persistent storage system - also known as APIs.
 
-* Chapter 1 -  
-* Chapter 2 - [Building Your Own API](./chapters/JSON_SERVER_API.md)
-* Chapter 3 - [Asynchronous Operations with XHR](./chapters/XHR_INTRO.md)
-* Chapter 4 - [Coordinating Operations with Promises](./chapters/PROMISES.md)
+* Chapter 1 - [CSS Variables](./chapters/CSS_VARIABLES.md)
+* Chapter 2 - [Coordinating Operations with Promises](./chapters/PROMISES.md)
 
 > ## Sprint 3: Community Coordinator
 
 * Chapter 7 - [React Basics](./chapters/REACT_BASICS.md)
-* Chapter 8 - [Angular Routing and Factories](./chapters/ANGULAR_FACTORIES.md)
-* Chapter 9 - [Integrating Authentication with Angular](./chapters/ANGULAR_AUTHENTICATION.md)
+* Chapter 9 - [State and Immutability](./chapters/COMPONENT_STATE_IMMUTABILITY.md)
+* Chapter 8 - [React Routing](./chapters/REACT_ROUTING.md)
 * Chapter 10 - [Including Partials into other Partials](./chapters/ANGULAR_INCLUDE.md)
 
 > ## **Capstones**
