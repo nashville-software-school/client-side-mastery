@@ -204,13 +204,15 @@ const planetEl = document.getElementById("planets")
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 ```
 
-## More Practice: Trimming the Fat
+## More Practice: Spam, Spam, Spam, Spam
 
 You have been tasked with building a list of email addresses for all of our customers, so we can spam them with email about Miffles the Vampire Weiner Dog.
 
-Copy the contents of the [customers.json](./data/customers.json) file into a local project.
+1. Create a new project in `workspace`.
+1. In your JavaScript file, define a variable named `customers`.
+1. Copy the contents of the [customers.json](./data/customers.json) and make that object the value of `customers`.
 
-From that object extract just the customers' email addresses and store them in a new array
+From that object extract just the customers' email addresses and store them in a new array. You will need to use methods such as `map()`, `forEach()` and/or `concat()` to accomplish this.
 
 
 ## Challenge: Chaining Methods
@@ -237,3 +239,14 @@ Using one single line of JavaScript code, complete the following tasks on the ar
 ```js
 const integers = [13, 25, 6, 3, 11, 2, 18, 7, 21, 1, 29, 20, 12, 8];
 ```
+
+## Advanced Challenge: Car Dealership
+
+Copy the JSON from [cars.json](./data/cars.json) and assign it to a variable in a new application. This data holds sales information for a car dealership. Your job is to produce the following reports for the dealership based on their total 2017 sales.
+
+1. Total profit for 2017
+1. In which month did they sell the most cars?
+1. Which salesperson sold the most cars?
+1. Which salesperson made the most profit?
+1. Which model was the most popular?
+1. Which bank provided the most loans to our customers?
