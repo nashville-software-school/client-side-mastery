@@ -95,9 +95,12 @@ $.ajax("http://localhost:8080/songs.json")
 
 <body>
 
-  <div id="all-my-songs"></div>
+  <button id="all-my-songs"></button>
 
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script src="songs.js"></script>
 
 </body>
@@ -111,22 +114,26 @@ $(document).ready(function() {
 
     // Use jQuery to get a reference to `all-my-songs`
 
-    // Use $.ajax() to load `songs.json` from the file system
+
+    /*
+        Attach a click handler to the button with jQuery. When
+        the button is clicked, use $.ajax() to load `songs.json`
+        from the file system
+    */
 
 
     /*
-    Chain a `.then()` method to the ajax call, and when
-    it is complete build a DOM component for each song with
-    the following structure. Use the jQuery append() method
-    to put each song in the DOM.
+        Chain a `.then()` method to the ajax call, and when
+        it is complete build a DOM component for each song with
+        the following structure. Use the jQuery append() method
+        to put each song in the DOM.
 
-        <section class="song">
-            <h1 class="song__title">{Title of song}</h1>
-            <section class="song__description">
-                Performed by {artist} on the album {album}
+            <section class="song">
+                <h1 class="song__title">{Title of song}</h1>
+                <section class="song__description">
+                    Performed by {artist} on the album {album}
+                </section>
             </section>
-        </section>
-
     */
 })
 ```

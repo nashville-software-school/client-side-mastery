@@ -26,7 +26,7 @@ You are going to create an API that you will use to store and retrieve informati
 ```sh
 mkdir -p ~/workspace/javascript/exercises/api-intro
 cd $_
-touch routes.json food.json
+touch routes.json database.json
 ```
 
 Add the following configuration object to `routes.json`.
@@ -48,7 +48,7 @@ Next, pre-populate your API with some of your favorite foods. Each object should
 1. Ethnicity (_string_)
 1. Side dishes (_array_)
 
-> Example data in `food.json`
+> Example data in `database.json`
 
 ```json
 {
@@ -81,7 +81,7 @@ Next, pre-populate your API with some of your favorite foods. Each object should
 Now that the routes are configured and you have some data, you can start your API with the following command.
 
 ```sh
-json-server -p 8088 -r routes.json -w food.json
+json-server -p 8088 -r routes.json -w database.json
 ```
 
 Go to Chrome and go to the following URL.
