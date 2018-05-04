@@ -1069,5 +1069,215 @@
             "credit_provider": "PNC Financial Services",
             "account": "34578280562836"
         }
+    },
+    {
+        "vehicle": {
+            "year": 2010,
+            "model": "Jayis",
+            "make": "Ventolux",
+            "color": "rose quartz"
+        },
+        "sales_id": "5baa1f5d-f5f8-4338-a000-e46882f9bf06",
+        "sales_agent": {
+            "mobile": "(452) 909-3998",
+            "last_name": "Wyman",
+            "first_name": "Tyreek",
+            "email": "dewitt@outlook.com"
+        },
+        "purchase_date": "1977-12-06",
+        "gross_profit": 130.38,
+        "credit": {
+            "credit_provider": "BMO Financial Corp",
+            "account": "601140152897103"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2016,
+            "model": "Mat-dam",
+            "make": "Mat-lane",
+            "color": "keppel"
+        },
+        "sales_id": "7231587b-6102-46d6-a6b8-2ab2076a37c2",
+        "sales_agent": {
+            "mobile": "965-202-6407",
+            "last_name": "Rogahn",
+            "first_name": "Ron",
+            "email": "sail_darrin@yahoo.com"
+        },
+        "purchase_date": "2083-04-28",
+        "gross_profit": 544.2,
+        "credit": {
+            "credit_provider": "Citizens Financial Group",
+            "account": "471657243883"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2013,
+            "model": "Hot-sun",
+            "make": "Redtajob",
+            "color": "honeydew"
+        },
+        "sales_id": "b3bd0f7f-f1a6-4f89-964c-556d4b5f1cce",
+        "sales_agent": {
+            "mobile": "894.585.8043",
+            "last_name": "Jaskolski",
+            "first_name": "Bridie",
+            "email": "ut37@gmail.com"
+        },
+        "purchase_date": "2027-06-20",
+        "gross_profit": 478.37,
+        "credit": {
+            "credit_provider": "Wells Fargo",
+            "account": "601185431314724"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2018,
+            "model": "Iszenlax",
+            "make": "Isholding",
+            "color": "pale violet-red"
+        },
+        "sales_id": "c63c8450-f497-4a2d-9aaa-f65c0b673571",
+        "sales_agent": {
+            "mobile": "1-055-756-9858",
+            "last_name": "Denesik",
+            "first_name": "Renee",
+            "email": "result3@hotmail.com"
+        },
+        "purchase_date": "2041-07-13",
+        "gross_profit": 845.97,
+        "credit": {
+            "credit_provider": "M&T Bank Corporation",
+            "account": "37027623098742"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2009,
+            "model": "Sil dinhold",
+            "make": "Inditrax",
+            "color": "light salmon"
+        },
+        "sales_id": "fea417da-7982-4a5b-b252-51444c61ce6c",
+        "sales_agent": {
+            "mobile": "357.488.0529",
+            "last_name": "Collier",
+            "first_name": "Irving",
+            "email": "nelson@yahoo.com"
+        },
+        "purchase_date": "2117-06-13",
+        "gross_profit": 690.28,
+        "credit": {
+            "credit_provider": "Bank of America",
+            "account": "470608998935"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2008,
+            "model": "Blueplus",
+            "make": "Can-lax",
+            "color": "light french beige"
+        },
+        "sales_id": "acabd461-cbe8-46d7-82bb-ba5d17101274",
+        "sales_agent": {
+            "mobile": "1-137-371-1265",
+            "last_name": "Smith",
+            "first_name": "Maia",
+            "email": "south61@outlook.com"
+        },
+        "purchase_date": "2088-11-27",
+        "gross_profit": 604.66,
+        "credit": {
+            "credit_provider": "BB&T Corporation",
+            "account": "34355909105122"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2017,
+            "model": "Konlight",
+            "make": "Indigohotplex",
+            "color": "lemon curry"
+        },
+        "sales_id": "fa208db1-3f95-4af8-8beb-d79a900b86ce",
+        "sales_agent": {
+            "mobile": "370-171-3055",
+            "last_name": "Schowalter",
+            "first_name": "Tod",
+            "email": "point_candelario@gmail.com"
+        },
+        "purchase_date": "2099-03-25",
+        "gross_profit": 75.33,
+        "credit": {
+            "credit_provider": "Bank of New York Mellon",
+            "account": "448536561227"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2013,
+            "model": "Dong-ove",
+            "make": "Tampdrill",
+            "color": "fuchsia rose"
+        },
+        "sales_id": "c1c432ff-925f-4857-9a76-d0b600cfb91f",
+        "sales_agent": {
+            "mobile": "860.685.5106",
+            "last_name": "Zieme",
+            "first_name": "Agustina",
+            "email": "dog_josie@hotmail.com"
+        },
+        "purchase_date": "2108-01-20",
+        "gross_profit": 714.76,
+        "credit": {
+            "credit_provider": "PNC Financial Services",
+            "account": "492997605559164"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2013,
+            "model": "Homeothome",
+            "make": "Dan-bam",
+            "color": "american gold"
+        },
+        "sales_id": "76a4da8a-eb1f-4c24-8a43-a8cb01634be5",
+        "sales_agent": {
+            "mobile": "479.369.5118",
+            "last_name": "White",
+            "first_name": "Jerry",
+            "email": "quasi_emmitt@gmail.com"
+        },
+        "purchase_date": "1996-09-16",
+        "gross_profit": 884.7,
+        "credit": {
+            "credit_provider": "State Street Corporation",
+            "account": "455681005946"
+        }
+    },
+    {
+        "vehicle": {
+            "year": 2014,
+            "model": "Kintough",
+            "make": "Goodremkix",
+            "color": "cool grey"
+        },
+        "sales_id": "616b0154-190a-4305-9179-b8a35eb90891",
+        "sales_agent": {
+            "mobile": "499-236-2994",
+            "last_name": "Fritsch",
+            "first_name": "Sonia",
+            "email": "power_ezra@yahoo.com"
+        },
+        "purchase_date": "2106-03-12",
+        "gross_profit": 497.31,
+        "credit": {
+            "credit_provider": "Charles Schwab Corporation",
+            "account": "37055001413014"
+        }
     }
 ]
