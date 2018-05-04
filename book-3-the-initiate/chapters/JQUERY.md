@@ -95,7 +95,9 @@ $.ajax("http://localhost:8080/songs.json")
 
 <body>
 
-  <button id="all-my-songs"></button>
+  <button id="load-songs"></button>
+
+  <article id="song-list"></article>
 
   <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -112,7 +114,9 @@ $.ajax("http://localhost:8080/songs.json")
 ```js
 $(document).ready(function() {
 
-    // Use jQuery to get a reference to `all-my-songs`
+    // Use jQuery to get a reference to `load-songs`
+
+    // Use jQuery to get a reference to `song-list`
 
 
     /*
@@ -126,7 +130,8 @@ $(document).ready(function() {
         Chain a `.then()` method to the ajax call, and when
         it is complete build a DOM component for each song with
         the following structure. Use the jQuery append() method
-        to put each song in the DOM.
+        to put an HTML representation of each song the DOM as a
+        child component of the .
 
             <section class="song">
                 <h1 class="song__title">{Title of song}</h1>
