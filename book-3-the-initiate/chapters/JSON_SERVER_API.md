@@ -158,3 +158,7 @@ $.ajax({
     method: "DELETE"
 })
 ```
+
+## Practice: CRUD App for a Hipster Business
+
+Your instructor will lead you through the process of building a modular application with Browserify that will use your external API to query and manage the data your business.
