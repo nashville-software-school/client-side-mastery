@@ -99,3 +99,62 @@ Now filter the food to only show Italian dishes
 Or curry dishes.
 
 [http://localhost:8088/food?type=curry](http://localhost:8088/food?type=curry)
+
+## AJAX and your API
+
+### GET
+
+```js
+// Query and then display all food
+$.ajax("http://localhost:8088/food").then(allFood => console.log(allFood))
+```
+
+### POST
+
+```js
+// Create a food then display the new food
+$.ajax({
+    url: "http://localhost:8088/food",
+    method: "POST",
+    data: {
+        "name": "Red curry",
+        "type": "curry",
+        "ethnicity": "thai",
+        "sideDishes": [
+            "Chicken satee",
+            "Samosa"
+        ]
+    }
+})
+.then(newFood => console.log(newFood))
+```
+
+### PUT
+
+```js
+// Update an existing food, then display the modified version
+$.ajax({
+    url: "http://localhost:8088/food/5",
+    method: "PUT",
+    data: {
+        "name": "Yellow curry",
+        "type": "curry",
+        "ethnicity": "thai",
+        "sideDishes": [
+            "Noodles",
+            "Oranges"
+        ]
+    }
+})
+.then(updatedFood => console.log(updatedFood))
+```
+
+### DELETE
+
+```js
+// Delete an existing food
+$.ajax({
+    url: "http://localhost:8088/food/5",
+    method: "DELETE"
+})
+```

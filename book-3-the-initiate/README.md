@@ -15,9 +15,10 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 8 - [jQuery](./chapters/JQUERY.md)
 * Chapter 9 - [Asynchronicity](./chapters/ASYNC_XHR.md)
 * Chapter 10 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
+* Chapter 11 - [Coordinating Operations with Promises](./chapters/PROMISES.md)
 * Chapter 12 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
-* Chapter 12 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
-* Chapter 13 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
+* Chapter 13 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
+* Chapter 14 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
 
 > ## Sprint 4 - Nutshell
 

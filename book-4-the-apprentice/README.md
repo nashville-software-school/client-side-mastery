@@ -3,7 +3,6 @@
 In this book, you will build be learning how to use all of the concepts and tooling that you have been exposed to in order to build a modern single page application that consumes data from a remote, persistent storage system - also known as APIs.
 
 * Chapter 1 - [CSS Variables](./chapters/CSS_VARIABLES.md)
-* Chapter 2 - [Coordinating Operations with Promises](./chapters/PROMISES.md)
 * Chapter 3 - [React Basics](./chapters/REACT_BASICS.md)
 * Chapter 4 - [State and Immutability](./chapters/COMPONENT_STATE_IMMUTABILITY.md)
 * Chapter 5 - [Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
