@@ -18,7 +18,6 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 11 - [Coordinating Operations with Promises](./chapters/PROMISES.md)
 * Chapter 12 - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
 * Chapter 13 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
-* Chapter 14 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
 
 > ## Sprint 4 - Nutshell
 
@@ -26,7 +25,8 @@ In this book, you will learn tools, libraries and workflows that modern client s
 
 * Supplement 1 - [Prototypal Inheritance](./chapters/PROTOTYPAL.md)
 * Supplement 2 - [Using Object.create to Define Actors](./chapters/JS_ACTORS.md)
-* Supplement 3 - [Using Forms in Single Page Applications](./chapters/FORMS_SPA.md)
-* Supplement 4 - [Using vim as Your Text Editor](./chapters/VIM.md)
+* Supplement 3 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
+* Supplement 4 - [Using Forms in Single Page Applications](./chapters/FORMS_SPA.md)
+* Supplement 5 - [Using vim as Your Text Editor](./chapters/VIM.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 4 - The Apprentice](../book-4-the-apprentice/README.md).
