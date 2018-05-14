@@ -432,9 +432,9 @@ You will need to write the necessary Javascript below.
 
 
 // If the loop successfully iterates over the array and successfully executes the grill() function on each object. This console log should appear as an array that has each object's 'cooked' key now shows true.
-console.log('CookedFood array after our javascript!: ', cookedFood);
+console.log('CookedFood array after our loop ran!: ', cookedFood);
 ```
 
-# Challenge: State in DisArray
+# Challenge: State in _DisArray_
 
 You may have noticed that if you console.log() the old array, we still have objects that exist uncooked, even after we _JUST_ grilled them. The state of our Cookout is wildly out of control. Can you solve the problem?
