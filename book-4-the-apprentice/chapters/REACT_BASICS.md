@@ -52,58 +52,132 @@ Visit the [create-react-app](https://github.com/facebook/create-react-app/) Gith
 
 ## Resources
 
-1. [A Comprehensive Guide to learning React.js in 2018
-](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
-### What is React?
-- https://github.com/learn-co-students/javascript-virtual-dom-v-000
-- https://github.com/learn-co-students/react-declarative-programming-v-000
-- https://github.com/learn-co-students/react-create-element-v-000
-- https://github.com/learn-co-students/react-create-element-lab-v-000
+1. [A Comprehensive Guide to learning React.js in 2018](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
+1. Video: [React Tutorial Series](https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
 
-### Rendering
-- https://github.com/learn-co-students/react-components-v-000
-- https://github.com/learn-co-students/react-components-lab-v-000
-- https://github.com/learn-co-students/react-jsx-v-000
-- https://github.com/learn-co-students/react-jsx-lab-v-000
-- https://github.com/learn-co-students/react-babel-plugins-v-000
+## Examples
 
-### Props
-- https://github.com/learn-co-students/react-props-v-000
-- https://github.com/learn-co-students/react-props-lab-v-000
-- https://github.com/learn-co-students/react-prop-types-v-000
-- https://github.com/learn-co-students/react-prop-types-lab-v-000
-- https://github.com/learn-co-students/react-this-props-children-v-000
-- https://github.com/learn-co-students/react-this-props-children-lab-v-000
+### Single Component
 
-### State and Events
-- https://github.com/learn-co-students/react-initial-state-v-000
-- https://github.com/learn-co-students/react-initial-state-lab-v-000
-- https://github.com/learn-co-students/react-event-system-v-000
-- https://github.com/learn-co-students/react-event-system-lab-v-000
-- https://github.com/learn-co-students/react-events-in-detail-v-000
-- https://github.com/learn-co-students/react-events-in-detail-lab-v-000
-- https://github.com/learn-co-students/react-updating-state-v-000
-- https://github.com/learn-co-students/react-updating-state-lab-v-000
-- https://github.com/learn-co-students/react-forms-v-000
-- https://github.com/learn-co-students/react-forms-lab-v-000
-- https://github.com/learn-co-students/react-props-and-state-lab-v-000
+Here's the simplest of examples for building a React component. In your `index.js` file, place the following code that building a `<Me />` component that renders information about yourself.
 
-### Mounting
-- https://github.com/learn-co-students/react-component-lifecycle-v-000
-- https://github.com/learn-co-students/react-component-mounting-and-unmounting-v-000
-- https://github.com/learn-co-students/react-component-mounting-and-unmounting-lab-v-000
+```js
+import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
 
-### Rendering and Updating
-- https://github.com/learn-co-students/react-rendering-v-000
-- https://github.com/itzsaga/react-rendering-lab-v-000
-- https://github.com/itzsaga/react-component-lifecycle-lab-v-000
+class Me extends Component {
+    render() {
+        return (
+            <div>
+                <h3>Thomas Bangs</h3>
+                <h4>Evening Cohort 1</h4>
+                <h5>Nashville Software School</h5>
+            </div>
+        );
+    }
+}
 
-### Container Components
-- https://github.com/learn-co-students/react-container-components-v-000
-- https://github.com/learn-co-students/react-container-components-lab-v-000
+ReactDOM.render(<Me />, document.querySelector("root"));
+```
 
-### Presentational Components
-- https://github.com/learn-co-students/react-presentation-components-v-000
-- https://github.com/learn-co-students/react-presentation-components-lab-v-000
-- https://github.com/learn-co-students/props-props-props-props-props-props-v-000
-- https://github.com/learn-co-students/react-passing-props-lab-v-000
+### Child Component
+
+To further describe myself, I'm going to create another component that represents my home address.
+
+```js
+class Home extends Component {
+    render() {
+        return (
+            <div>
+                <h5>1000 Inifinity Way</h5>
+            </div>
+        );
+    }
+}
+```
+
+Then I can include that component as a child of the `Me` component.
+
+```js
+class Me extends Component {
+    render() {
+        return (
+            <div>
+                <h3>Thomas Bangs</h3>
+                <h4>Evening Cohort 1</h4>
+                <h5>Nashville Software School</h5>
+                <Home />
+            </div>
+        );
+    }
+}
+```
+
+> **Note:** Each React component's render method can only have a single component defined in it. Notice that each of my simple components above only define a single `<div>` with child elements.
+
+### Component Files
+
+Before we grow this application any further, we need to separate each component into its own JavaScript file.
+
+> Home.js
+
+```js
+import React, { Component } from 'react'
+
+class Home extends Component {
+    render() {
+        return (
+            <div>
+                <h5>1000 Inifinity Way</h5>
+            </div>
+        );
+    }
+}
+
+export default Home
+```
+
+> Me.js
+
+```js
+import React, { Component } from 'react'
+import Home from "./Home"  // Import the Home component
+
+
+class Me extends Component {
+    render() {
+        return (
+            <div>
+                <h3>Thomas Bangs</h3>
+                <h4>Evening Cohort 1</h4>
+                <h5>Nashville Software School</h5>
+                <Home />
+            </div>
+        );
+    }
+}
+
+export default Me
+```
+
+> index.js
+
+```js
+import ReactDOM from "react-dom"
+import React from 'react'
+import Me from "./Me"
+
+ReactDOM.render(<Me />, document.querySelector("#root"));
+```
+
+## Practice
+
+You're going to create a component named after yourself (e.g. `<Thomas />`, or `<Evelyn />` or `<Priya />`). It should contain the following information.
+
+1. Your full name
+1. Your cohort
+1. Your home address
+1. The make and model of your favorite vehicle
+1. The name, and species/breed of your favorite, or ideal, pet
+
+Make sure you author components for each unique object being represented and compose them into the component named after you.

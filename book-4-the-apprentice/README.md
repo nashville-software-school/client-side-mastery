@@ -3,15 +3,15 @@
 In this book, you will build be learning how to use all of the concepts and tooling that you have been exposed to in order to build a modern single page application that consumes data from a remote, persistent storage system - also known as APIs.
 
 * Chapter 1 - [CSS Variables](./chapters/CSS_VARIABLES.md)
-* Chapter 3 - [React Basics](./chapters/REACT_BASICS.md)
-* Chapter 4 - [State and Immutability](./chapters/COMPONENT_STATE_IMMUTABILITY.md)
-* Chapter 5 - [Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
-* Chapter 6 - [React Routing](./chapters/REACT_ROUTING.md)
-* Chapter 7 - [React Context API](./chapters/REACT_CONTEXT_API.md)
+* Chapter 2 - [React Basics](./chapters/REACT_BASICS.md)
+* Chapter 3 - [State and Props](./chapters/COMPONENT_STATE_Props.md)
+* Chapter 4 - [Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
+* Chapter 5 - [React Routing](./chapters/REACT_ROUTING.md)
+* Chapter 6 - [React Context API](./chapters/REACT_CONTEXT_API.md)
 
-> ## Sprint 3: Community Coordinator
+> ## Sprint 3: Financial Advisor
 
-* Chapter 8 - [Typescript](./chapters/TYPESCRIPT.md)
+* Chapter 7 - [Typescript](./chapters/TYPESCRIPT.md)
 
 > ## **Capstones**
 
