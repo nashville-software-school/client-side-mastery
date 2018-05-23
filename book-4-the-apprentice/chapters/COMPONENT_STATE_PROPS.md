@@ -6,7 +6,7 @@ State is simply the current values of the properties used to render a component.
 
 > State is simply the current values of the properties used to render a component.
 
-React components respond to changes in state. Any detected change in any value will cause the component to be rendered again. A fancy word for this is [_state transition_](https://en.wikipedia.org/wiki/State_diagram).
+React components respond to changes in state. Any detected change in any value will cause the component to be rendered again. A fancy phrase for this is [_state transition_](https://en.wikipedia.org/wiki/State_diagram).
 
 `State A -> Event -> State B`
 
@@ -65,12 +65,9 @@ class Rachel extends Component {
             firstName: "Rachel",
             lastName: "Morgan"
         }
-
-        // Necessary evil to bind the component to the event
-        this.convertToUpperCase = this.convertToUpperCase.bind(this)
     }
 
-    convertToUpperCase = function (event) {
+    convertToUpperCase = (event) {
         /*
             Create a new object that holds the upper cased
             version of your name
@@ -84,13 +81,16 @@ class Rachel extends Component {
             Initiate the state transition - which invokes render()
         */
         this.setState(upperCased)
-    }
+
+    }.bind(this) // Necessary evil to bind the component to the event
 
     render () {
         return (
             <article>
                 <h2>{this.state.firstName} {this.state.lastName}</h2>
-                <button onClick={this.convertToUpperCase}>Change to Uppercase</button>
+                <button onClick={this.convertToUpperCase}>
+                    Change to Uppercase
+                </button>
             </article>
         )
     }
@@ -99,6 +99,87 @@ class Rachel extends Component {
 
 ## Props
 
+Passing state values from one component to another is a fundamental part of React. You are used to passing values around as function arguments.
+
+```js
+const bio = (firstName, lastName, occupation, info) => {
+    return `
+        ${firstName} ${lastName}
+
+        Currently working as a ${occupation}
+
+        ${info}
+    `
+}
+
+const hannahBio = bio("Hannah", "Hall", "Software Engineer", "Graduated NSS in cohort 13. Junior instructor as NSS for one year. Now kicking ass professionally.")
+```
+
+Since React is all components written as JSX, which itself is mimic of HTML, we pass values as element attributes.
+
+> Bio.js
+
+```js
+import React, { Component } from 'react'
+
+
+/*
+    Bio itself has no state since the Hannah component
+    will be sending it all the data it needs as props
+*/
+class Bio extends Component {
+    render() {
+        return (
+            <div>
+                <p>Occupation: {this.props.occupation}</p>
+                <p>Bio: {this.props.bio}</p>
+            </div>
+        )
+    }
+}
+
+
+export default Bio
+```
+
+> Hannah.js
+
+```js
+import React, { Component } from 'react'
+import Bio from "./Bio"
+
+
+class Hannah extends Component {
+    constructor (props) {
+        /*
+            This is needed to properly initialize a React
+            component if you define a constructor
+        */
+        super(props)
+
+        // Set the initial state of the component
+        this.state = {
+            firstName: "Hannah",
+            lastName: "Hall",
+            occupation: "Software Engineer",
+            bio: "Graduated NSS in cohort 13. Junior instructor as NSS for one year. Now kicking ass professionally."
+        }
+    }
+
+    // Occupation and bio now sent to Bio as properties
+    render() {
+        return (
+            <article>
+                <h2>{this.state.firstName} {this.state.lastName}</h2>
+                <Bio occupation={this.state.occupation} bio={this.state.bio} />
+                </button>
+            </article>
+        )
+    }
+}
+
+export default Hannah
+```
 
 
 

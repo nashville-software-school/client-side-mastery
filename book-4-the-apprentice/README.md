@@ -4,14 +4,17 @@ In this book, you will build be learning how to use all of the concepts and tool
 
 * Chapter 1 - [CSS Variables](./chapters/CSS_VARIABLES.md)
 * Chapter 2 - [React Basics](./chapters/REACT_BASICS.md)
-* Chapter 3 - [State and Props](./chapters/COMPONENT_STATE_Props.md)
-* Chapter 4 - [Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
-* Chapter 5 - [React Routing](./chapters/REACT_ROUTING.md)
-* Chapter 6 - [React Context API](./chapters/REACT_CONTEXT_API.md)
+* Chapter 3 - [State and Props](./chapters/COMPONENT_STATE_PROPS.md)
+* Chapter 4 - [Component-Based Styling](./chapters/COMPONENT_STYLING.md)
+* Chapter 5 - [Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
+* Chapter 6 - [React Routing](./chapters/REACT_ROUTING.md)
+* Chapter 7 - [React Context API](./chapters/REACT_CONTEXT_API.md)
 
 > ## Sprint 3: Financial Advisor
 
-* Chapter 7 - [Typescript](./chapters/TYPESCRIPT.md)
+* Chapter 8 - [Typescript](./chapters/TYPESCRIPT.md)
+* Chapter 9 - [Vue, Polymer, AngularJs](./chapters/COMPONENT_FRAMEWORKS.md)
+* Chapter 10 - [Using JavaScript Outside the Browser](./chapters/NODE_INTRO.md)
 
 > ## **Capstones**
 
