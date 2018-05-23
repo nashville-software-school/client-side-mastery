@@ -36,9 +36,7 @@ transformed to lightweightJavaScript objects.
 
 ## Component LifeCycle
 
-1. **componentDidMount** — Fired after the component mounted
-1. **componentWillUnmount** — Fired before the component will unmount
-1. **getDerivedStateFromProps** - Fired when the component mounts and whenever the props change. Used to update the state of a component when its props change
+![component lifecycle](./images/react-component-lifecycle.png)
 
 ## Common Events
 
