@@ -8,7 +8,7 @@ In this book, you will build be learning how to use all of the concepts and tool
 * Chapter 4 - [Component-Based Styling](./chapters/COMPONENT_STYLING.md)
 * Chapter 5 - [Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
 * Chapter 6 - [React Routing](./chapters/REACT_ROUTING.md)
-* Chapter 7 - [React Context API](./chapters/REACT_CONTEXT_API.md)
+* Chapter 7 - [React Context API](./chapters/REACT_CONTEXT_API.md)s
 
 > ## Sprint 3: Financial Advisor
 
