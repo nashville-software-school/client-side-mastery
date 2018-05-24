@@ -77,7 +77,7 @@ function containsVowels (wordParameter)
     */
     const doesItHaveOne = wordParameter.match(/[aeiou]/gi)
 
-    return doesItHaveOne === null
+    return doesItHaveOne !== null
 
 }  // End of `function` scope
 
