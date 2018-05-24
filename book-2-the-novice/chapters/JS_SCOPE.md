@@ -75,7 +75,7 @@ function containsVowels (wordParameter)
         method on a string will return `null` if there
         are no matches, otherwise, an array will be returned.
     */
-    const doesItHaveOne = wordParameter.match(/aeiou/gi)
+    const doesItHaveOne = wordParameter.match(/[aeiou]/gi)
 
     return doesItHaveOne === null
 
