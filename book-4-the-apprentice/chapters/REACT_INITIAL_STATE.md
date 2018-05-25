@@ -8,23 +8,29 @@ The `componentDidMount()` hook runs after the component output has been rendered
 
 
 ```js
-class ContactList extends Component {
-    constructor (props) {
-        super(props)
+import React, { Component } from "react"
+import Home from "./Home";
+import Car from "./Car";
+import Pet from "./Pet";
+import "./styles/hannah.css"
 
-        /*
-            Used for Contact component keys. Read the docs
-            for more info.
 
-            https://reactjs.org/docs/reconciliation.html#keys
-        */
-        this.contactCardKey = 1
-
-        // Define initial state
-        this.state = {
-            contactList: []
-        }
+class Hannah extends Component {
+    /*
+        You can reduce the amount of code you need to write
+        when defining initial state for your component.
+        Eliminate your `constructor` method and just define
+        a state variable.
+    */
+    state = {
+        firstName: "",
+        lastName: "",
+        occupation: "",
+        address: {},
+        car: {},
+        pet: {}
     }
+
 
     /*
         Get all contacts from the API. This is the fetch
@@ -32,37 +38,36 @@ class ContactList extends Component {
 
         https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     */
-    loadContacts () {
-        fetch("http://localhost:5000/contacts")
+    loadMyInfo () {
+        fetch("http://localhost:5000/people/1")
             // Must be explicit on how to parse the response
             .then(r => r.json())
 
             // JSON parsed data comes to this then()
-            .then(contacts => {
-                this.setState({
-                    contactList: contacts
-                })
+            .then(hannah => {
+                this.setState(hannah)
             })
     }
 
     componentDidMount() {
-        this.loadContacts()  // Trigger the loading of contacts
+        this.loadMyInfo()  // Trigger the loading of information
     }
 
     render() {
         return (
-            <div className="contactlist">
-                {this.state.contactList.map(c => (
-                    <div key={this.contactCardKey++}>
-                        <div>{c.firstName} {c.lastName}</div>
-                    </div>
-                ))}
+            <div className="kittyPurry">
+                <h3>{this.state.firstName} {this.state.lastName}</h3>
+                <h4>{this.state.occupation}</h4>
+                <h5>{this.state.fame}</h5>
+                <Home address={this.state.address} />
+                <Car car={this.state.car} />
+                <Pet pet={this.state.pet} />
             </div>
-        );
+        )
     }
 }
 
-export default ContactList;
+export default Hannah
 ```
 
 ## Practice
