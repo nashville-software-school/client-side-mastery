@@ -101,7 +101,7 @@ class ProjectList extends Component {
 
     constructor (props) {
         super(props)
-        let uniqueKey = 1
+        this.uniqueKey = 1
     }
 
     state = {
@@ -111,9 +111,9 @@ class ProjectList extends Component {
     componentDidMount() {
         fetch("http://localhost:5000/projects")
             .then(r => r.json())
-            .then(contacts => {
+            .then(projects => {
                     this.setState({
-                        contactList: contacts
+                        projectList: projects
                     })
             })
     }
@@ -121,9 +121,9 @@ class ProjectList extends Component {
     render() {
         return (
             <div className="projectList">
-                {this.state.contactList.map(project => (
-                    <Project name={project.firstName}
-                             description={project.lastName}
+                {this.state.projectList.map(project => (
+                    <Project name={project.name}
+                             description={project.description}
                              key={this.uniqueKey++} />
                 ))}
             </div>
