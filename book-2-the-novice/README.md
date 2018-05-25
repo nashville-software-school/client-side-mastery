@@ -35,5 +35,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Supplement - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
 * Supplement - [Deploy to AWS S3](./chapters/AWS_S3.md)
 * Supplement - [Deploy to AWS EC2](./chapters/AWS_EC2.md)
+* Supplement - [Deploy API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
