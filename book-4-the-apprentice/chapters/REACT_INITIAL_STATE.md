@@ -87,3 +87,14 @@ json-server -p 8088 -w personal.json
 
 Update your personal component to retrieve the information from the API, and when it is received, update the state of your component.
 
+## Part Deux
+
+Create multiple collections in your API.
+
+1. Bio info (name and address)
+1. Car information
+1. Pet information
+
+Use foreign keys to assign cars and pets to a person.
+
+Once that's done, update your `componentDidMount` function to load all the related data, and use `setState` when each response comes back.
