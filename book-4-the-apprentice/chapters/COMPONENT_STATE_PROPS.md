@@ -214,7 +214,7 @@ class Me extends Component {
     render() {
         return (
             <div>
-                <h3>{this.state.firstName} ${this.state.lastName}</h3>
+                <h3>{this.state.firstName} {this.state.lastName}</h3>
                 <h4>Evening Cohort 1</h4>
                 <h5>Nashville Software School</h5>
                 <Home />
