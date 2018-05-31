@@ -153,7 +153,9 @@ ReactDOM.render((
 ), document.querySelector("#root"))
 ```
 
+## Resources
 
+* [Implementing an authentication mechanism with React Router](https://tylermcginnis.com/react-router-protected-routes-authentication/)
 
 ## Practice
 
