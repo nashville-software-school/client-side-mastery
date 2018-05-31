@@ -21,9 +21,11 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 > ### __Sprint 1__ - Intelligence Report
 
 * Chapter 12 - [Data in Software Applications](./chapters/JS_DATA.md)
+* **React Lab:** `class` syntax for creating objects
 * Chapter 13 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 14 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 * Chapter 15 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+
 
 > ### __Sprint 2__ - Dynamic Intelligence Report (Deployed to AWS)
 
