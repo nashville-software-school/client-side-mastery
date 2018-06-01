@@ -10,7 +10,7 @@ In this book, you will build be learning how to use all of the concepts and tool
 * Chapter 6 - [React Context API](./chapters/REACT_CONTEXT_API.md)
 * Chapter 7 - [CSS Variables](./chapters/CSS_VARIABLES.md)
 
-> ## Sprint 5: Yak Social Network
+> ## Sprint 5: Nutshell in React
 
 * Chapter 8 - [Typescript](./chapters/TYPESCRIPT.md)
 * Chapter 9 - [Vue, Polymer, AngularJs](./chapters/COMPONENT_FRAMEWORKS.md)
