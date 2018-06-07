@@ -50,61 +50,69 @@ Visit the [create-react-app](https://github.com/facebook/create-react-app/) Gith
 
 ## Resources
 
-1. [A Comprehensive Guide to learning React.js in 2018](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
-1. Video: [React Tutorial Series](https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
+* [A Comprehensive Guide to learning React.js in 2018](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
+* [React Tutorial Series](https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
+* [The Beginner's Guide to React
+](https://egghead.io/courses/the-beginner-s-guide-to-react)
 
 ## Examples
 
 ### Single Component
 
-Here's the simplest of examples for building a React component. In your `index.js` file, place the following code that building a `<Me />` component that renders information about yourself.
+Here's the simplest of examples for building a React component. In your `index.js` file, place the following code that building a `<Kennel />` component that renders information about a kennel business.
 
 ```js
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 
-class Me extends Component {
+class Kennel extends Component {
     render() {
         return (
             <div>
-                <h3>Thomas Bangs</h3>
-                <h4>Evening Cohort 1</h4>
-                <h5>Nashville Software School</h5>
+                <h3>Student Kennels</h3>
+                <h4>Nashville North Location</h4>
+                <h5>500 Puppy Way</h5>
             </div>
         );
     }
 }
 
-ReactDOM.render(<Me />, document.querySelector("root"));
+ReactDOM.render(<Kennel />, document.querySelector("root"));
 ```
 
 ### Child Component
 
-To further describe myself, I'm going to create another component that represents my home address.
+After the information about the company, I want to list all of the employees. I **could** just hard code them right inside my kennel component, but as a good developer, I try to adhere to the *Single Responsibility Principle* whenever I can.
+
+Therefore, I'm going to create another component for displaying employees.
 
 ```js
-class Home extends Component {
+class EmployeeList extends Component {
     render() {
         return (
-            <div>
-                <h5>1000 Inifinity Way</h5>
-            </div>
+            <article>
+                <h1>Employee List</h1>
+                <section>Jessica Younker</section>
+                <section>Jordan Nelson</section>
+                <section>Zoe LeBlanc</section>
+                <section>Blaise Roberts</section>
+            </article>
         );
     }
 }
 ```
 
-Then I can include that component as a child of the `Me` component.
+Then I can include that component as a child of the **`Kennel`** component.
 
 ```js
-class Me extends Component {
+class Kennel extends Component {
     render() {
         return (
             <div>
-                <h3>Thomas Bangs</h3>
-                <h4>Evening Cohort 1</h4>
-                <h5>Nashville Software School</h5>
-                <Home />
+                <h3>Student Kennels</h3>
+                <h4>Nashville North Location</h4>
+                <h5>500 Puppy Way</h5>
+                <Employees />
             </div>
         );
     }
@@ -117,45 +125,46 @@ class Me extends Component {
 
 Before we grow this application any further, we need to separate each component into its own JavaScript file.
 
-> Home.js
+> Kennel.js
 
 ```js
 import React, { Component } from 'react'
+import EmployeeList from "./EmployeeList"  // Import EmployeeList component
 
-class Home extends Component {
+
+export default class Kennel extends Component {
     render() {
         return (
             <div>
-                <h5>1000 Inifinity Way</h5>
+                <h3>Student Kennels</h3>
+                <h4>Nashville North Location</h4>
+                <h5>500 Puppy Way</h5>
+                <EmployeeList />
             </div>
         );
     }
 }
-
-export default Home
 ```
 
-> Me.js
+> EmployeeList.js
 
 ```js
 import React, { Component } from 'react'
-import Home from "./Home"  // Import the Home component
 
 
-class Me extends Component {
+export default class EmployeeList  extends Component {
     render() {
         return (
-            <div>
-                <h3>Thomas Bangs</h3>
-                <h4>Evening Cohort 1</h4>
-                <h5>Nashville Software School</h5>
-                <Home />
-            </div>
+            <article>
+                <h1>Employee List</h1>
+                <section>Jessica Younker</section>
+                <section>Jordan Nelson</section>
+                <section>Zoe LeBlanc</section>
+                <section>Blaise Roberts</section>
+            </article>
         );
     }
 }
-
-export default Me
 ```
 
 > index.js
@@ -163,19 +172,13 @@ export default Me
 ```js
 import ReactDOM from "react-dom"
 import React from 'react'
-import Me from "./Me"
+import Kennel from "./Kennel"
 
-ReactDOM.render(<Me />, document.querySelector("#root"));
+ReactDOM.render(<Kennel />, document.querySelector("#root"));
 ```
 
 ## Practice
 
-You're going to create a component named after yourself (e.g. `<Thomas />`, or `<Evelyn />` or `<Priya />`). It should contain the following information.
+Right now, the kennel location information is hard-coded inside the **`Kennel`** component. The business wants to expand and open a new location. Your job is to make a new component named **`LocationList`**, and put the name, addresses of each location in that component's JSX.
 
-1. Your full name
-1. Your cohort
-1. Your home address
-1. The make and model of your favorite vehicle
-1. The name, and species/breed of your favorite, or ideal, pet
-
-Make sure you author components for each unique object being represented and compose them into the component named after you.
+Then put the **`LocationList`** component in the JSX for **`Kennel`**.

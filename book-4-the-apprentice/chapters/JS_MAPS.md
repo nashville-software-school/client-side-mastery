@@ -86,7 +86,7 @@ groups.set(coworkers, "Fellow instructors")
 console.log(groups.get(coworkers))  // Fellow instructors
 ```
 
-You can think of as adding meta-data to the original array of strings, and it's done without modifying the original data structure.
+You can think of it as adding meta-data to the original array of strings, and it's done without modifying the original data structure.
 
 ```js
 const rainfall = {
@@ -104,7 +104,7 @@ rainfallMetaData.get(rainfall)  // { totalRainfall: 44 }
 
 Now you can store as much meta-data about the raw data that you want. This is what the `rainfallMetaData` Map ends up looking like.
 
-![](../assets/map-visualization.png)
+![](./images/map-visualization.png)
 
 By storing this metadata about the data when it's first retrieved, we avoid having to perform costly calculations every time someone wants to view the metadata. In a small application with limited data, you won't see many savings, but consider an application that retrieves hundreds, thousands, or tens of thousands of data points. Performing the calculations needed to get the sum, the average, and the standard deviation **every time** the user chooses to view it, then you run into memory issues, and performance degradation.
 
@@ -167,7 +167,7 @@ const Articles = Object.create(null, {
         value: function () {
             return $.ajax({
                 method: "GET",
-                url: "https://blog.firebaseio.com/articles/.json"
+                url: "https://localhost:5001/articles"
             }).then(response => {
                 const articles = response.data
                 const totalArticles = Object.keys(articles).length

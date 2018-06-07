@@ -1,105 +1,179 @@
 # Populating React Component State from an API
 
-One of the lifecycle methods available to every React component is [componentDidMount](https://reactjs.org/docs/react-component.html#the-component-lifecycle). Straight from their docs (emphasis mine):
+Up to this point, you have used state data that you hard-coded into your application. Now it's time to implement a more realistic way in which you would retrieve your data. You will request it from you JSON API database.
 
-> `componentDidMount()` is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. _If you need to load data from a remote endpoint, this is a good place to instantiate the network request._
-
-The `componentDidMount()` hook runs after the component output has been rendered to the DOM, so if your component needs API data, that is the place to do it. Here's an example.
-
+First empty out your current hard-coded state in the **`EmployeeList`** component.
 
 ```js
-import React, { Component } from "react"
-import Home from "./Home";
-import Car from "./Car";
-import Pet from "./Pet";
-import "./styles/hannah.css"
-
-
-class Hannah extends Component {
-    /*
-        You can reduce the amount of code you need to write
-        when defining initial state for your component.
-        Eliminate your `constructor` method and just define
-        a state variable.
-    */
-    state = {
-        firstName: "",
-        lastName: "",
-        occupation: "",
-        address: {},
-        car: {},
-        pet: {}
-    }
-
-
-    /*
-        Get all contacts from the API. This is the fetch
-        syntax which replaces $.ajax()
-
-        https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-    */
-    loadMyInfo () {
-        fetch("http://localhost:5000/people/1")
-            // Must be explicit on how to parse the response
-            .then(r => r.json())
-
-            // JSON parsed data comes to this then()
-            .then(hannah => {
-                this.setState(hannah)
-            })
-    }
-
-    componentDidMount() {
-        this.loadMyInfo()  // Trigger the loading of information
-    }
-
-    render() {
-        return (
-            <div className="kittyPurry">
-                <h3>{this.state.firstName} {this.state.lastName}</h3>
-                <h4>{this.state.occupation}</h4>
-                <h5>{this.state.fame}</h5>
-                <Home address={this.state.address} />
-                <Car car={this.state.car} />
-                <Pet pet={this.state.pet} />
-            </div>
-        )
-    }
+state = {
+    employees: []
 }
-
-export default Hannah
 ```
 
-## Practice
+## Populate the API
 
-Now it's time to take your personal data and expose it through an API with `json-server`. Create a `personal.json` file in your project with a `people` collection. Put your information in that collection.
+Add a new file to your project named `kennel.json`. Add your employee collection to the file.
 
 ```json
 {
-    "people": [
-        {
-            // Your properties go here
-        }
+    "employees": [
+        { "id": 1, "name": "Jessica Younker" },
+        { "id": 2, "name": "Jordan Nelson" },
+        { "id": 3, "name": "Zoe LeBlanc" },
+        { "id": 4, "name": "Blaise Roberts" }
     ]
 }
 ```
 
-Start your API with the following command.
+Open a new terminal window, and start your API with the following command.
 
 ```sh
-json-server -p 8088 -w personal.json
+json-server -p 5002 -w kennel.json
 ```
 
-Update your personal component to retrieve the information from the API, and when it is received, update the state of your component.
+## Querying the Data from your API
 
-## Part Deux
+In React, retrieving state from a remote API works in, what seems like, a counterintuitive way. React must first render the component to the DOM without any data, then you will request the data and re-render the component.
 
-Create multiple collections in your API.
+One of the lifecycle methods available to every React component is [componentDidMount](https://reactjs.org/docs/react-component.html#the-component-lifecycle). Straight from their docs (emphasis mine):
 
-1. Bio info (name and address)
-1. Car information
-1. Pet information
+> `componentDidMount()` is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. _If you need to load data from a remote endpoint, this is a good place to instantiate the network request._
 
-Use foreign keys to assign cars and pets to a person.
+The `componentDidMount()` hook runs after the component output has been rendered to the DOM, so if your component needs API data, that is the place to do it. Here is how you would do it for loading employees. Here's how you would write it to retrieve employee data from an API being served by [json-server](https://github.com/typicode/json-server) on port 5002.
 
-Once that's done, update your `componentDidMount` function to load all the related data, and use `setState` when each response comes back.
+```js
+componentDidMount () {
+    fetch("http://localhost:5002/employees")
+    .then(e => e.json())
+    .then(employees => this.setState({ employees: employees }))
+}
+```
+
+That code used the new `fetch` keyword in JavaScript to query your API, then serialize the response as a JSON object, then take the JSON object and set the state of your component.
+
+Here's what the final component looks like.
+
+```js
+import React, { Component } from "react"
+import Employee from "./Employee";
+
+
+export default class EmployeeList extends Component {
+    state = {
+        employees: []
+    }
+
+    componentDidMount () {
+        fetch("http://localhost:5002/employees")
+        .then(e => e.json())
+        .then(employees => this.setState({ employees: employees }))
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                {
+                    this.state.employees.map(employee =>
+                        <Employee key={employee.id} employee={employee}>
+                            {employee.name}
+                        </Employee>
+                    )
+                }
+            </React.Fragment>
+        )
+    }
+}
+```
+
+* Note that you need to have a unique `key` property for each item when you use the `map()` array method to display a component representing each data object in the array.
+
+
+Note that the name of the employee is the text content of the `<Employee>` component. Use `props.children` to extract that text content in the child component.
+
+```js
+<h5 className="card-title">
+    {props.children}
+</h5>
+```
+
+If you are going to use content inside the component's opening and closing tags, you need to ensure that you remain consistent. That means that your `<Route>` configuration for employee details would also need to use the same syntax.
+
+```js
+<Route path="/employees/:employeeId" render={(props) => {
+    return <Employee employee={props.location.state.employee}>
+        {props.location.state.employee.name}
+    </Employee>
+}} />
+```
+
+## Resources
+
+* [React App Requests to JSON API](https://www.youtube.com/watch?v=vwWPM7za3Pk&list=PLhScwEnhQ-bmroyHFduwgOZ1KrdDvk_44) video series
+* [React for Everyone](https://www.youtube.com/playlist?list=PLLnpHn493BHFfs3Uj5tvx17mXk4B4ws4p) video series
+
+## Practice
+
+Now it's time to take the rest of the data and expose it through an API with `json-server`. Create a `kennel.json` file in your project and add the animals, locations, and employees collections to it.
+
+```json
+{
+    "animals": [
+        {
+            "id": 1,
+            "name": "Doodles",
+            "breed": "German Shepherd"
+        }
+    ],
+    "employees": [ ],
+    "locations": [ ]
+}
+```
+
+Open a new terminal window, and start your API with the following command.
+
+```sh
+json-server -p 5002 -w kennel.json
+```
+
+Use the example code above to update all of the List components to retrieve their state from the API.
+
+> **Pro tip:** Remember to use your network tab in the Chrom Developer Tools to watch your network requests and preview the responses.
+
+![](./images/QmF1Sd9FOI.gif)
+
+## Practice: Using Best Practices
+
+Think back to the Nutshell group project you recently completed, and how you applied encapsulation, and the Single Responsibility Principle (SRP), to make modules whose reponsibilities were to interact with your persistent data storage.
+
+Consider how you could create a module for this application which has that same responsibility. Then, each list component should import that module and use its methods for querying data.
+
+For example:
+
+Replace this code...
+
+```js
+componentDidMount () {
+    fetch("http://localhost:5002/employees")
+    .then(e => e.json())
+    .then(employees => this.setState({ employees: employees }))
+}
+```
+
+with something like this
+
+```js
+componentDidMount () {
+    APIManager.getAllEmployees()
+        .then(employees => this.setState({
+            employees: employees
+        }))
+}
+```
+
+By using this approach, implementing the SRP, the **`APIManager`** module can evolve independently of the **`EmployeeList`** component. Any changes in how the API is accessed does not affect **`EmployeeList`** at all since it is using the abstraction that **`APIManager`** provides for getting data.
+
+## Advanced Challenge: Search your Data
+
+Not for the weak of heart, is this challenge. Put an input box in your navigation bar. When your customer types in any characters, then you must find any objects in the animals, locations, or employees collections that have a name which contains that string.
+
+![search results](./images/qNAJIxX9NX.gif)

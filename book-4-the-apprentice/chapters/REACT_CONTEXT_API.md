@@ -330,3 +330,62 @@ export default class Politician extends Component {
     }
 }
 ```
+
+You then follow this pattern for each child, grandchild, great-grandchild, etc. Some data gets passed a properties, but then the child component uses its properties to then query the data provider to get more information.
+
+```js
+import React, { Component } from "react"
+import { Context } from "../data/HonestAbeProvider"
+import "./Bill.css"
+import Interest from "./Interest";
+
+export default class Bill extends Component {
+    constructor (props) {
+        super(props)
+        this.key = 1
+    }
+
+    render() {
+        return (
+            <Context.Consumer>
+                {context => {
+                    const bill = context.state.legislations.find(l => l.id === this.props.id)
+                    const billInterests = context.state.legislationinterests.filter(
+                        li => li.legislationId === this.props.id
+                    )
+                    return (
+                        <li className="bill">
+                            {bill.name}
+                            <ul>
+                                {billInterests.map(bi => <Interest id={bi.interestId} key={this.key++} /> )}
+                            </ul>
+                        </li>
+                    )
+
+                }}
+            </Context.Consumer>
+        )
+    }
+}
+```
+
+```js
+import React, { Component } from "react"
+import { Context } from "../data/HonestAbeProvider"
+
+export default class Interest extends Component {
+    render() {
+        return (
+            <Context.Consumer>
+                {context => {
+                    const interest = context.state.interests.find(i => i.id === this.props.id)
+                    return (
+                        <span className="badge badge-light">{interest.name}</span>
+                    )
+
+                }}
+            </Context.Consumer>
+        )
+    }
+}
+```
