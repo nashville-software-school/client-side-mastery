@@ -49,15 +49,13 @@ import React, { Component } from 'react'
 
 export default class EmployeeList extends Component {
     render() {
-        return (
-            {
-                /*
-                This is a reference to the employees array
-                defined in the state object in Kennel.js
-                */
-                this.props.employees
-            }
-        );
+        return ({
+            /*
+            This is a reference to the employees array
+            defined in the state object in Kennel.js
+            */
+            this.props.employees
+        })
     }
 }
 ```
@@ -70,21 +68,15 @@ import React, { Component } from 'react'
 
 export default class EmployeeList  extends Component {
     render() {
-        return (
-            {
-                <section>
-                    /*
-                    This is a reference to the employees array
-                    defined in the state object in Kennel.js
-                    */
-                    this.props.employees.map(employee => (
-                        <div>
-                            {employee.name}
-                        </div>
-                    ))
-                <section>
-            }
-        );
+        return ({
+            <section>
+                this.props.employees.map(employee => (
+                    <div>
+                        {employee.name}
+                    </div>
+                ))
+            <section>
+        })
     }
 }
 ```
@@ -100,15 +92,52 @@ export default class EmployeeList  extends Component {
 
 ## Practice
 
-### Displaying Locations
+### Part I - Displaying Locations
 
-Update your application so that the array of locations is passed from the Kennel state to the props of **`LocationList`**. Then use the `map()` method to display all location names.
+Update your application so that the array of locations is passed from the **`Kennel`** state to the props of **`LocationList`**. Then use the `map()` method to display all location names.
 
-### Displaying Animals
+### Part II - Displaying Animals
 
 Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** and **`LocationList`**, you're going to list animals now.
 
-1. Create a new state array in the Kennel component named `animals`
+1. Create a new state array in the **`Kennel`** component named `animals`.
 2. Create a **`AnimalList`** component for displaying animals.
 3. Update **`Kennel`** to pass its `animals` state to **`AnimalList`** and use the appropriate key on `this.props` to display all animal names.
 
+### Advanced Exercise
+
+1. Add an `id` property to each of your resources.
+1. Add the following `owners` property to the **`Kennel`** state.
+    ```js
+    state = {
+        employees: [
+            { id: 1, name: "Jessica Younker" },
+            { id: 2, name: "Jordan Nelson" },
+            { id: 3, name: "Zoe LeBlanc" },
+            { id: 4, name: "Blaise Roberts" }
+        ],
+        locations: [
+            { id: 1, name: "Nashville North" },
+            { id: 2, name: "Nashville South" }
+        ],
+        animals: [
+            { id: 1, name: "Doodles" },
+            { id: 2, name: "Jack" },
+            { id: 3, name: "Angus" },
+            { id: 4, name: "Henley" },
+            { id: 5, name: "Derkins" },
+            { id: 6, name: "Checkers" }
+        ],
+        owners: [
+            { id: 1, name: "Ryan Tanay" },
+            { id: 2, name: "Emma Beaton" },
+            { id: 3, name: "Dani Adkins" },
+            { id: 4, name: "Adam Oswalt" },
+            { id: 5, name: "Fletcher Bangs" },
+            { id: 6, name: "Angela Lee" }
+        ]
+    }
+    ```
+1. You create the intersection table and assign each animal to an owner.
+
+Your challenge is to update the **`AnimalList`** component to also display the name of the animal's owner. You'll need to pass multiple collections - not just `animals` - to the component in order to accomplish this.
