@@ -1,57 +1,181 @@
 # React
 
-For included labs, fork, clone, then run `yarn` or `npm install`. Then use `yarn test` or `npm test` to run the test runner.
+React is a library that was open sourced by the development team at Facebook with the sole purpose of managing how data is displayed to the user. It doesn't care about the database, it doesn't care how data is retrieved, and doesn't care about how complex the rest of the application is.
 
-## What is React?
-- https://github.com/learn-co-students/javascript-virtual-dom-v-000
-- https://github.com/learn-co-students/react-declarative-programming-v-000
-- https://github.com/learn-co-students/react-create-element-v-000
-- https://github.com/learn-co-students/react-create-element-lab-v-000
+You've already learned the vast majority of what React does for you when building the UI for your application.
 
-## Rendering
-- https://github.com/learn-co-students/react-components-v-000
-- https://github.com/learn-co-students/react-components-lab-v-000
-- https://github.com/learn-co-students/react-jsx-v-000
-- https://github.com/learn-co-students/react-jsx-lab-v-000
-- https://github.com/learn-co-students/react-babel-plugins-v-000
+1. Building components and child components
+1. Modular code with Browserify modules
+1. Updating the DOM with document fragments and appendChild
+1. Setting the state of a component
 
-## Props
-- https://github.com/learn-co-students/react-props-v-000
-- https://github.com/learn-co-students/react-props-lab-v-000
-- https://github.com/learn-co-students/react-prop-types-v-000
-- https://github.com/learn-co-students/react-prop-types-lab-v-000
-- https://github.com/learn-co-students/react-this-props-children-v-000
-- https://github.com/learn-co-students/react-this-props-children-lab-v-000
+## Key Terms
 
-## State and Events
-- https://github.com/learn-co-students/react-initial-state-v-000
-- https://github.com/learn-co-students/react-initial-state-lab-v-000
-- https://github.com/learn-co-students/react-event-system-v-000
-- https://github.com/learn-co-students/react-event-system-lab-v-000
-- https://github.com/learn-co-students/react-events-in-detail-v-000
-- https://github.com/learn-co-students/react-events-in-detail-lab-v-000
-- https://github.com/learn-co-students/react-updating-state-v-000
-- https://github.com/learn-co-students/react-updating-state-lab-v-000
-- https://github.com/learn-co-students/react-forms-v-000
-- https://github.com/learn-co-students/react-forms-lab-v-000
-- https://github.com/learn-co-students/react-props-and-state-lab-v-000
+1. **JSX** — Allows us to write HTML like syntax which gets
+transformed to lightweightJavaScript objects.
 
-## Mounting
-- https://github.com/learn-co-students/react-component-lifecycle-v-000
-- https://github.com/learn-co-students/react-component-mounting-and-unmounting-v-000
-- https://github.com/learn-co-students/react-component-mounting-and-unmounting-lab-v-000
+1. **render** (method) — Describes what the UI will look like for the particular component.
 
-## Rendering and Updating
-- https://github.com/learn-co-students/react-rendering-v-000
-- https://github.com/itzsaga/react-rendering-lab-v-000
-- https://github.com/itzsaga/react-component-lifecycle-lab-v-000
+1. **Virtual DOM** — A JavaScript representation of the actual DOM.
 
-## Container Components
-- https://github.com/learn-co-students/react-container-components-v-000
-- https://github.com/learn-co-students/react-container-components-lab-v-000
+1. **state** — The internal data store (object) of a component.
 
-## Presentational Components
-- https://github.com/learn-co-students/react-presentation-components-v-000
-- https://github.com/learn-co-students/react-presentation-components-lab-v-000
-- https://github.com/learn-co-students/props-props-props-props-props-props-v-000
-- https://github.com/learn-co-students/react-passing-props-lab-v-000
+1. **setState** — A helper method used for updating the state of a component and re-rendering the UI
+
+1. **React.Component** — The way in which you create a new component.
+
+1. **ReactDOM.render** — Renders a React component to a DOM node.
+
+1. **constructor** (this.state) - The way in which you establish the initial state of a component.
+
+1. **props** — The data which is passed to the child component from the parent component.
+
+1. **propTypes** — Allows you to control the presence, or types of certain props passed to the child component.
+
+1. **defaultProps** — Allows you to set default props for your component.
+
+## Component LifeCycle
+
+![component lifecycle](./images/react-component-lifecycle.png)
+
+## Common Events
+
+1. onClick
+1. onSubmit
+1. onChange
+
+## Getting Started with create-react-app
+
+Visit the [create-react-app](https://github.com/facebook/create-react-app/) Github repo and follow the instructions for getting yourself set up with a simple React application.
+
+## Resources
+
+1. [A Comprehensive Guide to learning React.js in 2018](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
+1. Video: [React Tutorial Series](https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
+
+## Examples
+
+### Single Component
+
+Here's the simplest of examples for building a React component. In your `index.js` file, place the following code that building a `<Me />` component that renders information about yourself.
+
+```js
+import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+
+class Me extends Component {
+    render() {
+        return (
+            <div>
+                <h3>Thomas Bangs</h3>
+                <h4>Evening Cohort 1</h4>
+                <h5>Nashville Software School</h5>
+            </div>
+        );
+    }
+}
+
+ReactDOM.render(<Me />, document.querySelector("root"));
+```
+
+### Child Component
+
+To further describe myself, I'm going to create another component that represents my home address.
+
+```js
+class Home extends Component {
+    render() {
+        return (
+            <div>
+                <h5>1000 Inifinity Way</h5>
+            </div>
+        );
+    }
+}
+```
+
+Then I can include that component as a child of the `Me` component.
+
+```js
+class Me extends Component {
+    render() {
+        return (
+            <div>
+                <h3>Thomas Bangs</h3>
+                <h4>Evening Cohort 1</h4>
+                <h5>Nashville Software School</h5>
+                <Home />
+            </div>
+        );
+    }
+}
+```
+
+> **Note:** Each React component's render method can only have a single component defined in it. Notice that each of my simple components above only define a single `<div>` with child elements.
+
+### Component Files
+
+Before we grow this application any further, we need to separate each component into its own JavaScript file.
+
+> Home.js
+
+```js
+import React, { Component } from 'react'
+
+class Home extends Component {
+    render() {
+        return (
+            <div>
+                <h5>1000 Inifinity Way</h5>
+            </div>
+        );
+    }
+}
+
+export default Home
+```
+
+> Me.js
+
+```js
+import React, { Component } from 'react'
+import Home from "./Home"  // Import the Home component
+
+
+class Me extends Component {
+    render() {
+        return (
+            <div>
+                <h3>Thomas Bangs</h3>
+                <h4>Evening Cohort 1</h4>
+                <h5>Nashville Software School</h5>
+                <Home />
+            </div>
+        );
+    }
+}
+
+export default Me
+```
+
+> index.js
+
+```js
+import ReactDOM from "react-dom"
+import React from 'react'
+import Me from "./Me"
+
+ReactDOM.render(<Me />, document.querySelector("#root"));
+```
+
+## Practice
+
+You're going to create a component named after yourself (e.g. `<Thomas />`, or `<Evelyn />` or `<Priya />`). It should contain the following information.
+
+1. Your full name
+1. Your cohort
+1. Your home address
+1. The make and model of your favorite vehicle
+1. The name, and species/breed of your favorite, or ideal, pet
+
+Make sure you author components for each unique object being represented and compose them into the component named after you.
