@@ -66,7 +66,7 @@ Now you can use the `map()` array method to convert the raw data into HTML eleme
 import React, { Component } from 'react'
 
 
-export default class EmployeeList  extends Component {
+export default class EmployeeList extends Component {
     render() {
         return ({
             <section>
@@ -90,13 +90,11 @@ export default class EmployeeList  extends Component {
 ![](./images/statetoprops.png)
 
 
-## Practice
-
-### Part I - Displaying Locations
+## Practice Exercise - Displaying Locations
 
 Update your application so that the array of locations is passed from the **`Kennel`** state to the props of **`LocationList`**. Then use the `map()` method to display all location names.
 
-### Part II - Displaying Animals
+## Practice Exercise - Displaying Animals
 
 Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** and **`LocationList`**, you're going to list animals now.
 
@@ -104,9 +102,9 @@ Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** a
 2. Create a **`AnimalList`** component for displaying animals.
 3. Update **`Kennel`** to pass its `animals` state to **`AnimalList`** and use the appropriate key on `this.props` to display all animal names.
 
-### Advanced Exercise
+## Advanced Exercise
 
-1. Add an `id` property to each of your resources.
+1. Add an `id` property to each of your existing resources.
 1. Add the following `owners` property to the **`Kennel`** state.
     ```js
     state = {
@@ -140,4 +138,4 @@ Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** a
     ```
 1. You create the intersection table and assign each animal to an owner.
 
-Your challenge is to update the **`AnimalList`** component to also display the name of the animal's owner. You'll need to pass multiple collections - not just `animals` - to the component in order to accomplish this.
+Your task is to update the **`AnimalList`** component to also display the name of the animal's owner. You'll need to pass multiple collections - not just `animals` - to the component in order to accomplish this.
