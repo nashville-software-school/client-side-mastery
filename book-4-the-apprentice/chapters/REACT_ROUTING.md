@@ -1,6 +1,6 @@
 # Routing in React Applications
 
-In a single page application, you are only rendering one DOM tree. You never request another HTML file, but simply create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation page at the top of the DOM for people to click on to see different views.
+In a single page application, you are only rendering one DOM tree. You never request another HTML file, but simply create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element at the top of the page for people to click on to see different views.
 
 In React, you will use something called a Router to handle rendering different components when the user clicks on navigation items.
 
@@ -15,143 +15,89 @@ touch nav/NavBar.js
 touch nav/NavBar.css
 ```
 
-Your `index.js` is going to change. Up to this point, you've rendered your personal component right onto the DOM, but we now need to add a navigation bar.
+Your `index.js` is going to change. Up to this point, you've rendered your component right onto the DOM, but this time, you will be rendering a [higher order component](http://bfy.tw/65MN) called **`App`**, which becomes the container for your entire application.
+
+The **`App`** component will contain two child components.
+
+1. **`NavBar`** which holds navigation elements to always be displayed.
+1. **`ApplicationViews`** which will define all of the URLs that your application will support, and which views will be displays for each one.
 
 Before we render our NavBar, let's make a component for it.
 
 > nav/NavBar.js
 
 ```js
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react"
+import { Link } from "react-router-dom"
 import "./NavBar.css"
 
 
-class NavBar extends Component {
+export default class NavBar extends Component {
     render() {
         return (
             <nav>
-                <Link to="/">Home</Link>
+                <Link to="/">Locations</Link>
+                <Link to="/animals">Animals</Link>
+                <Link to="/employees">Employees</Link>
             </nav>
-        );
+        )
     }
 }
-
-export default NavBar;
 ```
 
-You'll notice the use of the new `<Link/>` component that you get from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
+Notice the use of the new `<Link/>` component that you get from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
 
-Now you can update your `index.js` and its root component must now be `<Router />` which gets imported from the React Router package. In that router, we load our new mavigation bar, and specify all of the routes that we want configured for our application.
-
-For now, you're going to define a `<Route />` component for every `<Link/>` component that you defined in your navigation bar above.
-
+Now you can update your `index.js` and its root component must now be `<Router />` which gets imported from the React Router package. In that router, you place the `<App />` child component. What this tells React is that *"I will be placing Routes in my App component."*
 
 > index.js
 
 ```js
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from "./nav/NavBar";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
 
 
 ReactDOM.render((
     <Router>
-        <div>
-            <NavBar/>
-            <Route exact path="/" component={Hannah} />
-        </div>
+        <App />
     </Router>
 ), document.querySelector("#root"))
 ```
 
-When the page reloads, you will see your navigation bar, and your personal component will be rendered automatically since you are on the `/` route by default.
+## Defining Routes
 
-## Adding another Route
+Now it's time to define the Routes that our application will respond to. You defined three link components that will navigation to the routes of.
 
-You're going to add another view in this application to list the projects that you've worked on in the client side course.
+* `/`
+* `/animals`
+* `/employees`
 
-> projects/Project.js
+In the **`ApplicationViews`** component, you will define how your application will respond when the URL matches each of those patterns.
+
+> ApplicationViews.js
 
 ```js
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
+import AnimalList from './AnimalList'
+import LocationList from './LocationList'
+import EmployeeList from './EmployeeList'
 
 
-class Project extends Component {
+export default class ApplicationViews extends Component {
     render() {
         return (
-            <article>
-                <div>{ this.props.project.name }</div>
-                <div>{ this.props.project.description }</div>
-            </article>
+            <React.Fragment>
+                <Route exact path="/" component={LocationList} />
+                <Route path="/animals" component={AnimalList} />
+                <Route path="/employees" component={EmployeeList} />
+            </React.Fragment>
         )
     }
 }
-
-export default Project
 ```
 
-> projects/ProjectList.js
+`exact` is needed on the first route, otherwise it wil also match the other two routes. :shrug:
 
-```js
-import React, { Component } from 'react'
-import Project from './Project'
-
-
-class ProjectList extends Component {
-
-    constructor (props) {
-        super(props)
-        this.uniqueKey = 1
-    }
-
-    state = {
-        projectList: []
-    }
-
-    componentDidMount() {
-        fetch("http://localhost:5000/projects")
-            .then(r => r.json())
-            .then(projects => {
-                    this.setState({
-                        projectList: projects
-                    })
-            })
-    }
-
-    render() {
-        return (
-            <div className="projectList">
-                {this.state.projectList.map(project => (
-                    <Project name={project.name}
-                             description={project.description}
-                             key={this.uniqueKey++} />
-                ))}
-            </div>
-        )
-    }
-}
-
-export default ProjectList
-```
-
-
-```js
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from "./nav/NavBar";
-import ProjectList from "./projects/ProjectList"
-import Hannah from "./Hannah"
-
-
-ReactDOM.render((
-    <Router>
-        <div>
-            <NavBar/>
-            <Route exact path="/projects" component={ProjectList} />
-            <Route exact path="/" component={Hannah} />
-        </div>
-    </Router>
-), document.querySelector("#root"))
-```
 
 ## Resources
 
