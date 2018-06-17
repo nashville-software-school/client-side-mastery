@@ -70,7 +70,7 @@ In the example code below, you will notice the use of `<React.Fragment />`. That
 > ApplicationViews.js
 
 ```js
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import React, { Component } from "react"
 import AnimalList from './AnimalList'
 import LocationList from './LocationList'
@@ -117,10 +117,9 @@ Like was mentioned above, **`KennelCompany`** is simply a container component. I
 
 ```js
 import React, { Component } from "react"
-import { Route } from "react-router-dom"
 
 import NavBar from "./nav/NavBar"
-import ApplicationViews from "./Main"
+import ApplicationViews from "./ApplicationViews"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -137,13 +136,17 @@ export default class KennelCompany extends Component {
 }
 ```
 
-Now you can update your `index.js` and its root component must now be `<Router />` which gets imported from the React Router package. In that router, you place the `<App />` child component. What this tells React is that *"I will be placing Routes in my App component."*
+Now you can update your `index.js` and its root component must now be `<Router />` which gets imported from the React Router package. In that router, you place the `<KennelCompany />` child component. What this tells React is that *"I will be placing Routes in my KennelCompany component."*
 
 > index.js
 
 ```js
-import { BrowserRouter as Router } from "react-router-dom";
-import App from "./App";
+import React from "react"
+import ReactDOM from "react-dom"
+import { BrowserRouter as Router } from "react-router-dom"
+import registerServiceWorker from "./registerServiceWorker"
+import KennelCompany from "./KennelCompany"
+import "./index.css"
 
 
 ReactDOM.render((
@@ -151,33 +154,124 @@ ReactDOM.render((
         <KennelCompany />
     </Router>
 ), document.querySelector("#root"))
+
+registerServiceWorker()
 ```
 
+### AnimalList Changes
 
+Now the **`AnimalList`** component has to render indepedently of the rest of the application. That means that it is responsible for its own state - the list of animals.
+
+```js
+import React, { Component } from "react"
+
+
+export default class EmployeeList extends Component {
+    state = {
+        animals: [
+            { id: 1, name: "Doodles" },
+            { id: 2, name: "Jack" },
+            { id: 3, name: "Angus" },
+            { id: 4, name: "Henley" },
+            { id: 5, name: "Derkins" },
+            { id: 6, name: "Checkers" }
+        ]
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <ul>
+                {
+                    this.state.animals.map(animal =>  <li>{animal.name}</li> )
+                }
+                </ul>
+            </React.Fragment>
+        )
+    }
+}
+```
 
 ## Resources
 
+* [Leveling Up With React: Container Components](https://css-tricks.com/learning-react-container-components/)
+* [React Container Components](https://medium.com/@learnreact/container-components-c0e67432e005)
 * [Implementing an authentication mechanism with React Router](https://tylermcginnis.com/react-router-protected-routes-authentication/)
+* [React Component Patterns by Michael Chan](https://www.youtube.com/watch?v=YaZg8wg39QQ)
+* [Advanced React Component Patterns](https://egghead.io/courses/advanced-react-component-patterns)
 
 ## Practice
 
-Create a navigation bar for your application with three links in it.
+It is time to refactor your application to eliminate the **`Kennel`** component that you built in the last chapter.
 
-1. Home
-1. Projects
-1. About Me
+```js
+import React, { Component } from "react"
+import EmployeeList from "./EmployeeList"
+import LocationList from "./LocationList"
 
-The home page should display the following information.
 
-1. Your name
-1. List of technologies you've learned so far
+export default class Kennel extends Component {
 
-The projects page should list the name and a link to the repo for each group project that you've worked on so far.
+    state = {
+        employees: [
+            { name: "Jessica Younker" },
+            { name: "Jordan Nelson" },
+            { name: "Zoe LeBlanc" },
+            { name: "Blaise Roberts" }
+        ],
+        locations: [
+            { name: "Nashville North" },
+            { name: "Nashville South" }
+        ]
+    }
 
-The about me page should display any other interesting information about yourself that you want others to know.
+    render() {
+        return (
+            <React.Fragment>
+                <LocationList locations={this.state.locations} />
+                <EmployeeList employee={this.state.employees} />
+            </React.Fragment>
+        );
+    }
+}
+```
 
-1. Favorite frogs
-1. Places you've traveled
-1. Comic book collection
+You no longer want all the information to appear at once. Now that your application has a navigation bar to display the different kinds of information, this component now needs to be split up into three separate components.
 
-etc...
+1. EmployeeList
+1. LocationList
+1. AnimalList
+
+Each one of these components will now be responsible for their own state. Take the appropriate array from this component's `state` and put it in the corresponding component's state. Once you have completed this step, then test that when you click on a hyperlink in your navigation bar, the correct components gets rendered and the state is expressed as HTML correctly.
+
+The final result should be a bare-bones single page application with a navigation bar.
+
+![kennel app](./images/ZlNcY985fQ.gif)
+
+> **Note:** When you get this working, you may be seeing the error below in your developer console. Use your research skills to find out how to solve that issue. If nothing works after you have tried a couple things, come see the instruction team and we'll discuss.
+
+![react key error](./images/react-key-error.png)
+
+## Challenge: Functional Presentation Components
+
+Your challenge to to make the list components into Container Components, and move the JSX into smaller, reusable Presentation Components that use the functional syntax of creating a component.
+
+Here's a head start.
+
+> Animal.js
+
+```js
+import React from "react"
+
+export default props => {
+    return <li>{animal.name}</li>
+}
+```
+
+> AnimalList.js
+
+```js
+import Animal from "./Animal"
+
+...
+```

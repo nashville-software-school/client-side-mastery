@@ -50,8 +50,10 @@ Visit the [create-react-app](https://github.com/facebook/create-react-app/) Gith
 
 ## Resources
 
-1. [A Comprehensive Guide to learning React.js in 2018](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
-1. Video: [React Tutorial Series](https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
+* [A Comprehensive Guide to learning React.js in 2018](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
+* [React Tutorial Series](https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
+* [The Beginner's Guide to React
+](https://egghead.io/courses/the-beginner-s-guide-to-react)
 
 ## Examples
 

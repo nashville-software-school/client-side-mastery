@@ -9,8 +9,9 @@ State is simply the current values of the properties used to render a component.
 You initialize state by defining a `state` object in your component constructor. Let's take a look at how to implement state for our **`Kennel`** component.
 
 ```js
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import EmployeeList from "./EmployeeList"
+import LocationList from "./LocationList"
 
 
 export default class Kennel extends Component {
@@ -30,10 +31,10 @@ export default class Kennel extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <LocationList locations={this.state.locations} />
                 <EmployeeList employee={this.state.employees} />
-            </div>
+            </React.Fragment>
         );
     }
 }
