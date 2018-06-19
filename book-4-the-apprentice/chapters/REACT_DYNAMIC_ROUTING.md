@@ -103,14 +103,56 @@ I'm going to show you two ways, and talk about the pros and cons of each one.
 
 ### Modify Animal to Accept Different Sources
 
+The first step in this option is to modify the `<Link>` component to pass some state along to the `<Route>`. Since the **`Animal`** component received the entire animal object as a property from **`AnimalList`**, you can pass that object through to the route.
+
+You do this by passing an object to the `to` attribute instead of a string. Put the URL you want to change to in the `pathname` property, and add a `state` property whose value is the animal.
+
+```js
+<Link className="card-link"
+    to={{
+        pathname: `/animals/${animal.id}`,
+        state: { animal: animal }
+    }}>
+    Details
+</Link>
+```
+
+When you pass state like that to a `<Route>`, then the component that is rendered for that route can access it with the following namespace.
+
+```js
+props.location.state.animal
+```
+
+Now the **`Animal`** component can receive the animal object by two mechanisms.
+
+1. As a direct property from `AnimalList`, referenced as `props.animal`.
+1. As a state property of the route, referenced as `props.local.state.animal`.
+
+Because of this, you will need to add code to determine where the data is coming from.
+
+```js
+let animal = {}
+
+// Check if the data is in `props.animal`
+if (props.hasOwnProperty("animal")) {
+    animal = props.animal
+
+// If not, data will be in `props.location.state.animal`
+} else {
+    animal = props.location.state.animal
+}
+```
+
+Now I have a locally-scoped variable of `animal` that I use in my `<Link>` component.
+
+Here's the final code.
+
 ```js
 export default props => {
     let animal = {}
-    let showLink = false
 
     if (props.hasOwnProperty("animal")) {
         animal = props.animal
-        showLink = true
     } else {
         animal = props.location.state.animal
     }
@@ -122,24 +164,35 @@ export default props => {
                     {animal.name}
                 </h5>
                 <p className="card-text">{animal.breed}</p>
-                {
-                    showLink
-                        ? <Link className="card-link"
-                            to={{
-                                pathname: `/animals/${animal.id}`,
-                                state: { animal: animal }
-                            }}>
-                            Details
-                        </Link>
-                        : <div></div>
-                }
+                <Link className="card-link"
+                    to={{
+                        pathname: `/animals/${animal.id}`,
+                        state: { animal: animal }
+                    }}>
+                    Details
+                </Link>
             </div>
         </div>
     )
 }
 ```
 
+**Pro:** You are now reusing the **`Animal`** component. Reusability is one of the core reasons developers want to use a component based library like React.
+
+**Con:** You've added what is called a _code smell_. This component is now brittle because there is a possibility that a future use of the component will need to load the data a completely different way. That, in turn, will require you to write yet another `if` condition to handle that case. This violates the [Open/Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle).
+
 ### Modify Route to Pass State as Props
+
+The other option is to leave the **`Animal`** component as simple as possible. It will accept the `animal` object through `props`, and no other way. This means that you flip the responsibility onto the code that wants to render `<Animal>` to ensure that it passes the data the correct way.
+
+There are currently two mechanisms by which the **`Animal`** component is rendered.
+
+1. As a child of **`AnimalList`**
+1. As the rendered component of the `/animals/:animalId` route.
+
+Therefore, it is the reponsibility of both of those mechanisms to pass the component an `animal` property. **`AnimalList`** already does this, so you need to reconfigure the `<Route>` to ensure it complies with what **`Animal`** needs.
+
+Here's how you do that. Every `<Route>` has another attribute called `render` that accepts a function as its value. You can put any logic inside that function to customize how you want the corresponding component to be rendered. Since you know that when the customer clicks on the `Details` link in the animal card, the `animal` object will be on the `props.location.state.animal` namespace, you can specify an `animal` property and give it that value.
 
 ```js
 <Route path="/animals/:animalId" render={(props) => {
@@ -147,5 +200,8 @@ export default props => {
 }} />
 ```
 
+**Pro:** You are reusing the **`Animal`** component and its internal logic remains consistent, regardless of the machanism by which it was rendered.
+
+**Con:** You've added another possible _code smell_. Again, it's entirely possible that a future feature will implement a `<Link>` component that matches this route, but does not define a `state: { animal: animal }` property. If another developer is working on a feature in which the `animal` object is not available, but only the `id` of the animal, then your code is now at an impasse.
 
 ## Advanced Challenge: Searching Your Data
