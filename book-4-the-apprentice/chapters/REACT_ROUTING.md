@@ -162,11 +162,13 @@ registerServiceWorker()
 
 Now the **`AnimalList`** component has to render indepedently of the rest of the application. That means that it is responsible for its own state - the list of animals.
 
+> AnimalList.js
+
 ```js
 import React, { Component } from "react"
 
 
-export default class EmployeeList extends Component {
+export default class AnimalList extends Component {
     state = {
         animals: [
             { id: 1, name: "Doodles" },

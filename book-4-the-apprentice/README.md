@@ -6,8 +6,10 @@ In this book, you will build be learning how to use all of the concepts and tool
 * Chapter 2 - [State and Props](./chapters/COMPONENT_STATE_PROPS.md)
 * Chapter 3 - [Expressing State as HTML](./chapters/COMPONENT_STATE_PROPS.md)
 * Chapter 4 - [React URL Routing](./chapters/REACT_ROUTING.md)
+* Chapter 5 - [Dynamic Routing](./chapters/REACT_DYNAMIC_ROUTING.md)
 * Chapter 6 - [Conditional Rendering](./chapters/REACT_CONDITIONAL_RENDERING.md)
-* Chapter 7 - [Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
+* Chapter 7 - [Loading State from an API - Part I](./chapters/REACT_INITIAL_STATE.md)
+* Chapter 8 - [Loading State from an API - Part II](./chapters/REACT_INITIAL_STATE.md)
 
 > ## Sprint 5: Reactive Nutshell
 
