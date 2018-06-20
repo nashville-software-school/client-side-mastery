@@ -204,4 +204,12 @@ Here's how you do that. Every `<Route>` has another attribute called `render` th
 
 **Con:** You've added another possible _code smell_. Again, it's entirely possible that a future feature will implement a `<Link>` component that matches this route, but does not define a `state: { animal: animal }` property. If another developer is working on a feature in which the `animal` object is not available, but only the `id` of the animal, then your code is now at an impasse.
 
+## Practice: Pick your Poison
+
+Implement one of the above mechanisms to view the details of animals.
+
+## Practice: All the Details
+
+Now implement dynamic routing for locations and employees.
+
 ## Advanced Challenge: Searching Your Data
