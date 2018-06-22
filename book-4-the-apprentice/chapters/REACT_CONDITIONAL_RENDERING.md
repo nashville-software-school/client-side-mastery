@@ -171,3 +171,5 @@ Ensure that customers can't access locations, animals, or employees unless they 
 1. Add a checkbox beneath the login form labeled _Remember Me_.
 1. When the customer logs in and the checkbox is not checked, then save their information to session storage
 1. When the customer logs in and the checkbox is checked, then save their information to local storage
+
+![session versus local](./images/WwftJ1Ds2R.gif)
