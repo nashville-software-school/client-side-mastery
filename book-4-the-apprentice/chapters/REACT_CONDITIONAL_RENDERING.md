@@ -154,10 +154,20 @@ Now it's time to implement conditional rendering. You will start with the locati
 1. Visit `http://localhost:3000/`
 1. You should be presented with the login screen
 
-Because the item doesn't exist in local storage, then the `isAuthenticated` method in **`ApplicationViews`** will return `false`. This causes the condition that you wrote in the `<Route>` to return the **`Login`** component.
+Because the item doesn't exist in local storage, the `isAuthenticated` method in **`ApplicationViews`** will return `false`. This causes the condition that you wrote in the `<Route>` to return the **`Login`** component.
 
 1. Now fill out the form to put the item back in local storage.
 1. Click on the `Locations` item in your nav bar.
 1. You should now see the list of locations.
 
+![working conditional routing](./images/QOp49FZqpq.gif)
 
+## Practice: No Content for You!
+
+Ensure that customers can't access locations, animals, or employees unless they submit a login.
+
+## Fun Challenge: Remember Me
+
+1. Add a checkbox beneath the login form labeled _Remember Me_.
+1. When the customer logs in and the checkbox is not checked, then save their information to session storage
+1. When the customer logs in and the checkbox is checked, then save their information to local storage
