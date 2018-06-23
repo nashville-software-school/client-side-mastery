@@ -13,9 +13,6 @@ In this book, you will build be learning how to use all of the concepts and tool
 
 > ## Sprint 5: Reactive Nutshell
 
-* Chapter 8 - [Typescript](./chapters/TYPESCRIPT.md)
-* Chapter 9 - [Vue, Polymer, Angular](./chapters/COMPONENT_FRAMEWORKS.md)
-* Chapter 10 - [Using JavaScript Outside the Browser](./chapters/NODE_INTRO.md)
 
 > ## **Capstones**
 
