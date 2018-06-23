@@ -86,7 +86,7 @@ groups.set(coworkers, "Fellow instructors")
 console.log(groups.get(coworkers))  // Fellow instructors
 ```
 
-You can think of as adding meta-data to the original array of strings, and it's done without modifying the original data structure.
+You can think of it as adding meta-data to the original array of strings, and it's done without modifying the original data structure.
 
 ```js
 const rainfall = {
@@ -167,7 +167,7 @@ const Articles = Object.create(null, {
         value: function () {
             return $.ajax({
                 method: "GET",
-                url: "https://blog.firebaseio.com/articles/.json"
+                url: "https://localhost:5001/articles"
             }).then(response => {
                 const articles = response.data
                 const totalArticles = Object.keys(articles).length
