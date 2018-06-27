@@ -191,5 +191,3 @@ export default class AnimalList extends Component {
 If you examine your three list components now, you will immediately notice that all three of them are nearly identical. This is another opportunity for you to write a general, reusable component named **`ResourceList`**.
 
 See if you can make a single component that replaces **`AnimalList`**, **`EmployeeList`**, and **`LocationList`**.
-
-> **Hint:** Make a module whose job is to get data from your API instead of writing the `fetch` statements directly in the `componentDidMount` method of your components.
