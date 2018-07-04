@@ -68,13 +68,15 @@ import React, { Component } from 'react'
 
 
 export default class EmployeeList extends Component {
-   return (
-      <section>
-        {this.props.employees.map(employee => {
-            return <div>{employee.name}</div>
-        })}
-      </section>
-    );
+    render(){
+    return (
+        <section>
+            {this.props.employees.map(employee => {
+                return <div>{employee.name}</div>
+            })}
+        </section>
+        );
+    }
 }
 ```
 
