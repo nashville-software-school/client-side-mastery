@@ -77,7 +77,7 @@ class Kennel extends Component {
     }
 }
 
-ReactDOM.render(<Kennel />, document.querySelector("root"));
+ReactDOM.render(<Kennel />, document.querySelector("#root"));
 ```
 
 ### Child Component
