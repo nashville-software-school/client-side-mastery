@@ -68,16 +68,18 @@ import React, { Component } from 'react'
 
 
 export default class EmployeeList extends Component {
-    render(){
+    render() {
         return (
-            <section>
-                {this.props.employees.map(employee => {
-                    return <div>
+            <React.Fragment>
+            {
+                this.props.employees.map(employee =>
+                    <div>
                         {employee.name}
                     </div>
-                })}
-            </section>
-        );
+                )
+            }
+            <React.Fragment>
+        )
     }
 }
 ```
