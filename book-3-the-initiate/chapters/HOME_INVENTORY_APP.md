@@ -15,6 +15,12 @@ You need to build a modular application, using Browserify that displays a naviga
 
 Make sure you build your application as modular as you can. Don't worry about complexity, don't worry about doing it perfectly, just do your best to break the application up into modules.
 
+Also, you must use a CSS framework for this project to practice using it. You can pick from...
+
+1. Bootstrap
+1. Materialize
+1. Bulma
+
 Here's some helpful hints to get started on what modules you should create.
 
 1. Manipulating local storage
