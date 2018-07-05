@@ -54,7 +54,13 @@ Time to make it more generic to be used with both employee objects and location 
 import React from "react"
 import { Link } from "react-router-dom"
 
+/*
+    Now using object destructuring to pull out the individual
+    keys in the `props` object that gets passed to this
+    component.
 
+    https://tylermcginnis.com/videos/object-array-destructuring/
+*/
 const DetailCard = ({id, name, resource, addlInfo}) => {
     return (
         <div className="card" style={{width: `18rem`}}>
@@ -85,7 +91,9 @@ const DetailCard = ({id, name, resource, addlInfo}) => {
 export default DetailCard
 ```
 
-Now all of the list components can use the new **`DetailCard`** component. Now you development team has one component that can be reused to display the details of any resource, instead of having three separate components to maintain.
+Now all of the list components can use the new **`DetailCard`** component. Now your development team has one component that can be reused to display the details of any resource, instead of having three separate components to maintain.
+
+Here is each one rewritten to use the new `<DetailCard>` component.
 
 > LocationList.js
 
