@@ -78,7 +78,7 @@ export default class EmployeeList extends Component {
                     </div>
                 )
             }
-            <React.Fragment>
+            </React.Fragment>
         )
     }
 }
