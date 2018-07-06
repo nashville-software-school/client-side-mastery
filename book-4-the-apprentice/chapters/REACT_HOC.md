@@ -1,6 +1,6 @@
 # Higher Order Components
 
-A higher order component is when you write a component that wraps another component to add additional functionality to it. It augments an additional component without needing to modify the code of the original component.
+A higher order component is when you write a component whose job is to augment a different component and then return that augmented component for your use. We do this in order to add different properties or behaviors to a component without needing to modify the source component itself.
 
 Look in your **`ApplicationViews`** component and you will see several instances of the following route configuration that ensures that your customers are logged in before the component will be rendered.
 
