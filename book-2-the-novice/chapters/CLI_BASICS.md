@@ -47,9 +47,9 @@ The next time you need to push a local branch to Github, you can use this alias 
 
 `gpo myBranchName`
 
-### Functions
+### Bash Functions
 
-A function let's you combine mutiple commands, and accept parameters for those commands. Let's look at an example.
+A bash function let's you combine mutiple commands, and accept parameters for those commands. Let's look at an example.
 
 During the course, you will often be creating directories on your file system, and then immediately navigating to that directory.
 
