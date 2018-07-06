@@ -10,24 +10,25 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 2 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
 * Chapter 3 - [How to Research Code](./chapters/MISC_RESEARCH.md)
 * Chapter 4 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
-* Chapter 5 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
+* Chapter 5 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
 * Chapter 6 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
-* Chapter 7 - [Scope: For That Minty Fresh Code](./chapters/JS_SCOPE.md)
-* Chapter 8 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
-* Chapter 9 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
-* Chapter 10 - [Intro to Object.create()](./chapters/JS_OBJECT_CREATE_INTRO.md)
-* Chapter 11 - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
-* Chapter 12 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+* Chapter 7 - [Basic HTML Layout with Flexbox](./chapters/FLEXBOX.md)
+* Chapter 8 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
 > ### __Sprint 1__ - Intelligence Report
 
-* Chapter 13 - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter 9 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
+* Chapter 10 - [Scope: For That Minty Fresh Code](./chapters/JS_SCOPE.md)
+* Chapter 11 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
+* Chapter 12 - [Intro to Object.create()](./chapters/JS_OBJECT_CREATE_INTRO.md)
+* Chapter 13 - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
+* Chapter 14 - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter 15 - [Bootstrap](./chapters/BOOTSTRAP.md)
 * **React Lab:** `class` syntax for creating objects
-* Chapter 14 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
-* Chapter 15 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
+* Chapter 16 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
+* Chapter 17 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 
-
-> ### __Sprint 2__ - Dynamic Intelligence Report (Deployed to AWS)
+> ### __Sprint 2__ - Dynamic Intelligence Report (Bootstrap and AWS)
 
 ## Supplementary Content
 
