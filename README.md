@@ -17,7 +17,7 @@ We're aiming for 100% of students to have 100% mastery of the material. This is 
 ## Instructor Responsibilities
 
 1. The instructor will present all of the critical material necessary to build a capstone by the end of the course.
-1. The instructor will make sure all student questions are answered. Even the dumb ones, because dumb questions are often the most enlightening.
+1. The instructor will make sure all student questions are answered. Even the ones you consider to be "dumb", because "dumb" questions are often the most enlightening.
 
 ## Student Responsibilities
 
@@ -34,7 +34,7 @@ We're aiming for 100% of students to have 100% mastery of the material. This is 
 
 ### Why
 
-First, and most importantly, in software development, each concept builds upon the previous concept, so absolute mastery of each concept is necessary before moving on. Second, teaching adults over the course of 6 months is a unique situation, and the adults we accept into the program are expected to have the work ethic needed to forge their own path.
+First, and most importantly, in software development, each concept builds upon the previous concept, so general understanding of each concept is necessary before moving on. Second, teaching adults over the course of 6 months is a unique situation, and the adults we accept into the program are expected to have the work ethic needed to forge their own path.
 
 ## NSS Objectives
 
