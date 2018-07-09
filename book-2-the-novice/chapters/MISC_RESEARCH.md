@@ -39,3 +39,7 @@ For example, you want to use a jQuery calendar tool that you found online - the 
 Search for some example code, and then look at someone's repository to see how they implemented it.
 
 ![](./images/sIUy0wnTmZ.gif)
+
+
+## Using DevDocs
+Dev Docs is a searchable wiki that pulls in docs from many APIs all over the web.  [Dev Docs] (https://devdocs.io/)
