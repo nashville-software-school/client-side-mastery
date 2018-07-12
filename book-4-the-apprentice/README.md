@@ -23,6 +23,7 @@ In this book, you will build be learning how to use all of the concepts and tool
 > ## Soft Demo Day Before Break
 
 * Supplement - [Making Generic, Reusable React Components](./chapters/REACT_REUSABLE_COMPONENTS.md)
+* Supplement - [Higher Order Components in React](./chapters/REACT_HOC.md)
 * Supplement - [React View Changing without Routing](./chapters/REACT_DYNAMIC_ROUTING.md)
 * Supplement - [React Context API](./chapters/REACT_CONTEXT_API.md)
 * Supplement - [JavaScript Maps](./chapters/JS_MAPS.md)
