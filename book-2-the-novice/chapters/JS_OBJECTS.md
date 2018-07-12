@@ -105,7 +105,7 @@ I just changed the state of the JavaScript object that is representing Michael T
 
 You have volunteered your time to a local political candidate, Elizabeth Sanger, who wants to become a US representative in Congress for your district. Unfortunately, the team discovered that you're a software developer, so they have begged you to build an application that lets them track volunteers, and store information about Elizabeth and her campaign.
 
-Your job is to define the different objects and resources, their structure, and the corresponding properties for each, to represent the following information about Elizabeth's campaign.
+Your job is to define the different objects and arrays, their structure, and the corresponding properties for each, to represent the following information about Elizabeth's campaign.
 
 1. Her congressional district (_you can use yours here_)
 1. Her platform statements for the following issues.
@@ -133,28 +133,36 @@ Your job is to define the different objects and resources, their structure, and 
 
 ## Challenge
 
-After you have defined all the objects for representing the data, write a corresponding function for each one whose purpose is to change the state of the object. Then invoke each function, and pass a reference to the correct object to it and modify a property.
+> Challanges are intended to be difficult and the expectation is for you to use your imagination and make some of your own decision about which code should be written.
+
+After you have defined all the objects for representing the data about Elizabeth's campaign, write a corresponding function for each one whose purpose is to change the state of the object. Then use your functions to modify the existing data.
+
+Things to think about.
+
+- Am I modifying an array? Then the function argument should be added to the target array with the `push()` method.
+- Am I modifying an object? Then I should pass both the key name to be modified, and its corresponding value.
+
+This challenge is for you to practice writing functions, so the more you can write, the better. It helps make neural connections in your brain at this point since you're still building your software vocabulary.
 
 Example:
 
 ```js
-function changeBookState (anyBookObject, thePropertyToChange) {
+function addToImageGallery (newImage) {
     ...
 }
 
-const jest = {
-    title: "The Infinite Jest",
-    author: "David Foster Wallace",
-    publishDate: "1 February 1996"
+function changeBiography (newBiography) {
+    ...
 }
 
-const lamb = {
-    title: "Lamb: The Gospel According to Biff",
-    author: "Christopher Moore",
-    publishDate: "25 May 2004"
+function changePlatform (topic, newPlatformStatement) {
+    ...
 }
 ```
 
 ## Advanced Challenge
 
 Use `document.createElement()` to build an `<article>` element representing Elizabeth. The `id` property of the element should be her congressional district, and its content should be her platform data. Once the element has been created, insert it into the DOM.
+
+### References
+[https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
