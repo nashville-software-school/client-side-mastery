@@ -14,9 +14,9 @@ In this book, you will build be learning how to use all of the concepts and tool
 
 > ## Sprint 5: Reactive Nutshell
 
-* Chapter 9 (optional) - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
-* Chapter 10 (optional) - [Deploying to Digial Ocean](./chapters/DIGITAL_OCEAN.md)
-* Chapter 11 (optional) - [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
+* Chapter 10 (optional) - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
+* Chapter 11 (optional) - [Deploying to Digital Ocean](./chapters/DIGITAL_OCEAN.md)
+* Chapter 12 (optional) - [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
 
 > ## **Begin Client Side Capstone Development**
 
