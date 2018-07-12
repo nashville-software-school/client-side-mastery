@@ -256,7 +256,7 @@ The final result should be a bare-bones single page application with a navigatio
 
 ## Challenge: Functional Presentation Components
 
-Your challenge to to make the list components into Container Components, and move the JSX into smaller, reusable Presentation Components that use the functional syntax of creating a component.
+Your challenge is to make the list components into Container Components, and move the JSX into smaller, reusable Presentation Components that use the functional syntax of creating a component.
 
 Here's a head start.
 
@@ -265,7 +265,7 @@ Here's a head start.
 ```js
 import React from "react"
 
-export default props => {
+export default ({ animal }) => {
     return <li>{animal.name}</li>
 }
 ```

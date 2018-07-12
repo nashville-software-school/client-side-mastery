@@ -27,6 +27,8 @@ In this book, you will learn tools, libraries and workflows that modern client s
 
 > ## Sprint 4 - Nutshell
 
+* Self-assessment: Home Inventory CRUD with json-server
+
 ## Supplementary Content
 
 * Supplement 1 - [Prototypal Inheritance](./chapters/PROTOTYPAL.md)

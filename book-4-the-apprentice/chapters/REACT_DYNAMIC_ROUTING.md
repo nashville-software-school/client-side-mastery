@@ -126,7 +126,7 @@ props.location.state.animal
 Now the **`Animal`** component can receive the animal object by two mechanisms.
 
 1. As a direct property from `AnimalList`, referenced as `props.animal`.
-1. As a state property of the route, referenced as `props.local.state.animal`.
+1. As a state property of the route, referenced as `props.location.state.animal`.
 
 Because of this, you will need to add code to determine where the data is coming from.
 
@@ -183,6 +183,18 @@ export default props => {
 
 ### Modify Route to Pass State as Props
 
+In this solution your link looks the same.
+
+```js
+<Link className="card-link"
+    to={{
+        pathname: `/animals/${animal.id}`,
+        state: { animal: animal }
+    }}>
+    Details
+</Link>
+```
+
 The other option is to leave the **`Animal`** component as simple as possible. It will accept the `animal` object through `props`, and no other way. This means that you flip the responsibility onto the code that wants to render `<Animal>` to ensure that it passes the data the correct way.
 
 There are currently two mechanisms by which the **`Animal`** component is rendered.
@@ -211,5 +223,3 @@ Implement one of the above mechanisms to view the details of animals.
 ## Practice: All the Details
 
 Now implement dynamic routing for locations and employees.
-
-## Advanced Challenge: Searching Your Data
