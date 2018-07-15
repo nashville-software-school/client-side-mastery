@@ -1,6 +1,6 @@
 # Populating React Component State from an API
 
-Up to this point, you have used state data that you hard-coded into your application. Now it's time to implement a more realistic way in which you would retrieve your data. You will request it from you JSON API database.
+Up to this point, you have used state data that you hard-coded into your application. Now it's time to implement a more realistic way in which you would retrieve your data. You will request it from your JSON API database.
 
 First empty out your current hard-coded state in the **`EmployeeList`** component.
 
@@ -39,13 +39,13 @@ One of the lifecycle methods available to every React component is [componentDid
 
 > `componentDidMount()` is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. _If you need to load data from a remote endpoint, this is a good place to instantiate the network request._
 
-The `componentDidMount()` hook runs after the component output has been rendered to the DOM, so if your component needs API data, that is the place to do it. Here is how you would do it for loading employees. Here's how you would write it to retrieve employee data from an API being served by [json-server](https://github.com/typicode/json-server) on port 5002.
+The `componentDidMount()` hook runs after the component output has been rendered to the DOM, so if your component needs API data, that is the place to do it. Here is how you would write it to retrieve employee data from an API being served by [json-server](https://github.com/typicode/json-server) on port 5002.
 
 ```js
 componentDidMount () {
     fetch("http://localhost:5002/employees")
-    .then(e => e.json())
-    .then(employees => this.setState({ employees: employees }))
+      .then(e => e.json())
+      .then(employees => this.setState({ employees: employees }))
 }
 ```
 
@@ -74,9 +74,9 @@ export default class EmployeeList extends Component {
             <React.Fragment>
                 {
                     this.state.employees.map(employee =>
-                        <Employee key={employee.id} employee={employee}>
-                            {employee.name}
-                        </Employee>
+                        <Employee key={employee.id}
+                                  employee={employee}
+                        />
                     )
                 }
             </React.Fragment>
@@ -86,25 +86,6 @@ export default class EmployeeList extends Component {
 ```
 
 * Note that you need to have a unique `key` property for each item when you use the `map()` array method to display a component representing each data object in the array.
-
-
-Note that the name of the employee is the text content of the `<Employee>` component. Use `props.children` to extract that text content in the child component.
-
-```js
-<h5 className="card-title">
-    {props.children}
-</h5>
-```
-
-If you are going to use content inside the component's opening and closing tags, you need to ensure that you remain consistent. That means that your `<Route>` configuration for employee details would also need to use the same syntax.
-
-```js
-<Route path="/employees/:employeeId" render={(props) => {
-    return <Employee employee={props.location.state.employee}>
-        {props.location.state.employee.name}
-    </Employee>
-}} />
-```
 
 ## Resources
 
@@ -137,7 +118,7 @@ json-server -p 5002 -w kennel.json
 
 Use the example code above to update all of the List components to retrieve their state from the API.
 
-> **Pro tip:** Remember to use your network tab in the Chrom Developer Tools to watch your network requests and preview the responses.
+> **Pro tip:** Remember to use your network tab in the Chrome Developer Tools to watch your network requests and preview the responses.
 
 ![](./images/QmF1Sd9FOI.gif)
 
@@ -145,7 +126,7 @@ Use the example code above to update all of the List components to retrieve thei
 
 Think back to the Nutshell group project you recently completed, and how you applied encapsulation, and the Single Responsibility Principle (SRP), to make modules whose reponsibilities were to interact with your persistent data storage.
 
-Consider how you could create a module for this application which has that same responsibility. Then, each list component should import that module and use its methods for querying data.
+Consider how you could create a regular old JavaScript module for this application which has that same responsibility. Then, each list component should import that module and use its methods for querying data.
 
 For example:
 
@@ -175,5 +156,7 @@ By using this approach, implementing the SRP, the **`APIManager`** module can ev
 ## Advanced Challenge: Search your Data
 
 Not for the weak of heart, is this challenge. Put an input box in your navigation bar. When your customer types in any characters, then you must find any objects in the animals, locations, or employees collections that have a name which contains that string.
+
+When the customer presses the ENTER key, all three collections in your API need to be queried to find any item that matches, and then a new component should be shown whose job it is to show the items that were found, if any.
 
 ![search results](./images/qNAJIxX9NX.gif)

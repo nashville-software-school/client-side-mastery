@@ -29,15 +29,6 @@ export default props => {
                     {props.animal.name}
                 </h5>
                 <p className="card-text">{props.animal.breed}</p>
-                {
-                    <Link className="card-link"
-                    to={{
-                        pathname: `/animals/${props.animal.id}`,
-                        state: { animal: props.animal }
-                    }}>
-                        Details
-                    </Link>
-                }
                 <a href="#">Delete</a>
             </div>
         </div>
@@ -53,7 +44,7 @@ Next, define that function in **`AnimalList`**.
 export default class AnimalList extends Component {
     ...
 
-    checkOutAnimal = (animalId) => {
+    checkOutAnimal = animalId => {
         // Delete the specified animal from the API
         fetch(`http://localhost:5002/animals/${animalId}`, {
             method: "DELETE"
@@ -76,7 +67,7 @@ export default class AnimalList extends Component {
 }
 ```
 
-Later, you will pass this function reference from **`AnimalList`** to the  **`Animal`** component, so it will be receiving that functionality as a property. Add an `onClick` attribute that invokes the function reference.
+Later, you will pass this function reference from **`AnimalList`** to the  **`Animal`** component, so it will be receiving that functionality as a property. For now, however, add an `onClick` attribute to the hyperlink that you added in the **`Animal`** component. This ensure that when the customer clicks on the hyperlink (_which is in the child component_) that the function to remove the animal (_which is defined in the parent component_) is invoked.
 
 ```html
 <a href="#" onClick={props.checkOutAnimal}>Delete</a>
@@ -113,7 +104,7 @@ render() {
 }
 ```
 
-So just like a primitive value like a string or an integer, you can pass function references from a parent component to a child component. The child component can then specify when that functionality should be invoked, even though it was defined on its parent.
+So just like a primitive value, such as a string or an integer, you can pass function references from a parent component to a child component. The child component can then specify when that functionality should be invoked, even though it was defined on its parent.
 
 ## Practice: Remove Customers
 
@@ -122,4 +113,9 @@ Add the same functionality to the **`CustomerList`** and **`Customer`** componen
 ## Challenge: Add a New Animal
 
 Add a simple form - with an input field for the animal's name and one for the breed - to the **`AnimalList`** component to kennel a new animal. When the submit button is clicked, you should POST the new animal to the API, then immediately GET the new list and set state. Just like you did for DELETE.
+
+#### Reference
+
+* [React Forms](https://reactjs.org/docs/forms.html)
+* [How to Work with Forms in React](https://www.sitepoint.com/work-with-forms-in-react/)
 

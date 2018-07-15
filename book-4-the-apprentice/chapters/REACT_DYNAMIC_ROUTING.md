@@ -183,7 +183,7 @@ export default props => {
 
 ### Modify Route to Pass State as Props
 
-In this solution your link looks the same.
+For this option your link looks the same.
 
 ```js
 <Link className="card-link"
@@ -195,7 +195,7 @@ In this solution your link looks the same.
 </Link>
 ```
 
-The other option is to leave the **`Animal`** component as simple as possible. It will accept the `animal` object through `props`, and no other way. This means that you flip the responsibility onto the code that wants to render `<Animal>` to ensure that it passes the data the correct way.
+In this option, you leave the **`Animal`** component as simple as possible. It will accept the `animal` object through `props`, and no other way. This means that you flip the responsibility onto the code that wants to render `<Animal>` to ensure that it passes the data the correct way.
 
 There are currently two mechanisms by which the **`Animal`** component is rendered.
 
@@ -204,7 +204,9 @@ There are currently two mechanisms by which the **`Animal`** component is render
 
 Therefore, it is the reponsibility of both of those mechanisms to pass the component an `animal` property. **`AnimalList`** already does this, so you need to reconfigure the `<Route>` to ensure it complies with what **`Animal`** needs.
 
-Here's how you do that. Every `<Route>` has another attribute called `render` that accepts a function as its value. You can put any logic inside that function to customize how you want the corresponding component to be rendered. Since you know that when the customer clicks on the `Details` link in the animal card, the `animal` object will be on the `props.location.state.animal` namespace, you can specify an `animal` property and give it that value.
+Here's how you do that.
+
+Every `<Route>` has another attribute called `render` that accepts a function as its value. You can put any logic inside that function to customize how you want the corresponding component to be rendered. Since you know that when the customer clicks on the `Details` link in the animal card, the `animal` object will be on the `props.location.state.animal` namespace, you can specify an `animal` property and give it that value.
 
 ```js
 <Route path="/animals/:animalId" render={(props) => {
