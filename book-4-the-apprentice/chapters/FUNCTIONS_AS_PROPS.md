@@ -106,9 +106,13 @@ render() {
 
 So just like a primitive value, such as a string or an integer, you can pass function references from a parent component to a child component. The child component can then specify when that functionality should be invoked, even though it was defined on its parent.
 
-## Practice: Remove Customers
+## Practice: Fire Employees
 
-Add the same functionality to the **`CustomerList`** and **`Customer`** components so that they can be deleted.
+Add the same functionality to the **`EmployeeList`** and **`Employee`** components so that employees can be fired!
+
+## Practice: Customers
+
+Add a **`CustomerList`** and **`Customer`** component so that the kennel company can keep track of the people who bring in their pets. Make sure that each customer can be removed from the system, if needed.
 
 ## Challenge: Add a New Animal
 
