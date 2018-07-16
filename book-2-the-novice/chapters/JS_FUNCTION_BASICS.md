@@ -398,17 +398,11 @@ const steak = {
 	type: 'beef',
 	cooked: false,
 }
-```
 
-And two arrays. The first array contains the objects to be cooked.
-
-```js
+// An first array containing the objects to be cooked.
 const uncookedFood = [hamburger, zucchini, chickenBreast, corn, steak];
-```
 
-And an empty array that will store the objects after the `grill()` function cooks the food.
-
-```js
+// An empty array that will store the objects after the `grill()` function cooks the food.
 const cookedFood = [];
 ```
 
