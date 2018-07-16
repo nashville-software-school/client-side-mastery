@@ -370,71 +370,55 @@ let addExcitement = () => { };
 
 # Practice: Cookout
 
-Given the following objects - (Dont change these)
+Copy the following objects into your JavaScript file.
+
 ```js
 const hamburger = {
 	name: 'Hamburger',
 	type: 'beef',
 	cooked: false,
-};
+}
 const zucchini = {
 	name: 'Zucchini',
 	type: 'vegetable',
 	cooked: false,
-};
+}
 const chickenBreast = {
 	name: 'Chicken Breast',
 	type: 'chicken',
 	cooked: false,
-};
+}
 const corn = {
 	name: 'Corn',
 	type: 'vegetable',
 	cooked: false,
-};
+}
 const steak = {
 	name: 'Steak',
 	type: 'beef',
 	cooked: false,
-};
-```
-And 2 arrays, the first Array containing the objects to be cooked:
-```js
+}
+
+// An first array containing the objects to be cooked.
 const uncookedFood = [hamburger, zucchini, chickenBreast, corn, steak];
-```
-And an Empty array that will store the objects after the function 'cooks' the meat:
-```js
+
+// An empty array that will store the objects after the `grill()` function cooks the food.
 const cookedFood = [];
 ```
 
 This exercise does not require you to alter this function. But read it. See if you can follow what it takes in, executes, and returns.
-Our grill() function:
+
+The `grill()` function. Copy this into your JavaScript as well.
+
 ```js
 const grill = currentObject => {
-	//return cooked food set to true
+	// Modify the food so that it is cooked
 	currentObject.cooked = true;
-	
-	// push the newly cooked object (still represented by 'currentObject') into the empty array cookedFood
+
+	// Put the cooked food into the appropriate array
 	cookedFood.push(currentObject);
 };
 ```
 
-You will need to write the necessary Javascript below.
-```js
-// 1. Write a for loop that iterates over the objects in the uncookedFood array. Ensure the loop only iterates to the end of the array.
+Your task is to iterate over the array of `uncookedFood` and invoke the function for each item so that the `cookedFood` array contains all of the items after they are cooked.
 
-// 2. Console.log() the results to ensure your loop is returning Food objects.
-
-// 3. Save uncookedFood[i] into a variable named 'currentObject'.
-
-// 4. Now, add a line that calls the grill() function and passes in the current item being iterated over.
-
-
-
-// If the loop successfully iterates over the array and successfully executes the grill() function on each object. This console log should appear as an array that has each object's 'cooked' key now shows true.
-console.log('CookedFood array after our loop ran!: ', cookedFood);
-```
-
-# Challenge: State in _DisArray_
-
-You may have noticed that if you console.log() the old array, we still have objects that exist uncooked, even after we _JUST_ grilled them. The state of our Cookout is wildly out of control. Can you solve the problem?
