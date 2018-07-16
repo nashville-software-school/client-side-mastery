@@ -1,16 +1,19 @@
 # Passing Functionality as Properties
 
-It's time to add one of the CRUD methods to your application. You're going to start with DELETE. Specifically, you're going to start with deleting animals to remove them from the kennel.
+It's time to add one of the CRUD methods to your application. You're going to start with DELETE. Specifically, you're going to start with deleting animals to remove them from the kennel. You are going to add a Delete link to each animal card.
 
 Before you write code, consider the Single Responsibility Principle again. Which component should have the responsibility of deleting an animal?
 
 * The `<Animal>` component itself?
 * The `<AnimalList>` component?
 
-In this case, it makes more sense for the **`AnimalList`** component to do this for two reasons.
+ Think about the flow of the application for case.
 
-1. The `<AnimalList>` component is responsible for retrieving the data, and managing state, so remain consistent in managing the state when an animal is deleted as well.
-1. An individual resource should not be responsible for updating or deleting itself because it has no context for how that operation will affect the rest of the application. Therefore, the responsiblity should be at a higher level.
+When you are viewing the entire list of animals, and you click the Delete link, the animal should be deleted and the entire list should be rendered again with the new data. However, if you are viewing a single animal, and you click the Delete button, then the user should be redirected back to the list of animals.
+
+So each component, **`AnimalList`** and **`Animal`**, need the ability to delete, but what happens afterwards is different.
+
+In this situation, you would define that function in a component that can pass the reference to each one. It will be written in a higher order component.
 
 The first thing you need to do is add a link in each animal card for the customer to click on to check out their animal. In the code below, there is a new `<a>` element  that contains the word *Delete*.
 
