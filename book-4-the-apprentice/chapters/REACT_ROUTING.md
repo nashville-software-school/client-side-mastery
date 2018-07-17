@@ -10,8 +10,9 @@ Make sure you are in your project directory.
 
 ```sh
 npm install react-router-dom
+npm install --save bootstrap
 cd src
-touch ApplicationViews.js
+touch ApplicationViews.js KennelCompany.js
 mkdir nav
 touch nav/NavBar.js
 touch nav/NavBar.css
