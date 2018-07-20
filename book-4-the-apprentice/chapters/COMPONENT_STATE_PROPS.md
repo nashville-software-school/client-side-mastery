@@ -8,39 +8,52 @@ State is simply the current values of the properties used to render a component.
 
 You initialize state by defining a `state` object in your component constructor. Let's take a look at how to implement state for our **`Kennel`** component.
 
+> components/Kennel.js
+
 ```js
 import React, { Component } from "react"
-import EmployeeList from "./EmployeeList"
-import LocationList from "./LocationList"
+import EmployeeList from "./employee/EmployeeList"
+import LocationList from "./location/LocationList"
+import "./Kennel.css"
 
 
 export default class Kennel extends Component {
 
     state = {
         employees: [
-            { name: "Jessica Younker" },
-            { name: "Jordan Nelson" },
-            { name: "Zoe LeBlanc" },
-            { name: "Blaise Roberts" }
+            { id: 1, name: "Jessica Younker" },
+            { id: 2, name: "Jordan Nelson" },
+            { id: 3, name: "Zoe LeBlanc" },
+            { id: 4, name: "Blaise Roberts" }
         ],
         locations: [
-            { name: "Nashville North" },
-            { name: "Nashville South" }
+            { id: 1, name: "Nashville North" },
+            { id: 2, name: "Nashville South" }
         ]
     }
 
     render() {
         return (
-            <React.Fragment>
+            <article className="kennel">
                 <LocationList locations={this.state.locations} />
                 <EmployeeList employees={this.state.employees} />
-            </React.Fragment>
-        );
+            </article>
+        )
     }
 }
 ```
 
-Each of those attributes for the child components become keys on a `props` object.
+> components/Kennel.css
+
+```css
+.kennel {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+```
+
+Each of those attributes for the child components become keys on a `props` object. In this case, each of those variables evaluate to arrays, so you can use the `map()` array method to convert the raw data into HTML elements.
 
 > EmployeeList.js
 
@@ -50,35 +63,16 @@ import React, { Component } from 'react'
 
 export default class EmployeeList extends Component {
     render() {
-        return ({
-            /*
-            This is a reference to the employees array
-            defined in the state object in Kennel.js
-            */
-            this.props.employees
-        })
-    }
-}
-```
-
-Now you can use the `map()` array method to convert the raw data into HTML elements.
-
-```js
-import React, { Component } from 'react'
-
-
-export default class EmployeeList extends Component {
-    render() {
         return (
-            <React.Fragment>
+            <section className="employees">
             {
                 this.props.employees.map(employee =>
-                    <div>
+                    <div key={employee.id}>
                         {employee.name}
                     </div>
                 )
             }
-            </React.Fragment>
+            </section>
         )
     }
 }
@@ -105,7 +99,7 @@ Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** a
 2. Create a **`AnimalList`** component for displaying animals.
 3. Update **`Kennel`** to pass its `animals` state to **`AnimalList`** and use the appropriate key on `this.props` to display all animal names.
 
-## Advanced Exercise
+## Challenge: Animal Owners
 
 1. Add an `id` property to each of your existing resources.
 1. Add the following `owners` property to the **`Kennel`** state.

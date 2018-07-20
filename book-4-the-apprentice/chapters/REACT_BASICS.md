@@ -38,12 +38,6 @@ transformed to lightweightJavaScript objects.
 
 ![component lifecycle](./images/react-component-lifecycle.png)
 
-## Common Events
-
-1. onClick
-1. onSubmit
-1. onChange
-
 ## Getting Started with create-react-app
 
 Visit the [create-react-app](https://github.com/facebook/create-react-app/) Github repo and follow the instructions for getting yourself set up with a simple React application.

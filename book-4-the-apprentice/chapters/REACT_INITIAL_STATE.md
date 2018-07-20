@@ -2,17 +2,30 @@
 
 Up to this point, you have used state data that you hard-coded into your application. Now it's time to implement a more realistic way in which you would retrieve your data. You will request it from your JSON API database.
 
-First empty out your current hard-coded state in the **`EmployeeList`** component.
+First empty out your current hard-coded state in the **`ApplicationViews`** component. Reconfigure it to the following structure. You're going to query the entire API and populate this data structure.
 
 ```js
 state = {
-    employees: []
+    data: {
+        locations: [],
+        animals: [],
+        employees: []
+    }
 }
 ```
 
 ## Populate the API
 
-Add a new file to your project named `kennel.json`. Add your employee collection to the file.
+You are going to use `json-server` to create an API for your kennel application.
+
+In the root directory of your project, create an `api` directory that is a sibling to `src`. Create a file in that directory named `kennel.json`.
+
+```sh
+mkdir api
+touch api/kennel.json
+```
+
+Add your data to the JSON file.
 
 ```json
 {
@@ -21,7 +34,8 @@ Add a new file to your project named `kennel.json`. Add your employee collection
         { "id": 2, "name": "Jordan Nelson" },
         { "id": 3, "name": "Zoe LeBlanc" },
         { "id": 4, "name": "Blaise Roberts" }
-    ]
+    ],
+    etc...
 }
 ```
 
@@ -42,10 +56,10 @@ One of the lifecycle methods available to every React component is [componentDid
 The `componentDidMount()` hook runs after the component output has been rendered to the DOM, so if your component needs API data, that is the place to do it. Here is how you would write it to retrieve employee data from an API being served by [json-server](https://github.com/typicode/json-server) on port 5002.
 
 ```js
-componentDidMount () {
-    fetch("http://localhost:5002/employees")
-      .then(e => e.json())
-      .then(employees => this.setState({ employees: employees }))
+componentDidMount() {
+    fetch(`http://localhost:5002/db`)
+        .then(e => e.json())
+        .then(data => this.setState({ data: data }))
 }
 ```
 
@@ -54,38 +68,46 @@ That code used the new `fetch` keyword in JavaScript to query your API, then ser
 Here's what the final component looks like.
 
 ```js
+import { Route } from 'react-router-dom'
 import React, { Component } from "react"
-import Employee from "./Employee";
+import AnimalList from './animal/AnimalList'
+import LocationList from './location/LocationList'
+import EmployeeList from './employee/EmployeeList'
 
 
-export default class EmployeeList extends Component {
+export default class ApplicationViews extends Component {
     state = {
-        employees: []
+        data: {
+            locations: [],
+            animals: [],
+            employees: []
+        }
     }
 
-    componentDidMount () {
-        fetch("http://localhost:5002/employees")
-        .then(e => e.json())
-        .then(employees => this.setState({ employees: employees }))
+    componentDidMount() {
+        fetch("http://localhost:5002/db)
+            .then(e => e.json())
+            .then(data => this.setState({ data: data }))
     }
+
 
     render() {
         return (
             <React.Fragment>
-                {
-                    this.state.employees.map(employee =>
-                        <Employee key={employee.id}
-                                  employee={employee}
-                        />
-                    )
-                }
+                <Route exact path="/" render={(props) => {
+                    return <LocationList locations={this.state.data.locations} />
+                }} />
+                <Route exact path="/animals" render={(props) => {
+                    return <AnimalList animals={this.state.data.animals} />
+                }} />
+                <Route exact path="/employees" render={(props) => {
+                    return <EmployeeList employees={this.state.data.employees} />
+                }} />
             </React.Fragment>
         )
     }
 }
 ```
-
-* Note that you need to have a unique `key` property for each item when you use the `map()` array method to display a component representing each data object in the array.
 
 ## Resources
 
@@ -94,64 +116,38 @@ export default class EmployeeList extends Component {
 
 ## Practice
 
-Now it's time to take the rest of the data and expose it through an API with `json-server`. Create a `kennel.json` file in your project and add the animals, locations, and employees collections to it.
+In the example code above, you took a very simplistic path to load the data. You queried the **entire database** and just dumped it into state. The chances that you will need to do this professional are near zero. You will pull in only the data that you need, which is often a small subset of the entire database.
 
-```json
-{
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "German Shepherd"
-        }
-    ],
-    "employees": [ ],
-    "locations": [ ]
+Your task is to refactor **`ApplicationViews`** state to not have the intermediary `data` key on it.
+
+```js
+state = {
+    data: {
+        locations: [],
+        animals: [],
+        employees: []
+    }
 }
 ```
 
-Open a new terminal window, and start your API with the following command.
+Now refactor the `componentDidMount()` method to make a separate `fetch()` call for each of the collections of data, and then update state when the data comes back.
 
-```sh
-json-server -p 5002 -w kennel.json
+```js
+componentDidMount () {
+    // Query the employees collection
+    fetch(...).then()
+
+    // Query the locations collection
+    fetch(...).then()
+
+    // Query the animals collection
+    fetch(...).then()
+}
 ```
-
-Use the example code above to update all of the List components to retrieve their state from the API.
 
 > **Pro tip:** Remember to use your network tab in the Chrome Developer Tools to watch your network requests and preview the responses.
 
 ![](./images/QmF1Sd9FOI.gif)
-
-## Practice: Using Best Practices
-
-Think back to the Nutshell group project you recently completed, and how you applied encapsulation, and the Single Responsibility Principle (SRP), to make modules whose reponsibilities were to interact with your persistent data storage.
-
-Consider how you could create a regular old JavaScript module for this application which has that same responsibility. Then, each list component should import that module and use its methods for querying data.
-
-For example:
-
-Replace this code...
-
-```js
-componentDidMount () {
-    fetch("http://localhost:5002/employees")
-    .then(e => e.json())
-    .then(employees => this.setState({ employees: employees }))
-}
-```
-
-with something like this
-
-```js
-componentDidMount () {
-    APIManager.getAllEmployees()
-        .then(employees => this.setState({
-            employees: employees
-        }))
-}
-```
-
-By using this approach, implementing the SRP, the **`APIManager`** module can evolve independently of the **`EmployeeList`** component. Any changes in how the API is accessed does not affect **`EmployeeList`** at all since it is using the abstraction that **`APIManager`** provides for getting data.
 
 ## Advanced Challenge: Search your Data
 

@@ -15,6 +15,10 @@ So each component, **`AnimalList`** and **`Animal`**, need the ability to delete
 
 In this situation, you would define that function in a component that can pass the reference to each one. It will be written in a higher order component.
 
+## Implementation of Delete
+
+Which component is of higher order than both AnimalList and Animal. In your system, that would be **`ApplicationViews`**.
+
 The first thing you need to do is add a link in each animal card for the customer to click on to check out their animal. In the code below, there is a new `<a>` element  that contains the word *Delete*.
 
 > Animal.js
