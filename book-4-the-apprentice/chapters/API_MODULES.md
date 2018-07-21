@@ -1,32 +1,107 @@
 # Using Modules in React
 
-## Practice: Using Best Practices
+Not everything in your React application has to be a component. You can create modules just like you did in Browserify that provide utilities for your application to use.
 
-Think back to the Nutshell group project you recently completed, and how you applied encapsulation, and the Single Responsibility Principle (SRP), to make modules whose reponsibilities were to interact with your persistent data storage.
+## Setup
 
-Consider how you could create a regular old JavaScript module for this application which has that same responsibility. Then, each list component should import that module and use its methods for querying data.
+1. Create a `src/modules` directory
+1. In that directory, create a file named `AnimalManager.js`
 
-For example:
+## Single Responsibility Principle
 
-Replace this code...
+Rather than hard-coding API calls in your React component of **`ApplicationViews`**, you are going to create a JavaScript module that contains **all** of the API calls. What this provide for you is flexibility.
 
-```js
-componentDidMount () {
-    fetch("http://localhost:5002/employees")
-    .then(e => e.json())
-    .then(employees => this.setState({ employees: employees }))
-}
-```
+Other components, _in the future_, may likely need to ability to make their own API calls. You're going to eliminate that possible future duplication of code by making a module whose sole responsibility is to interact with the API.
 
-with something like this
+> AnimalManager.js
 
 ```js
-componentDidMount () {
-    APIManager.getAllEmployees()
-        .then(employees => this.setState({
-            employees: employees
-        }))
-}
+const remoteURL = "http://localhost:5002"
+
+export default Object.create(null, {
+    get: {
+        value: function (id) {
+            return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
+        }
+    },
+    all: {
+        value: function () {
+            return fetch(`${remoteURL}/animals`).then(e => e.json())
+        }
+    }
+})
 ```
 
-By using this approach, implementing the SRP, the **`APIManager`** module can evolve independently of the **`EmployeeList`** component. Any changes in how the API is accessed does not affect **`EmployeeList`** at all since it is using the abstraction that **`APIManager`** provides for getting data.
+Now you can refactor your **`ApplicationViews`** component to use this module. First, make sure you import it.
+
+```js
+import AnimalManager from "../modules/AnimalManager"
+```
+
+Then refactor `componentDidMount()`.
+
+```js
+// Example code. Make this fit into how you have written yours.
+AnimalManager.getAll().then(allAnimals => {
+    this.setState({
+        animals: allAnimals
+    })
+})
+```
+
+## Practice: All Resource Managers
+
+Create a manager file in the `modules` directory for each of your resources.
+
+1. Animals
+1. Locations
+1. Employees
+1. Owners
+
+Add the `get()` and `all()` methods to each one, changing the URL path in each one to get the corresponding resource type. Then refactor the **`ApplicationViews`** component to import all of them and use all of them when querying your data.
+
+## Advanced Challenge: The Abstract Artist
+
+As always, advanced challenges are completely optional. You've reached the point in your React application where you should only attempt this challenge if you have understood everything covered so far. Otherwise, skip it.
+
+We've been telling you since nearly the first day of class that duplicating code is a _bad thing_. In the previous exercise, you have four components that have nearly identical code in them. Your advanced challenge is to use the power of prototypal inheritance to create a module that all of your existing modules will have in their prototype chain.
+
+Some starter code and comments to get you started.
+
+> AnimalManager.js
+
+```js
+/*
+    Remember that the first argument for Object.create() is the
+    object that will be in this object's prototype chain.
+*/
+export default Object.create(APIManager, {
+    ...
+})
+```
+
+Now, consider moving all of those functions that are _nearly_ identical to the **`APIManager`** module. How could you write the functions to be useful for each of the more specialized managers.
+
+> APIManager.js
+
+```js
+const remoteURL = "http://localhost:5002"
+
+export default Object.create(null, {
+    get: {
+        value: function (id) {
+            /*
+                Since the purpose of this module is to be used by
+                all of the more specialized one, then the string
+                of `animals` should not be hard coded here.
+            */
+            return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
+        }
+    },
+    all: {
+        value: function () {
+            return fetch(`${remoteURL}/animals`).then(e => e.json())
+        }
+    }
+})
+```
