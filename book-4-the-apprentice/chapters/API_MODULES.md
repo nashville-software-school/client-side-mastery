@@ -60,6 +60,17 @@ Create a manager file in the `modules` directory for each of your resources.
 
 Add the `get()` and `all()` methods to each one, changing the URL path in each one to get the corresponding resource type. Then refactor the **`ApplicationViews`** component to import all of them and use all of them when querying your data.
 
+## Challenge: Refactor Delete
+
+See if you can add a method to your **`AnimalManager`** module to make the following refactored `deleteAnimal()` method work in **`ApplicationViews`**.
+
+```js
+deleteAnimal = id => AnimalManager.removeAndList(id)
+    .then(animals => this.setState({
+        animals: animals
+    }))
+```
+
 ## Advanced Challenge: The Abstract Artist
 
 As always, advanced challenges are completely optional. You've reached the point in your React application where you should only attempt this challenge if you have understood everything covered so far. Otherwise, skip it.
