@@ -73,7 +73,7 @@ deleteAnimal = id => AnimalManager.removeAndList(id)
 
 ## Advanced Challenge: The Abstract Artist
 
-As always, advanced challenges are completely optional. You've reached the point in your React application where you should only attempt this challenge if you have understood everything covered so far. Otherwise, skip it.
+> As always, advanced challenges are completely optional. You've reached the point in your React application where you should only attempt this challenge if you have understood everything covered so far. Otherwise, skip it.
 
 We've been telling you since nearly the first day of class that duplicating code is a _bad thing_. In the previous exercise, you have four components that have nearly identical code in them. Your advanced challenge is to use the power of prototypal inheritance to create a module that all of your existing modules will have in their prototype chain.
 
