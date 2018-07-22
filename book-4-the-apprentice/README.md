@@ -26,6 +26,7 @@ In this book, you will build be learning how to use all of the concepts and tool
 > ## Soft Demo Day Before Break
 
 * Supplement - [Higher Order Components in React](./chapters/REACT_HOC.md)
+* Supplement - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
 * Supplement - [React Context API](./chapters/REACT_CONTEXT_API.md)
 
 After completing this book, you will be considered apprentice developers, and will be ready to move on to the final three months of the course. Those final months are your apprenticeship, where you will be trained on how to work on a professional software development team.

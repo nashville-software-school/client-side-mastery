@@ -1,201 +1,137 @@
-# Making Reusable Components
+# The Power of Components
 
-In your Kennel application, you have two types of very similar components.
+Now that you've seen the core mechanisms of a React application, it's time to consider the purpose of React, or any other component-based tool like Polymer, Vue, and Angular - reusability.
 
-The list components.
+## Reusability Scenario
 
-1. LocationList
-1. EmployeeList
-1. AnimalList
+Right now, the only place that you're rendering the basic animal card is in the **`AnimalList`** component. What you're going to do is refactor your application so that you can view the animal card in two places, using the same component.
 
-The presentation components.
+1. In the animal list.
+1. In the employee list. For each employee card, you will then show which animals are assigned to the employee using the animal card.
 
-1. Animal
-1. Location
-1. Employee
-
-Each components in these sets are largely identical. This is an opportunity to make your components for generic. You will start with the presentation components. You will be making sure that each object, regardless of its type will be presented in the same way, and reuse the same code. This reduces your application's file count, and ensures consistency as your application grows.
-
-This is how your **`Animal`** component looks now.
-
-```js
-import React from "react"
-import { Link } from "react-router-dom"
-
-
-const Animal = props => {
-    return (
-        <div className="card" style={{width: `18rem`}}>
-            <div className="card-body">
-                <h5 className="card-title">
-                    {props.animal.name}
-                </h5>
-                <p className="card-text">{props.animal.breed}</p>
-                {
-                    <Link className="card-link"
-                        to={{
-                            pathname: `/animals/${props.animal.id}`,
-                            state: { animal: props.animal }
-                        }}>
-                        Details
-                    </Link>
-                }
-            </div>
-        </div>
-    )
-}
-
-export default Animal
-```
-
-Time to make it more generic to be used with both employee objects and location objects since the HTML representations are identical, and the only difference is the property being used.
-
-```js
-import React from "react"
-import { Link } from "react-router-dom"
-
-/*
-    Now using object destructuring to pull out the individual
-    keys in the `props` object that gets passed to this
-    component.
-
-    https://tylermcginnis.com/videos/object-array-destructuring/
-*/
-const DetailCard = ({id, name, resource, addlInfo}) => {
-    return (
-        <div className="card" style={{width: `18rem`}}>
-            <div className="card-body">
-                <h5 className="card-title">
-                    {name}
-                </h5>
-                <p className="card-text">{addlInfo ? addlInfo : ""}</p>
-                {
-                    <Link className="card-link"
-                        to={{
-                            pathname: `/${resource}/${id}`,
-                            state: {
-                                id: id,
-                                name: name,
-                                resource: resource,
-                                addlInfo: addlInfo
-                            }
-                        }}>
-                        Details
-                    </Link>
-                }
-            </div>
-        </div>
-    )
-}
-
-export default DetailCard
-```
-
-Now all of the list components can use the new **`DetailCard`** component. Now your development team has one component that can be reused to display the details of any resource, instead of having three separate components to maintain.
-
-Here is each one rewritten to use the new `<DetailCard>` component.
-
-> LocationList.js
+## AnimalCard Component
 
 ```js
 import React, { Component } from "react"
-import DetailCard from "./DetailCard";
+import { Link } from "react-router-dom"
+import dog from "./DogIcon.png"
+import "./Animal.css"
 
-
-export default class LocationList extends Component {
-    state = { locations: [] }
-
-    componentDidMount () {
-        fetch("http://localhost:5002/locations")
-        .then(e => e.json())
-        .then(locations => this.setState({ locations: locations }))
-    }
-
+export default class AnimalCard extends Component {
     render() {
         return (
             <React.Fragment>
-                <ul>
-                {
-                    this.state.locations.map(location =>
-                        <DetailCard id={location.id}
-                            name={location.name}
-                            resource="locations" />
-                    )
-                }
-                </ul>
+                <div key={this.props.animal.id} className="card">
+                    <div className="card-body">
+                        <h5 className="card-title">
+                            <img src={dog} className="icon--dog" />
+                            {this.props.animal.name}
+                            <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
+                            <a href="#"
+                                onClick={() => this.props.deleteAnimal(this.props.animal.id)}
+                                className="card-link">Discharge</a>
+                        </h5>
+                    </div>
+                </div>
             </React.Fragment>
         )
     }
 }
 ```
 
-> EmployeeList.js
+## Refactor AnimalList
 
 ```js
 import React, { Component } from "react"
-import DetailCard from "./DetailCard";
+import "./Animal.css"
+import AnimalCard from "./AnimalCard"
+
+export default class AnimalList extends Component {
+    render () {
+        return (
+            <React.Fragment>
+                <div className="animalButton">
+                    <button type="button"
+                            onClick={()=> this.props.history.push("/animals/new")}
+                            className="btn btn-success">
+                        Admit Animal
+                    </button>
+                </div>
+                <section className="animals">
+                {
+                    this.props.animals.map(animal =>
+                        <AnimalCard key={animal.id} animal={animal} {...this.props} />
+                    )
+                }
+                </section>
+            </React.Fragment>
+        )
+    }
+}
+```
+
+## Update EmployeeList Route
+
+Update the route to pass the list of animals to **`EmployeeList`** so that it can be filtered for each employee.
+
+```js
+<Route exact path="/employees" render={props => {
+    if (this.isAuthenticated()) {
+        return <EmployeeList deleteEmployee={this.deleteEmployee}
+                                animals={this.state.animals}
+                                employees={this.state.employees} />
+    } else {
+        return <Redirect to="/login" />
+    }
+}} />
+```
+
+## Refactor EmployeeList
+
+```js
+import React, { Component } from "react"
+import person from "./person.png"
+import "./Employee.css"
+import AnimalCard from "../animal/AnimalCard"
 
 
 export default class EmployeeList extends Component {
-    state = { employees: [] }
-
-    componentDidMount () {
-        fetch("http://localhost:5002/employees")
-        .then(e => e.json())
-        .then(employees => this.setState({ employees: employees }))
-    }
-
-    render() {
+    render () {
         return (
-            <React.Fragment>
-                {
-                    this.state.employees.map(employee =>
-                        <DetailCard id={employee.id}
-                                    name={employee.name}
-                                    resource="employees" />
-                    )
-                }
-            </React.Fragment>
+            <section className="employees">
+            {
+                this.props.employees.map(employee =>
+                    <div key={employee.id} className="card card--employee">
+                        <div className="card-body">
+                            <h5 className="card-title">
+                                <img src={person} className="icon--employee" />
+                                {employee.name}
+                            <a href="#"
+                                onClick={() => this.props.deleteEmployee(employee.id)}
+                                className="card-link">Delete</a>
+                            </h5>
+
+                            <h6 class="card-subtitle mb-2 text-muted">Caretaker For</h6>
+                            <div className="animals--caretaker">
+                            {
+                                this.props.animals
+                                    .filter(anml => anml.employeeId === employee.id)
+                                    .map(anml => <AnimalCard key={anml.id} animal={anml} {...this.props} />)
+                            }
+                            </div>
+
+                        </div>
+                    </div>
+                )
+            }
+            </section>
         )
     }
 }
 ```
 
-> AnimalList.js
+## Practice: Employees per Location
 
-```js
-import React, { Component } from "react"
-import DetailCard from "./DetailCard";
-
-
-export default class AnimalList extends Component {
-    state = { animals: [] }
-
-    componentDidMount () {
-        fetch("http://localhost:5002/animals")
-        .then(e => e.json())
-        .then(animals => this.setState({ animals: animals }))
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-                {
-                    this.state.animals.map(animal =>
-                        <DetailCard id={animal.id}
-                                    name={animal.name}
-                                    resource="animals"
-                                    addlInfo={animal.breed} />
-                    )
-                }
-            </React.Fragment>
-        )
-    }
-}
-```
-
-## Advanced Challenge: Reusable List Component
-
-If you examine your three list components now, you will immediately notice that all three of them are nearly identical. This is another opportunity for you to write a general, reusable component named **`ResourceList`**.
-
-See if you can make a single component that replaces **`AnimalList`**, **`EmployeeList`**, and **`LocationList`**.
+1. Modify your API data so that employees have a `locationId` property designating at which location they work.
+1. Update the route for the location list so that the employee collection is passed to the child component.
+1. For each location, display the employees that are working there.
