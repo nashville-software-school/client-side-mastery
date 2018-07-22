@@ -9,7 +9,7 @@ In this book, you will build be learning how to use all of the concepts and tool
 * Chapter 5 - [React: Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
 * Chapter 6 - [React: CRUD Using Function Properties](./chapters/FUNCTIONS_AS_PROPS.md)
 * Chapter 7 - [React: Using Regular Modules](./chapters/API_MODULES.md)
-* Chapter 8 - [React: Dynamic Routes and Forms](./chapters/REACT_DYNAMIC_ROUTES.md)
+* Chapter 8 - [React: Dynamic Routes and Forms](./chapters/REACT_DYNAMIC_ROUTING.md)
 * Chapter 9 - [React: CRUD with Forms](./chapters/REACT_FORMS.md)
 * Chapter 10 - [React: Conditional Routing](./chapters/REACT_CONDITIONAL_RENDERING.md)
 * Chapter 11 - [React: Reusability](./chapters/REACT_REUSABLE_COMPONENTS.md)
