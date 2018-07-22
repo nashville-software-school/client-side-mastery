@@ -75,7 +75,19 @@ export default class Login extends Component {
 
 ### Route to Show Login
 
-Now modify **`ApplicationViews`** with a function to check if there is an item in local storage named `credentials`.
+Import this new component into **`ApplicationViews`**.
+
+```js
+import Login from './Login'
+```
+
+Update your import statement for `react-router-dom` to get the `<Redirect>` component.
+
+```js
+import { Route, Redirect } from "react-router-dom"
+```
+
+Then refactor **`ApplicationViews`** by adding a function to check if there is an item in local storage named `credentials`.
 
 ```js
 export default class ApplicationViews extends Component {
@@ -83,84 +95,47 @@ export default class ApplicationViews extends Component {
     // Check if credentials are in local storage
     isAuthenticated = () => localStorage.getItem("credentials") !== null
 
-    render() {
-        return (
-            <React.Fragment>
-                <Route exact path="/" component={LocationList} />
-                <Route exact path="/animals" component={AnimalList} />
-                <Route path="/animals/:animalId" render={(props) => {
-                    return <Animal animal={props.location.state.animal} />
-                }} />
-                <Route path="/employees" component={EmployeeList} />
-            </React.Fragment>
-        )
-    }
+    ...
 }
 ```
 
 Then configure a new route that will render the login component.
 
 ```js
-import { Route } from 'react-router-dom'
-import React, { Component } from "react"
-import AnimalList from './AnimalList'
-import LocationList from './LocationList'
-import EmployeeList from './EmployeeList'
-import Animal from './Animal'
-import Login from './Login'
-
-
-export default class ApplicationViews extends Component {
-
-    // Check if credentials are in local storage
-    isAuthenticated = () => localStorage.getItem("credentials") !== null
-
-    render() {
-        return (
-            <React.Fragment>
-                <Route exact path="/" component={LocationList} />
-                <Route exact path="/animals" component={AnimalList} />
-                <Route path="/animals/:animalId" render={(props) => {
-                    return <Animal animal={props.location.state.animal} />
-                }} />
-                <Route path="/employees" component={EmployeeList} />
-                <Route path="/login" component={Login} />
-            </React.Fragment>
-        )
-    }
-}
+<Route path="/login" component={Login} />
 ```
 
-Now go to your browser, navigate to the `http://localhost:3000/login` route, fill out the form, then submit it. You should see the object appear in your local storage.
+Go to your browser, navigate to the `http://localhost:3000/login` route, fill out the form, then submit it. You should see the object appear in your local storage.
 
 ![simple login](./images/alRdBjtuxG.gif)
 
 ## Conditional Rendering
 
-Now it's time to implement conditional rendering. You will start with the locations view. The following route configuration will only render the **`LocationList`** component if the user is authenticated.
+Now it's time to implement conditional rendering. You will start with the employees view. The following route configuration will only render the **`EmployeeList`** component if the user is authenticated. If the user is not authenticated (i.e. the `credentials` key does not exist in local storage), then the browser is redirected to `/login` and the login form is rendered.
 
 ```js
-<Route exact path="/" render={props => {
+<Route exact path="/employees" render={props => {
     if (this.isAuthenticated()) {
-        return <LocationList />
+        return <EmployeeList deleteEmployee={this.deleteEmployee}
+                             employees={this.state.employees} />
     } else {
-        return <Login />
+        return <Redirect to="/login" />
     }
 }} />
 ```
 
 1. Modify your route to reflect the code above.
 1. Remove the `credentials` item from local storage.
-1. Visit `http://localhost:3000/`
+1. Visit `http://localhost:3000/employees`
 1. You should be presented with the login screen
 
-Because the item doesn't exist in local storage, the `isAuthenticated` method in **`ApplicationViews`** will return `false`. This causes the condition that you wrote in the `<Route>` to return the **`Login`** component.
+User is unable to view list of employees until she logs in.
 
 1. Now fill out the form to put the item back in local storage.
-1. Click on the `Locations` item in your nav bar.
-1. You should now see the list of locations.
+1. Click on the `Employees` item in your nav bar.
+1. You should now see the list of employees.
 
-![working conditional routing](./images/QOp49FZqpq.gif)
+![working conditional routing](./images/kfst2FfzcO.gif)
 
 ## Practice: No Content for You!
 
