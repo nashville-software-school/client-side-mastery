@@ -57,7 +57,7 @@ The `componentDidMount()` hook runs after the component output has been rendered
 
 ```js
 componentDidMount() {
-    fetch(`http://localhost:5002/db`)
+    fetch("http://localhost:5002/db")
         .then(e => e.json())
         .then(data => this.setState({ data: data }))
 }
@@ -66,6 +66,8 @@ componentDidMount() {
 That code used the new `fetch` keyword in JavaScript to query your API, then serialize the response as a JSON object, then take the JSON object and set the state of your component.
 
 Here's what the final component looks like.
+
+> components/ApplicationViews.js
 
 ```js
 import { Route } from 'react-router-dom'
@@ -85,7 +87,7 @@ export default class ApplicationViews extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:5002/db)
+        fetch("http://localhost:5002/db")
             .then(e => e.json())
             .then(data => this.setState({ data: data }))
     }
@@ -147,9 +149,11 @@ componentDidMount () {
 
 > **Pro tip:** Remember to use your network tab in the Chrome Developer Tools to watch your network requests and preview the responses.
 
-![](./images/QmF1Sd9FOI.gif)
+![](./images/eB9CCcrUHy.gif)
 
 ## Advanced Challenge: Search your Data
+
+> Remember that challenges, especially advanced ones, are completely optional and should not be attempted until you have completed the practice exercises and understand the concepts used in them.
 
 Not for the weak of heart, is this challenge. Put an input box in your navigation bar. When your customer types in any characters, then you must find any objects in the animals, locations, or employees collections that have a name which contains that string.
 

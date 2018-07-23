@@ -32,21 +32,31 @@ Let's make the child components and then build the container component in which 
 
 ### Navigation Bar
 
-> nav/NavBar.js
+Use this code for your navigation bar. It uses Bootstrap styling so that you have some basic, good styling.
+
+> components/nav/NavBar.js
 
 ```js
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
-import "./NavBar.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 
 export default class NavBar extends Component {
     render() {
         return (
-            <nav>
-                <Link to="/">Locations</Link>
-                <Link to="/animals">Animals</Link>
-                <Link to="/employees">Employees</Link>
+            <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
+                <ul className="nav nav-pills">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/">Locations</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/animals">Animals</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/employees">Employees</Link>
+                    </li>
+                </ul>
             </nav>
         )
     }

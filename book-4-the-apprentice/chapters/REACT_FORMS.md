@@ -2,11 +2,20 @@
 
 In this chapter, you are going to learn how to use use a form to express the state of a component, and then use a function passed from a parent component to add the animal to the API.
 
+**_Quick Note_:** Note that all of the code you will see below needs to be in place before the feature will work.
+
+
 ## Route for Showing Animal Form
 
-New route that renders a form for boarding a new animal. The `employees` collection needs to be passed to the form component so that a dropdown list can be populated for the user to choose a caretaker.
+New route that renders a form for boarding a new animal. The `employees` collection needs to be passed to the form component so that a dropdown list can be populated for the user to choose a caretaker. You also need to update the route for `/animals` so that the `props` argument is passed down to the child component. This allows you to use the `history.push()` mechanism to change the URL in the browser.
+
+Update your route with this code.
 
 ```jsx
+<Route exact path="/animals" render={(props) => {
+    return <AnimalList {...props} deleteAnimal={this.deleteAnimal} animals={this.state.animals} />
+}} />
+
 <Route path="/animals/new" render={(props) => {
     return <AnimalForm {...props} addAnimal={this.addAnimal} employees={this.state.employees} />
 }} />
@@ -14,7 +23,7 @@ New route that renders a form for boarding a new animal. The `employees` collect
 
 ## Button for Admitting a New Animal
 
-Update **`AnimalList`** with a button at the top that uses the `history` mechanism to change the URL of the browser.
+Update **`AnimalList`** with a button at the top that uses the `history.push()` mechanism to change the URL of the browser. This will only work if you updated your routes correctly from the previous section.
 
 ```js
 export default class AnimalList extends Component {

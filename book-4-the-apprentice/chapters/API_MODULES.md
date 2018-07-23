@@ -24,7 +24,7 @@ export default Object.create(null, {
             return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
         }
     },
-    all: {
+    getAll: {
         value: function () {
             return fetch(`${remoteURL}/animals`).then(e => e.json())
         }

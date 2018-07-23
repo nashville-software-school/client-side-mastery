@@ -49,7 +49,9 @@ Visit the [create-react-app](https://github.com/facebook/create-react-app/) Gith
 * [The Beginner's Guide to React
 ](https://egghead.io/courses/the-beginner-s-guide-to-react)
 
-## Examples
+## Getting Started with Components
+
+Your instructor will walk through this code with you as you build up your initial React application.
 
 ### Single Component
 
@@ -78,7 +80,7 @@ ReactDOM.render(<Kennel />, document.querySelector("#root"));
 
 After the information about the company, I want to list all of the employees. I **could** just hard code them right inside my kennel component, but as a good developer, I try to adhere to the *Single Responsibility Principle* whenever I can.
 
-Therefore, I'm going to create another component for displaying employees.
+Therefore, I'm going to create another component for displaying employees. Just copy pasta this code into `index.js` right below the **`Kennel`** class.
 
 ```js
 class EmployeeList extends Component {
@@ -96,7 +98,9 @@ class EmployeeList extends Component {
 }
 ```
 
-Then I can include that component as a child of the **`Kennel`** component.
+Then I can include that component as a child of the **`Kennel`** component. Look at the code below and notice that there's a very strange looking HTML element called `<EmployeeList />`. JSX interprets this as a component and will render the class you defined.
+
+Update your **`Kennel`** component to match.
 
 ```js
 class Kennel extends Component {
@@ -106,7 +110,7 @@ class Kennel extends Component {
                 <h3>Student Kennels</h3>
                 <h4>Nashville North Location</h4>
                 <h5>500 Puppy Way</h5>
-                <Employees />
+                <EmployeeList />
             </div>
         );
     }
@@ -119,11 +123,16 @@ class Kennel extends Component {
 
 Before we grow this application any further, we need to separate each component into its own JavaScript file.
 
+1. Inside your `src` directory, create a `components` sub-directory.
+1. Then create a file named `Kennel.js` in that directory.
+1. Remove the `Kennel` class from the `index.js` file.
+1. Paste the following code into `Kennel.js`.
+
 > Kennel.js
 
 ```js
 import React, { Component } from 'react'
-import EmployeeList from "./EmployeeList"  // Import EmployeeList component
+import EmployeeList from "./employee/EmployeeList"  // Import EmployeeList component
 
 
 export default class Kennel extends Component {
@@ -139,6 +148,15 @@ export default class Kennel extends Component {
     }
 }
 ```
+
+Next, create a directory to hold employee components and create an `EmployeeList.js` file in it.
+
+```sh
+mkdir src/components/employee
+touch src/components/employee/EmployeeList.js
+```
+
+Then copy the following code into that file.
 
 > EmployeeList.js
 
@@ -161,6 +179,8 @@ export default class EmployeeList  extends Component {
 }
 ```
 
+Finally, import the **`Kennel`** component into `index.js`.
+
 > index.js
 
 ```js
@@ -174,5 +194,7 @@ ReactDOM.render(<Kennel />, document.querySelector("#root"));
 ## Practice
 
 Right now, the kennel location information is hard-coded inside the **`Kennel`** component. The business wants to expand and open a new location. Your job is to make a new component named **`LocationList`**, and put the name, addresses of each location in that component's JSX.
+
+Create two locations: **Nashville North** with a fictitious address, and **Nashville South** with a fictitious address.
 
 Then put the **`LocationList`** component in the JSX for **`Kennel`**.

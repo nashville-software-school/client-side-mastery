@@ -37,6 +37,10 @@ As you will see below, you are passing the function reference to the child compo
 
 Now add a link in each animal card HTML for the customer to click on to check out their animal. In the code below, there is a new `<a>` element that contains the word *Delete*.
 
+**_Quick tip_:** Notice in the code below that you are importing a png file. Here is the image. Right-click and save this file to your `components/animal` directory.
+
+![dog icon](https://github.com/stevebrownlee/react-step-by-step/raw/master/src/components/animal/DogIcon.png)
+
 > AnimalList.js
 
 ```js

@@ -2,7 +2,7 @@
 
 In this book, you will build be learning how to use all of the concepts and tooling that you have been exposed to in order to build a modern single page application that consumes data from a remote, persistent storage system - also known as APIs.
 
-* Chapter 1 - [React: The Basics](./chapters/REACT_BASICS.md)
+* Chapter 1 - [React: Getting Started with the Basics](./chapters/REACT_BASICS.md)
 * Chapter 2 - [React: State and Props](./chapters/COMPONENT_STATE_PROPS.md)
 * Chapter 3 - [React: Expressing State as HTML](./chapters/REACT_STATE_EXPRESSION.md)
 * Chapter 4 - [React: URL Routing](./chapters/REACT_ROUTING.md)
