@@ -124,7 +124,7 @@ Now it's time to implement conditional rendering. You will start with the employ
 }} />
 ```
 
-1. Modify your route to reflect the code above.
+1. Your current route that handles `/employees`, you need to replace with the above code.
 1. Remove the `credentials` item from local storage.
 1. Visit `http://localhost:3000/employees`
 1. You should be presented with the login screen

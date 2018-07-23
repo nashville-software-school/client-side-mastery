@@ -76,7 +76,7 @@ Since you can't pass the `post()` method from the manager module to a component,
 
 ```js
 addAnimal = animal => AnimalManager.post(animal)
-    .then(() => AnimalManager.all())
+    .then(() => AnimalManager.getAll())
     .then(animals => this.setState({
         animals: animals
     }))
