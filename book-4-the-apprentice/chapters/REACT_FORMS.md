@@ -13,11 +13,15 @@ Update your route with this code.
 
 ```jsx
 <Route exact path="/animals" render={(props) => {
-    return <AnimalList {...props} deleteAnimal={this.deleteAnimal} animals={this.state.animals} />
+    return <AnimalList {...props}
+                       deleteAnimal={this.deleteAnimal}
+                       animals={this.state.animals} />
 }} />
 
 <Route path="/animals/new" render={(props) => {
-    return <AnimalForm {...props} addAnimal={this.addAnimal} employees={this.state.employees} />
+    return <AnimalForm {...props}
+                       addAnimal={this.addAnimal}
+                       employees={this.state.employees} />
 }} />
 ```
 
@@ -31,7 +35,13 @@ export default class AnimalList extends Component {
         return (
             <React.Fragment>
                 <div className="animalButton">
-                    <button type="button" onClick={()=>{this.props.history.push("/animals/new")}} className="btn btn-success">Admit Animal</button>
+                    <button type="button"
+                            className="btn btn-success"
+                            onClick={() => {
+                                this.props.history.push("/animals/new")}
+                            }>
+                        Admit Animal
+                    </button>
                 </div>
                 <section className="animals">
                 {
@@ -97,6 +107,8 @@ There are three, directly corresponding input fields:
 1. `<input id="animalName" ... />`
 1. `<input id="breed" ... />`
 1. `<select id="employee" ...>`
+
+> components/animal/AnimalForm.js
 
 ```js
 import React, { Component } from "react"
