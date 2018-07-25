@@ -63,7 +63,12 @@ componentDidMount() {
 }
 ```
 
-That code used the new `fetch` keyword in JavaScript to query your API, then serialize the response as a JSON object, then take the JSON object and set the state of your component.
+## Component LifeCycle
+
+![component lifecycle](./images/react-component-lifecycle.png)
+
+
+That code above used the new `fetch` keyword in JavaScript to query your API, then serialize the response as a JSON object, then take the JSON object and set the state of your component.
 
 Here's what the final component looks like.
 

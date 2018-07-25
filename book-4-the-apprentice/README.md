@@ -14,6 +14,7 @@ In this book, you will build be learning how to use all of the concepts and tool
 * Chapter 10 - [React: Conditional Routing](./chapters/REACT_CONDITIONAL_RENDERING.md)
 * Chapter 11 - [React: Reusability](./chapters/REACT_REUSABLE_COMPONENTS.md)
 * Chapter 12 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+* Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 > ## Sprint 5: Reactive Nutshell
 

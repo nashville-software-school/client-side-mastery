@@ -9,45 +9,9 @@ You've already learned the vast majority of what React does for you when buildin
 1. Updating the DOM with document fragments and appendChild
 1. Setting the state of a component
 
-## Key Terms
-
-1. **JSX** — Allows us to write HTML like syntax which gets
-transformed to lightweightJavaScript objects.
-
-1. **render** (method) — Describes what the UI will look like for the particular component.
-
-1. **Virtual DOM** — A JavaScript representation of the actual DOM.
-
-1. **state** — The internal data store (object) of a component.
-
-1. **setState** — A helper method used for updating the state of a component and re-rendering the UI
-
-1. **React.Component** — The way in which you create a new component.
-
-1. **ReactDOM.render** — Renders a React component to a DOM node.
-
-1. **constructor** (this.state) - The way in which you establish the initial state of a component.
-
-1. **props** — The data which is passed to the child component from the parent component.
-
-1. **propTypes** — Allows you to control the presence, or types of certain props passed to the child component.
-
-1. **defaultProps** — Allows you to set default props for your component.
-
-## Component LifeCycle
-
-![component lifecycle](./images/react-component-lifecycle.png)
-
 ## Getting Started with create-react-app
 
 Visit the [create-react-app](https://github.com/facebook/create-react-app/) Github repo and follow the instructions for getting yourself set up with a simple React application.
-
-## Resources
-
-* [A Comprehensive Guide to learning React.js in 2018](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
-* [React Tutorial Series](https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
-* [The Beginner's Guide to React
-](https://egghead.io/courses/the-beginner-s-guide-to-react)
 
 ## Getting Started with Components
 
