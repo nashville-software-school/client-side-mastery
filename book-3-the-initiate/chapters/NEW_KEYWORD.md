@@ -87,7 +87,7 @@ The learning objective of this exercise is to create a series of objects with th
 
 ## Practice: Car Garage
 
-The learning objective of this exercise is to create a single object with the `new` operator. It will contain other objects.
+The learning objective of this exercise is to create a single object with the `new` operator.
 
 1. Write a function to be used as a template for creating a Garage object.
 1. The function should take no arguments.
@@ -102,6 +102,8 @@ The learning objective of this exercise is to create a single object with the `n
 ```
 
 ## Practice: Park the Cars
+
+The learning objective of this exercise is to storage object references inside the data structure of another object. You will also practice using the `push` method of an array.
 
 Take your four car variables, and `push()` them into the `storage` array on your instance of Garage.
 
