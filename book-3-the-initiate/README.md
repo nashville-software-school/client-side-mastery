@@ -31,10 +31,11 @@ In this book, you will learn tools, libraries and workflows that modern client s
 
 ## Supplementary Content
 
-* Supplement 1 - [Prototypal Inheritance](./chapters/PROTOTYPAL.md)
-* Supplement 2 - [Using Object.create to Define Actors](./chapters/JS_ACTORS.md)
-* Supplement 3 - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
-* Supplement 4 - [Using Forms in Single Page Applications](./chapters/FORMS_SPA.md)
-* Supplement 5 - [Using vim as Your Text Editor](./chapters/VIM.md)
+* Supplement - [Using `new` to Create Objects](./chapters/NEW_KEYWORD.md)
+* Supplement - [Prototypal Inheritance](./chapters/PROTOTYPAL.md)
+* Supplement - [Using Object.create to Define Actors](./chapters/JS_ACTORS.md)
+* Supplement - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
+* Supplement - [Using Forms in Single Page Applications](./chapters/FORMS_SPA.md)
+* Supplement - [Using vim as Your Text Editor](./chapters/VIM.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 4 - The Apprentice](../book-4-the-apprentice/README.md).
