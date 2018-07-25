@@ -205,14 +205,14 @@ const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "th
 ```
 
 ## More Practice: Spam, Spam, Spam, Spam
+Learning Objective: practice accessing data within an array of objects
 
-You have been tasked with building a list of email addresses for all of our customers, so we can spam them with email about Miffles the Vampire Weiner Dog.
+You have been tasked with building a list of email addresses of all of our customer's contacts so we can spam them with an email about Miffles the Vampire Weiner Dog.
 
 1. Create a new project in `workspace`.
-1. In your JavaScript file, define a variable named `customers`.
-1. Copy the contents of the [customers.json](./data/customers.json) and make that object the value of `customers`.
+1. In your JavaScript file, paste the [customers array](./data/customers.js) that contains the emails we need to retrieve.
 
-From that object extract just the customers' email addresses and store them in a new array. You will need to use methods such as `map()`, `forEach()` and/or `concat()` to accomplish this.
+From that array, extract just the customers' contact email addresses and store them in a new array. (Hint: you may want to use `forEach()` and/or `concat()` or any other array methods you have learned.)
 
 
 ## Challenge: Chaining Methods
