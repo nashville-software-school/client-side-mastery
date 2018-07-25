@@ -19,7 +19,7 @@ import LocationList from "./location/LocationList"
 import "./Kennel.css"
 
 
-export default class Kennel extends Component {
+class Kennel extends Component {
 
     state = {
         employees: [
@@ -43,6 +43,8 @@ export default class Kennel extends Component {
         )
     }
 }
+
+export default Kennel
 ```
 
 > Kennel.css
@@ -68,7 +70,7 @@ Below you can see how we are now using `this.props.employees` because `employees
 import React, { Component } from 'react'
 
 
-export default class EmployeeList extends Component {
+class EmployeeList extends Component {
     render() {
         return (
             <section className="employees">
@@ -83,6 +85,8 @@ export default class EmployeeList extends Component {
         )
     }
 }
+
+export default EmployeeList
 ```
 
 ## Using State in a Component

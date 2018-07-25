@@ -42,7 +42,7 @@ import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 
-export default class NavBar extends Component {
+class NavBar extends Component {
     render() {
         return (
             <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
@@ -61,6 +61,8 @@ export default class NavBar extends Component {
         )
     }
 }
+
+export default NavBar
 ```
 
 Notice the use of the new `<Link/>` component that you get from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
@@ -87,7 +89,7 @@ import LocationList from './location/LocationList'
 import EmployeeList from './employee/EmployeeList'
 
 
-export default class ApplicationViews extends Component {
+class ApplicationViews extends Component {
     state = {
         employees: [
             { id: 1, name: "Jessica Younker" },
@@ -125,6 +127,8 @@ export default class ApplicationViews extends Component {
         )
     }
 }
+
+export default ApplicationViews
 ```
 
 `exact` is needed on the first route, otherwise it will also match the other two routes, and the **`LocationList`** will be the only component rendered, no matter what the URL is.
@@ -149,7 +153,7 @@ import "./Kennel.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 
-export default class Kennel extends Component {
+class Kennel extends Component {
     render() {
         return (
             <React.Fragment>
@@ -159,6 +163,8 @@ export default class Kennel extends Component {
         )
     }
 }
+
+export default Kennel
 ```
 
 Now you can update your `index.js` and its root component must now be `<Router />` which gets imported from the React Router package. In that router, you place the `<KennelCompany />` child component. What this tells React is that *"I will be placing Routes in my KennelCompany component."*

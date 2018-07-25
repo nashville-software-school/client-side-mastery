@@ -116,6 +116,16 @@ export default class ApplicationViews extends Component {
 }
 ```
 
+## Export Default Combined with Definition
+
+You should also note that in this component, the **`ApplicationViews`** component is being exported as soon as it is defined. This is a perfectly acceptable way to do an export in React, especially when there is only one component to export.
+
+```js
+export default class ApplicationViews extends Component {
+```
+
+From this point on in the tutorial, you will see components being exported immediately, instead of after the definition.
+
 ## Resources
 
 * [React App Requests to JSON API](https://www.youtube.com/watch?v=vwWPM7za3Pk&list=PLhScwEnhQ-bmroyHFduwgOZ1KrdDvk_44) video series
