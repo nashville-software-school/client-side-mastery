@@ -189,37 +189,50 @@ Setup the following files.
 </html>
 ```
 
+In the code below...
+
+1. Replace the word `event` in the `addEventListener` method with the appropriate string to handle a click event
+1. Write a function named `handlerFunction` that will remove the `disabled` class on the corresponding `<section id="flight">` and replace it with a class of `enabled`.
+
+Have your developer tools open. When you click the button, the following element...
+
+```html
+<section id="flight" class="power disabled">
+```
+
+Should then look like this.
+
+```html
+<section id="flight" class="power enabled">
+```
+
 > powers.js
 
 ```js
-/*
-    In the following code, replace `event` with the correct string to handle
-    a click event on the button. Then write the function that has instructions
-    for activating the corresponding power. The function should...
-        1. Remove the `disabled` class
-        2. Add the `enabled` class
-
-*/
 document.querySelector("#activate-flight").addEventListener(event, handlerFunction)
-
-/*
-    Now write two more event handlers that activate the other two powers
-    when the corresponding buttons are clicked.
-*/
-
-
-/*
-    Write two more event handlers for activating and deactivating all powers
-    when the corresponding buttons are clicked. You will need to use the
-    `document.querySelectorAll()` method for these.
-*/
 ```
+
+Once you have that working, write two JavaScript statements for handling the click event on the other two buttons. Those event handlers should perform the same step of removing `disabled`, and adding `enabled` on the corresponding `<section>` elements
+
+```js
+document.querySelector("#activate-mindreading").addEventListener()
+document.querySelector("#activate-xray").addEventListener()
+```
+
+Once that is complete, add two more buttons
+
+1. Enable All Powers
+1. Disable All Powers
+
+Write two more event handlers for activating and deactivating **_all_** powers when the corresponding buttons are clicked. You will need to use the `document.querySelectorAll()` method for these.
 
 > **Googling Tip:** [Adding classes to DOM components](http://lmgtfy.com/?q=javascript+add+class+to+DOM+element)
 
 > **Googling Tip:** [Iterating over DOM components identified with querySelectorAll](http://lmgtfy.com/?q=iterating+over+elements+querySelectorAll)
 
-## More Practice
+## Challenge: Drag & Drop
+
+> Challenges will require you to practice your Googling skills. There are a couple technical keywords in the requirements below that you can use to find some information on the Web.
 
 Open this [simple drag & drop JSFiddle project](https://jsfiddle.net/chortlehoort/1oo127p1/) and copy all of the code into a local project in your `workspace` directory.
 
@@ -229,7 +242,7 @@ The user should be able to drag one of the middle cards into either the top box,
 1. The user should only be able to drag one card into either box. Use the `childNodes` property to ensure that, if a card is already in the box, another can't be added.
 1. The user should be able to move a card from the top/bottom box back to the middle.
 
-## Challenge - Dynamic Cards
+## Challenge: Dynamic Cards
 
 ### Setup
 
