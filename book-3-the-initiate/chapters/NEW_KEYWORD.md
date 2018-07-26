@@ -18,7 +18,7 @@ Both of these facets involve creating objects.
 1. Objects for creating DOM elements
     ```js
     const personCard = document.createElement("article")
-    personCard.textContent = `${person.firstName} ${person.lastName} was in cohort ${18}`
+    personCard.textContent = `${person.firstName} ${person.lastName} was in cohort ${person.cohort}`
     personCard.className = "student"
     document.body.appendChild(person)
     ```
@@ -44,7 +44,7 @@ Both of these facets involve creating objects.
     })
     ```
 
-All three of these examples create objects for a specific purpose. In JavaScript, there is yet another way to create objects. You can use the [`new` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new).
+All three of these examples create objects for a specific purpose. In JavaScript, there is yet another way to create objects. You can use the [`new` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new).
 
 ```js
 /*
@@ -103,7 +103,7 @@ The learning objective of this exercise is to create a single object with the `n
 
 ## Practice: Park the Cars
 
-The learning objective of this exercise is to storage object references inside the data structure of another object. You will also practice using the `push` method of an array.
+The learning objective of this exercise is to store object references inside the data structure of another object. You will also practice using the `push` method of an array.
 
 Take your four car variables, and `push()` them into the `storage` array on your instance of Garage.
 
