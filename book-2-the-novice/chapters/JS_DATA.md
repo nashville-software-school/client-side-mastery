@@ -214,7 +214,7 @@ The first step, is to refactor the function to receive an argument specifying th
 In the code below, you will see how to use the `JSON.stringify` method which allows you to take an in-memory object, and convert it to a string representation of the object that can be saved in local storage. This is important, because only strings can be saved in local storage.
 
 ```js
-const saveDatabase = function (databaseObject, localStorageKey) {
+const saveDatabase = function (localStorageKey, databaseObject) {
     /*
         Convert the Object into a string.
     */
