@@ -35,7 +35,7 @@ import { Link } from "react-router-dom"
 // Now defining a named function
 const Employee = props => {
     return (
-        <div className="card" style={{width: `18rem`}}>
+        <div className="card">
             <div className="card-body">
                 <h5 className="card-title">
                     {props.children}
@@ -195,7 +195,7 @@ Add a species property to your animals.
 }
 ```
 
-Very that the `species` property exists on each animal object, and that its value is one of the following. Otherwise, throw an error.
+Verify that the `species` property exists on each animal object, and that its value is one of the following. Otherwise, throw an error.
 
 * Dog
 * Cat
