@@ -101,7 +101,60 @@ I just changed the state of the JavaScript object that is representing Michael T
 1. [Modular Javascript - Prototypal Pattern vs Classical OOP in JS](https://www.youtube.com/watch?v=doXpW5AD60Q)
 1. [Object.create - Object Creation in JavaScript P6 - FunFunFunction #57](https://www.youtube.com/watch?v=CDFN1VatiJA)
 
-## Practice
+## Practice: Represent your Pet
+
+Create an object that represents your pet.
+
+1. Name property with a string value.
+1. Species property with a string value.
+1. Nicknames property with an array value. Array contains strings.
+1. Age property with an integer value
+
+## Practice: Accessing Property Values
+
+Given the following object...
+
+```js
+const beatles = {
+    albums: ["Abbey Road", "Sgt Peppers Lonely Heart's Club Band", "Revolver", "Magical Mystery Tour", "Something New"],
+    history: {
+        formed: 1960,
+        disbanded: 1970
+    },
+    members: [
+        {
+            name: "George Harrison",
+            birth: 1943,
+            death: 2001
+        },
+        {
+            name: "Paul McCartney",
+            birth: 1942,
+            death: null
+        },
+        {
+            name: "John Lennon",
+            birth: 1940,
+            death: 1980
+        },
+        {
+            name: "Ringo Starr",
+            birth: 1940,
+            death: null
+        }
+    ]
+}
+```
+
+Output the following value to the console.
+
+```text
+Paul McCartney was in the Beatles from 1960 to 1970. He was born in 1942. He contributed heavily to the Magical Myster Tour Album.
+```
+
+## Challenge: Political Campaign
+
+> Challenges are optional exercises that you should attempt only if you've completed the practice exercises and understand the concepts.
 
 You have volunteered your time to a local political candidate, Elizabeth Sanger, who wants to become a US representative in Congress for your district. Unfortunately, the team discovered that you're a software developer, so they have begged you to build an application that lets them track volunteers, and store information about Elizabeth and her campaign.
 
@@ -131,9 +184,9 @@ Your job is to define the different objects and arrays, their structure, and the
 1. Mission statement
 1. URL for registering to vote
 
-## Challenge
+## Advanced Challenge
 
-> Challanges are intended to be difficult and the expectation is for you to use your imagination and make some of your own decision about which code should be written.
+> Advanced challanges are intended to be difficult and the expectation is for you to use your imagination, and research skills to make your own decisions about which code should be written.
 
 After you have defined all the objects for representing the data about Elizabeth's campaign, write a corresponding function for each one whose purpose is to change the state of the object. Then use your functions to modify the existing data.
 
@@ -159,10 +212,3 @@ function changePlatform (topic, newPlatformStatement) {
     ...
 }
 ```
-
-## Advanced Challenge
-
-Use `document.createElement()` to build an `<article>` element representing Elizabeth. The `id` property of the element should be her congressional district, and its content should be her platform data. Once the element has been created, insert it into the DOM.
-
-### References
-[https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)

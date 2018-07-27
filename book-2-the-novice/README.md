@@ -15,20 +15,19 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 7 - [Basic HTML Layout with Flexbox](./chapters/FLEXBOX.md)
 * Chapter 8 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
-> ### __Sprint 1__ - Intelligence Report
+> ### __Sprint 1__ - Celebrity Tribute
 
-* Chapter 9 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
-* Chapter 10 - [Scope: For That Minty Fresh Code](./chapters/JS_SCOPE.md)
-* Chapter 11 - [Objects Representing People and Resources](./chapters/JS_OBJECTS.md)
-* Chapter 12 - [Intro to Object.create()](./chapters/JS_OBJECT_CREATE_INTRO.md)
-* Chapter 13 - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
-* Chapter 14 - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
+* Chapter - [Understanding Scope](./chapters/JS_SCOPE.md)
+* Chapter - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
+* Chapter - [JavaScript Objects](./chapters/JS_OBJECTS.md)
+* Chapter - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter - [Collecting User Input](./chapters/JS_OBJECTS.md)
 * Chapter 15 - [Bootstrap](./chapters/BOOTSTRAP.md)
-* **React Lab:** `class` syntax for creating objects
 * Chapter 16 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 17 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 
-> ### __Sprint 2__ - Dynamic Intelligence Report (Bootstrap and AWS)
+> ### __Sprint 2__ - Dynamic Intelligence Report
 
 ## Supplementary Content
 

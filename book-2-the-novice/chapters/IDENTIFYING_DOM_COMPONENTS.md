@@ -6,7 +6,7 @@ The `document.querySelector()` method allows you to identify the first element t
 
 ```html
 <article>
-    <section class="article__section article__header">
+    <section class="article__section article__header smallText">
         Welcome to Nashville Software School
     </section>
 
@@ -23,7 +23,7 @@ The `document.querySelector()` method allows you to identify the first element t
 ```js
 /*
     This code will only return the first section component
-    even though there are three components with the same 
+    even though there are three components with the same
     class
 */
 const sectionEl = document.querySelector(".article__section")
@@ -31,7 +31,14 @@ const sectionEl = document.querySelector(".article__section")
 /*
     This code will only return the third section component
 */
-const sectionEl = document.querySelector(".article__footer")
+const footerEl = document.querySelector(".article__footer")
+
+/*
+    Get reference to the section with the class of `smallText`
+    and remove that class.
+*/
+const smallTextEl = document.querySelector(".smallText")
+smallTextEl.classList.remove("smallText")
 ```
 
 ## Retrieve all Matching Components
@@ -93,5 +100,8 @@ Here's the HTML you saw in the CSS Selectors chapter.
 </body>
 ```
 
-1. Use JavaScript to obtain a reference to the first article header and change its text with `textContent` property to "Welcome the {insert your name here} blog"
-1. Use JavaScript to obtain a reference to **all** `article__header` elements and change their `classList` property value to "`article__header important`".
+1. Use JavaScript to obtain a reference to the first section with the class of `article_header` and change its text with the `textContent` property to "Welcome to the {insert your name here} blog"
+1. Use JavaScript to obtain a reference to **all** `article__header` elements and change their `classList` property value to `article__header important`.
+1. Obtain a reference the element with a class of `dashed` and remove it
+
+> **Google tip:** [Find info about classList](http://lmgtfy.com/?q=mdn+javascript+classlist)

@@ -118,16 +118,11 @@ Write a program that prints the numbers from 1 to 100. But for multiples of five
 
 To determine if a number can be evenly divided by 5 or 7, use the JavaScript [remainder](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder) operator.
 
-For example...
+You can start with this simpler version that outputs even numbers to the console and ignores odd numbers. You need to refactor this code to meet the requirements above.
 
 ```js
-// Only show even numbers
-const numbers = [1,2,3,4,5,6,7]
-
-for (let i = 0; i < numbers.length; i++) {
-    const currentNumber = numbers[i]
-
-    // Take the current number, divide by 2, and check if the remainder is 0
+for (let currentNumber = 1; currentNumber <= 100; currentNumber++) {
+    // Divide the current number by 2, and check if the remainder is 0
     if (currentNumber % 2 === 0) {
         console.log(currentNumber) // Only 2, 4, 6 will appear
     }
@@ -157,9 +152,61 @@ const under = takeNumber("Underdogs")
 console.log(under)  // This should print "2. Underdogs" in the console
 ```
 
-## Practice: Overly Excited
+## Practice: Cookout
 
-## Requirements
+Copy the following objects into your JavaScript file.
+
+```js
+const hamburger = {
+	name: 'Hamburger',
+	type: 'beef',
+	cooked: false,
+}
+const zucchini = {
+	name: 'Zucchini',
+	type: 'vegetable',
+	cooked: false,
+}
+const chickenBreast = {
+	name: 'Chicken Breast',
+	type: 'chicken',
+	cooked: false,
+}
+const corn = {
+	name: 'Corn',
+	type: 'vegetable',
+	cooked: false,
+}
+const steak = {
+	name: 'Steak',
+	type: 'beef',
+	cooked: false,
+}
+
+// An first array containing the objects to be cooked.
+const uncookedFood = [hamburger, zucchini, chickenBreast, corn, steak];
+
+// An empty array that will store the objects after the `grill()` function cooks the food.
+const cookedFood = [];
+```
+
+This exercise does not require you to alter this function. But read it. See if you can follow what it takes in, executes, and returns.
+
+The `grill()` function. Copy this into your JavaScript as well.
+
+```js
+function grill (currentObject) {
+    // Modify the food so that it is cooked
+    currentObject.cooked = true;
+
+    // Put the cooked food into the appropriate array
+    cookedFood.push(currentObject);
+};
+```
+
+Your task is to iterate over the array of `uncookedFood` and invoke the function for each item so that the `cookedFood` array contains all of the items after they are cooked.
+
+## Practice: Overly Excited
 
 For this exercise, you need to create a single JavaScript function named `addExcitement` that will use `console.log()` to print out a sentence to the browser console.
 
@@ -196,7 +243,9 @@ For this exercise, you need to create a single JavaScript function named `addExc
 1. At this point, you will simply see a blank web page because you have no content in the HTML file. Open your developer tools using the *Option+Command+I* keyboard shortcut.
 1. At the top of the developer tools panel, you will see the word *Console*. Click on that word. The `console.log()` statement will output any message into this panel in your developer tools. You can try it out immediately by clicking in the Console panel, and typing `console.log("Hello, world!")`, and then pressing your return key.
 
-## Stacking Words
+## Practice: Stacking Words
+
+> The learning objects of this exercise is to use iteration and string concatenation
 
 Create an `addExcitement` function that should `console.log()` rows of words. It should take an array containing the words of a sentence and output them in the developer console.
 
@@ -255,44 +304,37 @@ function addExcitement (theWordArray) {
 addExcitement(sentence)
 ```
 
-## Adding Conditions to the Loop
+## Practice: Some words are more exciting than others
 
-Then add logic to `addExcitement` that places an exclamation point (!) after every third word. This will require you to do some basic math in JavaScript, and use an `if` statement.
+> The learning objective of this exercise is to use the JavaScript `if` statement inside a loop to do one operation when a certain conditions is true, and a different operation if that condition is false.
 
-Your job is to read the following English statement and write the equivalent in JavaSript code to make it work.
+Add logic to `addExcitement` that places an exclamation point (!) after every third word. Read the following English statement and write the equivalent in JavaSript code to make it work.
 
-> If the current value of the [counter variable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) can be evenly divided by 3 - using the JavaScript [remainder](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder) operator - then add a single exclamation point (!) to the output.
+If the current value of the [counter variable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) can be evenly divided by 3 (_using the JavaScript [remainder](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder) operator_) add a single exclamation point (!) to the current word in the array.
 
-> **Example output:**
->
-> The
->
-> The walrus
->
-> The walrus danced!
->
-> The walrus danced! through
->
-> The walrus danced! through the
->
-> The walrus danced! through the trees!
->
-> The walrus danced! through the trees! in
->
-> The walrus danced! through the trees! in the
->
-> The walrus danced! through the trees! in the light!
->
-> The walrus danced! through the trees! in the light! of
->
-> The walrus danced! through the trees! in the light! of the
->
-> The walrus danced! through the trees! in the light! of the moon!
-> ...
+```js
+let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-## Even More Excited
+function addExcitement (theWordArray) {
+    let buildMeUp = ""
 
-Add logic in the `addExcitement` function to the increase the number of exclamation points after every third word. The number of exclamation points (!) will be determined by how many times the counter variable can be divided by 3.
+    for (let i = 0; i < theWordArray.length; i++) {
+        /*
+            If the current value of `i` divided by 3 has no
+            remainder, add an exclamation point to the end of
+            the word and then concatenate it to `buildMeUp`.
+
+            Otherwise, just concatenate the word itself.
+         */
+
+
+        // Print buildMeUp to the console
+    }
+
+}
+
+addExcitement(sentence)
+```
 
 > **Example output:**
 >
@@ -300,28 +342,29 @@ Add logic in the `addExcitement` function to the increase the number of exclamat
 >
 > The walrus
 >
-> The walrus danced!
+> The walrus danced
 >
-> The walrus danced! through
+> The walrus danced through!
 >
-> The walrus danced! through the
+> The walrus danced through! the
 >
-> The walrus danced! through the trees!!
+> The walrus danced through! the trees
 >
-> The walrus danced! through the trees!! in
+> The walrus danced through! the trees in!
 >
-> The walrus danced! through the trees!! in the
+> The walrus danced through! the trees in! the
 >
-> The walrus danced! through the trees!! in the light!!!
+> The walrus danced through! the trees in! the light
 >
-> The walrus danced! through the trees!! in the light!!! of
+> The walrus danced through! the trees in! the light of!
 >
-> The walrus danced! through the trees!! in the light!!! of the
+> The walrus danced through! the trees in! the light of! the
 >
-> The walrus danced! through the trees!! in the light!!! of the moon!!!!
-> ...
+> The walrus danced through! the trees in! the light of! the moon
 
-## Function Arguments
+## Practice: Function Arguments
+
+> The learning objective of this exercise is to practice defining and using function arguments.
 
 Add a new argument to the function so that a developer can specify which character should be displayed instead of it always being an exclamation point.
 
@@ -336,89 +379,20 @@ addExcitement(sentence, "?");
 >
 > The walrus
 >
-> The walrus danced?
+> The walrus danced
 >
-> The walrus danced? through
+> The walrus danced through?
 >
-> The walrus danced? through the
+> The walrus danced through? the
 >
-> The walrus danced? through the trees??
+> The walrus danced through? the trees
+>
+> The walrus danced through? the trees in?
 >
 > etc..
 
-## Another Sentence
+## Challenge: Arrow Functions
 
-Now you should define another variable that will hold an array of different words than your existing sentence. Perhaps name the variable `betterSentence`, or `nextSentence`.
+> Challenges are optional exercises that you can work once you've completed all the practice exercises and understand the concepts in them.
 
-Invoke your function for a second time, passing in the new sentence variable and a different special character.
-
-```js
-// Example
-addExcitement(nextSentence, "&");
-```
-
-# Challenge: Arrow Functions
-
-Watch the video about arrow functions, and see if you can rewrite `addExcitement` using that syntax.
-
-```js
-// Complete this arrow function template to make your
-// function work with it.
-let addExcitement = () => { };
-```
-
-
-# Practice: Cookout
-
-Copy the following objects into your JavaScript file.
-
-```js
-const hamburger = {
-	name: 'Hamburger',
-	type: 'beef',
-	cooked: false,
-}
-const zucchini = {
-	name: 'Zucchini',
-	type: 'vegetable',
-	cooked: false,
-}
-const chickenBreast = {
-	name: 'Chicken Breast',
-	type: 'chicken',
-	cooked: false,
-}
-const corn = {
-	name: 'Corn',
-	type: 'vegetable',
-	cooked: false,
-}
-const steak = {
-	name: 'Steak',
-	type: 'beef',
-	cooked: false,
-}
-
-// An first array containing the objects to be cooked.
-const uncookedFood = [hamburger, zucchini, chickenBreast, corn, steak];
-
-// An empty array that will store the objects after the `grill()` function cooks the food.
-const cookedFood = [];
-```
-
-This exercise does not require you to alter this function. But read it. See if you can follow what it takes in, executes, and returns.
-
-The `grill()` function. Copy this into your JavaScript as well.
-
-```js
-const grill = currentObject => {
-	// Modify the food so that it is cooked
-	currentObject.cooked = true;
-
-	// Put the cooked food into the appropriate array
-	cookedFood.push(currentObject);
-};
-```
-
-Your task is to iterate over the array of `uncookedFood` and invoke the function for each item so that the `cookedFood` array contains all of the items after they are cooked.
-
+Watch the video (_see above_) about arrow functions, and see if you can rewrite `addExcitement` using that syntax.
