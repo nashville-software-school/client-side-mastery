@@ -13,25 +13,11 @@ First, we'll define a module that represents a car factory that has the unique a
 /*
     Author: Steve Brownlee
     Name: carFactory.js
-    Purpose: Produces a new car from a factory, using a generator
-             for unique id values.
+    Purpose: Produces a new car from a factory
 */
-const idGenerator = function* (startFrom = 0) {
-    let newId = 1
-
-    while (true) {
-        yield startFrom + newId
-        newId++
-    }
-}
-
-const uuidMaker = idGenerator()
 
 const carFactory = (make, model) => {
     const newCar = Object.create(null, {
-        "id": {
-            value: uuidMaker.next().value
-        },
         "make": {
             value: make,
             enumerable: true
@@ -86,8 +72,8 @@ const garageSupervisor = Object.create(null, {
         }
     },
     "retrieve": {
-        value: function (carId) {
-            return garage.find(car => car.id === carId)
+        value: function (carToFind) {
+            return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
         }
     },
     "inventory": {
