@@ -230,6 +230,10 @@ Write two more event handlers for activating and deactivating **_all_** powers w
 > **Googling Tip:** [Iterating over DOM components identified with querySelectorAll](http://lmgtfy.com/?q=iterating+over+elements+querySelectorAll)
 
 
+### One Step Further
+You may notice that your code to enable individual powers (not all at once) is very similar. To keep your code DRY, make one function that will handle activating a power depending on which button is clicked. (Hint: one way to get started is to use `event.target.id.split("-")` in your function)
+
+
 ## Challenge: Dynamic Cards
 
 ### Setup
