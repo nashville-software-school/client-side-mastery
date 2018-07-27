@@ -192,9 +192,8 @@ Setup the following files.
 In the code below...
 
 1. Replace the word `event` in the `addEventListener` method with the appropriate string to handle a click event
-1. Write a function named `handlerFunction` that will remove the `disabled` class on the corresponding `<section id="flight">` and replace it with a class of `enabled`.
-
-Have your developer tools open. When you click the button, the following element...
+1. Write a function named `handlerFunction` that will remove the `disabled` class on the corresponding `<section id="flight">` (section, not button) and replace it with a class of `enabled`.
+1. Have your developer tools open. When you click the button, the following element...
 
 ```html
 <section id="flight" class="power disabled">
@@ -230,17 +229,6 @@ Write two more event handlers for activating and deactivating **_all_** powers w
 
 > **Googling Tip:** [Iterating over DOM components identified with querySelectorAll](http://lmgtfy.com/?q=iterating+over+elements+querySelectorAll)
 
-## Challenge: Drag & Drop
-
-> Challenges will require you to practice your Googling skills. There are a couple technical keywords in the requirements below that you can use to find some information on the Web.
-
-Open this [simple drag & drop JSFiddle project](https://jsfiddle.net/chortlehoort/1oo127p1/) and copy all of the code into a local project in your `workspace` directory.
-
-The user should be able to drag one of the middle cards into either the top box, or the bottom box. However, there's a problem with the way the code currently works. There's also a couple changes you need to make.
-
-1. If you drag one of the cards into the top/bottom box, and then drag another card into the first one, you get a nested card. You need to prevent this from happening.
-1. The user should only be able to drag one card into either box. Use the `childNodes` property to ensure that, if a card is already in the box, another can't be added.
-1. The user should be able to move a card from the top/bottom box back to the middle.
 
 ## Challenge: Dynamic Cards
 
@@ -278,3 +266,15 @@ touch cards.css
     </div>
 </article>
 ```
+
+## Challenge: Drag & Drop
+
+> Challenges will require you to practice your Googling skills. There are a couple technical keywords in the requirements below that you can use to find some information on the Web.
+
+Open this [simple drag & drop JSFiddle project](https://jsfiddle.net/chortlehoort/1oo127p1/) and copy all of the code into a local project in your `workspace` directory.
+
+The user should be able to drag one of the middle cards into either the top box, or the bottom box. However, there's a problem with the way the code currently works. There's also a couple changes you need to make.
+
+1. If you drag one of the cards into the top/bottom box, and then drag another card into the first one, you get a nested card. You need to prevent this from happening.
+1. The user should only be able to drag one card into either box. Use the `childNodes` property to ensure that, if a card is already in the box, another can't be added.
+1. The user should be able to move a card from the top/bottom box back to the middle.
