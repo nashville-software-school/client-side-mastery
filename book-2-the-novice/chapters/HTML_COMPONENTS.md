@@ -55,8 +55,6 @@ One of the most important things you can do for yourself, and your teammates, is
 
 Styling components intelligently can be handled through naming your classes according to the component name. One popular convention is the [BEM method](http://getbem.com/introduction/).
 
-* [CSS Tricks - BEM](https://css-tricks.com/bem-101/)
-
 ```html
 <!-- Navigation Bar Component -->
 <nav class="navigation">
@@ -98,6 +96,15 @@ Styling components intelligently can be handled through naming your classes acco
 }
 ```
 
+## Additional Reading
+
+1. [CSS Tricks - BEM](https://css-tricks.com/bem-101/)
+
+## Videos to Watch
+
+1. [Introduction to BEM - A front-end methodology](https://www.youtube.com/watch?v=IO-4Z32O--c)
+1. [020 CSS Architecture Components and BEM](https://www.youtube.com/watch?v=8wX78mtlNyU)
+
 ## Practice
 
 You're going to create an HTML component to represent a political candidate. Specifically, the representative of your Congressional district. Visit the GovTrack site link below, enter in your home address, and you'll find basic information about your representative.
@@ -110,15 +117,3 @@ You're going to create an HTML component to represent a political candidate. Spe
 1. The last component will hold links to any legislation that your representative has enacted.
 
 Make sure you use good BEM-style class names for each element in your components. Put a comment above each component explaining what it is.
-
-## Challenge
-
-With JavaScript, use `document.querySelector()` to obtain a programmatic reference to your DOM `<article>` element that you created. With that reference, update its contents with another sub-component that displays a fictitious mission statement for your representative.
-
-> **Googling Tip**:
->
-> [Adding content to the DOM](http://bfy.tw/GuEx)
-
-## Advanced Challenge
-
-In JavaScript, there is a method that creates a new attribute node for any DOM element. Discover that method and use it to create a custom attribute named `congressional-district` and its value should be your congressional district number. Then attach that attribute to the `<article>` container you made for your representative component.

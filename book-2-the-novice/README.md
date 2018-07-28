@@ -7,27 +7,30 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 ## Chapters
 
 * Chapter 1 - [Command Line Basics](./chapters/CLI_BASICS.md)
+* Chapter 4 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
 * Chapter 2 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
 * Chapter 3 - [How to Research Code](./chapters/MISC_RESEARCH.md)
-* Chapter 4 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
-* Chapter 5 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
+* Chapter 5 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
 * Chapter 6 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
 * Chapter 7 - [Basic HTML Layout with Flexbox](./chapters/FLEXBOX.md)
 * Chapter 8 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 
 > ### __Sprint 1__ - Celebrity Tribute
 
-* Chapter - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
-* Chapter - [Understanding Scope](./chapters/JS_SCOPE.md)
 * Chapter - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
 * Chapter - [JavaScript Objects](./chapters/JS_OBJECTS.md)
+* Chapter - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
+* Chapter - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
 * Chapter - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter - [Fetching External Data](./chapters/FETCH_INTRO.md)
+
+**_Personal Project: Treehouse Profile_**
+
 * Chapter - [Collecting User Input](./chapters/JS_OBJECTS.md)
-* Chapter 15 - [Bootstrap](./chapters/BOOTSTRAP.md)
-* Chapter 16 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
+* Chapter - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 17 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 
-> ### __Sprint 2__ - Dynamic Intelligence Report
+> ### __Sprint 2__ - ??? Using some kind of form for user entry ???
 
 ## Supplementary Content
 
