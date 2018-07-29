@@ -254,6 +254,8 @@ You may notice that your code to enable individual powers (not all at once) is v
 
 ## Challenge: Dynamic Cards
 
+> The learning objective for this challenge is to practice event listeners for click events. You will also practice adding elements to the DOM, and removing elements from the DOM with the `removeChild()` method. You will even need to use the `split()` method on a string.
+
 ### Setup
 
 These commands are a helpful quick start. You may choose to ignore them completely and create your own directory structure. If you choose to use this recommendation, just copy the commands below and paste. It doesn't matter what directory you are currently in.
