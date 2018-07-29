@@ -148,7 +148,21 @@ document.querySelector("body").addEventListener("click", function(event) {
 1. NSS Learning Team video [Basic JavaScript Event Listeners](https://www.youtube.com/watch?v=4XvM096cQF4&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC&index=3)
 1. NSS Learning Team video [JavaScript Event Listener Types](https://www.youtube.com/watch?v=5zlueGaybjc&index=4&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC)
 
-## Practice
+## Practice: Mirror, Mirror in the Code
+
+> The learning objective for this exercise is to listen for the `keyup` event, and update the DOM when it is broadcast.
+
+1. Create an input field in your DOM. Give it an id of `message`.
+1. Create two article elements with unique id values. Use Flexbox to display them in a row, each taking 50% of the width of the browser.
+1. Give each article a different border color.
+1. Write an event listener that listens for the `keyup` event on the input field.
+1. The event handler function should update the `textContent` property of both sections.
+
+![event listener for keyup](./images/oJCxpJ0EeU.gif)
+
+## Practice: Wonder Powers Activate!
+
+> The learning objective of this exercise is writing event listeners to handle button clicks, and modifying the `classList` of DOM elements when those events are broadcast by the browser.
 
 Setup the following files.
 
@@ -189,10 +203,14 @@ Setup the following files.
 </html>
 ```
 
-In the code below...
+> powers.js
 
-1. Replace the word `event` in the `addEventListener` method with the appropriate string to handle a click event
-1. Write a function named `handlerFunction` that will remove the `disabled` class on the corresponding `<section id="flight">` (section, not button) and replace it with a class of `enabled`.
+```js
+document.querySelector("#activate-flight").addEventListener()
+```
+
+1. Add the correct string as the first argument to `addEventListener()`
+1. Write a function named `flightHandlerFunction` that will remove the `disabled` class on the corresponding `<section id="flight">` (section, not button) and replace it with a class of `enabled`.
 1. Have your developer tools open. When you click the button, the following element...
 
 ```html
@@ -205,13 +223,7 @@ Should then look like this.
 <section id="flight" class="power enabled">
 ```
 
-> powers.js
-
-```js
-document.querySelector("#activate-flight").addEventListener(event, handlerFunction)
-```
-
-Once you have that working, write two JavaScript statements for handling the click event on the other two buttons. Those event handlers should perform the same step of removing `disabled`, and adding `enabled` on the corresponding `<section>` elements
+Once you have that working, write two more JavaScript functions, and two more `querySelector().addEventListener()` statements for handling the click event on the other two buttons. Those event handlers should perform the same step of removing `disabled`, and adding `enabled` on the corresponding `<section>` elements
 
 ```js
 document.querySelector("#activate-mindreading").addEventListener()
@@ -229,8 +241,14 @@ Write two more event handlers for activating and deactivating **_all_** powers w
 
 > **Googling Tip:** [Iterating over DOM components identified with querySelectorAll](http://lmgtfy.com/?q=iterating+over+elements+querySelectorAll)
 
+---
 
-### One Step Further
+> Challenges are optional exercises that you should only attempt if you have completed the practice exercises, and fully understand the concepts used in them.
+
+## Challenge: One Function to Rule Them All
+
+> The learning objective of this challenge to write a function handler to be used for multiple events, and uses information in the event argument to perform common logic.
+
 You may notice that your code to enable individual powers (not all at once) is very similar. To keep your code DRY, make one function that will handle activating a power depending on which button is clicked. (Hint: one way to get started is to use `event.target.id.split("-")` in your function)
 
 
