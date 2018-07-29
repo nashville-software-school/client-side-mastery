@@ -401,6 +401,12 @@ When you invoke the `worth()` method, it should look at every transaction and ca
 1. Use `document.createElement` to build & display an HTML component to display the advisor's name, company, and specialty.
 1. Iterate over the advisor's portfolio and use `document.createDocumentFragment` along with `document.createElement` to display some HTML components representing each stock owned by the advisor.
 
+## Challenge: Advisor.toString()
+
+Add a `toString()` method to your financial advisor object that outputs the following message format.
+
+`​​​​​Fernando Valenzuela is an advisor at Gold Heart Investments. Current portfolio value is US$ 13,647.00​​​​​`
+
 ## Advanced Challenge: Calculated Properties
 
 > The learning objective for this challenge is to write a getter and a setter for the `worth` property of the financial advisor. This lets you explore the concept of calculated properties.
@@ -423,3 +429,25 @@ Once those are defined correctly, this code should output the worth of the portf
 // Note the lack of parenthesis after worth. It's a property.
 console.log(FinancialAdvisor.worth)
 ```
+
+## Black Hat Advanced Challenge: Hiring More Advisors
+
+Use the power of prototypal inheritance and `Object.create()` to hire three more financial advisors. All properties and behaviors that are **common to all advisors** should be on the more general prototype for the individual advisors.
+
+1. All advisors will work for the same company
+1. Each advisor maintains their own portfolio
+1. Worth of ech advisor's portfolios will be calculated with the same process
+1. Each advisor specializes in a different sector
+
+Two lines of code to get you started, hacker...
+
+```js
+const KaylaBrewer = Object.create(FinancialAdvisor, {
+    ...
+})
+
+const JeremyBakker = Object.create(FinancialAdvisor, {
+    ...
+})
+```
+
