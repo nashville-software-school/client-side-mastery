@@ -17,17 +17,17 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 > ### __Sprint 1__ - Celebrity Tribute
 
-* Chapter - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
-* Chapter - [JavaScript Objects](./chapters/JS_OBJECTS.md)
-* Chapter - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
-* Chapter - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
-* Chapter - [Data in Software Applications](./chapters/JS_DATA.md)
-* Chapter - [Fetching External Data](./chapters/FETCH_INTRO.md)
+* Chapter 9 - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
+* Chapter 10 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
+* Chapter 11 - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
+* Chapter 12 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
+* Chapter 13 - [Data in Software Applications](./chapters/JS_DATA.md)
+* Chapter 14 - [Fetching Data on the Web](./chapters/FETCH_INTRO.md)
 
 **_Personal Project: Treehouse Profile_**
 
-* Chapter - [Collecting User Input](./chapters/JS_OBJECTS.md)
-* Chapter - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
+* Chapter 15 - [Collecting User Input](./chapters/JS_OBJECTS.md)
+* Chapter 16 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 17 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 
 > ### __Sprint 2__ - ??? Using some kind of form for user entry ???
