@@ -6,13 +6,25 @@ Grunt is a command-line tool that you will be using throughout the course to aut
 
 Visit the [Grunt website](https://gruntjs.com/getting-started) and follow the _Getting Started_ instructions to get it installed.
 
-## Grunt Directory to Contain Tasks
+## Configuring Grunt in your Projects
+
+### Grunt Directory to Contain Tasks
 
 Go to any project directory that you have created so far in class, and use these command to get your directory structure set up, and create the initial files you will be using for automation.
 
 ```sh
 touch Gruntfile.js
 touch .eslintrc
+npm init
+```
+
+When you run `npm init` you will see a prompt. Just keep pressing enter using all of the prompts are gone. This will create a `package.json` file in your directory.
+
+```sh
+npm i load-grunt-config grunt-contrib-watch grunt-eslint grunt grunt-http-server -D
+```
+
+```
 mkdir grunt && cd grunt
 touch aliases.yaml
 touch eslint.js
@@ -88,7 +100,7 @@ module.exports = {
     "dev": {
 
         // the server root directory
-        root: "../src",
+        root: "./",
 
         // the server port
         // can also be written as a function, e.g.
@@ -110,20 +122,28 @@ module.exports = {
         // run in parallel with other tasks
         runInBackground: true,
 
-        // Tell grunt task to open the browser
-        openBrowser : true
+        // Change to true for grunt task to open the
+        // browser automatically
+        openBrowser : false
     }
 }
 ```
 
 ### Keep Grunt Always Running
 
+This next task will keep Grunt running indefinitely. Without the watch task, when you type the `grunt` command, all of the tasks will be performed and the process ends. The next time you want all the tasks to run again, you have to go to your terminal and type `grunt` again. This task is further automation, increasing your productivity as a developer. It just keep running until you intentionally terminate the process.
+
+Once this task is configured, when you run `grunt`, it will continue to listen for changes to any JavaScript file, and then immediately check the syntax.
+
 > grunt/watch.js
 
 ```js
 module.exports = {
     scripts: {
-        files: ["./index.html", "./scripts/**/*.js", "./styles/**/*.css", "!node_modules/**/*.js"],
+        files: [
+            "./scripts/**/*.js",
+            "!node_modules/**/*.js"
+        ],
         tasks: ["eslint"],
         options: {
             spawn: false,
@@ -135,6 +155,8 @@ module.exports = {
 
 ## Loading All Tasks
 
+Your `Gruntfile.js` only needs to require the `load-grunt-config` package, and it will read all of the tasks in the `grunt` directory.
+
 > Gruntfile.js
 
 ```js
@@ -142,4 +164,8 @@ module.exports = function (grunt) {
     require("load-grunt-config")(grunt)
 }
 ```
+
+## Run Grunt
+
+In your terminal, be in the directory that contains your `Gruntfiles.js` and then type in `grunt` and watch it start up. Come see a learning team member if it doesn't start correctly.
 
