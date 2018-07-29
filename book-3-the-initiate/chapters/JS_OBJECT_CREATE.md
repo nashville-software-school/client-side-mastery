@@ -403,6 +403,8 @@ When you invoke the `worth()` method, it should look at every transaction and ca
 
 ## Challenge: Advisor.toString()
 
+> The learning objective of this challenge is to pratice using string templates and interpolation.
+
 Add a `toString()` method to your financial advisor object that outputs the following message format.
 
 `​​​​​Fernando Valenzuela is an advisor at Gold Heart Investments. Current portfolio value is US$ 13,647.00​​​​​`
@@ -438,17 +440,17 @@ Use the power of prototypal inheritance and `Object.create()` to hire three more
 
 1. All advisors will work for the same company
 1. Each advisor maintains their own portfolio
-1. Worth of ech advisor's portfolios will be calculated with the same process
+1. Worth of each advisor's portfolios will be calculated with the same process
 1. Each advisor specializes in a different sector
 
 Two lines of code to get you started, hacker...
 
 ```js
-const KaylaBrewer = Object.create(FinancialAdvisor, {
+const JuliaKimChung = Object.create(FinancialAdvisor, {
     ...
 })
 
-const JeremyBakker = Object.create(FinancialAdvisor, {
+const IkeNwaelele = Object.create(FinancialAdvisor, {
     ...
 })
 ```
