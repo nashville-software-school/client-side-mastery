@@ -123,7 +123,7 @@ let customers = [
     "location": {
       "street": "Race Street",
       "state": "Nebraska",
-      "country": "Syrian Arab Republic",
+      "country": "Republic of Saudi Arabia",
       "city": "Guelph"
     },
     "last_name": "Mitchell",

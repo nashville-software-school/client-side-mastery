@@ -204,8 +204,9 @@ const planetEl = document.getElementById("planets")
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 ```
 
-## More Practice: Spam, Spam, Spam, Spam
-Learning Objective: practice accessing data within an array of objects
+## Practice: Spam, Spam, Spam, Spam
+
+> The learning object for this exercise to it practice accessing data within an array of objects and using `concat()` to join arrays.
 
 You have been tasked with building a list of email addresses of all of our customer's contacts so we can spam them with an email about Miffles the Vampire Weiner Dog.
 
@@ -214,8 +215,29 @@ You have been tasked with building a list of email addresses of all of our custo
 
 From that array, extract just the customers' contact email addresses and store them in a new array. (Hint: you may want to use `forEach()` and/or `concat()` or any other array methods you have learned.)
 
+## Practice: Just the Customers
+
+> The learning objective for this exercise is using the `map()` array method to create a new array from an existing one.
+
+Create a new array from the `customers` array named `customerNames`. It should contain strings of each customer's full name.
+
+`["Johnson Herzog", "Rogelio Stehr", ...]`
+
+## Practice: OPEC Customers
+
+> The learning objective for this exercise is using the `filter()` array method to create a new array from an existing one.
+
+Create a new array from the `customers` array named `opecCustomers`. It should contain objects with the customer's name, and country of residence representing customer from the OPEC countries of Qatar and Saudi Arabia.
+
+`["Johnson Herzog", "Rogelio Stehr", ...]`
+
+---
+
+> Challenges are optional exercises that you should only attempt if you have completed the practice exercises, and fully understand the concepts used in them.
 
 ## Challenge: Chaining Methods
+
+> The learning objective of this challenge is to practice chaining array methods together in a specific sequence to perform multiple transformations on an array of data.
 
 ### Setup
 
