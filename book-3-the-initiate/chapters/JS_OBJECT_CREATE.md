@@ -432,6 +432,8 @@ console.log(FinancialAdvisor.worth)
 
 ## Black Hat Advanced Challenge: Hiring More Advisors
 
+> The learning objective of this black hat advanced challenge is to use prototypal inheritance with `Object.create()` to start understanding how, when you have many objects that share common properties and behaviors, inheritance reduces duplicating code.
+
 Use the power of prototypal inheritance and `Object.create()` to hire three more financial advisors. All properties and behaviors that are **common to all advisors** should be on the more general prototype for the individual advisors.
 
 1. All advisors will work for the same company
