@@ -13,7 +13,6 @@ In this book, you will learn tools, libraries and workflows that modern client s
 Possibly remove chapters 9-11, and interleave those concepts in books 2 and 3
 * Chapter 9 - [Asynchronicity using $.ajax()](./chapters/ASYNC_XHR.md)
 * Chapter 10 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
-* Chapter 11 - [Coordinating Operations with Promises](./chapters/PROMISES.md)
 
 
 * Chapter 13 - [CSS Variables](./chapters/CSS_VARIABLES.md)

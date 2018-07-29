@@ -330,7 +330,41 @@ Here's the output when we use `Object.create()` to make those methods non-enumer
 
 You can view the working code in [JSFiddle](https://jsfiddle.net/chortlehoort/csf4qodj/).
 
-## Practice
+
+## Practice: The toString Version of You
+
+Create an object that represents you. It should have the following properties on it.
+
+1. First name
+1. Last name
+1. Date of birth
+1. Place of birth
+1. Current city of residence
+1. Current state of residence
+
+Only the city and the state of residence should be able to be modified by other code in the application. The other properties should be read only (i.e. non-writable).
+
+Once those are defined, create a method on your object named `toString()`.
+
+```js
+const Me = Object.create(null, {
+    toString: {
+        value: function () {
+            // Your code goes here
+        }
+    }
+})
+```
+
+When you invoke the `toString()` method, the following string should be generated.
+
+```text
+Ollie Osinusi was born in Sacramento, CA. He was born on 10/13/1990. He currently lives in Murfreesboro, TN.
+```
+
+## Practice: Financial Advisor
+
+> The learning objective for this practice exercise is to use different combinations of object property configurations to understand how you can have control over what data can, and cannot, be changed by other code in an application.
 
 Your job is to create an object that represents a financial advisor and has the following properties and methods.
 
@@ -342,28 +376,50 @@ Your job is to create an object that represents a financial advisor and has the 
 1. Purchase (non-enumerable, method) - This method takes a stock ticker symbol, a quantity, and a price as arguments
 1. Sell (non-enumerable, method) - This method takes a stock ticker symbol, a quantity, and a price as arguments
 
-When `sell()` or `purchase()` are invoked, then the stock portfolio should be modified accordingly. Start off with making `portfolio` property an array that holds transactions.
+When `sell()` or `purchase()` are invoked, then the stock portfolio should be modified accordingly. Start off with making `portfolio` property an array that holds transactions. Each transaction should be an object.
 
-When you invoke the `worth()` method, it should look at every transaction and calculate the advisor's net worth.
+```js
+// Example transaction
+{
+    stock: "TWTR",
+    quantity: 100,
+    price: 34.59,
+    buyTransaction: true
+}
+```
 
-## Challenge
+When you invoke the `worth()` method, it should look at every transaction and calculate the advisor's net worth. Each buy transaction should add to the net worth. Each sell transaction should subtract from the net worth.
+
+---
+
+> Challenges are optional exercises that you should only attempt if you have completed the practice exercises, and fully understand the concepts used in them.
+
+## Challenge: Fragments and Elements
+
+> The learning objective for this challenge is to use modern JavaScript methods to create DOM elements.
 
 1. Use `document.createElement` to build & display an HTML component to display the advisor's name, company, and specialty.
 1. Iterate over the advisor's portfolio and use `document.createDocumentFragment` along with `document.createElement` to display some HTML components representing each stock owned by the advisor.
 
-## Advanced Challenge
+## Advanced Challenge: Calculated Properties
 
-Change the `portfolio` property value from an array to an object. Instead of it being a record of transactions, it should only store the advisor's current assets. Each invocation of `sell` or `purchase` should modify the advisor's holdings.
+> The learning objective for this challenge is to write a getter and a setter for the `worth` property of the financial advisor. This lets you explore the concept of calculated properties.
+
+Up to this point, you have used methods (i.e. functions on objects) to perform logic and calculations needed for the object. Properties are simple, primitive values like "John", 100, and `true`. With the power of `Object.create()`, you can still have properties, but their value is calculated via a function rather than being simple assignment and retrieval.
+
+Consider the `worth()` method on your object. Worth itself is not a behavior, or a process, of the financial advisor, but you had to write it as a method because you needed to iterate the portfolio and return the calculated value. You can use [get()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) and [set()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) with `Object.create()` to change `worth` into a property instead.
 
 ```js
-{
-    "AAPL": {
-        "shares": 152,
-        "valuation": 30400
-    },
-    "MSFT": {
-        "shares": 290,
-        "valuation": 49300
-    }
+// You need to define the values of the getter and setter
+worth: {
+    get: ...,
+    set: ...
 }
+```
+
+Once those are defined correctly, this code should output the worth of the portfolio.
+
+```js
+// Note the lack of parenthesis after worth. It's a property.
+console.log(FinancialAdvisor.worth)
 ```
