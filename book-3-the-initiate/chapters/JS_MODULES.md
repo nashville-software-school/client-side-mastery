@@ -8,6 +8,7 @@ Let's look at an example.
 
 First, we'll define a module that represents a car factory that has the unique ability of building a car of any make and model.
 
+> carFactory.js
 
 ```js
 /*
@@ -36,6 +37,8 @@ module.exports = carFactory
 
 In our `main.js`, which is the standard beginning module of an application using Browserify, we can import the car factory.
 
+> main.js
+
 ```js
 /*
     Author: Steve Brownlee
@@ -57,12 +60,16 @@ console.log(garage);
 
 We can take this a step further and make the car garage it's own module.
 
+> garage.js
+
 ```js
 /*
     Author: Steve Brownlee
     Name: garage.js
     Purpose: To store car instances
 */
+
+// This array cannot be modified by any other code in the application
 const garage = []
 
 const garageSupervisor = Object.create(null, {
@@ -76,6 +83,11 @@ const garageSupervisor = Object.create(null, {
             return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
         }
     },
+    /*
+        The inventory property is the only way for external code to
+        read the value of the garage variable. There is no setter
+        either. It is a read only property.
+    */
     "inventory": {
         get: () => garage
     }
@@ -107,15 +119,17 @@ console.log(garage.inventory)
 ## Plugins You Need to Install
 
 1. [grunt-eslint](https://github.com/sindresorhus/grunt-eslint): For verifying your JavaScript against community standards, and checking sytax.
-
-    `npm install grunt-eslint --save-dev`
+    ```
+    npm install grunt-eslint --save-dev
+    ```
 1. [grunt-contrib-uglify](https://www.npmjs.com/package/grunt-contrib-uglify): For minifying your code to make HTTP calls faster.
-
-    `npm install git://github.com/gruntjs/grunt-contrib-uglify.git#harmony --save-dev`
-
+    ```
+    npm install git://github.com/gruntjs/grunt-contrib-uglify.git#harmony --save-dev
+    ```
 1. [grunt-browserify](https://www.npmjs.com/package/grunt-browserify): For compiling your modules into a single application
-
-    `npm install grunt-browserify --save-dev`
+    ```
+    npm install grunt-browserify --save-dev
+    ```
 
 ## Practice: Contact List
 

@@ -7,13 +7,15 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 ## Chapters
 
 * Chapter 1 - [Command Line Basics](./chapters/CLI_BASICS.md)
-* Chapter 4 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
-* Chapter 2 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
-* Chapter 3 - [How to Research Code](./chapters/MISC_RESEARCH.md)
+* Chapter 2 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
+* Chapter 3 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
+* Chapter 4 - [How to Research Code](./chapters/MISC_RESEARCH.md)
 * Chapter 5 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
 * Chapter 6 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
 * Chapter 7 - [Basic HTML Layout with Flexbox](./chapters/FLEXBOX.md)
 * Chapter 8 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+
+**_Class Project: Pull Request Party_**
 
 > ### __Sprint 1__ - Celebrity Tribute
 
@@ -30,7 +32,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 16 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 17 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 
-> ### __Sprint 2__ - ??? Using some kind of form for user entry ???
+> ### __Sprint 2__ - The Modular Component Matrix
 
 ## Supplementary Content
 

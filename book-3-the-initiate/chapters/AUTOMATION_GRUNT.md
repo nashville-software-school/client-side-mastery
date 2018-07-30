@@ -13,8 +13,6 @@ Grunt is a tool to automate tasks that annoy developers. Before automation tools
 
 After the 500th time, in a single day, that you have to switch to your terminal and run all these commands, you start to feel like this.
 
-<img src="./images/nonono.webp" style="max-width:35%">
-
 Since the tooling for a front end developer was getting more complex, automation tools started to emerge so that we could be more productive, and have all these tasks run automatically instead of breaking our code focus constantly.
 
 ## Using Grunt

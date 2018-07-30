@@ -160,6 +160,65 @@ document.querySelector("body").addEventListener("click", function(event) {
 
 ![event listener for keyup](./images/oJCxpJ0EeU.gif)
 
+## Practice: Scrolling and Scaling
+
+> The learning objective for this exercise is to practice listening for the `scroll` event broadcast by the browser, and updating DOM elements in response.
+
+Create the following three files, and copy pasta the code provided.
+
+> index.html
+
+Put the following code into the `<body>` element.
+
+```html
+<article id="container">
+  <section id="audrey">Feed me, Seymour</section>
+</article>
+```
+
+> box.css
+
+```css
+#container {
+  display: flex;
+  min-height: 1500px;
+}
+
+#audrey {
+  background-color: purple;
+  color: snow;
+  min-height: 100px;
+  width: 50px;
+  position: fixed;
+}
+```
+
+> audrey.js
+
+```js
+const audrey = document.getElementById("audrey")
+
+/*
+    Add an event listener to the `document` object to listen
+    for the "scroll" event.
+*/
+.addEventListener("", function () {
+    /*
+        Adjust the width of audrey to be 1/3 the value of
+        `window.scrollY`. No lower than 50px, though.
+    */
+
+
+
+    /*
+        Adjust the height of audrey to be 1/4 the value of
+        `window.scrollY`. No lower than 100px, though.
+    */
+})
+```
+
+![example of how scroll event should look](./images/eBh72rsnv3.gif)
+
 ## Practice: Wonder Powers Activate!
 
 > The learning objective of this exercise is writing event listeners to handle button clicks, and modifying the `classList` of DOM elements when those events are broadcast by the browser.
@@ -291,9 +350,10 @@ touch cards.css
 </article>
 ```
 
+
 ## Challenge: Drag & Drop
 
-> Challenges will require you to practice your Googling skills. There are a couple technical keywords in the requirements below that you can use to find some information on the Web.
+> The learning objective of this challenge is to examine existing code that allows users to drag & drop elements around the screen, and use an `if` condition to prevent the drop from happening when a condition is true. Challenges will require you to practice your Googling skills. There are a couple technical keywords in the requirements below that you can use to find some information on the Web.
 
 Open this [simple drag & drop JSFiddle project](https://jsfiddle.net/chortlehoort/1oo127p1/) and copy all of the code into a local project in your `workspace` directory.
 

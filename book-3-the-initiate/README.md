@@ -3,20 +3,14 @@
 In this book, you will learn tools, libraries and workflows that modern client side developers use.
 
 * Chapter 1 - [Command Line Personalization](./chapters/CLI_PERSONALIZATION.md)
-* Chapter 2 - [Controlling Access on Objects](./chapters/JS_OBJECT_CREATE.md)
+* Chapter 2 - [Advanced Control of Objects](./chapters/JS_OBJECT_CREATE.md)
 * Chapter 3 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
 * Chapter 4 - [Handling Browser Events](./chapters/JS_EVENTS.md)
-* Chapter 5 - [Task Automation with Grunt](./chapters/AUTOMATION_GRUNT.md)
-* Chapter 6 - [JavaScript Modules with Browserify](./chapters/JS_MODULES.md)
-* Chapter 8 - [jQuery](./chapters/JQUERY.md)
-
-Possibly remove chapters 9-11, and interleave those concepts in books 2 and 3
-* Chapter 9 - [Asynchronicity using $.ajax()](./chapters/ASYNC_XHR.md)
-* Chapter 10 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
-
-
-* Chapter 13 - [CSS Variables](./chapters/CSS_VARIABLES.md)
-* Chapter 14 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
+* Chapter - [jQuery](./chapters/JQUERY.md)
+* Chapter - [JavaScript Modules with Browserify](./chapters/JS_MODULES.md)
+* Chapter - [Building and Using an API](./chapters/JSON_SERVER_API.md)
+* Chapter - [CSS Variables](./chapters/CSS_VARIABLES.md)
+* Chapter - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
 
 > ## Sprint 4 - Nutshell
 
@@ -28,7 +22,6 @@ Possibly remove chapters 9-11, and interleave those concepts in books 2 and 3
 * Supplement - [JavaScript Maps](./chapters/JS_MAPS.md)
 * Supplement - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
 * Supplement - [Prototypal Inheritance](./chapters/PROTOTYPAL.md)
-* Supplement - [Using Object.create to Define Actors](./chapters/JS_ACTORS.md)
 * Supplement - [Factory & Generator Functions](./chapters/JS_FACTORY_FUNCTION.md)
 * Supplement - [Using Forms in Single Page Applications](./chapters/FORMS_SPA.md)
 * Supplement - [Using vim as Your Text Editor](./chapters/VIM.md)
