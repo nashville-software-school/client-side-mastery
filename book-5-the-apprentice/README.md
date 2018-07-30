@@ -1,6 +1,6 @@
-# Book 4 - The Apprentice
+# Book 5 - The Apprentice
 
-In this book, you will build be learning how to use all of the concepts and tooling that you have been exposed to in order to build a modern single page application that consumes data from a remote, persistent storage system - also known as APIs.
+In this book, you will be learning the concepts and tools of React. React is a component based UI library for the browser.
 
 * Chapter 1 - [React: Getting Started with the Basics](./chapters/REACT_BASICS.md)
 * Chapter 2 - [React: State and Props](./chapters/COMPONENT_STATE_PROPS.md)

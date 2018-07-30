@@ -19,29 +19,10 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 > ### __Sprint 1__ - Celebrity Tribute
 
-* Chapter 9 - [Querying DOM Components](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
-* Chapter 10 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
-* Chapter 11 - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
-* Chapter 12 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
-* Chapter 13 - [Data in Software Applications](./chapters/JS_DATA.md)
-* Chapter 14 - [Fetching Data on the Web](./chapters/FETCH_INTRO.md)
-
-**_Personal Project: Treehouse Profile_**
-
-* Chapter 15 - [Collecting User Input](./chapters/USER_INPUT.md)
-* Chapter 16 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
-* Chapter 17 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-
-> ### __Sprint 2__ - The Modular Component Matrix
-
 ## Supplementary Content
 
 * Supplement - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)
-* Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
 * Supplement - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
-* Supplement - [Deploy to AWS S3](./chapters/AWS_S3.md)
-* Supplement - [Deploy to AWS EC2](./chapters/AWS_EC2.md)
-* Supplement - [Deploy API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
 
-Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
+Once you are strong on these foundational concepts, you will move along to [Book 3 - The Neophyte](../book-3-the-neophyte/README.md).

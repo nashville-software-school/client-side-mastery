@@ -225,6 +225,19 @@ const audrey = document.getElementById("audrey")
 
 Setup the following files.
 
+> powers.css
+
+```css
+.disabled {
+    background-color: gray;
+}
+
+.enabled {
+    background-color: fuscia;
+    color: goldenrod;
+}
+```
+
 > index.html
 
 ```html
@@ -233,6 +246,7 @@ Setup the following files.
 <head>
   <meta charset="utf-8">
   <title>Nashville Software School</title>
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
