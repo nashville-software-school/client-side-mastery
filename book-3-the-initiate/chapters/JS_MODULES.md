@@ -104,18 +104,51 @@ garage.store(accord)
 console.log(garage.inventory)
 ```
 
-## Plugins You Need to Install
+## Setting Up Your Project
 
-1. [grunt-eslint](https://github.com/sindresorhus/grunt-eslint): For verifying your JavaScript against community standards, and checking sytax.
+1. [npm init](https://docs.npmjs.com/cli/init): This will create your `package.json` file to hold your project's dependencies
 
-    `npm install grunt-eslint --save-dev`
-1. [grunt-contrib-uglify](https://www.npmjs.com/package/grunt-contrib-uglify): For minifying your code to make HTTP calls faster.
+    `npm init`
 
-    `npm install git://github.com/gruntjs/grunt-contrib-uglify.git#harmony --save-dev`
+1. [grunt](https://www.npmjs.com/package/grunt): Grunt is the tack manager we use to automate the process of checking our syntax and combining our JS files into one file, app.js.
+
+    `npm install grunt --save-dev`
+
+1. [grunt-contrib-watch](https://www.npmjs.com/package/grunt-contrib-watch): For watching your files and automatically running a linter against it, and building your app.js file to include the recent changes.
+
+    `npm install grunt-contrib-watch --save-dev`
+
+1. [matchdep](https://www.npmjs.com/package/matchdep): Matchdep matches any npm packages that start with 'grunt-' and requires them in your Gruntfile for use.
+
+    `npm install matchdep --save-dev`
 
 1. [grunt-browserify](https://www.npmjs.com/package/grunt-browserify): For compiling your modules into a single application
 
     `npm install grunt-browserify --save-dev`
+
+1. [grunt-eslint](https://github.com/sindresorhus/grunt-eslint): For verifying your JavaScript against community standards, and checking sytax.
+
+    `npm install grunt-eslint --save-dev`
+
+When using eslint, you will need a `.eslintrc` file in the root of your project. Here is an exmaple eslint file:
+```
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "semi": 0,
+        "quotes": ["error", "double"],
+        "eqeqeq": 2,
+        "no-trailing-spaces": 2
+    }
+}
+```
+
 
 ## Practice: Contact List
 
