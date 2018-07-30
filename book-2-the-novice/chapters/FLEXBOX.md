@@ -6,7 +6,7 @@ Visit [Flexbox Froggy](http://flexboxfroggy.com/) and go through the guided tuto
 
 ## Practice: Coffee Houses of Nashville
 
-> The learning objective for this practice exercise is restructuring the existing HTML, and then using Flexbox to achieve the layout you see below.
+> The learning objective for this practice exercise is to use `display:flex` on two elements, and then add additional CSS properties to achieve a desired layout.
 
 ```html
 <header class="pageHeader">Coffee Houses of Nashville</header>
@@ -28,3 +28,7 @@ Visit [Flexbox Froggy](http://flexboxfroggy.com/) and go through the guided tuto
   <section class="shop">The Horn</section>
 </article>
 ```
+
+From that HTML, use Flexbox to achieve this layout. You don't need to add the border. It's been added so the alignment and spacing is clear.
+
+![flexbox layout](./images/flexbox.png)
