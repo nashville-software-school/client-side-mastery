@@ -28,7 +28,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 **_Personal Project: Treehouse Profile_**
 
-* Chapter 15 - [Collecting User Input](./chapters/JS_OBJECTS.md)
+* Chapter 15 - [Collecting User Input](./chapters/USER_INPUT.md)
 * Chapter 16 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 17 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 
