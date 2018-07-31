@@ -14,6 +14,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 6 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
 * Chapter 7 - [Basic HTML Layout with Flexbox](./chapters/FLEXBOX.md)
 * Chapter 8 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+* Chapter 9 - [Daily Journal - Part 1](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md)
 
 **_Class Project: Pull Request Party_**
 

@@ -10,11 +10,10 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 2 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
 * Chapter 4 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
 * Chapter 5 - [Data in Software Applications](./chapters/JS_DATA.md)
-* Chapter 6 - [Fetching Data on the Web](./chapters/FETCH_INTRO.md)
-
-**_Personal Project: Treehouse Profile_**
-
 * Chapter 8 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
+* Chapter 8 - [Daily Journal - Part 1](./chapters/JS_CREATING_COMPONENTS.md)
+* Chapter 7 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
+* Chapter 6 - [Fetching Data](./chapters/FETCH_INTRO.md)
 * Chapter 9 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 
 > ### __Sprint 2__ - The Modular Component Matrix
