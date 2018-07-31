@@ -7,17 +7,12 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 3 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
 * Chapter 4 - [Handling Browser Events](./chapters/JS_EVENTS.md)
 * Chapter 7 - [Collecting User Input](./chapters/USER_INPUT.md)
-
-**_Personal Project: Daily Journal_**
-
 * Chapter 5 - [jQuery](./chapters/JQUERY.md)
 * Chapter 3 - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
 * Chapter 6 - [JavaScript Modules with Browserify](./chapters/JS_MODULES.md)
 * Chapter 3 - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
 * Chapter 7 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
 * Chapter 3 - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
-
-
 * Chapter 8 - [CSS Variables](./chapters/CSS_VARIABLES.md)
 * Chapter 9 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
 
