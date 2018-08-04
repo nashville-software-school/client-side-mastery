@@ -1,6 +1,13 @@
 # Daily Journal
 
-You have built your form for entering in journal entries, so now you need to define how the data that you will be collecting in the form should be stored.
+You have built your form for entering in journal entries, so now you need to define how the data that you will be collecting in the form should be stored. Your learning objective for this chapter is to build a data structure to represent a journal entry, build a function that returns an HTML representation of that data structure, and render it to the DOM.
+
+## The First Journal Entry Rendered to the DOM
+
+By the end of this chapter - once you have all the functionality written - you will see your journal entry beneath your form.
+
+![](./images/first-journal-entry.png)
+
 
 ## Data Structure for Journal Entries
 
@@ -104,8 +111,3 @@ const renderJournalEntries = (entries) => {
 renderJournalEntries(journalEntries)
 ```
 
-## Your First Journal Entry Rendered to the DOM
-
-Once you have all the functionality written, refresh your browser and you should see your journal entry beneath your form.
-
-![](./images/first-journal-entry.png)

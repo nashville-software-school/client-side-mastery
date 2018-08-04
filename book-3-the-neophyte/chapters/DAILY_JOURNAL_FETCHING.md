@@ -1,6 +1,8 @@
 # Daily Journal
 
-## Setting up JSON Server API
+Your learning objective in this chapter is to set up JSON Server to store the data for your daily journal entries, query that data from the API, and then use your knowledge of Promises (_remember, `fetch` is a fancy Promise_) and `then()` to render the entries to the DOM.
+
+## Setting up a JSON Server API
 
 The [json-server](https://github.com/typicode/json-server) library was written to allow developers to quickly build an API to use as persistant storage while developing applications. You are going to expose your journal entries via an API, request that API over HTTP, and then populate your DOM when the data comes back in a response.
 

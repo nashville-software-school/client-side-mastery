@@ -14,10 +14,11 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 6 - [Daily Journal - Part 2](./chapters/DAILY_JOURNAL_DATA_DOM.md)
 * Chapter 7 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
 * Chapter 8 - [Fetching Data](./chapters/FETCH_INTRO.md)
-* Chapter 9 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-* Chapter 10 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_FETCHING_MODULAR.md)
+* Chapter 9 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_FETCHING.md)
+* Chapter 10 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
+* Chapter 11 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_MODULAR.md)
 
-> ### __Sprint 2__ - The Modular Component Matrix
+> ### __Sprint 2__ - The Modular Component Matrix (_the one where teams end up with many script tags_)
 
 ## Supplementary Content
 
