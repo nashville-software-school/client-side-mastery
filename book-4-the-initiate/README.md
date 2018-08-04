@@ -3,11 +3,13 @@
 In this book, you will learn tools, libraries and workflows that modern client side developers use.
 
 * Chapter 1 - [Command Line Personalization](./chapters/CLI_PERSONALIZATION.md)
+* Chapter 4 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 5 - [Collecting User Input](./chapters/USER_INPUT.md)
+* Chapter 6 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md)
 * Chapter 2 - [Advanced Control of Objects](./chapters/JS_OBJECT_CREATE.md)
 * Chapter 3 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
-* Chapter 4 - [Handling Browser Events](./chapters/JS_EVENTS.md)
-* Chapter 7 - [Collecting User Input](./chapters/USER_INPUT.md)
-* Chapter 5 - [jQuery](./chapters/JQUERY.md)
+* Chapter 6 - [jQuery](./chapters/JQUERY.md)
+* Chapter 6 - [Daily Journal - Part 6](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md)
 * Chapter 3 - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
 * Chapter 6 - [JavaScript Modules with Browserify](./chapters/JS_MODULES.md)
 * Chapter 3 - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
