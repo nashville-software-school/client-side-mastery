@@ -14,20 +14,19 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * Chapter 10 - [React: Conditional Routing](./chapters/REACT_CONDITIONAL_RENDERING.md)
 * Chapter 11 - [React: Reusability](./chapters/REACT_REUSABLE_COMPONENTS.md)
 * Chapter 12 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+
+> ## Sprint 4: Reactive Nutshell
+
+* Chapter 13 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
+* Chapter 14 (_optional_) - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
 * Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
-
-> ## Sprint 5: Reactive Nutshell
-
-* Chapter (_optional_) - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
-* Chapter (_optional_) - [Deploying to Digital Ocean](./chapters/DIGITAL_OCEAN.md)
-* Chapter (_optional_) - [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
 
 > ## **Begin Client Side Capstone Development**
 
 > ## Soft Demo Day Before Break
 
+* Supplement - [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
 * Supplement - [Higher Order Components in React](./chapters/REACT_HOC.md)
-* Supplement - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
 * Supplement - [React Context API](./chapters/REACT_CONTEXT_API.md)
 
 After completing this book, you will be considered apprentice developers, and will be ready to move on to the final three months of the course. Those final months are your apprenticeship, where you will be trained on how to work on a professional software development team.

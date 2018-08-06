@@ -1,21 +1,23 @@
-# Book 3 - The Initiate
+# Book 4 - The Initiate
 
 In this book, you will learn tools, libraries and workflows that modern client side developers use.
 
 * Chapter 1 - [Command Line Personalization](./chapters/CLI_PERSONALIZATION.md)
-* Chapter 4 - [Handling Browser Events](./chapters/JS_EVENTS.md)
-* Chapter 5 - [Collecting User Input](./chapters/USER_INPUT.md)
-* Chapter 6 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md)
-* Chapter 7 - [Advanced Control of Objects](./chapters/JS_OBJECT_CREATE.md)
-* Chapter 8 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
-* Chapter 9 - [jQuery](./chapters/JQUERY.md)
-* Chapter 10 - [Daily Journal - Part 6](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md)
-* Chapter 11 - [Syntax Checking with Grunt](./chapters/GRUNT_INTRO.md)
-* Chapter 12 - [JavaScript Modules with Browserify](./chapters/JS_MODULES.md)
-* Chapter 13 - [CSS Variables](./chapters/CSS_VARIABLES.md)
-* Chapter 14 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
+* Chapter 2 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 3 - [Collecting User Input](./chapters/USER_INPUT.md)
+* Chapter 4 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md)
+* Chapter 5 - [Advanced Control of Objects](./chapters/JS_OBJECT_CREATE.md)
+* Chapter 6 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
+* Chapter 7 - [jQuery](./chapters/JQUERY.md)
+* Chapter 8 - [Daily Journal - Part 6](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md)
+* Chapter 9 - [JavaScript Modules with Browserify](./chapters/JS_MODULES.md)
+* Chapter 10 - [Automated Bundling with Grunt](./chapters/GRUNT_BROWSERIFY.md)
+* Chapter 11 - [Daily Journal - Part 7](./chapters/DAILY_JOURNAL_BROWSERIFY.md)
+* Chapter 12 - [CSS Variables](./chapters/CSS_VARIABLES.md)
+* Chapter 13 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
+* Chapter 14 - [Daily Journal - Part 8](./chapters/DAILY_JOURNAL_TAGGING.md)
 
-> ## Sprint 4 - Nutshell
+> ## Sprint 3 - Nutshell
 
 ## Supplementary Content
 

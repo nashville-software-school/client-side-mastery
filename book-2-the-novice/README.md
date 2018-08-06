@@ -16,8 +16,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 8 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
 * Chapter 9 - [Daily Journal - Part 1](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md)
 
-**_Class Project: Pull Request Party_**
-
 > ### __Sprint 1__ - Celebrity Tribute
 
 ## Supplementary Content
