@@ -7,7 +7,7 @@ Up to this point, you've been using local storage to persist data. However, loca
 1. Deals the signed up for
 1. Notification settings
 
-A database is a separate project that is developed, managed and maintained by a (sometimes different) in a software organization. In this chapter, you are going to use a tool called `json-server` to store your application's data in JSON format on your file system instead of on the browser.
+In this chapter, you are going to use a tool called `json-server` to store your application's data in JSON format on your file system instead of on the browser.
 
 Visit the Github [repo for json-server](https://github.com/typicode/json-server) if you want to learn more details.
 
