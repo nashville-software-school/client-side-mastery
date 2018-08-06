@@ -70,7 +70,9 @@ The jQuery way.
 
 ```js
 $.ajax("http://localhost:8080/songs.json")
-    .then(response => JSON.parse(response))
+    .then(response => {
+        console.log(response)
+    })
 ```
 
 ## Videos
