@@ -42,25 +42,34 @@ Next, pre-populate your API with some of your favorite foods. Each object should
 {
     "food": [
     {
-        "id": "1",
+        "id": 1,
         "name": "Linguine with bolognese",
         "type": "pasta",
-        "ethnicity": "italian",
-        "sideDishes": [ "asparagus", "squash" ]
+        "ethnicity": "italian"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "Massaman curry",
         "type": "curry",
-        "ethnicity": "thai",
-        "sideDishes": [ "tom ka kai", "curry puffs" ]
+        "ethnicity": "thai"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "Green curry",
         "type": "curry",
-        "ethnicity": "thai",
-        "sideDishes": [ "Chicken satee", "Samosa" ]
+        "ethnicity": "thai"
+    },
+    {
+        "id": 4,
+        "name": "Ravioli Funghi",
+        "type": "pasta",
+        "ethnicity": "italian"
+    },
+    {
+        "id": 5,
+        "name": "Tuscan Rustica",
+        "type": "vegetarian",
+        "ethnicity": "italian"
     }
     ]
 }
