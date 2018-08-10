@@ -42,4 +42,4 @@ Search for some example code, and then look at someone's repository to see how t
 
 
 ## Using DevDocs
-Dev Docs is a searchable wiki that pulls in docs from many APIs all over the web.  [Dev Docs] (https://devdocs.io/)
+Dev Docs is a searchable wiki that pulls in docs from many APIs all over the web.  [Dev Docs](https://devdocs.io/)
