@@ -22,7 +22,7 @@ Click the Windows icon and navigate to `Settings -> Update and Security -> For d
 1. Click the Windows Icon and search for `Store` and open the Microsoft Store
 1. In the search bar of the store, search for `Ubuntu`
 1. Click on the `Ubuntu 18.04` icon and click `download`
-   > If you are prompted to sign in, just click "skip"
+
 
 ### Create a Unix Login
 
@@ -46,14 +46,14 @@ If you would like to add some custom themes to your terminal, I would recommend 
    > Note - if for some reason you get an error like "hyper is not a known command" see Troubleshooting portion at the bottom of this document
 
 ### Hyper automatically opens in bash
-1. Open up hyper and type `ctrl + ,`
+1. Open up hyper and type `ctrl` + `,`
 1. Scroll down to the "Shell" setting and add `C:\\Windows\\System32\\bash.exe`
 
 
 ### Installing Zsh
 1. Open hyper (which now should auto start in your linux bash shell) and run `sudo apt-get install zsh`
 1. You will be prompted for your password and begin the install
->note that `sudo` in linux is the "super user. Basically it gives you elevated permission to do things otherwise not allowed. In this case it wants to make sure you are the owner of this device before 3rd party software is installed.
+>note that `sudo` in linux is the "super user". Basically it gives you elevated permission to do things otherwise not allowed. In this case it wants to make sure you are the owner of this device before 3rd party software is installed.
 3. Open your bash config file by typing `nano ~/.bashrc` - this will open up the `.bashrc` file from your linux subsystem inside a text editor built in to the terminal.
 
 1. Copy/paste this code at the top of the file
