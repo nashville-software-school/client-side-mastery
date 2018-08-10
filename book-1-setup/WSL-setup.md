@@ -66,7 +66,7 @@ fi
 This will start zsh up when bash is started (which gets started as soon as you open hyper)
 
 ### Install Oh-My-Zsh
-Oh My Zsh is a wrapper for the zsh shell. Essentially it lest you do more customization for the appearance and allow you to take advantage of some plugins to make life in the terminal much easier.
+Oh My Zsh is a wrapper for the zsh shell. Essentially it lets you do more customization for the appearance and allow you to take advantage of some plugins to make life in the terminal much easier.
 
 1. Open your terminal and type `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 1. Read the [docs](https://github.com/robbyrussell/oh-my-zsh) for info on how to change themes and plugins.
