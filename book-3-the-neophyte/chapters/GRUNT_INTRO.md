@@ -8,33 +8,51 @@ Visit the [Grunt website](https://gruntjs.com/getting-started) and follow the _G
 
 ## Configuring Grunt in your Projects
 
-### Grunt Directory to Contain Tasks
+You are going to create a new project that uses Grunt to automate three things for your when you run int.
 
-Go to any project directory that you have created so far in class, and use these command to get your directory structure set up, and create the initial files you will be using for automation.
+1. Checking your JavaScript syntax and alerting you to any problems
+1. Starting `http-server` for you.
+1. Starting `json-server` for you.
+
+This project will have a sample API using `json-server`.
+
+### Directory Setup
+
+Create a project directory named `grunt-products` anywhere you like under your `workspace` directory. Once you are in the directory in your terminal, follow these command to get your directory structure established.
 
 ```sh
-touch Gruntfile.js
-touch .eslintrc
+mkdir api
+mkdir -p src/lib/grunt
+touch src/.eslintrc
+touch src/lib/Gruntfile.js
+touch src/lib/grunt/aliases.yaml
+touch src/lib/grunt/eslint.js
+touch src/lib/grunt/http-server.js
+touch src/lib/grunt/watch.js
+```
+
+> **Pro tip:** The `-p` flag on the `mkdir` command allows you to create an entire directory structure at once instead of having to `mkdir` and `cd` multiple times.
+
+### Installing 3rd Party Dependencies from npm
+
+Time to install all of the software that is needed for Grunt to automate your tasks for you. First, you need to initialize the `lib` directory as the location of your packages.
+
+```sh
+cd src/lib
 npm init
 ```
 
-When you run `npm init` you will see a prompt. Just keep pressing enter using all of the prompts are gone. This will create a `package.json` file in your directory.
+When you run `npm init` you will see a prompt. Just keep pressing enter using all of the prompts are gone. This will create a `package.json` file in your `lib` directory.
+
+Next, you run this command to install all of the required dependencies. It will install these packages, and _their_ dependencies, in the `src/lib/node_modules` directory.
 
 ```sh
-npm i load-grunt-config grunt-contrib-watch grunt-eslint grunt grunt-http-server -D
-```
-
-```
-mkdir grunt && cd grunt
-touch aliases.yaml
-touch eslint.js
-touch http-server.js
-touch watch.js
+npm i load-grunt-config grunt-contrib-watch grunt-eslint grunt grunt-http-server grunt-bg-shell -D
 ```
 
 ### List of Tasks
 
-This file contains the name of all the automated tasks that you want to run when you type `grunt` in your project directory. You are going to start off with three tasks.
+The `src/lib/grunt/aliases.yaml` file contains the name of all the automated tasks that you want to run when you type `grunt` in your project's `lib` directory. You are going to start off with four tasks.
 
 > grunt/aliases.yaml
 
@@ -42,8 +60,11 @@ This file contains the name of all the automated tasks that you want to run when
 default:
   - "eslint"
   - "http-server"
+  - "bgShell:launchAPI"
   - "watch"
 ```
+
+The description and configuration of each automated task follows below.
 
 ### Syntax Checking with Eslint
 
@@ -125,6 +146,23 @@ module.exports = {
         // Change to true for grunt task to open the
         // browser automatically
         openBrowser : false
+    }
+}
+```
+
+### Launching your JSON Server
+
+Below is an example configuration for launching your API when Grunt starts. In this configuration, the API will be listening on port 8088. It will watch (the `-w` flag) the file `database.json`. Make sure the path is correct when you add yor configuration file. The path is always relative from _the directory in which you typed the **grunt** command_.
+
+Therefore, if your project directory has an `api` directory, and also a `src/lib` directory, and you are in the `lib` directory when you run Grunt, then the relative path below would be needed.
+
+```js
+module.exports = {
+    launchAPI: {
+        cmd: "json-server -p 8088 -w ../../api/database.json"
+    },
+    _defaults: {
+        bg: true
     }
 }
 ```
