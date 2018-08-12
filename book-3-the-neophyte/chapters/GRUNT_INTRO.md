@@ -33,6 +33,8 @@ touch src/lib/grunt/watch.js
 
 > **Pro tip:** The `-p` flag on the `mkdir` command allows you to create an entire directory structure at once instead of having to `mkdir` and `cd` multiple times.
 
+![initial structure](./images/initial-directory-structure.png)
+
 ### Installing 3rd Party Dependencies from npm
 
 Time to install all of the software that is needed for Grunt to automate your tasks for you. First, you need to initialize the `lib` directory as the location of your packages.
@@ -50,11 +52,13 @@ Next, you run this command to install all of the required dependencies. It will 
 npm i load-grunt-config grunt-contrib-watch grunt-eslint grunt grunt-http-server grunt-bg-shell -D
 ```
 
+![](./images/jkB4Pbhad0.gif)
+
 ### List of Tasks
 
 The `src/lib/grunt/aliases.yaml` file contains the name of all the automated tasks that you want to run when you type `grunt` in your project's `lib` directory. You are going to start off with four tasks.
 
-> grunt/aliases.yaml
+> src/lib/grunt/aliases.yaml
 
 ```yaml
 default:
@@ -78,7 +82,7 @@ Go ahead and change that rule's value to 2 if you want to use semi-colons and ha
 
 It is highly recommended that you bookmark the [listing of all Eslint rules](https://eslint.org/docs/rules/) so that as you gain more understanding of JavaScript, and want to have your code validated in more sophisticated ways in the future, you have the rule list handy.
 
-> .eslintrc
+> src/.eslintrc
 
 ```json
 {
@@ -100,7 +104,7 @@ It is highly recommended that you bookmark the [listing of all Eslint rules](htt
 
 This next file is the Grunt configuration specifying which files should be checked for their syntax. This configuration specifies that every file in the `scripts` directory, or any sub-directory, that has a file extension of `.js` should be checked.
 
-> grunt/eslint.js
+> src/lib/grunt/eslint.js
 
 ```js
 module.exports = {
@@ -114,7 +118,7 @@ Rather than having one terminal window open for checking your JavaScript syntax,
 
 This is the beginning of understanding the true power of a task runner like Grunt.
 
-> grunt/http-server.js
+> src/lib/grunt/http-server.js
 
 ```js
 module.exports = {
@@ -154,7 +158,7 @@ module.exports = {
 
 Below is an example configuration for launching your API when Grunt starts. In this configuration, the API will be listening on port 8088. It will watch (the `-w` flag) the file `database.json`. Make sure the path is correct when you add yor configuration file. The path is always relative from _the directory in which you typed the **grunt** command_.
 
-Therefore, if your project directory has an `api` directory, and also a `src/lib` directory, and you are in the `lib` directory when you run Grunt, then the relative path below would be needed.
+> src/lib/grunt/bgShell.js
 
 ```js
 module.exports = {
@@ -173,13 +177,13 @@ This next task will keep Grunt running indefinitely. Without the watch task, whe
 
 Once this task is configured, when you run `grunt`, it will continue to listen for changes to any JavaScript file, and then immediately check the syntax.
 
-> grunt/watch.js
+> src/lib/grunt/watch.js
 
 ```js
 module.exports = {
     scripts: {
         files: [
-            "./scripts/**/*.js",
+            "../scripts/**/*.js",
             "!node_modules/**/*.js"
         ],
         tasks: ["eslint"],
@@ -195,7 +199,7 @@ module.exports = {
 
 Your `Gruntfile.js` only needs to require the `load-grunt-config` package, and it will read all of the tasks in the `grunt` directory.
 
-> Gruntfile.js
+> src/lib/Gruntfile.js
 
 ```js
 module.exports = function (grunt) {
@@ -205,5 +209,5 @@ module.exports = function (grunt) {
 
 ## Run Grunt
 
-In your terminal, be in the directory that contains your `Gruntfiles.js` and then type in `grunt` and watch it start up. Come see a learning team member if it doesn't start correctly.
+In your terminal, be in the directory that contains your `Gruntfile.js` and then type in `grunt` and watch it start up. Come see a learning team member if it doesn't start correctly.
 
