@@ -22,7 +22,28 @@ const sourceComponent = $("#fishgut")
 
 // Get its contents
 console.log(sourceComponent.text())
+```
 
+## Adding to the DOM
+
+The vanilla way
+
+```js
+document.querySelector("#studentInfo").innerHTML = `
+    <div>
+        Michael Tambornino
+    </div>
+`
+```
+
+The jQuery way.
+
+```js
+$("#studentInfo").html(`
+    <div>
+        Michael Tambornino
+    </div>
+`)
 ```
 
 ## Creating Event Handlers
@@ -42,35 +63,9 @@ The jQuery way.
 ```js
 const sourceComponent = $("#fishgut")
 
-sourceComponent.on("click", function (evt) {
+sourceComponent.click(function (evt) {
     console.log(evt.target.id)
 })
-```
-
-## XHRs
-
-The vanilla way.
-
-```js
-const xhr = new XMLHttpRequest()
-
-xhr.listen("load", function () {
-    JSON.parse(this.responseText)
-});
-
-xhr.listen("error", function (tgt, type) {
-    reject(`${type} error raised`)
-});
-
-xhr.open("GET", "http://localhost:8080/songs.json")
-xhr.send()
-```
-
-The jQuery way.
-
-```js
-$.ajax("http://localhost:8080/songs.json")
-    .then(response => JSON.parse(response))
 ```
 
 ## Videos
