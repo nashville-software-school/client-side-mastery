@@ -6,8 +6,12 @@ You've already learned the vast majority of what React does for you when buildin
 
 1. Building components and child components
 1. Modular code with Browserify modules
-1. Updating the DOM with document fragments and appendChild
+1. Updating the DOM with document elements or string templates
 1. Setting the state of a component
+
+## Installing React Developer Tools
+
+You can install the React Developer Tools via the [Chrome Store](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). These tools are another panel the Chrome Developer panel that will help with debugging and inspecting your React applications.
 
 ## Getting Started with create-react-app
 
@@ -38,6 +42,24 @@ class Kennel extends Component {
 }
 
 ReactDOM.render(<Kennel />, document.querySelector("#root"));
+```
+
+The `class` keyword is simply a new way to define an object in JavaScript. Here's how the code would look with what you've learned so far.
+
+```js
+const Kennel = Object.create(Component, {
+    render: {
+        value: () => {
+            return `
+                <div>
+                    <h3>Student Kennels</h3>
+                    <h4>Nashville North Location</h4>
+                    <h5>500 Puppy Way</h5>
+                </div>
+            `
+        }
+    }
+})
 ```
 
 ### Child Component
@@ -157,8 +179,10 @@ ReactDOM.render(<Kennel />, document.querySelector("#root"));
 
 ## Practice
 
-Right now, the kennel location information is hard-coded inside the **`Kennel`** component. The business wants to expand and open a new location. Your job is to make a new component named **`LocationList`**, and put the name, addresses of each location in that component's JSX.
+Right now, the kennel location information is JSX inside the **`Kennel`** component. The business wants to expand and open a new location. Your job is to make a new component named **`LocationList`**, and put the names and addresses of each location in that component's JSX.
 
-Create two locations: **Nashville North** with a fictitious address, and **Nashville South** with a fictitious address.
+This is another example of Single Responsibility Principle. Since we have multiple locations now, we should have a component whose sole responsibility is to render the location information.
+
+Create two locations (you can use separate `section` elements if you like): **Nashville North** with a fictitious address, and **Nashville South** with a fictitious address.
 
 Then put the **`LocationList`** component in the JSX for **`Kennel`**.
