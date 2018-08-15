@@ -10,6 +10,8 @@ State is simply the current values of the properties used to render a component.
 
 You initialize state by defining a `state` at the top of your class definition. Let's take a look at how to implement state for our **`Kennel`** component.
 
+Also note that you're importing a single CSS file directly into this component. No need to worry about `<link>` tags in your HTML any more. All of the styles in the imported CSS should only apply to the JSX elements you are making in this component.
+
 > components/Kennel.js
 
 ```js
@@ -21,17 +23,28 @@ import "./Kennel.css"
 
 class Kennel extends Component {
 
+    /*
+        Although you will eventually be pulling your objects
+        from your json-server API, for this chapter, we're
+        faking it and just creating those arrays in the component
+        itself
+    */
+    employeesFromAPI = [
+        { id: 1, name: "Jessica Younker" },
+        { id: 2, name: "Jordan Nelson" },
+        { id: 3, name: "Zoe LeBlanc" },
+        { id: 4, name: "Blaise Roberts" }
+    ]
+
+    // This will eventually get pulled from the API
+    locationsFromAPI = [
+        { id: 1, name: "Nashville North", address: "500 Circle Way" },
+        { id: 2, name: "Nashville South", address: "10101 Binary Court" }
+    ]
+
     state = {
-        employees: [
-            { id: 1, name: "Jessica Younker" },
-            { id: 2, name: "Jordan Nelson" },
-            { id: 3, name: "Zoe LeBlanc" },
-            { id: 4, name: "Blaise Roberts" }
-        ],
-        locations: [
-            { id: 1, name: "Nashville North" },
-            { id: 2, name: "Nashville South" }
-        ]
+        employees: this.employeesFromAPI,
+        locations: this.locationsFromAPI
     }
 
     render() {
@@ -89,6 +102,41 @@ class EmployeeList extends Component {
 export default EmployeeList
 ```
 
+Here's how the implementation of the component would look in VanillaJs.
+
+```js
+const state = {
+    locations = [
+        {
+            name: "Nashville North",
+            address: "500 Puppy Way"
+        },
+        {
+            name: "Nashville North",
+            address: "576 Puppy Way"
+        }
+    ],
+    employees = [
+        {
+            name: "Meg Ducharme"
+        },
+        {
+            name: "Blaise Roberts"
+        }
+    ]
+}
+
+function printEmployee (employee) {
+    return `<div id={employee.id}>
+                {employee.name}
+            </div>`
+}
+
+state.employees.forEach(employee =>
+    document.querySelector(".employees").innerHTML += printEmployee(employee)
+)
+```
+
 ## Using State in a Component
 
 ![](./images/state.png)
@@ -116,33 +164,20 @@ Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** a
 
 1. Add the following `owners` property to the **`Kennel`** state.
     ```js
+    ownersFromAPI = [
+        { id: 1, name: "Ryan Tanay" },
+        { id: 2, name: "Emma Beaton" },
+        { id: 3, name: "Dani Adkins" },
+        { id: 4, name: "Adam Oswalt" },
+        { id: 5, name: "Fletcher Bangs" },
+        { id: 6, name: "Angela Lee" }
+    ]
+
     state = {
-        owners: [
-            { id: 1, name: "Ryan Tanay" },
-            { id: 2, name: "Emma Beaton" },
-            { id: 3, name: "Dani Adkins" },
-            { id: 4, name: "Adam Oswalt" },
-            { id: 5, name: "Fletcher Bangs" },
-            { id: 6, name: "Angela Lee" }
-        ],
-        employees: [
-            { id: 1, name: "Jessica Younker" },
-            { id: 2, name: "Jordan Nelson" },
-            { id: 3, name: "Zoe LeBlanc" },
-            { id: 4, name: "Blaise Roberts" }
-        ],
-        locations: [
-            { id: 1, name: "Nashville North" },
-            { id: 2, name: "Nashville South" }
-        ],
-        animals: [
-            { id: 1, name: "Doodles" },
-            { id: 2, name: "Jack" },
-            { id: 3, name: "Angus" },
-            { id: 4, name: "Henley" },
-            { id: 5, name: "Derkins" },
-            { id: 6, name: "Checkers" }
-        ]
+        owners: this.ownersFromAPI,
+        employees: this.employeesFromAPI,
+        locations: this.locationsFromAPI,
+        animals: this.animalsFromAPI
     }
     ```
 1. You create the intersection table and assign each animal to an owner.

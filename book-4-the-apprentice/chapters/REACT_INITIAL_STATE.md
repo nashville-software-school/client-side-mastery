@@ -57,9 +57,18 @@ The `componentDidMount()` hook runs after the component output has been rendered
 
 ```js
 componentDidMount() {
-    fetch("http://localhost:5002/db")
-        .then(e => e.json())
-        .then(data => this.setState({ data: data }))
+    const newState = {}
+
+    fetch("http://localhost:5002/animals")
+        .then(r => r.json())
+        .then(animals => newState.animals = animals)
+        .then(() => fetch("http://localhost:5002/employees")
+        .then(r => r.json()))
+        .then(employees => newState.employees = employees)
+        .then(() => fetch("http://localhost:5002/locations")
+        .then(r => r.json()))
+        .then(locations => newState.locations = locations)
+        .then(() => this.setState(newState))
 }
 ```
 
@@ -68,7 +77,7 @@ componentDidMount() {
 ![component lifecycle](./images/react-component-lifecycle.png)
 
 
-That code above used the new `fetch` keyword in JavaScript to query your API, then serialize the response as a JSON object, then take the JSON object and set the state of your component.
+That code above used the `fetch` API in JavaScript to query your API, then serialize the response as a JSON object, then take the JSON object and set the state of your component.
 
 Here's what the final component looks like.
 
@@ -84,17 +93,22 @@ import EmployeeList from './employee/EmployeeList'
 
 export default class ApplicationViews extends Component {
     state = {
-        data: {
-            locations: [],
-            animals: [],
-            employees: []
-        }
+        locations: [],
+        animals: [],
+        employees: [],
+        owners: []
     }
 
     componentDidMount() {
-        fetch("http://localhost:5002/db")
-            .then(e => e.json())
-            .then(data => this.setState({ data: data }))
+        const newState = {}
+
+        fetch("http://localhost:5002/animals")
+            .then(r => r.json())
+            .then(animals => newState.animals = animals)
+            .then(() => fetch("http://localhost:5002/employees")
+            .then(r => r.json()))
+            .then(employees => newState.employees = employees)
+            .then(() => this.setState(newState))
     }
 
 
@@ -102,13 +116,13 @@ export default class ApplicationViews extends Component {
         return (
             <React.Fragment>
                 <Route exact path="/" render={(props) => {
-                    return <LocationList locations={this.state.data.locations} />
+                    return <LocationList locations={this.state.locations} />
                 }} />
                 <Route exact path="/animals" render={(props) => {
-                    return <AnimalList animals={this.state.data.animals} />
+                    return <AnimalList animals={this.state.animals} />
                 }} />
                 <Route exact path="/employees" render={(props) => {
-                    return <EmployeeList employees={this.state.data.employees} />
+                    return <EmployeeList employees={this.state.employees} />
                 }} />
             </React.Fragment>
         )
@@ -133,32 +147,13 @@ From this point on in the tutorial, you will see components being exported immed
 
 ## Practice
 
-In the example code above, you took a very simplistic path to load the data. You queried the **entire database** and just dumped it into state. The chances that you will need to do this professional are near zero. You will pull in only the data that you need, which is often a small subset of the entire database.
-
-Your task is to refactor **`ApplicationViews`** state to not have the intermediary `data` key on it.
+1. Refactor your code to populate the locations and the owners from your API.
+1. Once you have everything rendering, remove the empty arrays you defined in the `state` object so you can see how the React lifecycle works. What happened when you removed them?
 
 ```js
+// Change your state definition to this. Observe what happens.
 state = {
-    data: {
-        locations: [],
-        animals: [],
-        employees: []
-    }
-}
-```
 
-Now refactor the `componentDidMount()` method to make a separate `fetch()` call for each of the collections of data, and then update state when the data comes back.
-
-```js
-componentDidMount () {
-    // Query the employees collection
-    fetch(...).then()
-
-    // Query the locations collection
-    fetch(...).then()
-
-    // Query the animals collection
-    fetch(...).then()
 }
 ```
 
