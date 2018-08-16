@@ -47,20 +47,24 @@ ReactDOM.render(<Kennel />, document.querySelector("#root"));
 The `class` keyword is simply a new way to define an object in JavaScript. Here's how the code would look with what you've learned so far.
 
 ```js
-const Kennel = Object.create(Component, {
-    render: {
-        value: () => {
-            return `
-                <div>
-                    <h3>Student Kennels</h3>
-                    <h4>Nashville North Location</h4>
-                    <h5>500 Puppy Way</h5>
-                </div>
-            `
+const Kennel = () => {
+    return Object.create(Component, {
+        render: {
+            value: () => {
+                return `
+                    <div>
+                        <h3>Student Kennels</h3>
+                        <h4>Nashville North Location</h4>
+                        <h5>500 Puppy Way</h5>
+                    </div>
+                `
+            }
         }
-    }
-})
+    })
+}
 ```
+
+Even though we write `<Kennel>` in React code, you can consider each one of your components as a factory function. It's just a function that returns an object.
 
 ### Child Component
 
