@@ -126,21 +126,18 @@ To make this work, whenever you render your blog, you need to perform certain ca
 ```js
 const totalArticles = BlogFactory.articles.length
 
-for (let i = 0; i < BlogFactory.articles.length; i++) {
-    const currentArticle = BlogFactory.articles[i]
-
+BlogFactory.articles.forEach((currentArticle, index) => {
     const articleHTMLRepresentation = `
         <h1>${currentArticle.title}</h1>
         <div>
-            Post ${i + 1} of ${totalArticles}
+            Post ${index + 1} of ${totalArticles}
         </div>
         <div>
             ${currentArticle.content.substring(0,77)}
         </div>
     `
-
     document.querySelector(".articles").innerHTML += articleHTMLRepresentation
-}
+})
 ```
 
 Again, these aren't major calculations, but we can optimize this process with a Map.
@@ -161,44 +158,35 @@ const Articles = Object.create(null, {
         }
     },
     "condensed": {
-        get: () => ArticleMap.get(this).condensed
-    }
+        get: function () {
+            return ArticleMap.get(this).condensed
+        }
+    },
     "all": {
         value: function () {
-            return $.ajax({
-                method: "GET",
-                url: "https://localhost:5001/articles"
-            }).then(response => {
-                const articles = response.data
-                const totalArticles = Object.keys(articles).length
-                const counter = 1
-
-                const articleArray = Object.keys(articles).map(key => {
-                    const currentArticle = articles[key]
-
-                    const condensedArticle = {
-                        id: key,
+            return fetch("https://localhost:5001/articles")
+                .then(r => r.json())
+                .then(articles => {
+                    // Create a new array of condensed articles
+                    const articleArray = articles.map((article, i) => ({
+                        id: i + 1,
                         blurb: `
-                            <article class="article" id="article!${key}>
-                                <h1>${currentArticle.title}</h1>
+                            <article class="article" id="article!${i + 1}">
+                                <h1>${article.title}</h1>
                                 <div>
-                                    Post ${counter} of ${totalArticles}
+                                    Post ${i + 1} of ${articles.length}
                                 </div>
                                 <div>
-                                    ${currentArticle.content.substring(0,77)}
+                                    ${article.content.substring(0,77)}
                                 </div>
                             </article>
                         `
-                    }
-                    counter++
+                    }))
 
-                    return condensedArticle
-                })
+                    ArticleMap.get(this).condensed = articleArray
+                    document.dispatchEvent(new Event("articles.loaded"))
 
-                ArticleMap.get(this).condensed = articleArray
-                document.dispatchEvent(new Event("articles.loaded"))
-
-                return this.cache
+                    return articles
             })
         }
     }
@@ -211,7 +199,9 @@ const Articles = Object.create(null, {
 const factory = require("articles/factory")
 
 document.addEventListener("articles.loaded", () => {
-    document.querySelector(".articleList").innerHTML = factory.condensed.join(",")
+    const finalHTML = factory.condensed
+                             .reduce((acc, curr) => `${acc}${curr.blurb}`, "")
+    document.querySelector(".articleList").innerHTML = finalHTML
 })
 
 factory.init()
