@@ -149,48 +149,73 @@ Again, these aren't major calculations, but we can optimize this process with a 
 > **File:** scripts/articles/factory.js
 
 ```js
-const ArticleMap = new WeakMap()
+{
+    const ArticleMap = new WeakMap()
 
-const Articles = Object.create(null, {
-    "init": {
-        value: function () {
-            ArticleMap.set(this, {})
-        }
-    },
-    "condensed": {
-        get: function () {
-            return ArticleMap.get(this).condensed
-        }
-    },
-    "all": {
-        value: function () {
-            return fetch("https://localhost:5001/articles")
-                .then(r => r.json())
-                .then(articles => {
-                    // Create a new array of condensed articles
-                    const articleArray = articles.map((article, i) => ({
-                        id: i + 1,
-                        blurb: `
-                            <article class="article" id="article!${i + 1}">
-                                <h1>${article.title}</h1>
-                                <div>
-                                    Post ${i + 1} of ${articles.length}
-                                </div>
-                                <div>
-                                    ${article.content.substring(0,77)}
-                                </div>
-                            </article>
-                        `
-                    }))
+    const Articles = Object.create(null, {
+        "init": {
+            value: function () {
+                ArticleMap.set(this, {})
+            }
+        },
+        "condensed": {
+            get: function () {
+                return ArticleMap.get(this).condensed
+            }
+        },
+        "articles": {
+            get: function () {
+                return ArticleMap.get(this).articles
+            }
+        },
+        "all": {
+            value: function () {
+                return fetch("http://localhost:8088/articles")
+                    .then(r => r.json())
+                    .then(articles => {
+                        // Add raw data to WeakMap
+                        ArticleMap.get(this).articles = articles
 
-                    ArticleMap.get(this).condensed = articleArray
-                    document.dispatchEvent(new Event("articles.loaded"))
+                        // Create a new array of condensed articles
+                        const articleArray = articles.map((article, i) => ({
+                            id: i + 1, // Because otherwise it would start at 0
+                            blurb: `
+                                <article class="article" id="article!${i + 1}">
+                                    <header class="article__header">
+                                        <h1>${article.title}</h1>
+                                    </header>
+                                    <section class="article__content">
+                                        ${article.content.substring(0,77)}${article.content.length > 76 ? "..." : ""}
+                                    </section>
+                                    <footer class="article__footer">
+                                        Post ${i + 1} of ${articles.length}
+                                    </footer>
+                                </article>
+                            `
+                        }))
 
-                    return articles
-            })
+                        // Add condensed articles to WeakMap
+                        ArticleMap.get(this).condensed = articleArray
+
+                        /*
+                            Dispatch an event at the document level alerting any
+                            subscribers that the articles have been loaded
+                        */
+                        document.dispatchEvent(new Event("articles.loaded"))
+                })
+            }
         }
-    }
-})
+    })
+
+    document.addEventListener("articles.loaded", (evt) => {
+        const finalHTML = Articles.condensed
+                                  .reduce((acc, curr) => `${acc}${curr.blurb}`, "")
+        document.querySelector(".articleList").innerHTML = finalHTML
+    })
+
+    Articles.init()
+    Articles.all().then(() => console.log(Articles.articles))
+}
 ```
 
 > **File:** scripts/articles/controller.js
@@ -206,5 +231,4 @@ document.addEventListener("articles.loaded", () => {
 
 factory.init()
 factory.all()
-
 ```
