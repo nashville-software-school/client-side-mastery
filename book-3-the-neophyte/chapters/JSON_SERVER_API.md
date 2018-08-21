@@ -7,7 +7,7 @@ Up to this point, you've been using local storage to persist data. However, loca
 1. Deals the signed up for
 1. Notification settings
 
-A database is a separate project that is developed, managed and maintained by a (sometimes different) in a software organization. In this chapter, you are going to use a tool called `json-server` to store your application's data in JSON format on your file system instead of on the browser.
+In this chapter, you are going to use a tool called `json-server` to store your application's data in JSON format on your file system instead of on the browser.
 
 Visit the Github [repo for json-server](https://github.com/typicode/json-server) if you want to learn more details.
 
@@ -24,22 +24,10 @@ npm install -g json-server
 You are going to create an API that you will use to store and retrieve information your favorite foods.
 
 ```sh
-mkdir -p ~/workspace/javascript/exercises/api-intro
+mkdir -p ~/workspace/javascript/exercises/food-api/api
 cd $_
-touch routes.json database.json
+touch database.json
 ```
-
-Add the following configuration object to `routes.json`.
-
-```json
-{
-    "/api/*": "/$1",
-    "/food/:type": "/food?type=:type",
-    "/food/:ethnicity": "/food?ethnicity=:ethnicity"
-}
-```
-
-That file defines the URLs and query string parameters that you can use to interact with your API (_more on this later_).
 
 Next, pre-populate your API with some of your favorite foods. Each object should have the following keys.
 
@@ -54,25 +42,34 @@ Next, pre-populate your API with some of your favorite foods. Each object should
 {
     "food": [
     {
-        "id": "75771e6d-5a80-420a-82a8-94ecbdd863b2",
+        "id": 1,
         "name": "Linguine with bolognese",
         "type": "pasta",
-        "ethnicity": "italian",
-        "sideDishes": [ "asparagus", "squash" ]
+        "ethnicity": "italian"
     },
     {
-        "id": "18211431-2698-4376-a4a3-77b7c183f208",
+        "id": 2,
         "name": "Massaman curry",
         "type": "curry",
-        "ethnicity": "thai",
-        "sideDishes": [ "tom ka kai", "curry puffs" ]
+        "ethnicity": "thai"
     },
     {
-        "id": "265c6032-8712-425d-b795-aa5416b54118",
+        "id": 3,
         "name": "Green curry",
         "type": "curry",
-        "ethnicity": "thai",
-        "sideDishes": [ "Chicken satee", "Samosa" ]
+        "ethnicity": "thai"
+    },
+    {
+        "id": 4,
+        "name": "Ravioli Funghi",
+        "type": "pasta",
+        "ethnicity": "italian"
+    },
+    {
+        "id": 5,
+        "name": "Tuscan Rustica",
+        "type": "vegetarian",
+        "ethnicity": "italian"
     }
     ]
 }
@@ -80,8 +77,10 @@ Next, pre-populate your API with some of your favorite foods. Each object should
 
 Now that the routes are configured and you have some data, you can start your API with the following command.
 
+**_Make sure you are in the `api` directory of your project._**
+
 ```sh
-json-server -p 8088 -r routes.json -w database.json
+json-server -p 8088 -w database.json
 ```
 
 Go to Chrome and go to the following URL.
@@ -100,65 +99,18 @@ Or curry dishes.
 
 [http://localhost:8088/food?type=curry](http://localhost:8088/food?type=curry)
 
-## AJAX and your API
+## Using Postman for API Queries
 
-### GET
+Postman is a valuable tool for software developers who want to explore any API resources. When you are building your own API for a group project, or when you are building one for a personal project or your capstone, Postman will help you test the API before you starting writing your application code.
 
-```js
-// Query and then display all food
-$.ajax("http://localhost:8088/food").then(allFood => console.log(allFood))
-```
+1. Visit the [Postman apps page](https://www.getpostman.com/apps) and download the application for your OS.
+1. Watch the wonderful [Postman Beginner Tutorial](https://www.youtube.com/playlist?list=PLhW3qG5bs-L-oT0GenwPLcJAPD_SiFK3C) series on YouTube.
 
-### POST
+## Practice
 
-```js
-// Create a food then display the new food
-$.ajax({
-    url: "http://localhost:8088/food",
-    method: "POST",
-    data: {
-        "name": "Red curry",
-        "type": "curry",
-        "ethnicity": "thai",
-        "sideDishes": [
-            "Chicken satee",
-            "Samosa"
-        ]
-    }
-})
-.then(newFood => console.log(newFood))
-```
+Practice using Postman to perform GET, POST, PUT, and DELETE operations on your new food API.
 
-### PUT
-
-```js
-// Update an existing food, then display the modified version
-$.ajax({
-    url: "http://localhost:8088/food/5",
-    method: "PUT",
-    data: {
-        "name": "Yellow curry",
-        "type": "curry",
-        "ethnicity": "thai",
-        "sideDishes": [
-            "Noodles",
-            "Oranges"
-        ]
-    }
-})
-.then(updatedFood => console.log(updatedFood))
-```
-
-### DELETE
-
-```js
-// Delete an existing food
-$.ajax({
-    url: "http://localhost:8088/food/5",
-    method: "DELETE"
-})
-```
-
-## Practice: CRUD App for a Hipster Business
-
-Your instructor will lead you through the process of building a modular application with Browserify that will use your external API to query and manage the data your business.
+1. GET all curry dishes. Use the [filter feature](https://github.com/typicode/json-server#filter).
+1. Use POST to create some of your favorite foods.
+1. Perform a GET operation using the [`q` URL parameter](https://github.com/typicode/json-server#full-text-search) to find any entries that have the pattern of `ol` in them.
+1. [Sort](https://github.com/typicode/json-server#sort) the foods by ethnicity.
