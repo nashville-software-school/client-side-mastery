@@ -113,4 +113,9 @@ Practice using Postman to perform GET, POST, PUT, and DELETE operations on your 
 1. GET all curry dishes. Use the [filter feature](https://github.com/typicode/json-server#filter).
 1. Use POST to create some of your favorite foods.
 1. Perform a GET operation using the [`q` URL parameter](https://github.com/typicode/json-server#full-text-search) to find any entries that have the pattern of `ol` in them.
-1. [Sort](https://github.com/typicode/json-server#sort) the foods by ethnicity.
+1. GET all foods and [sort](https://github.com/typicode/json-server#sort) them by ethnicity.
+1. Delete a food from the API by using the DELETE method, and putting in the URL of a specific resource (e.g. `http://localhost:8008/food/2`)
+
+### How to use Postman to POST
+
+![posting new resource](./images/8jRQXp7hpa.gif)
