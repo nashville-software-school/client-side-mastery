@@ -89,6 +89,20 @@ Go to Chrome and go to the following URL.
 
 You will see a JSON representation of all of your favorite foods.
 
+## API Output
+
+Each request that your browser makes to the API will be output in the terminal. Here's an example of what it looks like, and what everything means.
+
+![json server api output](./images/json-api-output.png)
+
+You see a list of requests above. Each line shows the following information.
+
+1. HTTP Verb _(e.g. GET, POST, DELETE)_
+1. Resource _(e.g. /food/6)_
+1. Status code _(`200` means ok, `201` means something was created)_
+1. Time to complete request in milliseconds
+1. Size of response in bytes
+
 ## Filtering Data
 
 Now filter the food to only show Italian dishes
