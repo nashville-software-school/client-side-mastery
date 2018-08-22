@@ -24,7 +24,7 @@ npm install -g json-server
 You are going to create an API that you will use to store and retrieve information your favorite foods.
 
 ```sh
-mkdir -p ~/workspace/javascript/exercises/api-intro
+mkdir -p ~/workspace/javascript/exercises/food-api/api
 cd $_
 touch database.json
 ```
@@ -77,6 +77,8 @@ Next, pre-populate your API with some of your favorite foods. Each object should
 
 Now that the routes are configured and you have some data, you can start your API with the following command.
 
+**_Make sure you are in the `api` directory of your project._**
+
 ```sh
 json-server -p 8088 -w database.json
 ```
@@ -86,6 +88,20 @@ Go to Chrome and go to the following URL.
 [http://localhost:8088/food](http://localhost:8088/food)
 
 You will see a JSON representation of all of your favorite foods.
+
+## API Output
+
+Each request that your browser makes to the API will be output in the terminal. Here's an example of what it looks like, and what everything means.
+
+![json server api output](./images/json-api-output.png)
+
+You see a list of requests above. Each line shows the following information.
+
+1. HTTP Verb _(e.g. GET, POST, DELETE)_
+1. Resource _(e.g. /food/6)_
+1. Status code _(`200` means ok, `201` means something was created)_
+1. Time to complete request in milliseconds
+1. Size of response in bytes
 
 ## Filtering Data
 
@@ -97,65 +113,23 @@ Or curry dishes.
 
 [http://localhost:8088/food?type=curry](http://localhost:8088/food?type=curry)
 
-## AJAX and your API
+## Using Postman for API Queries
 
-### GET
+Postman is a valuable tool for software developers who want to explore any API resources. When you are building your own API for a group project, or when you are building one for a personal project or your capstone, Postman will help you test the API before you starting writing your application code.
 
-```js
-// Query and then display all food
-$.ajax("http://localhost:8088/food").then(allFood => console.log(allFood))
-```
+1. Visit the [Postman apps page](https://www.getpostman.com/apps) and download the application for your OS.
+1. Watch the wonderful [Postman Beginner Tutorial](https://www.youtube.com/playlist?list=PLhW3qG5bs-L-oT0GenwPLcJAPD_SiFK3C) series on YouTube.
 
-### POST
+## Practice
 
-```js
-// Create a food then display the new food
-$.ajax({
-    url: "http://localhost:8088/food",
-    method: "POST",
-    data: {
-        "name": "Red curry",
-        "type": "curry",
-        "ethnicity": "thai",
-        "sideDishes": [
-            "Chicken satee",
-            "Samosa"
-        ]
-    }
-})
-.then(newFood => console.log(newFood))
-```
+Practice using Postman to perform GET, POST, PUT, and DELETE operations on your new food API.
 
-### PUT
+1. GET all curry dishes. Use the [filter feature](https://github.com/typicode/json-server#filter).
+1. Use POST to create some of your favorite foods.
+1. Perform a GET operation using the [`q` URL parameter](https://github.com/typicode/json-server#full-text-search) to find any entries that have the pattern of `ol` in them.
+1. GET all foods and [sort](https://github.com/typicode/json-server#sort) them by ethnicity.
+1. Delete a food from the API by using the DELETE method, and putting in the URL of a specific resource (e.g. `http://localhost:8008/food/2`)
 
-```js
-// Update an existing food, then display the modified version
-$.ajax({
-    url: "http://localhost:8088/food/5",
-    method: "PUT",
-    data: {
-        "name": "Yellow curry",
-        "type": "curry",
-        "ethnicity": "thai",
-        "sideDishes": [
-            "Noodles",
-            "Oranges"
-        ]
-    }
-})
-.then(updatedFood => console.log(updatedFood))
-```
+### How to use Postman to POST
 
-### DELETE
-
-```js
-// Delete an existing food
-$.ajax({
-    url: "http://localhost:8088/food/5",
-    method: "DELETE"
-})
-```
-
-## Practice: CRUD App for a Hipster Business
-
-Your instructor will lead you through the process of building a modular application with Browserify that will use your external API to query and manage the data your business.
+![posting new resource](./images/8jRQXp7hpa.gif)
