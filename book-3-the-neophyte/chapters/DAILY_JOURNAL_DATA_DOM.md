@@ -29,23 +29,23 @@ Since a journal entry is actual thing that you want to track in JavaScript, you 
 }
 ```
 
-Ok, time to write some JavaScript. First, though, let's be responsible and create directories for our CSS files and JavaScript files so that everything doesn't all live in one directory.
-
-![creating directories for CSS and JavaScript](./images/tX5f0sd0LG.gif)
-
-> **Refactor:** Make sure you update your `<link>` element in `index.html` to reflect the CSS file's new location. Also add the `<script>` tag before the closing `</body>` tag with the right path in the `src` attribute.
-
 ## Making a Journal Entry
 
-Now open `journal.js` and create your first journal entry object.
+1. Create a `journal.js` file in the `src/scripts` directory.
+1. Now open `journal.js` and create your first journal entry object by placing the following code in the file.
 
-![journal entry object](./images/goDz11rC23.gif)
+```js
+const journalEntries = [
+    {
+        date: "07/24/2018",
+        concept: "Array methods",
+        entry: "We learned about 4 different array methods today. forEach made sense, but the others still confuse me.",
+        mood: "Ok"
+    }
+]
+```
 
-## Collection of Entries
-
-Once you get this application working, you will very quickly have more than one journal entry. That means that you must store multiple objects in a collection. In JavaScript, we can use arrays for that. Go ahead and move the object into a new `journalEntries` array.
-
-![journal entries array](./images/LToXYDklHJ.gif)
+Once you get this application working, you will very quickly have more than one journal entry. That means that you must store multiple objects in a collection. In JavaScript, we can use arrays for that.
 
 Your task now is to add just a couple more journal entries to your array. Don't add a large number since you are going to learn very soon how to manage this more dynamically.
 
@@ -56,6 +56,8 @@ The last step in this chapter is to take your raw data structures, and create HT
 ### Journal Entry Component Function
 
 You've worked on exercises during which you wrote functions that returned HTML components. Now write a function that builds a journal entry HTML string template.
+
+> src/scripts/journal.js
 
 ```js
 const journalEntries = [
@@ -85,7 +87,7 @@ const makeJournalEntryComponent = (journalEntry) {
 
 Create a new element in your `index.html` file that will be the container for all of your journal entries. Place it beneath the form component.
 
-> index.html
+> src/index.html
 
 ```html
 <article class="entryLog">
@@ -95,7 +97,7 @@ Create a new element in your `index.html` file that will be the container for al
 
 Now write a function whose reponsibility is to iterate your array of journal entries and add them to the DOM.
 
-> journal.js
+> src/scripts/journal.js
 
 ```js
 /*

@@ -1,5 +1,55 @@
 # Shaping Data with Array Methods
 
+## find
+
+This will be one of the most useful methods for you during the client side course. Imagine the following scenario.
+
+You have an array of objects that represent businesses. Each business name is unique. The `find()` array method will iterate the array until it finds a match, and then return that matched object.
+
+```js
+const businesses = [
+  {
+    "index": 1,
+    "company": "KAGE",
+    "phone": "+1 (971) 427-3003",
+    "address": "888 Kansas Place, Riceville, West Virginia, 3628"
+  },
+  {
+    "index": 2,
+    "company": "DUFLEX",
+    "phone": "+1 (834) 503-3186",
+    "address": "856 Kensington Street, Kieler, Missouri, 1635"
+  },
+  {
+    "index": 3,
+    "company": "UPLINX",
+    "phone": "+1 (921) 443-2136",
+    "address": "255 Duffield Street, Maury, Marshall Islands, 4407"
+  },
+  {
+    "index": 4,
+    "company": "PORTALINE",
+    "phone": "+1 (889) 454-3246",
+    "address": "771 Atlantic Avenue, Waumandee, Indiana, 1297"
+  },
+  {
+    "index": 5,
+    "company": "XUMONK",
+    "phone": "+1 (948) 419-3737",
+    "address": "778 Montague Street, Derwood, North Dakota, 764"
+  }
+]
+
+// Find business by its name
+const targetBusiness = businesses.find(business => business.name === "UPLINX")
+
+// Find business by its id
+const targetBusiness = businesses.find(business => business.id === 2)
+
+// Find business by its state
+const targetBusiness = businesses.find(business => business.address.includes("Missouri"))
+```
+
 ## forEach
 
 This is a straight up replacement for a `for` loop. However, where a `for` loop simply iterates _n_ number of times, the `forEach()` method is an operation on an array.
@@ -204,9 +254,8 @@ const planetEl = document.getElementById("planets")
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 ```
 
-## Practice: Spam, Spam, Spam, Spam
-
-> The learning object for this exercise to it practice accessing data within an array of objects and using `concat()` to join arrays.
+## More Practice: Spam, Spam, Spam, Spam
+Learning Objective: practice accessing data within an array of objects
 
 You have been tasked with building a list of email addresses of all of our customer's contacts so we can spam them with an email about Miffles the Vampire Weiner Dog.
 
@@ -215,29 +264,8 @@ You have been tasked with building a list of email addresses of all of our custo
 
 From that array, extract just the customers' contact email addresses and store them in a new array. (Hint: you may want to use `forEach()` and/or `concat()` or any other array methods you have learned.)
 
-## Practice: Just the Customers
-
-> The learning objective for this exercise is using the `map()` array method to create a new array from an existing one.
-
-Create a new array from the `customers` array named `customerNames`. It should contain strings of each customer's full name.
-
-`["Johnson Herzog", "Rogelio Stehr", ...]`
-
-## Practice: OPEC Customers
-
-> The learning objective for this exercise is using the `filter()` array method to create a new array from an existing one.
-
-Create a new array from the `customers` array named `opecCustomers`. It should contain objects with the customer's name, and country of residence representing customer from the OPEC countries of Qatar and Saudi Arabia.
-
-`["Johnson Herzog", "Rogelio Stehr", ...]`
-
----
-
-> Challenges are optional exercises that you should only attempt if you have completed the practice exercises, and fully understand the concepts used in them.
 
 ## Challenge: Chaining Methods
-
-> The learning objective of this challenge is to practice chaining array methods together in a specific sequence to perform multiple transformations on an array of data.
 
 ### Setup
 

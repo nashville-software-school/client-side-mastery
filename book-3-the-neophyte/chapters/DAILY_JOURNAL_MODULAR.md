@@ -9,7 +9,7 @@ My modularizing your code, you achieve two main goals.
 
 ## Single Responsbility Modules
 
-Create three new files in your `scripts` directory.
+Create three new files in your `src/scripts` directory.
 
 1. `data.js` - Move the code that deals with getting the data into this file.
 1. `entriesDOM.js` - Move the code that is responsible for modifying the DOM into this file.
@@ -17,11 +17,11 @@ Create three new files in your `scripts` directory.
 
 > **Tip:** Once this is done, your `journal.js` file should be completely empty.
 
-Now refactor your `index.html` file to include all four JavaScript files.
+Now refactor your `src/index.html` file to include all four JavaScript files.
 
 ## Refactor
 
-Replace the code in `data.js` with the code below. Since you moved the code to this file, you should consider this file an independent, helper module now. It should not directly execute any logic for the application. The responsbility for how the application should operate should reside in `journal.js` now.
+Replace the code in `src/scripts/data.js` with the code below. Since you moved the code to this file, you should consider this file an independent, helper module now. It should not directly execute any logic for the application. The responsbility for how the application should operate should reside in `src/scripts/journal.js` now.
 
 This code in this module, then, should only define functionality **for** accessing the data, but should not immediately run it.
 
@@ -41,9 +41,9 @@ const API = Object.create(null, {
 
 ### Main Application Logic
 
-Now that you've defined an object whose responsibility is to access the data, you need to write code in `journal.js` to use that object and get the data. Once you know you have the data, pass it along to the `renderJournalEntries` function that now lives in `entriesDom.js`.
+Now that you've defined an object whose responsibility is to access the data, you need to write code in `src/scripts/journal.js` to use that object and get the data. Once you know you have the data, pass it along to the `renderJournalEntries` function that now lives in `src/scripts/entriesDom.js`.
 
-Put this comment in `journal.js`. Then write the main logic that uses the code in the helper modules.
+Put this comment in `src/scripts/journal.js`. Then write the main logic that uses the code in the helper modules.
 
 ```js
 /*
@@ -58,7 +58,7 @@ object.method().then(arrowFunction)
 
 ## Challenge
 
-Change the code in both `entriesDOM.js` and `entryComponent.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above. When you are done, there should be three objects defined in your application.
+Change the code in both `src/scripts/entriesDOM.js` and `src/scripts/entryComponent.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above. When you are done, there should be three objects defined in your application.
 
 1. One object that has a method for API access
 1. One object that has a method for building a component

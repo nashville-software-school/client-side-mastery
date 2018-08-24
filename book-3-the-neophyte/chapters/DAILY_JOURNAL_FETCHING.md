@@ -28,7 +28,7 @@ Create a new directory in your project named `api`, and create a new file in tha
 
 Your next step is to remove the array of entries that you have in `journal.js`, and transplant it to `api/entries.json` as a JSON object.
 
-When working with **Official JSON Objects**, then all keys should be strings.
+When working with **Official JSON Objects**, all keys should be strings so put double quotes around them.
 
 ![](./images/dQFNJpbEfM.gif)
 

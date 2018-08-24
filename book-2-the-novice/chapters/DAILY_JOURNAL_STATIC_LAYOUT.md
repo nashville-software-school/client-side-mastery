@@ -17,11 +17,15 @@ After you have completed the form, place a `button` element beneath it labeled `
 
 ### Project Directory and First Files
 
-Create a new sub-directory in your `workspace` directory named `daily-journal`. In that directory, create an `index.html` file and a `journal.css` file.
+1. Create a new sub-directory in your `workspace` directory named `daily-journal`.
+1. In that directory, create another subdirectory named `src`. This directory is where all of your source code will live.
+1. In the `src` directory, create an `index.html` file.
+1. In the `src` directory, create another sub-directory named `scripts`. This directory will contain all of your JavaScript files in the future.
+1. In the `src` directory, create a `styles` directory and create a `journal.css` file in it.
 
 ![](./images/97RFcUEOLV.gif)
 
-Once those are created, open Visual Studio Code with the `code .` command in the terminal. Once it launches, you are ready to start coding.
+Once those are created, make sure you are in your root directory and open Visual Studio Code with the `code .` command in the terminal. Once it launches, you are ready to start coding.
 
 ### Boilerplate HTML Code
 
