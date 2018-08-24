@@ -182,4 +182,4 @@ Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** a
     ```
 1. You create the intersection table and assign each animal to an owner.
 
-Your task is to update the **`AnimalList`** component to also display the name of the animal's owner. You'll need to pass multiple collections - not just `animals` - to the component in order to accomplish this.
+Your task is to update the **`AnimalList`** component to also display the name of the animal's owner(s). Keep in mind that the animal may have more than one owner. You'll need to pass multiple collections - not just `animals` - to the component in order to accomplish this.
