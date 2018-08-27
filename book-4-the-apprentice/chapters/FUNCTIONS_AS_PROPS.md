@@ -8,7 +8,7 @@ Add the following function to your **`ApplicationViews`** component.
 
 ```js
 deleteAnimal = id => {
-    fetch(`http://localhost:5002/animals/${id}`, {
+    return fetch(`http://localhost:5002/animals/${id}`, {
         method: "DELETE"
     })
     .then(e => e.json())
