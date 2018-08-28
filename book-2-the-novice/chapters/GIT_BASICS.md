@@ -89,7 +89,7 @@ Go to Chrome and enter in your site's URL, e.g. `https://stevebrownlee.github.io
 
 ### Building Your Personal Site
 
-Your instruction will provide you with some initial tickets that you will use to build the first version of your personal website. Make sure you add your lead instructor to the list of collaborator on your Github repository so that the tickets can be copied to your project.
+Your instruction team will provide you with some initial tickets that you will use to build the first version of your personal website. Make sure you add your lead instructor to the list of collaborators on your Github repository so that the tickets can be copied to your project.
 
 Once the issues are copied, add them to your backlog.
 
