@@ -1,5 +1,11 @@
 # AWS S3
 
+## AWS Free Tier account
+
+You will be learning how to use several services provided on the [Amazon Web Services](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) platform. The free tier provides you with one year of all the resources you will need to deploy your finished products to a custom domain name for future employers to see.
+
+## S3
+
 Simple Storage Service (S3) on AWS is a quick and easy way to deploy a simple, static website.
 
 1. Sign in to AWS

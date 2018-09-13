@@ -16,10 +16,6 @@ Up until now, you didn't have the power to destroy your machine, but within the 
 
 Github is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
 
-### AWS Free Tier account
-
-You will be learning how to use several services provided on the [Amazon Web Services](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) platform. The free tier provides you with one year of all the resources you will need to deploy your finished products to a custom domain name for future employers to see.
-
 ### Jobtrack
 
 Create an account at [Jobtrack](https://jobtrack.io/) so that you can keep track of contacts you make throughout the next 6 months. In about 4.5 months, you will also use this to track jobs that you've applied to, and other information about interviews, hiring managers, etc.
@@ -119,18 +115,9 @@ Follow the [Github instructions](https://help.github.com/articles/generating-a-n
 
 Visit the [Git powershell](http://www.git-scm.com/downloads) download page click the "Download for Windows" button, and once complete, install the software. Powershell is a command line utility that allows you to run most Unix command inside a Windows environment. This will help you have the same vernacular as the rest of the class, since having a *nix environment is preferred and is how the class is taught.
 
-### Chocolatey Package Manager
+### Enable the Linux Subsystem for Windows 10
 
-Windows, like OSX, does not have a built in package manager (a fancy term for a piece of software that lets you easily install other software that you need as a developer). There will be times, many weeks into class, as you gain confidence and skill, that you will want to use a package manager. Therefore, if you feel up to the task - meaning, you were able to install all the required software easily - you may want to install Chocolately.
-
-Here's the [official page](https://chocolatey.org/), but it's instructions are written to an audience of existing software developers and may be confusing for a layperson. Here's the basic instructions.
-
-1. Press your Windows key.
-1. Type `cmd` into the search box.
-1. You'll see a black box as the first search result named `cmd`.
-1. Right click that icon and select the "Run as administrator" option. This opens up the _**Windows Command Line**_.
-1. When that starts, copy the following command with Ctrl+C, and once that's done paste it into the command line by right-clicking anywhere in that window.
-  `@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin`
+You will be following the [official tutorial](https://docs.microsoft.com/en-us/windows/wsl/install-win10) for installing the Linux susbsystem. You will likely need to get help from one of the Learning Team members unless you are familiar with working on the command line in Windows.
 
 ### Create SSH key
 
