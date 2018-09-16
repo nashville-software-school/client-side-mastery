@@ -43,7 +43,7 @@ Next, pre-populate your API with some of your favorite foods. Each object should
     "food": [
     {
         "id": 1,
-        "name": "Linguine with bolognese",
+        "name": "Linguine",
         "type": "pasta",
         "ethnicity": "italian"
     },
@@ -67,7 +67,7 @@ Next, pre-populate your API with some of your favorite foods. Each object should
     },
     {
         "id": 5,
-        "name": "Tuscan Rustica",
+        "name": "Tuscan Soup",
         "type": "vegetarian",
         "ethnicity": "italian"
     }

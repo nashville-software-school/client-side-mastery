@@ -24,6 +24,11 @@ sudo npm install -g json-server
 
 Create a new directory in your project named `api`, and create a new file in that directory named `entries.json`.
 
+```sh
+mkdir api
+touch api/entries.json
+```
+
 ![creating the api directory](./images/Rn0iCdc6qN.gif)
 
 Your next step is to remove the array of entries that you have in `journal.js`, and transplant it to `api/entries.json` as a JSON object.
@@ -35,6 +40,11 @@ When working with **Official JSON Objects**, all keys should be strings so put d
 ### Starting the Server
 
 Now you run the `json-server` command with the arguments below in the `api` directory.
+
+```sh
+cd api
+json-server -w entries.json
+```
 
 ![starting json-server](./images/gklBlNixxn.gif)
 

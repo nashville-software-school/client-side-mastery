@@ -31,7 +31,7 @@ Paste the following code into your `foodapi.js` JavaScript file and refresh your
 fetch("http://localhost:8088/food")
     .then(foods => foods.json())
     .then(parsedFoods => {
-        console.table(prasedFoods)
+        console.table(parsedFoods)
     })
 ```
 
@@ -67,8 +67,56 @@ This line of code accepts the response from your request, parses the body of the
 
 ```js
 .then(parsedFoods => {
-    console.table(prasedFoods)
+    console.table(parsedFoods)
 })
 ```
 
 This line of code accepts the parsed JSON as the argument to a function, and then uses `console.table()` to display the results.
+
+## Practice: Displaying Foods
+
+Once you have retrieved all of the foods from your own Food API, display each one of them in the DOM. Create an HTML representation of each food which will display the name of the food, its type, and its ethnicity.
+
+Use Flexbox column direction so that you have a vertical list of items.
+
+## Practice: Fetching Other People's Data
+
+> For this exercise, you will be adding barcodes to your food products, and using another, 3rd-party API to query more information about each product and display it in the DOM.
+
+There is a wonderful, free resource of data about food called the [Open Food Facts](https://world.openfoodfacts.org/). Visit the site and use the search feature to find all foods matching the `name` property of each of the foods in your food API. For example, search for _"Green curry"_ and see the how many matches there are.
+
+Next, click on one of the search results and get the barcode for the product. It's at the top, right beneath the product name.
+
+Create a new `barcode` key for each of the items in your API, and provide the correct barcode value that you found in your search.
+
+```json
+{
+    "id": 4,
+    "name": "Ravioli Funghi",
+    "type": "pasta",
+    "ethnicity": "italian",
+    "barcode": "8021733250892"
+},
+```
+
+Once you have the barcode, you can use the Open Food Facts JSON API to get a plethora of information about that product. For example, the barcode for Jimmy Dean Pork Sausage is `0077900110726`. I can take that barcode and query their API.
+
+```js
+fetch("https://world.openfoodfacts.org/api/v0/product/0011150479547.json")
+    .then(response => response.json())
+    .then(productInfo => {
+        // Use it here
+    })
+```
+
+Go ahead and copy that URL and paste it into a new tab in your browser. You will see a very large JSON document in the response.
+
+![image of JSON document](./images/openfoodapidetails.png)
+
+Your job is to query the Open Food Facts API for each of your products, and list the following additional information.
+
+1. Ingredients
+1. Country of origin
+1. Calories per serving
+1. Fat per serving
+1. Sugar per serving

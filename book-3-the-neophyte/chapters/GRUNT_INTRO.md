@@ -8,7 +8,7 @@ Visit the [Grunt website](https://gruntjs.com/getting-started) and follow the _G
 
 ## Configuring Grunt in your Projects
 
-You are going to create a new project that uses Grunt to automate three things for your when you run int.
+You are going to create a new project that uses Grunt to automate three things for your when you run it.
 
 1. Checking your JavaScript syntax and alerting you to any problems
 1. Starting `http-server` for you.
@@ -18,17 +18,16 @@ This project will have a sample API using `json-server`.
 
 ### Directory Setup
 
-Create a project directory named `grunt-products` anywhere you like under your `workspace` directory. Once you are in the directory in your terminal, follow these command to get your directory structure established.
+Create a project directory named `grunt-products` anywhere you like under your `workspace` directory. Once you are in the directory in your terminal, follow these command to get your directory structure, and base files, established.
 
 ```sh
-mkdir api
-mkdir -p src/lib/grunt
-touch src/.eslintrc
-touch src/lib/Gruntfile.js
-touch src/lib/grunt/aliases.yaml
-touch src/lib/grunt/eslint.js
-touch src/lib/grunt/http-server.js
-touch src/lib/grunt/watch.js
+mkdir -p lib/grunt
+touch .eslintrc
+touch lib/Gruntfile.js
+touch lib/grunt/aliases.yaml
+touch lib/grunt/eslint.js
+touch lib/grunt/http-server.js
+touch lib/grunt/watch.js
 ```
 
 > **Pro tip:** The `-p` flag on the `mkdir` command allows you to create an entire directory structure at once instead of having to `mkdir` and `cd` multiple times.

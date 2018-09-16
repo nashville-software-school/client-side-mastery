@@ -4,7 +4,7 @@ The learning objective for this chapter is to apply your knowledge of event list
 
 ## Saving Entries
 
-![animation of saving new entries and rendering them](./images/image.png)
+![animation of saving new entries and rendering them](./images/first-journal-entry.png)
 
 ## Listen for Submit Button Click
 
