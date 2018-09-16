@@ -66,7 +66,12 @@ export default class AnimalDetail extends Component {
 
 ## Adding the Link for the New Route
 
-Next, modify the **`AnimalList`** component by adding a new `<Link>` element above the hyperlink for deleting.
+Next, modify the **`AnimalList`** component by first importing `<Link>` at the top of the file:
+
+```jsx
+import { Link } from "react-router-dom"
+```
+then adding a new `<Link>` element above the hyperlink for deleting.
 
 ```jsx
 <Link className="nav-link" to={`/animals/${animal.id}`}>Details</Link>
