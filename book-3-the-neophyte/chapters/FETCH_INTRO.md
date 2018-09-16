@@ -77,7 +77,26 @@ This line of code accepts the parsed JSON as the argument to a function, and the
 
 Once you have retrieved all of the foods from your own Food API, display each one of them in the DOM. Create an HTML representation of each food which will display the name of the food, its type, and its ethnicity.
 
-Use Flexbox column direction so that you have a vertical list of items.
+1. Create a DOM element in your `index.html` with a class of `foodList`.
+1. Create a function which returns a string template. The template is the HTML representation for a food item.
+1. Create a function that inserts an HTML representation of a food into the DOM
+
+> Example fetch call using functions
+
+```js
+fetch("http://localhost:8088/food")
+    .then(foods => foods.json())
+    .then(parsedFoods => {
+        parsedFoods.forEach(food => {
+            const foodAsHTML = foodFactory(food)
+            addFoodToDom(foodAsHTML)
+        })
+    })
+```
+
+Use Flexbox row direction so that you have a horizontal list of items.
+
+![food items layout](./images/food-items.png)
 
 ## Practice: Fetching Other People's Data
 
@@ -120,3 +139,7 @@ Your job is to query the Open Food Facts API for each of your products, and list
 1. Calories per serving
 1. Fat per serving
 1. Sugar per serving
+
+> Example with ingredients included
+
+![foods with ingredients included](./images/foods-with-ingredients.png)
