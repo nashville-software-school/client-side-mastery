@@ -106,6 +106,8 @@ There is a wonderful, free resource of data about food called the [Open Food Fac
 
 Next, click on one of the search results and get the barcode for the product. It's at the top, right beneath the product name.
 
+![finding a barcode](./images/IRHRnpTxtF.gif)
+
 Create a new `barcode` key for each of the items in your API, and provide the correct barcode value that you found in your search.
 
 ```json
@@ -140,6 +142,8 @@ Your job is to query the Open Food Facts API for each of your products, and list
 1. Fat per serving
 1. Sugar per serving
 
-> Example with ingredients included
+> **Helpful hints:** You will need to use the `forEach` array method to iterate your foods. Inside that `forEach`, you will need to perform another `fetch` to get the additional information. The barcode value must be interpolated inside the URL for the inner fetch.
+
+#### Example with ingredients included
 
 ![foods with ingredients included](./images/foods-with-ingredients.png)

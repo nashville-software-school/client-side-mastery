@@ -18,17 +18,23 @@ This project will have a sample API using `json-server`.
 
 ### Directory Setup
 
-Create a project directory named `grunt-products` anywhere you like under your `workspace` directory. Once you are in the directory in your terminal, follow these command to get your directory structure, and base files, established.
+1. Go to your food application directory that you've been using in the previous chapters.
+1. Once you are in the directory in your terminal, follow these command to get your directory structure, and base files, established.
+
 
 ```sh
+cd src
 mkdir -p lib/grunt
 touch .eslintrc
 touch lib/Gruntfile.js
 touch lib/grunt/aliases.yaml
 touch lib/grunt/eslint.js
 touch lib/grunt/http-server.js
+touch lib/grunt/bgShell.js
 touch lib/grunt/watch.js
 ```
+
+The `lib` directory (short for library) is where you will install any 3rd-party open source libraries that you want to use in your project. All of the files you just created will hold the configuration options for different menial tasks that you will be automating.
 
 > **Pro tip:** The `-p` flag on the `mkdir` command allows you to create an entire directory structure at once instead of having to `mkdir` and `cd` multiple times.
 
@@ -124,7 +130,7 @@ module.exports = {
     "dev": {
 
         // the server root directory
-        root: "./",
+        root: "../",
 
         // the server port
         // can also be written as a function, e.g.
