@@ -19,7 +19,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 11 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 * Chapter 12 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_MODULAR.md)
 
-> ### __Sprint 2__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md) (_the one where teams end up with many script tags_)
+> ### __Sprint 2__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
 
 ## Supplementary Content
 
