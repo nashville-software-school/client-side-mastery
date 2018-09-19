@@ -23,21 +23,31 @@ Now refactor your `src/index.html` file to include all four JavaScript files.
 
 Replace the code in `src/scripts/data.js` with the code below. Since you moved the code to this file, you should consider this file an independent, helper module now. It should not directly execute any logic for the application. The responsbility for how the application should operate should reside in `src/scripts/journal.js` now.
 
-This code in this module, then, should only define functionality **for** accessing the data, but should not immediately run it.
+The code in the `data.js` module, then, should only define functionality for **how** to access the data, but should not immediately run it.
 
 ### API Access Module
 
 ```js
-const API = Object.create(null, {
-    getJournalEntries: {
-        value: function () {
-            // Fetch the journal entries
-            return fetch("http://localhost:3000/entries")
-                .then(response => response.json())
-        }
+const API = {
+    getJournalEntries () {
+        return fetch("http://localhost:3000/entries")
+            .then(response => response.json())
     }
-})
+}
 ```
+
+You may have noticed some strange syntax in the object above. It's ok if you didn't. Take a closer look and you will see that the `getJournalEntries` method on the object was defined with the traditioanltraditional `key: value` syntax. Here's the same object using that syntax.
+
+```js
+const API = {
+    getJournalEntries: function () {
+        return fetch("http://localhost:3000/entries")
+            .then(response => response.json())
+    }
+}
+```
+
+Both are valid, but the first example saves a few characters.
 
 ### Main Application Logic
 
@@ -53,12 +63,14 @@ Put this comment in `src/scripts/journal.js`. Then write the main logic that use
     Change the fake variable names below to what they should be
     to get the data and display it.
 */
-object.method().then(arrowFunction)
+objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
 ```
 
 ## Challenge
 
-Change the code in both `src/scripts/entriesDOM.js` and `src/scripts/entryComponent.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above. When you are done, there should be three objects defined in your application.
+Change the code in both `src/scripts/entriesDOM.js` and `src/scripts/entryComponent.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above. Use `Object.create`.
+
+When you are done, there should be three objects defined in your application.
 
 1. One object that has a method for API access
 1. One object that has a method for building a component
