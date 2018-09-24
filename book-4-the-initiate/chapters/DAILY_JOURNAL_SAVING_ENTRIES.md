@@ -12,8 +12,8 @@ In your main JavaScript module (`journal.js`) add a click event listener to the 
 
 ## Collect Form Field Values
 
-1. Using query selectors
-1. Using `.value` property
+1. Use `document.querySelector` to select your input fields.
+1. Use the `.value` property on the input field elements to get the text that you typed/chose.
 
 ### Basic Input Validation
 
@@ -49,8 +49,10 @@ post.then(get).then(render)
 
 ## Challenge: Advanced Form Validation
 
-1. Maximum length
-1. No curse words
+Add the following validation code to your journal entry form fields.
+
+1. Pick a maximum length for concepts field and provide visual feedback if you type in a string that is longer than that maximum.
+1. Test that the concept and entry fields contain no curse words. You can use regular expressions for that.
 
 ## Challenge: Entry Form Component
 
