@@ -46,18 +46,46 @@ Here's what the creator fieldset should look like.
 
 Make sure you put a button after all the fields with the text **Save**.
 
+```html
+<button class="btn lego__save">Save Lego Creation</button>
+```
+
 ## Handle Save Button Click
 
 Add an event listener to the Save button, and start collecting the value of each of the input fields.
 
 ```js
-document.querySelector(".lego__save").addEventListener("click", event => {
+// Some starter code
+document.querySelector(fillInTheBlank).addEventListener("click", event => {
     const creator = document.querySelector(".lego__creator").value
+
+    // Once you have collected all the values, build your data structure
+    const legoToSave = {
+        property: value,
+        property: value,
+        property: value,
+        property: value
+    }
 })
 ```
 
 ## Saving User Input to API
 
+Now you must use `fetch` to create your lego in the API. The default method for `fetch` is GET, so you've never had to specify and configuration options before. However, with POST, you need to configure the request.
+
+Here's an example.
+
+```js
+fetch("url", { // Replace "url" with your API's URL
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(legoToSave)
+})
+```
+
+This code should be the last logic inside the event listener.
 
 ## Practice
 
@@ -73,3 +101,5 @@ Rather than the user typing in the name of the color each time, define another c
     <option value="6">Black</option>
 </select>
 ```
+
+This will require you to refactor your lego API data structures by adding a new `colors` resource in the API.
