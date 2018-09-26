@@ -26,6 +26,16 @@ Create an account at [Jobtrack](https://jobtrack.io/) so that you can keep track
 
 Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 
+### Node Packages
+
+Now that you have Node installed, you can install some open source software that you will need in the course.
+
+```sh
+sudo npm i -g http-server
+```
+
+This will require you to enter in your system password before the installation will continue.
+
 ### Install Slack
 
 Do not use the browser-based interface for Slack. Download and use the client. Let us know if you did not get an invitation to the Nashville Software School Slack organization, and we'll send you one immediately.
