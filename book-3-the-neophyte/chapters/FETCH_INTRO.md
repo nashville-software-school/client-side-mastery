@@ -61,7 +61,7 @@ By default, `fetch` performs a GET operation, so it requires no other configurat
 .then(foods => foods.json())
 ```
 
-This line of code accepts the response from your request, parses the body of the response as JSON and returns it to any subsequent `then()` method. It's an abstraction for `JSON.parse()` that you seen before.
+This line of code accepts the response from your request, parses the body of the response as JSON and returns it to any subsequent `then()` method.
 
 ### Using the Response
 
