@@ -29,6 +29,6 @@ Visit [Flexbox Froggy](http://flexboxfroggy.com/) and go through the guided tuto
 </article>
 ```
 
-From that HTML, use Flexbox to achieve this layout. You don't need to add the border. It's been added so the alignment and spacing is clear.
+From that HTML, use Flexbox to achieve this layout. You don't need to add the border. It's been added in this example to highlight the alignment and spacing you're shooting for.
 
 ![flexbox layout](./images/flexbox.png)
