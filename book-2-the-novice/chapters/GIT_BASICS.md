@@ -59,7 +59,7 @@ When you are ready to share your code with your teammates, or the general public
 
 The first thing you need to do is create a new repository on Github's platform that you will use to backup the code on your laptop. Once the repository is created, you will need to copy the connection string for it.
 
-1. You are free to name your repository anything you like, within certain restrictions. For clarity you might name it the same thing as your local application folder, but there is no 'official' requirement to do so. ( _The animated example below is setting up a project to be deployed on the web, so it uses the specific naming convention of `foo.github.io`. you don't need to worry about that for now_ )
+1. You are free to name your repository anything you like, within certain restrictions. For clarity you might name it the same thing as your local application folder, but there is no 'official' requirement to do so.
 1. Click the button to create the repository.
 1. Copy the connection string to your clipboard.
 
