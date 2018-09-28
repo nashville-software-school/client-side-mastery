@@ -1,6 +1,6 @@
 # Command Line Interface - The Terminal
 
-Becoming comfortable with your terminal will make you a master of the computer. 
+Becoming comfortable with your terminal will make you a master of the computer.
 
 ## Basic Commands
 
@@ -9,7 +9,7 @@ Becoming comfortable with your terminal will make you a master of the computer.
 1. `mkdir` - make directory.
 1. `ls` - list contents of a directory.
 1. `clear` - clear the view.
-1. `touch` - create file. 
+1. `touch` - create file.
 1. `cat` - read the contents of a file.
 1. `cp` - copy files and directories.
 1. `mv` - move files and directories.
@@ -106,7 +106,7 @@ Shells offer features geared specifically for interactive use rather than to aug
             +-- create
     ```
 1. `cd` to the `create` directory with one command `cd ~/workspace/cli/practice/create`. Remember to use tab completion.
-1. While in this directory, create a new file named `foo` in the `cli` directory. Do not `cd` to `cli`, but rather use your navigation abilities. 
+1. While in this directory, create a new file named `foo` in the `cli` directory. Do not `cd` to `cli`, but rather use your navigation abilities.
     ```sh
     touch ../../foo
     ```
@@ -139,4 +139,4 @@ Shells offer features geared specifically for interactive use rather than to aug
     ```
 
     Make a function that automates this for you, where you simply type in the function name followed by the new repo URL.
-1. Once you have that working, augment the function to autopopulate the `.gitignore` with standard files and functions that should be ignored with the `echo` command.
+1. Once you have that working, use the `echo` command to augment the function to autopopulate the `.gitignore` with standard files and functions that should be ignored.

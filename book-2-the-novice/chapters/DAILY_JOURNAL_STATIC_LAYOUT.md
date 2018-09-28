@@ -31,7 +31,7 @@ Once those are created, make sure you are in your root directory and open Visual
 
 Open your `index.html`. Visual Studio Code provides many shortcuts and can write boilerplate code for you, which you then customize for your needs. Just type in the letters `html` and in the Intellisense context menu that appears, choose the "Simple HTML5 starting point" item to get some boilerplate HTML.
 
-Change your CSS file to `journal.css`, and go ahead and remove the `<script>` element for now. We don't need it just yet.
+Change the `<link>`'s `href` value from `main.css` to `journal.css`, then go ahead and remove the `<script>` element for now. We don't need it just yet.
 
 ![html boilerplate](./images/zRTljYM6kq.gif)
 
@@ -45,7 +45,7 @@ The first step is to create a date field.
 
 Then create an `<h1>` element above the form containing the text _Daily Journal_.
 
-Save your file. Go to the terminal. Type in `hs -o`. Once the browser launches, open your dev tools to ensure you aren't viewing a cached version of the site. Refresh the browser if you need to.
+Save your file. Go to the terminal. Type in `hs -o` ( _`hs` is an alias for running `http-server`. If you haven't created this particular alias yet, take a minute to do so. You'll be running this command a lot. `-o` is an optional command argument that tells it to launch your browser after starting the server_). Once the browser launches, open your dev tools to ensure you aren't viewing a cached version of the site. Refresh the browser if you need to.
 
 You should see this.
 

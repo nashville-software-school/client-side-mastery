@@ -1,13 +1,8 @@
-# API: The Next Level of Peristent Storage
+# API: Make Your Data Stick Around With Peristent Storage
 
-Up to this point, you've been using local storage to persist data. However, local storage is usually used to store very small chinks of data about a user of your website to make their experience better.
+Up to this point, you've created and interacted with data within the context of your application code. However, you may have noticed that any changes to that data (updates, deletions, additions) go away when you close the browser or refresh the page.
 
-1. User preferences
-1. Items in their shopping cart
-1. Deals the signed up for
-1. Notification settings
-
-In this chapter, you are going to use a tool called `json-server` to store your application's data in JSON format on your file system instead of on the browser.
+In this chapter, you are going to use a tool called `json-server` to store your application's data in JSON format on your file system instead. This will allow the data to persist from browser session to browser session.
 
 Visit the Github [repo for json-server](https://github.com/typicode/json-server) if you want to learn more details.
 
@@ -21,7 +16,7 @@ npm install -g json-server
 
 ### Create the API
 
-You are going to create an API that you will use to store and retrieve information your favorite foods.
+You are going to create an API (application programming interface) that you will use to store and retrieve information your favorite foods.
 
 ```sh
 mkdir -p ~/workspace/javascript/exercises/food-api/api

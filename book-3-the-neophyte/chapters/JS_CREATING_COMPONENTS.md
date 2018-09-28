@@ -37,7 +37,7 @@ Once that code runs, you will have the following DOM.
 
 ```html
 <article id="container">
-    <h1 class="xx-large">Building Components</h1>
+    <h1 class="xx-large">Marcus Fulbright</h1>
 </article>
 ```
 

@@ -5,7 +5,7 @@ Planning what you are going to do before you do it is the most important factor 
 ## Key Principles
 
 1. Keep the code DRY. Dry means "Don't Repeat Yourself".
-1. Don't write code that isn't needed. Also know as YAGNI. You ain't gonna need it.
+1. Don't write code that isn't needed. Also know as YAGNI: You ain't gonna need it.
 1. Make a function, module, or method do just one thing.
 1. Code for extension. Write code that can easily be extended in the future.
 1. Try to reduce coupling.
