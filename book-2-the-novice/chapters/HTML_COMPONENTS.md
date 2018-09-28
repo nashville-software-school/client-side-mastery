@@ -15,17 +15,35 @@ The HTML you write is parsed by the browser and turned into the DOM. But your HT
 HTML semantic tags can be considered components
 
 ```html
-<nav>
-    <li>
-        <a href="index.html">Home</a>
-    </li>
-    <li>
-        <a href="careers.html">Careers</a>
-    </li>
-    <li>
-        <a href="locations.html">Locations</a>
-    </li>
-</nav>
+<article>
+    <header>
+        <h1>First Week at NSS</h1>
+    </header>
+
+    <section>
+        Saw some amazing projects from the previous
+        cohort. I'm nervous that I won't be able to do
+        that in 3 months, but the instructors keep telling
+        me that I will.
+    </section>
+
+    <footer>
+    By Johhny Q. Student &copy; 2018
+    </footer>
+</article>
+
+<aside>
+    <header>
+        <h2>Promoted Articles</h2>
+    </header>
+
+    <ul>
+        <li>First Week at NSS</li>
+        <li>Starting NSS Soon</li>
+        <li>I Got Accepted!</li>
+        <li>Thinking of Attending a Bootcamp</li>
+    </ul>
+</aside>
 ```
 
 ## The Importance of Comments
@@ -33,22 +51,43 @@ HTML semantic tags can be considered components
 One of the most important things you can do for yourself, and your teammates, is comment your code. Let's start with adding comments for your components in this HTML snippet.
 
 ```html
-<!-- Navigation Bar Component -->
-<nav>
-    <!-- Navigation Link List Component -->
+<!-- Blog Post Component -->
+<article>
+
+    <!-- Header Element of Blog Post Component -->
+    <header>
+        <h1>First Week at NSS</h1>
+    </header>
+
+    <!-- Content Element of Blog Post Component -->
+    <section>
+        Saw some amazing projects from the previous
+        cohort. I'm nervous that I won't be able to do
+        that in 3 months, but the instructors keep telling
+        me that I will.
+    </section>
+
+    <!-- Footer Element of Blog Post Component -->
+    <footer>
+    By Johhny Q. Student &copy; 2018
+    </footer>
+</article>
+
+<!-- Sidebar Component -->
+<aside class="sidebar">
+    <!-- Header Element of Blog Post Component -->
+    <header>
+        <h2>Promoted Articles</h2>
+    </header>
+
+    <!-- List Element of Blog Post Component -->
     <ul>
-        <!-- Navigation Link Component -->
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="careers.html">Careers</a>
-        </li>
-        <li>
-            <a href="locations.html">Locations</a>
-        </li>
+        <li>First Week at NSS</li>
+        <li>Starting NSS Soon</li>
+        <li>I Got Accepted!</li>
+        <li>Thinking of Attending a Bootcamp</li>
     </ul>
-</nav>
+</aside>
 ```
 
 ## Intelligent CSS Class Naming Conventions
@@ -56,43 +95,56 @@ One of the most important things you can do for yourself, and your teammates, is
 Styling components intelligently can be handled through naming your classes according to the component name. One popular convention is the [BEM method](http://getbem.com/introduction/).
 
 ```html
-<!-- Navigation Bar Component -->
-<nav class="navigation">
-    <!-- Navigation Link List Component -->
-    <ul class="list list--navigation">
-        <!-- Navigation Link Component -->
-        <li class="listitem--navigation">
-            <a href="index.html">Home</a>
-        </li>
-        <li class="listitem--navigation">
-            <a href="careers.html">Careers</a>
-        </li>
-        <li class="listitem--navigation">
-            <a href="locations.html">Locations</a>
-        </li>
+<!-- Blog Post Component -->
+<article class="blogpost">
+
+    <!-- Header Element of Blog Post Component -->
+    <header class="header header--xxlarge blogpost__header">
+        <h1>First Week at NSS</h1>
+    </header>
+
+    <!-- Content Element of Blog Post Component -->
+    <section class="blogpost__content">
+        Saw some amazing projects from the previous
+        cohort. I'm nervous that I won't be able to do
+        that in 3 months, but the instructors keep telling
+        me that I will.
+    </section>
+
+    <!-- Footer Element of Blog Post Component -->
+    <footer class="blogpost__footer">
+    By Johhny Q. Student &copy; 2018
+    </footer>
+</article>
+
+<!-- Sidebar Component -->
+<aside class="sidebar">
+    <!-- Header Element of Blog Post Component -->
+    <header class="header header--medium sidebar__header">
+        <h2>Promoted Articles</h2>
+    </header>
+
+    <!-- List Element of Blog Post Component -->
+    <ul  class="sidebar__items">
+        <li>First Week at NSS</li>
+        <li>Starting NSS Soon</li>
+        <li>I Got Accepted!</li>
+        <li>Thinking of Attending a Bootcamp</li>
     </ul>
-</nav>
+</aside>
 ```
 
 ```css
-.navigation {
-    padding: 5px;
-    background-color: black;
+.blogpost {
+    padding: 10px;
+    color: goldenrod;
+    background-color: fuscia;
     margin: 0;
 }
 
-.list {
-    line-height: 1.1em;
-}
-
-.list--navigation {
-    list-style-type: none;
-    line-height: normal;
-}
-
-.listitem--navigation {
-    display: inline;
-    margin: 0 20px;
+.sidebar {
+    border: 1px solid black;
+    float: right;
 }
 ```
 
