@@ -16,6 +16,10 @@ Up until now, you didn't have the power to destroy your machine, but within the 
 
 Github is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
 
+### dbdiagram.io
+
+Sign up on [dibdiagram.io](https://dbdiagram.io) and bookmark the site.
+
 ### Jobtrack
 
 Create an account at [Jobtrack](https://jobtrack.io/) so that you can keep track of contacts you make throughout the next 6 months. In about 4.5 months, you will also use this to track jobs that you've applied to, and other information about interviews, hiring managers, etc.
