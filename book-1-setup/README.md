@@ -18,7 +18,11 @@ Github is the primary site that software developers throughout the world use to 
 
 ### dbdiagram.io
 
-Sign up on [dibdiagram.io](https://dbdiagram.io) and bookmark the site.
+Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
+
+### devdocs.io
+
+Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NSS.
 
 ### Jobtrack
 
