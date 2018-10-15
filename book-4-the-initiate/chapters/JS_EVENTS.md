@@ -233,7 +233,7 @@ Setup the following files.
 }
 
 .enabled {
-    background-color: fuchsia;
+    background-color: fuchsia; 
     color: goldenrod;
 }
 ```
