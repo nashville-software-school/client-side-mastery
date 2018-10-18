@@ -256,15 +256,15 @@ Look at the three functions you created to build an `h1`, a `section`, and an `a
 
 ```js
 const h1 = (...props) => {
-    return `<h1 class="${props[0]}">${props[1}</h1>`
+    return `<h1 class="${props[1]}">${props[0]}</h1>`
 }
 
 const section = (...props) => {
-    return `<section class="bordered dashed ${props[0]}">${props[1]}</section>`
+    return `<section class="bordered dashed ${props[1]}">${props[0]}</section>`
 }
 
 const aside = (...props) => {
-    return `<aside class="${props[0]}">${props[1]}</aside>`
+    return `<aside class="${props[1]}">${props[0]}</aside>`
 }
 ```
 
