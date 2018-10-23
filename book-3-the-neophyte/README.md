@@ -18,7 +18,8 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 10 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_FETCHING.md)
 * Chapter 11 - [Automation with Grunt](./chapters/GRUNT_INTRO.md)
 * Chapter 12 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-* Chapter 13 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_MODULAR.md)
+* Chapter 13 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 14 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_MODULAR.md)
 
 > ### __Sprint 2__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
 
