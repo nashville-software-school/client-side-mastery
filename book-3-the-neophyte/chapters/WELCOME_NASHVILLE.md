@@ -26,10 +26,10 @@ To start you off, here's an example of what the itinerary in your API might look
 ```json
 {
 	"id": 1,
-	“park”: “Centennial Park”,
-	“restaurant”: “Prince’s Hot Chicken”,
-	“meetup”: “Meeple Mountain Board Game Night”,
-	“concert”: “John Mellencamp at the Ryman”
+	"park": "Centennial Park",
+	"restaurant": "Prince’s Hot Chicken",
+	"meetup": "Meeple Mountain Board Game Night",
+	"concert": "John Mellencamp at the Ryman"
 }
 ```
 
