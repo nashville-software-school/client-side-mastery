@@ -37,7 +37,7 @@ Modern web application are becoming more and more event based rather than proced
 ##### eventHandlers.js
 
 ```js
-var outputEl = document.getElementById("output-target")
+let outputEl = document.getElementById("output-target")
 
 /*
     You can get a reference to DOM elements and
@@ -48,7 +48,8 @@ var outputEl = document.getElementById("output-target")
     fires, the attached "handleSectionClick"
     function gets executed.
  */
-var articleEl = document.getElementsByClassName("article-section")
+let articleEl = document.getElementsByClassName("article-section")
+let header = document.querySelector("#page-header")
 
 /*
     JavaScript, in the browser, automatically send the source
@@ -58,7 +59,7 @@ function handleSectionClick (event) {
     console.log(event)
 }
 
-for (var i = 0; i < articleEl.length; i++) {
+for (let i = 0; i < articleEl.length; i++) {
     articleEl.item(i).addEventListener("click", handleSectionClick)
 }
 
@@ -89,7 +90,7 @@ header.addEventListener("mouseout", handleHeaderMouseOut)
     in the addEventListener declaration instead of using a
     function reference.
  */
-var fieldEl = document.getElementById("keypress-input")
+let fieldEl = document.getElementById("keypress-input")
 
 fieldEl.addEventListener("keyup", function (event) {
     outputEl.innerHTML = event.target.value
@@ -106,7 +107,7 @@ fieldEl.addEventListener("keyup", function (event) {
   the `classList` property of a DOM element to automatically
   add and remove a class.
  */
-var guineaPig = document.getElementById("guinea-pig")
+let guineaPig = document.getElementById("guinea-pig")
 
 function toggleClass (newClass) {
   guineaPig.classList.toggle(newClass)
