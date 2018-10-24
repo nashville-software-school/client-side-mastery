@@ -46,7 +46,7 @@ To start you off, here's an example of what the itinerary in your API might look
 
 To help you along, here is a wireframe of how your app might look
 
-![welcome wireframe](./images/welcome_nash_wireframe2.png)
+![welcome wireframe](images/welcome_nash_wireframe2.png)
 
 ## Stretch Goals
 * Add an affordance to finalize an itinerary, and start a new one.
