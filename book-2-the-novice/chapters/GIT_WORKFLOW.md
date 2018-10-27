@@ -43,7 +43,7 @@ To create a pull request, follow these steps.
 
 ## Review and Approval
 
-You teammate will review your code, provide comments or suggestions if necessary. Once you and your teammate are happy with the code, you will receive a thumbs up.
+Your teammate will review your code, provide comments or suggestions if necessary. Once you and your teammate are happy with the code, you will receive a thumbs up.
 
 If you are review another teammate's code, you will pull down their branch.
 
