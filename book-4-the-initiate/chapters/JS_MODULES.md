@@ -6,18 +6,77 @@ Browserify allows you to build modules of JavaScript logic that export functiona
 
 Let's look at an example.
 
-First, we'll define a module that represents a car factory that has the unique ability of building a car of any make and model.
 
-> carFactory.js
+## Setting Up Your Project
+
+The first step is to create the directories that you need.
+
+```sh
+cd  ~/workspace/javascript
+git clone https://github.com/nashville-software-school/browserify-boilerplate
+cd browserify-boilerplate/src/lib
+npm install
+```
+
+### The Public Directory
+
+This is going to seem confusing at first, but one step in using a tool like Browserify is to create a new directory named `public` at the same level as `src`. You will see that directory of the project your just cloned. It's time to talk about compiled applications.
+
+Up until this point, you have been requesting HTML files via `http-server` and the HTML has been rendered in the browser. If the HTML had `<script>` tags in it, then a new HTTP request was made for each of those files, one at a time, and they were delivered to you by `http-server`, just like your HTML file.
+
+For example. Each of these files below are delivered as separate HTTP requests.
+
+```html
+<script src="domManager.js"></script>
+<script src="componentFactory.js"></script>
+<script src="eventListeners.js"></script>
+<script src="apiManager.js"></script>
+<script src="layoutManager.js"></script>
+```
+
+Since these were all considered source code, they could all live in the `src` directory and times were good.
+
+With Browserify, all of your source code is compressed together into a **_single JavaScript file!!_** It's this single, compressed (_a.k.a. compiled_) file that will be linked in your HTML file. Your actual source code still exists in the `src` directory, but is not longer going to be requested by the browser.
+
+In the sample application you cloned, the four source code files - `src/main.js`, `src/hello.js`, `src/goodbye.js`, and `src/sandwichMaker.js` - are all compiled into the `public/hellogoodbye.js` file.
+
+If you open `public/index.html`, you will notice only one script component.
+
+```html
+<script src="hellogoodbye.js"></script>
+```
+
+That file actually contains **ALL** of the code that exists in the four source code files you created.
+
+It's weird. I know.
+
+Since it's the compiled file that you will actually be using when you make your application available to the public so they can use it, then that compiled file should be placed in a `public` directory along with your `index.html`. Those will be the only two files in that directory.
+
+The other files that would be included are CSS files, but we don't need those for now.
+
+Now you only need to upload two files to a hosting service to make your application available. If you uploaded your `src` directory, it would take **forever** because not only are there many source code files, but there are all of the files in your `node_modules` directory. Thousands of them.
+
+## Basic Browserify Application
+
+Now that setup is complete, it's time for you to build your first Browserify application. This sample application will generate car objects and place them in an array that acts as the garage for the cars.
+
+### Your First Module
+
+First, you will define a code module that contains the code for a very specific task. In this module, there is one function that acts a car factory that has the unique ability of building a car of any make and model.
+
+```sh
+touch carFactory.js
+```
+
+In Visual Studio Code, open that file and place the following code in it. This module does one thing only: it produces car objects. Each car object has a `make` and `model` property on it.
 
 ```js
 /*
-    Author: Steve Brownlee
+    Author: your name here
     Name: carFactory.js
     Purpose: Produces a new car from a factory
 */
-
-const carFactory = (make, model) => {
+const CarFactory = (make, model) => {
     const newCar = Object.create(null, {
         "make": {
             value: make,
@@ -32,25 +91,33 @@ const carFactory = (make, model) => {
     return newCar
 }
 
-module.exports = carFactory
+export default CarFactory
 ```
 
-In our `main.js`, which is the standard beginning module of an application using Browserify, we can import the car factory.
+### Main Application Logic
 
-> main.js
+The `main.js` module is the entry point of your application. It's the code in that module that gets executed when your refresh your browser.
+
+```sh
+touch main.js
+```
+
+Get rid of what's in there already, and replace it with the following code.
 
 ```js
 /*
-    Author: Steve Brownlee
+    Author: your name here
     Name: main.js
     Purpose: Entry point of our application
 */
-const car = require("./carFactory")
+import CarFactory from "./carFactory"
+
 
 const garage = []
 
-const mustang = car("Ford", "Mustang")
-const accord = car("Honda", "Accord")
+// Create two cars using the function you imported
+const mustang = CarFactory("Ford", "Mustang")
+const accord = CarFactory("Honda", "Accord")
 
 garage.push(mustang)
 garage.push(accord)
@@ -58,21 +125,47 @@ garage.push(accord)
 console.log(garage);
 ```
 
-We can take this a step further and make the car garage it's own module.
+## Compiling your Code
+
+Make sure you are in the `src/lib` directory of your application, and run `grunt`. This will check your syntax, start the web server, and compile the source code.
+
+## Viewing your Garage
+
+Open [http://localhost:8080/](http://localhost:8080/) in Chrome, view the Developer Console and you should see an array with the two car objects in it.
+
+![console output with two car objects in array](./images/car-garage-initial-output.png)
+
+## The Garage Module
+
+You can take this a step further and make the car garage it's own module.
+
+```sh
+touch garage.js
+```
+
+Instead of the garage being a simple array in your main module, you are going to make an object that has more complex behaviors - which are expressed as methods on an object.
+
+[Read more about what a **method** is](https://javascript.info/object-methods) if that term still confuses you.
 
 > garage.js
 
 ```js
 /*
-    Author: Steve Brownlee
+    Author: your name here
     Name: garage.js
     Purpose: To store car instances
 */
 
-// This array cannot be modified by any other code in the application
+/*
+    This array only exists within the scope of this method.
+    Therefore, no other module can access it. However,
+    the `garageSupervisor` object your define below allows
+    code in other modules to indirectly access it by using
+    the methods.
+*/
 const garage = []
 
-const garageSupervisor = Object.create(null, {
+export default Object.create(null, {
     "store": {
         value: function (car) {
             garage.push(car)
@@ -92,68 +185,36 @@ const garageSupervisor = Object.create(null, {
         get: () => garage
     }
 })
-
-module.exports = garageSupervisor
 ```
 
-Now let's import this module into our main module and use its methods.
+Now let's import this module into our main module and use its methods. Adding a couple more cars just so the output changes.
 
 ```js
 /*
-    Author: Steve Brownlee
+    Author: your name here
     Name: main.js
     Purpose: Entry point of our application
 */
-const car = require("./carFactory")
-const garage = require("./garage")
+import CarFactory from "./carFactory"
+import Garage from "./garage"
 
-const mustang = car("Ford", "Mustang")
-const accord = car("Honda", "Accord")
+// Create two cars using the function you imported
+const mustang = CarFactory("Ford", "Mustang")
+const accord = CarFactory("Honda", "Accord")
+const santafe = CarFactory("Hyundai", "Santa Fe")
+const sierra = CarFactory("GMC", "Sierra")
 
-garage.store(mustang)
-garage.store(accord)
+// Store the cars in the garage
+Garage.store(mustang)
+Garage.store(accord)
+Garage.store(santafe)
+Garage.store(sierra)
 
-console.log(garage.inventory)
+console.table(Garage.inventory)
+console.table(Garage.retrieve(sierra))
 ```
 
-## Setting Up Your Project
-
-1. [grunt-eslint](https://github.com/sindresorhus/grunt-eslint): For verifying your JavaScript against community standards, and checking sytax.
-    ```
-    npm install grunt-eslint --save-dev
-    ```
-1. [grunt-contrib-uglify](https://www.npmjs.com/package/grunt-contrib-uglify): For minifying your code to make HTTP calls faster.
-    ```
-    npm install git://github.com/gruntjs/grunt-contrib-uglify.git#harmony --save-dev
-    ```
-1. [grunt-browserify](https://www.npmjs.com/package/grunt-browserify): For compiling your modules into a single application
-    ```
-    npm install grunt-browserify --save-dev
-    ```
-
-1. [grunt-eslint](https://github.com/sindresorhus/grunt-eslint): For verifying your JavaScript against community standards, and checking sytax.
-
-    `npm install grunt-eslint --save-dev`
-
-When using eslint, you will need a `.eslintrc` file in the root of your project. Here is an exmaple eslint file:
-```
-{
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "rules": {
-        "semi": 0,
-        "quotes": ["error", "double"],
-        "eqeqeq": 2,
-        "no-trailing-spaces": 2
-    }
-}
-```
-
+![console output with two car objects in array](./images/car-garage-updated-output.png)
 
 ## Practice: Contact List
 

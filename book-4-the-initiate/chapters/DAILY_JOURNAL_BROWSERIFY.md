@@ -1,5 +1,17 @@
 # Daily Journal with Modules
 
+## Setup
+
+1. Create a `public` directory in the root directory of your Daily Journal application.
+1. Move `index.html` from the `src` directory to the `public` directory.
+1. Move your `src/styles` directory to `public/styles`.
+
+When you're done, the only directories in `src` should be
+1. `src/scripts`
+1. `src/lib`
+
+## Instructions
+
 > **Task**: Take existing JavaScript modules, and refactor as Browerify syntax modules with `require` and `modules.exports`.
 
 Your `index.html` should have several script components at the bottom. Below is an example only, your files names do not need to match this example.
@@ -30,10 +42,10 @@ DataManager.getJournalEntries().then(DOMManager.renderEntries)
 And your `dom/DOMManagerjs` component could look something like this.
 
 ```js
-import EntryFactory from "./dom/componentFactory"
+import EntryFactory from "./dom/entryComponentFactory"
 
 const DOMManager = Object.create(null, {
-    "render": {
+    "renderEntries": {
         "value": (entries) => {
             const entriesContainer = document.querySelector(".entryLog")
 
@@ -46,4 +58,6 @@ const DOMManager = Object.create(null, {
         }
     }
 })
+
+module.exports = DOMManager
 ```
