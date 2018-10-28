@@ -39,21 +39,49 @@ This allows us to create an object with `const pizzaJoint = new Restaurant()`. O
 
 What if we wanted to make a lot of different piza joints that shared similar properties, but each had its own values for those properties?
 
-Here's a refactor, with the ability to pass in those unique values to each new retaurant we create:
+Here's a refactor, with the ability to pass in those unique values to each new retaurant we create. That's a lot of properties to write out as parameters for the constructor method, so let's set it up to take an object as an agument, called `props`.
+
+Notice we've also added a new `menu` property and some methods for interacting with it:
 
 ```js
 class Restaurant {
 
-  constructor(name, address, hasStromboli, hourOpen, hourClosed) {
-    this.name = name
-    this.address = address
-    this.hasStromboli = hasStromboli
-    this.hourOpen = hourOpen
-    this.hourClosed = hourClosed
+  constructor(props) {
+    this.name = props.name
+    this.address = props.address
+    this.hasStromboli = props.hasStromboli
+    this.hourOpen = props.hourOpen
+    this.hourClosed = props.hourClosed
+    this.menu = {
+      small_pizza: null,
+      large_pizza: null,
+      soda: null,
+      salad: null,
+      breadsticks: null
+    }
   }
 
-  placeOrder(size, toppingsArr) {
+  pizzaOrder(size, toppingsArr) {
     console.log(`You ordered a ${size} pizza covered in ${toppingsArr.join(", ")}. Please pick up before ${this.hourClosed}!`)
+  }
+
+  // Update/add properties with a method
+  setMenu(menuItems) {
+    for (let item in menuItems) {
+      console.log(item)
+      this.menu[item] = Number(menuItems[item]) //make sure the value is a number, not a string
+    }
+  }
+
+  // Get a special, combined price for a combo of a small pizza, soda, and choice of salad or breadsticks.
+  calcCombo(side) {
+    let discount = .8
+    let comboPrice =
+      this.menu.small_pizza +
+      this.menu.soda +
+      this.menu[side]
+
+    return `$${(comboPrice * discount).toFixed(2)}`
   }
 
 }
