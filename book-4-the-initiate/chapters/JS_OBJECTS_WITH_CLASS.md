@@ -74,8 +74,8 @@ class Restaurant {
   }
 
   // Get a special, combined price for a combo of a small pizza, soda, and choice of salad or breadsticks.
-  calcCombo(side) {
-    let discount = .8
+  comboPrice(side) {
+    let discount = .85
     let comboPrice =
       this.menu.small_pizza +
       this.menu.soda +
@@ -118,3 +118,53 @@ Your job is to create a large, flightless bird class that defines the properties
 * toString -- This will be a method that outputs a description of the bird based on some of its properties. Example output: "The Cassowary is a big, scary bird that stands up to 6 ft and can run up to 30 mph!"
 
 Create at least 3 instances of the class.
+
+## Practice: Calculated Properties
+> The learning objective for this challenge is to write a getter for the `comboPrice` property of a pizza restaurant. This lets you explore the concept of calculated properties.
+
+Up to this point, we have used methods (i.e. functions on objects) to perform logic and calculations needed for a Class. Properties are simple, primitive values like "John", 100, and `true`. With the power of getters and setters in your classes, you can still have properties, but their value is calculated via a function rather than being simple assignment and retrieval.
+
+Take a look at the `Restaurant` class example from earlier. Note how it uses methods to set some values ( the menu prices ) and calculate other ( the combo meal price ). Those work fine, but we can also use special functions called getters and setters to allow us to get or set values as properties.
+
+Consider the `comboPrice()` method we added to the object. comboPrice itself is not a behavior, or a process, of the Restaurant, but you had to write it as a method because you needed to add together prices from the menu and return the calculated value. And although the syntax looks like you're defining a method...
+
+```js
+class Restaurant {
+  // constructor, etc...
+
+  get comboPrice() {
+    //logic to calc and return combo price
+  }
+
+}
+
+```
+...what results is the ability to treat combo price as any other property of `Restaurant`
+
+```js
+// Note the lack of parenthesis after comboPrice. It's a property.
+console.log(myRestaurant.comboPrice)
+```
+### Strech Goal:
+>Allow a restaurant to define the items in its combo meal, based on items from the menu, using a setter. Then have your `comboPrice` getter use the property created by the setter instead of the hard-coded menu items to calculate the cost.
+
+Like the getter, the setter allows us to use a function to calculate a value using what looks like a regular property assignment.
+
+```js
+class Restaurant {
+  // constructor, etc...
+
+  set combo(items) {
+    //set items as the property 'combo' on the Restaurant instance
+  }
+
+  get comboPrice() {
+    //logic to calc and return combo price
+  }
+
+}
+```
+Then the syntax to add the new value is simply `myRestaurant.combo = [myRestaurant.menu.small_pizza, myRestaurant.menu.soda, etc]`
+
+### Extra Stretch Goal!
+>Make sure that the value of the `combo` property is an array before setting it. Can't do _that_ with an old-fashioned value assignment, can ya?
