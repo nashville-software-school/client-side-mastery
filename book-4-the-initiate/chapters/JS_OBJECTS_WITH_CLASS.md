@@ -15,8 +15,7 @@ const restaurant = {
   }
 }
 ```
-
-Let's look at how you would create this object using the `class` keyword.
+Now look at how you would create this object using the `class` keyword.
 
 ```js
 class Restaurant {
@@ -35,9 +34,11 @@ class Restaurant {
 }
 ```
 
-This allows us to create an object with `const pizzaJoint = new Restaurant()`. Of course, this is fairly limiting as it is. We can only make an object, or an instance of Restaurant, the same way every time.
+This allows us to create an object with `const pizzaJoint = new Restaurant()`.
 
-What if we wanted to make a lot of different piza joints that shared similar properties, but each had its own values for those properties?
+Of course, this is fairly limiting as it is. We can only make an object -- an instance of Restaurant -- the same way every time.
+
+What if we wanted to make a lot of different pizza joints that shared similar properties, but each had its own values for those properties?
 
 Here's a refactor, with the ability to pass in those unique values to each new retaurant we create. That's a lot of properties to write out as parameters for the constructor method, so let's set it up to take an object as an agument, called `props`.
 
@@ -73,26 +74,27 @@ class Restaurant {
     }
   }
 
-  // Get a special, combined price for a combo of a small pizza, soda, and choice of salad or breadsticks.
+  // Get a special, combined price for a combo of a small pizza, soda, and a salad.
   comboPrice(side) {
     let discount = .85
     let comboPrice =
       this.menu.small_pizza +
       this.menu.soda +
-      this.menu[side]
+      this.menu.salad
 
     return `$${(comboPrice * discount).toFixed(2)}`
   }
 
 }
 ```
-
-Now you can make many instances of `Restaurant`, and each one will be unique but based on a common definition of how a restaurant will be represented in our project
+Now you can make many instances of `Restaurant` and each one will be unique, but based on a common definition of how a restaurant will be represented in our project.
 
 ```js
-const pizzaPerfect = new Restaurant("Pizza Perfect", "456 That Road", false, "11:30 am", "9:30 pm")
-const pizzaChain = new Restaurant("Pizza Hut", "8907 This Road", false, "10:30 am", "11:00 pm")
-const italianPlace = new Restaurant("Geno's Joint", "4567 Other Road, Suite #45", true, "11:30 am", "8:30 pm")
+const pizzaPerfect = new Restaurant({name: "Pizza Perfect", address: "456 That Road", hasStromboli: false, hourOpen: "11:30 am", hourClosed: "9:30 pm")
+
+const pizzaChain = new Restaurant({ name: "Pizza Hut", address: "8907 This Road", hasStromboli: false, hourOpen: "10:30 am", hourClosed: "11:00 pm")
+
+const italianPlace = new Restaurant({name: "Geno's Joint", address: "4567 Other Road, Suite #45", hasStromboli: true, hourOpen: "11:30 am", hourClosed: "8:30 pm")
 ```
 
 Logging out a Restaurant instance will show that it's an object, complete with inheritance from the `Restaurant` and `Object` objects:
@@ -124,29 +126,29 @@ Create at least 3 instances of the class.
 
 Up to this point, we have used methods (i.e. functions on objects) to perform logic and calculations needed for a Class. Properties are simple, primitive values like "John", 100, and `true`. With the power of getters and setters in your classes, you can still have properties, but their value is calculated via a function rather than being simple assignment and retrieval.
 
-Take a look at the `Restaurant` class example from earlier. Note how it uses methods to set some values ( the menu prices ) and calculate other ( the combo meal price ). Those work fine, but we can also use special functions called getters and setters to allow us to get or set values as properties.
+Take a look at the `Restaurant` class example from earlier. Note how it uses methods to set some values ( the menu prices ) and calculate others ( the combo meal price ). Those work fine, but we can also use special functions called `getters` and `setters` to allow us to get or set values as properties.
 
-Consider the `comboPrice()` method we added to the object. comboPrice itself is not a behavior, or a process, of the Restaurant, but you had to write it as a method because you needed to add together prices from the menu and return the calculated value. And although the syntax looks like you're defining a method...
+Consider the `comboPrice()` method we added to the Restaurant object. `comboPrice` itself is not a behavior, or a process, of the Restaurant, but you had to write it as a method because you needed to add together prices from the menu and return the calculated value. And although the syntax looks like you're defining a method...
 
 ```js
 class Restaurant {
   // constructor, etc...
 
   get comboPrice() {
-    //logic to calc and return combo price
+    // Add logic here to calc and return combo price
   }
 
 }
 
 ```
-...what results is the ability to treat combo price as any other property of `Restaurant`
+...what results is the ability to treat combo price as any other property of `Restaurant`. Look carefully and note the space between `get` and `comboPrice`. It's not a typo. `get` defines this as a getter; `comboPrice` will be the property
 
 ```js
 // Note the lack of parenthesis after comboPrice. It's a property.
 console.log(myRestaurant.comboPrice)
 ```
 ### Strech Goal:
->Allow a restaurant to define the items in its combo meal, based on items from the menu, using a setter. Then have your `comboPrice` getter use the property created by the setter instead of the hard-coded menu items to calculate the cost.
+>Allow a restaurant to define the items in its combo meal, based on items from the menu (i.e. `this.menu.breadsticks`), using a setter. Then have your `comboPrice` getter use the `combo` property created by the setter instead of the hard-coded menu items to calculate the cost.
 
 Like the getter, the setter allows us to use a function to calculate a value using what looks like a regular property assignment.
 
