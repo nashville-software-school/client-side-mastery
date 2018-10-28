@@ -90,11 +90,11 @@ class Restaurant {
 Now you can make many instances of `Restaurant` and each one will be unique, but based on a common definition of how a restaurant will be represented in our project.
 
 ```js
-const pizzaPerfect = new Restaurant({name: "Pizza Perfect", address: "456 That Road", hasStromboli: false, hourOpen: "11:30 am", hourClosed: "9:30 pm")
+const pizzaPerfect = new Restaurant({name: "Pizza Perfect", address: "456 That Road", hasStromboli: false, hourOpen: "11:30 am", hourClosed: "9:30 pm"})
 
-const pizzaChain = new Restaurant({ name: "Pizza Hut", address: "8907 This Road", hasStromboli: false, hourOpen: "10:30 am", hourClosed: "11:00 pm")
+const pizzaChain = new Restaurant({ name: "Pizza Hut", address: "8907 This Road", hasStromboli: false, hourOpen: "10:30 am", hourClosed: "11:00 pm"})
 
-const italianPlace = new Restaurant({name: "Geno's Joint", address: "4567 Other Road, Suite #45", hasStromboli: true, hourOpen: "11:30 am", hourClosed: "8:30 pm")
+const italianPlace = new Restaurant({name: "Geno's Joint", address: "4567 Other Road, Suite #45", hasStromboli: true, hourOpen: "11:30 am", hourClosed: "8:30 pm"})
 ```
 
 Logging out a Restaurant instance will show that it's an object, complete with inheritance from the `Restaurant` and `Object` objects:
