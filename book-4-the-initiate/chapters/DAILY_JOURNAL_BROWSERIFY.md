@@ -10,6 +10,31 @@ When you're done, the only directories in `src` should be
 1. `src/scripts`
 1. `src/lib`
 
+### Install Packages
+
+Go to the `src/lib` directory and install all the required packages for using Browserify modules.
+
+```sh
+npm i grunt-browserify babelify @babel/preset-env @babel/core -D
+```
+
+Copy the `src/lib/grunt/browserify.js` file you created in the last chapter to your Daily Journal application and update it to output different compiled file name that it more appropriate for this application.
+
+For example.
+
+```js
+dailyjournal: {
+    src: ["../scripts/main.js"],
+    dest: "../../public/dailyjournal.js"
+}
+```
+
+Update your `src/lib/grunt/aliases.yaml` file to run the task.
+
+```yaml
+  - "browserify:dailyjournal"
+```
+
 ## Instructions
 
 > **Task**: Take existing JavaScript modules, and refactor as Browerify syntax modules with `require` and `modules.exports`.
