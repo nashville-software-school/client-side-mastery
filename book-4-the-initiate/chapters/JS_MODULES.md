@@ -20,7 +20,7 @@ npm install
 
 ### The Public Directory
 
-This is going to seem confusing at first, but one step in using a tool like Browserify is to create a new directory named `public` at the same level as `src`. You will see that directory of the project your just cloned. It's time to talk about compiled applications.
+This is going to seem confusing at first, but one step in using a tool like Browserify is to create a new directory named `public` at the same level as `src`. You will see that directory in the project you just cloned. It's time to talk about compiled applications.
 
 Up until this point, you have been requesting HTML files via `http-server` and the HTML has been rendered in the browser. If the HTML had `<script>` tags in it, then a new HTTP request was made for each of those files, one at a time, and they were delivered to you by `http-server`, just like your HTML file.
 
@@ -36,9 +36,9 @@ For example. Each of these files below are delivered as separate HTTP requests.
 
 Since these were all considered source code, they could all live in the `src` directory and times were good.
 
-With Browserify, all of your source code is compressed together into a **_single JavaScript file!!_** It's this single, compressed (_a.k.a. compiled_) file that will be linked in your HTML file. Your actual source code still exists in the `src` directory, but is not longer going to be requested by the browser.
+With Browserify, all of your source code is compressed together into a **_single JavaScript file!!_** It's this single, compressed (_a.k.a. compiled_) file that will be linked in your HTML file. Your actual source code still exists in the `src` directory, but is no longer going to be requested by the browser.
 
-In the sample application you cloned, the four source code files - `src/main.js`, `src/hello.js`, `src/goodbye.js`, and `src/sandwichMaker.js` - are all compiled into the `public/hellogoodbye.js` file.
+In the sample application you cloned, the four source code files - `src/scripts/main.js`, `src/scripts/hello.js`, `src/scripts/goodbye.js`, and `src/scripts/sandwichMaker.js` - are all compiled into the `public/hellogoodbye.js` file.
 
 If you open `public/index.html`, you will notice only one script component.
 
@@ -58,14 +58,16 @@ Now you only need to upload two files to a hosting service to make your applicat
 
 ## Basic Browserify Application
 
-Now that setup is complete, it's time for you to build your first Browserify application. This sample application will generate car objects and place them in an array that acts as the garage for the cars.
+Now that setup is complete, and you have a boilerplate directory structure set up from the cloned repository, it's time for you to build your first Browserify application. This sample application will use the `main.js` that you already have, but you will replace the code in there, and add other modules to generate car objects and place them in an array that acts as the garage for the cars.
 
 ### Your First Module
 
-First, you will define a code module that contains the code for a very specific task. In this module, there is one function that acts a car factory that has the unique ability of building a car of any make and model.
+In your boilerplate project, you will define a code module that contains the code for a very specific task. In this module, there is one function that acts a car factory that has the unique ability of building a car of any make and model.
+
+Make sure you are in the root directory of the application.
 
 ```sh
-touch carFactory.js
+touch src/scripts/carFactory.js
 ```
 
 In Visual Studio Code, open that file and place the following code in it. This module does one thing only: it produces car objects. Each car object has a `make` and `model` property on it.
@@ -76,20 +78,22 @@ In Visual Studio Code, open that file and place the following code in it. This m
     Name: carFactory.js
     Purpose: Produces a new car from a factory
 */
-const CarFactory = (make, model) => {
-    const newCar = Object.create(null, {
-        "make": {
-            value: make,
-            enumerable: true
-        },
-        "model": {
-            value: model,
-            enumerable: true
-        }
-    })
+class Car {
+    constructor (make, model) {
+        this.make = make
+        this.model = model
+    }
 
-    return newCar
+    toString () {
+        return `a ${this.make} ${this.model}`
+    }
+
+    drive (destination) {
+        return `You drive ${this} to ${destination}`
+    }
 }
+
+const CarFactory = (make, model) => new Car(make, model)
 
 export default CarFactory
 ```
@@ -98,11 +102,7 @@ export default CarFactory
 
 The `main.js` module is the entry point of your application. It's the code in that module that gets executed when your refresh your browser.
 
-```sh
-touch main.js
-```
-
-Get rid of what's in there already, and replace it with the following code.
+Open the `src/scripts/main.js` file and get rid of what's in there already, and replace it with the following code.
 
 ```js
 /*
@@ -119,10 +119,15 @@ const garage = []
 const mustang = CarFactory("Ford", "Mustang")
 const accord = CarFactory("Honda", "Accord")
 
+// Drive the cars for a while
+console.log(mustang.drive("the grocery store"))
+console.log(accord.drive("Indianapolis"))
+
+// Park the cars in the garage
 garage.push(mustang)
 garage.push(accord)
 
-console.log(garage);
+console.table(garage);
 ```
 
 ## Compiling your Code
@@ -140,7 +145,7 @@ Open [http://localhost:8080/](http://localhost:8080/) in Chrome, view the Develo
 You can take this a step further and make the car garage it's own module.
 
 ```sh
-touch garage.js
+touch src/scripts/garage.js
 ```
 
 Instead of the garage being a simple array in your main module, you are going to make an object that has more complex behaviors - which are expressed as methods on an object.

@@ -18,7 +18,13 @@ Go to the `src/lib` directory and install all the required packages for using Br
 npm i grunt-browserify babelify @babel/preset-env @babel/core -D
 ```
 
-Copy the `src/lib/grunt/browserify.js` file you created in the last chapter to your Daily Journal application and update it to output different compiled file name that it more appropriate for this application.
+Copy the `src/lib/grunt/browserify.js` file you created in the last chapter to your Daily Journal application.
+
+```sh
+cp  ~/workspace/javascript/browserify-boilerplate/src/lib/grunt/browserify.js ./grunt
+```
+
+ Update it to output a different compiled file name that is more appropriate for this application.
 
 For example.
 
