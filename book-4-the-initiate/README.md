@@ -11,12 +11,11 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 7 - [jQuery](./chapters/JQUERY.md)
 * Chapter 8 - [Daily Journal - Part 7](./chapters/DAILY_JOURNAL_JQUERY.md)
 * Chapter 9 - [JavaScript Modules with Browserify](./chapters/JS_MODULES.md)
-* Chapter 10 - [Automated Bundling with Grunt](./chapters/GRUNT_BROWSERIFY.md)
-* Chapter 11 - [Using the Debugger](../book-3-the-neophyte/chapters/MISC_DEBUGGING.md)
-* Chapter 12 - [Daily Journal - Part 8](./chapters/DAILY_JOURNAL_BROWSERIFY.md)
-* Chapter 13 - [CSS Variables](./chapters/CSS_VARIABLES.md)
-* Chapter 14 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
-* Chapter 15 - [Daily Journal - Part 9](./chapters/DAILY_JOURNAL_MOOD_TABLE.md)
+* Chapter 10 - [Using the Debugger](../book-3-the-neophyte/chapters/MISC_DEBUGGING.md)
+* Chapter 11 - [Daily Journal - Part 8](./chapters/DAILY_JOURNAL_BROWSERIFY.md)
+* Chapter 12 - [CSS Variables](./chapters/CSS_VARIABLES.md)
+* Chapter 13 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
+* Chapter 14 - [Daily Journal - Part 9](./chapters/DAILY_JOURNAL_MOOD_TABLE.md)
 
 > ## Sprint 3 - Nutshell
 
