@@ -149,7 +149,7 @@ class Restaurant {
         Get a special, combined price for a combo of a
         small pizza, soda, and a salad.
     */
-    comboPrice (side) {
+    comboPrice () {
         let discount = .85
         let comboPrice =
             this.menu.small_pizza +
