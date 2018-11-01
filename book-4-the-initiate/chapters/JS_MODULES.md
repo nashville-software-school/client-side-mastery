@@ -162,34 +162,35 @@ Instead of the garage being a simple array in your main module, you are going to
 */
 
 /*
-    This array only exists within the scope of this method.
+    This array only exists within the scope of this module.
     Therefore, no other module can access it. However,
-    the `garageSupervisor` object your define below allows
+    the `garageSupervisor` object you define below allows
     code in other modules to indirectly access it by using
     the methods.
 */
 const garage = []
 
-export default Object.create(null, {
-    "store": {
-        value: function (car) {
-            garage.push(car)
-        }
-    },
-    "retrieve": {
-        value: function (carToFind) {
-            return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
-        }
-    },
-    /*
-        The inventory property is the only way for external code to
-        read the value of the garage variable. There is no setter
-        either. It is a read only property.
-    */
-    "inventory": {
-        get: () => garage
-    }
-})
+class Garage {
+  store(car) {
+    garage.push(car)
+  }
+
+  retrieve(carToFind) {
+    return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
+  }
+
+  /*
+       The inventory property is the only way for external code to
+       read the value of the garage variable. There is no setter
+       either. It is a read only property.
+   */
+  get inventory() {
+    return garage
+  }
+}
+
+const GarageFactory = () => new Garage()
+export default GarageFactory
 ```
 
 Now let's import this module into our main module and use its methods. Adding a couple more cars just so the output changes.
@@ -201,7 +202,7 @@ Now let's import this module into our main module and use its methods. Adding a 
     Purpose: Entry point of our application
 */
 import CarFactory from "./carFactory"
-import Garage from "./garage"
+import GarageFactory from "./garage"
 
 // Create two cars using the function you imported
 const mustang = CarFactory("Ford", "Mustang")
@@ -209,14 +210,15 @@ const accord = CarFactory("Honda", "Accord")
 const santafe = CarFactory("Hyundai", "Santa Fe")
 const sierra = CarFactory("GMC", "Sierra")
 
-// Store the cars in the garage
-Garage.store(mustang)
-Garage.store(accord)
-Garage.store(santafe)
-Garage.store(sierra)
+// Make a new garage and store cars in it
+const garage = GarageFactory() //Remember, this function return a new instance of Garage
+garage.store(mustang)
+garage.store(accord)
+garage.store(santafe)
+garage.store(sierra)
 
-console.table(Garage.inventory)
-console.table(Garage.retrieve(sierra))
+console.table(garage.inventory)
+console.table(garage.retrieve(sierra))
 ```
 
 ![console output with two car objects in array](./images/car-garage-updated-output.png)
