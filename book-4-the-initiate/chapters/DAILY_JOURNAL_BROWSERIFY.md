@@ -75,20 +75,20 @@ And your `dom/DOMManagerjs` component could look something like this.
 ```js
 import EntryFactory from "./dom/entryComponentFactory"
 
-const DOMManager = Object.create(null, {
-    "renderEntries": {
-        "value": (entries) => {
-            const entriesContainer = document.querySelector(".entryLog")
+class DOMManager {
+    renderEntries (entries) {
+        const entriesContainer = document.querySelector(".entryLog")
 
-            entriesContainer.textContent = ""
+        entriesContainer.textContent = ""
 
-            for (entry of entries) {
-                const entryComponent = EntryFactory.create(entry)
-                entriesContainer.innerHTML += entryComponent
-            }
+        for (entry of entries) {
+            const entryComponent = EntryFactory.create(entry)
+            entriesContainer.innerHTML += entryComponent
         }
     }
-})
+}
 
-module.exports = DOMManager
+const entryDOMManager = new DOMManager()
+
+export default entryDOMManager
 ```
