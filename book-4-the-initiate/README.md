@@ -21,7 +21,6 @@ In this book, you will learn tools, libraries and workflows that modern client s
 
 ## Supplementary Content
 
-* Supplement - [Using `new` to Create Objects](./chapters/NEW_KEYWORD.md)
 * Supplement - [Deploy API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
 * Supplement - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
 * Supplement - [JavaScript Maps](./chapters/JS_MAPS.md)

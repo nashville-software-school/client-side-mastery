@@ -69,6 +69,10 @@ Once this change to your database structure has been made, it has a destructive 
 
 This is a new data structure, so you must now refactor your JavaScript code that built the HTML representation of a journal entry to use the new structure.
 
+## Populating the Mood Choice
+
+The last thing to refactor is the `<select>` element that holds all of the `<option>` elements for your moods. Right now, you likely have those hard-coded into your HTML form. You now need to query all of those moods fro your API with a new `fetch()` method and then dynamically build a new `<option>` for each of the moods.
+
 ## Challenge: Delivery
 
 > **Note**: Remember, challenges should only be attempted once you have completed the main exercise(s) and understand the concept.
