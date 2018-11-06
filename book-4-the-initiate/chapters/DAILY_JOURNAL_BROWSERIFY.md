@@ -95,6 +95,6 @@ export default entryDOMManager
 
 > **Performance**: The `entriesContainer` variable is defined at the module level instead of in the `renderEntries()` function. Why? It is for performance. If it was defined in the `renderEntries()` function, then each time the method is called, the DOM would have to be queried to obtain a reference to the element with a class of `entryLog`.
 
-> **Vocabulary**: The code above shows an example of the [Singleton Pattern](https://medium.com/@dmnsgn/singleton-pattern-in-es6-d2d021d150ae#ce56) since the module exports a single instance of the DOMManager class. Every other module will use that single instance.
+> **Vocabulary**: The code above shows an example of the [Singleton Pattern](https://en.wikipedia.org/wiki/Singleton_pattern) since the module exports a single instance of the DOMManager class. Every other module will use that single instance.
 
 > **Vocabulary**: The code above creates a [closure](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36) around the `entriesContainer` module variable.
