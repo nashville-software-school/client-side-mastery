@@ -72,6 +72,12 @@ Next, modify the **`AnimalList`** component by adding a new `<Link>` element abo
 <Link className="nav-link" to={`/animals/${animal.id}`}>Details</Link>
 ```
 
+Also make sure you import the `Link` component from React Router at the top of the module.
+
+```js
+import { Link } from "react-router-dom";
+```
+
 Once the browser reloads, click on the _Details_ hyperlink in the first card. It will change the URL in the browser to `http://localhost:3000/animals/1`, and the detail component for the animal will render.
 
 ![animated image showing dynamic routing in action](./images/pZks6gwfvK.gif)

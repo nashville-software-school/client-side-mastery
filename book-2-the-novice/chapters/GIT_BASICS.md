@@ -49,7 +49,7 @@ git commit -m "A descriptive message about what changes you made in this commit"
 
 # Backing Up and Sharing Code on Github
 
-Github is a _software as a service_ (SASS) that allows you to back up your repository to the cloud and share it with other software developers. Note that it is not the same thing as git, which is an application you are running locally on your machine. Github and git are made to talk to each other, but they are separate entities.
+Github is a _software as a service_ (SAAS) that allows you to back up your repository to the cloud and share it with other software developers. Note that it is not the same thing as git, which is an application you are running locally on your machine. Github and git are made to talk to each other, but they are separate entities.
 
 ## Pushing to Github
 
