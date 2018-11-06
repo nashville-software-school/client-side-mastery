@@ -71,7 +71,7 @@ This is a new data structure, so you must now refactor your JavaScript code that
 
 ## Populating the Mood Choice
 
-The last thing to refactor is the `<select>` element that holds all of the `<option>` elements for your moods. Right now, you likely have those hard-coded into your HTML form. You now need to query all of those moods fro your API with a new `fetch()` method and then dynamically build a new `<option>` for each of the moods.
+The last thing to refactor is the `<select>` element that holds all of the `<option>` elements for your moods. Right now, you likely have those hard-coded into your HTML form. You now need to query all of those moods from your API with a new `fetch()` method and then dynamically build a new `<option>` for each of the moods.
 
 ## Challenge: Delivery
 
