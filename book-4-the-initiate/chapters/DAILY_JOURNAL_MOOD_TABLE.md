@@ -51,7 +51,7 @@ Then change all of your entries to store the proper foreign key for its mood. Ch
 
 ### Traversing the Relationship
 
-Once this change to your database structure has been made, it has a destructive effect on your code. You need to refactor your code that interacts with your API and use the [`_embed` query string parameter available in json-server](https://github.com/typicode/json-server#relationships) when you query for your journal entries. This will cause the related mood to be a child resource embedded in the journal entry's JSON representation.
+Once this change to your database structure has been made, it has a destructive effect on your code. You need to refactor your code that interacts with your API and use the [`_expand` query string parameter available in json-server](https://github.com/typicode/json-server#relationships) when you query for your journal entries. This will cause the related mood to be a child resource embedded in the journal entry's JSON representation.
 
 ```json
 {
@@ -71,7 +71,7 @@ This is a new data structure, so you must now refactor your JavaScript code that
 
 ## Populating the Mood Choice
 
-The last thing to refactor is the `<select>` element that holds all of the `<option>` elements for your moods. Right now, you likely have those hard-coded into your HTML form. You now need to query all of those moods fro your API with a new `fetch()` method and then dynamically build a new `<option>` for each of the moods.
+The last thing to refactor is the `<select>` element that holds all of the `<option>` elements for your moods. Right now, you likely have those hard-coded into your HTML form. You now need to query all of those moods from your API with a new `fetch()` method and then dynamically build a new `<option>` for each of the moods.
 
 ## Challenge: Delivery
 
