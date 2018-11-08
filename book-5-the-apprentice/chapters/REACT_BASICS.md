@@ -43,28 +43,13 @@ class Kennel extends Component {
 
 ReactDOM.render(<Kennel />, document.querySelector("#root"));
 ```
+Looks a bit familiar, right? We're making a subclass of an existing `Component` base class. It has a single method, `render`, that returns an HTML representation of some (hard-coded) data. You've done all of that before.
 
-The `class` keyword is simply a new way to define an object in JavaScript. Here's how the code would look with what you've learned so far.
+Sort of.
 
-```js
-const Kennel = () => {
-    return Object.create(Component, {
-        render: {
-            value: () => {
-                return `
-                    <div>
-                        <h3>Student Kennels</h3>
-                        <h4>Nashville North Location</h4>
-                        <h5>500 Puppy Way</h5>
-                    </div>
-                `
-            }
-        }
-    })
-}
-```
+That stuff that looks like HTML? It's not. It's called (JSX)[https://reactjs.org/docs/introducing-jsx.html], and it basically allows us to write JavaScript that looks like HTML in our code, so we can better visualize what the eventual rendered HTML structure will look like.
 
-Even though we write `<Kennel>` in React code, you can consider each one of your components as a factory function. It's just a function that returns an object.
+Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a factory function. It's just a function that returns an object.
 
 ### Child Component
 
@@ -88,9 +73,9 @@ class EmployeeList extends Component {
 }
 ```
 
-Then I can include that component as a child of the **`Kennel`** component. Look at the code below and notice that there's a very strange looking HTML element called `<EmployeeList />`. JSX interprets this as a component and will render the class you defined.
+Then I can include that component as a child of the **`Kennel`** component. Look at the code below and notice there's now another of those custom HTML elements in there called `<EmployeeList />`. JSX interprets this as a component and will render the class you defined.
 
-Update your **`Kennel`** component to match.
+Update your **`Kennel`** component to match. Now when the `Kennel` component is rendered it will render the `EmployeeList` component. We can say that the Kennel component is now a parent of the EmployeeList component.
 
 ```js
 class Kennel extends Component {
