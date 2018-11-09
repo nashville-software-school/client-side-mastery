@@ -10,6 +10,8 @@ State is simply the current values of the properties used to render a component.
 
 You initialize state by defining a `state` at the top of your class definition. Let's take a look at how to implement state for our **`Kennel`** component.
 
+Pay special attention to how the rendering of `<EmployeeList>` and `<LocationList>` have changed.
+
 Also note that you're importing a single CSS file directly into this component. No need to worry about `<link>` tags in your HTML any more. All of the styles in the imported CSS should only apply to the JSX elements you are making in this component.
 
 > components/Kennel.js
@@ -21,7 +23,7 @@ import LocationList from "./location/LocationList"
 import "./Kennel.css"
 
 
-class Kennel extends Component {
+export default class Kennel extends Component {
 
     /*
         Although you will eventually be pulling your objects
@@ -56,8 +58,6 @@ class Kennel extends Component {
         )
     }
 }
-
-export default Kennel
 ```
 
 > Kennel.css
@@ -70,9 +70,9 @@ export default Kennel
 }
 ```
 
-**`LocationList`** and **`EmployeeList`** are _child components_ of the **`Kennel`** component.
+Because **`LocationList`** and **`EmployeeList`** are included in `Kennel`'s render method, they are _child components_ of the **`Kennel`** component.
 
-If you remove `employees={this.state.employees}` in the **`Kennel`** component, it can’t be passed down as `props` down to the child component - it will simply live in state in the **`Kennel`** component, but the data will never reach a child component.
+If you remove `employees={this.state.employees}` in the **`Kennel`** component, it can’t be passed down as `props` to the child component - it will simply live in state in the **`Kennel`** component, but the data will never reach a child component.
 
 Below you can see how we are now using `this.props.employees` because `employees` were passed down from the  **`Kennel`** component (_state_) to the  **`EmployeeList`** component (_props_). `employees` now evaluates to an array, so you can use the `map() ` array method to convert the raw data into HTML elements.
 
@@ -153,7 +153,7 @@ Gone are the days of using Vanilla JavaScript or jQuery to directly manipulate y
 
 State is at the core of React. It drives everything. Including the HTML representation of that state via JSX. If you want to change the DOM that is being displayed to your customer, you **change the state of the component**.
 
-Always remember that by using the `this.setState()` method in a React component, that it, in turn, invokes the `render()` method. Therefore, changing state modifies your DOM.
+So, how do you change the state of a component? Your learning team will explain in detail, but for now just know you _must_ use the `this.setState()` method, and that method, in turn, invokes the `render()` method. Therefore, changing state this way, and only this way, modifies your DOM.
 
 * If you remove an item from a collection in state, then that element will not be rendered.
 * If you add an item to a collection in state, then it will be rendered.
@@ -170,7 +170,7 @@ Update your application so that the array of locations is passed from the **`Ken
 Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** and **`LocationList`**, you're going to list animals now.
 
 1. Create a new array in state in the **`Kennel`** component named `animals`. It will look just like the locations and employees arrays in state. Make sure each animal has an `id` property.
-2. Create a **`AnimalList`** component for displaying animals.
+2. Create an **`AnimalList`** component for displaying animals.
 3. Update **`Kennel`** to pass its `animals` state to **`AnimalList`** and use the appropriate key on `this.props` to display all animal names.
 
 ## Challenge: Animal Owners
