@@ -133,10 +133,6 @@ Follow the [Github instructions](https://help.github.com/articles/generating-a-n
 
 Visit the [Git powershell](http://www.git-scm.com/downloads) download page click the "Download for Windows" button, and once complete, install the software. Powershell is a command line utility that allows you to run most Unix command inside a Windows environment. This will help you have the same vernacular as the rest of the class, since having a *nix environment is preferred and is how the class is taught.
 
-### Enable the Linux Subsystem for Windows 10
-
-You will be following the [official tutorial](https://docs.microsoft.com/en-us/windows/wsl/install-win10) for installing the Linux susbsystem. You will likely need to get help from one of the Learning Team members unless you are familiar with working on the command line in Windows.
-
 ### Create SSH key
 
 SSH is a technology that allows you to create a very secure connection between your computer, and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files
