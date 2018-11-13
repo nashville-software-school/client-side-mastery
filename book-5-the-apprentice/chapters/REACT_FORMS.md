@@ -2,14 +2,14 @@
 
 In this chapter, you are going to learn how to use use a form to express the state of a component, and then use a function passed from a parent component to add the animal to the API.
 
-**_Quick Note_:** Note that all of the code you will see below needs to be in place before the feature will work.
+**_Quick Note_: All of the code you will see from here to the end of this chapter needs to be in place before the feature will work.**
 
 
 ## Route for Showing Animal Form
 
-New route that renders a form for boarding a new animal. The `employees` collection needs to be passed to the form component so that a dropdown list can be populated for the user to choose a caretaker. You also need to update the route for `/animals` so that the `props` argument is passed down to the child component. This allows you to use the `history.push()` mechanism to change the URL in the browser.
+Below is a new route that renders a form for boarding a new animal. The `employees` collection needs to be passed to the form component so that a dropdown list can be populated for the user to choose a caretaker. You also need to update the route for `/animals` so that the `props` argument is passed down to the child component. This sets up the ability to use the very helpful `history.push()` mechanism in the components themselves to change the URL in the browser.
 
-Update your route with this code.
+First, update your route with this code.
 
 ```jsx
 <Route exact path="/animals" render={(props) => {
@@ -18,6 +18,7 @@ Update your route with this code.
                        animals={this.state.animals} />
 }} />
 
+// Our shiny new route. We pass employees to the AnimalForm so a dropdown can be populated
 <Route path="/animals/new" render={(props) => {
     return <AnimalForm {...props}
                        addAnimal={this.addAnimal}
@@ -27,7 +28,9 @@ Update your route with this code.
 
 ## Button for Admitting a New Animal
 
-Update **`AnimalList`** with a button at the top that uses the `history.push()` mechanism to change the URL of the browser. This will only work if you updated your routes correctly from the previous section.
+Now, update **`AnimalList`** with a button at the top that uses the `history.push()` mechanism to change the URL of the browser. This will only work if you updated your routes correctly from the previous section, because you will need access to the `history` property that exists on the `props` object.
+
+So, what's going on here? Think of the current location as the last item in an array of locations, and we manipulate that array through the `history.push()` method. Most importantly, pushing a location to the array triggers a page transition to that location.
 
 ```js
 export default class AnimalList extends Component {
@@ -64,20 +67,18 @@ Update `Animal.css` to center the button.
 
 ## AnimalManager Method for POSTing Animal
 
-Refactor your **`AnimalManager`** module that implements a `fetch()` for adding a new animal object to your API.
+Refactor your **`AnimalManager`** module with a `post` method that implements a `fetch()` for adding a new animal object to your API.
 
 ```js
-post: {
-    value: function (newAnimal) {
-        return fetch(`${remoteURL}/animals`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newAnimal)
-        }).then(e => e.json())
-    }
-},
+post(newAnimal) {
+    return fetch(`${remoteURL}/animals`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newAnimal)
+    }).then(data => data.json())
+  }
 ```
 
 ## ApplicationViews Method
@@ -85,16 +86,21 @@ post: {
 Since you can't pass the `post()` method from the manager module to a component, you must write a method in **`ApplicationViews`** that implements it. You can then pass this method down to the **`AnimalForm`** component.
 
 ```js
-addAnimal = animal => AnimalManager.post(animal)
-    .then(() => AnimalManager.getAll())
-    .then(animals => this.setState({
-        animals: animals
-    }))
+addAnimal = animal => {
+  return AnimalManager.post(animal)
+  .then(() => AnimalManager.getAll())
+  .then(animals => this.setState({
+      animals: animals
+    })
+  )
+}
 ```
 
 ## AnimalForm Component
 
 Now it's time to make your **`AnimalForm`** component. Note that the `handleFieldChange()` method will update state every time the user types a character into any field. This is made possible by having each input field's `id` property named exactly as each state property.
+
+It's vital to note that what this creates is a process that allows us to create new data ( the new animal ) based on the current state of the component. We are not pulling data directly from the form imputs and saving that to the database. The React way is to make sure that all data changes flow through state like this, so the UI and state stay in sync.
 
 In state, you see three properties:
 
@@ -114,7 +120,7 @@ There are three, directly corresponding input fields:
 import React, { Component } from "react"
 import "./Animal.css"
 
-export default class AnimalForm extends Component {
+class AnimalForm extends Component {
     // Set initial state
     state = {
         animalName: "",
@@ -184,6 +190,8 @@ export default class AnimalForm extends Component {
         )
     }
 }
+
+export default new AnimalForm()
 ```
 
 ## Using the Form

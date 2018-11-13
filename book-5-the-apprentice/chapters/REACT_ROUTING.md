@@ -26,7 +26,7 @@ Don't worry if that doesn't make any sense right now. Let's look at an example t
 The **`Kennel`** component will contain two child components.
 
 1. **`NavBar`** which holds navigation elements to always be displayed.
-1. **`ApplicationViews`** which will define all of the URLs that your application will support, and which views will be displays for each one.
+1. **`ApplicationViews`** which will define all of the URLs that your application will support, and which views will be displayed for each one.
 
 Let's make the child components and then build the container component in which they will live.
 
@@ -123,10 +123,10 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     return <LocationList locations={this.state.locations} />
                 }} />
-                <Route exact path="/animals" render={(props) => {
+                <Route path="/animals" render={(props) => {
                     return <AnimalList animals={this.state.animals} />
                 }} />
-                <Route exact path="/employees" render={(props) => {
+                <Route path="/employees" render={(props) => {
                     return <EmployeeList employees={this.state.employees} />
                 }} />
             </React.Fragment>
@@ -173,26 +173,24 @@ class Kennel extends Component {
 export default Kennel
 ```
 
-Now you can update your `index.js` and its root component must now be `<Router />` which gets imported from the React Router package. In that router, you place the `<KennelCompany />` child component. What this tells React is that *"I will be placing Routes in my KennelCompany component."*
+Now you can update your `index.js` and its root component must now be `<Router />` which gets imported from the React Router package. In that router, you place the `<Kennel />` child component. What this tells React is that *"I will be placing Routes in my Kennel component."*
 
 > index.js
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from "react-router-dom"
-import Kennel from './components/Kennel';
+import Kennel from './components/Kennel'
 
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import './index.css'
 
 ReactDOM.render(
     <Router>
         <Kennel />
     </Router>
-    , document.getElementById('root'));
+    , document.getElementById('root'))
 
-registerServiceWorker();
 ```
 
 Once all of this is in place, you will have the base of a single page application.

@@ -8,14 +8,16 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * Chapter 4 - [React: Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
 * Chapter 5 - [React: CRUD Using Function Properties](./chapters/FUNCTIONS_AS_PROPS.md)
 * Chapter 6 - [React: Using Regular Modules](./chapters/API_MODULES.md)
-* Chapter 7 - [React: Dynamic Routes and Forms](./chapters/REACT_DYNAMIC_ROUTING.md)
+* Chapter 7 - [React: Dynamic Routing](./chapters/REACT_DYNAMIC_ROUTING.md)
 * Chapter 8 - [React: CRUD with Forms](./chapters/REACT_FORMS.md)
 * Chapter 9 - [React: Conditional Routing](./chapters/REACT_CONDITIONAL_RENDERING.md)
 * Chapter 10 - [React: Reusability](./chapters/REACT_REUSABLE_COMPONENTS.md)
-* Chapter 11 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+
 
 > ## Sprint 4: Reactive Nutshell
 
+
+* Chapter 11 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
 * Chapter 12 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
 * Chapter 13 (_optional_) - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
 * Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)

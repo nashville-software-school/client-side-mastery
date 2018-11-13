@@ -7,7 +7,7 @@ It's time to add one of the CRUD methods to your application. You're going to st
 Add the following function to your **`ApplicationViews`** component.
 
 ```js
-deleteAnimal = id => {
+deleteAnimal(id) {
     return fetch(`http://localhost:5002/animals/${id}`, {
         method: "DELETE"
     })
@@ -16,7 +16,8 @@ deleteAnimal = id => {
     .then(e => e.json())
     .then(animals => this.setState({
         animals: animals
-    }))
+    })
+  )
 }
 ```
 

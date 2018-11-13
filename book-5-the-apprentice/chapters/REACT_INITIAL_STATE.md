@@ -53,7 +53,7 @@ One of the lifecycle methods available to every React component is [componentDid
 
 > `componentDidMount()` is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. _If you need to load data from a remote endpoint, this is a good place to instantiate the network request._
 
-The `componentDidMount()` hook runs after the component output has been rendered to the DOM, so if your component needs API data, that is the place to do it. Here is how you would write it to retrieve employee data from an API being served by [json-server](https://github.com/typicode/json-server) on port 5002.
+The `componentDidMount()` hook runs after the component output has been rendered to the DOM, so if your component needs API data, that is the place to do it. Here is how you would write it to retrieve animal data and employee data from an API being served by [json-server](https://github.com/typicode/json-server) on port 5002.
 
 ```js
 componentDidMount() {
@@ -92,8 +92,7 @@ export default class ApplicationViews extends Component {
     state = {
         locations: [],
         animals: [],
-        employees: [],
-        owners: []
+        employees: []
     }
 
     componentDidMount() {
@@ -105,6 +104,9 @@ export default class ApplicationViews extends Component {
             .then(() => fetch("http://localhost:5002/employees")
             .then(r => r.json()))
             .then(employees => newState.employees = employees)
+            .then(() => fetch("http://localhost:5002/locations")
+            .then(r => r.json()))
+            .then(locations => newState.locations = locations)
             .then(() => this.setState(newState))
     }
 
