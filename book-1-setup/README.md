@@ -38,39 +38,31 @@ Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 
 Now that you have Node installed, you can install some open source software that you will need in the course.
 
+#### OSX
+
+Developers running OSX run this command in your terminal. It doesn't matter which directory you are in.
+
 ```sh
 sudo npm i -g http-server
 ```
 
 This will require you to enter in your system password before the installation will continue.
 
+#### Windows
+
+Windows developer run the following command in Git Bash.
+
+```sh
+npm i -g http-server
+```
+
 ### Install Slack
 
-Do not use the browser-based interface for Slack. Download and use the client. Let us know if you did not get an invitation to the Nashville Software School Slack organization, and we'll send you one immediately.
+Do not use the browser-based interface for Slack. Download and [install the client](https://slack.com/downloads). Let us know if you did not get an invitation to the Nashville Software School Slack organization, and we'll send you one immediately.
 
 ### Google Chrome
 
 [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
-
-### Visual Studio Code
-
-Visual Studio Code is the editor we will all be working on to start the course.
-
-Mac users can run this command from the terminal app to install it.
-
-```sh
-brew cask install visual-studio-code
-```
-
-Windows users must visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor.
-
-Suggested extensions to install
-
-1. [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-1. [FontSize Shortcuts](https://marketplace.visualstudio.com/items?itemName=fosshaas.fontsize-shortcuts)
-1. [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-1. [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
-1. [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 ---
 
@@ -124,6 +116,28 @@ SSH is a technology that allows you to create a very secure connection between y
 1. A private key file that you never, ever, ever, ever, ever share with anyone. It is usually named `id_rsa`.
 
 Follow the [Github instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-mac) for creating a new SSH key, and providing your public key to Github, so that you can establish a secure connection between your computer and Github's computers.
+
+---
+
+### Visual Studio Code
+
+Visual Studio Code is the editor we will all be working on to start the course.
+
+Mac users can run this command from the terminal app to install it.
+
+```sh
+brew cask install visual-studio-code
+```
+
+Windows users must visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor.
+
+Suggested extensions to install
+
+1. [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+1. [FontSize Shortcuts](https://marketplace.visualstudio.com/items?itemName=fosshaas.fontsize-shortcuts)
+1. [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+1. [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
+1. [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 ---
 
