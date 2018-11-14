@@ -1,10 +1,14 @@
 # Passing Functionality as Properties
 
-TODO: Add rules for fat arrow or not in methods
-
 It's time to add one of the CRUD methods to your application. You're going to start with DELETE. Specifically, you're going to start with deleting animals to remove them from the kennel. You are going to add a Delete link to each animal card.
 
 ## Implementation of Delete Function
+>**A Note About Component Method Definitions: If a method will be passed to a child component to execute, via props, you must use the syntax like `deleteAnimal` below, with a fat arrow. Otherwise,use the method shorthand you learned in JS Class syntax, without the fat arrow, like so:**
+  ```js
+  foo(bar) {
+    ...
+  }
+  ```
 
 Add the following function to your **`ApplicationViews`** component.
 
