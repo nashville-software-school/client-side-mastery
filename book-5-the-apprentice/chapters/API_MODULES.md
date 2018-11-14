@@ -98,7 +98,7 @@ Now, consider moving all of those functions that are _nearly_ identical to the *
 ```js
 const remoteURL = "http://localhost:5002"
 
-export default class APIManager {
+class APIManager {
 
   get(id) {
     /*
@@ -114,4 +114,6 @@ export default class APIManager {
   }
 
 }
+
+export default new APIManager()
 ```

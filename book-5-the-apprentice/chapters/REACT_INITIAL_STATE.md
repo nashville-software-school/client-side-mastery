@@ -90,7 +90,6 @@ import EmployeeList from './employee/EmployeeList'
 
 export default class ApplicationViews extends Component {
     state = {
-        locations: [],
         animals: [],
         employees: []
     }
@@ -104,10 +103,6 @@ export default class ApplicationViews extends Component {
             .then(() => fetch("http://localhost:5002/employees")
             .then(r => r.json()))
             .then(employees => newState.employees = employees)
-            .then(() => fetch("http://localhost:5002/locations")
-            .then(r => r.json()))
-            .then(locations => newState.locations = locations)
-            .then(() => this.setState(newState))
     }
 
 

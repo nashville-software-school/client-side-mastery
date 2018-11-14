@@ -23,7 +23,7 @@ import LocationList from "./location/LocationList"
 import "./Kennel.css"
 
 
-export default class Kennel extends Component {
+class Kennel extends Component {
 
     /*
         Although you will eventually be pulling your objects
@@ -58,6 +58,8 @@ export default class Kennel extends Component {
         )
     }
 }
+
+export default Kennel
 ```
 
 > Kennel.css
