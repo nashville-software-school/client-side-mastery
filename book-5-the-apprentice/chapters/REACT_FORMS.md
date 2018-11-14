@@ -86,7 +86,7 @@ post(newAnimal) {
 Since you can't pass the `post()` method from the manager module to a component, you must write a method in **`ApplicationViews`** that implements it. You can then pass this method down to the **`AnimalForm`** component.
 
 ```js
-addAnimal = animal => {
+addAnimal = (animal) => {
   return AnimalManager.post(animal)
   .then(() => AnimalManager.getAll())
   .then(animals => this.setState({
@@ -129,7 +129,7 @@ class AnimalForm extends Component {
     }
 
     // Update state whenever an input field is edited
-    handleFieldChange = evt => {
+    handleFieldChange = (evt) => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
@@ -139,7 +139,7 @@ class AnimalForm extends Component {
         Local method for validation, creating animal object, and
         invoking the function reference passed from parent component
      */
-    constructNewAnimal = evt => {
+    constructNewAnimal = (evt) => {
         evt.preventDefault()
         if (this.state.employee === "") {
             window.alert("Please select a caretaker")

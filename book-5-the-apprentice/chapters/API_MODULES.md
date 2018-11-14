@@ -61,7 +61,7 @@ Add the `get()` and `all()` methods to each one, changing the URL path in each o
 See if you can add a method to your **`AnimalManager`** module to make the following refactored `deleteAnimal()` method work in **`ApplicationViews`**.
 
 ```js
-deleteAnimal(id) {
+deleteAnimal = (id) => {
   return AnimalManager.removeAndList(id)
   .then(animals => this.setState({
       animals: animals

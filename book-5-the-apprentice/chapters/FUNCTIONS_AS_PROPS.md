@@ -1,5 +1,7 @@
 # Passing Functionality as Properties
 
+TODO: Add rules for fat arrow or not in methods
+
 It's time to add one of the CRUD methods to your application. You're going to start with DELETE. Specifically, you're going to start with deleting animals to remove them from the kennel. You are going to add a Delete link to each animal card.
 
 ## Implementation of Delete Function
@@ -7,7 +9,7 @@ It's time to add one of the CRUD methods to your application. You're going to st
 Add the following function to your **`ApplicationViews`** component.
 
 ```js
-deleteAnimal(id) {
+deleteAnimal = (id) => {
     return fetch(`http://localhost:5002/animals/${id}`, {
         method: "DELETE"
     })
