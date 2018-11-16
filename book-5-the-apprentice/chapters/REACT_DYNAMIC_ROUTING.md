@@ -7,6 +7,12 @@ In this chapter, you are going to render each of the locations, animals, and emp
 Open your **`ApplicationViews`** component and add a new route to handle `/animals/:animalId`. Also note that the keyword of `exact` has been added to the `/animals` route. Without that keyword, the second route would also handle `/animals/:animalId`.
 
 ```js
+<Route exact path="/" render={(props) => {
+    return <LocationList locations={this.state.locations} />
+}} />
+<Route exact path="/animals" render={(props) => {
+    return <AnimalList animals={this.state.animals} />
+}} />
 <Route path="/animals/:animalId(\d+)" render={(props) => {
     return <AnimalDetail {...props} deleteAnimal={this.deleteAnimal} animals={this.state.animals} />
 }} />

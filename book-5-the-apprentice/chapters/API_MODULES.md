@@ -18,18 +18,14 @@ Other components, _in the future_, may likely need to ability to make their own 
 ```js
 const remoteURL = "http://localhost:5002"
 
-export default Object.create(null, {
-    get: {
-        value: function (id) {
-            return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
-        }
-    },
-    getAll: {
-        value: function () {
-            return fetch(`${remoteURL}/animals`).then(e => e.json())
-        }
-    }
-})
+export default {
+  get(id) {
+    return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
+  },
+  getAll() {
+    return fetch(`${remoteURL}/animals`).then(e => e.json())
+  }
+}
 ```
 
 Now you can refactor your **`ApplicationViews`** component to use this module. First, make sure you import it.
@@ -65,10 +61,13 @@ Add the `get()` and `all()` methods to each one, changing the URL path in each o
 See if you can add a method to your **`AnimalManager`** module to make the following refactored `deleteAnimal()` method work in **`ApplicationViews`**.
 
 ```js
-deleteAnimal = id => AnimalManager.removeAndList(id)
-    .then(animals => this.setState({
-        animals: animals
-    }))
+deleteAnimal = (id) => {
+  return AnimalManager.removeAndList(id)
+  .then(animals => this.setState({
+      animals: animals
+    })
+  )
+}
 ```
 
 ## Advanced Challenge: The Abstract Artist
@@ -82,37 +81,39 @@ Some starter code and comments to get you started.
 > AnimalManager.js
 
 ```js
+import APIManager from "./APIManager"
 /*
-    Remember that the first argument for Object.create() is the
-    object that will be in this object's prototype chain.
+    Remember that extending a Class means that
+    it will be in this class's prototype chain.
 */
-export default Object.create(APIManager, {
+class AnimalManager extends APIManager {
     ...
-})
+}
 ```
 
-Now, consider moving all of those functions that are _nearly_ identical to the **`APIManager`** module. How could you write the functions to be useful for each of the more specialized managers.
+Now, consider moving all of those functions that are _nearly_ identical to the **`APIManager`** module. How could you write the functions to be useful for each of the more specialized managers?
 
 > APIManager.js
 
 ```js
 const remoteURL = "http://localhost:5002"
 
-export default Object.create(null, {
-    get: {
-        value: function (id) {
-            /*
-                Since the purpose of this module is to be used by
-                all of the more specialized one, then the string
-                of `animals` should not be hard coded here.
-            */
-            return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
-        }
-    },
-    all: {
-        value: function () {
-            return fetch(`${remoteURL}/animals`).then(e => e.json())
-        }
-    }
-})
+class APIManager {
+
+  get(id) {
+    /*
+        Since the purpose of this module is to be used by
+        all of the more specialized one, then the string
+        of `animals` should not be hard coded here.
+    */
+    return fetch(`${remoteURL}/animals/${id}`).then(data => data.json())
+  }
+
+  all() {
+    return fetch(`${remoteURL}/animals`).then(data => data.json())
+  }
+
+}
+
+export default new APIManager()
 ```

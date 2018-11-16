@@ -4,9 +4,11 @@ In this chapter, you are going to learn how to configure a `<Route>` to conditio
 
 ## Checking for Simple Authentication
 
+**Note:** The example code below contains an extremely simplified login process. This is not a guide to proper authentication. The login used here is only to demonstrate rendering components based on a user's status
+
 ### Login Component
 
-Make a new component named `Login` in a file called `Login.js`.
+Make a new component directory called `authentication`. In it add a file called `Login.js`.
 
 > Login.js
 
@@ -37,7 +39,7 @@ export default class Login extends Component {
             For now, just store the email and password that
             the customer enters into local storage.
         */
-        localStorage.setItem(
+        sessionStorage.setItem(
             "credentials",
             JSON.stringify({
                 email: this.state.email,
@@ -78,7 +80,7 @@ export default class Login extends Component {
 Import this new component into **`ApplicationViews`**.
 
 ```js
-import Login from './Login'
+import Login from './authentication/Login'
 ```
 
 Update your import statement for `react-router-dom` to get the `<Redirect>` component.
@@ -93,7 +95,7 @@ Then refactor **`ApplicationViews`** by adding a function to check if there is a
 export default class ApplicationViews extends Component {
 
     // Check if credentials are in local storage
-    isAuthenticated = () => localStorage.getItem("credentials") !== null
+    isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
     ...
 }
@@ -124,7 +126,7 @@ Now it's time to implement conditional rendering. You will start with the employ
 }} />
 ```
 
-1. Your current route that handles `/employees`, you need to replace with the above code.
+1. Replace the code that handles `/employees` in your current route with the above code.
 1. Remove the `credentials` item from local storage.
 1. Visit `http://localhost:3000/employees`
 1. You should be presented with the login screen
