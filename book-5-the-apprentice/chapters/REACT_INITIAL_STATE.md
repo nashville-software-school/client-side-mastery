@@ -6,11 +6,9 @@ First empty out your current hard-coded state in the **`ApplicationViews`** comp
 
 ```js
 state = {
-    data: {
-        locations: [],
-        animals: [],
-        employees: []
-    }
+    locations: [],
+    animals: [],
+    employees: []
 }
 ```
 
