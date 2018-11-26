@@ -159,7 +159,7 @@ export default class AnimalForm extends Component {
                 <form className="animalForm">
                     <div className="form-group">
                         <label htmlFor="animalName">Animal name</label>
-                        <input type="text" required="true"
+                        <input type="text" required
                                className="form-control"
                                onChange={this.handleFieldChange}
                                id="animalName"
@@ -167,7 +167,7 @@ export default class AnimalForm extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="breed">Breed</label>
-                        <input type="text" required="true"
+                        <input type="text" required
                                className="form-control"
                                onChange={this.handleFieldChange}
                                id="breed" placeholder="Breed" />
