@@ -92,7 +92,6 @@ addAnimal = (animal) => AnimalManager.post(animal)
       animals: animals
     })
   )
-}
 ```
 
 ## AnimalForm Component
@@ -119,7 +118,7 @@ There are three, directly corresponding input fields:
 import React, { Component } from "react"
 import "./Animal.css"
 
-class AnimalForm extends Component {
+export default class AnimalForm extends Component {
     // Set initial state
     state = {
         animalName: "",
@@ -189,8 +188,6 @@ class AnimalForm extends Component {
         )
     }
 }
-
-export default new AnimalForm()
 ```
 
 ## Using the Form
