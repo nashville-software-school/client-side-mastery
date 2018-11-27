@@ -1,4 +1,4 @@
-# Things You Need
+# Getting Started
 
 ## Journal
 
