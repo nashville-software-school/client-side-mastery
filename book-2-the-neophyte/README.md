@@ -1,4 +1,4 @@
-# Book 3 - The Neophyte
+# Book 2 - The Neophyte
 
 In this book, you will build a strong foundation of skills and practices that will serve you throughout the course, and the entirety of your career as a software developer. Once complete, you will be ready to begin your initiation into the world of modern development - using all the tools and libraries that are popular today.
 
@@ -32,4 +32,4 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Supplement - [Deploy to AWS S3](./chapters/AWS_S3.md)
 * Supplement - [Deploy to AWS EC2](./chapters/AWS_EC2.md)
 
-Once you are strong on these foundational concepts, you will move along to [Book 4 - The Initiate](../book-4-the-initiate/README.md).
+Once you are strong on these foundational concepts, you will move along to [Book 4 - The Initiate](../book-3-the-initiate/README.md).

@@ -1,10 +1,29 @@
-# Factory & Generator Functions
-
-## Factory Function
+# Factory Functions
 
 Ref: [What Are Factory Functions in JavaScript](https://www.sitepoint.com/factory-functions-javascript/)
 
 First, a factory function is just a regular function. No syntactical difference. We've coined certain functions as factory functions simply because they return new objects.
+
+Yes, this is a factory function.
+
+```js
+// This is a factory function. It returns a new object every time.
+const createAmplifier = function (volume = 11, color = "Black") {
+    return {
+        "type": "Guitar Amplifier",
+        "maximumVolume": volume,
+        "caseColor": color
+    }
+}
+
+const marshallAmp = createAmplifier(9, "White")
+> { "type": "Guitar Amplifier", "maximumVolume": 9, "caseColor": "White" }
+
+const blackstarAmp = createAmplifier(10, "Gold")
+> { "type": "Guitar Amplifier", "maximumVolume": 10, "caseColor": "Gold" }
+```
+
+No.
 
 ```js
 // Not a factory function. Primitive type returned.
@@ -13,173 +32,80 @@ const add = function (first, second) {
 }
 ```
 
+Yes.
+
 ```js
 // This is a factory function. It returns a new object every time.
-const generateTrashCan = function (volume = 10) {
-    return Object.create(null, {
-        "type": {
-            enumerable: true,
-            value: "Trash Can"
-        },
-        "volume": {
-            enumerable: true,
-            value: volume
-        },
-        "color": {
-            enumerable: true,
-            value: "Black"
-        }
-    })
-}
-```
-
-## Generator Functions
-
-Ref: [MDN Generator Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
-
-A generator function does have a specific syntax. You put an asterisk after the `function` keyword. You use generator functions when you need to retrieve the next item in a series of values at any time. It maintains its state across each execution, where non-generator functions do not.
-
-The following function will return `Red` every time because once it executes, the memory used is released and all variables are eradicated.
-
-```js
-// Non-generator function
-const getNextColor = function () {
-    const colors = ["Red", "Yellow", "Green", "Goldenrod"]
-    let counter = 0
-
-    const currentColor = colors[counter] // Red
-    counter += 1  // Increment the counter
-    return currentColor
-}
-
-console.log(getNextColor())  // Red
-console.log(getNextColor())  // Red
-```
-
-Conversely, the variables in a generator function do not get released between executions.
-
-```js
-const getNextColor = function* () {
-    const colors = ["Red", "Yellow", "Green", "Goldenrod"]
-    let counter = 0
-
-    while (counter < colors.length) {
-        yield currentColor = colors[counter]
-        counter += 1  // Increment the counter
+const createLocation = function (name, address, type) {
+    return {
+        "businessType": type,
+        "businessName": name,
+        "address": address
     }
 }
 
-// Create an instance of the generator
-const colorFactory = getNextColor()
-
-// Get the first generated item in the collection
-colorFactory.next().value  // Red
-
-// Get the next generated item in the collection
-colorFactory.next().value  // Yellow
+const kennel = createLocation("Bow Wow Kennels", "100 Infinity Way", "Animal Boarding")
+> { "businessType": "Animal Boarding", "businessName": "Bow Wow Kennels", "address": "100 Infinity Way" }
 ```
 
-![generator function](./images/3eMQtdSEY2.gif)
-
-## Combining Generator and Factory Functions
-
-A good, practical use case for these types of objects is for when you need to create a new object, on demand, that has a unique identifier. Let's look at an example of a generator function that produced a UUID every time the `next()` method is invoked on it.
+No.
 
 ```js
-/*
-    We will be using the following generator function to generate unique
-    identifiers for objects in our database while we use local storage. Do
-    not worry about understanding the code inside it - it's not important.
-    What is important is the output, and understanding how we use that
-    output in the factory function.
-*/
-const uuidGenerator = function* () {
-    while (true) {
-        let time = new Date().getTime()
-        let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (char) {
-            const random = (time + Math.random() * 16) % 16 | 0
-            return (char === 'x' ? random : (random & 0x3 | 0x8)).toString(16)
-        })
-        yield uuid
+// Not a factory function. Primitive type returned.
+const isLegal = function (activity, age) {
+    if (activity.minimumAge > age) {
+        return false
     }
+    return true
 }
 
-// Create instance of generator
-const blogPostId = uuidGenerator()
-
-// Factory function that returns a blog article object
-const blogObjectFactory = function (title, entry, ...tags) {
-    return Object.create(null, {
-        "id": { value: blogPostId.next().value, enumerable: true },
-        "title": { value: title, enumerable: true },
-        "body": { value: entry, enumerable: true },
-        "tags": { value: tags, enumerable: true },
-        "published": { value: Date.now(), enumerable: true }
-    })
+const socialActivity = {
+    activity: "Buy alcohol",
+    minimumAge: 21
 }
 
-// Create a blog article about your first day at NSS
-const firstDay = blogObjectFactory("My first day at NSS", "I felt completely lost", "nss", "life changes", "software")
+const april = {
+    name: "April Atkinson",
+    age: 19
+}
 
-// Create a blog article about your instructor
-const instructor = blogObjectFactory("Our instructor", "This guy is a jerk", "nss", "teachers", "loser")
+const canAprilDrink = isLegal(socialActivity, april.age)
+> false
 ```
 
-![generator function](./images/v1Q5xBQtuI.gif)
-
-## Videos to Watch
-
-1. [Javascript Generators](https://www.youtube.com/watch?v=QO07THdLWQo)
-1. [JavaScript ES6 - Iterators and Generators](https://www.youtube.com/watch?v=lbBZXw2hKH4)
-
-## Practice - Colored Reindeer
-
-In this exercise, you start with a collection of reindeer names. Your task is to add each reindeer name to an HTML `article` element with an `id` of `colored-reindeer`.
-
- After you read the instructions, your goal is to have three functions.
-
-1. A generator function to yield colors.
-1. A factory function to build a new reindeer object. This function will need to use the generator.
-1. The main builder function (see below) which will call the factory function and then place each object in an array.
-
-To start you off, paste in the following code into your JavaScript file.
-
-```js
-const coloredReindeerBuilder = function () {
-    const reindeer = ["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-
-    // Write a for loop that looks at each reindeer
-        // Invoke factory function to create reindeer object
-
-        // Put new reindeer object in coloredReindeer array
+> **Lightning Exercise:** Write a factory function that creates an object that represents a doctor. The function should accept three arguments.
+>
+>    1. Doctor's name
+>    1. Specialty _(Oncologist, pediatrician, etc...)_
+>    1. Address of practice
 
 
-    // Return coloredReindeer array
-}
-```
+> **Lightning Exercise:** Write a factory function that creates an object that represents a pet. The function should accept two arguments.
+>
+>    1. Pet name
+>    1. Pet breed
+>
+> Invoke the factory function 3 times and place each animal in an array stored in a variable named `BowWowKennels`
 
-Your job is to...
+## Practice: Music Row
 
-1. Create a new object that represents a reindeer - the object will include the reindeer's name and its color. Use a generator function to attach each of the following colors, in order, to the reindeer. Use a factory function to generate the reindeer object.
+Your job is to sign each of these promising young music stars to the appropriate label.
 
-    ```js
-    ["Blue", "Red", "Orange", "Purple", "Goldenrod", "Aquamarine", "Olive", "Azure", "Fuchsia", "Chocolate", "Salmon", "Amaranth"]
-    ```
-1. Place each object in an array named `coloredReindeer`.
+* JumpStop Records works with Funk and Rap artists.
+* Chatten Records works with Country and Bluegrass artists.
+* Polar Records works with Pop artists.
 
-    ```js
-    // Each object produced by the factory function
-    [{ "name": "Dasher", "color": "Blue" }, etc...]
-    ```
-1. Iterate over the `coloredReindeer` array and insert a new `<section>` element in the `colored-reindeer` element that displays the reindeer name, with a font color corresponding to the color in the object.
+Create an array for each of these record labels.
 
-    ```html
-    <!-- Example of what your HTML should look like -->
-    <article id="colored-reindeer">
-        <section style="color: Blue">Dasher</section>
-        <section style="color: Red">Dancer</section>
-        etc...
-    </article>
-    ```
+Create a factory function for each possible genre (_e.g. `createBluegrassArtist()`_). Then invoke the appropriate function for each of the following artists and place the resulting object in the corresponding label array.
 
-> **Pro tip:** Remember to make your code modular. The JavaScript for generating the data should be in one file, and the JavaScript for manipulating the DOM should be in a different file.
+* Bruce Atikins is a Country artist and is 23 years old
+* Jensen Brown is a Pop artist and is 20 years old
+* Dre Funkz is a Funk artist and is 25 years old
+* Dusta Grimes is a Rap artist and is 21 years old
+* Bartholomew Danielson is a Bluegrass artist and is 23 years old
+* Avilee Dallas is a Country artist and is 23 years old
+* Austin Kinkaid is a Pop artist and is 23 years old
+* Loyoncé Branis is a Rap artist and is 23 years old
+
+
