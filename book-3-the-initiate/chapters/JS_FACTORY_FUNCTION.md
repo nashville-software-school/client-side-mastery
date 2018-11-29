@@ -36,13 +36,11 @@ Yes.
 
 ```js
 // This is a factory function. It returns a new object every time.
-const createLocation = function (name, address, type) {
-    return {
-        "businessType": type,
-        "businessName": name,
-        "address": address
-    }
-}
+const createLocation = (name, address, type) => ({
+    "businessType": type,
+    "businessName": name,
+    "address": address
+})
 
 const kennel = createLocation("Bow Wow Kennels", "100 Infinity Way", "Animal Boarding")
 > { "businessType": "Animal Boarding", "businessName": "Bow Wow Kennels", "address": "100 Infinity Way" }
@@ -52,12 +50,7 @@ No.
 
 ```js
 // Not a factory function. Primitive type returned.
-const isLegal = function (activity, age) {
-    if (activity.minimumAge > age) {
-        return false
-    }
-    return true
-}
+const isLegal = (activity, age) => age >= activity.minimumAge
 
 const socialActivity = {
     activity: "Buy alcohol",
@@ -73,14 +66,14 @@ const canAprilDrink = isLegal(socialActivity, april.age)
 > false
 ```
 
-> **Lightning Exercise:** Write a factory function that creates an object that represents a doctor. The function should accept three arguments.
+> **Lightning Exercise 1:** Write a factory function that creates an object that represents a doctor. The function should accept three arguments.
 >
 >    1. Doctor's name
 >    1. Specialty _(Oncologist, pediatrician, etc...)_
 >    1. Address of practice
 
 
-> **Lightning Exercise:** Write a factory function that creates an object that represents a pet. The function should accept two arguments.
+> **Lightning Exercise 2:** Write a factory function that creates an object that represents a pet. The function should accept two arguments.
 >
 >    1. Pet name
 >    1. Pet breed
@@ -104,8 +97,8 @@ Create a factory function for each possible genre (_e.g. `createBluegrassArtist(
 * Dre Funkz is a Funk artist and is 25 years old
 * Dusta Grimes is a Rap artist and is 21 years old
 * Bartholomew Danielson is a Bluegrass artist and is 23 years old
-* Avilee Dallas is a Country artist and is 23 years old
-* Austin Kinkaid is a Pop artist and is 23 years old
-* Loyoncé Branis is a Rap artist and is 23 years old
+* Avilee Dallas is a Country artist and is 19 years old
+* Austin Kinkaid is a Pop artist and is 22 years old
+* Loyoncé Branis is a Rap artist and is 27 years old
 
 

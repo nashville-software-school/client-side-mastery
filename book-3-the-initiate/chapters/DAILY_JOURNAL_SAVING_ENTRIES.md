@@ -1,6 +1,6 @@
 # Daily Journal
 
-The learning objective for this chapter is to apply your knowledge of event listeners, and querying the DOM to make your daily journal form work and save entries to your API. You will also use `fetch` to make a POST request to your API.
+The learning objective for this chapter is to apply your knowledge of event listeners, and querying the DOM to make your daily journal form work and save entries to your API. You will also use `fetch` to make a POST request to your API, while using a factory function to generate the object that will be saved.
 
 ## Saving Entries
 
@@ -20,6 +20,10 @@ In your main JavaScript module (`journal.js`) add a click event listener to the 
 1. Using required attribute to ensure no blank entries
 1. No characters other than letters, numbers, `()`, `{}`, `:`, and `;`
 
+## Journal Entry Factory Function
+
+Define a factory function whose responsibility is to generate an object that represents a journal entry.
+
 ## Using POST Method to Create Resources
 
 Now you must use `fetch` to create your journal entry in the API. The default method is GET, so you've never had to specify and configuration options with your `fetch` statements before. However, with POST, you need to configure the request.
@@ -27,12 +31,16 @@ Now you must use `fetch` to create your journal entry in the API. The default me
 Here's an example.
 
 ```js
+// Invoke the factory function, passing along the form field values
+const newJournalEntry = ??
+
+// Use `fetch` with the POST method to add your entry to your API
 fetch("url", { // Replace "url" with your API's URL
     method: "POST",
     headers: {
         "Content-Type": "application/json"
     },
-    body: JSON.stringify(journalEntryObject)
+    body: JSON.stringify(newJournalEntry)
 })
 ```
 
@@ -51,7 +59,7 @@ post.then(get).then(render)
 
 Add the following validation code to your journal entry form fields.
 
-1. Pick a maximum length for concepts field and provide visual feedback if you type in a string that is longer than that maximum.
+1. Pick a maximum length for concepts field and provide visual feedback _(e.g. alert box, or putting text in a blank div)_ if you type in a string that is longer than that maximum.
 1. Test that the concept and entry fields contain no curse words. You can use regular expressions for that.
 
 ## Challenge: Entry Form Component
