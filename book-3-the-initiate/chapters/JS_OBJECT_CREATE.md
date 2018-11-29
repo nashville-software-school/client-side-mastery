@@ -6,12 +6,6 @@
 * Properties describe the objects
 * Methods define their behavior
 
-## Actor
-
-What do I mean by actor? To understand that, let's look at the definition of one of the core principles that professional software developers use to build flexible, scalable, maintainable systems - the Single Responsiblity Principle [SRP]. It's part of the collection of  SOLID principles.
-
-You need to read the [SOLID: Part 1](https://code.tutsplus.com/tutorials/solid-part-1-the-single-responsibility-principle--net-36074) article which covers the SRP and the term *Actor*.
-
 ## Using the Power of Object.create()
 
 Up to this point, we've been using the simplistic method for creating objects, which gives us no power, or control, on how it gets manipulated.
@@ -20,31 +14,30 @@ Up to this point, we've been using the simplistic method for creating objects, w
 const boringObject = {}
 ```
 
-Now you're going to learn about `Object.create()`, and once you see how much power it gives you, you will start to understand how it can help you comply with the SRP.
+In this chapter you're going to learn about `Object.create()`, which gives a JavaScript developer far more control over how external code can interact with it.
 
-![realize the power](images/object-create-realize.gif)
-
-> *The moment when a JavaScript developer realizes the true power of Object.create()*
-
-### Read Only Properties
+## Read Only Properties
 
 When you use `{}` to create an object, you have zero control how properties are created, deleted, or changed. Here's an object with very sensitive data in it.
 
 ```js
 const veryImportantInfo = {
     "socialSecurity": "934-11-0201",
-    "bankAccountNumber": "4483271255",
-    "bankRoutingNumber": "458979043"
+    "accountNumber": "4483271255",
+    "routingNumber": "458979043"
 }
 ```
 
 Another developer on your team is tasked with using that object in her code, so she writes a function for that purpose.
 
 ```js
-const requestFunds = function (customerInfo) {
-    // Note: Banks require that the account number and routing number be combined into a single value
-    customerInfo.bankAccountNumber = customerInfo.bankAccountNumber + customerInfo.bankRoutingNumber
-    const transactionInfo = customerInfo.bankAccountNumber
+const requestFunds = function (info) {
+    /*
+       Note: Banks require that the account number and
+       routing number be combined into a single value
+    */
+    info.accountNumber = info.accountNumber + info.routingNumber
+    const transactionInfo = info.accountNumber
 
     // Awesome code that performs the transaction goes here...
 }
@@ -53,30 +46,33 @@ const requestFunds = function (customerInfo) {
 The requirements she got for her feature required that the account number and the routing number be combined into a single string for the transaction to be successful. So while her code works perfectly fine, she inadvertantly modified YOUR OBJECT! It wasn't malicious, just a standard bug introduced when a developer isn't focused.
 
 ```js
-const requestFunds = function (customerInfo) {
-    // Note: Banks require that the account number and routing number be combined into a single value
-    customerInfo.bankAccountNumber = customerInfo.bankAccountNumber + customerInfo.bankRoutingNumber
-    const transactionInfo = customerInfo.bankAccountNumber
+const requestFunds = function (info) {
+    /*
+       Note: Banks require that the account number and
+       routing number be combined into a single value
+    */
+    info.accountNumber = info.accountNumber + info.routingNumber
+    const transactionInfo = info.accountNumber
 
     // Awesome code that performs the transaction goes here...
 }
 
 const veryImportantInfo = {
     "socialSecurity": "934-11-0201",
-    "bankAccountNumber": "4483271255",
-    "bankRoutingNumber": "458979043"
+    "accountNumber": "4483271255",
+    "routingNumber": "458979043"
 }
 
 requestFunds(veryImportantInfo)
 
-console.log(veryImportantInfo.bankAccountNumber)   // 4483271255458979043 --> Yikes!
+console.log(veryImportantInfo.accountNumber)   // 4483271255458979043 --> Yikes!
 ```
 
 ![panic!](./images/panic.gif)
 
 ## Read-only Properties
 
-Using the power of `Object.create()` you can prevent another developer from changing the value of any property on an object. The create method allows you to specify whether a property can be changed with the `writable` property. By setting it to false, that value cannot be changed. It is now a read-only property.
+Using the power of `Object.create()` you can prevent another developer from changing the value of any property on an object. You can specify whether a property can be changed with the `writable` property. By setting it to `false`, that value cannot be changed. It is now a read-only property.
 
 ```js
 const veryImportantInfo = Object.create(null, {
@@ -84,11 +80,11 @@ const veryImportantInfo = Object.create(null, {
         value: "934-11-0201",
         writable: false
     },
-    bankAccountNumber: {
+    accountNumber: {
         value: "4483271255",
         writable: false
     },
-    bankRoutingNumber: {
+    routingNumber: {
         value: "458979043",
         writable: false
     }
@@ -105,10 +101,10 @@ const veryImportantInfo = Object.create(null, {
     socialSecurity: {
         value: "934-11-0201"
     },
-    bankAccountNumber: {
+    accountNumber: {
         value: "4483271255"
     },
-    bankRoutingNumber: {
+    routingNumber: {
         value: "458979043"
     }
 })

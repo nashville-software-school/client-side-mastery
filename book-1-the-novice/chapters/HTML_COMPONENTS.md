@@ -46,6 +46,10 @@ HTML semantic tags can be considered components
 </aside>
 ```
 
+Here is a visualization for how semantic tags are intended to be in HTML for structuring a typical web page.
+
+![semantic tags](./images/html-semantic-tags.png)
+
 ## The Importance of Comments
 
 One of the most important things you can do for yourself, and your teammates, is comment your code. Let's start with adding comments for your components in this HTML snippet.
