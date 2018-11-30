@@ -6,16 +6,16 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 ## Chapters
 
-* Introduction A - [Installations](./chapters/GETTING_STARTED.md)
-* Chapter 1 - [Command Line Basics](./chapters/CLI_BASICS.md)
-* Chapter 2 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
-* Chapter 3 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
-* Chapter 4 - [How to Research Code](./chapters/MISC_RESEARCH.md)
-* Chapter 5 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
-* Chapter 6 - [Using the Debugger](../book-3-the-neophyte/chapters/MISC_DEBUGGING.md)
-* Chapter 7 - [Basic HTML Layout with Flexbox](./chapters/FLEXBOX.md)
-* Chapter 8 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
-* Chapter 9 - [Daily Journal - Part 1](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md)
+* Chapter 1 - [Installations](./chapters/GETTING_STARTED.md)
+* Chapter 2 - [Command Line Basics](./chapters/CLI_BASICS.md)
+* Chapter 3 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
+* Chapter 4 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
+* Chapter 5 - [How to Research Code](./chapters/MISC_RESEARCH.md)
+* Chapter 6 - [Introduction to Git and DVCS](./chapters/GIT_BASICS.md)
+* Chapter 7 - [Using the Debugger](../book-3-the-neophyte/chapters/MISC_DEBUGGING.md)
+* Chapter 8 - [Basic HTML Layout with Flexbox](./chapters/FLEXBOX.md)
+* Chapter 9 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
+* Chapter 10 - [Daily Journal - Part 1](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md)
 
 > ### __Sprint 1__ - Celebrity Tribute
 
