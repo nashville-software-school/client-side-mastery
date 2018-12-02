@@ -15,7 +15,8 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 7 - [Using the Debugger](../book-3-the-neophyte/chapters/MISC_DEBUGGING.md)
 * Chapter 8 - [Basic HTML Layout with Flexbox](./chapters/FLEXBOX.md)
 * Chapter 9 - [The Github Workflow](./chapters/GIT_WORKFLOW.md)
-* Chapter 10 - [Daily Journal - Part 1](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md)
+* Chapter 10 - [Accelerating Git Workflow on the Command Line](./chapters/GIT_CLI_SHORTCUTS.md)
+* Chapter 11 - [Daily Journal - Part 1](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md)
 
 > ### __Sprint 1__ - Celebrity Tribute
 

@@ -31,21 +31,19 @@ Becoming comfortable with your terminal will make you a master of the computer.
 
 Aliases are useful for accelerating your development workflow. You define aliases in your `.zshrc` file with the `alias` keyword. Let's look at an example.
 
-When working with the Git/Github workflow, there are several commands that you type over, and over, and over again. One of those is `git push origin myBranchName`. It becomes tedious to constantly type `git push origin`. Let's create an alias for it.
+You will often get lost in the command line, and going back to your home directory - where all your files live - can help you reset and find what you're looking for. You can create an alias named `gohome` which will take you there when you're lost.
 
-Open the `.zshrc` initialization file in your favorite code editor, and enter in the following alias.
+Open the `.zshrc` initialization file - which is in your home directory - in your favorite code editor, and enter in the following alias.
 
-`alias gpo="git push origin "`
+`alias gohome="cd ~"`
 
 > **Pro tip:** Make sure there are no spaces before, or after, the equals sign in an alias.
 
-Save the file, and reload your init file with the `source` command.
+Save the file, and reload your init file with the `source` command in the terminal.
 
 `source ~/.zshrc`
 
-The next time you need to push a local branch to Github, you can use this alias to save yourself a lot of typing.
-
-`gpo myBranchName`
+The command is now ready to use, and will be available now every time you open a new terminal.
 
 ### Bash Functions
 
@@ -123,20 +121,26 @@ Shells offer features geared specifically for interactive use rather than to aug
 1. `cd` back up to the `cli` directory.
 1. Remove the `practice` directory and all of its contents.
 
-## Aliases
-
-1. To make a new branch with git, you use the command `git checkout -b branchName`. Make an alias for yourself to save on typing.
-1. Likely the most used git command is `git status`. Alias it as `gs`.
-
 ## Functions
 
-1. Another process that is done many times during the course is initializing a new git repo on your machine.
+You're going to make your own help manual for the terminal. Open your `~/.zshrc` file in your code editor and add the following lines to it.
 
-    ```sh
-    git init
-    git remote add origin GithubRemoteURL
-    touch .gitignore
-    ```
+```sh
+help () {
+    clear
+    echo " - gohome                    Takes me to my home directory"
+    echo " - cat [filename]            Outputs the contents of a file right in the terminal"
+    echo " - touch [filename]          Creates a new file"
+    echo " - mkdir [directory]         Creates a new directory"
+    echo " - mg [directory]            Creates a new directory and goes into it"
+}
+```
 
-    Make a function that automates this for you, where you simply type in the function name followed by the new repo URL.
-1. Once you have that working, use the `echo` command to augment the function to autopopulate the `.gitignore` with standard files and functions that should be ignored.
+Source your initialization file.
+
+`source ~/.zshrc`
+
+Then you can use your help function.
+
+![help command example](./images/Bn6CSVqGxO.gif)
+
