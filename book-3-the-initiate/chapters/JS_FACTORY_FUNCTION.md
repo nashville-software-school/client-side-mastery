@@ -100,5 +100,3 @@ Create a factory function for each possible genre (_e.g. `createBluegrassArtist(
 * Avilee Dallas is a Country artist and is 19 years old
 * Austin Kinkaid is a Pop artist and is 22 years old
 * Loyoncé Branis is a Rap artist and is 27 years old
-
-
