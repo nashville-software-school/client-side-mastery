@@ -10,6 +10,11 @@ I'm thinking this is where Joe's list of things to study further could go?
 1. [List of Public APIs](https://github.com/toddmotto/public-apis)
 
 ## Software Development Podcasts
+
+### General Dev
+1. https://www.codenewbie.org/
+1. https://www.codenewbie.org/basecs
+
 ### C#
 1. https://www.dotnetrocks.com/ - A very long running (since 2003) interview show that focuses primarily on .Net related topics, but occasionally dips into other areas. Most episodes are very junior friendly.
 1. https://www.codingblocks.net/ - A panel discussion show with a .Net slant focused on more advanced programming and computer science topics. Although the topics can be advanced, the hosts try to (and often succeed in) making the topics accessible to more junior developers.
