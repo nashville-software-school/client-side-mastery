@@ -154,7 +154,31 @@ const wardrobe = {
 
 ### Square Bracket Notation
 
-Square bracket notation is most often used when the key name is stored in a variable. Here's what that looks like.
+Square bracket notation is most often used when the key name is stored in a variable. The basic mechanics of it are similar to dot notation, you just use square brackets with the key name inside.
+
+Above you saw how to access the `breed` key on the object below with dot notation.
+
+```js
+const lassie = {
+    age: 7,
+    breed: "Collie",
+    color: "White and Brown"
+}
+```
+
+Using square bracket notation, here's the syntax.
+
+```js
+// Square bracket notation for key access
+lassie["breed"]
+> "Collie"
+
+// Dot notation for key access
+lassie.breed
+> "Collie"
+```
+
+That's the basics, but you need to see how square is actually used in an application. Here's what it looks like when using a variable to look up a key on an object.
 
 ```js
 // Breed is the key you want to get the value of in the object below
@@ -206,7 +230,42 @@ const empireStateBuilding = {
 
 ## Arrays as Values
 
-Use dot notation to get to array and iterate over.
+So far, you've been largely accessing string and integer values in an object. However, values can be anything in the JavaScript language - including arrays. Consider this example.
+
+```js
+const kennel = {
+    name: "Nashville North Kennels",
+    address: "100 Demonbreun Road",
+    manager: "Harper Frankstone",
+    capacity: 50,
+    currentAnimals: ["Jet", "Snickers", "Blue", "Jacks", "Flap", "Barnum"]
+}
+```
+
+If you want to display all of the animals that are currently being boarded, you first have to access the array. You can use dot notation to get that value.
+
+```js
+const boardedAnimals = kennel.currentAnimals
+
+for (let i = 0; i < boardedAnimals.length: i++) {
+    console.log(boardedAnimals[i])
+}
+
+> "Jet"
+> "Snickers"
+> "Blue"
+> "Jacks"
+> "Flap"
+> "Barnum"
+```
+
+If you wanted to pull a single animal form the array, and display it, you can use the index value. To show the fourth animals in that array, you would use the following code.
+
+```js
+console.log(kennel.currentAnimals[3])
+
+> "Jacks"
+```
 
 > Lightning exercise to do that
 
