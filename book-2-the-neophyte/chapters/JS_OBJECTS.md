@@ -154,28 +154,55 @@ const wardrobe = {
 
 ### Square Bracket Notation
 
+Square bracket notation is most often used when the key name is stored in a variable. Here's what that looks like.
+
 ```js
+// Breed is the key you want to get the value of in the object below
 const keyToLookup = "breed"
 
-// Now we make JavaScript evaluate the variable and give us its value
+// First, make JavaScript evaluate the variable and give us its value
 console.log(keyToLookup)
+> "breed"
+```
 
+Now that you know that `keyToLookup` evaluates to `"breed"`, you can use the variable to lookup the value with square bracket notation.
+
+```js
 const lassie = {
     age: 7,
     breed: "Collie",
     color: "White and Brown"
 }
 
-// Now we can use the value of `keyToLookup` to get the breed out of the object
+// Use the value of `keyToLookup` to get the value you want
 const lassiesBreed = lassie[keyToLookup]
+> "Collie"
 ```
 
-> Lightning Exercises: Give an object with 10 value pairs. Student must use square bracket notation to access 5 of them.
+> **Instructor Note:** Talk about how expressions get evaluated from right to left, instead of the other way.
 
-> Lightning Exercises: For for other 5 use dot notation
+### Lightning Exercises
 
-> Lightning Exercises: Another object with 8 keys. 4 with square bracket and 4 with dot
+Time to practice dot and square-bracket notation. Use the following object to complete the lightning exercises below.
 
+```js
+const empireStateBuilding = {
+    stories: 103,
+    height: 1453,
+    address: "350 Fifth Avenue, Manhattan, New York 10118",
+    squareFeet: 2768591,
+    constructionDate: 1931,
+    cost: 40948900,
+    owner: "Empire State Realty Trust",
+    eastWestLength: 424,
+    northSouthLength: 187,
+    architect: "Shreve, Lamb & Harmon"
+}
+```
+
+> **Lightning Exercises 1:** Use dot notation to output all of the dimensions of the Empire State Building to the console.
+
+> **Lightning Exercises 2:** Use square bracket notation to output the remaining 5 properties to the console.
 
 ## Arrays as Values
 
