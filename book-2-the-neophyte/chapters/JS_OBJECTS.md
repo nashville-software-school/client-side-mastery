@@ -8,16 +8,21 @@ For example, the number 1 has no meaning in an application by itself. You have n
 
 ```js
 /*
-    Basic object representing a dog.
+    Basic object representing my dog Angus.
     - The object itself is labeled with the variable of `dog`
     - The integer of 1 is labeled with the key of `age`
 */
-const dog = {
+const angus = {
+    age: 1
+}
+
+// Another object representing my child Tessa
+const tessa = {
     age: 1
 }
 ```
 
-Now the number 1 has meaning, or context.
+Now the number 1 has meaning, or context, when assigned to a key on these objects.
 
 ## What does an Object Look Like?
 
@@ -37,10 +42,12 @@ const food = {
 }
 ```
 
-This is not an object. It doesn't represent a singular thing. It also has no curly braces, or key/values pairs.
+![](./images/key-value.png)
+
+This is not an object. It doesn't represent a singular thing. It also has no curly braces, or key/values pairs. When using an array to store these strings, they have now lost their context.
 
 ```js
-const foods = ["Ice cream", "Asparagus", "Bologna", "Peach"]
+const food = ["Hamburger", "Small", "Medium rare"]
 ```
 
 This is an object. It represents a desk and itemizes the properties of it.
@@ -60,16 +67,16 @@ Arrays are collections of similiar things. Objects are ways to define details of
 Here you define two separate objects. One represents a cat, and the other represents a dog. Each has their own properties _(key/value pairs)_ separated by commas.
 
 ```js
-const cat = {
+const whiskers = {
     species: "Cat",
-    name: "Jingles",
+    name: "Whiskers",
     age: 4,
     color: "Black"
 }
 
-const dog = {
+const dozer = {
     species: "Dog",
-    name: "Denver",
+    name: "Dozer",
     age: 7,
     color: "Brown"
 }
@@ -104,11 +111,11 @@ Take a few minutes to watch a video about [Variables vs. Arrays vs. Objects](htt
 
 > **Lightning Exercise 2:** Given two options of data structures - array or object - which should you use? You need to store list of animal names in a shelter. The names are "Kippers", "Jack", "Gypsy", "Angus", "Seymour Bouts", and "Sharky".
 
-> **Lightning Exercise 3:** Define an object for four family members, and put each one in an array named `familyMembers`. Define each famly member with the same key/value pairs.
+> **Lightning Exercise 3:** Define an object for four family members, and put each object in an array named `familyMembers`. Each family member object that you create should have the same keys on them, but the values will be different.
 
 ## Accessing Values on Objects
 
-There are two ways to access the values stored inside of an array. One is called dot notation, and the other is square bracket notation.
+There are two ways to access the values stored inside of an object. One is called dot notation, and the other is square bracket notation.
 
 ### Dot Notation
 
@@ -226,7 +233,7 @@ const empireStateBuilding = {
 
 > **Lightning Exercises 1:** Use dot notation to output all of the dimensions of the Empire State Building to the console.
 
-> **Lightning Exercises 2:** Use square bracket notation to output the remaining 5 properties to the console.
+> **Lightning Exercises 2:** Use square bracket notation to output the remaining 5 properties to the console. Create 5 variables first with the keys as their values. Use those variables to look up the values.
 
 ## Arrays as Values
 
