@@ -267,14 +267,25 @@ console.log(kennel.currentAnimals[3])
 > "Jacks"
 ```
 
-> Lightning exercise to do that
+### Lightning Exercise
 
-## Finding Keys on a Complex Object
+Examine the object below.
 
-1. Show them my Github history object
-1. Put object in gist
-1. Have them copy pasta into their code
-1. They have to console.log a specific commit message and the data of a specific push
+```js
+const nashvilleSoftwareSchool = {
+    founded: 2012,
+    director: "John Wark",
+    instructors: {
+        fullTime: ["Jisie", "Brenda", "Steve", "Joe", "Andy"],
+        partTime: ["Zoe", "Nathan"]
+    },
+    address: "500 Interstate Blvd. S"
+}
+```
+
+> **Lightning Exercise 1:** Output the names of the part-time instructors followed by the names of the full-time instructors in the console.
+
+> **Lightning Exercise 2:** Output only Andy and Zoe in the console.
 
 ## Practice: Accessing Property Values
 
