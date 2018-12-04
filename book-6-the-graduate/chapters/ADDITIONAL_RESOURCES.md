@@ -1,6 +1,4 @@
-# Additional Resources
-
-I'm thinking this is where Joe's list of things to study further could go?
+# Additional Resources to ABC (Always Be Coding)
 
 ## Code Practice Sites
 1. [CodeWars](https://www.codewars.com/)
