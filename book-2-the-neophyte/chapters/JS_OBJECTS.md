@@ -113,7 +113,7 @@ Take a few minutes to watch a video about [Variables vs. Arrays vs. Objects](htt
 
 > **Lightning Exercise 3:** Define an object for four family members, and put each object in an array named `familyMembers`. Each family member object that you create should have the same keys on them, but the values will be different.
 
-## Accessing Values on Objects
+## Setting and Accessing Values on Objects
 
 There are two ways to access the values stored inside of an object. One is called dot notation, and the other is square bracket notation.
 
@@ -157,6 +157,25 @@ const wardrobe = {
     depth: 38,
     width: 50
 }
+```
+
+You can also use dot notation to create a new key on an object if you need to.
+
+```js
+wardrobe.material = "Cedar"
+```
+
+You just added a new key to the object stored in the `wardrobe` variable. If you output it to the console, you will see it along with the others that were already defined.
+
+```js
+console.log(wardrobe)
+
+> contents: (5) ["Dress shirt", "Jeans", "Suit", "Skirt", "Tennis shoes"]
+depth: 38
+height: 80
+manufacturer: "Killibrew & Sons"
+material: "Cedar"
+width: 50
 ```
 
 ### Square Bracket Notation
