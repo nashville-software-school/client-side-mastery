@@ -144,6 +144,29 @@ Your job is to query the Open Food Facts API for each of your products, and list
 
 > **Helpful hints:** You will need to use the `forEach` array method to iterate your foods. Inside that `forEach`, you will need to perform another `fetch` to get the additional information. The barcode value must be interpolated inside the URL for the inner fetch.
 
+```js
+fetch("http://localhost:8088/food")
+    .then(response => response.json())
+    .then(myParsedFoods => {
+        myParsedFoods.forEach(food => {
+            console.log(food) // Should have a `barcode` property
+
+            // Now fetch the food from the Food API
+            fetch(`https://world.openfoodfacts.org/api/v0/product/${what goes here?}.json`)
+                .then(response => response.json())
+                .then(productInfo => {
+                    food.ingredients = productInfo.product.ingredients
+
+                    // Produce HTML representation
+                    const foodAsHTML = foodFactory(food)
+
+                    // Add representaiton to DOM
+                    addFoodToDom(foodAsHTML)
+                })
+        })
+    })
+```
+
 #### Example with ingredients included
 
 ![foods with ingredients included](./images/foods-with-ingredients.png)
