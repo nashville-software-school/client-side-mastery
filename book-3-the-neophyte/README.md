@@ -22,7 +22,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 14 - [Handling Browser Events](./chapters/JS_EVENTS.md)
 * Chapter 15 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_MODULAR.md)
 
-> ### __Sprint 2__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
+> ### __Sprint 2__ - [Welcome to Nashville](https://github.com/nashville-software-school/welcome-to-nashville)
 
 ## Supplementary Content
 
