@@ -1,5 +1,11 @@
 # Why Developers Use Objects
 
+## Why are you Learning this?
+
+Since objects are the core concept behind Object Oriented Programming - what you are learning here at NSS - you are going to learn how to use objects to provide value and context to data in your applications. As developers, we write software in order to automate processes that people already perform with real world things. Your code will represent those people and things as objects.
+
+## Getting Started
+
 Your job as a web application developer will often be to take a process that is done by an organization and build an application that does the same thing.
 
 For example, a small company may use a colossal Excel spreadsheet to track all of their business expenses, and they email it around to each other, and eventually the accounting department gets it. They eventually realize that this process is rife with opportunities for human error, and the file becomes so large that it can't be emailed any more.
@@ -91,6 +97,70 @@ employee.role = "Sales Manager"
 
 I just changed the state of the JavaScript object that is representing Michael Tambornino.
 
+## Object Behavior
+
+Since you will be writing objects to represent people, things, and processes, then you will also need to define the behaviors of each. You do that by defining a function as the value of a key. These are called methods instead of properties.
+
+They are just regular functions, but software developers call them methods within the context of an object because they are defining behaviors of a specific thing.
+
+Here's an example.
+
+```js
+const rufusTheDog = {
+    age: 4,                 // Property
+    species: "Dalmatian",   // Property
+    bark: function () {     // Method
+        window.alert("WOOF!")
+    }
+}
+
+rufusTheDog.bark()
+```
+
+You can also accept arguments that change the behavior of the method.
+
+```js
+const rufusTheDog = {
+    age: 4,
+    species: "Dalmatian",
+    bark: function (something) {
+        window.alert(`Rufus barks 'WOOF!' at ${something}`)
+    }
+}
+
+rufusTheDog.bark("mailman")
+rufusTheDog.bark("leaf")
+rufusTheDog.bark("child")
+```
+
+## Introduction to This
+
+
+```js
+const rufusTheDog = {
+    age: 4,
+    species: "Dalmatian",
+    contentsOfStomach: [],
+    eat: function (item) {
+        this.contentsOfStomach.push(item)
+    },
+    puke: function () {
+        this.contentsOfStomach.clear()
+    }
+    bark: function (something) {
+        window.alert(`Rufus barks 'WOOF!' at ${something}`)
+    }
+}
+
+rufusTheDog.eat("leftovers")
+rufusTheDog.eat("treat")
+rufusTheDog.eat("bunny")
+```
+
+### Debugging Your Code
+
+> Walkthrough of how to use the debugger to step through this code.
+
 ## Videos to Watch
 
 1. [What's an Object in JavaScript?](https://www.youtube.com/watch?v=8iXoWC9XcU8)
@@ -110,6 +180,34 @@ Create an object that represents your pet.
 1. Nicknames property with an array value. Array contains strings.
 1. Age property with an integer value
 
+## Practice: Fast Food Ordering
+
+You need to write code to represent the process of ordering food at a fast food joint. Your restaurant is Bob's Burgers, and you have some starter code below. The object will have two behaviors that you must define.
+
+1. The object should have a property named `orders` that is an array. You will need to define this.
+1. Define a function to represent the behavior of placing an order. It should accept one argument named `meal`. This argument will be an object. There is starter code provided.
+1. Define a function to represent the behavior of getting all orders. It should return the `order` property (hint: `this`). You will need to define this.
+1. Each meal object should have three properties: `sandwichType`, `fries` (true or false), and `drinkSize`.
+
+
+```js
+const restaurant = {
+    name: "Bob's Burgers",
+    placeOrder: function () {
+    }
+}
+
+const chickenComboMeal = {
+
+}
+
+// Place an order
+restaurant.placeOrder()
+
+// Invoke the function to return the list of all orders
+
+// Output all orders to the console using console.table()
+```
 
 ## Challenge: Political Campaign
 

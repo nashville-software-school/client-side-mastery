@@ -6,6 +6,18 @@ In this chapter, you are going to use a tool called `json-server` to store your 
 
 Visit the Github [repo for json-server](https://github.com/typicode/json-server) if you want to learn more details.
 
+## Why are you Learning this?
+
+Further in the course, you will be learning how to build powerful, professional database systems. This chapter gets you started on how to think about structuring, and storing that data later on.
+
+## API
+
+What is an API? It's an acronym for _Application Programming Interface_. To best decribe it, reverse the words. It's an interface provided to developers to program an application.
+
+* Video: [What is an API?](https://www.youtube.com/watch?v=s7wmiS2mSXY)
+* Video: [What Is an API? Learn the Basics in 3 Minutes](https://www.youtube.com/watch?v=Rha1_St_9kw)
+* Video: [What is an API? - Application Programming Interface](https://www.youtube.com/watch?v=B9vPoCOP7oY)
+
 ## Setup
 
 ### Install JSON Server
@@ -24,12 +36,22 @@ cd $_
 touch database.json
 ```
 
-Next, pre-populate your API with some of your favorite foods. Each object should have the following keys.
+Next, pre-populate your API with some of your favorite foods by defining them as objects with properties. Each object should have the following properties. The value of each property is specified in parenthesis.
 
-1. Name (_string_)
-1. Type (_string_)
-1. Ethnicity (_string_)
-1. Side dishes (_array_)
+1. id (_integer_) - An incrementing unique identifier
+1. name (_string_) - The name of the food
+1. category (_string_) - The category of the food item
+1. ethnicity (_string_) - The ethnicity, or country of origin, of the food
+
+Each of these objects will be stored in an array. Below you will find an example of what should be in your `database.json` file. Notice that **all** of the key names are surrounded by double quotes. This is necessary when data in stored in JSON format.
+
+What is JSON? It's short for JavaScript Object Notation, and your instructor will discuss this with you. Here are some resources you can use to learn more.
+
+* Video: [JSON - Beginners Guide to learning JSON with JavaScript](https://www.youtube.com/watch?v=qACmtQFEWOw)
+* Video: [JSON explained in less than 10 minutes](https://www.youtube.com/watch?v=_I9KgdRvyQA)
+* Article: [JSON - Introduction](https://www.w3schools.com/js/js_json_intro.asp)
+* Tool: [Online JSON editor](https://jsoneditoronline.org/)
+* Tool: [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa) - This will display JSON beautifully in the browser
 
 > Example data in `database.json`
 
@@ -39,38 +61,38 @@ Next, pre-populate your API with some of your favorite foods. Each object should
     {
         "id": 1,
         "name": "Linguine",
-        "type": "pasta",
+        "category": "pasta",
         "ethnicity": "italian"
     },
     {
         "id": 2,
         "name": "Massaman curry",
-        "type": "curry",
+        "category": "curry",
         "ethnicity": "thai"
     },
     {
         "id": 3,
         "name": "Green curry",
-        "type": "curry",
+        "category": "curry",
         "ethnicity": "thai"
     },
     {
         "id": 4,
         "name": "Ravioli Funghi",
-        "type": "pasta",
+        "category": "pasta",
         "ethnicity": "italian"
     },
     {
         "id": 5,
         "name": "Tuscan Soup",
-        "type": "vegetarian",
+        "category": "vegetarian",
         "ethnicity": "italian"
     }
     ]
 }
 ```
 
-Now that the routes are configured and you have some data, you can start your API with the following command.
+Now that the food resource is configured and you have some data, you can start your API with the following command.
 
 **_Make sure you are in the `api` directory of your project._**
 

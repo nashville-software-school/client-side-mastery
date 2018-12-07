@@ -24,6 +24,10 @@ const tessa = {
 
 Now the number 1 has meaning, or context, when assigned to a key on these objects.
 
+## Why are you Learning this?
+
+Objects are the basis of what's called Object Oriented Programming, where everything in your application is represented as an object to represent data, and be manipulated by you.
+
 ## What does an Object Look Like?
 
 Until you get to more advanced JavaScript, you can recognize an object because it follows this pattern.
@@ -373,4 +377,6 @@ console.log(githubData[?].)
 ![collapsing array objects](./images/Y4jYfHibLf.gif)
 
 
-## Challenge
+## What's Next?
+
+You are learning about objects because they are the basic building block of everything you will be creating moving forward. For example, the next couple chapters have you building components to be displayed in the browser, and those will be objects. You will also be storing data on your file system, and then retrieving them for later use. They will be stored as objects.
