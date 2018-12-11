@@ -133,8 +133,11 @@ rufusTheDog.bark("leaf")
 rufusTheDog.bark("child")
 ```
 
-## Introduction to This
+## Introduction to `this`
 
+In JavaScript, the keyword of `this` refers to the execution context - which is a whole can of worms that you're not going to get into right now. In the context of using objects in JavaScript, `this` is more straightforward, in that it will refer to the object instance itself.
+
+Consider the following code.
 
 ```js
 const rufusTheDog = {
@@ -146,16 +149,51 @@ const rufusTheDog = {
     },
     puke: function () {
         this.contentsOfStomach.clear()
-    }
+    },
     bark: function (something) {
         window.alert(`Rufus barks 'WOOF!' at ${something}`)
     }
 }
+```
 
+The variable `rufusTheDog` contains an object, and two of the methods use the `this` keyword. In this content `this` _**is**_ `rufusTheDog`. Now you can invoke the eat method for Rufus a few times.
+
+```js
 rufusTheDog.eat("leftovers")
 rufusTheDog.eat("treat")
 rufusTheDog.eat("bunny")
 ```
+
+Now that Rufus has eaten some food, you can inspect his belly.
+
+```js
+console.log(rufusTheDog.contentsOfStomach)
+
+> [ 'leftovers', 'treat', 'bunny' ]​​​​​
+```
+
+Since `this === rufusTheDog`, why don't we just use `rufusTheDog` inside the object? In the code below, `this` has been replaced the the variable name.
+
+```js
+const rufusTheDog = {
+    age: 4,
+    species: "Dalmatian",
+    contentsOfStomach: [],
+    eat: function (item) {
+        rufusTheDog.contentsOfStomach.push(item)
+    },
+    puke: function () {
+        rufusTheDog.contentsOfStomach.clear()
+    },
+    bark: function (something) {
+        window.alert(`Rufus barks 'WOOF!' at ${something}`)
+    }
+}
+```
+
+While this works perfectly fine, imagine that you need to change the variable `rufusTheDog` to `myDogRufus`. Since humans are prone to making mistakes, a developer may miss the fact that the other variables need to be changed as well.
+
+By using `this`, you never have to worry about changing multiple lines of code.
 
 ### Debugging Your Code
 
