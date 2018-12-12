@@ -47,7 +47,7 @@ Looks a bit familiar, right? We're making a subclass of an existing `Component` 
 
 Sort of.
 
-That stuff that looks like HTML? It's not. It's called (JSX)[https://reactjs.org/docs/introducing-jsx.html], and it basically allows us to write JavaScript that looks like HTML in our code, so we can better visualize what the eventual rendered HTML structure will look like.
+That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code, so we can better visualize what the eventual rendered HTML structure will look like.
 
 Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a factory function. It's just a function that returns an object.
 
