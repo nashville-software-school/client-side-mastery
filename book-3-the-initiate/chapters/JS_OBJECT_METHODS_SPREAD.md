@@ -4,6 +4,8 @@
 
 Since objects are the core concept behind Object Oriented Programming - what you are learning here at NSS - this chapter is going to prepare you for working with object methods which allow you to search and manipulate object with more ease.
 
+You are also going to learn a new kind of `for` loop in JavaScript. It's the [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop.
+
 
 ## Object Methods
 
@@ -173,6 +175,10 @@ Now your report meets all of Randall's basic requirements.
 
 ![](./images/carlot-entries.png)
 
+
+> **Lightning Exercise 1:** Create an object to represent your favorite dinner item (e.g. meatloaf, spaghetti, fried fish, gumbo). Each object should have a `name` property, but you can add any other properties that you like, such as size, weight, ethnicity, vegetarian boolean.
+
+> **Lightning Exercise 2:** Output all of the key/value pairs into the DOM inside an `<article>` element with a class of `food`.
 
 ## Rest and Spread Operators
 
