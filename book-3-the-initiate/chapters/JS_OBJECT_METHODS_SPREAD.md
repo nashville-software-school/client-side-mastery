@@ -191,6 +191,8 @@ Randall has come back with a new job for you. Each week, he wants to see a repor
 1. Display all keys and values for the car sold.
 1. Display the gross profit made on the sale.
 
+![](./images/weekly-sales.png)
+
 Here's your first data structure for the sales made last week. You will need to start off by iterating the array of sales with a `forEach()` method. Then iterate the entries of the `vehicle` property of each sale.
 
 ```js
