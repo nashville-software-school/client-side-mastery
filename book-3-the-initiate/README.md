@@ -6,7 +6,7 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 2 - [Collecting User Input](./chapters/USER_INPUT.md)
 * Chapter 3 - [Factory Functions](./chapters/JS_FACTORY_FUNCTION.md)
 * Chapter 4 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md)
-* Chapter 5 - [Advanced Control of Objects](./chapters/JS_OBJECT_CREATE.md)
+* Chapter 5 - [Advanced Usage of Objects](./chapters/JS_OBJECT_CREATE.md)
 * Chapter 6 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
 * Chapter 7 - [Daily Journal - Part 6](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md)
 * Chapter 8 - [jQuery](./chapters/JQUERY.md)

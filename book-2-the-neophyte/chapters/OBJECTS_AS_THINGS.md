@@ -78,7 +78,7 @@ const expenseReport = {
 
 ## Object State
 
-Ok, I mentioned "object state" above, and you might not understand what I mean by that. Stated as simply as possible, when you hear the words _object state_, it means that you want to know what the values of an object's properties are _**at this moment in time**_. That means an object's state can change, i.e. a property's value can be reassigned.
+Ok, I mentioned "object state" above, and you might not understand what I mean by that. Stated as simply as possible, when you hear the words _object state_, it means that you want to know what the values of an object's properties are _**at this moment in time**_. That means an object's state can change, i.e.  property values can be reassigned.
 
 ```js
 const employee = {
@@ -89,13 +89,13 @@ const employee = {
 }
 ```
 
-Those property values define the __*initial state*__ of this employee that we're representing in code.
+Those property values define the __*initial state*__ of this employee that we're representing in code. Now write the following line of code.
 
 ```js
 employee.role = "Sales Manager"
 ```
 
-I just changed the state of the JavaScript object that is representing Michael Tambornino.
+You just changed the state of the JavaScript object that is representing Michael Tambornino.
 
 ## Object Behavior
 
