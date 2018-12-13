@@ -2,7 +2,7 @@
 
 ## Why are you Learning This?
 
-Since objects are the core concept behind Object Oriented Programming - what you are learning here at NSS - this chapter is going to prepare you for working with object methods which allow you to search and manipulate object with more ease.
+Since objects are the core concept behind Object Oriented Programming - what you are learning here at NSS - this chapter is going to prepare you for working with object methods which allow you to search object key and values and display them with more ease.
 
 You are also going to learn a new kind of `for` loop in JavaScript. It's the [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop.
 
@@ -85,7 +85,10 @@ Since you just need the values of each object, you can use the `Object.values()`
 1. Iterate the array of cars with `forEach()`.
 1. Use `Object.values()` to iterate the values of each car.
 
-For this to work, you will need an HTML element in your `index.html` with an id of `app`.
+
+## For Of with Object.values()
+
+For this to work, you will need an HTML element in your `index.html` with an id of `app`. Then you will use a `for..of` loop to display all the values.
 
 ```js
 const outputElement = document.querySelector("#app")
@@ -99,6 +102,23 @@ allCars.forEach(car => {
     }
 })
 ```
+
+### Lightning Exercises
+
+> **Lightning Exercise 1:** Create an object that represents a bill from your doctor's office. It should have the following properties: `officeName`, `streetAddress`, `doctorName`, `patientName`, `visitDate`, `amountBilled`, `dueDate`. You provide example values for each one.
+
+> **Lightning Exercise 2:** Copy the code below and paste it above your object.
+>    ```js
+>    const dateVisited = "visitDate"
+>    const owed = "amountBilled"
+>    const patient = "patientName"
+>    ```
+>
+> Use square bracket notation to output the value of those three properties to the console in Chrome.
+
+> **Lightning Exercise 3:** Use `Object.values()` to output **all** the property values to the console in Chrome.
+
+## For Of with Object.keys()
 
 At this point, you proudly show Randall the results of your hard work, and as usual, changes are immediately requested.
 
@@ -138,6 +158,14 @@ allCars.forEach(car => {
 
 You're very proud of yourself.
 
+### Lightning Exercises
+
+> **Lightning Exercise 1:** Output all of the key names from your doctor's office bill to the console in Chrome.
+
+> **Lightning Exercise 2:** Output all of the key names from your doctor's office bill to the DOM inside a parent `<section>` element. Wrap each one in a `<span>` element.
+
+## For Of with Object.entries()
+
 > **Randall:** "Um, that's cool and all, but eventually we're going to have more than 4 cars to sell and if I'm scrolling and I forget what the properties are, that means I'll have to scroll all the way back up to the top to remember. Can't you just list the properties on each car as well as the values?"
 
 Time to refactor!
@@ -166,8 +194,8 @@ allCars.forEach(car => {
     outputElement.innerHTML += "<hr/>"
 
     for (const entry of Object.entries(car)) {
-    outputElement.innerHTML += `<div>${entry[0]}: ${entry[1]}</div>`
-}
+        outputElement.innerHTML += `<div>${entry[0]}: ${entry[1]}</div>`
+    }
 })
 ```
 
@@ -179,9 +207,6 @@ Now your report meets all of Randall's basic requirements.
 > **Lightning Exercise 1:** Create an object to represent your favorite dinner item (e.g. meatloaf, spaghetti, fried fish, gumbo). Each object should have a `name` property, but you can add any other properties that you like, such as size, weight, ethnicity, vegetarian boolean.
 
 > **Lightning Exercise 2:** Output all of the key/value pairs into the DOM inside an `<article>` element with a class of `food`.
-
-## Rest and Spread Operators
-
 
 ## Practice: Car Sales
 
