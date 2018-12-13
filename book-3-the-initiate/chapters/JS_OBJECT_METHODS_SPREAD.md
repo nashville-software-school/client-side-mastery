@@ -80,7 +80,7 @@ You want to produce the following report. It's not pretty, but it shows all the 
 
 ![](./images/carlot.png)
 
-Since you just need the values of each object, you can use the `Object.values()` method. Here where you would start.
+Since you just need the values of each object, you can use the `Object.values()` method. Here is how you would start.
 
 1. Iterate the array of cars with `forEach()`.
 1. Use `Object.values()` to iterate the values of each car.
@@ -180,7 +180,7 @@ const bug = {
     legs: 6
 }
 
-for (const entry in Object.entries(bug)) {
+for (const entry of Object.entries(bug)) {
     console.log(entry)
 }
 
