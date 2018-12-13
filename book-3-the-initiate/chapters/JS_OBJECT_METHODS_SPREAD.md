@@ -1,4 +1,4 @@
-# Object Methods, Constructing, and Destructuring
+# Object Methods
 
 ## Why are you Learning This?
 
