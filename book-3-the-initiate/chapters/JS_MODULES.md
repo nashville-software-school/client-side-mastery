@@ -4,8 +4,18 @@ Browserify allows you to build modules of JavaScript logic that export functiona
 
 ![browserify visualization](./images/browserify.png)
 
-Let's look at an example.
+## Why are You Learning This?
 
+Every major application that you will ever work on is modular by design. Building applications with modularity in mind achieves several goals.
+
+1. Easier to fix bugs.
+1. Easier to understand for new teammates.
+1. Easier to refactor.
+1. Easier to add new features.
+1. Reduces code conflicts on a team.
+1. Easier to remove obsolete features.
+
+Also, there is a more immediate goal. Your main client-side library that you will be learning in a few weeks - React - is based on the whole concept of building modular applications by using Components.
 
 ## Setting Up Your Project
 
@@ -43,7 +53,7 @@ In the sample application you cloned, the four source code files - `src/scripts/
 If you open `public/index.html`, you will notice only one script component.
 
 ```html
-<script src="hellogoodbye.js"></script>
+<script src="bundle.js"></script>
 ```
 
 That file actually contains **ALL** of the code that exists in the four source code files you created.
@@ -78,22 +88,14 @@ In Visual Studio Code, open that file and place the following code in it. This m
     Name: carFactory.js
     Purpose: Produces a new car from a factory
 */
-class Car {
-    constructor (make, model) {
-        this.make = make
-        this.model = model
+const CarFactory = (make, model) => {
+    const newCar = {
+        "make": make,
+        "model": model
     }
 
-    toString () {
-        return `a ${this.make} ${this.model}`
-    }
-
-    drive (destination) {
-        return `You drive ${this} to ${destination}`
-    }
+    return newCar
 }
-
-const CarFactory = (make, model) => new Car(make, model)
 
 export default CarFactory
 ```
@@ -162,35 +164,33 @@ Instead of the garage being a simple array in your main module, you are going to
 */
 
 /*
-    This array only exists within the scope of this module.
+    This array only exists within the scope of this method.
     Therefore, no other module can access it. However,
-    the `garageSupervisor` object you define below allows
+    the `garageSupervisor` object your define below allows
     code in other modules to indirectly access it by using
     the methods.
 */
 const garage = []
 
-class Garage {
-  store(car) {
-    garage.push(car)
-  }
+const GarageManager = {
+    store: function (car) {
+        garage.push(car)
+    },
+    retrieve: function (carToFind) {
+        return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
+    },
+    /*
+        The inventory property is the only way for external code to
+        read the value of the garage variable. There is no setter
+        either. It is a read only property.
+    */
+    inventory: function () {
+        return garage
+    }
 
-  retrieve(carToFind) {
-    return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
-  }
-
-  /*
-       The inventory property is the only way for external code to
-       read the value of the garage variable. There is no setter
-       either. It is a read only property.
-   */
-  get inventory() {
-    return garage
-  }
 }
 
-const GarageFactory = () => new Garage()
-export default GarageFactory
+export default GarageManager
 ```
 
 Now let's import this module into our main module and use its methods. Adding a couple more cars just so the output changes.
@@ -201,17 +201,16 @@ Now let's import this module into our main module and use its methods. Adding a 
     Name: main.js
     Purpose: Entry point of our application
 */
-import CarFactory from "./carFactory"
-import GarageFactory from "./garage"
+import carFactory from "./carFactory"
+import garage from "./garage"
 
 // Create two cars using the function you imported
-const mustang = CarFactory("Ford", "Mustang")
-const accord = CarFactory("Honda", "Accord")
-const santafe = CarFactory("Hyundai", "Santa Fe")
-const sierra = CarFactory("GMC", "Sierra")
+const mustang = carFactory("Ford", "Mustang")
+const accord = carFactory("Honda", "Accord")
+const santafe = carFactory("Hyundai", "Santa Fe")
+const sierra = carFactory("GMC", "Sierra")
 
-// Make a new garage and store cars in it
-const garage = GarageFactory() //Remember, this function return a new instance of Garage
+/// Store the cars in the garage
 garage.store(mustang)
 garage.store(accord)
 garage.store(santafe)

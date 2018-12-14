@@ -2,6 +2,12 @@
 
 [jQuery](https://jquery.com/) is, arguably, the most popular JavaScript library ever created. You will find it in use everywhere on the Web, because it was the first tool written to allow developers to write interactive JavaScript code that would work across all browsers. Before jQuery came along, development teams had to spend hours upon hours of time during a project to ensure that their code worked in Internet Explorer, Chrome, Firefox, and Safari.
 
+## Why am I Learning This?
+
+Most any application that wasn't built in the last 6 months is pretty much guaranteed to be using jQuery. For more than a decade, it was, by far, the most popular JavaScript library on Earth.
+
+Even though the JavaScript that you've been using so far does most of what jQuery was useful for, we need to show you the syntax, and have you practice it, so that you will know what you're looking at when you get a job and have to work on a JavaScript application.
+
 ## Selecting Elements
 
 The vanilla way.
