@@ -67,7 +67,7 @@ In your boilerplate project, you will define a code module that contains the cod
 Make sure you are in the root directory of the application.
 
 ```sh
-touch src/scripts/carFactory.js
+touch src/scripts/createCar.js
 ```
 
 In Visual Studio Code, open that file and place the following code in it. This module does one thing only: it produces car objects. Each car object has a `make` and `model` property on it.
@@ -75,11 +75,10 @@ In Visual Studio Code, open that file and place the following code in it. This m
 ```js
 /*
     Author: your name here
-    Name: carFactory.js
-    Purpose: Produces a new car from a factory
+    Name: createCar.js
+    Purpose: Produces a new car object
 */
-const carFactory = {
-  createCar (make,model) {
+  const createCar = function(make,model) {
     return {
     
       make,
@@ -94,9 +93,8 @@ const carFactory = {
       }
     }
   }
-}
 
-export default carFactory;
+export default createCar;
 ```
 
 ### Main Application Logic
@@ -111,14 +109,14 @@ Open the `src/scripts/main.js` file and get rid of what's in there already, and 
     Name: main.js
     Purpose: Entry point of our application
 */
-import CarFactory from "./carFactory"
+import createCar from "./createCar"
 
 
 const garage = []
 
 // Create two cars using the function you imported
-const mustang = CarFactory.createCar("Ford", "Mustang")
-const accord = CarFactory.createCar("Honda", "Accord")
+const mustang = createCar("Ford", "Mustang")
+const accord = createCar("Honda", "Accord")
 
 // Drive the cars for a while
 console.log(mustang.drive("the grocery store"))
@@ -146,7 +144,7 @@ Open [http://localhost:8080/](http://localhost:8080/) in Chrome, view the Develo
 You can take this a step further and make the car garage it's own module.
 
 ```sh
-touch src/scripts/garageFactory.js
+touch src/scripts/createGarage.js
 ```
 
 Instead of the garage being a simple array in your main module, you are going to make an object that has more complex behaviors - which are expressed as methods on an object.
@@ -158,21 +156,20 @@ Instead of the garage being a simple array in your main module, you are going to
 ```js
 /*
     Author: your name here
-    Name: garageFactory.js
+    Name: createGarage.js
     Purpose: To store cars in garages
 */
 
 /*
     This array only exists within the scope of this module.
     Therefore, no other module can access it. However,
-    the object returned by `garageFactory` object you define below allows
+    the object returned by `createGarage` object you define below allows
     code in other modules to indirectly access it by using
     the methods.
 */
 const garage = []
 
-const garageFactory = {
-  createGarage() {
+  const createGarage = function() {
     return {
       store(car) {
         garage.push(car)
@@ -199,7 +196,7 @@ const garageFactory = {
 }
 
 
-export default garageFactory
+export default createGarage
 ```
 
 Now let's import this module into our main module and use its methods. Adding a couple more cars just so the output changes.
@@ -210,17 +207,17 @@ Now let's import this module into our main module and use its methods. Adding a 
     Name: main.js
     Purpose: Entry point of our application
 */
-import CarFactory from "./carFactory"
-import GarageFactory from "./garage"
+import createCar from "./createCar"
+import createGarage from "./createGarage"
 
 // Create two cars using the function you imported
-const mustang = CarFactory.createCar("Ford", "Mustang")
-const accord = CarFactory.createCar("Honda", "Accord")
-const santafe = CarFactory.createCar("Hyundai", "Santa Fe")
-const sierra = CarFactory.createCar("GMC", "Sierra")
+const mustang = createCar("Ford", "Mustang")
+const accord = createCar("Honda", "Accord")
+const santafe = createCar("Hyundai", "Santa Fe")
+const sierra = createCar("GMC", "Sierra")
 
 // Make a new garage and store cars in it
-const garage = GarageFactory.createGarage() //Remember, this function return a new instance of Garage
+const garage = createGarage() //Remember, this function return an object
 garage.store(mustang)
 garage.store(accord)
 garage.store(santafe)
