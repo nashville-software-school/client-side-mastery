@@ -1,1 +1,1 @@
-# Debugger and Browserify
+# Debugging Browserify
