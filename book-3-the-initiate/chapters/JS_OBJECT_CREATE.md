@@ -1,23 +1,3 @@
-:TODO
-
-# Object Methods and Destructuring
-
-## Object Methods
-
-
-## Rest and Spread Operators
-
-
-
----
-
-
-
-
-
-
-
-
 # Powerful Object Creation in JavaScript
 
 ## Key Concept
