@@ -78,24 +78,25 @@ In Visual Studio Code, open that file and place the following code in it. This m
     Name: carFactory.js
     Purpose: Produces a new car from a factory
 */
-class Car {
-    constructor (make, model) {
-        this.make = make
-        this.model = model
+const carFactory = {
+  createCar (make,model) {
+    return {
+    
+      make,
+      model,
+    
+      toString () {
+          return `a ${this.make} ${this.model}`
+      },
+    
+      drive (destination) {
+          return `You drive ${this} to ${destination}`
+      }
     }
-
-    toString () {
-        return `a ${this.make} ${this.model}`
-    }
-
-    drive (destination) {
-        return `You drive ${this} to ${destination}`
-    }
+  }
 }
 
-const CarFactory = (make, model) => new Car(make, model)
-
-export default CarFactory
+export default carFactory;
 ```
 
 ### Main Application Logic
@@ -116,8 +117,8 @@ import CarFactory from "./carFactory"
 const garage = []
 
 // Create two cars using the function you imported
-const mustang = CarFactory("Ford", "Mustang")
-const accord = CarFactory("Honda", "Accord")
+const mustang = CarFactory.createCar("Ford", "Mustang")
+const accord = CarFactory.createCar("Honda", "Accord")
 
 // Drive the cars for a while
 console.log(mustang.drive("the grocery store"))
@@ -145,52 +146,60 @@ Open [http://localhost:8080/](http://localhost:8080/) in Chrome, view the Develo
 You can take this a step further and make the car garage it's own module.
 
 ```sh
-touch src/scripts/garage.js
+touch src/scripts/garageFactory.js
 ```
 
 Instead of the garage being a simple array in your main module, you are going to make an object that has more complex behaviors - which are expressed as methods on an object.
 
 [Read more about what a **method** is](https://javascript.info/object-methods) if that term still confuses you.
 
-> garage.js
+> garageFactory.js
 
 ```js
 /*
     Author: your name here
-    Name: garage.js
-    Purpose: To store car instances
+    Name: garageFactory.js
+    Purpose: To store cars in garages
 */
 
 /*
     This array only exists within the scope of this module.
     Therefore, no other module can access it. However,
-    the `garageSupervisor` object you define below allows
+    the object returned by `garageFactory` object you define below allows
     code in other modules to indirectly access it by using
     the methods.
 */
 const garage = []
 
-class Garage {
-  store(car) {
-    garage.push(car)
-  }
+const garageFactory = {
+  createGarage() {
+    return {
+      store(car) {
+        garage.push(car)
+        
+      },
+    
+      retrieve(carToFind) {
+        return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
+      },
+    
+      /*
+           The getInventory property is the only way for external code to
+           read the value of the garage variable. There is no setter
+           either. It is a read only property.
+       */
+      getInventory() {
+        console.log(garage)
+        return garage
+      }
+    }
 
-  retrieve(carToFind) {
-    return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
   }
-
-  /*
-       The inventory property is the only way for external code to
-       read the value of the garage variable. There is no setter
-       either. It is a read only property.
-   */
-  get inventory() {
-    return garage
-  }
+  
 }
 
-const GarageFactory = () => new Garage()
-export default GarageFactory
+
+export default garageFactory
 ```
 
 Now let's import this module into our main module and use its methods. Adding a couple more cars just so the output changes.
@@ -205,20 +214,21 @@ import CarFactory from "./carFactory"
 import GarageFactory from "./garage"
 
 // Create two cars using the function you imported
-const mustang = CarFactory("Ford", "Mustang")
-const accord = CarFactory("Honda", "Accord")
-const santafe = CarFactory("Hyundai", "Santa Fe")
-const sierra = CarFactory("GMC", "Sierra")
+const mustang = CarFactory.createCar("Ford", "Mustang")
+const accord = CarFactory.createCar("Honda", "Accord")
+const santafe = CarFactory.createCar("Hyundai", "Santa Fe")
+const sierra = CarFactory.createCar("GMC", "Sierra")
 
 // Make a new garage and store cars in it
-const garage = GarageFactory() //Remember, this function return a new instance of Garage
+const garage = GarageFactory.createGarage() //Remember, this function return a new instance of Garage
 garage.store(mustang)
 garage.store(accord)
 garage.store(santafe)
 garage.store(sierra)
 
-console.table(garage.inventory)
+console.table(garage.getInventory())
 console.table(garage.retrieve(sierra))
+
 ```
 
 ![console output with two car objects in array](./images/car-garage-updated-output.png)
