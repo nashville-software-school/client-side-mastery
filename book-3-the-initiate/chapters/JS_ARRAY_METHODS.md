@@ -1,8 +1,59 @@
 # Shaping Data with Array Methods
 
+## Why are you Learning This?
+
+Since one of your primary jobs as a software developer will be to filter, transform, organize, sort, and then display collections of data, you will need to know how to use some of the helpful methods that software development languages provide to perform those operations.
+
+Up until now, you have relied upon the base `for` loop mechanism in JavaScript. These array methods will let you perform more advanced operations on collections with far less code.
+
+During this lesson, you will be helping Doris. Doris owns a paper distribution and services franchise of Dotard & Simbleton. While she operates a paper franchise, she realizes that far too much of her operation is done on paper and she needs to start building software to automate processes and eliminate waste.
+
+To help solve her problems, you will use the following methods that are automatically available on any array in JavaScript.
+
+1. `forEach()`
+1. `filter()`
+1. `map()`
+1. `find()`
+1. `reduce()`
+
+## Your First Day at Dotard & Simbleton
+
+It's your first day on the job, and Doris sits with you at your desk and talks about what she needs you to do.
+
+> **Doris:** "Thank you for joining the team! We really need your help," she says as she drops a huge pile of paper on the corner of your desk, making a deep *thud* sound.
+
+
+## forEach
+
+This is a straight up replacement for a `for` loop. However, where a `for` loop simply iterates _n_ number of times, the `forEach()` method is an operation on an array.
+
+
+## filter
+
+
+
+## map
+
+
+
 ## find
 
-This will be one of the most useful methods for you during the client side course. Imagine the following scenario.
+
+
+## reduce
+
+
+
+---
+
+
+
+
+
+
+## find
+
+This will be one of the most useful methods for you during the client-side course. Imagine the following scenario.
 
 You have an array of objects that represent businesses. Each business name is unique. The `find()` array method will iterate the array until it finds a match, and then return that matched object.
 
@@ -71,6 +122,8 @@ for (let i = 0; i < animals.length; i++) {
 
 }
 ```
+
+Notice below that `forEach` is a method on the array itself.
 
 ```js
 const animals = ["cow", "chicken", "pig", "fish"]

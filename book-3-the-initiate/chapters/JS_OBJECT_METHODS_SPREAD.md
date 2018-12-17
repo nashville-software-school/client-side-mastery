@@ -6,7 +6,6 @@ Since objects are the core concept behind Object Oriented Programming - what you
 
 You are also going to learn a new kind of `for` loop in JavaScript. It's the [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop.
 
-
 ## Object Methods
 
 Objects have some helpful methods that will allow you to iterate the collection of key/value pairs.
@@ -76,7 +75,7 @@ const allCars = [
 ]
 ```
 
-You want to produce the following report. It's not pretty, but it shows all the information the manager needs.
+You want to produce the following report. It's not pretty, but it shows all the information that Randall needs.
 
 ![](./images/carlot.png)
 
@@ -124,7 +123,7 @@ At this point, you proudly show Randall the results of your hard work, and as us
 
 > **Randall:** "Ok this is good, but those numbers listed there aren't helpful unless I know what they mean. Like, is that the horsepower, engine size, and wheel base? Can you fix that?"
 
-Of course you can! It's time for you to list all of the properties that are on each object at the top of the page so that Randall knows which properties are on each of the object.
+Of course you can! It's time for you to list all of the properties  at the top of the page so that Randall knows the labels for all of the values on each of the objects.
 
 ![car properties](./images/carlot-properties.png)
 
@@ -188,8 +187,13 @@ for (const entry of Object.entries(bug)) {
 > [ 'legs', 6 ]​​​​​
 ```
 
+Now you can use it to display the information on each car object in the report.
+
+> **Note:** Remember to use backticks when you are building string templates to interpolate variables in JavaScript. It's a common oversight for new developers.
+
 ```js
 outputElement.innerHTML += "<h1>Car List</h1>"
+
 allCars.forEach(car => {
     outputElement.innerHTML += "<hr/>"
 
@@ -347,7 +351,7 @@ const searchInput = document.querySelector("#searchInput")
 
 searchInput.addEventListner('', event => {
   if (event.charCode === 13) {
-    const searchTerm = event.target.value;
+    const searchTerm = event.target.value
 
     salesByWeek.forEach(sale => {
 
