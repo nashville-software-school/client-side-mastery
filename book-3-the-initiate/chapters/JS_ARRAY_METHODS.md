@@ -20,12 +20,169 @@ To help solve her problems, you will use the following methods that are automati
 
 It's your first day on the job, and Doris sits with you at your desk and talks about what she needs you to do.
 
-> **Doris:** "Thank you for joining the team! We really need your help," she says as she drops a huge pile of paper on the corner of your desk, making a deep *thud* sound.
+> "Thank you for joining the team! We really need your help," she says as she drops a huge pile of paper on the corner of your desk, making a deep *thud* sound.
+>
+> "This is a list of all companies that have active accounts for purchasing any kind of paper from Dotard & Simbleton. What I need you to do is make it electronic."
+>
+> She waves her hands vaguely, and follows up with, "Like a web page, or something!"
+>
+> You blink at her, not even knowing how to respond.
+>
+> Doris smiles weakly, stands up and blurts out, "Well... you get started on that and let me know when you're done."
+>
+> You stare at the giant, multi-colored pile of papers trying to decide what just happened, and how you're going to do this. After a minute of staring, you hear a gentle voice behind you.
+>
+> "Hey there, we actually have those recorded on a hard drive. You don't have to do that part."
+>
+> You turn around and see a tall, spindly man with thinning hair, blue trousers, a wrinkled white dress shirt, and blue suspenders. While sizing him up, you ask, "Um, what hard drive?"
+>
+> He smiles and points at your desk. "It's in your top drawer there. I'm Howard, by the way, nice to meet you," as he leans towards you with his hand extended.
+>
+> You shake his hand - firmly you hope - and he wheels his chair over and helps you connect the drive to your machine. He explains that Doris' niece spent the last summer trying to do what you've been hired to do, but only got as far as entering in the active businesses, and the sales for the last 2 years.
+>
+> As you open the files on the hard drive, here's what you find in one of them.
 
+```js
+const businesses = [
+  {
+    purchasingAgent: { nameLast: "Kirlin", nameFirst: "Kristy" },
+    phoneHome: "089.129.2290 x9400",
+    orders: [7826.96, 8323.11, 5756.28, 6308.42, 5622.28],
+    companyName: "Care-media",
+    companyIndustry: "Education",
+    addressZipCode: "56839",
+    addressStateCode: "WI",
+    addressFullStreet: "8417 Franklin Court Tunnel",
+    addressCity: "Mouthcard"
+  },
+  {
+    purchasingAgent: { nameLast: "Steuber", nameFirst: "Kamron" },
+    phoneHome: "(833) 222-7579 x5874",
+    orders: [6252.5, 9769.02, 9521.17, 7994.05, 7945.93],
+    companyName: "Stanholding",
+    companyIndustry: "Hospitality",
+    addressZipCode: "09705",
+    addressStateCode: "NM",
+    addressFullStreet: "2889 Fawn Court Garden",
+    addressCity: "Fellsmere"
+  },
+  {
+    purchasingAgent: { nameLast: "Gutkowski", nameFirst: "Kaylee" },
+    phoneHome: "235.266.6278",
+    orders: [7634.43, 9766.72, 9953.45, 6559.8, 5054.9],
+    companyName: "Highnix",
+    companyIndustry: "Agriculture",
+    addressZipCode: "49376",
+    addressStateCode: "ME",
+    addressFullStreet: "5734 Maple Avenue Throughway",
+    addressCity: "Little Genesee"
+  },
+  {
+    purchasingAgent: { nameLast: "Crona", nameFirst: "Lauren" },
+    phoneHome: "1-449-987-3083 x23263",
+    orders: [7384.52, 9252.72, 7272.65, 5251.84, 9680.08],
+    companyName: "Conit",
+    companyIndustry: "Defense",
+    addressZipCode: "53326",
+    addressStateCode: "IL",
+    addressFullStreet: "5755 Hillside Drive Crossroad",
+    addressCity: "Norval"
+  },
+  {
+    purchasingAgent: { nameLast: "Krajcik", nameFirst: "Elvera" },
+    phoneHome: "1-730-411-8580",
+    orders: [6069.05, 8535.38, 5782.7, 7838.91, 7578.36],
+    companyName: "Dong-tom",
+    companyIndustry: "Energy",
+    addressZipCode: "67071",
+    addressStateCode: "KS",
+    addressFullStreet: "4826 Arch Street Lights",
+    addressCity: "Newburyport"
+  },
+  {
+    purchasingAgent: { nameLast: "Kling", nameFirst: "Ellie" },
+    phoneHome: "(868) 043-0950",
+    orders: [6726.2, 8393.21, 8087.13, 6393.13, 8646.35],
+    companyName: "Dan-dox",
+    companyIndustry: "Manufacturing",
+    addressZipCode: "98842",
+    addressStateCode: "WV",
+    addressFullStreet: "9767 Cedar Court Corner",
+    addressCity: "Prince George"
+  },
+  {
+    purchasingAgent: { nameLast: "Robel", nameFirst: "Otilia" },
+    phoneHome: "(298) 305-1942 x53653",
+    orders: [8676.05, 7430.69, 9379.81, 8074.29, 5998.75],
+    companyName: "J-base",
+    companyIndustry: "Health care",
+    addressZipCode: "72993",
+    addressStateCode: "FL",
+    addressFullStreet: "9954 Buckingham Drive Mountains",
+    addressCity: "Vesper"
+  },
+  {
+    purchasingAgent: { nameLast: "Gusikowski", nameFirst: "Karolann" },
+    phoneHome: "(743) 934-8981 x692",
+    orders: [8650.08, 8042.69, 5555.72, 7467.86, 8851.43],
+    companyName: "Span-fix",
+    companyIndustry: "Construction",
+    addressZipCode: "59860",
+    addressStateCode: "MT",
+    addressFullStreet: "4151 Orange Street Extension",
+    addressCity: "Little Rock Air Force Base"
+  },
+  {
+    purchasingAgent: { nameLast: "Hartmann", nameFirst: "Zena" },
+    phoneHome: "727.635.6610 x6483",
+    orders: [9415.89, 8935.45, 7413.91, 6830.96, 9746.57],
+    companyName: "Sanaplane",
+    companyIndustry: "Information",
+    addressZipCode: "85156",
+    addressStateCode: "NY",
+    addressFullStreet: "4765 Fairview Avenue Locks",
+    addressCity: "Dennisville"
+  },
+  {
+    purchasingAgent: { nameLast: "Torphy", nameFirst: "Celia" },
+    phoneHome: "(992) 079-1670 x71569",
+    orders: [7431.21, 5911.85, 7954.86, 7141.52, 8416.79],
+    companyName: "Ran-taxon",
+    companyIndustry: "Entertainment",
+    addressZipCode: "96673",
+    addressStateCode: "MD",
+    addressFullStreet: "7157 Hudson Street Ford",
+    addressCity: "Watrous"
+  }
+];
+```
 
-## forEach
+## forEach() Method
 
-This is a straight up replacement for a `for` loop. However, where a `for` loop simply iterates _n_ number of times, the `forEach()` method is an operation on an array.
+So Doris just wants to see all of the business names on a web page. You remember that the `forEach()` method on an array iterates the array and you can write logic for what to do for each item in it. You just want to build some elements to put in the DOM.
+
+Since each object is identical in its structure (but not its state), you can write some automation logic with `forEach()`.
+
+```js
+const outEl = document.querySelector("#output")
+outEl.innerHTML = "<h1>Active Businesses</h1>"
+
+businesses.forEach(business => {
+  outEl.innerHTML += `
+    <h2>${business.companyName}</h2>
+    <section>
+      ${business.addressFullStreet}
+    </section>
+    <section>
+      ${business.addressCity},
+      ${business.addressStateCode}
+      ${business.addressZipCode}
+    </section>
+  `
+  outEl.innerHTML += "<hr/>"
+});
+```
+
 
 
 ## filter
@@ -99,58 +256,6 @@ const targetBusiness = businesses.find(business => business.id === 2)
 
 // Find business by its state
 const targetBusiness = businesses.find(business => business.address.includes("Missouri"))
-```
-
-## forEach
-
-This is a straight up replacement for a `for` loop. However, where a `for` loop simply iterates _n_ number of times, the `forEach()` method is an operation on an array.
-
-```js
-/*
-    A `for` loop is not an operation on an array at all,
-    even if we use an array's length to determine how many
-    times the loop will iterate.
-*/
-const animals = ["cow", "chicken", "pig", "fish"]
-
-// This `for` loop iterates 4 times
-for (let i = 0; i < animals.length; i++) {
-
-    // The logic inside the for block has NOTHING to do with
-    // the animals array at all.
-    console.log(`This is iteration ${i}`)
-
-}
-```
-
-Notice below that `forEach` is a method on the array itself.
-
-```js
-const animals = ["cow", "chicken", "pig", "fish"]
-
-/*
-    A function whose purpose is to cook an animal and
-    return the processed result
-*/
-const cookIt = function (animal) {
-    switch (animal) {
-        case "cow":
-            console.log("steak");
-            break;
-        case "chicken":
-            console.log("drumstick");
-            break;
-        case "pig":
-            console.log("bacon");
-            break;
-        case "fish":
-            console.log("sushi");
-            break;
-    }
-}
-
-// Execute the cookIt function for each item in the array
-animals.forEach(cookIt)
 ```
 
 ## map
