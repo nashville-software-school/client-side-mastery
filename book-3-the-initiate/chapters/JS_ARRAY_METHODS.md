@@ -15,6 +15,7 @@ To help solve her problems, you will use the following methods that are automati
 1. `map()`
 1. `find()`
 1. `reduce()`
+1. `sort()`
 
 ## Your First Day at Dotard & Simbleton
 
@@ -184,9 +185,9 @@ businesses.forEach(business => {
 
 > **_Lightning Exercise:_** Add another section sibling to the current one and use object dot notation to display each company's city. Use square bracket notation to display the  state code. Use dynamic square bracket notation to add the  zip code.
 
-Now you have code to show web pages for each of the businesses that have active accounts. You call Doris over and show her the results, and she's very excited.
-
 ## filter() Method
+
+Now you have code to show web pages for each of the businesses that have active accounts. You call Doris over and show her the results, and she's very excited.
 
 > Doris leans forward in her seat, eyes bright, and exclaims, "Yes! This is exactly what I need!" She starts to scroll through all of the businesses, clearly enjoying her new toy.
 >
@@ -217,10 +218,52 @@ const newYorkBusinesses = businesses.filter(business => {
 
 > **_Lightning Exercise:_** Use `filter()` to create another array named `manufacturingBusinesses` that will contain all businesses in the manufacturing industry. Display those to the DOM.
 
+![manufacturing businesses list](./images/dotard-simbleton-manufacturing-list.png)
 
 ## map
 
+> Doris sidles up next to you after your lunch break, holding a cup of herbal tea. She takes a quick sip, inhales deeply and says, "I love everything you've done so far. This is making a huge difference in everyone's productivity."
+>
+> You're fairly that by _everyone_ she's just talking about herself, but you nod, smile and respond, "Thank you. Just glad to be making a difference."
+>
+> Doris smiles back and says, "Now that I have a list of businesses, I realize that I would also love to have a list of purchasing agents. All by themselves. On a web page like the business names."
 
+To achieve this task for Doris, you still need to iterate the original array of businesses, but all you need is the purchasing agent names. If you can extract those names and put them in their own array, then you can use `forEach()` to display them in the DOM.
+
+The `map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing them new items in another array. Here's how you would do that for this feature.
+
+```js
+outEl.innerHTML += "<h1>Purchasing Agents</h1>";
+
+/*
+    Using map(), you extract the purchasing agent object
+    from each business and store it in a new array
+*/
+const agents = businesses.map(business => {
+    return business.purchasingAgent
+})
+
+console.table(agents)
+
+agents.forEach(agent => {
+  outEl.innerHTML += `<h2>${agent.nameFirst} ${agent.nameLast}</h2>`;
+  outEl.innerHTML += "<hr/>";
+});
+```
+
+You will see the list of agents in the DOM. Also look at the new array in the Developer Console. The only information in that array is the purchasing agent properties.
+
+![purchasing agents with console.table](./images/purchasing-agents.png)
+
+> **Lightning Exercise:** Instead of just returning the purchasing agent object, return a new object that has the full name of the purchasing agent, the company name, and the phone number. The data structure is shown below.
+
+```js
+{
+    "agentName": "Kaylee Gutkowski",
+    "company": "Highnix",
+    "phoneNumber": "235.266.6278"
+}
+```
 
 ## find
 
@@ -242,142 +285,17 @@ const newYorkBusinesses = businesses.filter(business => {
 >
 > Unsure why she needed to ask in such a dubious manner, you confidently respond that you can. She smirks, takes out her cell phone, and walks back to her office while dialing a number...
 
-Use the filter method to display all the big spenders.
+Use the filter method to display all the big spenders. Inside the filter function, you will need to use the `forEach` method on the `orders` property array.
 
 ```js
 // Array to contain all the big spenders
 const bigSpenders = businesses.filter(business => {
     let isBigSpender = false
 
-    // Look at each order and make `isBigSpender` true when needed
-    business.orders.forEach()
+    // Iterate the orders property with `forEach()`
 
     return isBigSpender
 })
-```
-
-
-
-
-
-
-## find
-
-This will be one of the most useful methods for you during the client-side course. Imagine the following scenario.
-
-You have an array of objects that represent businesses. Each business name is unique. The `find()` array method will iterate the array until it finds a match, and then return that matched object.
-
-```js
-const businesses = [
-  {
-    "index": 1,
-    "company": "KAGE",
-    "phone": "+1 (971) 427-3003",
-    "address": "888 Kansas Place, Riceville, West Virginia, 3628"
-  },
-  {
-    "index": 2,
-    "company": "DUFLEX",
-    "phone": "+1 (834) 503-3186",
-    "address": "856 Kensington Street, Kieler, Missouri, 1635"
-  },
-  {
-    "index": 3,
-    "company": "UPLINX",
-    "phone": "+1 (921) 443-2136",
-    "address": "255 Duffield Street, Maury, Marshall Islands, 4407"
-  },
-  {
-    "index": 4,
-    "company": "PORTALINE",
-    "phone": "+1 (889) 454-3246",
-    "address": "771 Atlantic Avenue, Waumandee, Indiana, 1297"
-  },
-  {
-    "index": 5,
-    "company": "XUMONK",
-    "phone": "+1 (948) 419-3737",
-    "address": "778 Montague Street, Derwood, North Dakota, 764"
-  }
-]
-
-// Find business by its name
-const targetBusiness = businesses.find(business => business.name === "UPLINX")
-
-// Find business by its id
-const targetBusiness = businesses.find(business => business.id === 2)
-
-// Find business by its state
-const targetBusiness = businesses.find(business => business.address.includes("Missouri"))
-```
-
-## map
-
-The `map()` method will also iterate over each item in an array and run the logic of the specific function each time. The difference is that running `map()` creates a new function. You never want to modify your raw data in your database, so when you need to transform it, you need a **new** array so your source remains unchanged.
-
-```js
-const rawIngredients = ["cow", "potato", "chicken", "corn"]
-
-/*
-    You will often see the processing function for these
-    methods defined anonymously, rather than defined
-    separately as it was in the previous example.
-*/
-const cookedIngredients = rawIngredients.map(function (ingredient) {
-    switch (ingredient) {
-        case "cow":
-            return "hamburger"
-            break
-        case "potato":
-            return "fries"
-            break
-        case "chicken":
-            return "drumstick"
-            break
-        case "corn":
-            return "popcorn"
-            break
-    }
-})
-
-console.log(cookedIngredients)
-> ​​​​​[ 'hamburger', 'fries', 'drumstick', 'popcorn' ]​​​​​
-
-console.log(rawIngredients)
-> ['cow', 'potato', 'chicken', 'corn'] // Source data unchanged
-```
-
-## filter
-
-The `filter()` method is when you want to weed out some of the source data that doesn't meet the criteria for a solution.
-
-```js
-const rawIngredients = [
-    { "name": "cow", "type": "meat" },
-    { "name": "potato", "type": "vegetable" },
-    { "name": "chicken", "type": "meat" },
-    { "name": "corn", "type": "vegetable" }
-]
-
-/*
-    You can also use the new ES6+ function declaration
-    syntax for your anonymous function.
-*/
-const vegetarianIngredients = rawIngredients.filter(ingredient => {
-    const isVegetarian = (ingredient.type === "vegetable")
-    return isVegetarian
-})
-
-console.log(vegetarianIngredients)
-> ​​​​​[ { name: 'potato', type: 'vegetable' },​​​​​
-  ​​​​​  { name: 'corn', type: 'vegetable' } ]​​​​​
-
-console.log(rawIngredients)
-> [ { 'name': 'cow', 'type': 'meat' },
-    { 'name': 'potato', 'type': 'vegetable' },
-    { 'name': 'chicken', 'type': 'meat' },
-    { 'name': 'corn', 'type': 'vegetable' }
-] // Source data unchanged
 ```
 
 ## reduce
