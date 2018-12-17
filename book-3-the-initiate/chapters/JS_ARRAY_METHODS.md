@@ -42,6 +42,8 @@ It's your first day on the job, and Doris sits with you at your desk and talks a
 >
 > As you open the files on the hard drive, here's what you find in one of them.
 
+Each file contains an array with 15 objects in it. Each each object represents one active customer. It details the address, purchasing agent, and the total dollar amount of that company's last 5 orders.
+
 ```js
 const businesses = [
   {
@@ -62,7 +64,7 @@ const businesses = [
     companyName: "Stanholding",
     companyIndustry: "Hospitality",
     addressZipCode: "09705",
-    addressStateCode: "NM",
+    addressStateCode: "NY",
     addressFullStreet: "2889 Fawn Court Garden",
     addressCity: "Fellsmere"
   },
@@ -148,7 +150,7 @@ const businesses = [
     phoneHome: "(992) 079-1670 x71569",
     orders: [7431.21, 5911.85, 7954.86, 7141.52, 8416.79],
     companyName: "Ran-taxon",
-    companyIndustry: "Entertainment",
+    companyIndustry: "Manufacturing",
     addressZipCode: "96673",
     addressStateCode: "MD",
     addressFullStreet: "7157 Hudson Street Ford",
@@ -159,7 +161,9 @@ const businesses = [
 
 ## forEach() Method
 
-So Doris just wants to see all of the business names on a web page. You remember that the `forEach()` method on an array iterates the array and you can write logic for what to do for each item in it. You just want to build some elements to put in the DOM.
+So Doris just wants to see all of the business names on a web page. You remember that the `forEach()` method on an array iterates the array and you can write logic for what to do for each item in it. You just want to build some elements to put in the DOM to look like this.
+
+![list of businesses](./images/dotard-simbleton-simple-list.png)
 
 Since each object is identical in its structure (but not its state), you can write some automation logic with `forEach()`.
 
@@ -173,20 +177,45 @@ businesses.forEach(business => {
     <section>
       ${business.addressFullStreet}
     </section>
-    <section>
-      ${business.addressCity},
-      ${business.addressStateCode}
-      ${business.addressZipCode}
-    </section>
   `
   outEl.innerHTML += "<hr/>"
 });
 ```
 
+> **_Lightning Exercise:_** Add another section sibling to the current one and use object dot notation to display each company's city. Use square bracket notation to display the  state code. Use dynamic square bracket notation to add the  zip code.
 
+Now you have code to show web pages for each of the businesses that have active accounts. You call Doris over and show her the results, and she's very excited.
 
-## filter
+## filter() Method
 
+> Doris leans forward in her seat, eyes bright, and exclaims, "Yes! This is exactly what I need!" She starts to scroll through all of the businesses, clearly enjoying her new toy.
+>
+> After several minutes of this, she abruptly stops and turns her head quickly in your direction, eyes wide. "You know, my regional manager, Barry has been asking me for something for months now. He has a new sales rep in New York and wants to check how many sales are being made in that state. So out of all these businesses, I need to see only the ones in New York."
+>
+> She turns her head towards the computer, narrows her eyes slightly and asks in a low voice, "Can you do that?"
+>
+> Unsure why she needed to ask in such a dubious manner, you confidently respond that you can. She smirks, takes out her cell phone, and walks back to her office while dialing a number...
+
+For a task like this, the array `filter()` method is perfect, because you need to look at each object in the businesses array, check to see if it meets Doris' condition, and if it does, place that object in a new array that only contains the businesses she wants.
+
+![list of new york businesses](./images/dotard-simbleton-newyork-list.png)
+
+The filter function creates a new array from the existing one, so you can invoke it and assign it to a new variable such as in the code below. The function that you pass to `filter()` should return true or false. If it returns true, then the current item will be placed in the new array.
+
+```js
+// Array to contain all the New York businesses
+const newYorkBusinesses = businesses.filter(business => {
+  let inNewYork = false
+
+  if (business.addressStateCode === "NY") {
+      inNewYork = true
+  }
+
+  return inNewYork
+})
+```
+
+> **_Lightning Exercise:_** Use `filter()` to create another array named `manufacturingBusinesses` that will contain all businesses in the manufacturing industry. Display those to the DOM.
 
 
 ## map
@@ -202,6 +231,30 @@ businesses.forEach(business => {
 
 
 ---
+
+## Practice: Big Spenders
+
+> Doris leans forward in her seat, eyes bright, and exclaims, "Yes! This is exactly what I need!" She starts to scroll through all of the businesses, clearly enjoying her new toy.
+>
+> After several minutes of this, she abruptly stops and turns her head quickly in your direction, eyes wide. "You know, my regional manager, Barry has been asking me for something for months now. He wants me to produce a report for him that list only the companies that have placed an order for more than nine thousand dollars."
+>
+> She turns her head towards the computer, narrows her eyes slightly and asks in a low voice, "Can you do that?"
+>
+> Unsure why she needed to ask in such a dubious manner, you confidently respond that you can. She smirks, takes out her cell phone, and walks back to her office while dialing a number...
+
+Use the filter method to display all the big spenders.
+
+```js
+// Array to contain all the big spenders
+const bigSpenders = businesses.filter(business => {
+    let isBigSpender = false
+
+    // Look at each order and make `isBigSpender` true when needed
+    business.orders.forEach()
+
+    return isBigSpender
+})
+```
 
 
 
