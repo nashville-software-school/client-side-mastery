@@ -344,6 +344,10 @@ document
   });
 ```
 
+> **Lightning Exercise 1:** Refactor your code to search for purchasing agents instead. If the search text is found in the first name of any purchasing agent, show that agent.
+
+> **Lightning Exercise 2:** Refactor your code so that if the search text is found in the first name, or last name, of any purchasing agent, show that agent.
+
 
 ## reduce
 
