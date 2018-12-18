@@ -43,13 +43,13 @@ It's your first day on the job, and Doris sits with you at your desk and talks a
 >
 > As you open the files on the hard drive, here's what you find in one of them.
 
-Each file contains an array with 15 objects in it. Each each object represents one active customer. It details the address, purchasing agent, and the total dollar amount of that company's last 5 orders.
+Each file contains an array with 15 objects in it. Each object represents one active customer. It details the address, purchasing agent, and the total dollar amount of that company's last 5 orders.
 
 ```js
 const businesses = [
   {
     purchasingAgent: { nameLast: "Kirlin", nameFirst: "Kristy" },
-    phoneHome: "089.129.2290 x9400",
+    phoneWork: "089.129.2290 x9400",
     orders: [7826.96, 8323.11, 5756.28, 6308.42, 5622.28],
     companyName: "Care-media",
     companyIndustry: "Education",
@@ -60,7 +60,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Steuber", nameFirst: "Kamron" },
-    phoneHome: "(833) 222-7579 x5874",
+    phoneWork: "(833) 222-7579 x5874",
     orders: [6252.5, 9769.02, 9521.17, 7994.05, 7945.93],
     companyName: "Stanholding",
     companyIndustry: "Hospitality",
@@ -71,7 +71,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Gutkowski", nameFirst: "Kaylee" },
-    phoneHome: "235.266.6278",
+    phoneWork: "235.266.6278",
     orders: [7634.43, 9766.72, 9953.45, 6559.8, 5054.9],
     companyName: "Highnix",
     companyIndustry: "Agriculture",
@@ -82,7 +82,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Crona", nameFirst: "Lauren" },
-    phoneHome: "1-449-987-3083 x23263",
+    phoneWork: "1-449-987-3083 x23263",
     orders: [7384.52, 9252.72, 7272.65, 5251.84, 9680.08],
     companyName: "Conit",
     companyIndustry: "Defense",
@@ -93,7 +93,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Krajcik", nameFirst: "Elvera" },
-    phoneHome: "1-730-411-8580",
+    phoneWork: "1-730-411-8580",
     orders: [6069.05, 8535.38, 5782.7, 7838.91, 7578.36],
     companyName: "Dong-tom",
     companyIndustry: "Energy",
@@ -104,7 +104,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Kling", nameFirst: "Ellie" },
-    phoneHome: "(868) 043-0950",
+    phoneWork: "(868) 043-0950",
     orders: [6726.2, 8393.21, 8087.13, 6393.13, 8646.35],
     companyName: "Dan-dox",
     companyIndustry: "Manufacturing",
@@ -115,7 +115,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Robel", nameFirst: "Otilia" },
-    phoneHome: "(298) 305-1942 x53653",
+    phoneWork: "(298) 305-1942 x53653",
     orders: [8676.05, 7430.69, 9379.81, 8074.29, 5998.75],
     companyName: "J-base",
     companyIndustry: "Health care",
@@ -126,7 +126,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Gusikowski", nameFirst: "Karolann" },
-    phoneHome: "(743) 934-8981 x692",
+    phoneWork: "(743) 934-8981 x692",
     orders: [8650.08, 8042.69, 5555.72, 7467.86, 8851.43],
     companyName: "Span-fix",
     companyIndustry: "Construction",
@@ -137,7 +137,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Hartmann", nameFirst: "Zena" },
-    phoneHome: "727.635.6610 x6483",
+    phoneWork: "727.635.6610 x6483",
     orders: [9415.89, 8935.45, 7413.91, 6830.96, 9746.57],
     companyName: "Sanaplane",
     companyIndustry: "Information",
@@ -148,7 +148,7 @@ const businesses = [
   },
   {
     purchasingAgent: { nameLast: "Torphy", nameFirst: "Celia" },
-    phoneHome: "(992) 079-1670 x71569",
+    phoneWork: "(992) 079-1670 x71569",
     orders: [7431.21, 5911.85, 7954.86, 7141.52, 8416.79],
     companyName: "Ran-taxon",
     companyIndustry: "Manufacturing",
@@ -218,19 +218,21 @@ const newYorkBusinesses = businesses.filter(business => {
 
 > **_Lightning Exercise:_** Use `filter()` to create another array named `manufacturingBusinesses` that will contain all businesses in the manufacturing industry. Display those to the DOM.
 
+#### Example output
+
 ![manufacturing businesses list](./images/dotard-simbleton-manufacturing-list.png)
 
 ## map
 
 > Doris sidles up next to you after your lunch break, holding a cup of herbal tea. She takes a quick sip, inhales deeply and says, "I love everything you've done so far. This is making a huge difference in everyone's productivity."
 >
-> You're fairly that by _everyone_ she's just talking about herself, but you nod, smile and respond, "Thank you. Just glad to be making a difference."
+> You're fairly sure that by _everyone_, she means herself, but you nod, smile and respond, "Thank you. Just glad to be making a difference."
 >
 > Doris smiles back and says, "Now that I have a list of businesses, I realize that I would also love to have a list of purchasing agents. All by themselves. On a web page like the business names."
 
 To achieve this task for Doris, you still need to iterate the original array of businesses, but all you need is the purchasing agent names. If you can extract those names and put them in their own array, then you can use `forEach()` to display them in the DOM.
 
-The `map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing them new items in another array. Here's how you would do that for this feature.
+The `map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing the new items in another array. Here's how you would do that for this feature.
 
 ```js
 outEl.innerHTML += "<h1>Purchasing Agents</h1>";
@@ -255,29 +257,140 @@ You will see the list of agents in the DOM. Also look at the new array in the De
 
 ![purchasing agents with console.table](./images/purchasing-agents.png)
 
-> **Lightning Exercise:** Instead of just returning the purchasing agent object, return a new object that has the full name of the purchasing agent, the company name, and the phone number. The data structure is shown below.
+> **Lightning Exercise:** Instead of just returning the purchasing agent object, return a new object that has the full name of the purchasing agent, the company name, and the phone number. The data structure is shown below. Use that new data structure to display the agent with their company and phone number
 
 ```js
 {
-    "agentName": "Kaylee Gutkowski",
+    "fullName": "Kaylee Gutkowski",
     "company": "Highnix",
     "phoneNumber": "235.266.6278"
 }
 ```
 
+#### Example output
+
+![list of agents](./images/dotard-simbleton-agent-list.png)
+
 ## find
 
+The `find()` method does exactly what it's name suggests. It iterates an array and as soon as it finds one item that passes the condition that you provide, it returns that item to you.
+
+```js
+const candies = [
+    {
+        name: "Lollipop",
+        price: 2.99
+    },
+    {
+        name: "Tootsie Roll",
+        price: 1.49
+    },
+    {
+        name: "Sugar Daddy",
+        price: 2.49
+    }
+]
+
+const firstCheapCandy = candies.find(candy => candy.price < 2.00)
+
+console.log(firstCheapCandy)
+> { name: "Tootsie Roll", price: 1.49 }
+```
+
+> You have been spending the morning backing up the hard drives that contain all the customer information to a cloud service. The unlocked desk drawer didn't seem an adequate corporate backup plan to you.
+>
+> As you are watching the progress bar for uploading all those files slowly fill up, you've been watching with mild interest as Doris has been pacing her office for the last 45 minutes, clearly talking to someone on speaker phone. She doesn't appear to be angry, or even particularly agitated, just a bit nervous.
+>
+> You eventually need to use the restroom, and after a few minutes, you are returning to your desk and notice Doris waiting for you. She is sitting on the edge of your desk, staring out of one the windows that faces the faded parking lot at the side of the building. She looks distracted.
+>
+> As you grab your chair and slide it towards you so that you can go back to watching progress bars, she turns and smiles perfunctorily at you. As you sink into your chair, she stands up quickly and says, "I just got off the phone with our accountants. We needed to look at each of our customers and review their orders for this past year. It took forever because I kept needing to scroll through our massive list of customers until I found the one they needed."
 
 
 ## reduce
 
+**<span style="color: red">Warning:</span>** The `reduce()` array method is going to seem confusing. More than the others, it takes practice, trial, and error to truly understand when it's useful and its power.
+
+> A week goes by as you clean up your code and starting defining a strategy for getting the company on a private Github account so you can have all of the code in one place. Then Doris calls you into a meeting room where you find her, Walter - the head of the office sales team - and Howard sitting in old, burgundy office chairs. They are all looking at your expectantly.
+>
+> Doris breaks the silence with, "Walter here has a request, and I told him that you would definitely be able to do it."
+>
+> You glance at Walter who flashes his overly-brilliant white teeth at you.
+>
+> Doris continues, "Remember that list of businesses I had you make for me? Well, Walter would love to have their total order amount listed for each company in that list."
+>
+> Walter speaks in a strong, but slightly annoying baritone voice, and adds, "Yeah just keep the report you have now, but in parenthesis next to the company add the sum of all orders."
+
+Now, you could achieve this using `forEach()` on the order property for each business. Below is the existing code for listing businesses, but with the addition of a `forEach()` for calculating the order summary.
+
+```js
+businesses.forEach(business => {
+    /* CALCULATE ORDER SUMMARY */
+    let totalOrders = 0
+    business.orders.forEach(order => totalOrders += order)
+
+
+    outEl.innerHTML += `
+        <h2>
+            ${business.companyName}
+            ($${totalOrders})
+        </h2>
+        <section>
+            ${business.addressFullStreet}
+        </section>
+        <section>
+            ${business.addressCity},
+            ${business.addressStateCode}
+            ${business.addressZipCode}
+        </section>
+    `;
+    outEl.innerHTML += "<hr/>";
+});
+```
+
+The only drawback, which is minor, is that you had to initially declare a variable with a zero value, and then invoke the `forEach()` method in order to add to it. You can combine those two steps into one step with the `reduce()` method. One of the main purposes of the reduce method is to iterate over a collection, do some logic with each item, and have one, single result at the end.
+
+* Iterate a list of words and build a sentence
+* Iterate a list of integers and find the sum of all of them
+* Iterate a list of objects and build a unique set of a property values
+
+Here is how you could use `reduce()` to replace the `forEach()` from above. That sneaky little zero at the end is actually the second argument for the reduce method. It's what value the accumulation should start with. If you were building a sentence, that would be an emtpy string instead of zero.
+
+```js
+/* CALCULATE ORDER SUMMARY */
+let totalOrders = business.orders.reduce(
+    (currentTotal, nextValue) => currentTotal += nextValue,
+    0
+)
+```
+
+You can read the MDN documentation on [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) for more information.
+
+> **Lightning Exercise 1:** Use the reduce method on the following array to determine how much total rain fell last month.
+
+```js
+const monthlyRainfall = [23, 13, 27, 20, 20, 31, 33, 26, 19, 12, 14, 12, 10]
+
+const totalRainfall = monthlyRainfall.reduce()
+
+console.log(totalRainfall)
+```
+
+> **Lightning Exercise 2:** Use the reduce method on the following array to build a sentence.
+
+```js
+const words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
+
+const sentence = words.reduce()
+
+console.log(sentence)
+```
 
 
 ---
 
 ## Practice: Big Spenders
 
-> Doris leans forward in her seat, eyes bright, and exclaims, "Yes! This is exactly what I need!" She starts to scroll through all of the businesses, clearly enjoying her new toy.
+> Doris leans forward in her seat, eyes bright, and exclaims, "I don't know why I didn't hire someone earlier. This is making my job so much easier!" She starts to scroll through all of the businesses in your Active Customers report, clearly enjoying her new toy.
 >
 > After several minutes of this, she abruptly stops and turns her head quickly in your direction, eyes wide. "You know, my regional manager, Barry has been asking me for something for months now. He wants me to produce a report for him that list only the companies that have placed an order for more than nine thousand dollars."
 >
@@ -285,37 +398,13 @@ You will see the list of agents in the DOM. Also look at the new array in the De
 >
 > Unsure why she needed to ask in such a dubious manner, you confidently respond that you can. She smirks, takes out her cell phone, and walks back to her office while dialing a number...
 
-Use the filter method to display all the big spenders. Inside the filter function, you will need to use the `forEach` method on the `orders` property array.
+Use the filter method to get all the big spenders in the main array into a new one.
 
 ```js
 // Array to contain all the big spenders
 const bigSpenders = businesses.filter(business => {
-    let isBigSpender = false
 
-    // Iterate the orders property with `forEach()`
-
-    return isBigSpender
 })
-```
-
-## reduce
-
-The `reduce()` method is for aggregating the data into a single value.
-
-```js
-const monthlyRainfall = [23, 32, 27, 20, 20, 31, 33, 26, 19, 12]
-
-// ES6+ syntax
-const totalRainfall = monthlyRainfall.reduce(
-    (currentTotal, next) => currentTotal + next
-)
-
-// Traditional syntax
-const totalRainfall = monthlyRainfall.reduce(
-    function (currentTotal, next) {
-        return currentTotal + next
-    }
-)
 ```
 
 ## Other Helpful Methods
@@ -349,7 +438,7 @@ touch array-methods.js
 
 ### Requirements
 
-1. Copy the code below into the JavaScript file, and follow the instructions in the comments.
+Copy the code below into a JavaScript file, and follow the instructions in the comments.
 
 ```javascript
 const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
@@ -377,21 +466,18 @@ const planetEl = document.getElementById("planets")
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 */
-
-
-// Use the reduce method to create a sentence from the words in the following array
-const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 ```
 
 ## More Practice: Spam, Spam, Spam, Spam
-Learning Objective: practice accessing data within an array of objects
+
+> **Learning Objective:** Practice accessing data within an array of objects
 
 You have been tasked with building a list of email addresses of all of our customer's contacts so we can spam them with an email about Miffles the Vampire Weiner Dog.
 
 1. Create a new project in `workspace`.
 1. In your JavaScript file, paste the [customers array](./data/customers.js) that contains the emails we need to retrieve.
 
-From that array, extract just the customers' contact email addresses and store them in a new array. (Hint: you may want to use `forEach()` and/or `concat()` or any other array methods you have learned.)
+From that array, extract just the customers' contact email addresses and store them in a new array. You will need a nested array method - meaning one iteration inside another one - since you need to iterate the entire array of customers, and then iterate the array of emails for each one.
 
 
 ## Challenge: Chaining Methods
