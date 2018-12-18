@@ -305,6 +305,45 @@ console.log(firstCheapCandy)
 >
 > As you grab your chair and slide it towards you so that you can go back to watching progress bars, she turns and smiles perfunctorily at you. As you sink into your chair, she stands up quickly and says, "I just got off the phone with our accountants. We needed to look at each of our customers and review their orders for this past year. It took forever because I kept needing to scroll through our massive list of customers until I found the one they needed."
 
+As you consider this request, you realize that you'll need to provide Doris an input text field so that she can type in the name of a company. You will then need to take that search string, iterate the companies, and as soon as you find a match, display all the properties.
+
+First, you add that input field to your `index.html` file.
+
+```html
+<input type="text" placeholder="Enter business name" id="companySearch" />
+```
+
+To know when Doris is ready to search, you decide to capture the key press event. This will allow her to simply press her return key and execute the search.
+
+![searching businesses](./images/AjtphvnYsK.gif)
+
+```js
+document
+  .querySelector("#companySearch")
+  .addEventListener("keypress", keyPressEvent => {
+    if (keyPressEvent.charCode === 13) {
+      const foundBusiness = businesses.find(business =>
+        business.companyName.includes(keyPressEvent.target.value)
+      );
+
+      outEl.innerHTML = `
+            <h2>
+              ${foundBusiness.companyName}
+            </h2>
+            <section>
+              ${foundBusiness.addressFullStreet}
+
+            </section>
+            <section>
+              ${foundBusiness.addressCity},
+              ${foundBusiness.addressStateCode}
+              ${foundBusiness.addressZipCode}
+            </section>
+          `;
+    }
+  });
+```
+
 
 ## reduce
 
