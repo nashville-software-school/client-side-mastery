@@ -424,6 +424,22 @@ const sentence = words.reduce()
 console.log(sentence)
 ```
 
+## Other Helpful Methods
+
+* [reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) - Reverses the order of items in the array
+* [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every) - Determine if every item in an array passes a condition
+* [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) - Determine if some of the items in an array passes a condition
+
+[Mozilla Developer Network documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) on every method available on arrays.
+
+## For the Visual Learners
+
+![emojis](./images/array_methods.png)
+
+## Videos to Watch
+
+* [6 JavaScript Native Array Functions in 5 Minutes](https://www.youtube.com/watch?v=9ar5ZpBW7NE)
+* [Common Array Methods - Beau teaches JavaScript](https://www.youtube.com/watch?v=MeZVVxLn26E)
 
 ---
 
@@ -445,23 +461,6 @@ const bigSpenders = businesses.filter(business => {
 
 })
 ```
-
-## Other Helpful Methods
-
-* [reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) - Reverses the order of items in the array
-* [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every) - Determine if every item in an array passes a condition
-* [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) - Determine if some of the items in an array passes a condition
-
-[Mozilla Developer Network documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) on every method available on arrays.
-
-## For the Visual Learners
-
-![emojis](./images/array_methods.png)
-
-## Videos to Watch
-
-* [6 JavaScript Native Array Functions in 5 Minutes](https://www.youtube.com/watch?v=9ar5ZpBW7NE)
-* [Common Array Methods - Beau teaches JavaScript](https://www.youtube.com/watch?v=MeZVVxLn26E)
 
 ## Practice: Solar System
 
@@ -507,7 +506,7 @@ const planetEl = document.getElementById("planets")
 */
 ```
 
-## More Practice: Spam, Spam, Spam, Spam
+## Practice: Spam, Spam, Spam, Spam
 
 > **Learning Objective:** Practice accessing data within an array of objects
 
