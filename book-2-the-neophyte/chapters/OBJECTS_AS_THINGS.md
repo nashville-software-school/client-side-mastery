@@ -197,6 +197,11 @@ By using `this`, you never have to worry about changing multiple lines of code.
 
 ### Debugging Your Code
 
+We can pause our code at any time to watch what is happening line by line and check the value of each variable at that moment. We do that by using the `debugger` keyword in our code where we want our program to pause. This helps us to pinpoint a specific behavior we were not expecting, and it can allow us to watch when a varibale's value changes in a way we did or didn't expect. 
+
+In your code, add the word `debugger` within the `eat()` method on the `rufusTheDog` object. When the program is run (by resfreshing your browser) the execution of your code will pause on that line and you can check each variable and step through your code line by line. Try it out!
+
+
 > Walkthrough of how to use the debugger to step through this code.
 
 ## Videos to Watch
