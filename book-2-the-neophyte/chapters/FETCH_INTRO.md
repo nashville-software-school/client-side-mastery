@@ -1,10 +1,22 @@
 # Fetch your Data
 
-The [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) is a recent addition to native JavaScript that software developers use to interact with data on the Web.
+## Why are you Learning This?
 
-You're going to use the food API that you set up in the last chapter.
+Companies all over the world provide access to their data so that software developers can build interesting solutions for their customers. You, as a developer, can request their raw data, but use it however you like.
+
+For example, the [Merriam-Webster](https://dictionaryapi.com/) dictionary and thesaurus is available for software developers who may be building a tool for children to work on their spelling and vocabulary skills.
+
+Another source of data is the [Air quality and pollution API](https://www.airvisual.com/air-pollution-data-api). Software developers who work for non-profits that monitor industrial pollution, or government agencies who regulate industry would find this data very useful for building custom software.
+
+In this chapter, you will be learning how to use the `fetch` statement to make requests for data that live on the World Wide Web somewhere.
+
+## Reference
+
+The [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) is a recent addition to native JavaScript that software developers use to interact with data on the Web. There is also a maintained list on Github of [all public, free APIs](https://github.com/toddmotto/public-apis) for software developers to use.
 
 ## Setup
+
+You're going to use the food API that you set up in the last chapter.
 
 1. Make sure your API is running. If you need to review, go back to the last chapter for the command.
 1. Make a new sub-directory in your project named `src`. This directory will hold your application code.
