@@ -10,6 +10,8 @@ Add a search input field to the right of your mood buttons. Practice your Flex s
 
 Attach a `keypress` listener to the input field. When the user presses their return key, get the input field's value and look through each of your journal entries to find any property whose value contains that text.
 
+You will need to use your newly acquired skills with `for..of` loops and `Object.values()`.
+
 ## Update the DOM
 
 Once you've found matching entries, render only those entries in the DOM.
