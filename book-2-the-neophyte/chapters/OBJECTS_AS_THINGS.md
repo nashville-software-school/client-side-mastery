@@ -202,8 +202,6 @@ We can pause our code at any time to watch what is happening line by line and ch
 In your code, add the word `debugger` within the `eat()` method on the `rufusTheDog` object. When the program is run (by resfreshing your browser) the execution of your code will pause on that line and you can check each variable and step through your code line by line. Try it out!
 
 
-> Walkthrough of how to use the debugger to step through this code.
-
 ## Videos to Watch
 
 1. [What's an Object in JavaScript?](https://www.youtube.com/watch?v=8iXoWC9XcU8)
