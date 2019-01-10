@@ -6,7 +6,8 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 ## Chapters
 
-* Chapter 1 - [Installations](./chapters/GETTING_STARTED.md)
+* Chapter 1a - [Installations for Mac](./chapters/GETTING_STARTED_MAC.md)
+* Chapter 1b - [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md)
 * Chapter 2 - [Command Line Basics](./chapters/CLI_BASICS.md)
 * Chapter 3 - [Styling with CSS Selectors](./chapters/CSS_SELECTORS.md)
 * Chapter 4 - [Semantic HTML Components](./chapters/HTML_COMPONENTS.md)
