@@ -1,6 +1,6 @@
 # Daily Journal
 
-You have built your form for entering in journal entries, so now you need to define how the data that you will be collecting in the form should be stored. Your learning objective for this chapter is to build a data structure to represent a journal entry, build a function that returns an HTML representation of that data structure, and render it to the DOM.
+You have built your form for entering in journal entries, so now you need to define how the data that you will be collecting in the form should be stored. Your learning objective for this chapter is to build a function that returns an HTML representation of a journal entry data structure, and render it to the DOM.
 
 ## The First Journal Entry Rendered to the DOM
 
@@ -11,14 +11,14 @@ By the end of this chapter - once you have all the functionality written - you w
 
 ## Data Structure for Journal Entries
 
-The four pieces of information are as follows.
+In the last daily journal chapter, you defined an object data structure for the following four pieces of information that you will collect from the user.
 
-1. Date (_Date type_)
-1. Concept (_String type_)
-1. Journal entry (_String type_)
-1. Mood (_String type_)
+1. Date
+1. Concept/Title
+1. Journal entry
+1. Mood
 
-Since a journal entry is actual thing that you want to track in JavaScript, you need an object. Here's a first attempt of what that object might look like.
+Since a journal entry is actual thing that you want to track in JavaScript, you need an object. Here's a sample representation.
 
 ```js
 {
@@ -29,10 +29,9 @@ Since a journal entry is actual thing that you want to track in JavaScript, you 
 }
 ```
 
-## Making a Journal Entry
+## Defining Journal Entries
 
-1. Create a `journal.js` file in the `src/scripts` directory.
-1. Now open `journal.js` and create your first journal entry object by placing the following code in the file.
+Combining the definition of the daily journal objects, and the daily journal collection. Open `journal.js` and define your journal entry objects by inside the journal entries array.
 
 ```js
 const journalEntries = [
@@ -41,13 +40,10 @@ const journalEntries = [
         concept: "Array methods",
         entry: "We learned about 4 different array methods today. forEach made sense, but the others still confuse me.",
         mood: "Ok"
-    }
+    },
+    etc...
 ]
 ```
-
-Once you get this application working, you will very quickly have more than one journal entry. That means that you must store multiple objects in a collection. In JavaScript, we can use arrays for that.
-
-Your task now is to add just a couple more journal entries to your array. Don't add a large number since you are going to learn very soon how to manage this more dynamically.
 
 ## Journal Entries in the DOM
 
@@ -55,7 +51,7 @@ The last step in this chapter is to take your raw data structures, and create HT
 
 ### Journal Entry Component Function
 
-You've worked on exercises during which you wrote functions that returned HTML components. Now write a function that builds a journal entry HTML string template.
+You've worked on exercises in which you wrote functions that returned HTML components. Now write a function that builds a journal entry HTML string template.
 
 > src/scripts/journal.js
 
