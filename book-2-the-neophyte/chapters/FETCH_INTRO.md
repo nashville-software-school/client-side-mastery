@@ -29,30 +29,9 @@ You're going to use the food API that you set up in the last chapter.
     ```
 1. Create the boilerplate HTML in VS Code and hook up your `foodapi.js` file into the HTML.
 
-## Working for the Chesterfield Food Bank
+## Querying Data
 
-You've been hired by the city of Chesterfield, Missouri to build an application that provides ingredient information to people who are in need. Even those who use a food bank care about providing nutritious, safe food for their families. The food bank has requested that the information is on their web site so that the public can know which food is available, and see if any ingredients would cause allergic reactions.
-
-The director of the food bank is Consuela Mendoza, and it's your first day on the job.
-
-> Consuela greets you as you enter the spartan entryway of the food bank on a humid Monday morning. The sun is shining brightly, but it had rained heavily the night before. You notice several dehumidifiers running as you glance down a concrete hallway directly ahead of you.
->
-> Consuela smiles brightly and shakes your hand firmly but affably. "Thank you so much for helping us with this," she says as she extends an arm, guiding you down the concrete hallway that is briskly humming from the sound of the dehumidifiers. As the two of you walk towards a large grey door, she says, "We have to make sure that the humidity from the outside doesn't make it into our pantry."
->
-> When you reach the door, she presses the bar across the middle and it swings open to reveal a warehouse filled with food. It's much larger than you expected it to be. The door closes behind you and you continue to follow Consuela as she leads you to the left side of the pantry and another gray door.
->
-> You ogle the rows and rows of food and supplies and smile a little as you decide that this is the first place that you need to go in case of a zombie apocalypse. You enter the main office area of the food bank and she shows you to a small area on a long desk that they've cleared off for you.
->
-> "This is best place we could find for you while you work. I'm right around the corner to the left there," as she points through a window and you see a small cluttered desk, "and George is just past me through that door. He's in charge of inventory control and logistics."
-
-As you continue to talk, you find out that a previous software developer was hired to automate the entry of the inventory into a JSON file that is used to produce an API for all of the foods. That will save you a tremendous amount of time. Consuela also informs you that many of the foods are contributed from foreign countries - which you find a bit odd.
-
-> She holds out her hands, starts counting on her fingers, and says, "It comes largely from Britain, Scotland, Portugal, Australia and Germany. It all started with a food exchange program that our local government took part in with the state." She shrugs and continues, "I guess that's still going because the food keeps arriving every month."
->
-> "The first thing I need you to do is list all of the foods on a web page on our main site. That folder," she points at a red folder on the table, "contains all of the information set up by the last developer we used. She said it will let you access and maintain all the data."
-
-First, you are going to perform a [GET](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) operation to retrieve all the foods from the API. You look in the red folder to find out the URL of API that the last developer set up.
-
+First, you are going to perform a [GET operation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) to retrieve all the foods!
 
 Paste the following code into your `foodapi.js` JavaScript file and refresh your browser. Remember, **always have your DevTools open**.
 
