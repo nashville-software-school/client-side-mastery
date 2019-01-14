@@ -183,7 +183,7 @@ const steak = {
 	cooked: false,
 }
 
-// An first array containing the objects to be cooked.
+// An array that is grouping the objects together.
 const foods = [hamburger, zucchini, chickenBreast, corn, steak];
 
 // An empty array that will store the objects after the `grill()` function cooks the food.
