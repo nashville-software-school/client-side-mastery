@@ -29,11 +29,11 @@ Becoming comfortable with your terminal will make you a master of the computer.
 
 ### Aliases
 
-Aliases are useful for accelerating your development workflow. You define aliases in your `.zshrc` file with the `alias` keyword. Let's look at an example.
+Aliases are useful for accelerating your development workflow. You define aliases in your `.bashrc` file with the `alias` keyword. Let's look at an example.
 
 When working with the Git/Github workflow, there are several commands that you type over, and over, and over again. One of those is `git push origin myBranchName`. It becomes tedious to constantly type `git push origin`. Let's create an alias for it.
 
-Open the `.zshrc` initialization file in your favorite code editor, and enter in the following alias.
+Open the `.bashrc` initialization file in your favorite code editor, and enter in the following alias.
 
 `alias gpo="git push origin "`
 
@@ -41,7 +41,7 @@ Open the `.zshrc` initialization file in your favorite code editor, and enter in
 
 Save the file, and reload your init file with the `source` command.
 
-`source ~/.zshrc`
+`source ~/.bashrc`
 
 The next time you need to push a local branch to Github, you can use this alias to save yourself a lot of typing.
 
@@ -58,13 +58,13 @@ mkdir MyAwesomeApp
 cd MyAwesomeApp
 ```
 
-Let's create a bash function to accelerate that workflow. Open `.zshrc` and enter in the following function.
+Let's create a bash function to accelerate that workflow. Open `.bashrc` and enter in the following function.
 
- ```sh
+```sh
 mg() {
-  [ -n "$1" ] && mkdir -p "$@" && cd $_;
+ [ -n "$1" ] && mkdir -p "$@" && cd $_;
 }
- ```
+```
 
 `mg` is shorthand for `make and goto`. Source your init file, and then try it out.
 
@@ -99,25 +99,25 @@ Shells offer features geared specifically for interactive use rather than to aug
 ## Practice
 
 1. Create the following directory structure in your `workspace` directory.
-    ```sh
-    workspace
-    +-- cli
-        +-- practice
-            +-- create
-    ```
+   ```sh
+   workspace
+   +-- cli
+       +-- practice
+           +-- create
+   ```
 1. `cd` to the `create` directory with one command `cd ~/workspace/cli/practice/create`. Remember to use tab completion.
 1. While in this directory, create a new file named `foo` in the `cli` directory. Do not `cd` to `cli`, but rather use your navigation abilities.
-    ```sh
-    touch ../../foo
-    ```
+   ```sh
+   touch ../../foo
+   ```
 1. Put some simple content in the file using the `echo` command.
-    ```sh
-    echo 'Foo, I am your father' > ../../foo
-    ```
+   ```sh
+   echo 'Foo, I am your father' > ../../foo
+   ```
 1. Now use the `cat` command to read those contents.
-    ```sh
-    cat ../../foo
-    ```
+   ```sh
+   cat ../../foo
+   ```
 1. Do not change directories, and create a file named `bar` in the `practice` directory.
 1. Remove the `foo` file you created earlier with the `rm` command.
 1. `cd` back up to the `cli` directory.
@@ -132,11 +132,12 @@ Shells offer features geared specifically for interactive use rather than to aug
 
 1. Another process that is done many times during the course is initializing a new git repo on your machine.
 
-    ```sh
-    git init
-    git remote add origin GithubRemoteURL
-    touch .gitignore
-    ```
+   ```sh
+   git init
+   git remote add origin GithubRemoteURL
+   touch .gitignore
+   ```
 
-    Make a function that automates this for you, where you simply type in the function name followed by the new repo URL.
+   Make a function that automates this for you, where you simply type in the function name followed by the new repo URL.
+
 1. Once you have that working, use the `echo` command to augment the function to autopopulate the `.gitignore` with standard files and functions that should be ignored.
