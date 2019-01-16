@@ -225,7 +225,7 @@ If a student is passing, then the structure should look like the following.
 
 ```html
 <div class="student">
-    <h1 class="xx-large green">Student Name</h1>
+    <h1 class="xx-large passing">Student Name</h1>
     <section class="bordered dashed section--padded">Student class</section>
     <aside class="pushRight">Additional information</aside>
 </div>
