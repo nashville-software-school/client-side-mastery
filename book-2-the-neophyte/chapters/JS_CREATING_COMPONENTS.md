@@ -69,7 +69,7 @@ const aside = (title, style) => {
 You can then use these functions to create a student component function.
 
 ```js
-const createStudentDiv = (name, studentClass, sectionClass, info) => `
+const createStudentComponent = (name, studentClass, sectionClass, info) => `
     <div id="student">
         ${h1(name, studentClass, "xx-large")}
         ${section(sectionClass, "section--padded")}
