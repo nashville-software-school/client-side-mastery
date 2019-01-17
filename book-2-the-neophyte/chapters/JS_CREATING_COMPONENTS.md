@@ -28,9 +28,8 @@ const h1 = (title, style) => {
 Now you can add an `h1` inside the container article that already exists using the `innerHTML` property.
 
 ```js
-document.querySelector("#container").innerHTML = `
-    ${h1("Marcus Fulbright", "xx-large")}
-`
+document.querySelector("#container").innerHTML =
+    h1("Marcus Fulbright", "xx-large")
 ```
 
 Once that code runs, you will have the following DOM.
@@ -70,10 +69,10 @@ const aside = (title, style) => {
 You can then use these functions to create a student component function.
 
 ```js
-const student = (name, class, info) => `
+const createStudentDiv = (name, studentClass, sectionClass, info) => `
     <div id="student">
-        ${h1(name, "xx-large")}
-        ${section(class, "section--padded")}
+        ${h1(name, studentClass, "xx-large")}
+        ${section(sectionClass, "section--padded")}
         ${aside(info, "pushRight")}
     </div>
 `
