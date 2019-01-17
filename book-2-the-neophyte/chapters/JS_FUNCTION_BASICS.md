@@ -183,8 +183,8 @@ const steak = {
 	cooked: false,
 }
 
-// An first array containing the objects to be cooked.
-const uncookedFood = [hamburger, zucchini, chickenBreast, corn, steak];
+// An array that is grouping the objects together.
+const foods = [hamburger, zucchini, chickenBreast, corn, steak];
 
 // An empty array that will store the objects after the `grill()` function cooks the food.
 const cookedFood = [];
@@ -204,7 +204,7 @@ function grill (currentObject) {
 };
 ```
 
-Your task is to iterate over the array of `uncookedFood` and invoke the function for each item so that the `cookedFood` array contains all of the items after they are cooked.
+Your task is to iterate over the array of `foods` and invoke the function for each item so that the `cookedFood` array contains all of the items after they are cooked.
 
 ## Practice: Overly Excited
 
