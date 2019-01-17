@@ -211,7 +211,7 @@ const students = [
     ```
 1. Iterate the array of students, and apply the correct style to the `h1` depending on the score of the student being below 60, or above it.
     ```js
-    for (student of students) {
+    for (const student of students) {
         let studentComponent = ""
         if (student.score >= 60) {
             studentComponent = ...
