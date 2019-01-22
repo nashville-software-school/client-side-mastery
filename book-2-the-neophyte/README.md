@@ -17,9 +17,9 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 9 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
 * Chapter 10 - [Fetching Data](./chapters/FETCH_INTRO.md)
 * Chapter 11 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
-* Chapter 12 - [Automation with Grunt](./chapters/GRUNT_INTRO.md)
-* Chapter 13 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-* Chapter 14 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 12 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 13 - [Automation with Grunt](./chapters/GRUNT_INTRO.md)
+* Chapter 14 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 * Chapter 15 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
 
 > ### __Sprint 2__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
