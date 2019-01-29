@@ -26,7 +26,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 ## Supplementary Content
 
-* Supplement - [Practice Scope in JavaScript](./chapters/JS_SCOPE.md)
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
 * Supplement - [Deploy to AWS S3](./chapters/AWS_S3.md)

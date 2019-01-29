@@ -29,11 +29,11 @@ Becoming comfortable with your terminal will make you a master of the computer.
 
 ### Aliases
 
-Aliases are useful for accelerating your development workflow. You define aliases in your `.zshrc` file with the `alias` keyword. Let's look at an example.
+Aliases are useful for accelerating your development workflow. You define aliases in your `.bashrc` file with the `alias` keyword. Let's look at an example.
 
 You will often get lost in the command line, and going back to your home directory - where all your files live - can help you reset and find what you're looking for. You can create an alias named `gohome` which will take you there when you're lost.
 
-Open the `.zshrc` initialization file - which is in your home directory - in your favorite code editor, and enter in the following alias.
+Open the `.bashrc` initialization file in your favorite code editor, and enter in the following alias.
 
 `alias gohome="cd ~"`
 
@@ -41,7 +41,7 @@ Open the `.zshrc` initialization file - which is in your home directory - in you
 
 Save the file, and reload your init file with the `source` command in the terminal.
 
-`source ~/.zshrc`
+`source ~/.bashrc`
 
 The command is now ready to use, and will be available now every time you open a new terminal.
 
@@ -56,13 +56,13 @@ mkdir MyAwesomeApp
 cd MyAwesomeApp
 ```
 
-Let's create a bash function to accelerate that workflow. Open `.zshrc` and enter in the following function.
+Let's create a bash function to accelerate that workflow. Open `.bashrc` and enter in the following function.
 
- ```sh
+```sh
 mg() {
-  [ -n "$1" ] && mkdir -p "$@" && cd $_;
+ [ -n "$1" ] && mkdir -p "$@" && cd $_;
 }
- ```
+```
 
 `mg` is shorthand for `make and goto`. Source your init file, and then try it out.
 
@@ -97,25 +97,25 @@ Shells offer features geared specifically for interactive use rather than to aug
 ## Practice
 
 1. Create the following directory structure in your `workspace` directory.
-    ```sh
-    workspace
-    +-- cli
-        +-- practice
-            +-- create
-    ```
+   ```sh
+   workspace
+   +-- cli
+       +-- practice
+           +-- create
+   ```
 1. `cd` to the `create` directory with one command `cd ~/workspace/cli/practice/create`. Remember to use tab completion.
 1. While in this directory, create a new file named `foo` in the `cli` directory. Do not `cd` to `cli`, but rather use your navigation abilities.
-    ```sh
-    touch ../../foo
-    ```
+   ```sh
+   touch ../../foo
+   ```
 1. Put some simple content in the file using the `echo` command.
-    ```sh
-    echo 'Foo, I am your father' > ../../foo
-    ```
+   ```sh
+   echo 'Foo, I am your father' > ../../foo
+   ```
 1. Now use the `cat` command to read those contents.
-    ```sh
-    cat ../../foo
-    ```
+   ```sh
+   cat ../../foo
+   ```
 1. Do not change directories, and create a file named `bar` in the `practice` directory.
 1. Remove the `foo` file you created earlier with the `rm` command.
 1. `cd` back up to the `cli` directory.

@@ -77,7 +77,7 @@ In your boilerplate project, you will define a code module that contains the cod
 Make sure you are in the root directory of the application.
 
 ```sh
-touch src/scripts/carFactory.js
+touch src/scripts/createCar.js
 ```
 
 In Visual Studio Code, open that file and place the following code in it. This module does one thing only: it produces car objects. Each car object has a `make` and `model` property on it.
@@ -85,8 +85,8 @@ In Visual Studio Code, open that file and place the following code in it. This m
 ```js
 /*
     Author: your name here
-    Name: carFactory.js
-    Purpose: Produces a new car from a factory
+    Name: createCar.js
+    Purpose: Produces a new car object
 */
 const CarFactory = (make, model) => {
     const newCar = {
@@ -112,14 +112,14 @@ Open the `src/scripts/main.js` file and get rid of what's in there already, and 
     Name: main.js
     Purpose: Entry point of our application
 */
-import CarFactory from "./carFactory"
+import createCar from "./createCar"
 
 
 const garage = []
 
 // Create two cars using the function you imported
-const mustang = CarFactory("Ford", "Mustang")
-const accord = CarFactory("Honda", "Accord")
+const mustang = createCar("Ford", "Mustang")
+const accord = createCar("Honda", "Accord")
 
 // Drive the cars for a while
 console.log(mustang.drive("the grocery store"))
@@ -147,20 +147,20 @@ Open [http://localhost:8080/](http://localhost:8080/) in Chrome, view the Develo
 You can take this a step further and make the car garage it's own module.
 
 ```sh
-touch src/scripts/garage.js
+touch src/scripts/createGarage.js
 ```
 
 Instead of the garage being a simple array in your main module, you are going to make an object that has more complex behaviors - which are expressed as methods on an object.
 
 [Read more about what a **method** is](https://javascript.info/object-methods) if that term still confuses you.
 
-> garage.js
+> garageFactory.js
 
 ```js
 /*
     Author: your name here
-    Name: garage.js
-    Purpose: To store car instances
+    Name: createGarage.js
+    Purpose: To store cars in garages
 */
 
 /*
@@ -216,8 +216,9 @@ garage.store(accord)
 garage.store(santafe)
 garage.store(sierra)
 
-console.table(garage.inventory)
+console.table(garage.getInventory())
 console.table(garage.retrieve(sierra))
+
 ```
 
 ![console output with two car objects in array](./images/car-garage-updated-output.png)
