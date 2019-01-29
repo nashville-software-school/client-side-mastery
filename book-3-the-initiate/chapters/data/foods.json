@@ -1,0 +1,328 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "productName": "Betacom",
+      "price": 16.65,
+      "companyName": "Temptanfan"
+    },
+    {
+      "id": 2,
+      "productName": "Groove-stat",
+      "price": 7.51,
+      "companyName": "Zenzacom"
+    },
+    {
+      "id": 3,
+      "productName": "Kandonron",
+      "price": 9.76,
+      "companyName": "Kincane"
+    },
+    {
+      "id": 4,
+      "productName": "Mathflex",
+      "price": 3.11,
+      "companyName": "Howdox"
+    },
+    {
+      "id": 5,
+      "productName": "Dentostrong",
+      "price": 2.55,
+      "companyName": "Conekix"
+    },
+    {
+      "id": 6,
+      "productName": "Key-hat",
+      "price": 12,
+      "companyName": "Hatdinron"
+    },
+    {
+      "id": 7,
+      "productName": "Volotsing",
+      "price": 17.02,
+      "companyName": "Plexis"
+    },
+    {
+      "id": 8,
+      "productName": "Dom-kay",
+      "price": 23.94,
+      "companyName": "Salt-corporation"
+    },
+    {
+      "id": 9,
+      "productName": "Temp-lot",
+      "price": 20.59,
+      "companyName": "Dripquadlux"
+    },
+    {
+      "id": 10,
+      "productName": "Namsolofresh",
+      "price": 9.69,
+      "companyName": "Freshcode"
+    },
+    {
+      "id": 11,
+      "productName": "Plus dondex",
+      "price": 21.72,
+      "companyName": "Linecone"
+    },
+    {
+      "id": 12,
+      "productName": "Alphadanin",
+      "price": 17.67,
+      "companyName": "Donlax"
+    },
+    {
+      "id": 13,
+      "productName": "Strong ovetrax",
+      "price": 13.83,
+      "companyName": "Lot-corporation"
+    },
+    {
+      "id": 14,
+      "productName": "Vento-lam",
+      "price": 2.45,
+      "companyName": "Toughkix"
+    },
+    {
+      "id": 15,
+      "productName": "Overkayphase",
+      "price": 12.19,
+      "companyName": "Lanecancom"
+    },
+    {
+      "id": 16,
+      "productName": "Phys statlux",
+      "price": 18.79,
+      "companyName": "Temp-find"
+    },
+    {
+      "id": 17,
+      "productName": "Sail-rem",
+      "price": 9.8,
+      "companyName": "Blacklam"
+    },
+    {
+      "id": 18,
+      "productName": "Betazozcof",
+      "price": 11.49,
+      "companyName": "Vaia-cone"
+    },
+    {
+      "id": 19,
+      "productName": "Tamp sanlex",
+      "price": 1.16,
+      "companyName": "Silvering"
+    },
+    {
+      "id": 20,
+      "productName": "Jobredjob",
+      "price": 6.64,
+      "companyName": "Y--house"
+    },
+    {
+      "id": 21,
+      "productName": "Ice-sail",
+      "price": 23.35,
+      "companyName": "Geostreet"
+    },
+    {
+      "id": 22,
+      "productName": "Holdsolstock",
+      "price": 2.48,
+      "companyName": "Xx-donzoom"
+    },
+    {
+      "id": 23,
+      "productName": "U-quotouch",
+      "price": 1.07,
+      "companyName": "Supertom"
+    },
+    {
+      "id": 24,
+      "productName": "Stan keyron",
+      "price": 9.85,
+      "companyName": "Domzencan"
+    },
+    {
+      "id": 25,
+      "productName": "Re jaytech",
+      "price": 9.82,
+      "companyName": "Kaysailline"
+    },
+    {
+      "id": 26,
+      "productName": "Confinnix",
+      "price": 16.18,
+      "companyName": "U-latzoom"
+    },
+    {
+      "id": 27,
+      "productName": "Geocom",
+      "price": 11.9,
+      "companyName": "E--dom"
+    },
+    {
+      "id": 28,
+      "productName": "Zen-san",
+      "price": 1.04,
+      "companyName": "Round-cone"
+    },
+    {
+      "id": 29,
+      "productName": "Domlight",
+      "price": 20.41,
+      "companyName": "Dingsaotechno"
+    },
+    {
+      "id": 30,
+      "productName": "Zath-ran",
+      "price": 22.62,
+      "companyName": "Solity"
+    },
+    {
+      "id": 31,
+      "productName": "Lafax",
+      "price": 3.99,
+      "companyName": "Jayelectrics"
+    },
+    {
+      "id": 32,
+      "productName": "Zoomjoytex",
+      "price": 16.89,
+      "companyName": "Dentogofax"
+    },
+    {
+      "id": 33,
+      "productName": "Ranlatair",
+      "price": 19.8,
+      "companyName": "Planet-kix"
+    },
+    {
+      "id": 34,
+      "productName": "Home-hot",
+      "price": 20.52,
+      "companyName": "Highranex"
+    },
+    {
+      "id": 35,
+      "productName": "Geosanlux",
+      "price": 17.96,
+      "companyName": "Doublelamfix"
+    },
+    {
+      "id": 36,
+      "productName": "Groovefindax",
+      "price": 5.44,
+      "companyName": "Duojaycity"
+    },
+    {
+      "id": 37,
+      "productName": "Isdonstring",
+      "price": 19.56,
+      "companyName": "Ganz-fan"
+    },
+    {
+      "id": 38,
+      "productName": "Zoneing",
+      "price": 6.1,
+      "companyName": "Scot-ron"
+    },
+    {
+      "id": 39,
+      "productName": "Ontotop",
+      "price": 4.08,
+      "companyName": "Joy-cone"
+    },
+    {
+      "id": 40,
+      "productName": "Betasoft",
+      "price": 21.54,
+      "companyName": "X-talane"
+    },
+    {
+      "id": 41,
+      "productName": "Zon remfind",
+      "price": 10.76,
+      "companyName": "Plexruntone"
+    },
+    {
+      "id": 42,
+      "productName": "Fresh zendox",
+      "price": 8.5,
+      "companyName": "Flex-lam"
+    },
+    {
+      "id": 43,
+      "productName": "Voldamlax",
+      "price": 21.76,
+      "companyName": "Statway"
+    },
+    {
+      "id": 44,
+      "productName": "Tin saofresh",
+      "price": 20.42,
+      "companyName": "Indiquote"
+    },
+    {
+      "id": 45,
+      "productName": "Geosanlux",
+      "price": 17.96,
+      "companyName": "Doublelamfix"
+    },
+    {
+      "id": 46,
+      "productName": "Groovefindax",
+      "price": 5.44,
+      "companyName": "Duojaycity"
+    },
+    {
+      "id": 47,
+      "productName": "Isdonstring",
+      "price": 19.56,
+      "companyName": "Ganz-fan"
+    },
+    {
+      "id": 48,
+      "productName": "Zoneing",
+      "price": 6.1,
+      "companyName": "Scot-ron"
+    },
+    {
+      "id": 49,
+      "productName": "Ontotop",
+      "price": 4.08,
+      "companyName": "Joy-cone"
+    },
+    {
+      "id": 50,
+      "productName": "Betasoft",
+      "price": 21.54,
+      "companyName": "X-talane"
+    },
+    {
+      "id": 51,
+      "productName": "Zon remfind",
+      "price": 10.76,
+      "companyName": "Plexruntone"
+    },
+    {
+      "id": 52,
+      "productName": "Fresh zendox",
+      "price": 8.5,
+      "companyName": "Flex-lam"
+    },
+    {
+      "id": 53,
+      "productName": "Voldamlax",
+      "price": 21.76,
+      "companyName": "Statway"
+    },
+    {
+      "id": 54,
+      "productName": "Tin saofresh",
+      "price": 20.42,
+      "companyName": "Indiquote"
+    }
+  ]
+}
