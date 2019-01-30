@@ -18,7 +18,7 @@ The [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using
 
 You're going to use the food API that you set up in the last chapter.
 
-1. Make sure your API is running. If you need to review, go back to the last chapter for the command.
+1. Make sure your API is running in it's own separate GitBash window. If you need to review, go back to the last chapter for the command.
 1. Make a new sub-directory in your project named `src`. This directory will hold your application code.
     ```sh
     mkdir -p ~/workspace/javascript/exercises/food-api/src
@@ -28,6 +28,7 @@ You're going to use the food API that you set up in the last chapter.
     touch scripts/foodapi.js
     ```
 1. Create the boilerplate HTML in VS Code and hook up your `foodapi.js` file into the HTML.
+1. Open a new GitBash window and run your web server. 
 
 ## Querying Data
 
@@ -88,8 +89,7 @@ This line of code accepts the parsed JSON as the argument to a function, and the
 Once you have retrieved all of the foods from your own Food API, display each one of them in the DOM. Create an HTML representation of each food which will display the name of the food, its type, and its ethnicity.
 
 1. Create a DOM element in your `index.html` with a class of `foodList`.
-1. Create a function which returns a string template. The template is the HTML representation for a food item.
-1. Create a function that inserts an HTML representation of a food into the DOM
+1. Use the template code below to take the data and print it to the DOM. 
 
 > Example fetch call using functions
 
@@ -97,9 +97,9 @@ Once you have retrieved all of the foods from your own Food API, display each on
 fetch("http://localhost:8088/food")
     .then(foods => foods.json())
     .then(parsedFoods => {
+       
         parsedFoods.forEach(food => {
-            const foodAsHTML = foodFactory(food)
-            addFoodToDom(foodAsHTML)
+           //Print foods to DOM
         })
     })
 ```

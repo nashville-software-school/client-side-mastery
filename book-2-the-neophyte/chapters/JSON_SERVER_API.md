@@ -36,7 +36,8 @@ cd $_
 touch database.json
 ```
 
-Next, pre-populate your API with some of your favorite foods by defining them as objects with properties. Each object should have the following properties. The value of each property is specified in parenthesis.
+Next, pre-populate your API with some of your favorite foods by defining them as objects with properties. Each object should have the following properties. 
+* The value of each property is specified in parenthesis.
 
 1. id (_integer_) - An incrementing unique identifier
 1. name (_string_) - The name of the food
@@ -128,7 +129,7 @@ Now filter the food to only show Italian dishes
 
 Or curry dishes.
 
-[http://localhost:8088/food?type=curry](http://localhost:8088/food?type=curry)
+[http://localhost:8088/food?category=curry](http://localhost:8088/food?category=curry)
 
 ## Using Postman for API Queries
 
