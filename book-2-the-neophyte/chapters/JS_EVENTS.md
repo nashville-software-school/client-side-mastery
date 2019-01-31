@@ -161,64 +161,7 @@ document.querySelector("body").addEventListener("click", function(event) {
 
 ![event listener for keyup](./images/oJCxpJ0EeU.gif)
 
-## Practice: Scrolling and Scaling
 
-> The learning objective for this exercise is to practice listening for the `scroll` event broadcast by the browser, and updating DOM elements in response.
-
-Create the following three files, and copy pasta the code provided.
-
-> index.html
-
-Put the following code into the `<body>` element.
-
-```html
-<article id="container">
-  <section id="audrey">Feed me, Seymour</section>
-</article>
-```
-
-> box.css
-
-```css
-#container {
-  display: flex;
-  min-height: 1500px;
-}
-
-#audrey {
-  background-color: purple;
-  color: snow;
-  min-height: 100px;
-  width: 50px;
-  position: fixed;
-}
-```
-
-> audrey.js
-
-```js
-const audrey = document.getElementById("audrey")
-
-/*
-    Add an event listener to the `document` object to listen
-    for the "scroll" event.
-*/
-.addEventListener("", function () {
-    /*
-        Adjust the width of audrey to be 1/3 the value of
-        `window.scrollY`. No lower than 50px, though.
-    */
-
-
-
-    /*
-        Adjust the height of audrey to be 1/4 the value of
-        `window.scrollY`. No lower than 100px, though.
-    */
-})
-```
-
-![example of how scroll event should look](./images/eBh72rsnv3.gif)
 
 ## Practice: Wonder Powers Activate!
 
@@ -325,6 +268,69 @@ Write two more event handlers for activating and deactivating **_all_** powers w
 
 You may notice that your code to enable individual powers (not all at once) is very similar. To keep your code DRY, make one function that will handle activating a power depending on which button is clicked. (Hint: one way to get started is to use `event.target.id.split("-")` in your function)
 
+## Challenge: Scrolling and Scaling
+
+> The learning objective for this exercise is to practice listening for the `scroll` event broadcast by the browser, and updating DOM elements in response.
+
+Create the following three files, and copy pasta the code provided.
+
+> index.html
+
+Put the following code into the `<body>` element.
+
+```html
+<article id="container">
+  <section id="audrey">Feed me, Seymour</section>
+</article>
+```
+
+> box.css
+
+```css
+#container {
+  display: flex;
+  min-height: 1500px;
+}
+
+#audrey {
+  background-color: purple;
+  color: snow;
+  min-height: 100px;
+  width: 50px;
+  position: fixed;
+}
+```
+
+> audrey.js
+
+```js
+const audrey = document.getElementById("audrey")
+
+/*
+    Add an event listener to the `document` object to listen
+    for the "scroll" event.
+*/
+.addEventListener("", function () {
+    /*
+        Adjust the width of audrey to be 1/3 the value of
+        `window.scrollY`. No lower than 50px, though.
+    
+    */
+
+    /*
+        Hint: you're allowed to use the .style property in this exercise, even though we generally advice against it becasue it applies inline styles to your DOM (rather than adding and removing classes)
+
+    */
+
+
+    /*
+        Adjust the height of audrey to be 1/4 the value of
+        `window.scrollY`. No lower than 100px, though.
+    */
+})
+```
+
+![example of how scroll event should look](./images/eBh72rsnv3.gif)
 
 ## Challenge: Dynamic Cards
 
@@ -344,23 +350,18 @@ touch cards.css
 ### Requirements
 
 1. Create an HTML page that contains a text area and a button labeled *Create*.
-1. When the user enters in text into the text area and then clicks the create button, use a factory function that creates a new DOM component that has a border, and includes it's own delete button.
+1. When the user enters in text into the text area and then clicks the create button, create a new DOM component that has a border, and includes it's own delete button.
 1. Insert that new component into the DOM.
-1. When the user clicks the *Delete* button, the containing card, and no other cards, should then be removed from the DOM. Not just made invisible, actually [removed](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild) from the DOM.
+1. When the user clicks the *Delete* button, the containing card, and no other cards, should then be removed from the DOM. Not just made invisible, actually [removed](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove) from the DOM.
 
 > **Pro tip:** The card's `id` attribute, and the button's `id` attribute should share some common value. Then, when the button is clicked, find the corresponding parent DOM component. Remember the `split()` method on a string? That will be helpful.
 
+This is an example how one of your card components might look once it's in the DOM:
 ```html
 <article class="card" id="card--1">
     <div>Hey, I entered some text</div>
     <div>
         <button id="delete--1">Delete This Card</button>
-    </div>
-</article>
-<article class="card" id="card--2">
-    <div>Hey, I entered some text</div>
-    <div>
-        <button id="delete--2">Delete This Card</button>
     </div>
 </article>
 ```
