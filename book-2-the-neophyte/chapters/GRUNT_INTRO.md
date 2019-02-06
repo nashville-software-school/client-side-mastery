@@ -216,3 +216,20 @@ module.exports = function (grunt) {
 
 In your terminal, be in the directory that contains your `Gruntfile.js` and then type in `grunt` and watch it start up. Come see a learning team member if it doesn't start correctly.
 
+
+## Configuring New Projects
+
+Now that you have your Food API project directory set up with all the files and configuration needed, you can follow these steps when you create a new project to run these automated tasks.
+
+1. Create your new project directory
+1. Create an `api` sub-directory
+1. Create a `src` sub-directory
+1. Create a `src/scripts` sub-directory
+1. Create a `src/lib` sub-directory
+1. Now you can copy the following items from `food-api/src/lib` to the `lib` directory of your new project.
+    * The `grunt` directory (remember to use `cp -r` when copying a directory)
+    * The `Gruntfile.js` file
+    * The `package.json` file
+1. Next, copy the `.eslintrc` file from the source `src` directory to your new `src` directory
+
+Once those are copied over, `cd` to the `lib` directory of your new project and run the `npm install` command. Once that process is complete, you can run `grunt`.
