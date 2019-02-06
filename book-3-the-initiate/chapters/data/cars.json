@@ -43,6 +43,27 @@
     },
     {
         "vehicle": {
+            "year": 2012,
+            "model": "Volttanphase",
+            "make": "Tinlotis",
+            "color": "french fuchsia"
+        },
+        "sales_id": "c6775819-5d17-40db-94f4-00425db590ee",
+        "sales_agent": {
+            "mobile": "1-573-820-3780",
+            "last_name": "Schulist",
+            "first_name": "Vada",
+            "email": "davin@outlook.com"
+        },
+        "purchase_date": "2017-10-06",
+        "gross_profit": 1886.61,
+        "credit": {
+            "credit_provider": "TD Group US Holding",
+            "account": "494781657570"
+        }
+    },
+    {
+        "vehicle": {
             "year": 2013,
             "model": "Lexi-ton",
             "make": "Ware-com",
@@ -177,12 +198,12 @@
         "sales_id": "9aac0668-5609-41b3-97a3-6726dcbf3643",
         "sales_agent": {
             "mobile": "1-679-021-3004",
-            "last_name": "Lubowitz",
-            "first_name": "Darien",
+            "last_name": "Botsford",
+            "first_name": "Shaina",
             "email": "katrine@yahoo.com"
         },
         "purchase_date": "2017-03-22",
-        "gross_profit": 2471.96,
+        "gross_profit": 71.96,
         "credit": {
             "credit_provider": "Bank of New York Mellon",
             "account": "491646591515"
@@ -625,7 +646,7 @@
         "purchase_date": "2017-06-21",
         "gross_profit": 528.24,
         "credit": {
-            "credit_provider": "BB&T Corporation",
+            "credit_provider": "J.P.Morgan Chase & Co",
             "account": "517579888143713"
         }
     },
