@@ -26,6 +26,12 @@ Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation f
 
 ## Software
 
+### Spectacle
+
+This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
+
+[Download and install Spectacle](https://www.spectacleapp.com/) and after it is installed, click on the link labeled _**keyboard shortcuts**_ on the web site to try it out.
+
 ### Homebrew
 
 Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed.
