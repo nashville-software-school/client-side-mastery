@@ -23,7 +23,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 * Chapter 12 - [Updating LinkedIn Projects](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)
 
-
 ## Supplementary Content
 
 * Supplement - [Core Software Design Principles](./chapters/DESIGN_PRINCIPLES.md)

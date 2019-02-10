@@ -25,12 +25,13 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 > ### __Sprint 2__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
 
+> ### LinkedIn Projects update with Welcome to Nashville
+
 ## Supplementary Content
 
 * Supplement - [Practice Scope in JavaScript](./chapters/JS_SCOPE.md)
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
-* Supplement - [Deploy to AWS S3](./chapters/AWS_S3.md)
-* Supplement - [Deploy to AWS EC2](./chapters/AWS_EC2.md)
+* Supplement - [jQuery](./chapters/JQUERY.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 4 - The Initiate](../book-3-the-initiate/README.md).
