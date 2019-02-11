@@ -39,6 +39,7 @@ Here's what the creator fieldset should look like.
 
 ```html
 <fieldset>
+    <legend>Register your Lego Creation:</legend>
     <label for="lego__creator">Creator:</label>
     <input id="lego__creator" name="lego__creator" type="text" autofocus />
 </fieldset>
@@ -89,17 +90,30 @@ This code should be the last logic inside the event listener.
 
 ## Practice
 
-Rather than the user typing in the name of the color each time, define another collection in your API named `colors` and let the user select a pre-defined color from a `<select>` element.
+Your company is building an application for an HR department to keep track of its employees.Let's start by building out the functionality for a user to add a new employee and see a list of all the company's employees.
 
-```html
-<select id="lego__color">
-    <option value="1">Red</option>
-    <option value="2">Green</option>
-    <option value="3">Yellow</option>
-    <option value="4">Blue</option>
-    <option value="5">Orange</option>
-    <option value="6">Black</option>
-</select>
-```
+1. Set up a new project. This project should use Grunt to run `http-server` and `json-server` from the same terminal.
+1. Create a collection (i.e. empty array) in your json-server database file called "employees"
+1. In your `index.html` file, create a form. Your form should have input fields where the HR manager can enter information about the new employee. Include the following fields and add more if you like:
+    - First name
+    - Last name
+    - Email address
+    - Phone number
+    - Birthday
+    - Department
+1. When the user clicks the "Add Employee" button on your form, use the data they entered into the form to build a new employee object in your JavaScript file.
+1. `POST` the new employee object to your json-server database.
+1. When the `POST` request is complete, get a list of all the employees from the database and print them to the DOM.
 
-This will require you to refactor your lego API data structures by adding a new `colors` resource in the API.
+## Challenge: More Form Inputs
+Add the following inputs to your form. In your JavaScript file, you should add their values to the employee object before you POST it to the database.
+1. Refactor your form to include a checkbox labeled `Supervisor?`. If the check box is checked, add a property of `supervisor` to your employee object and set it equal to `true`. If not, add a property of `supervisor` to the employee object and set it equal to `false`.
+1. Instead of having the HR manager enter the departments manually in a text input, create a dropdown of departments.
+1. Add radio buttons in your form for the employee's gender
+
+
+## Challenge: Filtering Data
+If you haven't already, take some time to read about [filtering data with json-server](https://github.com/typicode/json-server#filter).
+1. Create an affordance for users to view all the employees in a department. If that department has a supervisor, the supervisor's name should be in bold and their DOM component should have a black border that's 1px wide.
+1. Create an affordance to view all the supervisors at the company (from any department).
+1. Create a search bar where users can search all the employees at a company by first or last name.
