@@ -39,6 +39,7 @@ Here's what the creator fieldset should look like.
 
 ```html
 <fieldset>
+    <legend>Register your Lego Creation:</legend>
     <label for="lego__creator">Creator:</label>
     <input id="lego__creator" name="lego__creator" type="text" autofocus />
 </fieldset>

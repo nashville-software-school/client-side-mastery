@@ -66,14 +66,11 @@ Once we have all the data for the single item we clicked on, we can pass it into
 const buildEditForm = singleLego =>
  `<form>
     <fieldset>
+      <legend>Register Your Lego Creation:</legend>
       <label for="lego__creator">Creator:</label>
       <input id="lego__creator--edit" name="lego__creator" type="text" value=${singleLego.creator} autofocus />
-    </fieldset>
-    <fieldset>
       <label for="lego__creator">Shape:</label>
       <input id="lego__shape--edit" name="lego__creator" type="text" value=${singleLego.shape} autofocus />
-    </fieldset>
-    <fieldset>
       <label for="lego__creation">Creation:</label>
       <input id="lego__creation--edit" name="lego__creator" type="text" value=${singleLego.creation} autofocus />
     </fieldset>
