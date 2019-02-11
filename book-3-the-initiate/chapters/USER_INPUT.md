@@ -112,6 +112,7 @@ Add the following inputs to your form. In your JavaScript file, you should add t
 
 
 ## Challenge: Filtering Data
+If you haven't already, take some time to read about [filtering data with json-server](https://github.com/typicode/json-server#filter).
 1. Create an affordance for users to view all the employees in a department. If that department has a supervisor, the supervisor's name should be in bold and their DOM component should have a black border that's 1px wide.
-1. Create an affordance to view all the supervisors at the company.
+1. Create an affordance to view all the supervisors at the company (from any department).
 1. Create a search bar where users can search all the employees at a company by first or last name.
