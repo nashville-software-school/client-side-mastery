@@ -81,6 +81,7 @@ sourceComponent.click(function (evt) {
 1. [jQuery AJAX](https://www.youtube.com/watch?v=Wl-VvvNCk2A)
 
 ## Practice - The Song List
+Set up a new project. You should use Grunt to run your json-server and your http-server from one terminal window.
 
 > index.html
 
@@ -122,17 +123,16 @@ $(document).ready(function() {
 
     /*
         Attach a click handler to the button with jQuery. When
-        the button is clicked, use $.ajax() to load `songs.json`
-        from the file system
+        the button is clicked, use fetch to load the song data from your json-server
     */
 
 
     /*
-        Chain a `.then()` method to the ajax call, and when
+        Chain a `.then()` method to the fetch call, and when
         it is complete build a DOM component for each song with
         the following structure. Use the jQuery append() method
         to put an HTML representation of each song the DOM as a
-        child component of the .
+        child component of the "song-list" article.
 
             <section class="song">
                 <h1 class="song__title">{Title of song}</h1>
@@ -144,7 +144,7 @@ $(document).ready(function() {
 })
 ```
 
-> songs.json
+> db.json
 
 ```json
 {
@@ -172,3 +172,12 @@ $(document).ready(function() {
   ]
 }
 ```
+
+## Challenge: Search for Songs
+- Add a search bar beside the "load-songs" button. The user should be able to enter a song title. artist, or album title into the search bar. When they click the "load-songs", button, they should see the matching albums.
+
+## Challenge: CRUD with songs
+Use jQuery to implement CRUD functionality in your song list app:
+- Add a form with three inputs below the search bar. Users should be able to enter song title, artist, and album title into the inputs. When they click on a "save" button, send a POST request to add your new song to the json-server database and reprint the list of songs on the DOM.
+- Add a delete button to every song component in your "song-list" container. When the user clicks the delete button beside a song, that song should be deleted (both from the DOM and from the database).
+- Add an edit butotn to every song component in your "song-list" container. When the user clicks the delete button beside a song, an edit form should appear in the DOM. It should be auto-populated with that song's information. When the user clicks "save" on the edit form, the new information should be saved to the json-server database and updated on the DOM.
