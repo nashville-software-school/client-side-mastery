@@ -34,4 +34,4 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
 * Supplement - [jQuery](./chapters/JQUERY.md)
 
-Once you are strong on these foundational concepts, you will move along to [Book 4 - The Initiate](../book-3-the-initiate/README.md).
+Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).

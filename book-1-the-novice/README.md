@@ -29,4 +29,4 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
 * Supplement - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
 
-Once you are strong on these foundational concepts, you will move along to [Book 3 - The Neophyte](../book-2-the-neophyte/README.md).
+Once you are strong on these foundational concepts, you will move along to [Book 2 - The Neophyte](../book-2-the-neophyte/README.md).
