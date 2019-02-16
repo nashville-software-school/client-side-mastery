@@ -35,8 +35,7 @@ const createStudentComponent = () => {
             <section>Day cohort 27</section>
             <aside>
                 Wore pants that were too short for his legs.
-                Routinely showed up late. Was an incredible
-                friend to his teammates.
+                Was an incredible friend to his teammates.
             </aside>
         </div>
     `
@@ -165,8 +164,7 @@ const createStudentComponent = (name, class, info, score) => {
             <section>Day cohort 27</section>
             <aside>
                 Wore pants that were too short for his legs.
-                Routinely showed up late. Was an incredible
-                friend to his teammates.
+                Was an incredible friend to his teammates.
             </aside>
         </div>
     `
