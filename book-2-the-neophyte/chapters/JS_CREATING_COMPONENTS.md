@@ -62,73 +62,73 @@ Consider the following example of a collection of twelve students.
 const students = [
     {
         name: "Chris Miller",
-        class: "History",
+        subject: "History",
         info: "Failed last exam",
         score: 59
     },
     {
         name: "Courtney Seward",
-        class: "History",
+        subject: "History",
         info: "Has completed all homework",
         score: 91
     },
     {
         name: "Garrett Ward",
-        class: "History",
+        subject: "History",
         info: "Wonderful at helping other students",
         score: 88
     },
     {
         name: "John Dulaney",
-        class: "History",
+        subject: "History",
         info: "Has never missed a class or exam",
         score: 92
     },
     {
         name: "Greg Lawrence",
-        class: "History",
+        subject: "History",
         info: "Sub-par performance all around",
         score: 64
     },
     {
         name: "Leah Duvic",
-        class: "History",
+        subject: "History",
         info: "Wonderful student",
         score: 97
     },
     {
         name: "Jesse Page",
-        class: "History",
+        subject: "History",
         info: "Smokes too much. Distracting.",
         score: 76
     },
     {
         name: "Kevin Haggerty",
-        class: "History",
+        subject: "History",
         info: "Falls asleep in class",
         score: 79
     },
     {
         name: "Max Wolf",
-        class: "History",
+        subject: "History",
         info: "Talks too much",
         score: 83
     },
     {
         name: "Lissa Goforth",
-        class: "History",
+        subject: "History",
         info: "Asks pointless, unrelated questions",
         score: 78
     },
     {
         name: "Tyler Bowman",
-        class: "History",
+        subject: "History",
         info: "When was the last time he attended class?",
         score: 48
     },
     {
         name: "Ray Medrano",
-        class: "History",
+        subject: "History",
         info: "Needs to contribute to in-class discussions",
         score: 95
     }
@@ -154,14 +154,14 @@ You, as a software developer, would write a function that could generate HTML to
 
 It's time for you to rewrite the function to accept the information it needs to do its job. It's job is to generate an HTML representation of a student, so it must define arguments to store that input.
 
-Since each student object has four properties, you can rewrite the function to accept four arguments.
+You are using 3 of the 4 properties on each student object to build the HTML. You're not using `score` yet. Define those 3 arguments.
 
 ```js
-const createStudentComponent = (name, class, info, score) => {
+const createStudentComponent = (name, subject, info) => {
     return `
         <div class="student">
             <h1>Alejandro Font</h1>
-            <section>Day cohort 27</section>
+            <section>Science</section>
             <aside>
                 Wore pants that were too short for his legs.
                 Was an incredible friend to his teammates.
@@ -190,11 +190,11 @@ Use interpolation to evaluate an expression.
 Note that you can only do this when you use the backtick character to build the string. It will not work when using single quote or double quote to build the string. Time for you to finish the refactor and use interpolation for the arguments.
 
 ```js
-const createStudentComponent = (name, class, info) => {
+const createStudentComponent = (name, subject, info) => {
     return `
         <div class="student">
             <h1>${name}</h1>
-            <section>${class}</section>
+            <section>${subject}</section>
             <aside>${info}</aside>
         </div>
     `
@@ -230,7 +230,7 @@ for (let i = 0; i < students.length; i++) {
     const student = students[i]
     studentContainer.innerHTML += createStudentComponent(
         student.name,
-        student.class,
+        student.subject,
         student.info
     )
 }
@@ -305,7 +305,7 @@ If a student is passing, then the structure should look like the following.
 ```html
 <div class="student">
     <h1 class="xx-large passing">Student Name</h1>
-    <section class="bordered dashed section--padded">Student class</section>
+    <section class="bordered dashed section--padded">Subject</section>
     <aside class="pushRight">Additional information</aside>
 </div>
 ```
@@ -334,7 +334,7 @@ Invoke those functions inside the `createStudentComponent` function to build the
 const createStudentComponent = (student) => `
     <div id="student">
         ${h1(student.name)}
-        ${section(student.class)}
+        ${section(student.subject)}
         ${aside(student.info)}
     </div>
 `
@@ -354,7 +354,7 @@ Create one function that will generate **any** HTML component, with **any** cont
 const createStudentComponent = (student) => `
     <div id="student">
         ${element("h1", student.name, "xx-large passing")}
-        ${element("section", student.class, "bordered dashed section--padded")}
+        ${element("section", student.subject, "bordered dashed section--padded")}
         ${element("aside", student.info, "pushRight")}
     </div>
 `
