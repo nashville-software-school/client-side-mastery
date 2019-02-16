@@ -298,7 +298,7 @@ Create an API using `json-server` for the resources you created above to track c
     ```sh
     json-server --watch db.json
     ```
-1. Use jQuery's `$.ajax()` method to get all of the related data to build a card for each politician. It should list the bills they have sponsored, and any companies that have contributed to a PAC that has a shared interest for each bill.
+1. Use `fetch` to get all of the related data to build a card for each politician. It should list the bills they have sponsored, and any companies that have contributed to a PAC that has a shared interest for each bill.
 
 ```html
 <article class="politician">
