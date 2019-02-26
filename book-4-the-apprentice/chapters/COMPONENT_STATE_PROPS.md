@@ -180,7 +180,7 @@ Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** a
 You are going to be building your own React application based off of what you do with these lesson plans for NSS Kennels.
 
 1. Create another React project in `~/workspace/javascript/exercises/kandykorner` and `cd` into it.
-1. Initialize your app with `npm create-react-app .`
+1. Initialize your app with `npx create-react-app .`
 1. Create a `src/components` directory.
 1. Create your application file and component in `components/KandyKorner.js`.
 1. Update `index.js` to render the **`<KandyKorner />`** component, just like you did in Kennels.
