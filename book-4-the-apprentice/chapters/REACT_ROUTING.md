@@ -205,10 +205,42 @@ Once all of this is in place, you will have the base of a single page applicatio
 * [React Component Patterns by Michael Chan](https://www.youtube.com/watch?v=YaZg8wg39QQ)
 * [Advanced React Component Patterns](https://egghead.io/courses/advanced-react-component-patterns)
 
-## Practice: Owners List
+## Practice: Kennel Owners List
 
 If you haven't created the `owners` array in your state yet, please go ahead and create it now, and populate it with 4 owners. Each owners should have the `id`, `phoneNumber`, and `name` properties.
 
 1. Create a link in your navigation bar that links to `/owners` path.
 1. Create a route for `/owners` that renders the `<OwnerList>` component and sends the corresponding state property.
 1. Add the code in `<OwnerList>` to display all the items in the array.
+
+## Practice: Kandy Korner Routing
+
+Refactor your Kandy Korner application to use routing. Create a **`NavBar`** component with the following links.
+
+1. Stores
+1. Employees
+1. Candies
+
+Clicking on the links will list the corresponding data.
+
+## Practice: Kandy Korner Candy Types
+
+When displaying the candy list, the related candy type should also be displayed. This means that you need to pass the state variable of `candyTypes` from the **`KandyKorner`** component to the **`CandyList`** component.
+
+Then in **`CandyList`**, use the `find()` array method when displaying the candies to grab the related data.
+
+```js
+{
+    this.props.candies.map(candy =>
+        <div key={candy.id}>
+            {candy.name}
+            of type
+            {
+                this.props.candyTypes
+                    .find(fill in the blank)
+                    .name
+            }
+        </div>
+    )
+}
+```

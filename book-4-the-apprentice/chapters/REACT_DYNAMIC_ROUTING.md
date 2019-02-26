@@ -88,6 +88,10 @@ Once the browser reloads, click on the _Details_ hyperlink in the first card. It
 
 ![animated image showing dynamic routing in action](./images/pZks6gwfvK.gif)
 
-## Practice: All the Details
+## Practice: Kennels: All the Details
 
 Now implement dynamic routing for all of the other resources that you are displaying in your application.
+
+## Practice: Kandy Korner: Stores, Employees and Candies Oh My
+
+For all of the resources in Kandy Korner, when rendering them in the list view, make the name of each item a hyperlink. When the user clicks on the item, take them to the detail view for that item.

@@ -196,11 +196,40 @@ Once you've got all these pieces in place, click on the _Admit Animal_ button, f
 
 ![animation showing animal form working](./images/yeFJQKGtiU.gif)
 
-## Practice: Adding Employees and Owners
+## Practice: Kennels: Adding Employees and Owners
 
 1. Create forms for employees and owners.
 1. Update **`EmployeeManager`** and **`OwnerManager`** with methods to POST new objects to the API.
 1. Create methods in **`ApplicationViews`** to invoke the manager methods, and pass those functions to the appropriate child components.
+
+## Practice: Kandy Korner: Adding Employees
+
+1. Create a form for adding an employee.
+1. Update **`EmployeeManager`** with methods to POST new objects to the API.
+1. Create a method in **`ApplicationViews`** to invoke the manager methods, and pass those functions to the appropriate child components.
+
+## Practice: Kandy Korner: Adding Candies
+
+1. Create a form for adding a new candy. This form will need to display a drop-down for showing candy types, so you will need to send that state variable from **`KandyKorner`** to **`CandyForm`**
+1. Update **`CandyManager`** with methods to POST new objects to the API.
+1. Create a method in **`ApplicationViews`** to invoke the manager methods, and pass those functions to the child component.
+
+Sample code for adding candy types drop down.
+
+```js
+<select defaultValue=""
+        name="candyType"
+        id="candyType"
+        onChange={this.handleFieldChange}>
+    <option value="">Select an candy type</option>
+    {
+        this.props.candyTypes.map(ct =>
+            <option key={ct.id} id={ct.id}>
+                {ct.name}
+            </option>)
+    }
+</select>
+```
 
 ## Advanced Challenge: Editing Animals
 
