@@ -45,7 +45,7 @@ AnimalManager.getAll().then(allAnimals => {
 })
 ```
 
-## Practice: All Resource Managers
+## Practice: Kennels: All Resource Managers
 
 Create a manager file in the `modules` directory for each of your resources.
 
@@ -56,7 +56,18 @@ Create a manager file in the `modules` directory for each of your resources.
 
 Add the `get()` and `all()` methods to each one, changing the URL path in each one to get the corresponding resource type. Then refactor the **`ApplicationViews`** component to import all of them and use all of them when querying your data.
 
-## Challenge: Refactor Delete
+## Practice: Kandy Korner: All Resource Managers
+
+Create a manager file in the `modules` directory for each of your resources.
+
+1. Candies
+1. Locations
+1. Employees
+1. Candy Types
+
+Add the `get()` and `all()` methods to each one, changing the URL path in each one to get the corresponding resource type. Then refactor the **`ApplicationViews`** component to import all of them and use all of them when querying your data.
+
+## Challenge: Kennels: Refactor Delete
 
 See if you can add a method to your **`AnimalManager`** module to make the following refactored `deleteAnimal()` method work in **`ApplicationViews`**.
 
