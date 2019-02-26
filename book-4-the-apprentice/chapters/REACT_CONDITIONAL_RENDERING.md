@@ -139,9 +139,13 @@ User is unable to view list of employees until she logs in.
 
 ![working conditional routing](./images/kfst2FfzcO.gif)
 
-## Practice: No Content for You!
+## Practice: Kennels: No Content for You!
 
-Ensure that customers can't access locations, animals, or employees unless they submit a login.
+Ensure that customers can't access locations, animals, or employees unless they submit a authenticate.
+
+## Practice: Kandy Korner: No Content for You!
+
+Ensure that customers can't access any view in the Kandy Korner application until they authenticate.
 
 ## Fun Challenge: Remember Me
 
