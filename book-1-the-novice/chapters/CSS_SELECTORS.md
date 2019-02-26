@@ -138,7 +138,7 @@ Paste the code below into your HTML document.
 1. The header element should have a 1px, goldenrod border.
 1. Convert the `ul` in the navigation element into a series of horizontal links with # as the href value, without bullets, and have some space between them horizontally.
 1. Ensure that the navigation is semantically marked as such (i.e. wrap it in the correct HTML tag).
-1. Any text in an element with class "disabled" should be colored grey, unless it is inside an anchor tag. If inside an anchor, it should be colored purple.
+1. Any text in an element with class "disabled" should be colored grey, unless it is an attribute of an anchor tag. If it is an attribute of an anchor tag, it should be colored purple.
 1. Any text inside an element with a class of "active" should be colored yellow.
 1. Section elements should be contained within an article element.
 1. There are two missing closing tags in this document. Make sure you add them back in.
