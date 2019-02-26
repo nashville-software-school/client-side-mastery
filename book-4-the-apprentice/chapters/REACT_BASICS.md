@@ -166,7 +166,7 @@ import Kennel from "./components/Kennel"
 ReactDOM.render(<Kennel />, document.querySelector("#root"));
 ```
 
-## Practice
+## Practice - Kennels
 
 Right now, the kennel location information is JSX inside the **`Kennel`** component. The business wants to expand and open a new location. Your job is to make a new component named **`LocationList`**, and put the names and addresses of each location in that component's JSX.
 
