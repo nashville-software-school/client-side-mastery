@@ -92,14 +92,13 @@ Some starter code and comments to get you started.
 > AnimalManager.js
 
 ```js
-import APIManager from "./APIManager"
 /*
-    Remember that extending a Class means that
-    it will be in this class's prototype chain.
+    Remember that the first argument for Object.create() is the
+    object that will be in this object's prototype chain.
 */
-class AnimalManager extends APIManager {
+export default Object.create(APIManager, {
     ...
-}
+})
 ```
 
 Now, consider moving all of those functions that are _nearly_ identical to the **`APIManager`** module. How could you write the functions to be useful for each of the more specialized managers?
@@ -109,20 +108,21 @@ Now, consider moving all of those functions that are _nearly_ identical to the *
 ```js
 const remoteURL = "http://localhost:5002"
 
-export default class APIManager {
-
-  get(id) {
-    /*
-        Since the purpose of this module is to be used by
-        all of the more specialized one, then the string
-        of `animals` should not be hard coded here.
-    */
-    return fetch(`${remoteURL}/animals/${id}`).then(data => data.json())
-  }
-
-  all() {
-    return fetch(`${remoteURL}/animals`).then(data => data.json())
-  }
-
-}
+export default Object.create(null, {
+    get: {
+        value: function (id) {
+            /*
+                Since the purpose of this module is to be used by
+                all of the more specialized one, then the string
+                of `animals` should not be hard coded here.
+            */
+            return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
+        }
+    },
+    all: {
+        value: function () {
+            return fetch(`${remoteURL}/animals`).then(e => e.json())
+        }
+    }
+})
 ```
