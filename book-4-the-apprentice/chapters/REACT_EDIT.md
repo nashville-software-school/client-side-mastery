@@ -24,7 +24,7 @@ In your `AnimalCard` component, we are going to add a new button. When a user cl
 
 ## Route for Showing Animal Edit Form
 
-Below is a new route that renders the edit form for editing information about an animal. The `employees` collection is passed to the component because just like the form we used to board an animal, this one will also have the dropdown for employees. You will also pass an additonal prop called `upAnimal` which we will defined in `ApplicationViews`. You will also need to update the route for `/animals/:animalId` so that the the `AnimalDetail` component is only rendered when the path is an exact match.
+Below is a new route that renders the edit form for editing information about an animal. The `employees` collection is passed to the component because just like the form we used to board an animal, this one will also have the dropdown for employees. You will also pass an additonal prop called `updateAnimal` which will be defined in `ApplicationViews`. You will also need to update the route for `/animals/:animalId` so that the the `AnimalDetail` component is only rendered when the path is an exact match.
 
 First, update your routes with this code.
 
@@ -50,7 +50,7 @@ First, update your routes with this code.
 
 ## Update method in ApplicationViews
 
-When an animal's information is edited, the HTTP request will be a PUT. Define a method in your `AnimalManager` for the fetch call. This method will take two arguments: the id of the animal that will be updating as well as the an object that contains the new information for the animal that we want to save to the database.
+When an animal's information is edited, the HTTP request will be a PUT. Define a method in your `AnimalManager` for the fetch call. This method will take two arguments: the id of the animal that will be updated as well as an object that contains the new information for the animal that we want to save to the database.
 
 ```jsx
 put(animalId, editedAnimal) {
