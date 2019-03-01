@@ -6,7 +6,7 @@ In this chapter, you are going to learn how to edit an animal. We will use a for
 
 ## Button for Routing to the Edit Form
 
-In your `AnimalCard` component, we are going to add a new button. When a user clicks on the button, the route changes to `/animals/:animalId/edit`. We will be using the route parameter to do a fetch call to get the data needed to prefill the form.
+In your `AnimalCard` component, we are going to add a new button. When a user clicks on the button, the route changes to `/animals/:animalId/edit`. We will be using the route parameter to do a fetch call to get the data needed to pre-fill the form.
 
 ```jsx
 <button
@@ -24,7 +24,7 @@ In your `AnimalCard` component, we are going to add a new button. When a user cl
 
 ## Route for Showing Animal Edit Form
 
-Below is a new route that renders the edit form for editing information about an animal. The `employees` collection is passed to the component because just like the form we used to board an animal, this one will also have the dropdown for employees. You will also pass an additonal prop called `updateAnimal` which will be defined in `ApplicationViews`. You will also need to update the route for `/animals/:animalId` so that the the `AnimalDetail` component is only rendered when the path is an exact match.
+Below is a new route that renders the edit form for editing information about an animal. The `employees` collection is passed to the component because just like the form we used to board an animal, this one will also have the dropdown for employees. You will pass an additional prop called `updateAnimal` which will be defined in `ApplicationViews`. You will also need to update the route for `/animals/:animalId` so that the the `AnimalDetail` component is only rendered when the path is an exact match.
 
 First, update your routes with this code.
 
@@ -50,11 +50,11 @@ First, update your routes with this code.
 
 ## Update method in ApplicationViews
 
-When an animal's information is edited, the HTTP request will be a PUT. Define a method in your `AnimalManager` for the fetch call. This method will take two arguments: the id of the animal that will be updated as well as an object that contains the new information for the animal that we want to save to the database.
+When an animal's information is edited, the HTTP request will be a PUT. Define a method in your `AnimalManager` for the fetch call. This method will take an object that contains the new information for the animal that we want to save to the database as its single argument.
 
 ```jsx
-put(animalId, editedAnimal) {
-    return fetch(`${remoteURL}/animals/${animalId}`, {
+put(editedAnimal) {
+    return fetch(`${remoteURL}/animals/${editedAnimal.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -67,8 +67,8 @@ put(animalId, editedAnimal) {
 In your `ApplicationViews`, you are going to add a method that uses our newly defined `put` method in our `AnimalManger`. Just like with our CREATE and DELETE, any time the data is changed, another fetch to get the new data is made and we update state.
 
 ```jsx
-updateAnimal = (animalId, editedAnimalObject) => {
-        return AnimalManager.put(animalId, editedAnimalObject)
+updateAnimal = (editedAnimalObject) => {
+        return AnimalManager.put(editedAnimalObject)
         .then(() => AnimalManager.getAll())
         .then(animals => {
           this.setState({
@@ -110,12 +110,13 @@ export default class AnimalEditForm extends Component {
         window.alert("Please select a caretaker");
       } else {
         const editedAnimal = {
+          id: this.props.match.params.animalId,
           name: this.state.animalName,
           breed: this.state.breed,
           employeeId: parseInt(this.state.employeeId)
         };
 
-    this.props.updateAnimal(this.props.match.params.animalId, editedAnimal)
+    this.props.updateAnimal(editedAnimal)
     .then(() => this.props.history.push("/animals"))      
     }
   }
