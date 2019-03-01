@@ -12,14 +12,15 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * Chapter 8 - [React: CRUD with Forms](./chapters/REACT_FORMS.md)
 * Chapter 9 - [React: Conditional Routing](./chapters/REACT_CONDITIONAL_RENDERING.md)
 * Chapter 10 - [React: Reusability](./chapters/REACT_REUSABLE_COMPONENTS.md)
+* Chapter 11 - [React: Edit](./chapters/REACT_EDIT.md)
 
 > ## Sprint 4: Reactive Nutshell
 
 > ### LinkedIn Projects update with Reactive Nuthsell
 
-* Chapter 11 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
-* Chapter 12 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
-* Chapter 13 (_optional_) - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
+* Chapter 12 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+* Chapter 13 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
+* Chapter 14 (_optional_) - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
 * Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 > ## **Begin Client Side Capstone Development**
