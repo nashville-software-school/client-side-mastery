@@ -1,6 +1,9 @@
-# Personalizing the OSX Command Line
+# Personalizing the Command Line
 
-Sorry Windows users, this is for OSX users only. Microsoft simply does not provide any way to have a very personalized terminal.
+
+* [Power Up Your Command Line - Part 1](https://darrenburns.net/posts/tools)
+* [Power Up Your Command Line - Part 2](https://darrenburns.net/posts/more-tools)
+* [Power Up Your Command Line - Part 3](https://darrenburns.net/posts/even-more-tools)
 
 ## Autojump
 

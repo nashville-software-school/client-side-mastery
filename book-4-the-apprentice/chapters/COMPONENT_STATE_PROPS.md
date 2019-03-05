@@ -175,6 +175,47 @@ Now that you are passing state from the **`Kennel`** to the **`EmployeeList`** a
 2. Create an **`AnimalList`** component for displaying animals.
 3. Update **`Kennel`** to pass its `animals` state to **`AnimalList`** and use the appropriate key on `this.props` to display all animal names.
 
+## Practice - Kandy Korner
+
+You are going to be building your own React application based off of what you do with these lesson plans for NSS Kennels.
+
+1. Create another React project in `~/workspace/javascript/exercises/kandykorner` and `cd` into it.
+1. Initialize your app with `npx create-react-app .`
+1. Create a `src/components` directory.
+1. Create your application file and component in `components/KandyKorner.js`.
+1. Update `index.js` to render the **`<KandyKorner />`** component, just like you did in Kennels.
+
+There are 4 collections of data you will be using for the Kandy Korner application.
+
+1. Store locations
+1. Employees
+1. Candy types
+1. Individual candies
+
+Define 4 arrays, filled with objects representing the above items, in your KandyKorner component. Add those arrays to the state of your application.
+
+**Make sure that each individual candy object has a foreign key to a candy type.**
+
+```js
+state = {
+    stores: storeArray,
+    employees: employeeArray,
+    candyTypes: candyTypeArray,
+    candies: candyArray
+}
+```
+
+Then create the following components to display the data.
+
+1. **`<StoreList />`**
+1. **`<EmployeeList />`**
+1. **`<CandyList />`**
+
+And use them in the `render()` method of **`KandyKorner`**. Make sure you pass the appropriate state to each of the components.
+
+Lastly, access the data on `this.props` object in each component to display the data.
+
+
 ## Challenge: Animal Owners
 
 > Remember, challenges are completely optional and should not be attempted until you have done the practice exercises and understand the basic concepts of them.

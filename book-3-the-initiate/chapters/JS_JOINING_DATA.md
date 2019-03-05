@@ -269,22 +269,23 @@ Once your data is normalized, use your DOM skills to display a card for each emp
 
 You need to design a database to represent the financial relationship between political candidates and corporate entities. Since corporations can contribute to political action committees (PAC), your job is to help see how politicians are being funded, and if that funding is directly translating into bills that politicians [sponsor](https://en.wikipedia.org/wiki/Sponsor_(legislative)).
 
-1. Politicians can receive donations from many PACs or SuperPACs.
-1. A legislative bill can be categorized to support a particular commercial interest.
+1. Politicians can receive donations from many PACs.
+1. A legislative bill can be categorized to support only one, particular commercial interest.
 1. Corporations can donate to multiple PACs, on multiple dates.
 1. A bill can be sponsored by one, or more, politicians.
-1. PACs can make direct contributions to a political campaign.
-1. Corporations can have myriad interests for which they donate money to a PAC.
+1. PACs can make direct contributions to as many political campaigns as it wants.
+1. Corporations can have multiple interests.
+1. Corporations do **not disclose** any specific information about a donation, including its interests, when it donates to a PAC. We only know the date of the donation and the amount.
 
-The resources in this system are as follows:
+The obvious resources in this system are as follows:
 
-1. Politician
 1. Corporation
-1. Donation
-1. PoliticalActionCommittee
-1. LegislativeBill
+1. Political Action Committee
+1. Donations (either from corporation to PAC, or from PAC to campaign)
+1. Politician
+1. Legislative Bill
 
-Create an ERD that visualizes the relationships between these resources. You will need to create some entities in addition to the ones listed above to build the correct relationships.
+There are other resources (tables) that you will need to create to fulfill the requirements and represent the complex relationships. Build an ERD to visualize these relationships.
 
 ## Advanced Challenge: Honest Abe API
 
@@ -297,7 +298,7 @@ Create an API using `json-server` for the resources you created above to track c
     ```sh
     json-server --watch db.json
     ```
-1. Use jQuery's `$.ajax()` method to get all of the related data to build a card for each politician. It should list the bills they have sponsored, and any companies that have contributed to a PAC that has a shared interest for each bill.
+1. Use `fetch` to get all of the related data to build a card for each politician. It should list the bills they have sponsored, and any companies that have contributed to a PAC that has a shared interest for each bill.
 
 ```html
 <article class="politician">
