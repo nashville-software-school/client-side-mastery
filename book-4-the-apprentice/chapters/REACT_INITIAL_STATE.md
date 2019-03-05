@@ -137,7 +137,7 @@ From this point on in the tutorial, you will see components being exported immed
 * [React App Requests to JSON API](https://www.youtube.com/watch?v=vwWPM7za3Pk&list=PLhScwEnhQ-bmroyHFduwgOZ1KrdDvk_44) video series
 * [React for Everyone](https://www.youtube.com/playlist?list=PLLnpHn493BHFfs3Uj5tvx17mXk4B4ws4p) video series
 
-## Practice
+## Practice - NSS Kennels
 
 1. Refactor your code to populate the locations and the owners from your API.
 1. Once you have everything rendering, remove the empty arrays you defined in the `state` object so you can see how the React lifecycle works. What happened when you removed them?
@@ -153,6 +153,12 @@ state = {
 
 ![](./images/eB9CCcrUHy.gif)
 
+## Practice - Kandy Korner API
+
+Create the `kandykorner/api` directory and set up your `database.json` file to contain all of the data for the application. Then start up your API with `json-server`. Then refactor your **`KandyKorner`** component to retrieve all of the data from the API. Make sure you do that in the `componentDidMount()` method.
+
+Once you have this refactor done correctly, the application should work without any other changes in other components.
+
 ## Advanced Challenge: Search your Data
 
 > Remember that challenges, especially advanced ones, are completely optional and should not be attempted until you have completed the practice exercises and understand the concepts used in them.
@@ -162,3 +168,11 @@ Not for the weak of heart, is this challenge. Put an input box in your navigatio
 When the customer presses the ENTER key, all three collections in your API need to be queried to find any item that matches, and then a new component should be shown whose job it is to show the items that were found, if any.
 
 ![search results](./images/qNAJIxX9NX.gif)
+
+### Hints
+
+1. Create a **`SearchResults`** component.
+1. Add a `path="/search"` route in your app that renders **`SearchResults`**.
+1. Use the [`_like` operator](https://github.com/typicode/json-server#operators) available with json-server.
+1. You'll need to use chained `fetch` calls to each of the collections in your API and build up an object of found items.
+1. After all calls are successful, you'll need to use the `this.props.history.push()` method to show a **`SearchResults`** component.

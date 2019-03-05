@@ -114,10 +114,14 @@ export default class AnimalList extends Component {
 
 Just like a primitive value, such as a string or an integer, you can pass function references from a parent component to a child component. The child component can then specify when that functionality should be invoked, even though it was defined on its parent.
 
-## Practice: Fire Employees
+## Practice: Kennels: Fire Employees
 
 Add the same functionality to the **`EmployeeList`** component so that employees can be fired!
 
-## Practice: Remove Owners
+## Practice: Kennels: Remove Owners
 
 Add the same functionality to the **`OwnerList`** for when they decide they no longer want to be a customer.
+
+## Practice: Kandy Korner: Discontinued Candy
+
+Add a function in **`KandyKorner`** that will remove individual candies from your inventory. Add a button to the JSX you have in **`CandyList`** that renders individual candies. Then invoke that function when the user clicks the button on an individual candy.

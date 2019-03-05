@@ -7,166 +7,246 @@ Creating an independent component that can be used anywhere in your application 
 
 ## Student Info Component
 
-You will create three functions that will help you build your very first component, which will be composed of three separate HTML elements.
+In the next 2 months, you are going to be using JavaScript to generate HTML representations of raw data structure - like objects - to display in the browser. In this lesson, you're going to be writing JavaScript to build the following HTML structure representing a student at NSS.
 
-### Title Element Function
-
-Consider you have the following HTML code.
-
-```html
-<article id="container"></article>
-```
-
-By adding this tiny function to your JavaScript, you can create `<h1>` elements, with a given CSS class.
-
-```js
-const h1 = (title, style) => {
-    return `<h1 class="${style}">${title}</h1>`
-}
-```
-
-Now you can add an `h1` inside the container article that already exists using the `innerHTML` property.
-
-```js
-document.querySelector("#container").innerHTML =
-    h1("Marcus Fulbright", "xx-large")
-```
-
-Once that code runs, you will have the following DOM.
-
-```html
-<article id="container">
-    <h1 class="xx-large">Marcus Fulbright</h1>
-</article>
-```
-
-### Component Structure
-
-This may seem overly complicated when all you need to do is write the `h1` element where needed. Why create a function to do it for you? Consider the case where you need to display the information for 12 students in the DOM. Each student will be represented in HTML with the following structure.
+We'll call this student Alejandro Font.
 
 ```html
 <div class="student">
-    <h1>Student Name</h1>
-    <section>Student class</section>
-    <aside>Additional information</aside>
+    <h1>Alejandro Font</h1>
+    <section>Day cohort 27</section>
+    <aside>
+        Wore pants that were too short for his legs.
+        Routinely showed up late. Was an incredible
+        friend to his teammates.
+    </aside>
 </div>
 ```
 
-You've already created a function for the `h1`, so you create two more functions for the `section` and the `aside`. However, you want to ensure that **all** section elements are bordered with a dashed line.
+### HTML Generation Function
+
+The first step is to write a function that returns that literal HTML string.
 
 ```js
-const section = (title, style) => {
-    return `<section class="bordered dashed ${style}">${title}</section>`
-}
-
-const aside = (title, style) => {
-    return `<aside class="${style}">${title}</aside>`
+const createStudentComponent = () => {
+    return `
+        <div class="student">
+            <h1>Alejandro Font</h1>
+            <section>Day cohort 27</section>
+            <aside>
+                Wore pants that were too short for his legs.
+                Was an incredible friend to his teammates.
+            </aside>
+        </div>
+    `
 }
 ```
 
-### Component Function
-
-You can then use these functions to create a student component function.
+Then you can invoke that function and update the DOM with the HTML string that it returns.
 
 ```js
-const createStudentComponent = (name, studentClass, sectionClass, info) => `
-    <div id="student">
-        ${h1(name, studentClass, "xx-large")}
-        ${section(sectionClass, "section--padded")}
-        ${aside(info, "pushRight")}
-    </div>
-`
+// Then store a reference to an existing HTML element
+const studentContainer = document.querySelector("#container")
 
-const container = document.querySelector("#container")
-container.innerHTML = student("Marcus Fulbright", "Algebra", "Not a bright student")
+// Update its contents with the return value of the function
+studentContainer.innerHTML = createStudentComponent()
 ```
 
-10 of the students are currently passing the course, and 2 students are not. You want passing, and non-passing, student information to be styled differently. You want passing students' names to be green, and non-passing students to be orange.
+## Making it Dynamic
 
-Here's a sample student list.
+The function you wrote isn't very powerful. It doesn't show off the true power of a function because software developers do not hard code data into the HTML like that. The data comes from a database or an API (you will learn more about those later) and then stored in JavaScript inside arrays.
+
+Consider the following example of a collection of twelve students.
 
 ```js
 const students = [
     {
         name: "Chris Miller",
-        class: "History",
+        subject: "History",
         info: "Failed last exam",
         score: 59
     },
     {
         name: "Courtney Seward",
-        class: "History",
+        subject: "History",
         info: "Has completed all homework",
         score: 91
     },
     {
         name: "Garrett Ward",
-        class: "History",
+        subject: "History",
         info: "Wonderful at helping other students",
         score: 88
     },
     {
         name: "John Dulaney",
-        class: "History",
+        subject: "History",
         info: "Has never missed a class or exam",
         score: 92
     },
     {
         name: "Greg Lawrence",
-        class: "History",
+        subject: "History",
         info: "Sub-par performance all around",
         score: 64
     },
     {
         name: "Leah Duvic",
-        class: "History",
+        subject: "History",
         info: "Wonderful student",
         score: 97
     },
     {
         name: "Jesse Page",
-        class: "History",
+        subject: "History",
         info: "Smokes too much. Distracting.",
         score: 76
     },
     {
         name: "Kevin Haggerty",
-        class: "History",
+        subject: "History",
         info: "Falls asleep in class",
         score: 79
     },
     {
         name: "Max Wolf",
-        class: "History",
+        subject: "History",
         info: "Talks too much",
         score: 83
     },
     {
         name: "Lissa Goforth",
-        class: "History",
+        subject: "History",
         info: "Asks pointless, unrelated questions",
         score: 78
     },
     {
         name: "Tyler Bowman",
-        class: "History",
+        subject: "History",
         info: "When was the last time he attended class?",
         score: 48
     },
     {
         name: "Ray Medrano",
-        class: "History",
+        subject: "History",
         info: "Needs to contribute to in-class discussions",
         score: 95
     }
 ]
 ```
 
+You would not write 12 different function, with each one being responsible for generating one of the students.
+
+```js
+// The following code is not dynamic
+
+const createRayMedrano = () => {
+    // HTML here
+}
+const createTylerBowman = () => {
+    // HTML here
+}
+
+etc...
+```
+
+You, as a software developer, would write a function that could generate HTML to represent any of those students. The way you can change the output, or logic, of a function is by using function arguments.
+
+It's time for you to rewrite the function to accept the information it needs to do its job. It's job is to generate an HTML representation of a student, so it must define arguments to store that input.
+
+You are using 3 of the 4 properties on each student object to build the HTML. You're not using `score` yet. Define those 3 arguments.
+
+```js
+const createStudentComponent = (name, subject, info) => {
+    return `
+        <div class="student">
+            <h1>Alejandro Font</h1>
+            <section>Science</section>
+            <aside>
+                Wore pants that were too short for his legs.
+                Was an incredible friend to his teammates.
+            </aside>
+        </div>
+    `
+}
+```
+
+Now that the arguments have been defined in the parenthesis of the function, it's time to refactor the function body to use them to build the HTML string. You would use the process of _string interpolation_ to inject the value of the arguments into the string.
+
+String interpolation is accomplished by using a dollar sign followed by curly braces.
+
+Use interpolation to evaluate a variable.
+
+```js
+`${studentName}`  // "Alejandro Font"
+```
+
+Use interpolation to evaluate an expression.
+
+```js
+`${studentName.length > 4}`  // "true"
+```
+
+Note that you can only do this when you use the backtick character to build the string. It will not work when using single quote or double quote to build the string. Time for you to finish the refactor and use interpolation for the arguments.
+
+```js
+const createStudentComponent = (name, subject, info) => {
+    return `
+        <div class="student">
+            <h1>${name}</h1>
+            <section>${subject}</section>
+            <aside>${info}</aside>
+        </div>
+    `
+}
+```
+
+Now you can invoke the function, pass different values into its arguments, and get different output.
+
+```js
+const lissa = createStudentComponent(
+    "Lissa Goforth",
+    "History",
+    "Asks pointless, unrelated questions")
+
+const courtney = createStudentComponent(
+    "Courtney Seward",
+    "History",
+    "Has completed all homework")
+
+const greg = createStudentComponent(
+    "Greg Lawrence",
+    "History",
+    "Sub-par performance all around")
+```
+
+Now that you have a function that dynamically builds HTML strings based on its input (via arguments), now you can iterate the array of students and use the function.
+
+```js
+const studentContainer = document.querySelector("#container")
+
+
+for (let i = 0; i < students.length; i++) {
+    const student = students[i]
+    studentContainer.innerHTML += createStudentComponent(
+        student.name,
+        student.subject,
+        student.info
+    )
+}
+```
+
+## Changing Functionality Based on a Particular Property
+
+Ten of the students are currently passing the course, and two students are not. You want passing, and non-passing, student information to be styled differently. You want passing students' names to be green, and non-passing students to be orange.
+
+How might you refactor the function body again to use the `score` property of each student object to change the output of the function?
+
 ## Practice: Student Components
 
-1. Create a new project.
+1. Create a new project sub-directory in your `workspace/javascript` directory.
 1. Paste the array of student objects above into your JavaScript file.
-1. Put the `h1`, `section`, and `aside` functions into your JavaScript file.
+1. Copy the `createStudentComponent` function into your code.
 1. Add the following styles to your CSS.
     ```css
     #container {
@@ -225,52 +305,59 @@ If a student is passing, then the structure should look like the following.
 ```html
 <div class="student">
     <h1 class="xx-large passing">Student Name</h1>
-    <section class="bordered dashed section--padded">Student class</section>
+    <section class="bordered dashed section--padded">Subject</section>
     <aside class="pushRight">Additional information</aside>
 </div>
 ```
 
-## Practice
+## Practice: One Object to Rule Them All
 
+Instead of defining four arguments for the `createStudentComponent` function, and then passing the individual properties when it is invoked, refactor the function to accept the entire object as a single argument.
+
+Then refactor your string interpolation code to use the object properties.
 
 ---
 
 > Challenges are optional exercises that you should only attempt if you have completed the practice exercises, and fully understand the concepts used in them.
 
-## Challenge: Use Rest Operator
+## Challenge: Composition of Smaller Components
 
-This will allow you to pass as many arguments to your component-building functions as you want without the need to define each one in the argument list.
+Write functions that build the sub-components of the larger student component.
+
+* h1
+* section
+* aside
+
+Invoke those functions inside the `createStudentComponent` function to build the parent `<div>`.
 
 ```js
-const h1 = (...props) => {
-    return `<h1 class="${props[0]}">${props[1]}</h1>`
-}
+const createStudentComponent = (student) => `
+    <div id="student">
+        ${h1(student.name)}
+        ${section(student.subject)}
+        ${aside(student.info)}
+    </div>
+`
 ```
-
-Change your functions to use the rest operator.
 
 ## Challenge: Generic HTML Function
 
-Look at the three functions you created to build an `h1`, a `section`, and an `aside`. Notice that each one follows the same pattern of applying the `style` argument, and the `content` argument in the same locations.
+Look at the three functions you created to build an `h1`, a `section`, and an `aside`. Notice that each one follows the same pattern of accepting a single argument - a string - and outputting a single HTML component. Since there is a pattern, you can consider writing a single function that generalizes the creation of an HTML component even further.
+
+Create one function that will generate **any** HTML component, with **any** content. It should be defined with three arguments.
+
+1. The type of HTML component to make
+1. The content of the component
+1. The value of the `class` attribute
 
 ```js
-const h1 = (...props) => {
-    return `<h1 class="${props[1]}">${props[0]}</h1>`
-}
-
-const section = (...props) => {
-    return `<section class="bordered dashed ${props[1]}">${props[0]}</section>`
-}
-
-const aside = (...props) => {
-    return `<aside class="${props[1]}">${props[0]}</aside>`
-}
-```
-
-Can you think of a way to make a more generic function that not only takes the style and content as arguments, but also the element type?
-
-```js
-const h1 = element("h1", "Generic Component Maker", "xx-large orange")
+const createStudentComponent = (student) => `
+    <div id="student">
+        ${element("h1", student.name, "xx-large passing")}
+        ${element("section", student.subject, "bordered dashed section--padded")}
+        ${element("aside", student.info, "pushRight")}
+    </div>
+`
 ```
 
 ## Advanced Challenge: Using createElement for Components

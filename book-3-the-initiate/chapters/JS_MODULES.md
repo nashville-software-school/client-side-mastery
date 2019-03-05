@@ -223,14 +223,25 @@ console.table(garage.retrieve(sierra))
 
 ![console output with two car objects in array](./images/car-garage-updated-output.png)
 
+## Resources
+
+* [ECMAScript 6 modules: the final syntax](http://2ality.com/2014/09/es6-modules-final.html)
+
 ## Practice: Contact List
+
+> The boilerplate repository does not include the task for starting a `json-server` API, so you need to add it for this parctice exercise. Add the following task to the `src/lib/grunt/aliases.yaml` file:
+>
+>    `- "bgShell:launchAPI"`
+>
+> Then make sure you add a `database.json` file to your `api` directory
+
 
 Build four components:
 
-1. A **ContactCollection** component that loads existing contacts from storage, and saves new ones. Each new contact should have an auto-generated identifier.
+1. A **ContactCollection** component that loads existing contacts from a `json-server` API, and saves new ones.
 1. A **Contact** component that displays a person's name, phone number, and address.
 1. A **ContactList** component that displays all contacts. It should import the **Contact** component and the **ContactCollection** component.
-1. A **ContactForm** component that, when filled out and a submit button is pressed, adds a new contact to storage. It should import the **ContactCollection** component.
+1. A **ContactForm** component that listens for when the submit button is pressed. When it is triggered, a new contact should be POSTed to the API. It should import the **ContactCollection** component.
 
 In `main.js`, import the **ContactList** component and the **ContactForm** component.
 

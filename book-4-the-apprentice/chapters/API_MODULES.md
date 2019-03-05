@@ -45,7 +45,7 @@ AnimalManager.getAll().then(allAnimals => {
 })
 ```
 
-## Practice: All Resource Managers
+## Practice: Kennels: All Resource Managers
 
 Create a manager file in the `modules` directory for each of your resources.
 
@@ -56,7 +56,18 @@ Create a manager file in the `modules` directory for each of your resources.
 
 Add the `get()` and `all()` methods to each one, changing the URL path in each one to get the corresponding resource type. Then refactor the **`ApplicationViews`** component to import all of them and use all of them when querying your data.
 
-## Challenge: Refactor Delete
+## Practice: Kandy Korner: All Resource Managers
+
+Create a manager file in the `modules` directory for each of your resources.
+
+1. Candies
+1. Locations
+1. Employees
+1. Candy Types
+
+Add the `get()` and `all()` methods to each one, changing the URL path in each one to get the corresponding resource type. Then refactor the **`ApplicationViews`** component to import all of them and use all of them when querying your data.
+
+## Challenge: Kennels: Refactor Delete
 
 See if you can add a method to your **`AnimalManager`** module to make the following refactored `deleteAnimal()` method work in **`ApplicationViews`**.
 
@@ -81,14 +92,13 @@ Some starter code and comments to get you started.
 > AnimalManager.js
 
 ```js
-import APIManager from "./APIManager"
 /*
-    Remember that extending a Class means that
-    it will be in this class's prototype chain.
+    Remember that the first argument for Object.create() is the
+    object that will be in this object's prototype chain.
 */
-class AnimalManager extends APIManager {
+export default Object.create(APIManager, {
     ...
-}
+})
 ```
 
 Now, consider moving all of those functions that are _nearly_ identical to the **`APIManager`** module. How could you write the functions to be useful for each of the more specialized managers?
@@ -98,20 +108,21 @@ Now, consider moving all of those functions that are _nearly_ identical to the *
 ```js
 const remoteURL = "http://localhost:5002"
 
-export default class APIManager {
-
-  get(id) {
-    /*
-        Since the purpose of this module is to be used by
-        all of the more specialized one, then the string
-        of `animals` should not be hard coded here.
-    */
-    return fetch(`${remoteURL}/animals/${id}`).then(data => data.json())
-  }
-
-  all() {
-    return fetch(`${remoteURL}/animals`).then(data => data.json())
-  }
-
-}
+export default Object.create(null, {
+    get: {
+        value: function (id) {
+            /*
+                Since the purpose of this module is to be used by
+                all of the more specialized one, then the string
+                of `animals` should not be hard coded here.
+            */
+            return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
+        }
+    },
+    all: {
+        value: function () {
+            return fetch(`${remoteURL}/animals`).then(e => e.json())
+        }
+    }
+})
 ```

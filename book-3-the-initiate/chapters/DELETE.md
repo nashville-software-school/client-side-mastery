@@ -19,7 +19,7 @@ We might represent it to our users with a DOM component that looks like this:
   <p>Boat</p>
   <p>Emily Lemmon</p>
   <button class="edit-btn" id="edit-1">Edit</button>
-  <buton class="delete-btn" id="delete-1">Delete</button>
+  <button class="delete-btn" id="delete-1">Delete</button>
 </section>
 
 ```

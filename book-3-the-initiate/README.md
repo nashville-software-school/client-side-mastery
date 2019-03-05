@@ -23,14 +23,16 @@ In this book, you will learn tools, libraries and workflows that modern client s
 
 > ## Sprint 3 - Nutshell
 
+> ### LinkedIn Projects update with Browserify Nutshell
+
 ## Supplementary Content
 
-* Supplement - [Object.create() Method](./chapters/JS_OBJECT_CREATE.md)
-* Supplement - [Generator Functions](./chapters/JS_GENERATOR_FUNCTION.md)
+* Supplement - [*nix CLI Powerups](./chapters/CLI_PERSONALIZATION.md)
 * Supplement - [Prototypal Inheritance](./chapters/PROTOTYPAL.md)
+* Supplement - [Object.create() Method](./chapters/JS_OBJECT_CREATE.md)
 * Supplement - [JavaScript Maps](./chapters/JS_MAPS.md)
+* Supplement - [Generator Functions](./chapters/JS_GENERATOR_FUNCTION.md)
 * Supplement - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
 * Supplement - [Deploy API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
-* Supplement - [Using vim as Your Text Editor](./chapters/VIM.md)
 
-Once you are strong on these foundational concepts, you will move along to [Book 5 - The Apprentice](../book-4-the-apprentice/README.md).
+Once you are strong on these foundational concepts, you will move along to [Book 4 - The Apprentice](../book-4-the-apprentice/README.md).

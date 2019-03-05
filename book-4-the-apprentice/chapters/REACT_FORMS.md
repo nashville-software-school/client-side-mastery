@@ -4,7 +4,6 @@ In this chapter, you are going to learn how to use use a form to express the sta
 
 **_Quick Note_:** All of the code you will see from here to the end of this chapter needs to be in place before the feature will work.
 
-
 ## Route for Showing Animal Form
 
 Below is a new route that renders a form for boarding a new animal. The `employees` collection needs to be passed to the form component so that a dropdown list can be populated for the user to choose a caretaker. You also need to update the route for `/animals` so that the `props` argument is passed down to the child component. This sets up the ability to use the very helpful `history.push()` mechanism in the components themselves to change the URL in the browser.
@@ -57,9 +56,9 @@ Update `Animal.css` to center the button.
 
 ```css
 .animalButton {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 0 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 0 10px 0;
 }
 ```
 
@@ -86,12 +85,14 @@ post(newAnimal) {
 Since you can't pass the `post()` method from the manager module to a component, you must write a method in **`ApplicationViews`** that implements it. You can then pass this method down to the **`AnimalForm`** component.
 
 ```js
-addAnimal = (animal) => AnimalManager.post(animal)
-  .then(() => AnimalManager.getAll())
-  .then(animals => this.setState({
-      animals: animals
-    })
-  )
+addAnimal = animal =>
+  AnimalManager.post(animal)
+    .then(() => AnimalManager.getAll())
+    .then(animals =>
+      this.setState({
+        animals: animals
+      })
+    );
 ```
 
 ## AnimalForm Component
@@ -104,89 +105,111 @@ In state, you see three properties:
 
 1. `animalName`
 1. `breed`
-1. `employee`
+1. `employeeId`
 
 There are three, directly corresponding input fields:
 
 1. `<input id="animalName" ... />`
 1. `<input id="breed" ... />`
-1. `<select id="employee" ...>`
+1. `<select id="employeeId" ...>`
 
 > components/animal/AnimalForm.js
 
 ```js
-import React, { Component } from "react"
-import "./Animal.css"
+import React, { Component } from "react";
+import "./Animal.css";
 
 export default class AnimalForm extends Component {
-    // Set initial state
-    state = {
-        animalName: "",
-        breed: "",
-        employee: ""
-    }
+  // Set initial state
+  state = {
+    animalName: "",
+    breed: "",
+    employeeId: ""
+  };
 
-    // Update state whenever an input field is edited
-    handleFieldChange = evt => {
-        const stateToChange = {}
-        stateToChange[evt.target.id] = evt.target.value
-        this.setState(stateToChange)
-    }
+  // Update state whenever an input field is edited
+  handleFieldChange = evt => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = evt.target.value;
+    this.setState(stateToChange);
+  };
 
-    /*
+  /*
         Local method for validation, creating animal object, and
         invoking the function reference passed from parent component
      */
-    constructNewAnimal = evt => {
-        evt.preventDefault()
-        if (this.state.employee === "") {
-            window.alert("Please select a caretaker")
-        } else {
-            const animal = {
-                name: this.state.animalName,
-                breed: this.state.breed,
-                employeeId: this.props.employees.find(e => e.name === this.state.employee).id
-            }
+  constructNewAnimal = evt => {
+    evt.preventDefault();
+    if (this.state.employee === "") {
+      window.alert("Please select a caretaker");
+    } else {
+      const animal = {
+        name: this.state.animalName,
+        breed: this.state.breed,
+        // Make sure the employeeId is saved to the database as a number since it is a foreign key.
+        employeeId: parseInt(this.state.employeeId)
+      };
 
-            // Create the animal and redirect user to animal list
-            this.props.addAnimal(animal).then(() => this.props.history.push("/animals"))
-        }
+      // Create the animal and redirect user to animal list
+      this.props
+        .addAnimal(animal)
+        .then(() => this.props.history.push("/animals"));
     }
+  };
 
-    render() {
-        return (
-            <React.Fragment>
-                <form className="animalForm">
-                    <div className="form-group">
-                        <label htmlFor="animalName">Animal name</label>
-                        <input type="text" required
-                               className="form-control"
-                               onChange={this.handleFieldChange}
-                               id="animalName"
-                               placeholder="Animal name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="breed">Breed</label>
-                        <input type="text" required
-                               className="form-control"
-                               onChange={this.handleFieldChange}
-                               id="breed" placeholder="Breed" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="employee">Assign to caretaker</label>
-                        <select defaultValue="" name="employee" id="employee"
-                                onChange={this.handleFieldChange}>
-                            <option value="">Select an employee</option>
-                        {
-                            this.props.employees.map(e => <option key={e.id} id={e.id}>{e.name}</option>)
-                        }
-                        </select>
-                    </div>
-                    <button type="submit" onClick={this.constructNewAnimal} className="btn btn-primary">Submit</button>
-                </form>
-            </React.Fragment>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <form className="animalForm">
+          <div className="form-group">
+            <label htmlFor="animalName">Animal name</label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="animalName"
+              placeholder="Animal name"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="breed">Breed</label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="breed"
+              placeholder="Breed"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="employee">Assign to caretaker</label>
+            <select
+              defaultValue=""
+              name="employee"
+              id="employeeId"
+              onChange={this.handleFieldChange}
+            >
+              <option value="">Select an employee</option>
+              {this.props.employees.map(e => (
+                <option key={e.id} id={e.id} value={e.id}>
+                  {e.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <button
+            type="submit"
+            onClick={this.constructNewAnimal}
+            className="btn btn-primary"
+          >
+            Submit
+          </button>
+        </form>
+      </React.Fragment>
+    );
+  }
 }
 ```
 
@@ -196,18 +219,38 @@ Once you've got all these pieces in place, click on the _Admit Animal_ button, f
 
 ![animation showing animal form working](./images/yeFJQKGtiU.gif)
 
-## Practice: Adding Employees and Owners
+## Practice: Kennels: Adding Employees and Owners
 
 1. Create forms for employees and owners.
 1. Update **`EmployeeManager`** and **`OwnerManager`** with methods to POST new objects to the API.
 1. Create methods in **`ApplicationViews`** to invoke the manager methods, and pass those functions to the appropriate child components.
 
-## Advanced Challenge: Editing Animals
+## Practice: Kandy Korner: Adding Employees
 
-> As always, advanced challenges are completely optional and should only be attempted when you are comfortable with all of the basic concepts that you have learned so far.
+1. Create a form for adding an employee.
+1. Update **`EmployeeManager`** with methods to POST new objects to the API.
+1. Create a method in **`ApplicationViews`** to invoke the manager methods, and pass those functions to the appropriate child components.
 
-In the **`AnimalDetails`** component, add an _Edit Animal Info_ button. When the button is clicked, a form should be presented to the user with the details of the animal pre-loaded into each input field.
+## Practice: Kandy Korner: Adding Candies
 
-When the user clicks the submit button on the editing form, then the values in the input fields should be used to update the information about the animal in the API.
+1. Create a form for adding a new candy. This form will need to display a drop-down for showing candy types, so you will need to send that state variable from **`KandyKorner`** to **`CandyForm`**
+1. Update **`CandyManager`** with methods to POST new objects to the API.
+1. Create a method in **`ApplicationViews`** to invoke the manager methods, and pass those functions to the child component.
 
-Use the PUT method on your `fetch` calls.
+Sample code for adding candy types drop down.
+
+```js
+<select
+  defaultValue=""
+  name="candyType"
+  id="candyTypeId"
+  onChange={this.handleFieldChange}
+>
+  <option value="">Select an candy type</option>
+  {this.props.candyTypes.map(ct => (
+    <option key={ct.id} id={ct.id} value={ct.id}>
+      {ct.name}
+    </option>
+  ))}
+</select>
+```
