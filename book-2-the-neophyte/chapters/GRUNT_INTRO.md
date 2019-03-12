@@ -113,7 +113,7 @@ This next file is the Grunt configuration specifying which files should be check
 
 ```js
 module.exports = {
-    src: ["./scripts/**/*.js", "!node_modules/**/*.js"]
+    src: ["../scripts/**/*.js", "!node_modules/**/*.js"]
 }
 ```
 
@@ -215,6 +215,31 @@ module.exports = function (grunt) {
 ## Run Grunt
 
 In your terminal, be in the directory that contains your `Gruntfile.js` and then type in `grunt` and watch it start up. Come see a learning team member if it doesn't start correctly.
+
+### Grunt Didn't Start
+
+If you type in `grunt` and you are now in the grunt directory (instead of having grunt start up), that means you have a newer version of oh-my-zsh. To circumvent this, go ahead and create a new alias in your `.zshrc`/`.bashrc` that looks like this: `alias gr="/usr/local/bin/grunt"`. After reloading your `.zshrc`/`.bashrc`, you can run grunt my typing in your new alias: `gr`.
+
+Remember, you can edit your terminal configuration file with Visual Studio Code.
+
+#### Windows
+
+`code ~/.bashrc`
+
+#### OSX
+
+`code ~/.zshrc`
+
+When you make the change, reload the configuration file.
+
+#### Windows
+
+`source ~/.bashrc`
+
+#### OSX
+
+`source ~/.zshrc`
+
 
 
 ## Configuring New Projects
