@@ -152,7 +152,7 @@ For OS X, you can install the tree command by typing this command in your termin
 
 For PC, you will add an alias for the tree command to your `.bashrc`:
 
-1. Type in `code .bashrc` to open your bash file. 
+1. Type in `code ~/.bashrc` to open your bash file. 
 1. Add in `alias tree="cmd //c tree"` to the file.
 1. Make sure you save the file.
 1. Reload `.bashrc` by running the following command: `source ~/.bashrc`.
