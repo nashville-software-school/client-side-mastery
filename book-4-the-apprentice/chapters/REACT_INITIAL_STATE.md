@@ -101,6 +101,7 @@ export default class ApplicationViews extends Component {
             .then(() => fetch("http://localhost:5002/employees")
             .then(r => r.json()))
             .then(employees => newState.employees = employees)
+            .then(() => this.setState(newState))
     }
 
 
