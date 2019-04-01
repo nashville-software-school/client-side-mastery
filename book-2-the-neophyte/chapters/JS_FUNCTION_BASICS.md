@@ -61,7 +61,7 @@ A pure function is one that is consistent and has no effect on anything else in 
 
 ```js
 const bugSquasher = function (bug, squasher) {
-    return `The ${bug} was squashed by a ${squasher}`
+    return `The ${bug} was squashed by the ${squasher}`
 }
 ```
 
