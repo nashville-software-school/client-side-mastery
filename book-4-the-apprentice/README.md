@@ -27,6 +27,7 @@ In this book, you will be learning the concepts and tools of React. React is a c
 
 > ### Soft Demo Day Before Break
 
+* Supplement - [Deploy React and API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
 * Supplement - [Higher Order Components in React](./chapters/REACT_HOC.md)
 * Supplement - [React Context API](./chapters/REACT_CONTEXT_API.md)
 * Supplement - [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)

@@ -31,6 +31,5 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Supplement - [JavaScript Maps](./chapters/JS_MAPS.md)
 * Supplement - [Generator Functions](./chapters/JS_GENERATOR_FUNCTION.md)
 * Supplement - [Pseudo Class Selectors](./chapters/CSS_PSEUDOCLASSES.md)
-* Supplement - [Deploy API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 4 - The Apprentice](../book-4-the-apprentice/README.md).
