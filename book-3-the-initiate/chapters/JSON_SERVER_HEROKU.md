@@ -3,6 +3,10 @@
 ## Setup
 
 * To deploy to Heroku, your API must be its own, separate directory and repository. The `api` directory you have in your project will not work.
+* Create a *new* directory. We suggest it be a sibling of your application directory.
+* `git init` in that directory
+* Copy the example code below into a `package.json` file in your directory.
+* Copy the example code below into a `server.js` file in your directory.
 
 Follow the instructions for [deploying json-server to Heroku](https://github.com/nashville-software-school/json-server-heroku#deploy-to-heroku)
 
