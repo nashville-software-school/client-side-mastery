@@ -1,82 +1,30 @@
 # Dynamic Routing
 
-In this chapter, you are going to render a hyperlink for each of the locations, animals, and employees. When the customer clicks on any of the hyperlinks, they will be taken to a view that represents an individual resource.
+In this chapter, you are going to render a _Details_ hyperlink for each of the locations, animals, and employees. When the customer clicks on one of the hyperlinks, they will be taken to a view that represents an individual resource.
 
-## Adding a Dynamic Route
+## What you Will be Building
 
-Open your **`ApplicationViews`** component and add a new route to handle `/animals/:animalId`. Also note that the keyword of `exact` has been added to the `/animals` route. Without that keyword, the second route would also handle `/animals/:animalId`.
+Here's an animation that portrays how your application will behave after completing this chapter. Note that clicking on _Details_ shows a single animal.
 
-```jsx
-<Route exact path="/" render={(props) => {
-    return <LocationList locations={this.state.locations} />
-}} />
+![animated image showing dynamic routing in action](./images/pZks6gwfvK.gif)
 
-{/* Make sure you add the `exact` attribute here */}
-<Route exact path="/animals" render={(props) => {
-    return <AnimalList animals={this.state.animals} />
-}} />
+## Component to Represent a Single Animal
 
-{/*
-    This is a route to handle a URL with the following pattern:
-        http://localhost:3000/animals/1
+Your first task is to build a React component whose single responsibility is to display the details of a single animal. Below is the location of the file to create, and the contents of it. You should note that the properties of the animal are all on the `this.props.animal` namespace. This means that **`ApplicationViews`** will be passing a single object as a property.
 
-    It will not handle the following URL because the `(\d+)`
-    matches only numbers after the final slash in the URL
-        http://localhost:3000/animals/jack
-*/}
-<Route path="/animals/:animalId(\d+)" render={(props) => {
-    // Find the animal with the id of the route parameter
-    let animal = this.state.animals.find(animal =>
-        animal.id === parseInt(props.match.params.animalId)
-    )
-
-    // If the animal wasn't found, create a default one
-    if (!animal) {
-        animal = {id:404, name:"404", breed: "Dog not found"}
-    }
-
-    return <AnimalDetail { ...props }
-        deleteAnimal={ this.deleteAnimal }
-        animal={ animal } />
-}} />
-```
-
-Also, add a new import statement at the top.
-
-```js
-import AnimalDetail from './animal/AnimalDetail'
-```
-
-By adding this route, you are setting up your application to view a single animal at a time, and you determine which animal is to be viewed by looking in the URL. The animal's primary key will be the last part of the URL path.
-
-The path of `/animals/1` would display the details for Doodles the German Shepherd. The path of `/animals/5` would display the details for Derkins the Pug, and so on. Now it's time to create the component reponsible for displaying the details of an animal.
+More on that further down the chapter.
 
 ## AnimalDetail Component
 
-You have a Route ready to go, but you're not done yet. The Route renders an **`AnimalDetail`** component, but you don't have that component yet. Add the following files and code to your `components/animal` directory.
+You will be creating three files for rendering an animal detail component.
 
-> components/animal/Animal.css
+1. The component
+1. CSS for styling the HTML
+1. An svg image of a dog
 
-```css
-.ownerList {
-    font-size: 0.75em;
-}
-
-.icon--dog {
-    width: 50px;
-    height: 50px;
-}
-```
-
-> components/animal/DogIcon.svg
-
-Right click and save this image to the above location.
-
-![Dog icon](./images/DogIcon.svg)
+Your instructor will guide you through the code in this component. The are several new concepts that you will need to be shown and then apply.
 
 > components/animal/AnimalDetail.js
-
-You can import individual CSS files, and individual images to be used in a React component. Look at lines 2 and 3 of the component to see how it's done.
 
 ```jsx
 import React, { Component } from "react"
@@ -99,8 +47,7 @@ export default class Animal extends Component {
                             { this.props.animal.name }
                         </h4>
                         <h6 className="card-title">{ this.props.animal.breed }</h6>
-                        <button
-                            onClick={
+                        <button onClick={
                                 () => {
                                     this.setState(
                                         { saveDisabled: true },
@@ -117,6 +64,21 @@ export default class Animal extends Component {
     }
 }
 ```
+
+> components/animal/Animal.css
+
+```css
+.ownerList {
+    font-size: 0.75em;
+}
+
+.icon--dog {
+    width: 50px;
+    height: 50px;
+}
+```
+
+
 
 ### Component State
 
@@ -136,7 +98,7 @@ state = {
 }
 ```
 
-Then you will update state when the button is clicked. In the code below, note that `setState()` is being sent a second parameter - a function _(or lambda)_. Since `setState()` is an asynchronous operation, passing a function as the second parameter ensures that it is invoked _after_ state is set.
+Then you will update state when the button is clicked. In the code below, note that `setState()` is being sent a second parameter - an anonymous function _(or lambda)_. Since `setState()` is an asynchronous operation, passing a function as the second parameter ensures that it is invoked _after_ state is set.
 
 ```js
 () => {
@@ -147,14 +109,81 @@ Then you will update state when the button is clicked. In the code below, note t
 }
 ```
 
-You could write the following code, where state is set first, and then the `deleteAnimal` function is invoked on the line below it. It would work perfectly fine because the two are not dependant upon each other at all. The first statement disables a button, and the second performs an HTTP operation. You don't need to "wait" for the button to be disabled before you fire off the HTTP operation.
+Once this state variable is set to true, the button will be disabled and unable to be clicked.
+
+> **TIP:** _You could write the following code, where state is set first, and then the `deleteAnimal` function is invoked on the line below it. It would work perfectly fine in this specific case because the two are not dependant upon each other at all. The first statement disables a button, and the second performs an HTTP operation. You don't need to "wait" for the button to be disabled before you fire off the HTTP operation._
+>
+>    ```js
+>    () => {
+>        this.setState({ saveDisabled: true })
+>        this.props.deleteAnimal(this.props.animal.id)
+>    }
+>    ```
+
+## Dynamic Route and Route Parameters
+
+Now that you have a component responsible for rendering a single animal, you need to configure your application to render this component when the URL matches a certain pattern. Right now, you only have a Route set up to show all animals when the URL matches the following pattern.
+
+```html
+http://localhost:3000/animals
+```
+
+When you want to display a single animal, their primary key will be at the of of the URL. Here's what the URL will look like to show the first animal in your API.
+
+> **Vocabulary:** The `1` in the URL here is called a [route](https://jaketrent.com/post/access-route-params-react-router-v4/) [parameter](https://scotch.io/courses/using-react-router-4/route-params).
+
+```html
+http://localhost:3000/animals/1
+```
+
+Open your **`ApplicationViews`** component and add a new route to handle `/animals/:animalId`. Also note that the keyword of `exact` has been added to the `/animals` route. Without that keyword, the second route would also handle `/animals/:animalId`.
+
+Given the route above for the first animal, the value of `1` is captured by React Router and stored in an `animalId` property of a specific namespace - `props.match.params.animalId`.
+
+```jsx
+<Route exact path="/" render={(props) => {
+    return <LocationList locations={this.state.locations} />
+}} />
+
+{/* Make sure you add the `exact` attribute here */}
+<Route exact path="/animals" render={(props) => {
+    return <AnimalList animals={this.state.animals} />
+}} />
+
+{/*
+    This is a new route to handle a URL with the following pattern:
+        http://localhost:3000/animals/1
+
+    It will not handle the following URL because the `(\d+)`
+    matches only numbers after the final slash in the URL
+        http://localhost:3000/animals/jack
+*/}
+<Route path="/animals/:animalId(\d+)" render={(props) => {
+    // Find the animal with the id of the route parameter
+    let animal = this.state.animals.find(animal =>
+        animal.id === parseInt(props.match.params.animalId)
+    )
+
+    // If the animal wasn't found, create a default one
+    if (!animal) {
+        animal = {id:404, name:"404", breed: "Dog not found"}
+    }
+
+    return <AnimalDetail animal={ animal }
+                deleteAnimal={ this.deleteAnimal } />
+}} />
+```
+
+Also, add a new import statement at the top.
 
 ```js
-() => {
-    this.setState({ saveDisabled: true })
-    this.props.deleteAnimal(this.props.animal.id)
-}
+import AnimalDetail from './animal/AnimalDetail'
 ```
+
+By adding this route, you are setting up your application to view a single animal at a time, and you determine which animal is to be viewed by looking in the URL. The animal's primary key will be the last part of the URL path.
+
+The path of `/animals/1` would display the details for Doodles the German Shepherd. The path of `/animals/5` would display the details for Derkins the Pug, and so on. Now it's time to create the component reponsible for displaying the details of an animal.
+
 
 ## Adding the Link for the New Route
 
@@ -172,8 +201,6 @@ import { Link } from "react-router-dom";
 
 Once the browser reloads, click on the _Details_ hyperlink in the first card. It will change the URL in the browser to `http://localhost:3000/animals/1`, and the detail component for the animal will render.
 
-![animated image showing dynamic routing in action](./images/pZks6gwfvK.gif)
-
 ## Refactor How Delete Works
 
 ### Setup
@@ -190,9 +217,9 @@ Refactor the export at the bottom of **`ApplicationViews`** to look like this.
 export default withRouter(ApplicationViews)
 ```
 
-### Description
+### Dynamically Changing the User's View
 
-When we discharge an animal from the kennel (i.e. delete the animal from our JSON) you obviously can't show that animal's details any longer. Therefore, when the user clicks on the delete button, you are going to redirect the user back to the animal list. The routing package you are using provides a object called [history](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md). On that object, there is a method named `push()`.
+If the user is looking at the detailed view of an animal and wants to discharge an animal from the kennel (i.e. delete the animal from our JSON) you obviously can't show that animal's details again once the operation is complete. Therefore, when the user clicks on the delete button, you are going to redirect the user back to the animal list. The routing package you are using provides a object called [history](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md). On that object, there is a method named `push()`.
 
 If you push something on to what's called the _history stack_, it will change the view.
 
@@ -227,6 +254,11 @@ Now implement dynamic routing to show the details of individual resources that y
 * Employee details
 * Location details
 * Animal details
+
+Make sure you keep the following factors in mind when implementing.
+
+1. Using `this.props.history.push()` in your functions in **`ApplicationViews`** component when you want to change what view the user sees after an API operation is complete.
+1. Using a state variable in a component that contains a button which triggers an application level state change (_i.e. new item is added, existing item is deleted, existing item is edited_) to disable the button when clicked.
 
 ## Practice: Kandy Korner: Stores, Employees and Candies Oh My
 

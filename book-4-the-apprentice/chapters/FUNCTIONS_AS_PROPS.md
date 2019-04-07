@@ -3,9 +3,9 @@
 It's time to add one of the CRUD methods to your application. You're going to start with DELETE. Specifically, you're going to start with deleting animals to remove them from the kennel. You are going to add a Delete link to each animal card.
 
 ## Implementation of Delete Function
->**A Note About Component Method Definitions:** If a method will be passed to a child component to execute, via props, you must use the syntax like `deleteAnimal` below, with a fat arrow. Otherwise,use the method shorthand you learned in JS Class syntax, without the fat arrow, like so:
+>**A Note About Component Method Definitions:** If a method will be passed to a child component to execute, via props, you must use the syntax like `deleteAnimal` below, as an  arrow function. Otherwise, use the method shorthand you learned in JS Class syntax, without the fat arrow, like so:
   ```js
-  foo(bar) {
+  foo (bar) {
     ...
   }
   ```
@@ -27,30 +27,31 @@ deleteAnimal = id => {
 }
 ```
 
+Remember that every time you invoke the `setState()` method, it invokes the `render()` method for you. Since the `deleteAnimal()` function deletes an animal object from the API, and queries the new collection of animals, when state is updated, the array will not have the animal you deleted in it. Then `render()` will iterate the new array and show the new collection of animals.
+
 ## Pass the Function to AnimalList Component
 
-Next, you need to pass this function to your **`AnimalList`** component.
+Next, you need to pass this function to your **`AnimalList`** component. After you make this change, the **`AnimaList`** component will have two properies on the `this.props` namespace.
+
+1. The `this.props.deleteAnimal` function reference
+1. The `this.props.animals` array
 
 ```html
-<Route exact path="/animals" render={(props) => {
-    return <AnimalList deleteAnimal={this.deleteAnimal} animals={this.state.animals} />
+<Route exact path="/animals" render={() => {
+    return <AnimalList deleteAnimal={this.deleteAnimal}
+                       animals={this.state.animals} />
 }} />
 ```
 
-As you will see below, you are passing the function reference to the child component because that's where it will be invoked.
-
+As you will see below, you are passing the function reference to the child component because that's where it will be invoked. Just like a primitive value, such as a string or an integer, you can pass function references from a parent component to a child component. The child component can then specify when that functionality should be invoked, even though it was defined on its parent.
 
 ## Implementation of Delete Link
 
-Now add a link in each animal card HTML for the customer to click on to check out their animal. In the code below, there is a new `<a>` element that contains the word *Delete*.
-
-**_Quick tip_:** Notice in the code below that you are importing a png file. Here is the image. Right-click and save this file to your `components/animal` directory.
-
-![dog icon](https://github.com/stevebrownlee/react-step-by-step/raw/master/src/components/animal/DogIcon.png)
+Now you are going to add a link in each animal card HTML for the veterniarian to click in order to discharge an animal. In the code below, there is a new `<button>` element that contains the word *Delete*.
 
 > AnimalList.js
 
-```js
+```jsx
 import React, { Component } from 'react'
 import dog from "./DogIcon.png"
 import "./Animal.css"
@@ -80,7 +81,13 @@ export default class AnimalList extends Component {
 }
 ```
 
-> Animal.css
+> components/animal/DogIcon.svg
+
+Right click and save this image to the above location.
+
+![Dog icon](./images/DogIcon.svg)
+
+> components/animal/Animal.css
 
 ```css
 .animals {
@@ -110,9 +117,7 @@ export default class AnimalList extends Component {
 }
 ```
 
-## How it Works
-
-Just like a primitive value, such as a string or an integer, you can pass function references from a parent component to a child component. The child component can then specify when that functionality should be invoked, even though it was defined on its parent.
+---
 
 ## Practice: Kennels: Fire Employees
 
