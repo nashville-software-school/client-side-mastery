@@ -262,4 +262,10 @@ Make sure you keep the following factors in mind when implementing.
 
 ## Practice: Kandy Korner: Stores, Employees and Candies Oh My
 
-For all of the resources in Kandy Korner, when rendering them in the list view, make the name of each item a hyperlink. When the user clicks on the item, take them to the detail view for that item.
+For all of the resources in Kandy Korner, when rendering them in the list view, make the name of each item a hyperlink. When the user clicks on the item, take them to the detail view for that item. Also implement the delete operation for each of the resources.
+
+## Challenge
+
+Implement a modal window to make the user verify that the animal should be discharged. You can use [react-modal]( https://github.com/reactjs/react-modal).
+
+![](./images/discharge-modal.gif)
