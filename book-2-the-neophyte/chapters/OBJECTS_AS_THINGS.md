@@ -148,7 +148,7 @@ const rufusTheDog = {
         this.contentsOfStomach.push(item)
     },
     puke: function () {
-        this.contentsOfStomach.clear()
+        this.contentsOfStomach.length = 0
     },
     bark: function (something) {
         window.alert(`Rufus barks 'WOOF!' at ${something}`)
@@ -183,7 +183,7 @@ const rufusTheDog = {
         rufusTheDog.contentsOfStomach.push(item)
     },
     puke: function () {
-        rufusTheDog.contentsOfStomach.clear()
+        rufusTheDog.contentsOfStomach.length = 0
     },
     bark: function (something) {
         window.alert(`Rufus barks 'WOOF!' at ${something}`)
