@@ -52,7 +52,7 @@ Add an event listener to the Save button, and start collecting the value of each
 
 ```js
 // Some starter code
-const container = document.querySelect("#addressList")
+const container = document.querySelector("#addressList")
 
 document.querySelector("#saveEntry").addEventListener("click", event => {
     /*
