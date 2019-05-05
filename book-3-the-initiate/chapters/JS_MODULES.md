@@ -80,7 +80,7 @@ Make sure you are in the root directory of the application.
 touch src/scripts/createCar.js
 ```
 
-In Visual Studio Code, open that file and place the following code in it. This module does one thing only: it produces car objects. Each car object has a `make` and `model` property on it.
+In Visual Studio Code, open that file and place the following code in it. This module does one thing only: it produces car objects. Each car object has a `make` and `model` property on it as well as a `drive` method which returns a string.
 
 ```js
 /*
@@ -91,8 +91,10 @@ In Visual Studio Code, open that file and place the following code in it. This m
 const CarFactory = (make, model) => {
     const newCar = {
         "make": make,
-        "model": model
-    }
+        "model": model,
+        "drive": function(str) {
+          return `The ${this.make} ${this.model} drove to ${str}`;
+          }
 
     return newCar
 }
@@ -112,22 +114,21 @@ Open the `src/scripts/main.js` file and get rid of what's in there already, and 
     Name: main.js
     Purpose: Entry point of our application
 */
-import createCar from "./createCar"
+import createCar from "./createCar";
 
-
-const garage = []
+const garage = [];
 
 // Create two cars using the function you imported
-const mustang = createCar("Ford", "Mustang")
-const accord = createCar("Honda", "Accord")
+const mustang = createCar("Ford", "Mustang");
+const accord = createCar("Honda", "Accord");
 
 // Drive the cars for a while
-console.log(mustang.drive("the grocery store"))
-console.log(accord.drive("Indianapolis"))
+console.log(mustang.drive("the grocery store"));
+console.log(accord.drive("Indianapolis"));
 
 // Park the cars in the garage
-garage.push(mustang)
-garage.push(accord)
+garage.push(mustang);
+garage.push(accord);
 
 console.table(garage);
 ```
@@ -170,27 +171,28 @@ Instead of the garage being a simple array in your main module, you are going to
     code in other modules to indirectly access it by using
     the methods.
 */
-const garage = []
+const garage = [];
 
 const GarageManager = {
-    store: function (car) {
-        garage.push(car)
-    },
-    retrieve: function (carToFind) {
-        return garage.find(car => car.make === carToFind.make && car.model === carToFind.model)
-    },
-    /*
+  store: function(car) {
+    garage.push(car);
+  },
+  retrieve: function(carToFind) {
+    return garage.find(
+      car => car.make === carToFind.make && car.model === carToFind.model
+    );
+  },
+  /*
         The inventory property is the only way for external code to
         read the value of the garage variable. There is no setter
         either. It is a read only property.
     */
-    inventory: function () {
-        return garage
-    }
+  inventory: function() {
+    return garage;
+  }
+};
 
-}
-
-export default GarageManager
+export default GarageManager;
 ```
 
 Now let's import this module into our main module and use its methods. Adding a couple more cars just so the output changes.
@@ -201,40 +203,38 @@ Now let's import this module into our main module and use its methods. Adding a 
     Name: main.js
     Purpose: Entry point of our application
 */
-import carFactory from "./carFactory"
-import garage from "./garage"
+import carFactory from "./createCar";
+import garage from "./createGarage";
 
 // Create two cars using the function you imported
-const mustang = carFactory("Ford", "Mustang")
-const accord = carFactory("Honda", "Accord")
-const santafe = carFactory("Hyundai", "Santa Fe")
-const sierra = carFactory("GMC", "Sierra")
+const mustang = carFactory("Ford", "Mustang");
+const accord = carFactory("Honda", "Accord");
+const santafe = carFactory("Hyundai", "Santa Fe");
+const sierra = carFactory("GMC", "Sierra");
 
 /// Store the cars in the garage
-garage.store(mustang)
-garage.store(accord)
-garage.store(santafe)
-garage.store(sierra)
+garage.store(mustang);
+garage.store(accord);
+garage.store(santafe);
+garage.store(sierra);
 
-console.table(garage.getInventory())
-console.table(garage.retrieve(sierra))
-
+console.table(garage.inventory());
+console.table(garage.retrieve(sierra));
 ```
 
 ![console output with two car objects in array](./images/car-garage-updated-output.png)
 
 ## Resources
 
-* [ECMAScript 6 modules: the final syntax](http://2ality.com/2014/09/es6-modules-final.html)
+- [ECMAScript 6 modules: the final syntax](http://2ality.com/2014/09/es6-modules-final.html)
 
 ## Practice: Contact List
 
 > The boilerplate repository does not include the task for starting a `json-server` API, so you need to add it for this parctice exercise. Add the following task to the `src/lib/grunt/aliases.yaml` file:
 >
->    `- "bgShell:launchAPI"`
+> `- "bgShell:launchAPI"`
 >
 > Then make sure you add a `database.json` file to your `api` directory
-
 
 Build four components:
 
@@ -255,8 +255,8 @@ Your task is to simulate a product listing page like you would find on Etsy, Ama
 
 1. Display an individual product component. Each product should have a title, short description, price, quantity, and an image.
 1. Display the application information in a navigation bar at the top of the page.
-    1. The name of the company - Betsy
-    1. Three links: *Categories*, *Orders*, and *Log Out* (_these links won't actually do anything, you're just practicing making the navigation bar a component)
+   1. The name of the company - Betsy
+   1. Three links: _Categories_, _Orders_, and _Log Out_ (\_these links won't actually do anything, you're just practicing making the navigation bar a component)
 1. Display a review list component that contains a maximum of 3 product review components beneath a product. You can use [hipster ipsum](https://hipsum.co/) for the reviews themselves.
 
 ### Component/Module Map
