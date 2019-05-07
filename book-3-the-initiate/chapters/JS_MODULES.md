@@ -175,19 +175,19 @@ Instead of the garage being a simple array in your main module, you are going to
 const garage = []
 
 const GarageManager = {
-    store: function(car) {
+    store: function (car) {
         garage.push(car)
     },
-    retrieve: function(carToFind) {
+    retrieve: function (carToFind) {
         return garage.find(car => car.make === carToFind.make && car.model === carToFind.model
       )
     },
     /*
-          The getInventory property is the only way for external code to
-          read the value of the garage variable. There is no setter
-          either. It is a read only property.
-      */
-    getInventory: function() {
+        The getInventory property is the only way for external code to
+        read the value of the garage variable. There is no setter
+        either. It is a read only property.
+    */
+    getInventory: function () {
         return garage
     }
 }
