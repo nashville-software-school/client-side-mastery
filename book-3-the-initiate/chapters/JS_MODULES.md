@@ -146,7 +146,7 @@ Open [http://localhost:8080/](http://localhost:8080/) in Chrome, view the Develo
 
 ## The Garage Module
 
-You can take this a step further and make the car garage it's own module.
+You can take this a step further and make the car garage its own module.
 
 ```sh
 touch src/scripts/createGarage.js
@@ -168,7 +168,7 @@ Instead of the garage being a simple array in your main module, you are going to
 /*
     This array only exists within the scope of this method.
     Therefore, no other module can access it. However,
-    the `garageSupervisor` object your define below allows
+    the `GarageManager` object you define below allows
     code in other modules to indirectly access it by using
     the methods.
 */
@@ -184,7 +184,7 @@ const GarageManager = {
     )
   },
   /*
-        The inventory property is the only way for external code to
+        The getInventory property is the only way for external code to
         read the value of the garage variable. There is no setter
         either. It is a read only property.
     */
@@ -231,7 +231,7 @@ console.table(garage.retrieve(sierra))
 
 ## Practice: Contact List
 
-> The boilerplate repository does not include the task for starting a `json-server` API, so you need to add it for this practice exercise. Add the following task to the `src/lib/grunt/aliases.yaml` file:
+> The boilerplate repository does not include the task for starting a `json-server` API, so you need to add it for this practice exercise. Add the following task to the `src/lib/grunt/aliases.yaml` file before the "watch" task:
 >
 > `- "bgShell:launchAPI"`
 >
