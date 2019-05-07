@@ -231,7 +231,7 @@ console.table(garage.retrieve(sierra))
 
 > The boilerplate repository does not include the task for starting a `json-server` API, so you need to add it for this practice exercise. Add the following task to the `src/lib/grunt/aliases.yaml` file before the "watch" task:
 >
->   `- "bgShell:launchAPI"`
+>    `- "bgShell:launchAPI"`
 >
 > Then make sure you add a `database.json` file to your `api` directory
 
