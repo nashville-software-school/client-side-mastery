@@ -43,7 +43,7 @@ Update your `src/lib/grunt/aliases.yaml` file to run the task.
 
 ## Instructions
 
-> **Task**: Take existing JavaScript modules, and refactor as Browerify syntax modules with `require` and `modules.exports`.
+> **Task**: Take existing JavaScript modules, and refactor as Browerify syntax modules with `import` and `export`.
 
 Your `index.html` should have several script components at the bottom. Below is an example only, your files names do not need to match this example.
 
