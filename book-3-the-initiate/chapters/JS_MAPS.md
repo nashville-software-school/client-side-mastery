@@ -221,7 +221,7 @@ Again, these aren't major calculations, but we can optimize this process with a 
 > **File:** scripts/articles/controller.js
 
 ```js
-import { factory } from "./articles/factory";
+import { factory } from "./articles/factory"
 
 document.addEventListener("articles.loaded", () => {
     const finalHTML = factory.condensed
