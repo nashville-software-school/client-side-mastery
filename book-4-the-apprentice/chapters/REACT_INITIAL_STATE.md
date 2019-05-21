@@ -88,6 +88,7 @@ import EmployeeList from './employee/EmployeeList'
 
 export default class ApplicationViews extends Component {
     state = {
+        locations: [],
         animals: [],
         employees: []
     }
