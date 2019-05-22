@@ -53,7 +53,7 @@ Now you are going to add a link in each animal card HTML for the veterniarian to
 
 ```jsx
 import React, { Component } from 'react'
-import dog from "./DogIcon.png"
+import dog from "./DogIcon.svg"
 import "./Animal.css"
 
 export default class AnimalList extends Component {
