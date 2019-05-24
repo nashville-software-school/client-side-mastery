@@ -64,13 +64,13 @@ export default class AnimalList extends Component {
                 this.props.animals.map(animal =>
                     <div key={animal.id} className="card">
                         <div className="card-body">
-                            <h5 className="card-title">
+                            <div className="card-title">
                                 <img src={dog} className="icon--dog" />
-                                {animal.name}
+                                <h5>{animal.name}</h5>
                                 <button
                                     onClick={() => this.props.deleteAnimal(animal.id)}
                                     className="card-link">Delete</button>
-                            </h5>
+                            </div>
                         </div>
                     </div>
                 )
