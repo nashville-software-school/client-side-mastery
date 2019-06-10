@@ -165,7 +165,11 @@ fetch("http://localhost:8088/food")
             fetch(`https://world.openfoodfacts.org/api/v0/product/${what goes here?}.json`)
                 .then(response => response.json())
                 .then(productInfo => {
-                    food.ingredients = productInfo.product.ingredients
+                    if (productInfo.product.ingredients_text) {
+                      food.ingredients = productInfo.product.ingredients_text
+                    } else {
+                      food.ingredients = "no ingredients listed"
+                    }
 
                     // Produce HTML representation
                     const foodAsHTML = foodFactory(food)
