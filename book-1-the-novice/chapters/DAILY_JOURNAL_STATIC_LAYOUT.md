@@ -33,6 +33,8 @@ Open your `index.html`. Visual Studio Code provides many shortcuts and can write
 
 Change the `<link>`'s `href` value from `main.css` to `journal.css`, then go ahead and remove the `<script>` element for now. We don't need it just yet.
 
+If the Intellisense menu option you selected does not already have a `<link>` element, add one in the `<head>` and properly link your `journal.css` stylesheet
+
 ![html boilerplate](./images/zRTljYM6kq.gif)
 
 ## Building the Journal Form
