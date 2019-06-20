@@ -23,7 +23,7 @@ In your JavaScript file, define an object that will represent a journal entry in
     Define the keys and value for a JavaScript object that
     represents a journal entry about what you learned today
 */
-const objectsJournalEntry = {
+const journalEntry = {
 
 }
 ```
