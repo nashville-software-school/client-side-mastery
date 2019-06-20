@@ -3,9 +3,8 @@
 You have built your form for entering in journal entries, so now you need to define how the data that you will be collecting in the form should be stored. Your learning objective for this chapter is to build a data structure to represent a journal entry, and then define the data structure for storing a collection of entries.
 
 ## Setup
-
-1. Create a new sub-directory named `scripts` in your `daily-journal` directory.
-1. Use `touch` to create a new file named `journal.js` in the `scripts` directory you just created.
+1. Navigate into `scripts` sub-directory that you created when you setup your project directory.
+1. Use `touch` to create a new file named `journal.js`
 1. Update your `index.html` file to have a `<script>` element that includes your new JavaScript file.
 
 ## Single Journal Entry
