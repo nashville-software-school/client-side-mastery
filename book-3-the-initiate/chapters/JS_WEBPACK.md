@@ -17,7 +17,7 @@ YourApplication/
         |-- scripts/
     |-- .gitignore
     |-- README.md
-    |-- index.html         
+    |-- index.html
 ```
 
 You are going to create a new project that uses Webpack to bundle your modules and to automate three things for your when you run it.
@@ -27,7 +27,17 @@ You are going to create a new project that uses Webpack to bundle your modules a
 1. Starting `http-server` for you.
 1. Starting `json-server` for you.
 
-This project will have a sample API using `json-server`.
+### Modules
+
+Part of the functionality Webpack provides is bundling all your Javascript modules into a single Javascript file, just like ES 6 modules. Therefore, your `index.html` will look like this:
+
+```
+<body>
+  <article id="container"></article>
+
+  <script type="module" src= "bundle.js"></script>
+</body>
+```
 
 ### .gitignore
 
@@ -43,8 +53,6 @@ build/
 ### package.json
 
 1. In your root directory, run the following command. This will create a `package.json` file. This preps our app so that we can install dependencies ie, any external libraries our application may need. All dependencies will be listed in your `package.json`.
-
-GO INTO MORE DETAIL ABOUT NPM
 
 ```
 npm init
@@ -73,7 +81,7 @@ npm init
 npm install @babel/core @babel/preset-env babel-loader eslint  eslint-loader eslint-plugin-import webpack webpack-cli webpack-dev-server webpack-shell-plugin --save-dev
 ```
 
-Once you have ran the above command, you will notice the presence of an additional file called `package-lock.json`. This file contains a more details on the external dependencies the app will be using including the exact version numbers. You should never have to create this file, this file is generated for you. 
+Once you have ran the above command, you will notice the presence of an additional file called `package-lock.json`. This file contains a more details on the external dependencies the app will be using including the exact version numbers. You should never have to create this file, this file is generated for you.
 
 ### ESLint
 
@@ -82,14 +90,17 @@ To use eslint we will need two different configuration files. In your root direc
 It is highly recommended that you bookmark the [listing of all Eslint rules](https://eslint.org/docs/rules/) so that as you gain more understanding of JavaScript, and want to have your code validated in more sophisticated ways in the future, you have the rule list handy.
 
 ##### .eslintignore
-The `.eslintignore` file operates very similarly to the `.gitignore` file.  Anything that is in the `.eslintignore` file will be ignored from linting.  Currently you should have the following entries in your `.eslintignore`.
+
+The `.eslintignore` file operates very similarly to the `.gitignore` file. Anything that is in the `.eslintignore` file will be ignored from linting. Currently you should have the following entries in your `.eslintignore`.
+
 ```js
-webpack.config.js
-node_modules
+webpack.config.js;
+node_modules;
 ```
 
 ##### .eslintrc
-The `.eslintrc` file is where we configure our rules for eslint.  Your file should look like this:
+
+The `.eslintrc` file is where we configure our rules for eslint. Your file should look like this:
 
 ```
 {
@@ -113,7 +124,7 @@ The `.eslintrc` file is where we configure our rules for eslint.  Your file shou
 
 Create a file called `.babelrc` at the root of your project. This file tells babel how to convert the JS in our project. Add this to that file:
 
-BROWSER COMPATIBILITY WITH ES5 VS ES6
+The reason we are using babel to covert out ES 6 Javascript syntax to ES 5 is because currently there are more browsers that are compatible with ES 5 than ES 6. This means that that the latest versions of certain browsers may not be able to understand some of the syntax that is new with ES 6. Hence, we convert our Javascript to ES 5.
 
 ```
 {
@@ -125,7 +136,7 @@ BROWSER COMPATIBILITY WITH ES5 VS ES6
 
 ### webpack.config.js
 
-Create a file called `webpack.config.js` in your root directory. This wll contain the configuration for Webpack. 
+Create a file called `webpack.config.js` in your root directory. This wll contain the configuration for Webpack.
 
 ```
 const WebpackShellPlugin = require('webpack-shell-plugin');
@@ -156,7 +167,6 @@ module.exports = {
   }
 };
 ```
-
 
 ### webpack.config.js
 
