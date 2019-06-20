@@ -11,7 +11,8 @@ For example, you may have code for building your database and getting informatio
 This serves two purposes:
 
 1. It makes your code easier to read since each file will contain less code, and code that all deals with the same responsibility.
-2. It makes it easier to maintain since it reduces the chance that two developers will be working in the same file, thus reducing merge conflicts.
+1. It makes it easier to maintain since it reduces the chance that two developers will be working in the same file, thus reducing merge conflicts.
+1. Modular code is easier to reuse.
 
 Let's look at a simple example.
 
