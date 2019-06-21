@@ -29,13 +29,12 @@ Once those are created, make sure you are in your root directory and open Visual
 
 ### Boilerplate HTML Code
 
-Open your `index.html`. Visual Studio Code provides many shortcuts and can write boilerplate code for you, which you then customize for your needs. Just type in the letters `html` and in the Intellisense context menu that appears, choose the "Simple HTML5 starting point" item to get some boilerplate HTML.
+Open your `index.html`. Visual Studio Code provides many shortcuts and can write boilerplate code for you, which you then customize for your needs. Just type in the letters `html` and in the Intellisense context menu that appears, choose the "html:5" item to get some boilerplate HTML.
 
-Change the `<link>`'s `href` value from `main.css` to `journal.css`, then go ahead and remove the `<script>` element for now. We don't need it just yet.
+Inside the `<head>` tag, create a new line, type in `link` and choose the "link:css" item and change the href to `journal.css`
 
-If the Intellisense menu option you selected does not already have a `<link>` element, add one in the `<head>` and properly link your `journal.css` stylesheet
 
-![html boilerplate](./images/zRTljYM6kq.gif)
+![html boilerplate](./images/html-boilerplate.gif)
 
 ## Building the Journal Form
 
