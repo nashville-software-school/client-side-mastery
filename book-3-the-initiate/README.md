@@ -14,7 +14,6 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 10 - [Daily Journal - Part 9](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
 * Chapter 11 - [Advanced Usage of Objects](./chapters/JS_OBJECT_METHODS_SPREAD.md)
 * Chapter 12 - [Daily Journal - Part 10](./chapters/DAILY_JOURNAL_SEARCHING.md)
-<!-- * Chapter 13 - [JavaScript Modules with Browserify](./chapters/JS_MODULES.md) -->
 * Chapter 13 - [Webpack](./chapters/JS_WEBPACK.md)
 * Chapter 14 - [Daily Journal - Part 11](./chapters/DAILY_JOURNAL_BROWSERIFY.md)
 * Chapter 15 - [CSS Variables](./chapters/CSS_VARIABLES.md)

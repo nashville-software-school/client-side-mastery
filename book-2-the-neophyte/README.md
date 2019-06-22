@@ -16,7 +16,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 8 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 * Chapter 9 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 10 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
-
 * Chapter 11 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
 * Chapter 12 - [Fetching Data](./chapters/FETCH_INTRO.md)
 * Chapter 13 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
