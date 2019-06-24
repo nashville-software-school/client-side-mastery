@@ -1,4 +1,4 @@
-# A static module bundler for your Application
+# A Static Module Bundler for your Application
 
 ## Introduction to Webpack
 
