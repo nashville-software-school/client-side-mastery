@@ -2,9 +2,9 @@
 
 With JSON Server, you can use parameters such as `_expand` and `_embed` to see relationships. However, to utlize the `_expand` and `_embed` functionality within your fetch requests, you need to abide by certain naming conventions in order for the requests to work properly.
 
-Each resource in your `database.json` needs to be in the plural form.
+* Each resource in your `database.json` needs to be in the plural form.
 
-When using foreign keys, the property name should be the singular of the resource being reference followed by `Id`.
+* When using foreign keys, the property name should be the singular of the resource being reference followed by `Id`.
 
 Say you run a Puppy Adoption agency. Your database would probably include information about the `puppies`, `owners`, and the `adoptions`, and look something like this:
 ```
