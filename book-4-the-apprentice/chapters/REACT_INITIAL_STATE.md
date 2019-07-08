@@ -55,9 +55,9 @@ As we have done before, let's create a module for database calls.
 
 ## Single Responsibility Principle
 
-Keeping the single responsibility principle in mind, you are going to create a JavaScript module that contains **all** of the API calls. This provides flexibility for your application.
+Keeping the Single Responsibility Principle in mind, you are going to create a JavaScript module that contains **all** of the API calls. This provides flexibility for your application.
 
-Other components, _in the future_, may need the ability to make their own API calls. You're going to eliminate the possibily of duplicate code by making a module whose sole responsibility is to interact with the API.
+Other components, _in the future_, may need the ability to make their own API calls. You're going to eliminate the possibility of duplicate code by making a module whose sole responsibility is to interact with the API.
 
 > AnimalManager.js
 
@@ -74,7 +74,7 @@ export default {
 }
 ```
 
-Our `AnimalCard` does a great job at rendering a single animal. So, let's make a new file that will initiate the AnimalManager call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
+Our `AnimalCard` does a great job of rendering a single animal. So, let's make a new file that will initiate the AnimalManager call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
 
 ```sh
 touch src/components/animal/AnimalList
@@ -160,7 +160,7 @@ One of the lifecycle methods available to every React component is [componentDid
 
 > `componentDidMount()` is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. _If you need to load data from a remote endpoint, this is a good place to instantiate the network request._
 
-The `componentDidMount()` lifecysle hook runs after the component output has been rendered to the DOM, so if your component needs API data, this is the place to do it.
+The `componentDidMount()` lifecycle hook runs after the component output has been rendered to the DOM, so if your component needs API data, this is the place to do it.
 
 
 ## Component LifeCycle

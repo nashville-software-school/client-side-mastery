@@ -15,7 +15,7 @@ Here is the flow of the AnimalEditForm component:
 3. Data loads and `setState()` is invoked with new data (also set loadingStatus to false)
 4. `render()` is invoked, displaying animal details and ready for edits.
 5. Make changes and select `save`
-6. In state, set `loadingStatus` to true - this ensures the user cannot repeatedly click button while API is being udated.
+6. In state, set `loadingStatus` to true - this ensures the user cannot repeatedly click button while API is being updated.
 7. Invoke `AnimalManger.put` to change the API data.
 8. Once the API has updated, change the view to display all the animals.
 
@@ -170,7 +170,7 @@ Test again. You should be able to navigate to the animal edit view.
 ## Update method in AnimalManager
 > modules/AnimalManager.js
 
-Finally, define a method in your `AnimalManager` for the update fetch call. You will use PUT in the HTTP request. This method will take an the updated animal as an object and save to the database.
+Finally, define a method in your `AnimalManager` for the update fetch call. You will use PUT in the HTTP request. This method will take the updated animal as an object and save to the database.
 
 ```jsx
 update(editedAnimal) {

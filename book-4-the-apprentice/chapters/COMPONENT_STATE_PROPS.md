@@ -10,7 +10,7 @@ State is the current values of the properties used to render a component. Your b
 
 Think of a component as a template waiting for data to be passed in and then displayed. A single component can be made up of several smaller components.
 
-State is initialized by defining `state` at the top of a class definition and then is automatically included in the construction of the component. Currently our **`<AnimalList />`** has the state of animals defined as an empty array. Once we get the the data from the API we invoke `setState()` with the animal data. This will change the state and **Each time `state` changes, the `render()` method of that component runs.**
+State is initialized by defining `state` at the top of a class definition and then is automatically included in the construction of the component. Currently, our **`<AnimalList />`** has the state of animals defined as an empty array. Once we get the data from the API we invoke `setState()` with the animal data. This will change the state and **Each time `state` changes, the `render()` method of that component runs.**
 
 Now we want to use the new data to populate our animal cards. We pass the data to the **`<AnimalCard />`** with **props**. Change the render method of the **`AnimalList`** component:
 
@@ -55,7 +55,7 @@ Modify the **`<AnimalCard />`** render method to display the props using dot not
 
 ```
 
-Add CSS. Note: you will import a single CSS file directly into this component. Good practice would to only import CSS that applies to the JSX elements of this component.
+Add CSS. Note: you will import a single CSS file directly into this component. Good practice would be to only import CSS that applies to the JSX elements of this component.
 
 
 > components/animal/Animal.css

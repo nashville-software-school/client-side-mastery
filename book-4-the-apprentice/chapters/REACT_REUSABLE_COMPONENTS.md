@@ -6,7 +6,7 @@ Now that you've seen the core mechanisms of a React application, it's time to co
 
 Right now, the only place that you're rendering an animal is when you select the Animal link in the navbar. What if you want to display the animals an employee is responsible for? You can refactor your application and use the **`AnimalCard`** to display animals along with an employee's information.
 
-First you will need to update your database to include an employees collection and include an employeeId on each animal.
+First, you will need to update your database to include an employees collection and include an employeeId on each animal.
 
 > kennel.json
 ```json
@@ -56,7 +56,7 @@ First you will need to update your database to include an employees collection a
 
 **From the practice exercises, you should already have an `<EmployeeList>` and `<EmployeeCard>` components.**
 
-Next we will include an API call that will get all employees with animals. We can use json-server relationships to include related child information with one call. This is done with `embed`.
+Next, we will include an API call that will get all employees with animals. We can use json-server relationships to include related child information with one call. This is done with `embed`.
 
 > src/modules/EmployeeManager.js
 
@@ -80,7 +80,7 @@ We need to add a button to the **`<EmployeeCard>`** for details using `history.p
 <button type="button" onClick={() => { this.props.history.push(`/employees/${this.props.employee.id}/details`) }}>Details</button>
 ```
 
-We also need to add a route to **`<ApplicationViews>`** to handle displaying a single employee details. This route will return a new component: **`<EmployeeWithAnimals>`** which we will build next. Notice that we are passing `{...props}` to enable access to react-router-dom properties.
+We also need to add a route to **`<ApplicationViews>`** to handle displaying details of a single employee. This route will return a new component: **`<EmployeeWithAnimals>`** which we will build next. Notice that we are passing `{...props}` to enable access to react-router-dom properties.
 
 > ApplicationViews.js
 
@@ -92,7 +92,7 @@ We also need to add a route to **`<ApplicationViews>`** to handle displaying a s
 ```
 
 ## New Component - EmployeeWithAnimals
-This component will display a single employee and include an **`<AnimalCard>`** for each animal. We can re-use the previously created AnimalCard component. This component will accept `props` and `return` the employee name and then `map` over the animals returning **`<AnimalCard>`** for only the pets the employee is repsonsible for.
+This component will display a single employee and include an **`<AnimalCard>`** for each animal. We can re-use the previously created AnimalCard component. This component will accept `props` and `return` the employee name and then `map` over the animals returning **`<AnimalCard>`** for only the pets the employee is responsible for.
 
 > src/components/employee/EmployeeWithAnimals.js
 

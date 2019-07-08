@@ -68,7 +68,7 @@ class AnimalDetail extends Component {
 
 ## Dynamic Route and Route Parameters
 
-Now that you have a component responsible for rendering a single animal based on `this.props.animalId`, you need to configure your application to render the component when the URL matches a certain pattern. Currently you have a route set up to show all animals when the URL matches:
+Now that you have a component responsible for rendering a single animal based on `this.props.animalId`, you need to configure your application to render the component when the URL matches a certain pattern. Currently, you have a route set up to show all animals when the URL matches:
 
 ```html
 <!-- show all animals -->

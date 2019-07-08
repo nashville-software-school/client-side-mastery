@@ -1,12 +1,12 @@
 # Routing in React Applications
 
-In a single page application, you are only rendering one DOM tree. You never request another HTML file, but create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element on the page for users to select and see different views.
+In a single page application, you are only rendering one DOM tree. You never request another HTML file but create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element on the page for users to select and see different views.
 
 In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app.
 
 ## Setup
 
-Make sure you are in your project's root directory. First we need to install react-router-dom. Then we will create additional files to handle the routing and create a navbar.
+Make sure you are in your project's root directory. First, we need to install react-router-dom. Then we will create additional files to handle the routing and create a navbar.
 
 ```sh
 npm install react-router-dom
@@ -154,7 +154,7 @@ class ApplicationViews extends Component {
 export default ApplicationViews
 ```
 
-`exact` is needed on the first route, otherwise it will also match the other two routes, and the **`LocationList`** will be the only component rendered, no matter what the URL is.
+`exact` is needed on the first route otherwise, it will also match the other two routes and the **`LocationList`** will be the only component rendered, no matter what the URL is.
 
 The `<Link/>` and the `<Route/>` JSX elements are complementary to each other. If you add a new **`Link`** element in your application with a new URL, then you must create a matching **`Route`** element.
 

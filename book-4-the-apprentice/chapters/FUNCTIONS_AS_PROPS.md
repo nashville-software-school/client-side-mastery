@@ -18,11 +18,11 @@ First add the `delete` function to your `AnimalManager` module.
 We can now invoke `delete()` from anywhere.
 
 Before we include the delete functionality, consider following:
-* The discharge button will exist on the **`<AnimalCard />`** componet.
+* The discharge button will exist on the **`<AnimalCard />`** component.
 * When an animal is removed, our animals array within the parent's state will need to reflect the updated list of animals.
 
 ### Flow of events
-1. Click discharge button
+1. Click the discharge button
 2. Invoke a `handleDelete` function which will invoke the AnimalManager delete function, be sure to pass the id.
 3. Once an item is deleted, we should invoke the AnimalManager `getAll` function.
 4. With new data, invoke `setState` and set animals equal to the new data.
@@ -83,7 +83,7 @@ You pass the function reference to the child component because that's where it w
 
 ## Implementation of Delete Link
 
-Add the button to the **`<AnimalCard />`** HTML for the veterniarian to select and discharge an animal. In the code below, there is a new `<button>` element that contains the word *Discharge*.
+Add the button to the **`<AnimalCard />`** HTML for the veterinarian to select and discharge an animal. In the code below, there is a new `<button>` element that contains the word *Discharge*.
 
 > AnimalCard.js
 

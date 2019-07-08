@@ -4,7 +4,7 @@ In this chapter, you are going to learn how to configure a `<Route>` to conditio
 
 ## Checking for Simple Authentication
 
-**Note:** The example code below contains an extremely simplified login process. This is not a guide to proper authentication. The login used here is only to demonstrate rendering components based on a user's status
+**Note:** The example code below contains an extremely simplified login process. This is not a guide to proper authentication. The login used here is only to demonstrate rendering components based on a user's status.
 
 ### Login Component
 

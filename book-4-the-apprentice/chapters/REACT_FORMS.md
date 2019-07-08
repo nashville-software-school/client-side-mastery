@@ -240,6 +240,6 @@ Once you've got all these pieces in place, click on the _Admit Animal_ button, f
 
 
 ## Challenge: Add employee selection dropdown.
-Each animal in the kennel should have an employee responsiple for it's care. Add a dropdown selection to the **`<AnimalForm>`** and update the database with an employeeId for each pet.
+Each animal in the kennel should have an employee responsible for it's care. Add a dropdown selection to the **`<AnimalForm>`** and update the database with an employeeId for each pet.
 
-Each employee should work at a specific location. Add a dropdown selection to the **`<EmployeeForm>`** and update the database with an locationId for each employee.
+Each employee should work at a specific location. Add a dropdown selection to the **`<EmployeeForm>`** and update the database with a locationId for each employee.
