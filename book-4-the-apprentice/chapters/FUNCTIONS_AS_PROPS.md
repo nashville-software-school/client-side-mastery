@@ -8,12 +8,12 @@ It's time to add one of the CRUD methods to your application. You're going to st
 First add the `delete` function to your `AnimalManager` module.
 
 ```js
-    delete(id) {
-        return fetch(`http://localhost:5002/animals/${id}`, {
-            method: "DELETE"
-        })
-        .then(e => e.json())
-    }
+delete(id) {
+  return fetch(`http://localhost:5002/animals/${id}`, {
+      method: "DELETE"
+  })
+  .then(e => e.json())
+}
 ```
 We can now invoke `delete()` from anywhere.
 
@@ -34,17 +34,17 @@ Before we include the delete functionality, consider following:
 Add the following function to your **`<AnimalList>`** component.
 
 ```js
-    deleteAnimal = id => {
-        AnimalManager.delete(id)
-        .then(() => {
-            AnimalManager.getAll()
-            .then((newAnimals) => {
-                this.setState({
-                    animals: newAnimals
-                })
-            })
-        })
-    }
+deleteAnimal = id => {
+  AnimalManager.delete(id)
+  .then(() => {
+    AnimalManager.getAll()
+    .then((newAnimals) => {
+      this.setState({
+          animals: newAnimals
+      })
+    })
+  })
+}
 ```
 
 Remember that every time you invoke the `setState()` method, it automatically invokes the `render()` method. The `deleteAnimal()` function deletes an animal object from the API, and then queries the database for all the animals(now updated). When state is updated, render runs and `maps` the new animal array to the **`<AnimalCard />`** component.
@@ -56,21 +56,21 @@ Now we can pass the `deleteAnimal` function to a child component giving the chil
 Change the render in **`<AnimalList />`**
 
 ```js
-    render(){
-        console.log("AnimalList: Render");
+render(){
+  console.log("AnimalList: Render");
 
-        return(
-            <div className="cards">
-                {this.state.animals.map(animal =>
-                    <AnimalCard
-                        key={animal.id}
-                        animal={animal}
-                        deleteAnimal={this.deleteAnimal}
-                    />
-                )}
-            </div>
-        )
-    }
+  return(
+    <div className="cards">
+      {this.state.animals.map(animal =>
+        <AnimalCard
+          key={animal.id}
+          animal={animal}
+          deleteAnimal={this.deleteAnimal}
+        />
+      )}
+    </div>
+  )
+}
 ```
 
 **`AnimaCard`** component recieves two props:
@@ -122,10 +122,6 @@ Add the same functionality to the **`OwnerList`** for when they decide they no l
 
 ## Practice: Close a Location
 Add the same functionality to the **`LocationList`** for when a location closes down.
-
-
-
-
 
 
 ## Advanced Challenge: Search your Data

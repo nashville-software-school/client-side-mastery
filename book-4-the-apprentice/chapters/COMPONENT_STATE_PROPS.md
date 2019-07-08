@@ -17,16 +17,16 @@ Now we want to use the new data to populate our animal cards. We pass the data t
 
 ```js
 render(){
-        console.log("AnimalList: Render");
+  console.log("AnimalList: Render");
 
-        return(
-            <div className="cards">
-                {this.state.animals.map(animal =>
-                    <AnimalCard key={animal.id} animal={animal} />
-                )}
-            </div>
-        )
-    }
+  return(
+    <div className="cards">
+      {this.state.animals.map(animal =>
+        <AnimalCard key={animal.id} animal={animal} />
+      )}
+    </div>
+  )
+}
 ```
 
 **What is the key?** Each child in a list should have a unique "key" prop. This is how React keeps track of re-rendering only the things that have changed.
@@ -40,18 +40,19 @@ Because **`<AnimalCard />`** is included in the render method of **`<AnimalList 
 Modify the **`<AnimalCard />`** render method to display the props using dot notation.
 
 ```js
-    render() {
-        return (
-            <div className="card">
-                <div className="card-content">
-                    <picture>
-                      <img src={require('./dog.svg')} alt="My Dog" />
-                    </picture>
-                    <h2>Name: <span style={{color: 'darkslategrey'}}>{this.props.animal.name}</span></h2>
-                    <p>Breed: {this.props.animal.breed}</p>
-            </div>
-        );
-    }
+render() {
+  return (
+    <div className="card">
+        <div className="card-content">
+          <picture>
+            <img src={require('./dog.svg')} alt="My Dog" />
+          </picture>
+          <h2>Name: <span style={{color: 'darkslategrey'}}>{this.props.animal.name}</span></h2>
+          <p>Breed: {this.props.animal.breed}</p>
+        </div>
+    </div>
+  );
+}
 
 ```
 
@@ -72,12 +73,12 @@ Add CSS. Note: you will import a single CSS file directly into this component. G
 }
 
 .card-content {
-	padding: .5em;
+  padding: .5em;
 }
 
 .card-content h3 {
-	margin-top: 0;
-	margin-bottom: .5em;
+  margin-top: 0;
+  margin-bottom: .5em;
   font-weight: bold;
   color: rgb(43, 112, 241);
 }
@@ -150,17 +151,17 @@ Update your application so that each section displays a list of cards with the A
 3. When changing multiple items in state, it is good practice to set a variable equal to the new data and then call `setState()` only once.
 
 ```js
-    componentDidMount() {
-        const newState = {}
+  componentDidMount() {
+    const newState = {}
 
-        fetch("http://localhost:5002/animals")
-            .then(r => r.json())
-            .then(animals => newState.animals = animals)
-            .then(() => fetch("http://localhost:5002/employees")
-            .then(r => r.json()))
-            .then(employees => newState.employees = employees)
-            .then(() => this.setState(newState))
-    }
+    fetch("http://localhost:5002/animals")
+    .then(r => r.json())
+    .then(animals => newState.animals = animals)
+    .then(() => fetch("http://localhost:5002/employees")
+    .then(r => r.json()))
+    .then(employees => newState.employees = employees)
+    .then(() => this.setState(newState))
+  }
 ```
 *[You could also use json-server "Relationships"](https://github.com/typicode/json-server)*
 

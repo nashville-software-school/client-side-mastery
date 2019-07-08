@@ -182,9 +182,12 @@ The `componentDidMount()` lifecycle hook runs after the component output has bee
 
 > **Pro tip:** Remember to use your network tab in the Chrome Developer Tools to watch your network requests and preview the responses.
 
+**Note**
+* Owners should have the `id`, `phoneNumber`, and `name` properties.
+* Animals can have multiple owners.
+
 ![](./images/eB9CCcrUHy.gif)
 
 
-* Owners should have the `id`, `phoneNumber`, and `name` properties.
-* Animals can have multiple owners.
+
 

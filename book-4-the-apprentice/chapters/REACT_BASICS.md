@@ -146,6 +146,7 @@ Before we grow this application any further, let's create a meaningful directory
     - components
         - animal
             - AnimalCard.js
+            - DogIcon.svg
         - Kennel.js
         - Kennel.css
 index.js
@@ -183,28 +184,28 @@ p {
 }
 
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 address {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 img {
-	display: block;
-	border: 0;
-	width: 100%;
-	height: auto;
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
 }
 
 .section-content {
-	padding: 1.4em;
+  padding: 1.4em;
 }
 
 .container-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 ```

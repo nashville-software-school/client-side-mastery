@@ -14,8 +14,8 @@ The animal detail component will need three files:
 
 Create the following files:
 ```sh
-    src/components/animal/AnimalDetail.js
-    src/components/animal/AnimalDetail.css
+src/components/animal/AnimalDetail.js
+src/components/animal/AnimalDetail.css
 ```
 
 **Consider**: If this URL was bookmarked, what would you need to display it correctly? How about data from the database?
@@ -32,36 +32,36 @@ import './AnimalDetail.css'
 
 class AnimalDetail extends Component {
 
-    state = {
-        name: "",
-        breed: "",
-    }
+  state = {
+      name: "",
+      breed: "",
+  }
 
-    componentDidMount(){
-        console.log("AnimalDetail: ComponentDidMount");
-        //get(id) from AnimalManager and hang on to the data; put it into state
-        AnimalManager.get(this.props.animalId)
-        .then((animal) => {
-            this.setState({
-                name: animal.name,
-                breed: animal.breed
-            });
-        });
-    }
+  componentDidMount(){
+    console.log("AnimalDetail: ComponentDidMount");
+    //get(id) from AnimalManager and hang on to the data; put it into state
+    AnimalManager.get(this.props.animalId)
+    .then((animal) => {
+      this.setState({
+        name: animal.name,
+        breed: animal.breed
+      });
+    });
+  }
 
-    render() {
-        return (
-          <div className="card">
-            <div className="card-content">
-              <picture>
-                <img src={require('./dog.svg')} alt="My Dog" />
-              </picture>
-                <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
-                <p>Breed: {this.state.breed}</p>
-            </div>
-          </div>
-        );
-    }
+  render() {
+    return (
+      <div className="card">
+        <div className="card-content">
+          <picture>
+            <img src={require('./dog.svg')} alt="My Dog" />
+          </picture>
+            <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
+            <p>Breed: {this.state.breed}</p>
+        </div>
+      </div>
+    );
+  }
 }
 ```
 
@@ -93,20 +93,20 @@ In this example, the value of `1` is captured by React Router and stored in an `
 ```jsx
 {/* Make sure you add the `exact` attribute here */}
 <Route exact path="/animals" render={(props) => {
-    return <AnimalList />
+  return <AnimalList />
 }} />
 <Route path="/animals/:animalId(\d+)" render={(props) => {
-    // Pass the animalId to the AnimalDetailComponent
-    return <AnimalDetail animalId={parseInt(props.match.params.animalId)}/>
+  // Pass the animalId to the AnimalDetailComponent
+  return <AnimalDetail animalId={parseInt(props.match.params.animalId)}/>
 }} />
 
 {/*
-    This is a new route to handle a URL with the following pattern:
-    http://localhost:3000/animals/1
+  This is a new route to handle a URL with the following pattern:
+  http://localhost:3000/animals/1
 
-    It will not handle the following URL because the `(\d+)`
-    matches only numbers after the final slash in the URL
-    http://localhost:3000/animals/jack
+  It will not handle the following URL because the `(\d+)`
+  matches only numbers after the final slash in the URL
+  http://localhost:3000/animals/jack
 */}
 
 ```

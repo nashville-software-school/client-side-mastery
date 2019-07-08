@@ -41,25 +41,25 @@ import './NavBar.css'
 
 class NavBar extends Component {
 
-    render(){
+  render(){
 
-        return (
-          <header>
-            <h1 className="site-title">Student Kennels<br />
-              <small>Loving care when you're not there.</small>
-            </h1>
-            <nav>
-              <ul className="container">
-                <li><Link className="nav-link" to="/">Home</Link></li>
-                <li><Link className="nav-link" to="/animals">Animals</Link></li>
-                <li>Locations</li>
-                <li>Employees</li>
-                <li>Owners</li>
-              </ul>
-            </nav>
-          </header>
-        )
-    }
+    return (
+      <header>
+        <h1 className="site-title">Student Kennels<br />
+          <small>Loving care when you're not there.</small>
+        </h1>
+        <nav>
+          <ul className="container">
+            <li><Link className="nav-link" to="/">Home</Link></li>
+            <li><Link className="nav-link" to="/animals">Animals</Link></li>
+            <li>Locations</li>
+            <li>Employees</li>
+            <li>Owners</li>
+          </ul>
+        </nav>
+      </header>
+    )
+  }
 }
 
 export default NavBar;
@@ -70,7 +70,7 @@ The NavBar css
 
 ```css
 small {
-	font-size: 75%;
+  font-size: 75%;
 }
 
 header {
@@ -137,18 +137,18 @@ import OwnerCard from './owner/CardCard'
 
 class ApplicationViews extends Component {
 
-    render() {
-        return (
-            <React.Fragment>
-                <Route exact path="/" render={(props) => {
-                    return <Home />
-                }} />
-                <Route path="/animals" render={(props) => {
-                    return <AnimalCard />
-                }} />
-            </React.Fragment>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <Route exact path="/" render={(props) => {
+          return <Home />
+        }} />
+        <Route path="/animals" render={(props) => {
+          return <AnimalCard />
+        }} />
+      </React.Fragment>
+    )
+  }
 }
 
 export default ApplicationViews
@@ -175,14 +175,14 @@ import ApplicationViews from "./ApplicationViews"
 import "./Kennel.css"
 
 class Kennel extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <NavBar />
-                <ApplicationViews />
-            </React.Fragment>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar />
+        <ApplicationViews />
+      </React.Fragment>
+    )
+  }
 }
 
 export default Kennel
@@ -201,10 +201,10 @@ import Kennel from './components/Kennel'
 import './index.css'
 
 ReactDOM.render(
-    <Router>
-        <Kennel />
-    </Router>
-    , document.getElementById('root'))
+  <Router>
+    <Kennel />
+  </Router>
+  , document.getElementById('root'))
 
 ```
 
