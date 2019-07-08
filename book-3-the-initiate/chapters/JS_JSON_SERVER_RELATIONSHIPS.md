@@ -42,7 +42,7 @@ In a parent/child relationship, the child resource has the foreign key property 
  
 `_expand` is used on a child resource as a way to include parent resources.
 
-When writing your fetch request, you will reference the resource(s) you want to `_expand` in the **singular form** like this `http://localhost:8088/adoptions?_expand=puppy&_expand=owner`
+When writing your fetch request, you will reference the resource(s) you want to `_expand` in the singular form like this `http://localhost:8088/adoptions?_expand=puppy&_expand=owner`
 
 This is an example of the data you will get back:
 ```
@@ -69,7 +69,7 @@ This is an example of the data you will get back:
 
 `_embed` is used on a parent resource as a way to include children resources.
 
-When writing your fetch request, you will reference the resource(s) you want to `_embed` in the **plural form** like this `http://localhost:8088/owners?_embed=adoptions`
+When writing your fetch request, you will reference the resource(s) you want to `_embed` in the plural form like this `http://localhost:8088/owners?_embed=adoptions`
 
 ```
   {
