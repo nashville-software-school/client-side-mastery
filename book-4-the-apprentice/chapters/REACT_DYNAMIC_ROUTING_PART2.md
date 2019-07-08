@@ -84,24 +84,24 @@ class AnimalDetail extends Component {
     }
 
     render() {
-        return (
-            <div className="card">
-                <img className="petImg" src={require('./dog.svg')} alt="My Dog" />
-                <div className="container">
-                    <h4>Name: <b>{this.state.name}</b></h4>
-                    <p>Breed: {this.state.breed}</p>
-                    <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Discharge</button>
-
-                    </div>
-            </div>
-        );
+      return (
+        <div className="card">
+          <div className="card-content">
+            <picture>
+              <img src={require('./dog.svg')} alt="My Dog" />
+            </picture>
+            <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
+            <p>Breed: {this.state.breed}</p>
+            <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Discharge</button>
+          </div>
+        </div>
+      );
     }
 }
 
 export default AnimalDetail;
 
 ```
-
 
 ## Add Delete Functionality
 Consider the flow of code for delete.

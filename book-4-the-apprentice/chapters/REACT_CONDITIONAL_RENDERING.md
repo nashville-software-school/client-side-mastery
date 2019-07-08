@@ -44,31 +44,32 @@ export default class Login extends Component {
             password: this.state.password
         })
     )
-    this.props.history.push("/animals/new");
+    this.props.history.push("/animals");
 
   }
 
   render() {
     return (
       <form onSubmit={this.handleLogin}>
-        <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label htmlFor="inputEmail">
-          Email address
-        </label>
-        <input onChange={this.handleFieldChange} type="email"
-          id="email"
-          placeholder="Email address"
-          required="" autoFocus="" />
-        <label htmlFor="inputPassword">
-          Password
-        </label>
-        <input onChange={this.handleFieldChange} type="password"
-          id="password"
-          placeholder="Password"
-          required="" />
-        <button type="submit">
-          Sign in
-        </button>
+        <fieldset>
+            <h3>Please sign in</h3>
+            <div className="formgrid">
+                <input onChange={this.handleFieldChange} type="email"
+                    id="email"
+                    placeholder="Email address"
+                    required="" autoFocus="" />
+                <label htmlFor="inputEmail">Email address</label>
+
+                <input onChange={this.handleFieldChange} type="password"
+                    id="password"
+                    placeholder="Password"
+                    required="" />
+                <label htmlFor="inputPassword">Password</label>
+            </div>
+            <button type="submit">
+                Sign in
+            </button>
+        </fieldset>
       </form>
     )
   }
@@ -157,6 +158,9 @@ Once a user logs in, redirect them to the `home` route. You will need to refacto
 
 ## Challenge: No Animal ID in API
 What if an animalId is no longer available in the API? Write a conditional to display something different if an animal(user, employee or location) is not available/valid.
+
+## Challenge: Active NavBar Route
+In the NavBar, highlight the active section. For example, if you are viewing `Animals`, change the `<NavBar>` `Animals link to `lime` (you could also disable the ability to click). Since the `<NavBar` is not part of a route, you will need to `export default withRouter(NavBar)` in order to have access to the router location properties. Consider how we used `loadingStatus` in a previous chapter.
 
 
 ## Fun Challenge: Remember Me

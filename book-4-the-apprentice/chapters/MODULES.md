@@ -21,6 +21,17 @@ export function splitTypeArray(arr){
 
 To use these functions, import into each component as needed.
 
+```js
+import {firstLetterCase} from '../../modules/helpers'
+```
+
+And then invoke the function
+
+```jsx
+{firstLetterCase(this.state.name)}
+```
+
+
 
 ## Advanced Challenge: The Abstract Artist
 

@@ -25,6 +25,7 @@ Here is the flow of the AnimalEditForm component:
 ```jsx
 import React, { Component } from "react"
 import AnimalManager from "../../modules/AnimalManager"
+import "./AnimalForm.css"
 
 export default class AnimalEditForm extends Component {
     //set the intial state
@@ -67,36 +68,37 @@ export default class AnimalEditForm extends Component {
     render() {
       return (
         <>
-        <form className="animalForm">
-            <div className="form-group">
-                <label htmlFor="animalName">Animal name</label>
-                <input
-                  type="text"
-                  required
-                  className="form-control"
-                  onChange={this.handleFieldChange}
-                  id="animalName"
-                  value={this.state.animalName}
-                />
+        <form>
+          <fieldset>
+            <div className="formgrid">
+              <input
+                type="text"
+                required
+                className="form-control"
+                onChange={this.handleFieldChange}
+                id="animalName"
+                value={this.state.animalName}
+              />
+              <label htmlFor="animalName">Animal name</label>
+
+              <input
+                type="text"
+                required
+                className="form-control"
+                onChange={this.handleFieldChange}
+                id="breed"
+                value={this.state.breed}
+              />
+              <label htmlFor="breed">Breed</label>
             </div>
-            <div className="form-group">
-                <label htmlFor="breed">Breed</label>
-                <input
-                  type="text"
-                  required
-                  className="form-control"
-                  onChange={this.handleFieldChange}
-                  id="breed"
-                  value={this.state.breed}
-                />
+            <div className="alignRight">
+              <button
+                type="button" disabled={this.state.loadingStatus}
+                onClick={this.updateExistingAnimal}
+                className="btn btn-primary"
+              >Submit</button>
             </div>
-            <button
-              type="button"
-              onClick={this.updateExistingAnimal}
-              className="btn btn-primary"
-            >
-              Submit
-            </button>
+          </fieldset>
         </form>
         </>
       );
@@ -137,15 +139,9 @@ In the **`<AnimalCard>`** component, you will add a new button: `Edit`. When the
 
 
 ```jsx
-<button
-  type="button"
-  className="btn btn-success"
-  onClick={() => {
-    this.props.history.push(`/animals/${this.props.animal.id}/edit`);
-  }}
->
-  Edit
-</button>
+<button type="button"
+        onClick={() => {this.props.history.push(`/animals/${this.props.animal.id}/edit`)}}>Edit</button>
+
 ```
 
 ![edit animal button](./images/animals-with-edit-button.png)

@@ -78,21 +78,30 @@ Therefore, I'm going to create another component for displaying an animal. Consi
 import React, { Component } from 'react';
 
 class AnimalCard extends Component {
-    render() {
-        return (
-            <div class="card">
-                <img src={{"./DogIcon.svg"}} alt="My Dog" style={{ width: '100%' }} />
-                    <div class="container">
-                        <h4><b>Doodles</b></h4>
-                        <p>Poodle</p>
-                    </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="card">
+        <div className="card-content">
+          <picture>
+            <img src={require('./dog.svg')} alt="My Dog" />
+          </picture>
+          <h3>Name: <span style={{color: 'darkslategrey'}}>Doodles</span></h3>
+          <p>Breed: Poodle</p>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default AnimalCard;
 ```
+
+> components/animal/DogIcon.svg
+
+Right click and save this image to the above location.
+
+![Dog icon](./images/DogIcon.svg)
+
 
 This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML elements `<AnimalCard />`. JSX interprets this as a component and will render the class you defined.
 
@@ -140,6 +149,63 @@ Before we grow this application any further, let's create a meaningful directory
         - Kennel.js
         - Kennel.css
 index.js
+
+```
+
+## Add some styles to Kennel.css
+
+```css
+/* Import the google web fonts you want to use */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Patua+One');
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: 'Comfortaa', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Patua One', serif;
+  letter-spacing: 2px;
+}
+
+p {
+  margin-bottom: 1.5em;
+  color: #d6fcff;
+  color: darkslateblue;
+}
+
+strong {
+	font-weight: bold;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+.section-content {
+	padding: 1.4em;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 ```
 

@@ -8,18 +8,18 @@ It's time to add one of the CRUD methods to your application. You're going to st
 First add the `delete` function to your `AnimalManager` module.
 
 ```js
-    deleteAnimal(id) {
+    delete(id) {
         return fetch(`http://localhost:5002/animals/${id}`, {
             method: "DELETE"
         })
         .then(e => e.json())
     }
 ```
-We can now invoke `deleteAnimal()` from anywhere.
+We can now invoke `delete()` from anywhere.
 
 Before we include the delete functionality, consider following:
-* The delete button will exist on the **`<AnimalCard />`** componet.
-* When an animal is deleted, our animals array within the parent's state will need to reflect the updated list of animals.
+* The discharge button will exist on the **`<AnimalCard />`** componet.
+* When an animal is removed, our animals array within the parent's state will need to reflect the updated list of animals.
 
 ### Flow of events
 1. Click discharge button
@@ -31,7 +31,7 @@ Before we include the delete functionality, consider following:
 
 **The component where state lives is the only place state can change. Children components cannot change state.**
 
-Add the following function to your **`AnimalList`** component.
+Add the following function to your **`<AnimalList>`** component.
 
 ```js
     deleteAnimal = id => {
@@ -91,33 +91,23 @@ Add the button to the **`<AnimalCard />`** HTML for the veterniarian to select a
 import React, { Component } from 'react';
 
 class AnimalCard extends Component {
-    render() {
-        return (
-            <div className="card">
-                <img className="petImg" src={require('./dog.svg')} alt="My Dog" />
-                <div className="container">
-                    <h4>Name: <b>{this.props.animal.name}</b></h4>
-                    <p>Breed: {this.props.animal.breed}</p>
-                    <button type="button" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Discharge</button>
-                </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="card">
+        <div className="card-content">
+          <picture>
+            <img src={require('./dog.svg')} alt="My Dog" />
+          </picture>
+          <h3>Name: <b>{this.props.animal.name}</b></h3>
+          <p>Breed: {this.props.animal.breed}</p>
+          <button type="button" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Discharge</button>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default AnimalCard;
-```
-
-> components/animal/DogIcon.svg
-
-Right click and save this image to the above location.
-
-![Dog icon](./images/DogIcon.svg)
-
-> components/animal/Animal.css
-
-```css
-//fix this
 ```
 
 ---

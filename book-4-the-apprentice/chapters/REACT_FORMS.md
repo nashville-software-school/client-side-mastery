@@ -26,24 +26,15 @@ Update **`<AnimalList>`** with a button that uses the `history.push()` to change
 
 ```js
 //add this button above your display of animal cards
-<button type="button"
-    className="btn"
-    onClick={() => {this.props.history.push("/animals/new")}}>
-    Admit Animal
-</button>
+<section className="section-content">
+  <button type="button"
+      className="btn"
+      onClick={() => {this.props.history.push("/animals/new")}}>
+      Admit Animal
+  </button>
+</section>
 ```
 
-Update `Animal.css` to center the button.
-
-> Animal.css
-
-```css
-.animalButton {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 0 10px 0;
-}
-```
 
 ![add animal button](./images/add-animal.png)
 
@@ -94,83 +85,147 @@ We will also incorporate `loadingStatus` (Dynamic Routing Part 2) so a user cann
 ```js
 import React, { Component } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
-import './AnimalDetail.css'
+import './AnimalForm.css'
 
 class AnimalForm extends Component {
-  state = {
-    animalName: "",
-    breed: "",
-    loadingStatus: false,
-  };
+    state = {
+        animalName: "",
+        breed: "",
+        loadingStatus: false,
+    };
 
-  handleFieldChange = evt => {
-    const stateToChange = {};
-    stateToChange[evt.target.id] = evt.target.value;
-    this.setState(stateToChange);
-  };
+    handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value;
+        this.setState(stateToChange);
+    };
 
-  /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
-  */
-  constructNewAnimal = evt => {
-    evt.preventDefault();
-    if (this.state.animalName === "" || this.state.breed === "") {
-        window.alert("Please input an animal name and breed");
-    } else {
-        this.setState({ loadingStatus: true });
-        const animal = {
-            name: this.state.animalName,
-            breed: this.state.breed,
-        };
+    /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
+    */
+    constructNewAnimal = evt => {
+        evt.preventDefault();
+        if (this.state.animalName === "" || this.state.breed === "") {
+            window.alert("Please input an animal name and breed");
+        } else {
+            this.setState({ loadingStatus: true });
+            const animal = {
+                name: this.state.animalName,
+                breed: this.state.breed,
+            };
 
-        // Create the animal and redirect user to animal list
-        AnimalManager.post(animal)
-        .then(() => this.props.history.push("/animals"));
+            // Create the animal and redirect user to animal list
+            AnimalManager.post(animal)
+            .then(() => this.props.history.push("/animals"));
+        }
+    };
+
+    render(){
+
+        return(
+            <>
+            <form>
+                <fieldset>
+                    <div className="formgrid">
+                        <input
+                        type="text"
+                        required
+                        onChange={this.handleFieldChange}
+                        id="animalName"
+                        placeholder="Animal name"
+                        />
+                        <label htmlFor="animalName">Name</label>
+                        <input
+                        type="text"
+                        required
+                        onChange={this.handleFieldChange}
+                        id="breed"
+                        placeholder="Breed"
+                        />
+                        <label htmlFor="breed">Breed</label>
+                    </div>
+                    <div className="alignRight">
+                        <button
+                        type="button"
+                        disabled={this.state.loadingStatus}
+                        onClick={this.constructNewAnimal}
+                        >Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </>
+        )
     }
-  };
-
-  render(){
-
-    return(
-        <>
-        <form className="animalForm">
-        <div className="form-group">
-            <label htmlFor="animalName">Animal name</label>
-            <input
-            type="text"
-            required
-            className="form-control"
-            onChange={this.handleFieldChange}
-            id="animalName"
-            placeholder="Animal name"
-            />
-        </div>
-        <div className="form-group">
-            <label htmlFor="breed">Breed</label>
-            <input
-            type="text"
-            required
-            className="form-control"
-            onChange={this.handleFieldChange}
-            id="breed"
-            placeholder="Breed"
-            />
-        </div>
-        <button
-            type="button"
-            disabled={this.state.loadingStatus}
-            onClick={this.constructNewAnimal}
-            className="btn btn-primary"
-        >Submit</button>
-        </form>
-    </>
-    )
-  }
 }
 
 export default AnimalForm
 ```
 
 **NOTE** `<>` is a shortcut for React.Fragment. Be sure to close it at the bottom `</>`
+
+> AnimalForm.css
+
+```css
+fieldset {
+    max-width: 40em;
+    padding: 4px;
+    margin: 2em auto;
+    border: 0 none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background: aliceblue;
+}
+
+fieldset input, fieldset button{
+    box-sizing: border-box;
+    padding: .2em .4em;
+    margin: .2em 0;
+    outline: none;
+    box-shadow: none;
+}
+
+fieldset button {
+    max-width: 9em;
+    padding: .5em;
+    margin: .3em auto;
+    background-color: cornflowerblue;
+    border: none;
+    color: cornsilk;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 100%;
+    cursor: pointer;
+}
+
+fieldset label {
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+}
+fieldset input:focus + label {
+    color: #933;
+}
+
+fieldset .formgrid {
+    display: grid;
+    grid-template-columns: 1fr 1em 2fr;
+    grid-gap: .3em .6em;
+    grid-auto-flow: dense;
+    align-items: center;
+}
+
+fieldset input, fieldset button {
+    grid-column: 2 /4;
+    width: auto;
+    margin: 0
+}
+
+fieldset .alignRight {
+    text-align: right;
+}
+```
 
 ## Using the Form
 

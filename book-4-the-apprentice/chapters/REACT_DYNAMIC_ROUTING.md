@@ -16,12 +16,11 @@ Create the following files:
 ```sh
     src/components/animal/AnimalDetail.js
     src/components/animal/AnimalDetail.css
-    src/components/animal/dog.svg
 ```
 
 **Consider**: If this URL was bookmarked, what would you need to display it correctly? How about data from the database?
 
-Just like loading the animals into the **`AnimalList`**, load one animal's detail when the component mounts. In order to do this, we need an animal's id. React-router provides a way to pass and get the necessary information.
+Just like loading the animals into the **`<AnimalList>`**, load one animal's detail when the component mounts. In order to do this, we need an animal's id. React-router provides a way to pass and get the necessary information.
 
 
 > components/animal/AnimalDetail.js
@@ -52,28 +51,17 @@ class AnimalDetail extends Component {
 
     render() {
         return (
-            <div className="card">
-                <img className="petImg" src={require('./dog.svg')} alt="My Dog" />
-                <div className="container">
-                    <h4>Name: <b>{this.state.name}</b></h4>
-                    <p>Breed: {this.state.breed}</p>
-                </div>
+          <div className="card">
+            <div className="card-content">
+              <picture>
+                <img src={require('./dog.svg')} alt="My Dog" />
+              </picture>
+                <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
+                <p>Breed: {this.state.breed}</p>
             </div>
+          </div>
         );
     }
-}
-```
-
-> components/animal/AnimalDetail.css
-
-```css
-.ownerList {
-    font-size: 0.75em;
-}
-
-.icon--dog {
-    width: 50px;
-    height: 50px;
 }
 ```
 

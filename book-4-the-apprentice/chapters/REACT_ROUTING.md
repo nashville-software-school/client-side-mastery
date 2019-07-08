@@ -44,15 +44,20 @@ class NavBar extends Component {
     render(){
 
         return (
+          <header>
+            <h1 className="site-title">Student Kennels<br />
+              <small>Loving care when you're not there.</small>
+            </h1>
             <nav>
-                <ul className="container">
-                    <li><Link className="nav-link" to="/">Home</Link></li>
-                    <li><Link className="nav-link" to="/animals">Animals</Link></li>
-                    <li>Locations</li>
-                    <li>Employees</li>
-                    <li>Owners</li>
-                </ul>
+              <ul className="container">
+                <li><Link className="nav-link" to="/">Home</Link></li>
+                <li><Link className="nav-link" to="/animals">Animals</Link></li>
+                <li>Locations</li>
+                <li>Employees</li>
+                <li>Owners</li>
+              </ul>
             </nav>
+          </header>
         )
     }
 }
@@ -62,21 +67,45 @@ export default NavBar;
 
 The NavBar css
 > components/nav/Navbar.css
-```
+
+```css
+small {
+	font-size: 75%;
+}
+
+header {
+  background-color:darkblue;
+  border: cornflowerblue solid 3px;
+}
+
+.site-title {
+  color: ghostwhite;
+  text-align: center;
+}
+
 nav .container {
-    display: flex;
-    padding: 0;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
 }
 
 nav .container li {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5em;
-    color: cornsilk;
-    box-sizing: border-box;
-    background-color: teal;
-    list-style-type: none;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  color: cornsilk;
+  box-sizing: border-box;
+  background-color: cornflowerblue;
+  list-style-type: none;
+}
+
+nav .container a {
+  color: cornsilk;
+}
+
+nav .container a:hover {
+  color: maroon;
 }
 ```
 

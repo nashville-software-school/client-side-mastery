@@ -161,7 +161,7 @@ There are a few of ways to handle this situation.
 4. **Lift** the `deleteAnimal` function to a common parent component thus allowing both components access.
 
 ## Practice - Handle the delete
-Choose one of the options above and handle the delete button when the **`<AnimalCard>`** is is viewed within the **`<EmployeeWithAnimals>`** component.
+Choose one of the options above and handle the delete button when the **`<AnimalCard>`** is viewed within the **`<EmployeeWithAnimals>`** component.
 
 
 ## Refactor the NavBar

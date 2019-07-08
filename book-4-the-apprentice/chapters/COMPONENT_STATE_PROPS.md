@@ -1,6 +1,6 @@
 # React Component State and Props
 
-In this chapter, you are going to make your application dynamic. In React, data can be passed to components. This is similar to passing arguments to functions, but different.
+In this chapter, you are going to make your application dynamic. In React, data can be passed to components. This is similar to passing arguments to functions, yet different.
 
 ## State in React Applications
 
@@ -10,7 +10,7 @@ State is the current values of the properties used to render a component. Your b
 
 Think of a component as a template waiting for data to be passed in and then displayed. A single component can be made up of several smaller components.
 
-State is initialized by defining `state` at the top of a class definition and is then automatically included in the construction of the component. Currently our **`<AnimalList />`** has the state of animals defined as an empty array. Once we get the the data from the API we invoke `setState()` with the animal data. This will change the state and **Each time `state` changes, the `render()` method of that component runs.**
+State is initialized by defining `state` at the top of a class definition and then is automatically included in the construction of the component. Currently our **`<AnimalList />`** has the state of animals defined as an empty array. Once we get the the data from the API we invoke `setState()` with the animal data. This will change the state and **Each time `state` changes, the `render()` method of that component runs.**
 
 Now we want to use the new data to populate our animal cards. We pass the data to the **`<AnimalCard />`** with **props**. Change the render method of the **`AnimalList`** component:
 
@@ -33,7 +33,7 @@ render(){
 
 **In English** Using the array method `map`, for each item/animal in the array animals, return an **`<AnimalCard />`** and pass the single item/animal into it via props.
 
-Because **`<AnimalCard />`** is included in the render method of **`<AnimalList />`**, it is a  _child components_ of the **`<AnimalList />`** component.
+Because **`<AnimalCard />`** is included in the render method of **`<AnimalList />`**, it is a  _child component_ of the **`<AnimalList />`** component.
 
 * Use the Chrome React Developer tool and inspect the **`<AnimalCard />`** component. You will notice that each card has props for one animal.
 
@@ -43,27 +43,66 @@ Modify the **`<AnimalCard />`** render method to display the props using dot not
     render() {
         return (
             <div className="card">
-                <img className="petImg" src={require('./dog.svg')} alt="My Dog" />
-                <div className="container">
-                    <h4>Name: <b>{this.props.animal.name}</b></h4>
+                <div className="card-content">
+                    <picture>
+                      <img src={require('./dog.svg')} alt="My Dog" />
+                    </picture>
+                    <h2>Name: <span style={{color: 'darkslategrey'}}>{this.props.animal.name}</span></h2>
                     <p>Breed: {this.props.animal.breed}</p>
-                </div>
             </div>
         );
     }
 
 ```
 
-Also note that you're importing a single CSS file directly into this component. Good practice would to only import CSS that applies the the JSX elements of this component.
+Add CSS. Note: you will import a single CSS file directly into this component. Good practice would to only import CSS that applies to the JSX elements of this component.
 
 
-> AnimalList.css
+> components/animal/Animal.css
 
 ```css
-.animalList {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  background: aliceblue;
+  margin-bottom: 2em;
+  flex: 0 1 24%;
+}
+
+.card-content {
+	padding: .5em;
+}
+
+.card-content h3 {
+	margin-top: 0;
+	margin-bottom: .5em;
+  font-weight: bold;
+  color: rgb(43, 112, 241);
+}
+
+.card-content p {
+  font-size: 80%;
+  color: darkslategrey;
+}
+
+.card button {
+  background-color: cornflowerblue;
+  border: none;
+  color: cornsilk;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  padding: .5em;
+  border-radius: 2px;
+  margin: .1em;
+  width: 100%;
+}
+
+.card button:hover {
+  background-color: darkblue;
 }
 ```
 
@@ -132,7 +171,7 @@ Update your application so that each section displays a list of cards with the A
 
 1. Create a join table and assign each animal to an owner.
 
-Your task is to update the **`<AnimalList />`** component to also display the name of the animal's owner(s). Keep in mind that the animal may have more than one owner.
+Your task is to update the **`<AnimalCard />`** component to also display the name of the animal's owner(s). Keep in mind that the animal may have more than one owner.
 
 You will need to load the owner's data within the **`<AnimalList />`** and then pass the owner's details to the **`<AnimalCard />`** component.
 

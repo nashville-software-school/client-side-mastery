@@ -131,7 +131,7 @@ Let's build the **`<AnimalList >`** component.
         console.log("ANIMAL LIST: Render");
 
         return(
-            <div className="cards">
+            <div className="container-cards">
                 {this.state.animals.map(animal => <AnimalCard />)}
             </div>
         )
@@ -146,7 +146,7 @@ export default AnimalList
 Modify `ApplicationViews.js` to load the **`<AnimalList />`** instead of **`<AnimalCard />`**
 
 
-Run the code. We have 3 cards displaying (and an error message). Take a look at the console. This is the order of the code running:
+Run the code. We have 3 cards displaying (and an error message. We will fix the error and display the correct data in the next chapter.). Take a look at the console. This is the order of the code running:
 
 ```
 AnimalList: Render
@@ -186,4 +186,5 @@ The `componentDidMount()` lifecysle hook runs after the component output has bee
 
 
 * Owners should have the `id`, `phoneNumber`, and `name` properties.
+* Animals can have multiple owners.
 
