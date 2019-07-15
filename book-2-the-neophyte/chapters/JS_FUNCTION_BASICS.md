@@ -9,18 +9,18 @@ let lastName = "Haynes";
 
 console.log(`${firstName} ${lastName}`);
 
-let firstName = "Debra";
-let lastName = "Gordon";
+firstName = "Debra";
+lastName = "Gordon";
 
 console.log(`${firstName} ${lastName}`);
 
-let firstName = "Svetlana";
-let lastName = "Irinov";
+firstName = "Svetlana";
+lastName = "Irinov";
 
 console.log(`${firstName} ${lastName}`);
 
-let firstName = "Sequina";
-let lastName = "Rodriguez";
+firstName = "Sequina";
+lastName = "Rodriguez";
 
 console.log(`${firstName} ${lastName}`);
 ```
