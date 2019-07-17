@@ -235,6 +235,15 @@ angus.whine()
 angus.pant()
 ```
 
+## Practice: My Pet "This"
+
+1. Give your pet a new key named `favoriteToys` whose value is an empty array.
+1. Now define another new key named `play` whose value is a function with a single parameter named `toy`.
+1. The function should determine if your pet liked the toy, and if s/he does, then it should be added to the `favoriteToys` array using the `this` keyword _(see example above)_.
+
+Here's an example. If your pet is a cat, then he likely only likes furry toys, so you could put an `if..then` condition in the `play()` method that checks if the word "fuzzy" is in the argument value. If it is, it gets added to the array.
+
+
 ## Practice: Fast Food Ordering
 
 You need to write code to represent the process of ordering food at a fast food joint. Your restaurant is Bob's Burgers, and you have some starter code below. The object will have two behaviors that you must define.
