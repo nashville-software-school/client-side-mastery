@@ -43,15 +43,14 @@ const createRecipeCard = recipe => `
         <div class="recipe__instructions">
             ${recipe.instructions}
         </div>
-        <button id="deleteRecipe--1">
+        <button id="deleteRecipe--${recipe.id}">
             Delete Recipe
         </button>
     </section>
 `
 ```
 
-
-## Delete Syntax
+## Delete Request Syntax
 
 Here is how you perform a deletion operation using the `fetch` syntax in JavaScript. You need to always include the `method` and the `Content-Type` header. Also note that the unique key of the resource to be deleted is a route parameter at the end of the URL.
 
@@ -73,7 +72,7 @@ recipeList.addEventListener("click", event => {
                 "Content-Type": "application/json"
             }
         })
-        .then(res => res.json())
+        .then(response => response.json())
     }
 })
 ```
