@@ -19,9 +19,8 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 11 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
 * Chapter 12 - [Handling Browser Events](./chapters/JS_EVENTS.md)
 * Chapter 13 - [Collecting User Input](./chapters/JS_USER_INPUT_BASICS.md)
-* Chapter 14 - [Automation with Grunt](./chapters/GRUNT_INTRO.md)
-* Chapter 15 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-* Chapter 16 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
+* Chapter 14 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
+* Chapter 15 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
 
 > ### __Sprint 2__ - [Welcome to Nashville](https://github.com/nashville-software-school/welcome-to-nashville)
 
@@ -33,5 +32,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
 * Supplement - [jQuery](./chapters/JQUERY.md)
+* Supplement - [Automation with Grunt](./chapters/GRUNT_INTRO.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
