@@ -48,7 +48,7 @@ const createRecipeCard = recipe => `
 const updateFormFields = recipeId => {
 
     // Get reference to input fields in the form
-    const recipeId = document.querySelector("#recipeId")
+    const hiddenRecipeId = document.querySelector("#recipeId")
     const recipeTitleInput = document.querySelector("#recipeTitle")
     const recipeInstructionsInput = document.querySelector("#recipeInstructions")
 
@@ -60,7 +60,7 @@ const updateFormFields = recipeId => {
                 an editing form that represents the current
                 state of the resource.
             */
-            recipeId = recipe.id // Hidden value. User no see. 🙈
+            hiddenRecipeId.value = recipe.id // Hidden value. User no see. 🙈
             recipeTitleInput.value = recipe.title
             recipeInstructionsInput.value = recipe.instructions
         })
@@ -108,16 +108,16 @@ const editRecipe = id => {
             application is back to the state of creating instead
             of editing
         */
-        const recipeId = document.querySelector("#recipeId")
-        recipeId.value = ""  // Reset the hidden input value
+        const hiddenRecipeId = document.querySelector("#recipeId")
+        hiddenRecipeId.value = ""  // Reset the hidden input value
     })
 
 }
 
 saveButton.addEventListener("click", event => {
-    const recipeId = document.querySelector("#recipeId")
+    const hiddenRecipeId = document.querySelector("#recipeId")
 
-    if (recipeId.value <> "") {
+    if (hiddenRecipeId.value <> "") {
         editRecipe(recipeId)
     } else {
         // Save functionality goes here
