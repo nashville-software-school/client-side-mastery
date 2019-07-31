@@ -210,7 +210,7 @@ module.exports = {
   output: {
     filename: "bundle.js"
   },
-  devtool: 'eval-source-map'
+  devtool: "eval-source-map"
 };
 ```
 
