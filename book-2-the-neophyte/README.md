@@ -12,16 +12,15 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 4 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
 * Chapter 5 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
 * Chapter 6 - [Objects Representing Things](./chapters/OBJECTS_AS_THINGS.md)
-* Chapter 7 - [Block Scope](./chapters/JS_SCOPE.md)
-* Chapter 8 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-* Chapter 9 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
-* Chapter 10 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
-* Chapter 11 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
-* Chapter 12 - [Fetching Data](./chapters/FETCH_INTRO.md)
-* Chapter 13 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
+* Chapter 7 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
+* Chapter 8 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
+* Chapter 9 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
+* Chapter 10 - [Fetching Data](./chapters/FETCH_INTRO.md)
+* Chapter 11 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
+* Chapter 12 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 13 - [Collecting User Input](./chapters/JS_USER_INPUT_BASICS.md)
+* Chapter 14 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 * Chapter 15 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
-* Chapter 16 - [Handling Browser Events](./chapters/JS_EVENTS.md)
-* Chapter 17 - [Collecting User Input](./chapters/JS_USER_INPUT_BASICS.md)
 
 > ### __Sprint 2__ - [Welcome to Nashville](https://github.com/nashville-software-school/welcome-to-nashville)
 
@@ -32,5 +31,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
 * Supplement - [jQuery](./chapters/JQUERY.md)
+* Supplement - [Automation with Grunt](./chapters/GRUNT_INTRO.md)
 
 Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).

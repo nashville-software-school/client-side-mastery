@@ -209,7 +209,8 @@ module.exports = {
   ],
   output: {
     filename: "bundle.js"
-  }
+  },
+  devtool: 'eval-source-map'
 };
 ```
 
@@ -219,7 +220,7 @@ In your `package.json`, there is a script set up to run the webpack server.
 
 ```json
 "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development --open"
   }
 ```
 
