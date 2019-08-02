@@ -96,11 +96,11 @@ class AnimalCard extends Component {
 export default AnimalCard;
 ```
 
-> components/animal/DogIcon.svg
+> components/animal/dog.svg
 
 Right click and save this image to the above location.
 
-![Dog icon](./images/DogIcon.svg)
+![Dog icon](./images/dog.svg)
 
 
 This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML elements `<AnimalCard />`. JSX interprets this as a component and will render the class you defined.
@@ -146,7 +146,7 @@ Before we grow this application any further, let's create a meaningful directory
     - components
         - animal
             - AnimalCard.js
-            - DogIcon.svg
+            - dog.svg
         - Kennel.js
         - Kennel.css
 index.js
@@ -211,6 +211,6 @@ img {
 ```
 
 ## Practice
-The Kennel App needs to include locations, owners, and employees. Create static card components for each (`LocationCard.js`, `OwnerCard.js` and `EmployeeCard.js`). This is another example of the Single Responsibility Principle. We should have a component whose sole responsibility is to render the location, or owner, or employee information. Follow the same directory structure and include the components in the JSX for **`Kennel**.
+The Kennel App needs to include locations, owners, and employees. Create static card components for each (`LocationCard.js`, `OwnerCard.js` and `EmployeeCard.js`). This is another example of the Single Responsibility Principle. We should have a component whose sole responsibility is to render the location, or owner, or employee information. Follow the same directory structure and include the components in the JSX for **`Kennel`**.
 
 
