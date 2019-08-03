@@ -126,6 +126,8 @@ export default recipes => {
 
 Now an events module to register the click handler on the list element. This module exports an object with one method named `registerDeleteListener`. This will be invoked in `main` module.
 
+##### events.js
+
 ```js
 import apiActions from "./api.js"
 import render from "./dom.js"
@@ -158,6 +160,8 @@ There are two actions that need to be performed for this lesson.
 
 This module will export an object with those two methods on it. Other modules can import the object and invoke either of the methods, depending on its needs.
 
+##### api.js
+
 ```js
 export default {
     deleteRecipe (recipeId) {
@@ -176,6 +180,8 @@ export default {
 ## Main Instructions
 
 Now it's time to import all the modules needed to get the data, display the data, and attach the event listener to the DOM element.
+
+##### main.js
 
 ```js
 import apiActions from "./api.js"
