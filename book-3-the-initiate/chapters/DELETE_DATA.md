@@ -65,12 +65,14 @@ code .
 
 ## List Container
 
-First, specify an HTML element to hold the recipe information.
+First, specify an HTML element to hold the recipe information. Also include a module script tag to load the main instructions.
 
 ##### index.html
 
 ```html
 <article id="recipeList"> </article>
+
+<script type="module" src="./scripts/main.js"></script>
 ```
 
 ## Recipe HTML
