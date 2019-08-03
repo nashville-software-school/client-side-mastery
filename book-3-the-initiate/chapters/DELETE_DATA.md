@@ -171,50 +171,18 @@ export default {
 }
 ```
 
-## Delete Request Syntax
+## Main Instructions
 
-Here is how you perform a deletion operation using the `fetch` syntax in JavaScript. You need to always include the `method` and the `Content-Type` header. Also note that the unique key of the resource to be deleted is a route parameter at the end of the URL.
-
-```js
-recipeList.addEventListener("click", event => {
-    /*
-        Only trigger the delete operation if the button
-        was clicked. Remember that the side-effect of
-        putting the "click" handler on the parent container
-        is that if you click on _anything_ inside that
-        element, the event will bubble up.
-    */
-    if (event.target.id.startsWith("deleteRecipe--")) {
-        const recipeToDelete = event.target.id.split("--")[1]
-
-        fetch(`http://localhost:8088/resource/${recipeToDelete}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(response => response.json())
-    }
-})
-```
-
-## Delete and Get All Option
-
-Once you delete a resource in your API, you need to rebuild your list of HTML representations because the state of the API has changed. Remember that your HTML is simply a representation of your APIs current state, with affordances to change its state.
-
-This means that you need to request all of the data again and go through the same process that executed when the page first loaded.
+Now it's time to import all the modules needed to get the data, display the data, and attach the event listener to the DOM element.
 
 ```js
-recipeList.addEventListener("click", event => {
-    if (event.target.id.startsWith("deleteRecipe--")) {
-        const recipeToDelete = event.target.id.split("--")[1]
+import apiActions from "./api.js"
+import events from "./events.js"
+import render from "./dom.js"
 
-        fetch(`http://localhost:8088/recipes/${recipeToDelete}`, {
-            method: "DELETE"
-        })
-        .then(response => response.json())
-        // Get all recipes once the DELETE request is resolved
-        .then(getRecipes)
-    }
-})
+// Invoke the method that attaches the event listener
+events.registerDeleteListener()
+
+// Get all recipes from API and render them in the DOM
+apiActions.getAllRecipes().then(render)
 ```
