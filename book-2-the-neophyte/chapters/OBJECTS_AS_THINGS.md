@@ -197,7 +197,7 @@ By using `this`, you never have to worry about changing multiple lines of code.
 
 ### Debugging Your Code
 
-We can pause our code at any time to watch what is happening line by line and check the value of each variable at that moment. We do that by using the `debugger` keyword in our code where we want our program to pause. This helps us to pinpoint a specific behavior we were not expecting, and it can allow us to watch when a varibale's value changes in a way we did or didn't expect. 
+We can pause our code at any time to watch what is happening line by line and check the value of each variable at that moment. We do that by using the `debugger` keyword in our code where we want our program to pause. This helps us to pinpoint a specific behavior we were not expecting, and it can allow us to watch when a varibale's value changes in a way we did or didn't expect.
 
 In your code, add the word `debugger` within the `eat()` method on the `rufusTheDog` object. When the program is run (by resfreshing your browser) the execution of your code will pause on that line and you can check each variable and step through your code line by line. Try it out!
 
@@ -220,6 +220,29 @@ Create an object that represents your pet.
 1. Species property with a string value.
 1. Nicknames property with an array value. Array contains strings.
 1. Age property with an integer value
+
+## Practice: Pet Sounds
+
+Now that you have an object that represents your pet, it's time to add some behavior. Pick three behaviors that your pet has and add three kys to your pet object. Each key's value should be a function that logs to the console or displays a window alert. Your choice.
+
+For example, if your pet is a dog, you could add a `bark` property, and the function would `window.alert("WOOF!")`.
+
+Once you have define the properties, invoke each behavior. For example:
+
+```js
+angus.bark()
+angus.whine()
+angus.pant()
+```
+
+## Practice: My Pet "This"
+
+1. Give your pet a new key named `favoriteToys` whose value is an empty array.
+1. Now define another new key named `play` whose value is a function with a single parameter named `toy`.
+1. The function should determine if your pet liked the toy, and if s/he does, then it should be added to the `favoriteToys` array using the `this` keyword _(see example above)_.
+
+Here's an example. If your pet is a cat, then he likely only likes furry toys, so you could put an `if..then` condition in the `play()` method that checks if the word "fuzzy" is in the argument value. If it is, it gets added to the array.
+
 
 ## Practice: Fast Food Ordering
 

@@ -2,7 +2,7 @@
 
 When working on applications that is composed of many component that may share common styles, you can now use variables and modules to break up your CSS into more manageable pieces.
 
-Also, it has a benefit that Browserify has. When we bundle our JavaScript, then our HTML file only needs to specify a single JavaScript file.
+Also, it has a benefit that Webpack has. When we bundle our JavaScript, then our HTML file only specifies a single JavaScript file.
 
 ```html
 <script src="bundle.js"></script>

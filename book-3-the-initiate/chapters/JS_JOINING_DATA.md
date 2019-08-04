@@ -234,6 +234,11 @@ const FamilyDatabase = {
 }
 ```
 
+## Additional Resources
+
+1. [JSON Server Typicode](https://github.com/typicode/json-server)
+2. [Enhancing fetch calls with `_expand` & `_embed`](./JS_JSON_SERVER_RELATIONSHIPS.md)
+
 ## Videos to Watch
 
 1. [Beginner SQL - 14 - One to Many Relationship](https://www.youtube.com/watch?v=mOkplknUNiU)

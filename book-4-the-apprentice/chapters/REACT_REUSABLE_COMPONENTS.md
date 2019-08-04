@@ -81,7 +81,8 @@ We need to add a button to the **`<EmployeeCard>`** for details using `history.p
 
 > EmployeeCard.js
 ```jsx
-<button type="button" onClick={() => { this.props.history.push(`/employees/${this.props.employee.id}/details`) }}>Details</button>
+<button type="button"
+        onClick={() => { this.props.history.push(`/employees/${this.props.employee.id}/details`) }}>Details</button>
 ```
 
 We also need to add a route to **`<ApplicationViews>`** to handle displaying details of a single employee. This route will return a new component: **`<EmployeeWithAnimals>`** which we will build next. Notice that we are passing `{...props}` to enable access to react-router-dom properties.
@@ -108,8 +109,8 @@ import AnimalCard from '../animal/AnimalCard'
 
 class EmployeeWithAnimals extends Component {
     state = {
-        employee: {},
-        animals: []
+      employee: {},
+      animals: []
     }
 
     componentDidMount(){
@@ -117,26 +118,26 @@ class EmployeeWithAnimals extends Component {
         EmployeeManager.getWithAnimals(this.props.match.params.employeeId)
             .then((APIResult) => {
             this.setState({
-                employee: APIResult,
-                animals: APIResult.animals,
+              employee: APIResult,
+              animals: APIResult.animals,
             })
         })
     }
 
     render(){
         return (
-            <div className="card">
-                <p>Employee: {this.state.employee.name}</p>
-                {this.state.animals.map(animal =>
-                    <AnimalCard
-                        key={animal.id}
-                        animal={animal}
-                        {...this.props}
-                    />
-                )}
-                </div>
-                )
-            }
+          <div className="card">
+            <p>Employee: {this.state.employee.name}</p>
+            {this.state.animals.map(animal =>
+              <AnimalCard
+                key={animal.id}
+                animal={animal}
+                {...this.props}
+              />
+            )}
+          </div>
+        )
+      }
     }
 
 export default EmployeeWithAnimals;

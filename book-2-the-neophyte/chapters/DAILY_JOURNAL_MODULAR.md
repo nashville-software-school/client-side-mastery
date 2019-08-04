@@ -5,9 +5,9 @@ In this stage of the application, you are going to modularize your JavaScript co
 My modularizing your code, you achieve two main goals.
 
 1. When changes need to be made to your application, it makes it far easier to find the code that needs to change. This benefit comes at the expense of having more files to manage, and open, during development.
-1. It nearly eliminates the possibility of merge conflicts. When working in a team, each developer takes responsbility for making a very specific change. By modularizing your code, the likelihood that two developers will need to be working on the same file, at the same time, is minimized.
+1. It nearly eliminates the possibility of merge conflicts. When working in a team, each developer takes responsibility for making a very specific change. By modularizing your code, the likelihood that two developers will need to be working on the same file, at the same time, is minimized.
 
-## Single Responsbility Modules
+## Single Responsibility Modules
 
 Create three new files in your `src/scripts` directory.
 
@@ -77,5 +77,3 @@ When you are done, there should be three objects defined in your application.
 1. One object that has a method rendering the components to the DOM
 
 > **Refactor:** Once the objects are defined, refactor your code to use the methods on those objects where needed.
-
-

@@ -15,6 +15,14 @@ A distributed version control system for keeping a history of your code.
 
 The magic is the `.git` directory that gets create when the `git init` command is executed. To see this directory you can use `ls -la`, which shows hidden files and directories. Operating systems will not show files and directories that begin with a period by default. They are considered hidden, or system assets.
 
+## Add a Username and Email to Git
+You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
+
+![username and email](./images/git-username-email.png)
+
+- [Set the Username for every git repo](https://help.github.com/en/articles/setting-your-username-in-git#setting-your-git-username-for-every-repository-on-your-computer)
+- [Set the Email for every git repo](https://help.github.com/en/articles/setting-your-commit-email-address-in-git#setting-your-email-address-for-every-repository-on-your-computer)
+
 ## Making Your First Commit
 
 1. Create an HTML file with `touch index.html`
