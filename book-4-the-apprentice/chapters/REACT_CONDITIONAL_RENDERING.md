@@ -8,15 +8,14 @@ In this chapter, you are going to learn how to configure a `<Route>` to conditio
 
 ### Login Component
 
-Make a new component directory called `auth` and add a file called `Login.js`.
+Make a new component directory named `auth` and add a file named `Login.js`.
 
-> Login.js
+> components/auth/Login.js
 
 ```js
 import React, { Component } from "react"
 
-
-export default class Login extends Component {
+class Login extends Component {
 
   // Set initial state
   state = {
@@ -75,11 +74,17 @@ export default class Login extends Component {
   }
 
 }
+
+export default Login
+
 ```
 
 ### Route to Show Login
 
 Import this new component into **`ApplicationViews`**.
+
+> ApplicationViews.js
+
 
 ```js
 import Login from './auth/Login'
@@ -139,11 +144,11 @@ Refactor the route to `/animals`:
 2. Visit `http://localhost:3000/animals`
 3. You should be presented with the login screen
 
-User is unable to view list of animals until she logs in.
+User is unable to view list of animals until they log in.
 
 1. Now fill out the form and put `credentials` in local storage.
-2. Click on `Animals` in your nav bar.
-3. You should be able to see the list of animals.
+1. Click on `Animals` in your nav bar.
+1. You should be able to see the list of animals.
 
 ![working conditional routing](./images/kfst2FfzcO.gif)
 

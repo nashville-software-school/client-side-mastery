@@ -1,4 +1,4 @@
-# Populating React Component State from an API
+# Load Data from an API and initial State
 
 At this point, you have a static application. Now it's time to implement realistic data. You will request it from your JSON API database.
 
@@ -36,60 +36,69 @@ json-server -p 5002 -w kennel.json
 ## Thinking in React and Querying Data from the API
 
 Currently, this is the flow of code in your application:
-1. `index.js` is the first file to load and it renders the `<Router>` with `Kennel.js`
-2. `Kennel.js` renders the `<NavBar>` and `<ApplicationViews>`
-3. `<NavBar>` contains links to other views
-4. `<ApplicationViews>` renders routes based on the URL.
-5. When viewing the Animals section, AnimalCard.js  will load up and invoke `render()`.
-6. Our page displays.
+1. `index.js` is invoked first and it renders the `<Router>` with `Kennel.js`
+1. `Kennel.js` renders the `<NavBar>` and `<ApplicationViews>`
+1. `<NavBar>` contains links to other views
+1. `<ApplicationViews>` renders routes based on the URL.
+1. When viewing the Animals section, AnimalCard.js will load up and invoke `render()`.
+1. Our page displays.
 
 
-## Querying the Data from your API
+## Querying the Data
 
 As we have done before, let's create a module for database calls.
 
 ## Setup
 
 1. Create a `src/modules` directory
-1. In that directory, create a file named `AnimalManager.js`
+2. In that directory, create a file named `AnimalManager.js`
 
 ## Single Responsibility Principle
 
-Keeping the Single Responsibility Principle in mind, you are going to create a JavaScript module that contains **all** of the API calls. This provides flexibility for your application.
+Keeping the Single Responsibility Principle in mind, you are going to create a JavaScript module that contains the animal API calls. This provides flexibility for your application.
 
 Other components, _in the future_, may need the ability to make their own API calls. You're going to eliminate the possibility of duplicate code by making a module whose sole responsibility is to interact with the API.
 
-> AnimalManager.js
+> src/modules/AnimalManager.js
 
 ```js
 const remoteURL = "http://localhost:5002"
 
 export default {
   get(id) {
-    return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
+    return fetch(`${remoteURL}/animals/${id}`).then(result => result.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/animals`).then(e => e.json())
+    return fetch(`${remoteURL}/animals`).then(result => result.json())
   }
 }
 ```
 
-Our `AnimalCard` does a great job of rendering a single animal. So, let's make a new file that will initiate the AnimalManager call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
+Our `AnimalCard` does a great job of rendering a single animal. So, let's make a new file that will initiate the AnimalManager `getAll()` call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
+
+When the data is returned, we can hold on to it by placing it in the component's `state`.
+
+## What is State?
+A component's state is an object that can be modified over time in response to user actions, network responses, and anything. State determines how a component renders and behaves.
+
+State is initialized by defining `state` at the top of a class definition and then it is automatically included in the construction of the component. Once the data is returned from the AnimalManager, we invoke a React method `setState()` which allows us to update/hold the values and when state is updated, React automatically invokes the render method, again.
+
+Create the AnimalList file.
 
 ```sh
-touch src/components/animal/AnimalList
+touch src/components/animal/AnimalList.js
 ```
 
-The following code snippets should look familier.
+The following code snippets should look familiar.
 Get all of the animals from the API:
 
 ```js
-    AnimalManager.getAll(animalResults =>{
+    AnimalManager.getAll(animalResults => {
         console.log("animals", animalResults);
     })
 ```
 
-Render each one with an **`<AnimalCard>`** component.
+Render each animal with an **`<AnimalCard>`** component.
 
 ```js
     allAnimals.map(animal => <AnimalCard />)
@@ -102,7 +111,7 @@ For each animal in allAnimals, return an **`<AnimalCard>`** component.
 
 Let's build the **`<AnimalList >`** component.
 
-> AnimalList.js
+> src/components/animal/AnimalList.js
 
 ```js
     import React, { Component } from 'react'
@@ -143,7 +152,9 @@ export default AnimalList
 
 ```
 
-Modify `ApplicationViews.js` to load the **`<AnimalList />`** instead of **`<AnimalCard />`**
+Modify `ApplicationViews.js` route for animals to load the **`<AnimalList />`** instead of **`<AnimalCard />`**.
+
+Also, update the import statement. You will need the `AnimalList` instead of the `AnimalCard`.
 
 
 Run the code. We have 3 cards displaying (and an error message. We will fix the error and display the correct data in the next chapter.). Take a look at the console. This is the order of the code running:
@@ -154,7 +165,7 @@ AnimalList: ComponentDidMount
 AnimalList: Render
 ```
 
-In React, retrieving state from a remote API works in, what seems like, a counterintuitive way. React must first render the component to the DOM with any existing data (held in state), then you will request the data, setState, and then the component will invoke render again.
+In React, retrieving state from a remote API works in, what seems like, a counterintuitive way. React must first render the component to the DOM without any existing data (held in state), then you request the data, `setState()`, and then the component will invoke render again.
 
 One of the lifecycle methods available to every React component is [componentDidMount](https://reactjs.org/docs/react-component.html#the-component-lifecycle). Straight from their docs (emphasis mine):
 

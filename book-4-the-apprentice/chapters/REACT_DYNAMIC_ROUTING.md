@@ -63,6 +63,9 @@ class AnimalDetail extends Component {
     );
   }
 }
+
+export default AnimalDetail;
+
 ```
 
 

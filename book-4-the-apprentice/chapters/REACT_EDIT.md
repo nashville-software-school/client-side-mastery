@@ -11,13 +11,13 @@ This component component will populate the input fields with the current values 
 
 Here is the flow of the AnimalEditForm component:
 1. Component loads - Save button should be disabled since the data is not available yet..
-2. `componentDidMount()` calls API to get the animal based on the animalId in the URL.
-3. Data loads and `setState()` is invoked with new data (also set loadingStatus to false)
-4. `render()` is invoked, displaying animal details and ready for edits.
-5. Make changes and select `save`
-6. In state, set `loadingStatus` to true - this ensures the user cannot repeatedly click button while API is being updated.
-7. Invoke `AnimalManger.put` to change the API data.
-8. Once the API has updated, change the view to display all the animals.
+1. `componentDidMount()` calls API to get the animal based on the animalId in the URL.
+1. Data loads and `setState()` is invoked with new data (also set loadingStatus to false)
+1. `render()` is invoked, displaying animal details and ready for edits.
+1. Make changes. As changes are made, state is updated. Select `save`.
+1. The `updateExistingAnimal` method will `setState` `loadingStatus` to true - this ensures the user cannot repeatedly click button while API is being updated.
+1. Invoke `AnimalManger.put` to change the API data.
+1. Once the API has updated, change the view to display all the animals.
 
 
 > components/animal/AnimalEditForm.js
@@ -27,7 +27,7 @@ import React, { Component } from "react"
 import AnimalManager from "../../modules/AnimalManager"
 import "./AnimalForm.css"
 
-export default class AnimalEditForm extends Component {
+class AnimalEditForm extends Component {
     //set the intial state
     state = {
       animalName: "",
@@ -104,6 +104,8 @@ export default class AnimalEditForm extends Component {
       );
     }
 }
+
+export default AnimalEditForm
 ```
 
 ## Route for Showing Animal Edit Form
@@ -164,7 +166,7 @@ Add `{...this.props}` to the AnimalCard.
 />
 ```
 
-Test again. You should be able to navigate to the animal edit view.
+Test again. You should be able to navigate to the animal edit view. **(It won't fully work yet.)**
 
 
 ## Update method in AnimalManager

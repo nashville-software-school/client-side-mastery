@@ -10,7 +10,7 @@ Since **`ApplicationViews`** contains our routes and this component is **NOT** i
 Import into **`ApplicationViews`**.
 
 ```js
-import { withRouter } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 ```
 
 Refactor the export of **`ApplicationViews`** to use `withRouter`
@@ -27,7 +27,7 @@ In order for **`<AnimalDetail>`** to have access to the router history, we need 
     return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props}/>
 }} />
 ```
-
+With the spread operator all of the properties (props) are copied onto the component's props.
 
 ## Dynamically Changing the User's View
 
@@ -48,14 +48,17 @@ You are going to invoke `push()` after an animal has been deleted and then redir
 Consider the flow of code for the **`<AnimalDetails>`** component
 
 1. Component loads
-2. Render invoked displaying empty values for name and breed.
-3. ComponentDidMount invoked, getting data for one animal.
-4. Data for one animal loaded, setState is invoked with the details.
-5. Render invoked again and displays the details.
+1. Render invoked displaying empty values for name and breed.
+1. ComponentDidMount invoked, getting data for one animal.
+1. Data for one animal loaded, setState is invoked with the details.
+1. Render invoked again and displays the details.
 
 When there are empty values, what happens if the user clicks on discharge? Best practice would be to disable functionality until the data has loaded. We can do that by setting a value in state `loadingStatus: false` and then use the value to turn things on or off. We can also use this during the delete process.
 
 Refactor the **`<AnimalDetail>`** to include `loadingStatus`. Notice that our button is disabled based on the state of `loadingStatus`.
+
+> AnimalDetail.js
+
 
 ```js
 import React, { Component } from 'react';
@@ -106,13 +109,13 @@ export default AnimalDetail;
 ## Add Delete Functionality
 Consider the flow of code for delete.
 1. User clicks on `Discharge`
-2. We don't want the user to be able to click hundreds of times on the button, so we can `setState( {loadingStatus: true} )` which disables the button.
-3. Perform the DELETE operation to change your API data. Once complete,
-4. switch the view from AnimalDetail 👉🏼 AnimalList.
-5. AnimalList: `componentDidMount()` will get all animals data.
-6. AnimalList: `render()`
+1. We don't want the user to be able to click hundreds of times on the button, so we can `setState( {loadingStatus: true} )` which disables the button.
+1. Perform the DELETE operation to change your API data. Once complete,
+1. switch the view from AnimalDetail 👉🏼 AnimalList.
+1. AnimalList: `componentDidMount()` will get all animals data.
+1. AnimalList: `render()`
 
-Add the delete function to **`AnimalDetail`** component.
+Add the handleDelete function to **`AnimalDetail`** component.
 
 ```js
 handleDelete = () => {
@@ -126,3 +129,5 @@ handleDelete = () => {
 
 ## Practice: Close a location
 Refactor the **`<LocationDetail>`** component to allow closing(deleting). You will need to incorporate a `loadingStatus`. Once a location has been closed, automatically redirect the user back to the location list.
+
+

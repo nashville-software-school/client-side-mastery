@@ -1,6 +1,6 @@
-# React
+# Getting Started with React
 
-React is a library that was open sourced by the development team at Facebook with the sole purpose of managing how data is displayed to the user. It doesn't care about the database, it doesn't care how data is retrieved and doesn't care about how complex the rest of the application is.
+React is a library that was open sourced by the development team at Facebook with the sole purpose of managing how data is displayed to the user. It doesn't care about the database, it doesn't care how data is retrieved, and it doesn't care about how complex the rest of the application is.
 
 You've already learned the vast majority of what React does for you when building the UI for your application.
 
@@ -23,9 +23,11 @@ Your instructor will walk through this code with you as you build up your initia
 
 ### Single Component
 
-Here's is a simple example of a React component.
+Here's is a simple example of a React component. Please read through the following code snippets and ask questions prior to writing any code.
 
-```js
+> src/components/Kennel.js
+
+```jsx
 
 import React, { Component } from 'react'
 import './Kennel.css'
@@ -48,15 +50,15 @@ class Kennel extends Component {
 
 export default Kennel
 ```
-Looks a bit familiar, right? We're making a subclass of an existing `Component` base class. It has a single method, `render`, that returns an HTML representation of some (hard-coded) data. You've done all of that before.
 
-Sort of.
+Some of this looks familier, sort of. This is simply another way of building a JavaScript object (Kennel) that has a single property -- a method called render -- that returns an HTML representation of some (hard-coded) data. You've done all of that before.
+
 
 That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code, so we can better visualize what the eventual rendered HTML structure will look like.
 
 Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a factory function. It's just a function that returns an object.
 
-To display our `Kennel` component, we need to modify the `index.js file`. This file, `index.js`, is the first javascript file that runs in our app.
+To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
 
 ```js
 import React from 'react';
@@ -74,7 +76,9 @@ After the company information, we want to list all of the animals. I **could** h
 
 Therefore, I'm going to create another component for displaying an animal. Consider how we have structured our previous projects and make a new file specific to the animal display. Copy pasta this code into a new file called `AnimalCard.js`.
 
-```js
+> src/components/animal/AnimalCard.js
+
+```jsx
 import React, { Component } from 'react';
 
 class AnimalCard extends Component {
@@ -85,7 +89,7 @@ class AnimalCard extends Component {
           <picture>
             <img src={require('./dog.svg')} alt="My Dog" />
           </picture>
-          <h3>Name: <span style={{color: 'darkslategrey'}}>Doodles</span></h3>
+          <h3>Name: <span className="card-petname">Doodles</span></h3>
           <p>Breed: Poodle</p>
         </div>
       </div>
@@ -96,40 +100,50 @@ class AnimalCard extends Component {
 export default AnimalCard;
 ```
 
-> components/animal/dog.svg
+> src/components/animal/dog.svg
 
 Right click and save this image to the above location.
 
 ![Dog icon](./images/dog.svg)
 
 
-This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML elements `<AnimalCard />`. JSX interprets this as a component and will render the class you defined.
+This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<AnimalCard />`. JSX interprets this as a component and will render the class you defined.
 
-Update your **`Kennel`** component. When the `Kennel` component is rendered it will render the `AnimalCard` component. We can say that the Kennel component is a parent of the AnimalCard component.
+Update your **`Kennel`** component. Now when the **`Kennel`** component is rendered it will render the **`AnimalCard`** component. We can say that the Kennel component is a parent of the AnimalCard component. (Starting Kennel.css is below.)
 
-```js
+```jsx
 import React, { Component } from 'react'
-import AnimalCard from './AnimalCard'
+import AnimalCard from './animal/AnimalCard'
 import './Kennel.css'
 
-
 class Kennel extends Component {
-    render() {
-        return (
-            <div>
-                <h3>Student Kennels</h3>
-                <h4>Nashville North Location</h4>
-                <h5>500 Puppy Way</h5>
-                <AnimalCard />
-                <AnimalCard />
-                <AnimalCard />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <div>
+          <h2>Student Kennels<br />
+            <small>Loving care when you're not there.</small>
+          </h2>
+          <address>
+            Visit Us at the Nashville North Location
+            <br />500 Puppy Way
+          </address>
+        </div>
+        <div>
+          <AnimalCard />
+          <AnimalCard />
+          <AnimalCard />
+        </div>
+      </div>
+    );
+  }
 }
+
+export default Kennel;
+
 ```
 
-> **Note:** The render method for a React component can only return a single component that encompasses child elements.
+> **Note:** The render method for a React component can only return a single element that encompasses child elements.
 
 ### Component Files
 
@@ -137,8 +151,8 @@ Before we grow this application any further, let's create a meaningful directory
 
 1. Inside your `src` directory, create a `components` sub-directory.
 2. Put `Kennel.js` into the `components` directory.
-3. Within components, create an `animal` directory and place the AnimalCard.js inside.
-4. Include `Kennel.css` in the components directory.
+3. Within components, create an `animal` directory and place the AnimalCard.js inside along with `dog.svg`.
+4. Include `Kennel.css` in the components directory (see below for a starting css).
 5. Check your imports for correct paths.
 
 ```
@@ -149,7 +163,7 @@ Before we grow this application any further, let's create a meaningful directory
             - dog.svg
         - Kennel.js
         - Kennel.css
-index.js
+  index.js
 
 ```
 

@@ -12,22 +12,22 @@ delete(id) {
   return fetch(`http://localhost:5002/animals/${id}`, {
       method: "DELETE"
   })
-  .then(e => e.json())
+  .then(result => result.json())
 }
 ```
 We can now invoke `delete()` from anywhere.
 
-Before we include the delete functionality, consider following:
+Before we include the delete functionality in a component, consider following:
 * The discharge button will exist on the **`<AnimalCard />`** component.
 * When an animal is removed, our animals array within the parent's state will need to reflect the updated list of animals.
 
 ### Flow of events
 1. Click the discharge button
-2. Invoke a `handleDelete` function which will invoke the AnimalManager delete function, be sure to pass the id.
-3. Once an item is deleted, we should invoke the AnimalManager `getAll` function.
-4. With new data, invoke `setState` and set animals equal to the new data.
-5. Render is automatically called using the new state of animals.
-6. **`<AnimalList>`** render maps over the data and displays cards for each animal.
+1. Invoke a `handleDelete` function which will invoke the AnimalManager delete function, be sure to pass the id.
+1. Once an item is deleted, we should invoke the AnimalManager `getAll()` method.
+1. With new data, invoke `setState()` and set **animals** equal to the new data.
+1. Render is automatically called using the new state of animals.
+1. **`<AnimalList>`** render maps over the data and displays cards for each animal.
 
 **The component where state lives is the only place state can change. Children components cannot change state.**
 
@@ -60,7 +60,7 @@ render(){
   console.log("AnimalList: Render");
 
   return(
-    <div className="cards">
+    <div className="container-cards">
       {this.state.animals.map(animal =>
         <AnimalCard
           key={animal.id}
@@ -88,7 +88,8 @@ Add the button to the **`<AnimalCard />`** HTML for the veterinarian to select a
 > AnimalCard.js
 
 ```jsx
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import './Animal.css'
 
 class AnimalCard extends Component {
   render() {
@@ -124,20 +125,3 @@ Add the same functionality to the **`OwnerList`** for when they decide they no l
 Add the same functionality to the **`LocationList`** for when a location closes down.
 
 
-## Advanced Challenge: Search your Data
-
-> Remember that challenges, especially advanced ones, are completely optional and should not be attempted until you have completed the practice exercises and understand the concepts used in them.
-
-Not for the weak of heart, is this challenge. Put an input box in your navigation bar. When your customer types in any characters, then you must find any objects in the animals, locations, or employees collections that have a name which contains that string.
-
-When the customer presses the ENTER key, all three collections in your API need to be queried to find any item that matches, and then a new component should be shown whose job it is to show the items that were found, if any.
-
-![search results](./images/qNAJIxX9NX.gif)
-
-### Hints
-
-1. Create a **`SearchResults`** component.
-2. Add a `path="/search"` route in your app that renders **`SearchResults`**.
-3. Use the [`_like` operator](https://github.com/typicode/json-server#operators) available with json-server.
-4. You'll need to use chained `fetch` calls to each of the collections in your API and build up an object of found items.
-5. After all calls are successful, you'll need to use the `this.props.history.push()` method to show a **`SearchResults`** component.

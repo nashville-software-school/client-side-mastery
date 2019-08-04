@@ -8,20 +8,32 @@ In this chapter, you are going to learn how to use use a form to express the sta
 
 ## Route for Showing Animal Form
 
-Below is a new route that renders a form for boarding a new animal. You need to update the route for `/animals` to include the `props` argument and pass it to the child component. This sets up the ability to use the helpful `history.push()` mechanism in the components themselves to change the URL in the browser.
+Below is a new route that renders a form for boarding a new animal. You need to update the route for `/animals` to include the `...props` argument and pass it to the child component. This sets up the ability to use the helpful `history.push()` mechanism in the components themselves to change the URL in the browser.
 
-First, update your routes in ApplicationViews with a new route and add `{...props}` to the **AnimalList** route. The spread operator on the props gives access to the router properties, especially `history.push`
+First, update your routes in ApplicationViews with a new route for the form and add `{...props}` to the route `/animals` (**AnimalList**). The spread operator on the props gives access to the router properties, especially `history.push`
 
 ```jsx
 // Our shiny new route.
 <Route path="/animals/new" render={(props) => {
-    return <AnimalForm {...props} />
+  return <AnimalForm {...props} />
 }} />
 ```
+
+```jsx
+//updated route: `/animals`
+<Route exact path="/animals" render={(props) => {
+  return <AnimalList {...props} />
+}} />
+```
+
 
 ## Add a button for Admitting a New Animal
 
 Update **`<AnimalList>`** with a button that uses the `history.push()` to change the URL of the browser. This will only work if you updated your routes correctly and have access to the router `props` object.
+
+**NOTE** You will need to wrap the return in a React.Fragment. Remember, only one element can be returned.
+
+> AnimalList.js
 
 
 ```js
@@ -236,10 +248,4 @@ Once you've got all these pieces in place, click on the _Admit Animal_ button, f
 ## Practice: Adding Employees, Owners, and Locations
 
 1. Create forms for employees, owners, and locations.
-2. Update **`EmployeeManager`**, **`OwnerManager`**, and **LocationManager** with methods to POST new objects to the API.
-
-
-## Challenge: Add employee selection dropdown.
-Each animal in the kennel should have an employee responsible for it's care. Add a dropdown selection to the **`<AnimalForm>`** and update the database with an employeeId for each pet.
-
-Each employee should work at a specific location. Add a dropdown selection to the **`<EmployeeForm>`** and update the database with a locationId for each employee.
+1. Update **`EmployeeManager`**, **`OwnerManager`**, and **LocationManager** with methods to POST new objects to the API.

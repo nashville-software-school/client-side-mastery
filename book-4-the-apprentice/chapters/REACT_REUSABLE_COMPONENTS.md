@@ -27,8 +27,8 @@ First, you will need to update your database to include an employees collection 
     {
       "name": "Jack",
       "breed": "Big cat",
-      "id": 4
-      "employeeId": 1,
+      "id": 4,
+      "employeeId": 1
     },
     {
       "name": "Angus",
@@ -54,7 +54,7 @@ First, you will need to update your database to include an employees collection 
 }
 ```
 
-**From the practice exercises, you should already have an `<EmployeeList>` and `<EmployeeCard>` components.**
+**From the practice exercises, you should already have an `<EmployeeList>` and `<EmployeeCard>` components. Those need to be in place before working on this chapter.**
 
 Next, we will include an API call that will get all employees with animals. We can use json-server relationships to include related child information with one call. This is done with `embed`.
 
@@ -64,8 +64,12 @@ Next, we will include an API call that will get all employees with animals. We c
 const remoteURL = "http://localhost:5002";
 
 export default {
-    getWithAnimals() {
-        return fetch(`${remoteURL}/employees/?_embed=animals`).then(e => e.json())
+  getAll() {
+        return fetch(`${remoteURL}/employees/`).then(result => result.json())
+    },
+   getWithAnimals(id) {
+        return fetch(`${remoteURL}/employees/${id}?_embed=animals`)
+                .then(result => result.json())
     }
 }
 
@@ -90,6 +94,7 @@ We also need to add a route to **`<ApplicationViews>`** to handle displaying det
 }} />
 
 ```
+Be sure to import **`EmployeesWithAnimals`** into `ApplicationViews`.
 
 ## New Component - EmployeeWithAnimals
 This component will display a single employee and include an **`<AnimalCard>`** for each animal. We can re-use the previously created AnimalCard component. This component will accept `props` and `return` the employee name and then `map` over the animals returning **`<AnimalCard>`** for only the pets the employee is responsible for.
@@ -146,31 +151,28 @@ If we edit an animal, the employeeId is missing. We need to add it to the **`<An
 ## Refactor AnimalEditForm
 Add the **employeeId** to:
 * `state`
-* `componentDidMount()`
-* `updateExistingAnimal()`
+* `componentDidMount()` - where does the employeeId come from?
+* `updateExistingAnimal()` - where does the employeeId come from?
 
 Once complete, you should be able to edit an animal.
 
-
-If we discharge an animal, we will recieve an error `this.props.deleteAnimal is not a function`.
-
-There are a few of ways to handle this situation.
-1. Use a conditional and only render the button if the prop `deleteAnimal` exist.
-2. Include the same `deleteAnimal` function within **`<EmployeeWithAnimals>`**
-3. Extract the `deleteAnimal` function and place inside a module that can be imported whenever needed.
-4. **Lift** the `deleteAnimal` function to a common parent component thus allowing both components access.
-
-## Practice - Handle the delete
-Choose one of the options above and handle the delete button when the **`<AnimalCard>`** is viewed within the **`<EmployeeWithAnimals>`** component.
-
-
 ## Refactor the NavBar
-
 Be sure to add the link to employees in the **`<NavBar>`** component
 
 ```js
 <li><Link className="nav-link" to="/employees">Employees</Link></li>
 ```
+
+If we discharge an animal, we will recieve an error `this.props.deleteAnimal is not a function`.
+
+There are a few of ways to handle this situation.
+1. Use a conditional and only render the button if the prop `deleteAnimal` exist.
+2. Include the same `handleDelete` function within **`<EmployeeWithAnimals>`**
+3. Extract the `handleDelete` function and place inside a module that can be imported whenever needed.
+4. **Lift** the `handleDelete` function to a common parent component thus allowing both components access.
+
+## Practice - Handle the delete
+Choose one of the options above and handle the delete button when the **`<AnimalCard>`** is viewed within the **`<EmployeeWithAnimals>`** component.
 
 
 ## Practice: Employees per Location

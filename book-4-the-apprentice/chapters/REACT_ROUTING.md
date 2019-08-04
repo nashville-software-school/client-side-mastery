@@ -6,7 +6,7 @@ In React, you will use something called a Router to handle the rendering of diff
 
 ## Setup
 
-Make sure you are in your project's root directory. First, we need to install react-router-dom. Then we will create additional files to handle the routing and create a navbar.
+Make sure you are in your project's root directory. First, we need to install react-router-dom. Then we will create an additional file to handle the routing and create a navbar.
 
 ```sh
 npm install react-router-dom
@@ -20,17 +20,39 @@ touch nav/NavBar.css
 ```
 
 ## Making Your Components
-
-1. Create a **`Home`** component with a default view - `Hello World`.
+Here's what we are about to do:
+1. Create the **`Home`** component with a default view - `Hello World`.
 1. Create the **`NavBar`** component for the constant navigation elements
 1. Create the **`ApplicationViews`** component. This will define all of the URLs your application will support and which views will be displayed for each one.
 1. Change the **`Kennel`** component to display two child components.
-1. Update the **`index.js`** to utilize `react-router-dom`
+1. Update the **`index.js`** to utilize `react-router-dom`.
 
+### Home Component
 
-### NavBar component
+> components/home/Home.js
 
-Use this code for your navigation bar.
+``` js
+
+import React, { Component } from 'react'
+
+class Home extends Component {
+  render() {
+    return (
+      <address>
+        Visit Us at the Nashville North Location
+        <br />500 Puppy Way
+      </address>
+    )
+  }
+}
+
+export default Home
+
+```
+
+### NavBar Component
+
+Use this code for your navigation bar and the following CSS.
 
 > components/nav/NavBar.js
 
@@ -65,7 +87,7 @@ class NavBar extends Component {
 export default NavBar;
 ```
 
-The NavBar css
+NavBar CSS
 > components/nav/Navbar.css
 
 ```css
@@ -109,20 +131,20 @@ nav .container a:hover {
 }
 ```
 
-Notice the use of the `<Link/>` component that you get from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
+Notice the use of the `<Link/>` component. This comes from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
 
 ### **ApplicationViews** - includes the Kennel application routes
 
-Now it's time to define the Routes for our application. In **`NavBar`**, you defined two link components that will navigate to the routes of...
+Now it's time to define the Routes for our application. In **`NavBar`**, you defined two **`<Link />`** components that will navigate to the routes of...
 
 * `/`
 * `/animals`
 
 In the **`ApplicationViews`** component, you will define how your application will respond when the URL matches each of those patterns. When a user clicks on one of the hyperlinks in the navigation bar, this code dictates which component should be rendered.
 
-In the example code below, you will notice the use of `<React.Fragment />`. That is simply a React wrapper around your old friend `document.createDocumentFragment()`. Using a fragment prevents unnecessary `<div>`, `<article>`, or `<section>` tags from being created.
+In the example code below, you will notice the use of `<React.Fragment />`. That is simply a React wrapper around your old friend `document.createDocumentFragment()`. Using a fragment prevents unnecessary `<div>`, `<article>`, or `<section>` tags from being created. This can be written with a shortcut `<>` and then closed `</>.
 
-> ApplicationViews.js
+> components/ApplicationViews.js
 
 ```js
 import { Route } from 'react-router-dom'
@@ -154,7 +176,7 @@ class ApplicationViews extends Component {
 export default ApplicationViews
 ```
 
-`exact` is needed on the first route otherwise, it will also match the other two routes and the **`LocationList`** will be the only component rendered, no matter what the URL is.
+`exact` is needed on the first route, otherwise it will also match the other two routes, and the **`LocationList`** will be the only component rendered, no matter what the URL is.
 
 The `<Link/>` and the `<Route/>` JSX elements are complementary to each other. If you add a new **`Link`** element in your application with a new URL, then you must create a matching **`Route`** element.
 
@@ -177,10 +199,10 @@ import "./Kennel.css"
 class Kennel extends Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         <NavBar />
         <ApplicationViews />
-      </React.Fragment>
+      </>
     )
   }
 }
@@ -188,7 +210,7 @@ class Kennel extends Component {
 export default Kennel
 ```
 
-Now update your `index.js` and with a root component of `<Router />` which gets imported from the React Router package. Within **`<Router>`**, place the `<Kennel />` child component. This tells React *"I will be placing Routes in my Kennel component."*
+Now update your `index.js` by adding a root component of `<Router />` which gets imported from the React Router package. Within **`<Router>`**, place the `<Kennel />` child component. This tells React *"I will be placing Routes in my Kennel component."*
 
 > index.js
 
@@ -197,8 +219,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from "react-router-dom"
 import Kennel from './components/Kennel'
-
-import './index.css'
 
 ReactDOM.render(
   <Router>
@@ -223,5 +243,5 @@ Once all of this is in place, you will have the base of a single page applicatio
 ## Practice: Kennel Routes
 
 1. Create links in your navigation bar for `/locations`, `/employees`, and `/owners` paths.
-2. Have each route render the respective component.
+1. Have each route render the respective component.
 
