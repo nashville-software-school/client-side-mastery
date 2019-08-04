@@ -4,6 +4,42 @@
 
 Modern web application are becoming more and more event based rather than procedural. When a user performs any kind of gesture (click, key press, mouse over, etc.), the JavaScript layer will listen for that event and then perform some appropriate logic.
 
+##### events.css
+
+```css
+.blue {
+  color: blue;
+}
+
+.large {
+  font-size: 2em;
+}
+
+.bordered {
+  border: 2px dotted purple;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+#guinea-pig {
+  margin: 50px 0 20px 0;
+  font-family: Helvetica;
+  padding: 5px;
+}
+
+.card {
+  border: 1px dashed darkgoldenrod;
+  padding: 5px;
+  margin: 5px;
+}
+```
+
 ##### index.html
 
 ```html

@@ -2,13 +2,24 @@
 
 ![](./images/github-workflow.png)
 
-## Rule Number 1
+## Step One
 
-Always create a `.gitignore` file before you start any work on any feature.
+Everyone must clone the boilerplate repository that your instruction team provided.
 
-## Rule Number 2
+## Step Two
 
-Always work on a feature branch `git checkout -b newBranchName`
+> **Note:** For all group projects except the first one.
+
+If the repository does not have a `.gitignore` file already in it, one person on your team must create a `.gitignore` file before you start any work on any feature. Once the file is created on the `master` branch, that teammate should add, commit, and push up to Github with `git push origin master`.
+
+
+## Step Three
+
+Once you have a `.gitignore` file on `master` branch, you should start planning your project based on the guidelines from your instruction team. Once everyone has decided on what feature they will start working on, each teammate will create a feature branch with the following command.
+
+```
+git checkout -b properlyNamedFeatureBranch
+```
 
 ## Workflow Overview
 
@@ -62,7 +73,7 @@ After your pull request is approved, you can open it on Github and click the mer
 
 ## A Few Tips
 
-### Merge master into your current branch 
+### Merge master into your current branch
 If you are on a branch and a teammate created something you need, you can pull down master and then merge the master into your branch to get access to that new code.
 
 ```sh
@@ -74,11 +85,11 @@ git checkout NAMEOFYOURBRANCH
 git merge master
 ```
 
-### Tracked files follow you. 
+### Tracked files follow you.
 If you are working on two branches (maybe a style branch and a feature branch), your tracked files will follow you, branch to branch. To avoid that, make sure to add/commit before you check out to a different branch.
 
 ### Fetch vs. Pull
-When a teammate needs you to check their branch, you need to get that branch's changes to your local machine - 
+When a teammate needs you to check their branch, you need to get that branch's changes to your local machine -
 ```sh
 git fetch --all
 git checkout BRANCHNAME

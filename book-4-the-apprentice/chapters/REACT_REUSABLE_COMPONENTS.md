@@ -22,14 +22,14 @@ export default class AnimalCard extends Component {
         return (
             <div key={this.props.animal.id} className="card">
                 <div className="card-body">
-                    <h5 className="card-title">
+                    <div className="card-title">
                         <img src={dog} className="icon--dog" />
-                        {this.props.animal.name}
+                        <h5>{this.props.animal.name}</h5>
                         <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
                         <a href="#"
                             onClick={() => this.props.deleteAnimal(this.props.animal.id)}
                             className="card-link">Discharge</a>
-                    </h5>
+                    </div>
                 </div>
             </div>
         )
@@ -101,13 +101,13 @@ export default class EmployeeList extends Component {
                 this.props.employees.map(employee =>
                     <div key={employee.id} className="card card--employee">
                         <div className="card-body">
-                            <h5 className="card-title">
+                            <div className="card-title">
                                 <img src={person} className="icon--employee" />
-                                {employee.name}
+                                <h5>{employee.name}</h5>
                             <a href="#"
                                 onClick={() => this.props.deleteEmployee(employee.id)}
                                 className="card-link">Delete</a>
-                            </h5>
+                            </div>
 
                             <h6 class="card-subtitle mb-2 text-muted">Caretaker For</h6>
                             <div className="animals--caretaker">

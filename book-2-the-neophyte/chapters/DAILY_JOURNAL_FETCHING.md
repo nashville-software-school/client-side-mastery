@@ -22,7 +22,7 @@ sudo npm install -g json-server
 
 ### Journal Entries as JSON
 
-Create a new directory in your project named `api`, and create a new file in that directory named `entries.json`.
+In the root directory, create a new directory in your project named `api`, and create a new file in that directory named `entries.json`.
 
 ```sh
 mkdir api

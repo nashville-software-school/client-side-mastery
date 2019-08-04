@@ -29,11 +29,11 @@ const isAuthenticated = () =>
     localStorage.getItem("credentials") !== null ||
     sessionStorage.getItem("credentials") !== null
 
-const AuthRoute = ({ path, Destination} ) => {
+const AuthRoute = ({ path, Destination, ...superProps} ) => {
     return (
         <Route exact path={path} render={props => {
             if (isAuthenticated()) {
-                return <Destination {...props} />
+                return <Destination {...props} {...superProps} />
             } else {
                 return <Login />
             }
@@ -60,7 +60,7 @@ export default class ApplicationViews extends Component {
     render() {
         return (
             <React.Fragment>
-                <AuthRoute path="/" Destination={LocationList} />
+                <AuthRoute path="/" Destination={LocationList} locations={this.state.locations} />
                 <AuthRoute path="/animals" Destination={AnimalList} />
                 <AuthRoute path="/employees" Destination={EmployeeList} />
                 <AuthRoute path="/search" Destination={SearchResults} />

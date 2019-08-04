@@ -9,18 +9,18 @@ let lastName = "Haynes";
 
 console.log(`${firstName} ${lastName}`);
 
-let firstName = "Debra";
-let lastName = "Gordon";
+firstName = "Debra";
+lastName = "Gordon";
 
 console.log(`${firstName} ${lastName}`);
 
-let firstName = "Svetlana";
-let lastName = "Irinov";
+firstName = "Svetlana";
+lastName = "Irinov";
 
 console.log(`${firstName} ${lastName}`);
 
-let firstName = "Sequina";
-let lastName = "Rodriguez";
+firstName = "Sequina";
+lastName = "Rodriguez";
 
 console.log(`${firstName} ${lastName}`);
 ```
@@ -61,7 +61,7 @@ A pure function is one that is consistent and has no effect on anything else in 
 
 ```js
 const bugSquasher = function (bug, squasher) {
-    return `The ${bug} was squashed by a ${squasher}`
+    return `The ${bug} was squashed by the ${squasher}`
 }
 ```
 
@@ -320,9 +320,10 @@ function addExcitement (theWordArray) {
 
     for (let i = 0; i < theWordArray.length; i++) {
         /*
-            If the current value of `i` divided by 3 has no
-            remainder, add an exclamation point to the end of
-            the word and then concatenate it to `buildMeUp`.
+            If the current word's place (not index) in the array
+            is evenly divisible by 3, add an exclamation point
+            to the end of the word and then concatenate it to
+            `buildMeUp`.
 
             Otherwise, just concatenate the word itself.
          */

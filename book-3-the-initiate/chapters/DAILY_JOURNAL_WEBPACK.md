@@ -1,49 +1,15 @@
-# Daily Journal with Modules
+# Daily Journal with Webpack
 
 ## Setup
-
-1. Create a `public` directory in the root directory of your Daily Journal application.
-1. Move `index.html` from the `src` directory to the `public` directory.
-1. Move your `src/styles` directory to `public/styles`.
-
-When you're done, the only directories in `src` should be
-1. `src/scripts`
-1. `src/lib`
-
-### Install Packages
-
-Go to the `src/lib` directory and install all the required packages for using Browserify modules.
-
-```sh
-npm i grunt-browserify babelify @babel/preset-env @babel/core -D
-```
-
-Copy the `src/lib/grunt/browserify.js` file you created in the last chapter to your Daily Journal application.
-
-```sh
-cp  ~/workspace/javascript/browserify-boilerplate/src/lib/grunt/browserify.js ./grunt
-```
-
- Update it to output a different compiled file name that is more appropriate for this application.
-
-For example.
-
-```js
-dailyjournal: {
-    src: ["../scripts/main.js"],
-    dest: "../../public/dailyjournal.js"
-}
-```
-
-Update your `src/lib/grunt/aliases.yaml` file to run the task.
-
-```yaml
-  - "browserify:dailyjournal"
-```
+1. Clone down the [Webpack boilerplate](https://github.com/nashville-software-school/webpack-with-json-server-boilerplate) into a separate repo outside your daily journal repository.
+1. In your daily journal repo, checkout a new branch.
+1. Copy all the following files from the boilerplate to your daily journal repo: `package.json`, `.babelrc`, `.eslintrc`, `.eslintignore`, `webpack.config.js` and `.gitignore`.
+1. Change the application name and author in the `package.json`.
+1. Run `npm install`.
 
 ## Instructions
 
-> **Task**: Take existing JavaScript modules, and refactor as Browerify syntax modules with `require` and `modules.exports`.
+> **Task**: Take existing JavaScript modules, and refactor as Webpack modules with `import` and `export`.
 
 Your `index.html` should have several script components at the bottom. Below is an example only, your files names do not need to match this example.
 
@@ -55,11 +21,7 @@ Your `index.html` should have several script components at the bottom. Below is 
 <script src="scripts/journal.js"></script>
 ```
 
-Using Browserify, you need to make each of your files above into modules, and your HTML file should only have one script tag. It's important that you understand that once you switch to Browserify, you HTML file will **only have this one script tag**.
-
-```html
-<script src="bundle.js"></script>
-```
+Using Webpack, you need to make each of your files above into modules. Remember, your HTML file in `src` has no script tag because Webpack will put that in there for you when your HTML file is put in the `dist` directory.
 
 Here's an example of what `main.js` could look like. Again, this is _just an example_. Your code does not need to look like this. You will build your own modules and give them names that make sense to you.
 

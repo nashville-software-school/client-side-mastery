@@ -52,9 +52,9 @@ Add an event listener to the Save button, and start collecting the value of each
 
 ```js
 // Some starter code
-const container = document.querySelect("#addressList")
+const container = document.querySelector("#addressList")
 
-document.querySelector(fillInTheBlank).addEventListener("click", event => {
+document.querySelector("#saveEntry").addEventListener("click", event => {
     /*
         Collect the user put by selecting the input fields, one
         at a time, and accessing the `value` property

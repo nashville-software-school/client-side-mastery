@@ -5,9 +5,9 @@ In this stage of the application, you are going to modularize your JavaScript co
 My modularizing your code, you achieve two main goals.
 
 1. When changes need to be made to your application, it makes it far easier to find the code that needs to change. This benefit comes at the expense of having more files to manage, and open, during development.
-1. It nearly eliminates the possibility of merge conflicts. When working in a team, each developer takes responsbility for making a very specific change. By modularizing your code, the likelihood that two developers will need to be working on the same file, at the same time, is minimized.
+1. It nearly eliminates the possibility of merge conflicts. When working in a team, each developer takes responsibility for making a very specific change. By modularizing your code, the likelihood that two developers will need to be working on the same file, at the same time, is minimized.
 
-## Single Responsbility Modules
+## Single Responsibility Modules
 
 Create three new files in your `src/scripts` directory.
 
@@ -68,7 +68,7 @@ objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
 
 ## Challenge
 
-Change the code in both `src/scripts/entriesDOM.js` and `src/scripts/entryComponent.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above. Use `Object.create`.
+Change the code in both `src/scripts/entriesDOM.js` and `src/scripts/entryComponent.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above. Use [`Object.create`](https://github.com/nashville-software-school/client-side-mastery/blob/da278a4d16a04fba474e39c77bf0c05503521690/book-3-the-initiate/chapters/JS_OBJECT_CREATE.md).
 
 When you are done, there should be three objects defined in your application.
 

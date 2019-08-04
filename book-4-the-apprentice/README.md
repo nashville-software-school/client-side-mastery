@@ -20,13 +20,14 @@ In this book, you will be learning the concepts and tools of React. React is a c
 
 * Chapter 12 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
 * Chapter 13 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
-* Chapter 14 (_optional_) - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
 * Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 > ## **Begin Client Side Capstone Development**
 
 > ### Soft Demo Day Before Break
 
+* Supplement - [Deploy React and API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
+* Supplement - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
 * Supplement - [Higher Order Components in React](./chapters/REACT_HOC.md)
 * Supplement - [React Context API](./chapters/REACT_CONTEXT_API.md)
 * Supplement - [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
