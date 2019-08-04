@@ -118,5 +118,6 @@ Use `console.info()` to output the following criteria to the browser console.
 1. How many of each grade? Accomplish this with a `for..in` loop.
 1. What is the lowest score? Sort the array and find out.
 1. What is the highest score?
-1. Which grade had the most students achieve it? Use an `if` statment, and a `currentGradeCount` variable, in your `for..in` loop to see if the current grade's value is higher than the last one.
+1. Which grade had the most students achieve it?
+    > Hint: Use an `if` statment, and a `currentGradeCount` variable, in your `for..in` loop to see if the current grade's value is higher than the last one. The `currentGradeCount` variable should be defined **before** the `for` loop.
 1. Which grade had the fewest students achieve it?

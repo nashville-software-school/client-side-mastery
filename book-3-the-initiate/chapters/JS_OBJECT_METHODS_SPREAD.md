@@ -138,7 +138,7 @@ const firstCar = allCars[0]
 
 // Now iterate its keys
 outputElement.innerHTML += "<h1>Properties</h1>"
-for (const key of Object.keys(allCars[0])) {
+for (const key of Object.keys(firstCar)) {
   outputElement.innerHTML += `<div>${key}</div>`
 }
 
