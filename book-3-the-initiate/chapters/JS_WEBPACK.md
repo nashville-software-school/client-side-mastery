@@ -1,4 +1,4 @@
-# A Static Module Bundler for your Application
+# Webpack: A Powerful Automation Tool for your Application
 
 ## Introduction to Webpack
 
@@ -6,7 +6,15 @@ Webpack is a task runner and a module bundler. It originally started as a module
 
 Visit the [Webpack documentation](https://webpack.js.org/concepts/) if you want to explore more.
 
-## Configuring Webpack in your Projects
+## Quick Start
+
+1. Visit the [Webpack Boilerplate repository](https://github.com/nashville-software-school/webpack-with-json-server-boilerplate) that we have built for you.
+1. Follow the instructions in the README. Be sure you **fork** the repository into your own account first.
+1. Once your instruction team is done live-coding and answering questions, jump down to the bottom of the chapter and work on the exercises.
+
+## Manually Configuring Webpack in your Projects
+
+> **TIP:** Please use the boilerplate repo noted in the Quick Start above. What follows is an explanation of how it all works, and your instruction team will explain it. Do not try to set up manually.
 
 Create your application with the directory structure like below:
 
@@ -239,7 +247,7 @@ In `main.js`, import the **ContactList** component and the **ContactForm** compo
 
 The user should see the contact form at the top of the view, and the list of contacts underneath it.
 
-> **Bonus:** Are there any other modules that could be made? Do any modules have more than one possible responsibility? Perhaps something that is a general utility function.
+> **Food for thought:** Are there any other modules that could be made? Do any modules have more than one possible responsibility? Perhaps something that is a general utility function.
 
 ## Practice: Product Ordering
 
