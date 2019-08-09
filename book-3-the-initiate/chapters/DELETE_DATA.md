@@ -26,6 +26,7 @@ cd ..
 mkdir src
 cd src
 touch index.html
+mkdir scripts
 cd scripts
 touch main.js dom.js api.js factory.js events.js
 cd ..
