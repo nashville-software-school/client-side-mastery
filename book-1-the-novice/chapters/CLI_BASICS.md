@@ -59,8 +59,9 @@ cd MyAwesomeApp
 Let's create a bash function to accelerate that workflow. Open `.bashrc` and enter in the following function.
 
 ```sh
-mg() {
- [ -n "$1" ] && mkdir -p "$@" && cd $_;
+mg(){
+    mkdir -p "$1"
+    cd "$1"
 }
 ```
 
@@ -123,7 +124,7 @@ Shells offer features geared specifically for interactive use rather than to aug
 
 ## Functions
 
-You're going to make your own help manual for the terminal. Open your `~/.zshrc` file in your code editor and add the following lines to it.
+You're going to make your own help manual for the terminal. Open your `~/.bashrc` file in your code editor and add the following lines to it.
 
 ```sh
 help () {
@@ -138,7 +139,7 @@ help () {
 
 Source your initialization file.
 
-`source ~/.zshrc`
+`source ~/.bashrc`
 
 Then you can use your help function.
 
@@ -146,13 +147,13 @@ Then you can use your help function.
 
 ## Tree Command
 
-The `tree` command lists all the files and directories, recursively. It can be useful to see the file structure of your applications. 
+The `tree` command lists all the files and directories, recursively. It can be useful to see the file structure of your applications.
 
 For OS X, you can install the tree command by typing this command in your terminal: `brew install tree`.
 
 For PC, you will add an alias for the tree command to your `.bashrc`:
 
-1. Type in `code ~/.bashrc` to open your bash file. 
+1. Type in `code ~/.bashrc` to open your bash file.
 1. Add in `alias tree="cmd //c tree/f"` to the file.
 1. Make sure you save the file.
 1. Reload `.bashrc` by running the following command: `source ~/.bashrc`.
