@@ -6,6 +6,8 @@ Webpack is a task runner and a module bundler. It originally started as a module
 
 Visit the [Webpack documentation](https://webpack.js.org/concepts/) if you want to explore more.
 
+![visualization of how javascript modules depdendencies are resolved and bundled](./images/module-bundling.png)
+
 ## Quick Start
 
 1. Visit the [Webpack Boilerplate repository](https://github.com/nashville-software-school/webpack-with-json-server-boilerplate) that we have built for you.
