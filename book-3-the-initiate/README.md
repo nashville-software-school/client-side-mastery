@@ -22,7 +22,7 @@ In this book, you will learn tools, libraries and workflows that modern client s
 
 > ## Sprint 3 - Nutshell
 
-> ### LinkedIn Projects update with Browserify Nutshell
+> ### LinkedIn Projects update with Nutshell
 
 ## Supplementary Content
 

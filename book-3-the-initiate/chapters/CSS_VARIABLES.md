@@ -113,7 +113,7 @@ Now that the color palette has been defined, you can use those variable names in
 
 ## Modules
 
-Imagine Browserify but for CSS. Each of your DOM components can have their own CSS file that get imported into a main one. The styles for buttons was defined above in `buttons.css`. Next, I'll define all the styles for the cards in my system.
+Imagine JavaScript modules but for CSS. Each of your DOM components can have their own CSS file that get imported into a main one. The styles for buttons was defined above in `buttons.css`. Next, I'll define all the styles for the cards in my system.
 
 > cards.css
 

@@ -1,6 +1,6 @@
 # Using Modules in React
 
-Not everything in your React application has to be a component. You can create modules just like you did in Browserify that provide utilities for your application to use.
+Not everything in your React application has to be a component. You can create JavaScript modules just like you have been that provide utilities for your application to use.
 
 ## Setup
 
