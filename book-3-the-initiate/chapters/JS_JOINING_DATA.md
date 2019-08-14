@@ -24,27 +24,27 @@ When you normalize your database, you end up with multiple collections of data. 
 const Database = {
     "products": [
         {
-            "productId": 1,
+            "id": 1,
             "name": "Lollipop",
             "type": "Candy"
         },
         {
-            "productId": 2,
+            "id": 2,
             "name": "iPad",
             "type": "Electronics"
         },
         {
-            "productId": 3,
+            "id": 3,
             "name": "Snickers",
             "type": "Candy"
         },
         {
-            "productId": 4,
+            "id": 4,
             "name": "Baby Ruth",
             "type": "Candy"
         },
         {
-            "productId": 5,
+            "id": 5,
             "name": "Xbox One",
             "type": "Electronics"
         }
@@ -70,43 +70,45 @@ The `productType` property on each `product` object is called a foreign key. It 
 
 ![](./images/one-to-many.png)
 
-```js
-const Database = {
+#### database.json
+
+```json
+{
     "productTypes": [
         {
-            "productTypeId": 1,
+            "id": 1,
             "name": "Candy"
         },
         {
-            "productTypeId": 2,
+            "id": 2,
             "name": "Electronics"
         }
     ],
     "products": [
         {
-            "productId": 1, // Primary key for lollipop
+            "id": 1,
             "name": "Lollipop",
-            "productType": 1 // Foreign key to Candy
+            "productTypeId": 1
         },
         {
-            "productId": 2,  // Primary key for iPad
+            "id": 2,
             "name": "iPad",
-            "productType": 2  // Foreign key to Electronics
+            "productTypeId": 2
         },
         {
-            "productId": 3,
+            "id": 3,
             "name": "Snickers",
-            "productType": 1
+            "productTypeId": 1
         },
         {
-            "productId": 4,
+            "id": 4,
             "name": "Baby Ruth",
-            "productType": 1
+            "productTypeId": 1
         },
         {
-            "productId": 5,
+            "id": 5,
             "name": "Xbox One",
-            "productType": 2
+            "productTypeId": 2
         }
     ]
 }
@@ -141,96 +143,103 @@ Also, each family member will be assigned more than one task. Dad is responsible
 1. A family member can have many chores
 1. Each chore can be assigned to many family members
 
-This is a many-to-many relationship. This will require us to have a data set whose purpose is simply to store those relationships. This allows us maximum flexibility because we can assign any number of family members to a task, and assign any number of taks to a family member.
+This is a many-to-many relationship. This will require us to have a data set whose purpose is simply to store those relationships. This allows us maximum flexibility because we can assign any number of family members to a task, and assign any number of tasks to a family member.
 
-![](./images/many-to-many.png)
+![many to many relationship ERD with three tables](./images/many-to-many.png)
 
-```js
-const Family = [
-    {
-        "familyId": 1,
-        "name": "Mom"
-    },
-    {
-        "familyId": 2,
-        "name": "Dad"
-    },
-    {
-        "familyId": 3,
-        "name": "Sarah"
-    },
-    {
-        "familyId": 4,
-        "name": "Blake"
-    },
-    {
-        "familyId": 5,
-        "name": "Sophia"
-    },
-    {
-        "familyId": 6,
-        "name": "Michael"
-    }
-]
+#### database.json
 
-const Chores = [
-    {
-        "choreId": 1,
-        "task": "Paint Garage"
-    },
-    {
-        "choreId": 2,
-        "task": "Take out the trash"
-    },
-    {
-        "choreId": 3,
-        "task": "Do the laundry"
-    },
-    {
-        "choreId": 4,
-        "task": "Clean the bedrooms"
-    },
-    {
-        "choreId": 5,
-        "task": "Family game night"
-    },
-    {
-        "choreId": 6,
-        "task": "Feed the dog"
-    }
-]
+```json
+{
+    "familyMembers": [
+        {
+            "id": 1,
+            "name": "Mom"
+        },
+        {
+            "id": 2,
+            "name": "Dad"
+        },
+        {
+            "id": 3,
+            "name": "Sarah"
+        },
+        {
+            "id": 4,
+            "name": "Blake"
+        },
+        {
+            "id": 5,
+            "name": "Sophia"
+        },
+        {
+            "id": 6,
+            "name": "Michael"
+        }
+    ],
+    "chores": [
+        {
+            "id": 1,
+            "task": "Paint Garage"
+        },
+        {
+            "id": 2,
+            "task": "Take out the trash"
+        },
+        {
+            "id": 3,
+            "task": "Do the laundry"
+        },
+        {
+            "id": 4,
+            "task": "Clean the bedrooms"
+        },
+        {
+            "id": 5,
+            "task": "Family game night"
+        },
+        {
+            "id": 6,
+            "task": "Feed the dog"
+        }
+    ]
+}
+```
 
-/*
-    In this initial intersection table, we can see that
-    mom is assigned to two tasks, and dad is also assigned
-    to two tasks.
+The next step is to define an intersection table to store the relationships between family members and chores. In this intersection table definition below, you can see that mom is assigned to two tasks, and dad is also assigned to two tasks.
 
-    We also see that mom and dad are both assigned to the
-    same taskId of 5 - which is game night.
-*/
-const FamilyChores = [
-    {
-        "familyId": 1,
-        "choreId": 4
-    },
-    {
-        "familyId": 1,
-        "choreId": 5
-    },
-    {
-        "familyId": 2,
-        "choreId": 5
-    },
-    {
-        "familyId": 2,
-        "choreId": 3
-    }
-]
+You can also see that mom and dad are both assigned to the same `taskId` of 5 - which is game night.
 
-const FamilyDatabase = {
-    "family": Family,
-    "chores": Chores,
-    "familyChores": FamilyChores
+You would add the following `familyChores` property to your JSON file.
+
+#### database.json
+
+```json
+{
+    "familyMembers": [...],
+    "chores": [...],
+    "familyChores": [
+        {
+            "id": 1,
+            "familyId": 1,
+            "choreId": 4
+        },
+        {
+            "id": 2,
+            "familyId": 1,
+            "choreId": 5
+        },
+        {
+            "id": 3,
+            "familyId": 2,
+            "choreId": 5
+        },
+        {
+            "id": 4,
+            "familyId": 2,
+            "choreId": 3
+        }
+    ]
 }
 ```
 
@@ -245,16 +254,19 @@ const FamilyDatabase = {
 1. [Beginner SQL - 16 - Many to Many Relationship](https://www.youtube.com/watch?v=iLn-lIpm5dU)
 1. [Entity Relationship Diagram (ERD) Tutorial - Part 1](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
 
+
 ## Practice: Small Business
 
 A small business wants to keep track of its employees and the computers that they use. Each employee is assigned to a department, and they each get assigned a computer when they join the company.
 
-1. Build arrays of objects that represent _Employees_, _Departments_, and _Computers_.
+Create an API to be served with `json-server` and create the following resources in your `database.json` file. **Do not** build the arrays of objects in your JavaScript code.
+
+1. Build arrays of objects that represent _Employees_, _Departments_, and _Computers_ in yuor `database.json` file.
 1. Assign every resource a unique `id` property.
 1. Assign each employee to a department using a foreign key.
 1. Assign each employee a computer using a foreign key.
 
-Once your data is normalized, use your DOM skills to display a card for each employee. It should display the employee name, the name of their department, and which computer they are using
+Once the resources are set up, use `fetch` calls to get your data, and use your DOM skills to display a card for each employee. It should display the employee name, the name of their department, and which computer they are using.
 
 ```html
 <article class="employee">
@@ -296,12 +308,12 @@ There are other resources (tables) that you will need to create to fulfill the r
 
 Create an API using `json-server` for the resources you created above to track campaign contributions.
 
-1. Create a `db.json` file containing all of the resources.
+1. Create a `database.json` file containing all of the resources.
 1. Define a few entries for each resource. Each resource must have a unique primary key.
 1. Establish relationships between the resources by storing primary key values as foreign keys on related objects.
 1. Run your API with the following command.
     ```sh
-    json-server --watch db.json
+    json-server -w database.json
     ```
 1. Use `fetch` to get all of the related data to build a card for each politician. It should list the bills they have sponsored, and any companies that have contributed to a PAC that has a shared interest for each bill.
 
