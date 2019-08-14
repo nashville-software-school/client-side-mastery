@@ -138,6 +138,6 @@ Add the following code to a new HTML file. Make sure you include a stylesheet na
 
 Take a look at five blog sites and notice how posts are displayed? Do they have things in common? What is different? Is there one that is easier to read (or not).
 
-Take this single blog post and match one of the sites you found. Provide a link to the site.
+Take this single blog post and match one of the sites you found. Provide a link to the site in your README.md
 
 Make sure your JavaScript still works!
