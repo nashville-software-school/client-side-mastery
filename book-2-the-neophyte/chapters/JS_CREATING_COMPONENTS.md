@@ -290,9 +290,9 @@ How might you refactor the function body again to use the `score` property of ea
     ```
 1. Iterate the array of students, and apply the correct style to the `h1` depending on the score of the student being below 60, or above it.
     ```js
-    for (const student of students) {
+    for (let i = 0; i < students.length; i++) {
         let studentComponent = ""
-        if (student.score >= 60) {
+        if (students[i].score >= 60) {
             studentComponent = ...
         } else {
             studentComponent = ...
