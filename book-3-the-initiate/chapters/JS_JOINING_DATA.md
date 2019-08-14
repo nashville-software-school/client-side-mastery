@@ -308,25 +308,32 @@ Create an API using `json-server` for the resources you created above to track c
 ```html
 <article class="politician">
     <header class="politician__name">
-        <h1>Abby Fleming</h1>
+        <h1>Dyer Cummings</h1>
     </header>
     <section class="politician__bills">
         <h3>Sponsored Bills</h3>
         <div>
-            <h4>S. 2325: Northern Mariana Islands U.S. Workforce Act</h4>
+            <h4>H.R. 5215: Veterans Affairs Purchase Card Misuse Mitigation Act</h4>
             <ul>
-                <li>Employment</li>
-                <li>Energy</li>
-                <li>Natural Resources</li>
+                <li>Military</li>
             </ul>
         </div>
     </section>
-    <section class="politician__influencers">
+    <section class="politician__funders">
         <h3>Related PACs</h3>
         <ul>
             <li>American Gas Association</li>
             <li>League of Conservation Voters Action Fund</li>
         </ul>
     </section>
+    <section class="politician__influencers">
+        <h3>Influencing Corporations</h3>
+        <ul>
+            <li>Lockheed Martin</li>
+            <li>Boeing</li>
+        </ul>
+    </section>
 </article>
-````
+```
+
+![animation of some rendered politicians](./images/honest-abe.gif)
