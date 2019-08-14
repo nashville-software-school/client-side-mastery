@@ -97,3 +97,11 @@ When you click the button and the new favorite thing is added to the DOM, clear 
 When you click the button check if both input fields have a value that is not empty string (`""`). If it is that, then you did not type anything into that input field.
 
 If either input field is blank, do not add anything to the DOM and alert the user that they need to enter in all information.
+
+## UI/UX Challenge
+**This is an optional challenge once you meet MVP. Make a new GitHub branch for this challenge.**
+
+Employ best practices for form design
+Take a look at Luke Wroblewski's article on form design. The following sections will get you started. [webforms_lukew.pdf](webforms_lukew.pdf)
+1. Inputs: pp18-48 (lots of visual examples)
+2. Actions: pp49-56
