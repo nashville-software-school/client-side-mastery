@@ -173,3 +173,18 @@ You're going to create an HTML component to represent a political candidate. Spe
 1. The last component will hold links to any legislation that your representative has enacted.
 
 Make sure you use good BEM-style class names for each element in your components. Put a comment above each component explaining what it is.
+
+## UI/UX Challenge
+**This is an optional challenge once you meet MVP. Make a new GitHub branch for this challenge.**
+
+> Billboard 101 - Web pages should be designed in such a way that they are easy to scan.
+
+How to improve scannability?
+* Create visual hierarchies. What is the most important information on the page? What is supportive information? Can you use bulleted lists?
+* Use universally accepted conventions: These may include logo/tagline position, buttons/links, social networking options, etc.
+* Break a page into clearly defined sections.
+* Make it obvious what’s clickable.
+
+Review the page you just created. Based on the items above, identify some opportunities to improve the UI/UX. Refactor your page to improve the usability. You may add semantic tags, content, and styles.
+
+Background color - if you add a background color/image, ensure the copy (text color) has good contrast and is legible.
