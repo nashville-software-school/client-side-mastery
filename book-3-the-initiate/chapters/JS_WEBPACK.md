@@ -1,4 +1,4 @@
-# A Static Module Bundler for your Application
+# Webpack: A Powerful Automation Tool for your Application
 
 ## Introduction to Webpack
 
@@ -6,7 +6,48 @@ Webpack is a task runner and a module bundler. It originally started as a module
 
 Visit the [Webpack documentation](https://webpack.js.org/concepts/) if you want to explore more.
 
-## Configuring Webpack in your Projects
+![visualization of how javascript modules depdendencies are resolved and bundled](./images/module-bundling.png)
+
+## Quick Start
+
+1. Visit the [Webpack Boilerplate repository](https://github.com/nashville-software-school/webpack-with-json-server-boilerplate) that we have built for you.
+1. Follow the instructions in the README. Be sure you **fork** the repository into your own account first.
+1. Once your instruction team is done live-coding and answering questions, you can work on the following exercises.
+
+
+## Practice: Contact List
+
+Build a Webpack application with the following four JS components:
+
+1. A **ContactCollection** component that loads existing contacts from a `json-server` API, and saves new ones.
+1. A **Contact** component that displays a person's name, phone number, and address.
+1. A **ContactList** component that displays all contacts. It should import the **Contact** component and the **ContactCollection** component.
+1. A **ContactForm** component that listens for when the submit button is pressed. When it is triggered, a new contact should be POSTed to the API. It should import the **ContactCollection** component.
+
+In `main.js`, import the **ContactList** component and the **ContactForm** component.
+
+The user should see the contact form at the top of the view, and the list of contacts underneath it.
+
+> **Food for thought:** Are there any other modules that could be made? Do any modules have more than one possible responsibility? Perhaps something that is a general utility function.
+
+## Practice: Product Ordering
+
+Your task is to simulate a product listing page like you would find on Etsy, Amazon, or Ebay. This application should implement the following features.
+
+1. Display an individual product component. Each product should have a title, short description, price, quantity, and an image.
+1. Display the application information in a navigation bar at the top of the page.
+    1. The name of the company - Betsy
+    1. Three links: *Categories*, *Orders*, and *Log Out* (these links won't actually do anything, you're just practicing making the navigation bar a component)
+1. Display a review list component that contains a maximum of 3 product review components beneath a product. You can use [hipster ipsum](https://hipsum.co/) for the reviews themselves.
+
+### Component/Module Map
+
+![dependency map](./images/product-exercise-dependecies.png)
+
+
+## For Instruction Team Only: Explanation of Manually Configuring Webpack in your Projects
+
+> **TIP:** Please use the boilerplate repo noted in the Quick Start above. What follows is an explanation of how it all works, and your instruction team will explain it. Do not try to set up manually.
 
 Create your application with the directory structure like below:
 
@@ -226,31 +267,3 @@ In your `package.json`, there is a script set up to run the webpack server.
 
 In order to run your application, in your terminal, type in the following command: `npm start`. Then stand back and enjoy the results.
 
-## Practice: Contact List
-
-Build a Webpack application with the following four JS components:
-
-1. A **ContactCollection** component that loads existing contacts from a `json-server` API, and saves new ones.
-1. A **Contact** component that displays a person's name, phone number, and address.
-1. A **ContactList** component that displays all contacts. It should import the **Contact** component and the **ContactCollection** component.
-1. A **ContactForm** component that listens for when the submit button is pressed. When it is triggered, a new contact should be POSTed to the API. It should import the **ContactCollection** component.
-
-In `main.js`, import the **ContactList** component and the **ContactForm** component.
-
-The user should see the contact form at the top of the view, and the list of contacts underneath it.
-
-> **Bonus:** Are there any other modules that could be made? Do any modules have more than one possible responsibility? Perhaps something that is a general utility function.
-
-## Practice: Product Ordering
-
-Your task is to simulate a product listing page like you would find on Etsy, Amazon, or Ebay. This application should implement the following features.
-
-1. Display an individual product component. Each product should have a title, short description, price, quantity, and an image.
-1. Display the application information in a navigation bar at the top of the page.
-    1. The name of the company - Betsy
-    1. Three links: *Categories*, *Orders*, and *Log Out* (these links won't actually do anything, you're just practicing making the navigation bar a component)
-1. Display a review list component that contains a maximum of 3 product review components beneath a product. You can use [hipster ipsum](https://hipsum.co/) for the reviews themselves.
-
-### Component/Module Map
-
-![dependency map](./images/product-exercise-dependecies.png)

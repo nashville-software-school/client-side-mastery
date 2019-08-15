@@ -63,3 +63,14 @@ Now you create the rest of the fields using HTML elements. When you are done, th
 Now use the `display: flex`, and `flex-direction: column` CSS properties to change your form to look like this.
 
 ![](./images/P5FPNsVInT.gif)
+
+
+## UI/UX Challenge
+**This is an optional challenge once you meet MVP. Make a new GitHub branch for this challenge.**
+
+Best Practices for Form Design
+Take a look at Luke Wroblewski's article on form design, the following sections will get you started. [webforms_lukew.pdf](webforms_lukew.pdf)
+1. Inputs: pp18-48 (lots of visual examples)
+2. Actions: pp49-56
+
+Refactor your Daily Journal to include best practices for form design.

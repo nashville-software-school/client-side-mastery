@@ -5,7 +5,7 @@ React is a library that was open sourced by the development team at Facebook wit
 You've already learned the vast majority of what React does for you when building the UI for your application.
 
 1. Building components and child components
-1. Modular code with Browserify modules
+1. Modular code with JavaScript modules
 1. Updating the DOM with document elements or string templates
 1. Setting the state of a component
 
