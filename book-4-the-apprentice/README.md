@@ -3,18 +3,26 @@
 In this book, you will be learning the concepts and tools of React. React is a component based UI library for the browser.
 
 * Chapter 1 - [React: Getting Started with the Basics](./chapters/REACT_BASICS.md)
-* Chapter 2 - [React: State and Props](./chapters/COMPONENT_STATE_PROPS.md)
-* Chapter 3 - [React: URL Routing](./chapters/REACT_ROUTING.md)
-* Chapter 4 - [React: Loading State from an API](./chapters/REACT_INITIAL_STATE.md)
-* Chapter 5 - [React: CRUD Using Function Properties](./chapters/FUNCTIONS_AS_PROPS.md)
-* Chapter 6 - [React: Using Regular Modules](./chapters/API_MODULES.md)
-* Chapter 7 - [React: Dynamic Routing](./chapters/REACT_DYNAMIC_ROUTING.md)
-* Chapter 8 - [React: CRUD with Forms](./chapters/REACT_FORMS.md)
-* Chapter 9 - [React: Conditional Routing](./chapters/REACT_CONDITIONAL_RENDERING.md)
-* Chapter 10 - [React: Reusability](./chapters/REACT_REUSABLE_COMPONENTS.md)
+* Chapter 2 - [React: URL Routing - Navbar](./chapters/REACT_ROUTING.md)
+* Chapter 3 - [React: Loading Data from an API](./chapters/REACT_LOADING_DATA.md)
+* Chapter 4 - [React: State and Props](./chapters/COMPONENT_STATE_PROPS.md)
+* Chapter 5 - [React: Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md)
+* Chapter 6 - [React: Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md)
+* Chapter 7 - [React: Dynamic Routing Part 2 with Delete and loadingStatus](./chapters/REACT_DYNAMIC_ROUTING_PART2.md)
+* Chapter 8 - [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
+* Chapter 9 - [React: Create Animal With A Form](./chapters/REACT_FORMS.md)
+* Chapter 10 - [React: Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
 * Chapter 11 - [React: Edit](./chapters/REACT_EDIT.md)
 
+**All of the above should be complete before proceeding.**
+* Chapter 12 - [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
+
+**More Good Stuff**
+* Chapter 13 - [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
+* Chapter 14 - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
+
 > ## Sprint 4: Reactive Nutshell
+
 
 > ### LinkedIn Projects update with Reactive Nuthsell
 

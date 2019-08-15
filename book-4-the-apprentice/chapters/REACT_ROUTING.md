@@ -1,137 +1,176 @@
 # Routing in React Applications
 
-In a single page application, you are only rendering one DOM tree. You never request another HTML file, but simply create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element at the top of the page for people to click on to see different views.
+In a single page application, you are only rendering one DOM tree. You never request another HTML file but create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element on the page for users to select and see different views.
 
-In React, you will use something called a Router to handle rendering different components when the user clicks on navigation items.
+In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app.
 
 ## Setup
 
-Make sure you are in your project's root directory.
+Make sure you are in your project's root directory. First, we need to install react-router-dom. Then we will create an additional file to handle the routing and create a navbar.
 
 ```sh
-npm install react-router-dom bootstrap
+npm install react-router-dom
 cd src/components
 touch ApplicationViews.js
+mkdir home
+touch home/Home.js
 mkdir nav
 touch nav/NavBar.js
 touch nav/NavBar.css
 ```
 
 ## Making Your Components
+Here's what we are about to do:
+1. Create the **`Home`** component with a default view - `Hello World`.
+1. Create the **`NavBar`** component for the constant navigation elements
+1. Create the **`ApplicationViews`** component. This will define all of the URLs your application will support and which views will be displayed for each one.
+1. Change the **`Kennel`** component to display two child components.
+1. Update the **`index.js`** to utilize `react-router-dom`.
 
-Your `index.js` is also going to change. Up to this point, you've rendered your component right onto the DOM, but this time, you will be rendering the container component called **`Kennel`**. It is a container component because it does not render any HTML itself, but rather has child components that render HTML.
+### Home Component
 
-Don't worry if that doesn't make any sense right now. Let's look at an example to help clarify it.
+> components/home/Home.js
 
-The **`Kennel`** component will contain two child components.
+``` js
 
-1. **`NavBar`** which holds navigation elements to always be displayed.
-1. **`ApplicationViews`** which will define all of the URLs that your application will support, and which views will be displayed for each one.
+import React, { Component } from 'react'
 
-Let's make the child components and then build the container component in which they will live.
+class Home extends Component {
+  render() {
+    return (
+      <address>
+        Visit Us at the Nashville North Location
+        <br />500 Puppy Way
+      </address>
+    )
+  }
+}
 
-### Navigation Bar
+export default Home
 
-Use this code for your navigation bar. It uses Bootstrap styling so that you have some basic, good styling.
+```
+
+### NavBar Component
+
+Use this code for your navigation bar and the following CSS.
 
 > components/nav/NavBar.js
 
 ```js
-import React, { Component } from "react"
+import React, { Component } from 'react';
 import { Link } from "react-router-dom"
-import "bootstrap/dist/css/bootstrap.min.css"
-
+import './NavBar.css'
 
 class NavBar extends Component {
-    render() {
-        return (
-            <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
-                <ul className="nav nav-pills">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/">Locations</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/animals">Animals</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/employees">Employees</Link>
-                    </li>
-                </ul>
-            </nav>
-        )
-    }
+
+  render(){
+
+    return (
+      <header>
+        <h1 className="site-title">Student Kennels<br />
+          <small>Loving care when you're not there.</small>
+        </h1>
+        <nav>
+          <ul className="container">
+            <li><Link className="nav-link" to="/">Home</Link></li>
+            <li><Link className="nav-link" to="/animals">Animals</Link></li>
+            <li>Locations</li>
+            <li>Employees</li>
+            <li>Owners</li>
+          </ul>
+        </nav>
+      </header>
+    )
+  }
 }
 
-export default NavBar
+export default NavBar;
 ```
 
-Notice the use of the new `<Link/>` component that you get from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
+NavBar CSS
+> components/nav/Navbar.css
 
-### Defining Routes in **ApplicationViews**
+```css
+small {
+  font-size: 75%;
+}
 
-Now it's time to define the Routes that our application will respond to. In **`NavBar`**, you defined three link components that will navigation to the routes of...
+header {
+  background-color:darkblue;
+  border: cornflowerblue solid 3px;
+}
+
+.site-title {
+  color: ghostwhite;
+  text-align: center;
+}
+
+nav .container {
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+nav .container li {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  color: cornsilk;
+  box-sizing: border-box;
+  background-color: cornflowerblue;
+  list-style-type: none;
+}
+
+nav .container a {
+  color: cornsilk;
+}
+
+nav .container a:hover {
+  color: maroon;
+}
+```
+
+Notice the use of the `<Link/>` component. This comes from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
+
+### **ApplicationViews** - includes the Kennel application routes
+
+Now it's time to define the Routes for our application. In **`NavBar`**, you defined two **`<Link />`** components that will navigate to the routes of...
 
 * `/`
 * `/animals`
-* `/employees`
 
-In the **`ApplicationViews`** component, you will define how your application will respond when the URL matches each of those patterns. When a user clicks on one of the hyperlinks in the navigation bar, this  code dictates which component should be rendered.
+In the **`ApplicationViews`** component, you will define how your application will respond when the URL matches each of those patterns. When a user clicks on one of the hyperlinks in the navigation bar, this code dictates which component should be rendered.
 
-In the example code below, you will notice the use of `<React.Fragment />`. That is simply a React wrapper around your old friend `document.createDocumentFragment()`. What this does is prevent unnecessary `<div>`, `<article>`, or `<section>` tags from being created.
+In the example code below, you will notice the use of `<React.Fragment />`. That is simply a React wrapper around your old friend `document.createDocumentFragment()`. Using a fragment prevents unnecessary `<div>`, `<article>`, or `<section>` tags from being created. This can be written with a shortcut `<>` and then closed `</>.
 
-> ApplicationViews.js
+> components/ApplicationViews.js
 
 ```js
 import { Route } from 'react-router-dom'
-import React, { Component } from "react"
-import AnimalList from './animal/AnimalList'
-import LocationList from './location/LocationList'
-import EmployeeList from './employee/EmployeeList'
+import React, { Component } from 'react'
+import Home from './home/Home'
+import AnimalCard from './animal/AnimalCard'
+//only include these once they are built - previous practice exercise
+import LocationCard from './location/LocationCard'
+import EmployeeCard from './employee/EmployeeCard'
+import OwnerCard from './owner/CardCard'
 
 
 class ApplicationViews extends Component {
-    employeesFromAPI = [
-        { id: 1, name: "Jessica Younker" },
-        { id: 2, name: "Jordan Nelson" },
-        { id: 3, name: "Zoe LeBlanc" },
-        { id: 4, name: "Blaise Roberts" }
-    ]
 
-    locationsFromAPI = [
-        { id: 1, name: "Nashville North", address: "500 Circle Way" },
-        { id: 2, name: "Nashville South", address: "10101 Binary Court" }
-    ]
-
-    animalsFromAPI = [
-        { id: 1, name: "Doodles" },
-        { id: 2, name: "Jack" },
-        { id: 3, name: "Angus" },
-        { id: 4, name: "Henley" },
-        { id: 5, name: "Derkins" },
-        { id: 6, name: "Checkers" }
-    ]
-
-    state = {
-        employees: this.employeesFromAPI,
-        locations: this.locationsFromAPI,
-        animals: this.animalsFromAPI
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-                <Route exact path="/" render={(props) => {
-                    return <LocationList locations={this.state.locations} />
-                }} />
-                <Route path="/animals" render={(props) => {
-                    return <AnimalList animals={this.state.animals} />
-                }} />
-                <Route path="/employees" render={(props) => {
-                    return <EmployeeList employees={this.state.employees} />
-                }} />
-            </React.Fragment>
-        )
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <Route exact path="/" render={(props) => {
+          return <Home />
+        }} />
+        <Route path="/animals" render={(props) => {
+          return <AnimalCard />
+        }} />
+      </React.Fragment>
+    )
+  }
 }
 
 export default ApplicationViews
@@ -143,10 +182,10 @@ The `<Link/>` and the `<Route/>` JSX elements are complementary to each other. I
 
 ### Updating the Kennel Component
 
-Like was mentioned above, **`Kennel`** is simply a container component. It renders no HTML itself, as you'll see. It simply *contains* other components that actually are responsible for the presentation and behavior of the application. In the case of **`KennelCompany`**, it contains two different kinds of components.
+As mentioned above, **`Kennel`** is a container component. It renders no HTML itself. It simply *contains* other components that are responsible for the presentation and behavior of the application. In the case of our Kennel, it contains two different kinds of components.
 
 1. **`Navbar`**: This is a _Presentation Component_. Directly expresses HTML.
-1. **`ApplicationViews`**: This is a _Controller Component_. Its only responsibility to to control the behavior of the system. It maps URLs to components.
+2. **`ApplicationViews`**: This is a _Controller Component_. Its only responsibility to to control the behavior of the system and maps URLs to components.
 
 > Kennel.js
 
@@ -156,24 +195,22 @@ import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews"
 
 import "./Kennel.css"
-import "bootstrap/dist/css/bootstrap.min.css"
-
 
 class Kennel extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <NavBar />
-                <ApplicationViews />
-            </React.Fragment>
-        )
-    }
+  render() {
+    return (
+      <>
+        <NavBar />
+        <ApplicationViews />
+      </>
+    )
+  }
 }
 
 export default Kennel
 ```
 
-Now you can update your `index.js` and its root component must now be `<Router />` which gets imported from the React Router package. In that router, you place the `<Kennel />` child component. What this tells React is that *"I will be placing Routes in my Kennel component."*
+Now update your `index.js` by adding a root component of `<Router />` which gets imported from the React Router package. Within **`<Router>`**, place the `<Kennel />` child component. This tells React *"I will be placing Routes in my Kennel component."*
 
 > index.js
 
@@ -183,13 +220,11 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from "react-router-dom"
 import Kennel from './components/Kennel'
 
-import './index.css'
-
 ReactDOM.render(
-    <Router>
-        <Kennel />
-    </Router>
-    , document.getElementById('root'))
+  <Router>
+    <Kennel />
+  </Router>
+  , document.getElementById('root'))
 
 ```
 
@@ -205,42 +240,8 @@ Once all of this is in place, you will have the base of a single page applicatio
 * [React Component Patterns by Michael Chan](https://www.youtube.com/watch?v=YaZg8wg39QQ)
 * [Advanced React Component Patterns](https://egghead.io/courses/advanced-react-component-patterns)
 
-## Practice: Kennel Owners List
+## Practice: Kennel Routes
 
-If you haven't created the `owners` array in your state yet, please go ahead and create it now, and populate it with 4 owners. Each owners should have the `id`, `phoneNumber`, and `name` properties.
+1. Create links in your navigation bar for `/locations`, `/employees`, and `/owners` paths.
+1. Have each route render the respective component.
 
-1. Create a link in your navigation bar that links to `/owners` path.
-1. Create a route for `/owners` that renders the `<OwnerList>` component and sends the corresponding state property.
-1. Add the code in `<OwnerList>` to display all the items in the array.
-
-## Practice: Kandy Korner Routing
-
-Refactor your Kandy Korner application to use routing. Create a **`NavBar`** component with the following links.
-
-1. Stores
-1. Employees
-1. Candies
-
-Clicking on the links will list the corresponding data.
-
-## Practice: Kandy Korner Candy Types
-
-When displaying the candy list, the related candy type should also be displayed. This means that you need to pass the state variable of `candyTypes` from the **`KandyKorner`** component to the **`CandyList`** component.
-
-Then in **`CandyList`**, use the `find()` array method when displaying the candies to grab the related data.
-
-```js
-{
-    this.props.candies.map(candy =>
-        <div key={candy.id}>
-            {candy.name}
-            of type
-            {
-                this.props.candyTypes
-                    .find(fill in the blank)
-                    .name
-            }
-        </div>
-    )
-}
-```
