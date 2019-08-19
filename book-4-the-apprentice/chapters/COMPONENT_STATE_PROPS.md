@@ -120,13 +120,9 @@ Add CSS. Note: you will import a single CSS file directly into this component. G
 }
 ```
 
-## Using State in a Component
-
-![](./images/state.png)
-
 ## Passing State to a Child Component
 
-![](./images/statetoprops.png)
+![](./images/state-propogation-visual.png)
 
 
 
