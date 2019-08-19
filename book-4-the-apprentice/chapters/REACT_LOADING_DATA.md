@@ -176,8 +176,8 @@ The `componentDidMount()` lifecycle hook runs after the component output has bee
 
 ## Component LifeCycle
 
-![component lifecycle hooks](https://reactjs.org/docs/react-component.html)
-![lifecycle hooks diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+* [Component Lifecycle Hooks Documentation](https://reactjs.org/docs/react-component.html)
+* [Lifecycle Hooks Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 ## Resources
 
