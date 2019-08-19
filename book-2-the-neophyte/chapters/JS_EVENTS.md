@@ -4,180 +4,114 @@
 
 Modern web application are becoming more and more event based rather than procedural. When a user performs any kind of gesture (click, key press, mouse over, etc.), the JavaScript layer will listen for that event and then perform some appropriate logic.
 
-##### events.css
-
-```css
-.blue {
-  color: blue;
-}
-
-.large {
-  font-size: 2em;
-}
-
-.bordered {
-  border: 2px dotted purple;
-}
-
-.rounded {
-  border-radius: 10px;
-}
-
-.hide {
-  display: none;
-}
-
-#guinea-pig {
-  margin: 50px 0 20px 0;
-  font-family: Helvetica;
-  padding: 5px;
-}
-
-.card {
-  border: 1px dashed darkgoldenrod;
-  padding: 5px;
-  margin: 5px;
-}
-```
-
+Let's imagine we want to add a "dark mode" to our website. When the user clicks on a button, the background color of our page should turn from white to dark gray and the text should change to white. For this example, we're assuming that the button we want to click on is already hard-coded into our HTML document, like this:
 ##### index.html
-
 ```html
-<header id="page-header">
-  <h1>Page title</h1>
-</header>
-
-<ul>
-  <li>Unordered list item 1</li>
-  <li>Unordered list item 2</li>
-  <li>Unordered list item 3</li>
-</ul>
-
-<article>
-  <section class="article-section">Introduction</section>
-  <section class="article-section">Body</section>
-  <section class="article-section">Conclusion</section>
-</article>
-
-<input type="text" id="keypress-input">
-
-<div id="output-target"></div>
-
-<div id="guinea-pig">Leave me alone</div>
-<button id="add-color">Add color</button>
-<button id="make-large">Hulkify</button>
-<button id="add-border">Capture it</button>
-<button id="add-rounding">Rounded</button>
+<button id="dark-mode">Dark Mode</button>
 ```
+Next, we need to grab a reference to that button in our JavaScript so we can manipulate it:
+#### event.js
+```js
+const darkModeButton = document.querySelector("#dark-mode")
+```
+So far, so good. Now let's add an _event listener_ to the button so that JavaScript will know when a user clicks on it.
+```js
+darkModeButton.addEventListener("click", function(){
+  // our logic for activating dark mode goes here-- this code only runs AFTER the button is clicked
+})
+```
+See where we had a string of "click" up there? That's because we're specifically looking for a click event. We could also change that to `dblclick` if we wanted to listen for a double click, `keyup` if we wanted to listen for a keypress (in an input field), etc. But for now we can just stick with our click.
 
-##### eventHandlers.js
+Let's write the logic that we want to happen after the button is clicked:
 
 ```js
-let outputEl = document.getElementById("output-target")
+darkModeButton.addEventListener("click", function(){
+  // Select the entire body tag
+  const bodyElement = document.querySelector("body)
+  
+  // Add a class
+  bodyElement.classList.add("dark-background")
+})
+```
+Right now, this code will add a class of `"dark-background"` to the entire body tag. To change how our website actually looks, we have to add some CSS.
 
-/*
-    You can get a reference to DOM elements and
-    directly attach an event handler. In this
-    example, we get every element with a class of
-    "article-section" and listen for when the
-    user clicks on the element. When that event
-    fires, the attached "handleSectionClick"
-    function gets executed.
- */
-let articleEl = document.getElementsByClassName("article-section")
-let header = document.querySelector("#page-header")
+##### events.css
+```css
+.dark-background{
+  background-color: #2b362e;
+  color: #fafcfb;
+}
+```
 
-/*
-    JavaScript, in the browser, automatically send the source
-    event to the handler function for the event.
-*/
-function handleSectionClick (event) {
-    console.log(event)
+## Defining logic outside event listeners
+In the example above, we wrote all the logic for what happens inside the event listner inside the event listner itself, in the form of an anonymous function. (An anonymous function is just one that doesn't have a name, like the ones in the event listeners above.) That works great unless you need to reuse your logic. 
+
+For example, let's imagine that you have a form on your website and, any time the user types into a form field, you want to add a blue border around the field they're currently typing into. 
+
+Your form might look like this:
+##### index.html
+```html
+<h3>Contact Us</h3>
+<form>
+  <input type="text" id="first-name-input" placeholder="First Name" class="contact-form-input">
+  <input type="text" id="last-name-input" placeholder="Last Name" class="contact-form-input">
+  <textarea id="message-input" class="contact-form-input" cols="30" rows="10"></textarea>
+</form>
+```
+You _could_ write an event listener for each element separately, like this: 
+```js
+document.querySelector("#first-name-input").addEventListener("keyup", function(){
+// add logic here 
+})
+
+document.querySelector("#last-name-input").addEventListener("keyup", function(){
+// add logic here
+})
+
+document.querySelector("#message-input").addEventListener("keyup", function(){
+// add logic here
+})
+```
+Since each event listener is going to do the same thing, we'd be writing the same (or very similar) logic three times. We want our code to be as [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) as possible, so if we find ourselves writing the same thing three times it might be time to think about a better option.
+
+Instead of defining an anonymous function _inside_ the event listener, let's define what we want to happen when we type into an input _outside_ the event listener so we can reference it three times.
+
+##### script.js
+
+```js
+// Because this function is going to be used as an event listener, it gets a magical parameter by default called the event. 
+function highlightCurrentField(eventObject){
+
+  // The eventObject tells us which element fired the event-- in this case, which field we're typing into
+  const currentField = eventObject.target
+  
+  // add a class of highlighted border 
+  currentField.classList.add("highlighted-border")
+
 }
 
-for (let i = 0; i < articleEl.length; i++) {
-    articleEl.item(i).addEventListener("click", handleSectionClick)
+```
+
+Now we can reference our `highlightCurrentField` function in our event listeners!
+
+```js
+document.querySelector("#first-name-input").addEventListener("keyup", highlightCurrentField)
+
+document.querySelector("#last-name-input").addEventListener("keyup", highlightCurrentField)
+
+document.querySelector("#message-input").addEventListener("keyup", highlightCurrentField)
+```
+
+Our code still isn't as DRY as it could be. All of the inputs have the same class. Rather than selecting each element by its id, let's select them by their class so we only have to query the DOM once.
+
+```js
+const contactFormInputs = document.querySelectorAll(".contact-form-input")
+
+// Loop over each input
+for(var i = 0; i < contactFormInputs.length; i++){
+  // Add an event listener to each input
+  contactFormInputs[i].addEventListener("keyup", highlightCurrentField)
 }
-
-/*
-    Define functions that hold logic to be performed when mouse
-    events are triggered by the browser.
-*/
-function handleHeaderMouseOver (event) {
-    outputEl.innerHTML = "You moved your mouse over me"
-}
-
-function handleHeaderMouseOut(event) {
-    outputEl.innerHTML = "Why u leave me?"
-}
-
-/*
-    Get a reference to the DOM element with an id of
-    "page-header", and attach an event handler for the
-    mouseover, and mouseout, events.
- */
-header.addEventListener("mouseover", handleHeaderMouseOver)
-header.addEventListener("mouseout", handleHeaderMouseOut)
-
-
-
-/*
-    We can also write an anonymous function (lamba expression)
-    in the addEventListener declaration instead of using a
-    function reference.
- */
-let fieldEl = document.getElementById("keypress-input")
-
-fieldEl.addEventListener("keyup", function (event) {
-    outputEl.innerHTML = event.target.value
-})
-
-
-/*
-  Now we can start making a truly interactive experience
-  combining HTML, JavaScript and CSS. When a user clicks
-  on a button in the DOM, we can listen for that event in
-  JavaScript, and then add, or remove, CSS classes.
-
-  In this example, I simply use the `toggle()` method on
-  the `classList` property of a DOM element to automatically
-  add and remove a class.
- */
-let guineaPig = document.getElementById("guinea-pig")
-
-function toggleClass (newClass) {
-  guineaPig.classList.toggle(newClass)
-  console.log("guineaPig.classList", guineaPig.classList)
-}
-
-document.getElementById("add-color").addEventListener("click", function() {
-    toggleClass("blue")
-})
-
-document.getElementById("make-large").addEventListener("click", function() {
-    toggleClass("large")
-})
-
-document.getElementById("add-border").addEventListener("click", function() {
-    toggleClass("bordered")
-})
-
-document.getElementById("add-rounding").addEventListener("click", function() {
-    toggleClass("rounded")
-})
-
-
-/*
-  EVENT BUBBLING:
-
-  You can add an event handler on the body tag, and since all
-  browser events bubble up to the body, you can then put in
-  conditional logic to handle the click event on many different
-  elements in one function.
- */
-document.querySelector("body").addEventListener("click", function(event) {
-    console.log("You clicked on the body of the DOM")
-})
 ```
 
 ## Videos to Watch
@@ -304,69 +238,6 @@ Write two more event handlers for activating and deactivating **_all_** powers w
 
 You may notice that your code to enable individual powers (not all at once) is very similar. To keep your code DRY, make one function that will handle activating a power depending on which button is clicked. (Hint: one way to get started is to use `event.target.id.split("-")` in your function)
 
-## Challenge: Scrolling and Scaling
-
-> The learning objective for this exercise is to practice listening for the `scroll` event broadcast by the browser, and updating DOM elements in response.
-
-Create the following three files, and copy pasta the code provided.
-
-> index.html
-
-Put the following code into the `<body>` element.
-
-```html
-<article id="container">
-  <section id="audrey">Feed me, Seymour</section>
-</article>
-```
-
-> box.css
-
-```css
-#container {
-  display: flex;
-  min-height: 1500px;
-}
-
-#audrey {
-  background-color: purple;
-  color: snow;
-  min-height: 100px;
-  width: 50px;
-  position: fixed;
-}
-```
-
-> audrey.js
-
-```js
-const audrey = document.getElementById("audrey")
-
-/*
-    Add an event listener to the `document` object to listen
-    for the "scroll" event.
-*/
-.addEventListener("", function () {
-    /*
-        Adjust the width of audrey to be 1/3 the value of
-        `window.scrollY`. No lower than 50px, though.
-    
-    */
-
-    /*
-        Hint: you're allowed to use the .style property in this exercise, even though we generally advice against it becasue it applies inline styles to your DOM (rather than adding and removing classes)
-
-    */
-
-
-    /*
-        Adjust the height of audrey to be 1/4 the value of
-        `window.scrollY`. No lower than 100px, though.
-    */
-})
-```
-
-![example of how scroll event should look](./images/eBh72rsnv3.gif)
 
 ## Challenge: Dynamic Cards
 
@@ -407,7 +278,7 @@ This is an example how one of your card components might look once it's in the D
 
 > The learning objective of this challenge is to examine existing code that allows users to drag & drop elements around the screen, and use an `if` condition to prevent the drop from happening when a condition is true. Challenges will require you to practice your Googling skills. There are a couple technical keywords in the requirements below that you can use to find some information on the Web.
 
-Open this [simple drag & drop JSFiddle project](https://jsfiddle.net/chortlehoort/1oo127p1/) and copy all of the code into a local project in your `workspace` directory.
+Open this [drag & drop JSFiddle project](https://jsfiddle.net/chortlehoort/1oo127p1/) and copy all of the code into a local project in your `workspace` directory. You won't know what all this code is doing. That's okay! Part of this exercise is about practicing finding your way around code that's over your head-- something you'll have to do a lot on the job.
 
 The user should be able to drag one of the middle cards into either the top box, or the bottom box. However, there's a problem with the way the code currently works. There's also a couple changes you need to make.
 
