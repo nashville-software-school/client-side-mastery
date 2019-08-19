@@ -12,6 +12,12 @@ Below is a new route that renders a form for boarding a new animal. You need to 
 
 First, update your routes in ApplicationViews with a new route for the form and add `{...props}` to the route `/animals` (**AnimalList**). The spread operator on the props gives access to the router properties, especially `history.push`
 
+Remember, you'll also have to `import` the new AnimalForm component once it's created
+
+```jsx
+import AnimalForm from './animal/AnimalForm'
+```
+
 ```jsx
 // Our shiny new route.
 <Route path="/animals/new" render={(props) => {
