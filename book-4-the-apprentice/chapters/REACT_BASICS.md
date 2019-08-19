@@ -17,6 +17,28 @@ You can install the React Developer Tools via the [Chrome Store](https://chrome.
 
 Visit the [create-react-app](https://github.com/facebook/create-react-app/) Github repo and follow the instructions for getting yourself set up with a simple React application.
 
+### Getting Setup
+
+Before we grow this application, let's create a meaningful directory structure.
+
+1. Inside your `src` directory, `mkdir` a `components` sub-directory.
+2. `cd` into the `components` directory.
+3. `touch` `Kennel.js` and `Kennel.css`.
+4. Within components, `mkdir` an `animal` directory
+5. `cd` into the `animal` directory.
+6. `touch` AnimalCard.js.
+
+```
+- src
+    - components
+        - animal
+            - AnimalCard.js
+        - Kennel.js
+        - Kennel.css
+  index.js
+
+```
+
 ## Getting Started with Components
 
 Your instructor will walk through this code with you as you build up your initial React application.
@@ -144,28 +166,6 @@ export default Kennel;
 ```
 
 > **Note:** The render method for a React component can only return a single element that encompasses child elements.
-
-### Component Files
-
-Before we grow this application any further, let's create a meaningful directory structure.
-
-1. Inside your `src` directory, create a `components` sub-directory.
-2. Put `Kennel.js` into the `components` directory.
-3. Within components, create an `animal` directory and place the AnimalCard.js inside along with `dog.svg`.
-4. Include `Kennel.css` in the components directory (see below for a starting css).
-5. Check your imports for correct paths.
-
-```
-- src
-    - components
-        - animal
-            - AnimalCard.js
-            - dog.svg
-        - Kennel.js
-        - Kennel.css
-  index.js
-
-```
 
 ## Add some styles to Kennel.css
 
