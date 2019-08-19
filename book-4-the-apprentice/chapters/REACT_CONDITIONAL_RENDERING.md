@@ -36,7 +36,7 @@ class Login extends Component {
         For now, just store the email and password that
         the customer enters into local storage.
     */
-    sessionStorage.setItem(
+    localStorage.setItem(
         "credentials",
         JSON.stringify({
             email: this.state.email,
@@ -165,7 +165,7 @@ Once a user logs in, redirect them to the `home` route. You will need to refacto
 What if an animalId is no longer available in the API? Write a conditional to display something different if an animal(user, employee or location) is not available/valid.
 
 ## Challenge: Active NavBar Route
-In the NavBar, highlight the active section. For example, if you are viewing `Animals`, change the `<NavBar>` `Animals link to `lime` (you could also disable the ability to click). Since the `<NavBar` is not part of a route, you will need to `export default withRouter(NavBar)` in order to have access to the router location properties. Consider how we used `loadingStatus` in a previous chapter.
+In the NavBar, highlight the active section. For example, if you are viewing `Animals`, change the `<NavBar>` Animals link to `lime` (you could also disable the ability to click). Since the `<NavBar` is not part of a route, you will need to `export default withRouter(NavBar)` in order to have access to the router location properties. Consider how we used `loadingStatus` in a previous chapter.
 
 
 ## Fun Challenge: Remember Me

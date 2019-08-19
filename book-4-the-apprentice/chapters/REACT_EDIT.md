@@ -7,7 +7,7 @@ In this chapter, you are going to learn how to edit an animal's information. We 
 
 ## Create the AnimalEditForm Component
 
-This component component will populate the input fields with the current values from the API. We will obtained the animal details via a fetch call in `componentDidMount`.
+This component will populate the input fields with the current values from the API. We will obtain the animal details via a fetch call in `componentDidMount`.
 
 Here is the flow of the AnimalEditForm component:
 1. Component loads - Save button should be disabled since the data is not available yet..
