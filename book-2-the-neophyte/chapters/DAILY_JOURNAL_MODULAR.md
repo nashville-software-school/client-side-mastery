@@ -17,7 +17,7 @@ Create three new files in your `src/scripts` directory.
 
 > **Tip:** Once this is done, your `journal.js` file should be completely empty.
 
-Now refactor your `src/index.html` file to include all four JavaScript files.
+Now refactor your `index.html` file to include all four JavaScript files.
 
 ## Refactor
 

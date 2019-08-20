@@ -14,16 +14,20 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 6 - [Objects Representing Things](./chapters/OBJECTS_AS_THINGS.md)
 * Chapter 7 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 8 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
-* Chapter 9 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
-* Chapter 10 - [Fetching Data](./chapters/FETCH_INTRO.md)
-* Chapter 11 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
-* Chapter 12 - [Handling Browser Events](./chapters/JS_EVENTS.md)
-* Chapter 13 - [Collecting User Input](./chapters/JS_USER_INPUT_BASICS.md)
-* Chapter 14 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-* Chapter 15 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
+* Chapter 9 - [Handling Browser Events](./chapters/JS_EVENTS.md)
+* Chapter 10 - [Collecting User Input](./chapters/JS_USER_INPUT_BASICS.md)
+* Chapter 11 - [Event Delegation](./chapters/JS_EVENT_DELEGATION.md)
+* Chapter 12 - [Daily Journal - Pt. 4](./chapters/DAILY_JOURNAL_CLICK_EVENTS.md)
 
+> ### __Sprint 2___ Lingo Translator App
 
-> ### __Sprint 2__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
+* Chapter 12 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
+* Chapter 13 - [Fetching Data](./chapters/FETCH_INTRO.md)
+* Chapter 14 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
+* Chapter 15 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
+* Chapter 16 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
+
+> ### __Sprint 3__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
 > ### LinkedIn Projects update with Welcome to Nashville
 
 ## Supplementary Content

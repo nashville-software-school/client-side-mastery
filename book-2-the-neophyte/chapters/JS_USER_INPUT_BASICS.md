@@ -6,7 +6,7 @@ In this chapter you will be creating a two input fields for the user to enter in
 
 ## Address Book
 
-Your job is to create a very straightforward form that someone can use to build an address book. You will not be persisting this data, so use of `json-server` is not needed. This is just to practice the operation of capturing input and builing DOM elements based on it.
+Your job is to create a very straightforward form that someone can use to build an address book. This is just to practice the operation of capturing input and builing DOM elements based on it.
 
 ## Setup
 
