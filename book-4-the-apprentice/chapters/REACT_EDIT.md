@@ -28,7 +28,7 @@ import AnimalManager from "../../modules/AnimalManager"
 import "./AnimalForm.css"
 
 class AnimalEditForm extends Component {
-    //set the intial state
+    //set the initial state
     state = {
       animalName: "",
       breed: "",
