@@ -164,7 +164,7 @@ Be sure to add the link to employees in the **`<NavBar>`** component
 <li><Link className="nav-link" to="/employees">Employees</Link></li>
 ```
 
-If we discharge an animal, we will recieve an error `this.props.deleteAnimal is not a function`.
+If we discharge an animal from the employee detail component, we will recieve an error `this.props.deleteAnimal is not a function`.
 
 There are a few of ways to handle this situation.
 1. Use a conditional and only render the button if the prop `deleteAnimal` exist.

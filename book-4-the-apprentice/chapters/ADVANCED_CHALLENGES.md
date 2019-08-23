@@ -32,11 +32,11 @@ export default {
 
 ## Challenge: Add employee selection dropdown to the AnimalForm.
 **Be sure to complete the chapter on forms before tackling this challenge.**
-Each animal in the kennel should have an employee responsible for it's care. Add a dropdown selection to the **`<AnimalForm>`** and update the database with an employeeId for each pet.
+Each animal in the kennel should have an employee responsible for its care. Add a dropdown selection to the **`<AnimalForm>`** and update the database with an employeeId for each pet.
 
 1. Modify your API to include an employeeId for each pet.
 2. Within the **`<AnimalForm />`** component get the employees data.
-3. Create a dropdown to allow selecting an employee responsiple for the pet.
+3. Create a dropdown to allow selecting an employee responsible for the pet.
 4. Save the employeeId with the new pet.
 
 ## Challenge: Add location selection dropdown to the EmployeeForm
