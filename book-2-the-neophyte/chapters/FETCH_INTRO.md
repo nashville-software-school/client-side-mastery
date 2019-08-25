@@ -171,11 +171,9 @@ fetch("http://localhost:8088/food")
                       food.ingredients = "no ingredients listed"
                     }
 
-                    // Produce HTML representation
-                    const foodAsHTML = foodFactory(food)
-
-                    // Add representaiton to DOM
-                    addFoodToDom(foodAsHTML)
+                    // Build HTML string for individual food
+                    // Add HTML string to DOM
+                    
                 })
         })
     })
