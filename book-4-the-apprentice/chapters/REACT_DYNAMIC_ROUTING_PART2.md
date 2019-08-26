@@ -1,24 +1,6 @@
 # React Router with History
 So far we have been using `exact` and `path` of react-router routes. In order to change the URL and redirect, we need to incorporate `history`.
 
-Since **`ApplicationViews`** contains our routes and this component is **NOT** included in a route, we need to export it `withRouter` in order to gain the additional properties and ability to pass them to other routes/components.
-
-*"withRouter will pass updated match, location, and history props to the wrapped component whenever it renders," reactTraining.*
-
-## Setup
-
-Import into **`ApplicationViews`**.
-
-```js
-import { Route, withRouter } from 'react-router-dom'
-```
-
-Refactor the export of **`ApplicationViews`** to use `withRouter`
-
-```js
-export default withRouter(ApplicationViews)
-```
-
 In order for **`<AnimalDetail>`** to have access to the router history, we need to pass those props to the component. We do this with the spread operator. Refactor the route to include `{...props}`. Take a look at your Chrome React tools before and after the change.
 
 ```js
