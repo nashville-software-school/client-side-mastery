@@ -71,3 +71,6 @@ fetch() // Fetch from the API
 Once you have your fetch written correctly, refresh your browser and go to the Network tab in your dev tools. You will see an entry labeled `fetch`. If you click on that request, you can preview the response.
 
 ![](./images/qqipDG07AL.gif)
+
+## Printing the Response
+Once you've confirmed that the data is coming back correctly from your `fetch`, call the printer functions you wrote in previous Daily Journal exercises to print the data from your json-server API to the DOM.
