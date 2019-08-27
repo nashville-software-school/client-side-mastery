@@ -2,8 +2,6 @@
 
 In this chapter, you are going to learn how to use use a form to express the state of a component, and then use a function to add the animal to the API and redirect to the full animal list.
 
-**This chapter assumes you have employees in the DB.**
-
 **_Quick Note_:** All of the code you will see from here to the end of this chapter needs to be in place before the feature will work.
 
 ## Route for Showing Animal Form
