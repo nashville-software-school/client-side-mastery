@@ -26,8 +26,8 @@ In this book, you will be learning the concepts and tools of React. React is a c
 
 > ### LinkedIn Projects update with Reactive Nuthsell
 
-* Chapter 12 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
-* Chapter 13 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
+* Chapter 15 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+* Chapter 16 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
 * Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 > ## **Begin Client Side Capstone Development**
