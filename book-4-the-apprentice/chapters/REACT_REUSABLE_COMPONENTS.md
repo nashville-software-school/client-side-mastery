@@ -155,16 +155,37 @@ Add the **employeeId** to:
 * `componentDidMount()` - where does the employeeId come from?
 * `updateExistingAnimal()` - where does the employeeId come from?
 
+> **Hint:** Maybe a `select` would the the approprate way to choose an employee?
+> The following code might come in handy.
+
+```jsx
+<select
+  className="form-control"
+  id="employeeId"
+  value={this.state.employeeId}
+  onChange={this.handleFieldChange}
+>
+   {this.state.employees.map(employee =>
+     <option key={employee.id} value={employee.id}>
+       {employee.name}
+     </option>
+   )}
+</select>
+```
+> The code above is not all you will need, however. Read it carefully. What does it _imply_ about the other changes you will need to make to the `AnimalEditForm` component?
+
 Once complete, you should be able to edit an animal.
 
 ## Refactor the NavBar
-Be sure to add the link to employees in the **`<NavBar>`** component
+If you haven't already done so, be sure to add the link to employees in the **`<NavBar>`** component
 
 ```js
 <li><Link className="nav-link" to="/employees">Employees</Link></li>
 ```
 
-If we discharge an animal from the employee detail component, we will recieve an error `this.props.deleteAnimal is not a function`.
+## Practice - Handle the delete
+
+If we discharge an animal from the `EmployeeWithAnimals` component, we will recieve an error `this.props.deleteAnimal is not a function`.
 
 There are a few of ways to handle this situation.
 1. Use a conditional and only render the button if the prop `deleteAnimal` exist.
@@ -172,7 +193,6 @@ There are a few of ways to handle this situation.
 3. Extract the `handleDelete` function and place inside a module that can be imported whenever needed.
 4. **Lift** the `handleDelete` function to a common parent component thus allowing both components access.
 
-## Practice - Handle the delete
 Choose one of the options above and handle the delete button when the **`<AnimalCard>`** is viewed within the **`<EmployeeWithAnimals>`** component.
 
 
