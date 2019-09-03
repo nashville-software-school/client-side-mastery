@@ -18,7 +18,7 @@ Each one of the radio buttons needs to have a click event listener attached to i
 
 ![journal entries filtered by mood when radio button is clicked](./images/E0uirNa8Af.gif)
 
-Now, you could attach the event listeners to each individually. You could also use the `document.getElementsByName()` method, and a `forEach()` to add them more dynamically.
+Now, you could attach the event listeners to each individually. You could also use the `document.querySelector()` method, and a `forEach()` to add them more dynamically.
 
 To get the selected mood, you need to look at the value property of the radio button that was clicked. When you click on any DOM element, that element becomes the `target` of the click event. You can access the element, and its value with the code below.
 

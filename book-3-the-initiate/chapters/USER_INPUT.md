@@ -86,34 +86,88 @@ fetch("url", { // Replace "url" with your API's URL
 })
 ```
 
-This code should be the last logic inside the event listener.
+This code should be the last logic inside the event listener. By the end, your event listener looks like this:
 
-## Practice
+```js
+document.querySelector(fillInTheBlank).addEventListener("click", event => {
+    const creator = document.querySelector(".lego__creator").value
 
-Your company is building an application for an HR department to keep track of its employees.Let's start by building out the functionality for a user to add a new employee and see a list of all the company's employees.
+    // Once you have collected all the values, build your data structure
+    const legoToSave = {
+        property: value,
+        property: value,
+        property: value,
+        property: value
+    }
 
-1. Set up a new project. This project should use Grunt to run `http-server` and `json-server` from the same terminal.
-1. Create a collection (i.e. empty array) in your json-server database file called "employees"
-1. In your `index.html` file, create a form. Your form should have input fields where the HR manager can enter information about the new employee. Include the following fields and add more if you like:
-    - First name
-    - Last name
-    - Email address
-    - Phone number
-    - Birthday
-    - Department
-1. When the user clicks the "Add Employee" button on your form, use the data they entered into the form to build a new employee object in your JavaScript file.
-1. `POST` the new employee object to your json-server database.
-1. When the `POST` request is complete, get a list of all the employees from the database and print them to the DOM.
+    fetch("url", { // Replace "url" with your json-server API's URL
+        method: "POST",
+            headers: {
+            "Content-Type": "application/json"
+        },
+    body: JSON.stringify(legoToSave)
+    })
+})
+```
+The code above will POST the lego to your json-server database, but the new lego will not apepar on the DOM. To update the DOM with the newly added lego, you'll need to make a GET request for all the legos from the database. Then you'll have to print them to the DOM.
 
-## Challenge: More Form Inputs
-Add the following inputs to your form. In your JavaScript file, you should add their values to the employee object before you POST it to the database.
-1. Refactor your form to include a checkbox labeled `Supervisor?`. If the check box is checked, add a property of `supervisor` to your employee object and set it equal to `true`. If not, add a property of `supervisor` to the employee object and set it equal to `false`.
-1. Instead of having the HR manager enter the departments manually in a text input, create a dropdown of departments.
-1. Add radio buttons in your form for the employee's gender
+*Note: it's important that you wait for the POST request to complete before you GET all of the legos again to refresh the DOM. That means that you'll need to chain a `.then()` onto the POST logic and run the code to GET all of the legos inside that `.then()`.*
 
+```js
+document.querySelector(fillInTheBlank).addEventListener("click", event => {
+    const creator = document.querySelector(".lego__creator").value
 
-## Challenge: Filtering Data
-If you haven't already, take some time to read about [filtering data with json-server](https://github.com/typicode/json-server#filter).
-1. Create an affordance for users to view all the employees in a department. If that department has a supervisor, the supervisor's name should be in bold and their DOM component should have a black border that's 1px wide.
-1. Create an affordance to view all the supervisors at the company (from any department).
-1. Create a search bar where users can search all the employees at a company by first or last name.
+    // Once you have collected all the values, build your data structure
+    const legoToSave = {
+        property: value,
+        property: value,
+        property: value,
+        property: value
+    }
+
+    fetch("url", { // Replace "url" with your json-server API's URL
+        method: "POST",
+            headers: {
+            "Content-Type": "application/json"
+        },
+    body: JSON.stringify(legoToSave)
+    }).then(() => {
+        // Once the lego has been posted, GET all of the legos from the database
+        fetch('url')
+        .then(response => response.json())
+        .then(parsedLegos => {
+            // Print your legos to the DOM here
+        })
+    })
+})
+```
+The code above can (and probably should) be refactored into smaller, single responsibility functions. It can also be refactored so that you chain your `.then()` methods instead of nesting them inside each other. Here's an example of how we might refactor the code above:
+```js
+document.querySelector(fillInTheBlank).addEventListener("click", event => {
+    const creator = document.querySelector(".lego__creator").value
+
+    // Once you have collected all the values, build your data structure
+    const legoToSave = {
+        property: value,
+        property: value,
+        property: value,
+        property: value
+    }
+
+    fetch("url", { // Replace "url" with your json-server API's URL
+        method: "POST",
+            headers: {
+            "Content-Type": "application/json"
+        },
+    body: JSON.stringify(legoToSave)
+    }).then(() => {
+     return fetch('url') // GET all of the legos AFTER the POST is complete
+    })
+    .then(response => response.json())
+    .then(parsedLegos => {
+        console.log(parsedLegos)
+        // print parsedLegos to the DOM
+    })
+})
+```
+
