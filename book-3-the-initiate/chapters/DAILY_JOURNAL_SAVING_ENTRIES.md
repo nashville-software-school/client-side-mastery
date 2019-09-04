@@ -15,14 +15,6 @@ In your main JavaScript module (`journal.js`) add a click event listener to the 
 1. Use `document.querySelector` to select your input fields.
 1. Use the `.value` property on the input field elements to get the text that you typed/chose.
 
-### Basic Input Validation
-
-1. Using required attribute to ensure no blank entries
-1. No characters other than letters, numbers, `()`, `{}`, `:`, and `;`
-
-## Journal Entry Factory Function
-
-Define a factory function whose responsibility is to generate an object that represents a journal entry.
 
 ## Using POST Method to Create Resources
 
@@ -54,6 +46,14 @@ fetch("url", { // Replace "url" with your API's URL
 ```js
 post.then(get).then(render)
 ```
+### Basic Input Validation
+
+1. Using required attribute to ensure no blank entries
+1. No characters other than letters, numbers, `()`, `{}`, `:`, and `;`
+
+### Journal Entry Factory Function
+
+Define a factory function whose responsibility is to generate an object that represents a journal entry. See the supplemental chapter on Factory Functions.
 
 ## Challenge: Advanced Form Validation
 
