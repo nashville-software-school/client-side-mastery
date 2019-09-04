@@ -56,11 +56,4 @@ Now we can use fetch to delete just that item in the database.
 
 ```
 
-## Practice: Delete
-1. Revisit your HR application from the User Input chapter.
-1. Add a delete button to your employee DOM component.
-1. When the user clicks the delete button beside an employee's DOM component, that employee should be deleted from the database and the DOM
 
-## Challenge: Are You Sure?
-*Remember that challenges require Googling and should only be attempted if you're comfortable with everything we've done so far.*
-1. Refactor your application so that, when the user clicks the delete button, a modal appears that asks the user if they're sure they want to delete that employee. If the user clicks yes, the employee should be deleted from the database. If they click no, they should be taken back to the main page.
