@@ -34,8 +34,3 @@ Once you have successfully retrieved the value of `ok`, `happy`, or `sad` based 
 
 Once you have filtered the entries by mood, invoke the function that renders the HTML representations to the DOM and pass it the filtered array of entries.
 
-## Challenge - Caching Entries
-
-> **Note**: Remember, challenges should only be attempted once you have completed the main exercise(s) and understand the concept.
-
-Cache your journal entries when you retrieve them from the API. [Caching](https://en.wikipedia.org/wiki/Cache_(computing)) is an important part of keeping the World Wide Web flexible and responsive. If a resources, or a collection of resources (e.g. your journal entries) have not changed, then you should not have to make an unnecessary call to your API to get them again for this exercise.
