@@ -519,7 +519,7 @@ You have been tasked with building a list of email addresses of all of our custo
 1. Create a new project in `workspace`.
 1. In your JavaScript file, paste the [customers array](./data/customers.js) that contains the emails we need to retrieve.
 
-From that array, extract just the customers' contact email addresses and store them in a new array. You will need a nested array method - meaning one iteration inside another one - since you need to iterate the entire array of customers, and then iterate the array of emails for each one.
+From that array, extract just the customers' contact email addresses and store them in a new array. (Hint: look up the `.flat()` array method!)
 
 
 ## Challenge: Chaining Methods
