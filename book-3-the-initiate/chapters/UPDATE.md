@@ -161,20 +161,3 @@ document.querySelector("body").addEventListener("click", () => {
 
 Once the PUT request is successfully completed, we need to make another GET request to get all of the legos in the database and print them to the DOM so that our list "refreshes" and our newly edited information shows up.
 
-
-## Practice: Edit
-1. Revisit your HR application from the User Input chapter.
-1. Add an edit button to your employee DOM component.
-1. When the user clicks the edit button beside an employee's DOM component, a form shoud appear. The form should be auto-populated with that employee's information.
-1. When the user clicks the submit button on the form, the employee's information should be updated in the database and on the DOM.
-
-
-
-
-
-
-
-
-
-
-
