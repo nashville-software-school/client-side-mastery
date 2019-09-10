@@ -21,10 +21,6 @@ The a form with the following input fields:
 1. Name
 1. Phone number
 1. Address
-1. A dropdown menu labeled "contact type" with the following options:
-    - Work
-    - Family
-    - Friends
 
 Users should be able to enter information into the form fields and click a button that says "Save". When they click the save button, the contact should be saved to the `json-server` database and should appear in the DOM.
 
@@ -49,7 +45,7 @@ This module should contain your click events
 
 ### Challenges
 1. A search bar where users can search contacts by name, phone number, or address
-1. A filter feature where users can see _only_ work contacts, _only_ family contacts, or _only_ friend contacts.
+
 
 
 
