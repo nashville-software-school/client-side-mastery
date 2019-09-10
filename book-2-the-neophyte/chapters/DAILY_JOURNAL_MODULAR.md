@@ -68,7 +68,7 @@ objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
 
 ## Challenge
 
-Change the code in both `src/scripts/entriesDOM.js` and `src/scripts/entryComponent.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above. Use [`Object.create`](https://github.com/nashville-software-school/client-side-mastery/blob/da278a4d16a04fba474e39c77bf0c05503521690/book-3-the-initiate/chapters/JS_OBJECT_CREATE.md).
+Change the code in both `src/scripts/entriesDOM.js` and `src/scripts/entryComponent.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above.
 
 When you are done, there should be three objects defined in your application.
 
