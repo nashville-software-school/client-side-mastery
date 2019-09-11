@@ -274,11 +274,11 @@ Once your data is normalized, use your DOM skills to display a card for each emp
 
 You need to design a database to represent the financial relationship between political candidates and corporate entities. Since corporations can contribute to political action committees (PAC), your job is to help see how politicians are being funded, and if that funding is directly translating into bills that politicians [sponsor](https://en.wikipedia.org/wiki/Sponsor_(legislative)).
 
-1. Politicians can receive donations from many PACs.
-1. A legislative bill can be categorized to support only one, particular commercial interest.
+1. Politicians can receive one or many donations from many PACs.
 1. Corporations can donate to multiple PACs, on multiple dates.
+1. A legislative bill can be categorized to support only one, particular commercial interest.
 1. A bill can be sponsored by one, or more, politicians.
-1. PACs can make direct contributions to as many political campaigns as it wants.
+1. PACs can make direct contributions to as many politicians' campaigns as it wants.
 1. Corporations can have multiple interests.
 1. Corporations do **not disclose** any specific information about a donation, including its interests, when it donates to a PAC. We only know the date of the donation and the amount.
 
