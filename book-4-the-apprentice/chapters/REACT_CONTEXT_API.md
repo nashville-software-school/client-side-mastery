@@ -4,7 +4,7 @@ To avoid passing properties down through child components that aren't using them
 
 ## Without Context API
 
-Remeber the political candidate exercise back in BrowserifyLand when figuring out how to join related data collections? Let's revisit that and see how we can build the DOM component with React.
+Remember the political candidate exercise back when you were using JavaScript modules when figuring out how to join related data collections? Let's revisit that and see how we can build the DOM component with React.
 
 Here's the final HTML structure of a database that contains 2 politicians. Each politician sponsors two bills. Each bill has three interests that it legislates.
 
