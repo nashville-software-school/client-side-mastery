@@ -37,6 +37,17 @@ When working with **Official JSON Objects**, all keys should be strings so put d
 
 ![](./images/dQFNJpbEfM.gif)
 
+As mentioned previously in [Chapter 9 - Building and Using an API](./chapters/JSON_SERVER_API.md), each object should have a unique ID. At this point, once you've transplanted your journal entries into `api/entries.json`, make sure to add unique integer IDs to each entry like the following example.
+```
+{
+  "id": 1,
+  "concept": "Array methods",
+  "date": "08/06/19",
+  "entry": "We learned about array methods.",
+  "mood": "ok"
+}
+```
+
 ### Starting the Server
 
 Now you run the `json-server` command with the arguments below in the `api` directory.

@@ -68,7 +68,7 @@ objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
 
 ## Challenge
 
-Change the code in both `src/scripts/DOMPrinter.js` and `src/scripts/singleJournalEntry.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above. 
+Change the code in both `src/scripts/DOMPrinter.js` and `src/scripts/singleJournalEntry.js` so that the functions in each one becomes a method on an object, just like the code for `API` does above.
 
 When you are done, there should be three objects defined in your application.
 

@@ -557,3 +557,4 @@ Copy the JSON from [cars.json](./data/cars.json) and assign it to a variable in 
 1. Which salesperson made the most profit?
 1. Which model was the most popular?
 1. Which bank provided the most loans to our customers?
+1. In which month did zero cars get sold?

@@ -132,3 +132,12 @@ Add the following code to a new HTML file. Make sure you include a stylesheet na
 1. Obtain a reference the element with a class of `article_footer` and add the class of `goldenrod` it.
 
 > **Google tip:** [Find info about classList](http://lmgtfy.com/?q=mdn+javascript+classlist)
+
+## UI/UX Challenge
+**This is an optional challenge once you meet MVP. Make a new GitHub branch for this challenge.**
+
+Take a look at five blog sites and notice how posts are displayed? Do they have things in common? What is different? Is there one that is easier to read (or not).
+
+Take this single blog post and match one of the sites you found. Provide a link to the site in your README.md
+
+Make sure your JavaScript still works!
