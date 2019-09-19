@@ -57,15 +57,18 @@ import './Kennel.css'
 class Kennel extends Component {
     render() {
         return (
-            <div>
-                <h2>Student Kennels<br />
-                    <small>Loving care when you're not there.</small>
-                </h2>
-                <address>
-                    Visit Us at the Nashville North Location
-                    <br />500 Puppy Way
-                </address>
-            </div>
+	<div class="container-main">
+	    	<div class="section-content">
+                	<h2>Student Kennels<br />
+                   	 	<small>Loving care when you're not there.</small>
+                	</h2>
+                	<address>
+                    		Visit Us at the Nashville North Location
+                    		<br />500 Puppy Way
+                	</address>
+            	</div>
+	</div>
+	
         );
     }
 }
@@ -134,24 +137,27 @@ This component can be included as a child of the **`Kennel`** component. Look at
 Update your **`Kennel`** component. Now when the **`Kennel`** component is rendered it will render the **`AnimalCard`** component. We can say that the Kennel component is a parent of the AnimalCard component. (Starting Kennel.css is below.)
 
 ```jsx
-import React, { Component } from 'react'
-import AnimalCard from './animal/AnimalCard'
-import './Kennel.css'
+import React, { Component } from "react";
+import AnimalCard from "./animal/AnimalCard";
+import "./Kennel.css";
 
 class Kennel extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <h2>Student Kennels<br />
+      <div class="container-main">
+        <div class="section-content">
+          <h2>
+            Student Kennels
+            <br />
             <small>Loving care when you're not there.</small>
           </h2>
           <address>
             Visit Us at the Nashville North Location
-            <br />500 Puppy Way
+            <br />
+            500 Puppy Way
           </address>
         </div>
-        <div>
+        <div class="container-cards">
           <AnimalCard />
           <AnimalCard />
           <AnimalCard />
@@ -162,6 +168,7 @@ class Kennel extends Component {
 }
 
 export default Kennel;
+
 
 ```
 
@@ -191,35 +198,32 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
-p {
-  margin-bottom: 1.5em;
-  color: #d6fcff;
-  color: darkslateblue;
+.section-container{
+    padding: 1.5em;
 }
 
-strong {
-  font-weight: bold;
+.section-content{
+    text-align: center;
 }
 
-address {
-  margin: 0 0 1.5em;
+.container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-img {
-  display: block;
-  border: 0;
-  width: 100%;
-  height: auto;
+.card{
+    width: 25vw;
+    padding: 1em;
+    margin: 1em;
+    border: 1x solid gray;
 }
 
-.section-content {
-  padding: 1.4em;
-}
-
-.container-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+img{
+    display: block;
+    height: auto;
+    border-radius: 50%;
+    width: 80%
 }
 
 ```
