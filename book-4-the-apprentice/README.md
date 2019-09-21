@@ -17,6 +17,7 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * Chapter 12 - [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
 
 **More Good Stuff**
+* Extra Practice - [Library System App](https://gist.github.com/jordan-castelloe/b02a03b7b2fd7a69a5fbd94c3e16fb6d)
 * Supplement - [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
 * Supplement- [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
 * Supplement - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
