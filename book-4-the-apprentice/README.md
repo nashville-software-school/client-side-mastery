@@ -9,17 +9,17 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * Chapter 5 - [React: Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md)
 * Chapter 6 - [React: Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md)
 * Chapter 7 - [React: Dynamic Routing Part 2 with Delete and loadingStatus](./chapters/REACT_DYNAMIC_ROUTING_PART2.md)
-* Chapter 8 - [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
-* Chapter 9 - [React: Create Animal With A Form](./chapters/REACT_FORMS.md)
-* Chapter 10 - [React: Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
-* Chapter 11 - [React: Edit](./chapters/REACT_EDIT.md)
+* Chapter 8 - [React: Create Animal With A Form](./chapters/REACT_FORMS.md)
+* Chapter 9 - [React: Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
+* Chapter 10 - [React: Edit](./chapters/REACT_EDIT.md)
 
 **All of the above should be complete before proceeding.**
 * Chapter 12 - [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
 
 **More Good Stuff**
-* Chapter 13 - [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
-* Chapter 14 - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
+* Supplement - [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
+* Supplement- [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
+* Supplement - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
 
 > ## Sprint 4: Reactive Nutshell
 
