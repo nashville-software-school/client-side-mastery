@@ -195,7 +195,6 @@ The `componentDidMount()` lifecycle hook runs after the component output has bee
 
 **Note**
 * Owners should have the `id`, `phoneNumber`, and `name` properties.
-* Animals can have multiple owners.
 
 ![](./images/eB9CCcrUHy.gif)
 
