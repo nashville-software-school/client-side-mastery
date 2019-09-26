@@ -159,7 +159,7 @@ Ensure that customers can't access locations, owners, or employees unless they s
 
 ## Practice: Change the view once the user logs in
 
-Once a user logs in, redirect them to the `home` route. You will need to refactor the `login` route. With routes, consider when you will need to use `component` vs `render` and the use of `{...props}`.
+Once a user logs in, redirect them to the `home` route instead of the `animals` route.
 
 ## Challenge: No Animal ID in API
 What if an animalId is no longer available in the API? Write a conditional to display something different if an animal(user, employee or location) is not available/valid.
