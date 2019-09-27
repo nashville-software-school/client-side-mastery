@@ -16,6 +16,8 @@ In this book, you will be learning the concepts and tools of React. React is a c
 
 **All of the above should be complete before proceeding.**
 * Chapter 12 - [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
+* Chapter 13 - [React: Lifting state and passing props with Login](./chapters/REACT_LIFT_STATE_PASS_PROPS.md)
+*
 
 **More Good Stuff**
 * Chapter 13 - [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
