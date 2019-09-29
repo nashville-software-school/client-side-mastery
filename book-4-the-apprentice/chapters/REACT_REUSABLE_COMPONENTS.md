@@ -144,19 +144,28 @@ export default EmployeeWithAnimals;
 
 ```
 
+## Refactor the NavBar
+If you haven't already done so, be sure to add the link to employees in the **`<NavBar>`** component
+
+```js
+<li><Link className="nav-link" to="/employees">Employees</Link></li>
+```
+
 
 Test it out. Each employee should display a list of animals. However, we are not done.
 
-If we edit an animal, the employeeId is missing. We need to add it to the **`<AnimalEditForm>`**.
+If we edit or create an animal, the employeeId is missing. We need to add it to the **`<AnimalEditForm>`**.
 
-## Refactor AnimalEditForm
+## Practice: Refactor AnimalEditForm
+
+In both `AnimalForm` and `AnimalEditForm`, you're going to have to add a dropdown menu to select an employee for this animal. Your dropdown list will need to show _all_ of the employees, but users can only select one. 
+
 Add the **employeeId** to:
 * `state`
 * `componentDidMount()` - where does the employeeId come from?
 * `updateExistingAnimal()` - where does the employeeId come from?
 
-> **Hint:** Maybe a `select` would the the approprate way to choose an employee?
-> The following code might come in handy.
+The following code will come in handy.
 
 ```jsx
 <select
@@ -172,28 +181,10 @@ Add the **employeeId** to:
    )}
 </select>
 ```
-> The code above is not all you will need, however. Read it carefully. What does it _imply_ about the other changes you will need to make to the `AnimalEditForm` component?
+> The code above is not all you will need, however. Read it carefully. What does it _imply_ about the other changes you will need to make to the `AnimalForm` and `AnimalEditForm` components?
 
-Once complete, you should be able to edit an animal.
+Once complete, you should be able to create a new animal and edit an existing animal. All animals in the database should have or retain their `employeeId` propperties.
 
-## Refactor the NavBar
-If you haven't already done so, be sure to add the link to employees in the **`<NavBar>`** component
-
-```js
-<li><Link className="nav-link" to="/employees">Employees</Link></li>
-```
-
-## Practice - Handle the delete
-
-If we discharge an animal from the `EmployeeWithAnimals` component, we will recieve an error `this.props.deleteAnimal is not a function`.
-
-There are a few of ways to handle this situation.
-1. Use a conditional and only render the button if the prop `deleteAnimal` exist.
-2. Include the same `handleDelete` function within **`<EmployeeWithAnimals>`**
-3. Extract the `handleDelete` function and place inside a module that can be imported whenever needed.
-4. **Lift** the `handleDelete` function to a common parent component thus allowing both components access.
-
-Choose one of the options above and handle the delete button when the **`<AnimalCard>`** is viewed within the **`<EmployeeWithAnimals>`** component.
 
 
 ## Practice: Employees per Location
