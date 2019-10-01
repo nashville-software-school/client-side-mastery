@@ -9,7 +9,7 @@ Remember:
 1. Functions can be passed to children components.
 
 
-*Thinking in React*: I need to move the state of the user to a common parent component. I can then pass the state of user as props to **`<ApplicationViews>`** and **`<Navbar>`**. Based on the props of the user, I can show different components. Also, the `**<Kennel>**` is the only place that can change the user state so I need a function to `updateUser`.
+*Thinking in React*: I need to move the state of the user to a common parent component. I can then pass the state of user as props to **`<ApplicationViews>`** and **`<Navbar>`**. Based on the props of the user, I can show different components. Also, the **`<Kennel>`** is the only place that can change the user state so I need a function to `updateUser`.
 
 ## Refactor the Kennel Component
 1. Move `isAuthenticated()` from  **`<AppliationViews>`** to **`<Kennel>`**.
