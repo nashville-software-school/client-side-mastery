@@ -159,7 +159,6 @@ Styling components intelligently can be handled through naming your classes acco
 ## Videos to Watch
 
 1. [Introduction to BEM - A front-end methodology](https://www.youtube.com/watch?v=IO-4Z32O--c)
-1. [020 CSS Architecture Components and BEM](https://www.youtube.com/watch?v=8wX78mtlNyU)
 
 ## Practice
 
