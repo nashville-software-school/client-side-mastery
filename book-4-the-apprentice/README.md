@@ -18,17 +18,16 @@ In this book, you will be learning the concepts and tools of React. React is a c
 
 **More Good Stuff**
 * Extra Practice - [Library System App](https://gist.github.com/jordan-castelloe/b02a03b7b2fd7a69a5fbd94c3e16fb6d)
-* Supplement - [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
-* Supplement- [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
-* Supplement - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
 
 > ## Sprint 4: Reactive Nutshell
 
+* Chapter 13 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
 
-> ### LinkedIn Projects update with Reactive Nuthsell
-
-* Chapter 15 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
-* Chapter 16 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
+**Things to work on while you wait for your capstone meeting:**
+* Supplement - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+* Supplement - [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
+* Supplement- [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
+* Supplement - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
 * Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 > ## **Begin Client Side Capstone Development**
