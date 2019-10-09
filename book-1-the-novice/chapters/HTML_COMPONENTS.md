@@ -2,6 +2,10 @@
 
 Combining comments, semantic HTML, and CSS to build HTML components.
 
+## What Are We Building?
+
+Your instruction staff will do an interactive session with you to build a web page for something fun. You get a voice in this session.
+
 ## The Document Object Model (DOM)
 
 The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. This is an overview of DOM-related materials here at W3C and around the web.
