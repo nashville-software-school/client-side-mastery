@@ -16,6 +16,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 8 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
 * Chapter 9 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
 * Chapter 10 - [Fetching Data](./chapters/FETCH_INTRO.md)
+* Chapter 11 - [Command Line Accelerators](./chapters/BASH_ALIASES.md)
 * Chapter 11 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
 * Chapter 12 - [Handling Browser Events](./chapters/JS_EVENTS.md)
 * Chapter 13 - [Collecting User Input](./chapters/JS_USER_INPUT_BASICS.md)
