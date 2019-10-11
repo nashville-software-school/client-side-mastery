@@ -9,10 +9,11 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 1a - [Installations for Mac](./chapters/GETTING_STARTED_MAC.md)
 * Chapter 1b - [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md)
 * Chapter 2 - [Command Line Basics](./chapters/CLI_BASICS.md)
-* Chapter 3 - [HTML/CSS Basics: Fish in my Aquarium ](./chapters/HTML_COMPONENTS.md)
-* Chapter 4 - [Track Changes to our Aquarium with Git](./chapters/GIT_BASICS.md)
-* Chapter 5 - [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)
-* Chapter 6 - [Twoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)
+* Chapter 3 - [HTML/CSS Basics: Fish in my Aquarium](./chapters/HTML_COMPONENTS.md)
+* Chapter 4 - [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md)
+* Chapter 5 - [Track Changes to our Aquarium with Git](./chapters/GIT_BASICS.md)
+* Chapter 6 - [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)
+* Chapter 7 - [Twoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)
 
 > ### __Sprint 1__ - Celebrity Tribute
 
