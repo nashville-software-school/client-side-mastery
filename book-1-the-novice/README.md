@@ -6,21 +6,22 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 ## Chapters
 
-* Chapter 1a - [Installations for Mac](./chapters/GETTING_STARTED_MAC.md)
-* Chapter 1b - [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md)
-* Chapter 2 - [Command Line Basics](./chapters/CLI_BASICS.md)
-* Chapter 3 - [HTML/CSS Basics: Fish in my Aquarium](./chapters/HTML_COMPONENTS.md)
-* Chapter 4 - [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md)
-* Chapter 5 - [Track Changes to our Aquarium with Git](./chapters/GIT_BASICS.md)
-* Chapter 6 - [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)
-* Chapter 7 - [Twoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)
+| Chapter | Topic                                                              | Tags  |
+| ------- |:------------------------------------------------------------------ | :---- |
+| 1a      | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md)         | #osx #setup |
+| 1b      | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) | #windows #setup |
+| 2       | [Terminal Basics](./chapters/CLI_BASICS.md)                        | #cli |
+| 3       | [Fish in my Aquarium](./chapters/HTML_COMPONENTS.md)               | #html #css #flexbox #bem |
+| 4       | [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md) | #cli |
+| 5       | [Track Aquarium Changes](./chapters/GIT_BASICS.md)                 | #git |
+| 6       | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)    | #git #github |
+| 7       | [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)          | #twoops #html #css |
+|         | **_Spies Like Us Group Project_**                                  | #sprint |
+| 8       | [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)      | #career |
 
-> ### __Sprint 1__ - Celebrity Tribute
+## __Sprint 1__ - Spies Like Us
 
-* Chapter 12 - [Updating LinkedIn Projects](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)
 
 ## Supplementary Content
 
 * Supplement - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
-
-Once you are strong on these foundational concepts, you will move along to [Book 2 - The Neophyte](../book-2-the-neophyte/README.md).

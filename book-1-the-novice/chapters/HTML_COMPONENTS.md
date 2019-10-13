@@ -166,7 +166,24 @@ The final touch is to center align the text in each of the interest boxes.
 
 ## Project: Fish in my Aquarium
 
-Let's build a couple HTML pages whose user will be an avid rare fish collector who maintains a sophisticated tank in his home. His name is Martin.
+Let's build a couple HTML pages whose user will be an avid rare fish collector who maintains a sophisticated tank in his home. His name is Martin. Martin meets you at a local coffee and explains what he needs to have on his web site.
+
+> "So nice to meet you finally after all of those emails. Please, grab a chair," says Martin. He uses his leather loafer to gently nudge a chair slightly away from the table. He subtly waves his hand towards the chair in invitation.
+>
+> You smile, pull the chair and out and start to slide your computer bag from your shoulder.
+>
+> "Thanks, Martin."
+>
+> You put your bag on the floor next to the chair and put your cup of coffee in the middle of the table, not far from Martin's. You note briefly that Martin got the largest size that the coffee shop offer, and it appears to be a latte.
+>
+> "I'm glad to be able to help you build a site to track your amazing fish. When you sent me that email the other day listing all the ones that you have collected, I spent all night researching them. It was fascinating!" you exclaim.
+>
+> Martin smiles widely, obviously pleased that you appreciate his achievements with his hobby.
+>
+> You continue to pull your notebook and a pen out of your bag, and ask, "So you said that you wanted two different pages for this site, one that lists the fish you currently own, and another one that lists all the places that you've visited to collect the fish..."
+>
+>
+
 
 
 
