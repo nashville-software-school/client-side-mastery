@@ -64,7 +64,7 @@ Read the will-written answer to a [question on the Stack Exchange website](https
 .fish__name {}
 ```
 
-## Advanced Challenge:
+## Advanced Challenge: Terminal Welcome Message
 
 > **NOTE:** Advanced challenges are only to be attempted once the practice exercises are complete and you feel you both (a) a solid grasp on the basic knowledge of the current topic, and (b) you have adequate time to devote to them. They are intended to be difficult to solve and you must spend time researching it before any instructor will offer guidance.
 
