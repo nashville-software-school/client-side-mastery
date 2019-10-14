@@ -182,15 +182,48 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 >
 > You continue to pull your notebook and a pen out of your bag, and ask, "So you said that you wanted two different pages for this site, one that lists the fish you currently own, and another one that lists all the places that you've visited to collect the fish..."
 >
+> "Harvest the fish," Martin interjects with a forced smile.
 >
+> "Sorry, where you harvested the fish." You restrain an eye roll.
+>
+> You shift in your seat because the hard, wooden chairs are already becoming uncomfortable, and continue, "Is there anything you've thought of based on the example sites I sent you?"
+>
+> Martin leans forward and put his hands on the table, "Actually yes. On the _'Fish Upon A Star'_ site, they had this content on the right side of the list of fish that explained the process of keeping the tank clean and the water at the right salinity and temperature. I'd love to have that so I can put my thoughts in there."
+>
+> You take notes as he talks and make sure that you jot down the you will need an `<aside>` element on that page.
+>
+> "All the sites had a navigation bar at the top. I'd like to have a navigation bar. Were you planning on having a navigation bar?" It's clear the way Martin places an emphasis on _navigation bar_ that he's proud that he knows what that's called.
+>
+> You smile slightly and say, "Oh absolutely. Any web site that has more than one page would definitely need one of those."
+>
+> Martin smiles smugly and says, "I thought so. Just make it look clean and minimal."
+>
+> _"Martin's been doing a little research on web stuff,"_ you think as you pointedly write down 'Must have nav bar' in your notes.
+>
+> He patiently waits for you to finish jotting down these important notes, and then says, "Lastly, the _'Buoys and Gills'_ site had a part that listed travel tips for people who love to scuba and harvest fish. On the page that lists all of the out-of-the-way places I've visited, I would like to provide a few quotes to help people."
+>
+> "Where would you like that to appear?" you ask briskly.
+>
+> Martin responds, "Right under the navigation bar, and before the list of locations."
+>
+> You note that in your journal, and ask Martin if there's anything else he'd like to be added.
+>
+> "No, I think that's enough to go on for now. Just make sure it's tasteful, since I'm fairly sure that I'll get lots of visitors to the site."
+>
+> _"Of course you will,"_ you think as you smile and say, "I'll make sure all those people have a great experience on your site."
+>
+> You both shake hands and you head back home to start work on the site.
 
-
-
+### Discussion Points
 
 1. What are the components?
 2. What should be the class names for each?
 3. Which semantic tags should we use?
-4. How can we use Flexbox to build a better layout of fish?
+4. How can we use Flexbox to build a better layout of fish and locations?
+
+### Time to Build
+
+Your instruction team will lead the class through the construction of the this site. You may follow along, or you can just close your computer and watch what gets built and offer your suggestions.
 
 
 ## Additional References
@@ -261,10 +294,8 @@ Background color - if you add a background color/image, ensure the copy (text co
 **This is an optional challenge once you meet MVP. Make a new Github branch for this challenge.**
 
 Creating visual hierarchies
-1. Add an address, phone number, and website link to each coffee house (you may use mocked data)
+1. Add an address, phone number, and website link to each coffee house (you may use mock/fake data)
 2. Using semantic HTML and CSS, style each coffee house component with the goals of easy scannability. At a minimum, you will emphasize the name of each shop and make the website link clearly clickable.
 
 Background color - if you add a background color/image, ensure the copy (text color) has good contrast and is legible.
-
-
 
