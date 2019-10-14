@@ -8,21 +8,21 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 | Chapter | Topic                                                              | Tags  |
 | ------- |:------------------------------------------------------------------ | :---- |
-| 1a      | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md)         | <span style="font-size:0.8em">#osx #setup</span> |
-| 1b      | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) | <span style="font-size:0.8em">#windows #setup</span> |
-| 2       | [Terminal Basics](./chapters/CLI_BASICS.md)                        | <span style="font-size:0.8em">#cli</span> |
-| 3       | [Fish in my Aquarium](./chapters/HTML_COMPONENTS.md)               | <span style="font-size:0.8em">#html #css #flexbox #bem #aquarium</span> |
-| 4       | [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md) | <span style="font-size:0.8em">#cli #aquarium</span> |
-| 5       | [Track Aquarium Changes](./chapters/GIT_BASICS.md)                 | <span style="font-size:0.8em">#git #aquarium</span> |
-| 6       | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)    | <span style="font-size:0.8em">#git #github #aquarium</span> |
-| 7       | [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)          | <span style="font-size:0.8em">#twhoops #html #css</span> |
-|         | **_Spies Like Us Group Project_**                                  | <span style="font-size:0.8em">#sprint</span> |
-| 8       | [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)      | <span style="font-size:0.8em">#career</span> |
+| 1a      | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md)         | <span style="smaller">#osx #setup</span> |
+| 1b      | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) | <span style="smaller">#windows #setup</span> |
+| 2       | [Terminal Basics](./chapters/CLI_BASICS.md)                        | <span style="smaller">#cli</span> |
+| 3       | [Fish in my Aquarium](./chapters/HTML_COMPONENTS.md)               | <span style="smaller">#html #css #flexbox #bem #aquarium</span> |
+| 4       | [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md) | <span style="smaller">#cli #aquarium</span> |
+| 5       | [Track Aquarium Changes](./chapters/GIT_BASICS.md)                 | <span style="smaller">#git #aquarium</span> |
+| 6       | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)    | <span style="smaller">#git #github #aquarium</span> |
+| 7       | [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)          | <span style="smaller">#twhoops #html #css</span> |
+|         | **_Spies Like Us Group Project_**                                  | <span style="smaller">#sprint</span> |
+| 8       | [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)      | <span style="smaller">#career</span> |
 
 
 ## Supplementary Content
 
 | Chapter | Topic                                                              | Tags  |
 | ------- |:------------------------------------------------------------------ | :---- |
-| S1   | [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)       | <span style="font-size:0.8em">#github #dns #hosting</span> |
+| S1   | [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)       | <span style="smaller">#github #dns #hosting</span> |
 
