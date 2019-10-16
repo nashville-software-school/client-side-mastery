@@ -13,12 +13,12 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 | 2       | [Terminal Basics](./chapters/CLI_BASICS.md)                        | <sub>#cli</sub> |
 | 3       | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md)               | <sub>#html #css #flexbox #bem</sub> |
 | 4       | [Fish in my Aquarium](./chapters/HTML_AQUARIUM.md)               | <sub>#html #css #flexbox #bem #aquarium</sub> |
-| 4       | [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md) | <sub>#cli #aquarium</sub> |
-| 5       | [Track Aquarium Changes](./chapters/GIT_BASICS.md)                 | <sub>#git #aquarium</sub> |
-| 6       | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)    | <sub>#git #github #aquarium</sub> |
-| 7       | [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)          | <sub>#twhoops #html #css</sub> |
+| 5       | [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md) | <sub>#cli #aquarium</sub> |
+| 6       | [Track Aquarium Changes](./chapters/GIT_BASICS.md)                 | <sub>#git #aquarium</sub> |
+| 7       | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)    | <sub>#git #github #aquarium</sub> |
+| 8       | [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)          | <sub>#twhoops #html #css</sub> |
 |         | **_Spies Like Us Group Project_**                                  | <sub>#sprint</sub> |
-| 8       | [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)      | <sub>#career</sub> |
+| 9       | [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)      | <sub>#career</sub> |
 
 
 ## Supplementary Content
