@@ -17,7 +17,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 | 6       | [Track Aquarium Changes](./chapters/GIT_BASICS.md)                 | <sub>#git #aquarium</sub> |
 | 7       | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)    | <sub>#git #github #aquarium</sub> |
 | 8       | [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)          | <sub>#twhoops #html #css</sub> |
-|         | **_Spies Like Us Group Project_**                                  | <sub>#sprint</sub> |
+|         | **_Hello World Group Project_**                                  | <sub>#sprint</sub> |
 | 9       | [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)      | <sub>#career</sub> |
 
 

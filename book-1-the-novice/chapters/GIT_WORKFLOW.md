@@ -5,7 +5,7 @@
 ## Your First Group Project
 
 1. Everyone clone the same repository
-1. Each person create a branch `initials-fish`
+1. Each person create a branch `{your initials}-fish`
 1. Add your fish component to the HTML
 1. Add, commit, push branch
 1. Create Pull Request
