@@ -75,6 +75,14 @@ Type this command into your terminal, and then wait a while.
 xcode-select --install
 ```
 
+## Git
+
+Git is how you and your teammates will work on a shard codebase during your time at NSS. Type in the following command to install.
+
+```sh
+brew install git
+```
+
 ### Oh My Zsh
 
 1. If you haven't install Homebrew from the previous step, please complete that first.

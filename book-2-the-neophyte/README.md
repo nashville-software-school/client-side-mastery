@@ -9,11 +9,11 @@
 
 ---
 
-* Chapter 4 - [Glassdale PD: Cold Case Cyber Police](./chapters/DEBUG_THE_AQUARIUM.md)
-* Chapter 5 - [CCCP: Criminal API](./chapters/DEBUG_THE_AQUARIUM.md)
-* Chapter 6 - [CCCP: Likely Suspects](./chapters/DEBUG_THE_AQUARIUM.md)
-* Chapter 7 - [CCCP: What's Your Alibi?](./chapters/DEBUG_THE_AQUARIUM.md)
-* Chapter 8 - [CCCP: Hidden Witnesses](./chapters/DEBUG_THE_AQUARIUM.md)
+* Chapter 4 - [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md)
+* Chapter 5 - [CCCP: Criminal API](./chapters/GLASSDALE_CRIMINAL_API.md)
+* Chapter 6 - [CCCP: Likely Suspects](./chapters/GLASSDALE_CRIMINAL_HISTORY.md)
+* Chapter 7 - [CCCP: What's Your Alibi?](./chapters/GLASSDALE_ALIBI.md)
+* Chapter 8 - [CCCP: Hidden Witnesses](./chapters/GLASSDALE_WITNESSES.md)
 
 
 ---
