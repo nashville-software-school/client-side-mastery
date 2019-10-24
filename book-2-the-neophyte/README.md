@@ -1,10 +1,22 @@
 # Book 2 - The Neophyte
 
-In this book, you will build a strong foundation of skills and practices that will serve you throughout the course, and the entirety of your career as a software developer. Once complete, you will be ready to begin your initiation into the world of modern development - using all the tools and libraries that are popular today.
-
-You will learn not only the basics of coding, design, and teamwork skills, but you will also unlock the secrets and power of your computer, making it bend to your will. Your computer is the instrument of the craft, and to become a true professional, you must have proficiency and knowledge of it.
 
 ## Chapters
+
+* Chapter 1 - [Representing Fish and Fish Tanks in Code](./chapters/BASIC_DATA_STRUCTURES.md)
+* Chapter 2 - [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md)
+* Chapter 3 - [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md)
+
+---
+
+* Chapter 4 - [Glassdale PD: Cold Case Cyber Police](./chapters/DEBUG_THE_AQUARIUM.md)
+* Chapter 5 - [CCCP: Criminal API](./chapters/DEBUG_THE_AQUARIUM.md)
+* Chapter 6 - [CCCP: Likely Suspects](./chapters/DEBUG_THE_AQUARIUM.md)
+* Chapter 7 - [CCCP: What's Your Alibi?](./chapters/DEBUG_THE_AQUARIUM.md)
+* Chapter 8 - [CCCP: Hidden Witnesses](./chapters/DEBUG_THE_AQUARIUM.md)
+
+
+---
 
 * Chapter 1 - [Fun with Manipulating DOM](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
 * Chapter 2 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
@@ -12,7 +24,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 4 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
 * Chapter 5 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
 * Chapter 6 - [Objects Representing Things](./chapters/OBJECTS_AS_THINGS.md)
-* Chapter 7 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 8 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
 * Chapter 9 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
 * Chapter 10 - [Fetching Data](./chapters/FETCH_INTRO.md)

@@ -1,6 +1,6 @@
 # Book 4 - The Apprentice
 
-In this book, you will be learning the concepts and tools of React. React is a component based UI library for the browser.
+## Chapters
 
 * Chapter 1 - [React: Getting Started with the Basics](./chapters/REACT_BASICS.md)
 * Chapter 2 - [React: URL Routing - Navbar](./chapters/REACT_ROUTING.md)

@@ -1,6 +1,6 @@
 # Book 3 - The Initiate
 
-In this book, you will learn tools, libraries and workflows that modern client side developers use.
+## Chapters
 
 * Chapter 1 - [ES6 Modules](./chapters/JS_ES6_MODULES.md)
 * Chapter 2 - [Daily Journal - Part 6](./chapters/DAILY_JOURNAL_ES6_MODULES.md)
