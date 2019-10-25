@@ -1,14 +1,14 @@
 # Martin's Minimal Mockup
 
-> After an "urgent" email from Martin, you have agreed to meet him again at the coffee shop. He has "critical information" to show you that he "thought he made clear the first time we talked." Just thinking about the email makes you sigh heavily as you pull into a parking spot and then head towards your meeting.
+> After an "urgent" email from Martin, you have agreed to meet him again at the coffee shop. He has "critical information" to tell you that he "thought he made clear the first time we talked." Just thinking about the email makes you sigh heavily as you pull into a parking spot and then head towards your meeting.
 >
-> You can the shop and see Martin in the back furiously scribbling on a legal pad, and head over to meet him. He greets you without smiling and turns his legal pad towards you, and blurts out, "We have a problem with the site."
+> You scan the shop and see Martin in the back furiously scribbling on a legal pad, and head over to meet him. He greets you without smiling, turns his legal pad towards you, and blurts out, "We have a problem with the site."
 >
 > You blink, and say, "Ok, what's the issue?"
 >
 > "I said I wanted a nice, clean site and right now I think it's way too 'busy'. Here's what I want."
 >
-> He takes his pencil and makes a stabbing motion towards the legal pad and says, "There's too much information on the page when it shows up. I was on the 'For the Halibut' web site and I noticed that they had these buttons that I could click on which showed these little windows in the middle of the screen."
+> He takes his pencil and makes a stabbing motion towards the legal pad and says, "There's too much information on the page when it shows up. I was on the 'For the Halibut' web site, and I noticed that they had these buttons I could click on which then showed these little windows in the middle of the screen."
 >
 > "Oh, those are called dialogs," you interject patiently.
 >
@@ -53,7 +53,7 @@ First, each of your fish components needs to have a corresponding `<dialog>`
 
 ```
 
-Create a new JavaScript module named `dialogs.js` whose Single Responsibility will be to manage the showing and hiding of the digalog windows in the application.
+Create a new JavaScript module named `dialogs.js` whose Single Responsibility will be to manage the showing and hiding of the dialog windows in the application.
 
 ```js
 const allDialogs = document.querySelectorAll(".dialog--fish")
