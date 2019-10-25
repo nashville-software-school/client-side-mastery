@@ -35,12 +35,17 @@ Implementing a dialog box is a straightforward process in the browser. There is 
 First, each of your fish components needs to have a corresponding `<dialog>`
 
 ```html
+<!-- Hey look! It's an HTML representation of one of Martin's fish -->
 <div class="fish">
-    <div><img class="fish__image"
+    <div>
+        <img class="fish__image"
             src="https://3.imimg.com/data3/IW/XT/GLADMIN-105863/fish-125x125.jpg"
-            alt=""></div>
+            alt="">
+    </div>
     <div class="fish__name">Bart</div>
-    <div><button id="button--bart">Details</button></div>
+    <div>
+        <button id="button--bart">Details</button>
+    </div>
 
     <dialog class="dialog--fish" id="details--bart">
         <div>Species: Orange Clownfish</div>
@@ -50,32 +55,68 @@ First, each of your fish components needs to have a corresponding `<dialog>`
         <button class="button--close" id="close-bart">Close Dialog</button>
     </dialog>
 </div>
-
 ```
 
 Create a new JavaScript module named `dialogs.js` whose Single Responsibility will be to manage the showing and hiding of the digalog windows in the application.
 
+Place this code at the top of the file. This code requires no modification if you create all the dialog elements with the code above.
+
 ```js
 const allDialogs = document.querySelectorAll(".dialog--fish")
+const allCloseButtons = document.querySelectorAll(".button--close")
 
-document.querySelector(".button--close").addEventListener(
-    "click",
-    theEvent => {
-        for (const dialog of allDialogs) {
-            dialog.close()
+for (const btn of allCloseButtons) {
+    btn.addEventListener(
+        "click",
+        theEvent => {
+            for (const dialog of allDialogs) {
+                dialog.close()
+            }
         }
-    }
-)
+    )
+}
 ```
 
-Add one of these for every fish that you create. Replace the CSS selector, but nothing else needs to change.
+Next, create a function whose Single Responsbility is to define event listeners. These are listening for the event in the browser of a user clicking on one of the button.
 
 ```js
-document.querySelector("#ivan-button").addEventListener(
-    "click",
-    theClickEvent => {
-        theDialog = document.querySelector("#ivan-details")
-        theDialog.show()
-    }
-)
+const initializeDetailButtonEvents = () => {
+}
 ```
+
+Add one of these for every fish that you create. Replace the CSS selector, but nothing else needs to change. Here's the first event listner. When the user clicks on the "Details" button underneath Bart's image, it will show the dialog element you created for Bart in the HTML above.
+
+```js
+const initializeDetailButtonEvents = () => {
+
+    // Show Bart's details when the button is clicked
+    document.querySelector("#button--bart").addEventListener(
+        "click",
+        theClickEvent => {
+            const theDialog = document.querySelector("#details--bart")
+            theDialog.showModal()
+        }
+    )
+
+}
+```
+
+Lastly, you need to export this function, so that the main module can import it and invoke it. Place this code at the very bottom of the `dialogs.js` file.
+
+```js
+export default initializeDetailButtonEvents
+```
+
+Now import the function into `main.js` and invoke it.
+
+```js
+/**
+ *  Import the initializeDetailButtonEvents function
+ *  reference and then invoke it
+ */
+import initializeDetailButtonEvents from './dialogs.js'
+
+initializeDetailButtonEvents()
+```
+
+Now refresh your browser and click on Bart's detail button.
