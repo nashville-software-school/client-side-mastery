@@ -120,3 +120,15 @@ initializeDetailButtonEvents()
 ```
 
 Now refresh your browser and click on Bart's detail button.
+
+> **Tip:** If you dialog isn't working, please see a member of the instruction team before you move on. Moving on without this code working will be wasted time.
+
+## Dialog All The Things!!
+
+Now you must make all the fish have a button. Modify your aquarium project to...
+
+1. Have a `<dialog>` for each fish and put the corresponding properties in it.
+1. Add a new event listener inside the `initializeDetailButtonEvents()` function in `dialogs.js`.
+1. Once done, very that all buttons work as intended.
+
+> **Tip:** Make sure you use your debugger and breakpoints if any of your code doesn't work. If you are still uncomfortable with the debugger, see your instruction team for a review.
