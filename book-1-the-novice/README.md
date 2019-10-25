@@ -13,7 +13,7 @@
 * Chapter 8 - [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)
 * Chapter 9 - [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)
 
-> ## **_Hello World Group Project_**
+> ## [**_Hello World Group Project_**](./chapters/HELLO_WORLD.md)
 
 * Chapter 10 - [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)
 
