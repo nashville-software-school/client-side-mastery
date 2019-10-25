@@ -8,7 +8,7 @@
 >
 > "I said I wanted a nice, clean site and right now I think it's way too 'busy'. Here's what I want."
 >
-> He takes his pencil and makes a stabbing motion towards the legal pad and says, "There's too much information on the page when it shows up. I was on the 'For the Halibut' web site, and I noticed that they had these buttons I could click on which then showed these little windows in the middle of the screen."
+> He takes his pencil and makes a stabbing motion towards the legal pad and says, "There's too much information on the page when it shows up. I was on the 'For the Halibut' web site, and I noticed that they had these buttons I could click on which showed these little windows in the middle of the screen."
 >
 > "Oh, those are called dialogs," you interject patiently.
 >
