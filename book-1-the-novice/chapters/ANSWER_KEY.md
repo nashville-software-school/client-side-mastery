@@ -22,7 +22,7 @@ You won't understand it at all.
 
 For now.
 
-In a few months, you will be able to understand about 60% of it and be thinking "I kinda, sorta know what the other 40%, does, but don't ask me to explain it."
+In a few months, you will be able to understand about 60% of it and be thinking "I kinda, sorta know what the other 40% does, but don't ask me to explain it."
 
 Two years from now, understanding it will be trivial.
 
