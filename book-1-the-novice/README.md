@@ -10,11 +10,12 @@
 * Chapter 2 - [Terminal Basics](./chapters/CLI_BASICS.md)
 * Chapter 3 - [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md)
 * Chapter 4 - [Fish in my Aquarium](./chapters/HTML_AQUARIUM.md)
-* Chapter 5 - [Using Events for a Better User Experience](./chapters/BASIC_EVENTS.md)
-* Chapter 6 - [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md)
-* Chapter 7 - [Track Aquarium Changes](./chapters/GIT_BASICS.md)
-* Chapter 8 - [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)
-* Chapter 9 - [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)
+* Chapter 5 - [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md)
+* Chapter 6 - [Using Events for a Better User Experience](./chapters/BASIC_EVENTS.md)
+* Chapter 7 - [Time to Organize Again](./chapters/AQUARIUM_JS_DIRECTORIES.md)
+* Chapter 8 - [Track Aquarium Changes](./chapters/GIT_BASICS.md)
+* Chapter 9 - [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)
+* Chapter 10 - [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)
 
 > ## [**_Hello World Group Project_**](./chapters/HELLO_WORLD.md)
 

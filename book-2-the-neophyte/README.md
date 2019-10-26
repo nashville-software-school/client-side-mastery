@@ -5,7 +5,8 @@
 
 * Chapter 1 - [Representing Fish and Fish Tanks in Code](./chapters/BASIC_DATA_STRUCTURES.md)
 * Chapter 2 - [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md)
-* Chapter 3 - [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md)
+* Chapter 3 - [Twhoops Part 2](./chapters/TWHOOPS_OBJECTS_ARRAYS.md)
+* Chapter 4 - [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md)
 
 ---
 
