@@ -4,6 +4,7 @@
 
 * Chapter 1a - [Installations for Mac](./chapters/GETTING_STARTED_MAC.md)
 * Chapter 1b - [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md)
+* _Secret Chapter - [All The Answers. Shhhh.](./chapters/ANSWER_KEY.md)_
 * Chapter 2 - [Terminal Basics](./chapters/CLI_BASICS.md)
 * Chapter 3 - [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md)
 * Chapter 4 - [Fish in my Aquarium](./chapters/HTML_AQUARIUM.md)
