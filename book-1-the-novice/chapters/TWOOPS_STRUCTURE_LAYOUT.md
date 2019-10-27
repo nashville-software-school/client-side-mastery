@@ -2,7 +2,7 @@
 
 You are going to be building an application that uses the [Politwoops API](https://politwoops.eu/page/api). This API exposes every Tweet that gets deleted by a politician or ambassador from around the world.
 
-The learning goals of this project are the following.
+The learning goals of this project, by the end of the client side course, are the following.
 
 * Using `fetch` to retrieve external data
 * Event listeners
@@ -20,7 +20,7 @@ Here are the features you will be building over the next few months in this appl
 * Allow user to favorite specific, deleted tweets.
 * Allow user to search for specific words in all tweets by all people.
 
-Give those feature requests, you need to do the following tasks.
+Given those feature requests, what you need to do in this chapter is the following tasks.
 
 1. Identify the components that need to be rendered in this applications.
 1. Identify the structure and relationship of the components _(e.g. a Tweet component is rendered as a child of the TweetList component)_
