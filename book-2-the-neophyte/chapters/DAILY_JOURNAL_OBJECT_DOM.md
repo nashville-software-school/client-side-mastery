@@ -1,13 +1,14 @@
-# Daily Journal
+## Practice: Daily Journal
 
 You have built your form for entering in journal entries, so now you need to define how the data that you will be collecting in the form should be stored. Your learning objective for this chapter is to build a data structure to represent a journal entry, and then define the data structure for storing a collection of entries.
 
-## Setup
+### Setup
 1. Navigate into `scripts` sub-directory that you created when you setup your project directory.
-1. Use `touch` to create a new file named `journal.js`
-1. Update your `index.html` file to have a `<script>` element that includes your new JavaScript file.
+1. Use `touch` to create a new JavaScript module named `main.js`.
+1. Use `touch` to create a new JavaScript module named `JournalDataProvider.js`. This module will be responsible for managing the state of your application.
+1. Update your `index.html` file to have a `<script type="module" src="./scripts/main.js>` element that includes your main JavaScript module.
 
-## Single Journal Entry
+### Single Journal Entry
 
 You defined form fields for the following bits of data to collect from a user of your application.
 
@@ -16,29 +17,47 @@ You defined form fields for the following bits of data to collect from a user of
 1. The long-form contents of the journal entry.
 1. The mood of the journal entry.
 
-In your JavaScript file, define an object that will represent a journal entry in your code.
+In your `JournalDataProvider.js` module, place the following code at the top.
 
 ```js
 /*
-    Define the keys and value for a JavaScript object that
-    represents a journal entry about what you learned today
-*/
-const journalEntry = {
+ *   Journal data provider for Daily Journal application
+ *
+ *      Holds the raw data about each entry and exports
+ *      functions that other modules can use to filter
+ *      the entries for different purposes.
+ */
 
+// This is the original data. Can't Touch This.
+const journal = [
+    {
+        date: "07/24/2025",
+        concept: "Array methods",
+        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+        mood: "Ok"
+    }
+]
+
+/*
+    You export a function that provides a version of the
+    raw data in the format that you want
+*/
+export const useJournalEntries = () => {
+    const sortedByDate = journal.sort(
+        (currentEntry, nextEntry) =>
+            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+    )
+    return sortedByDate
 }
+
+
 ```
 
-## Journal Entry Collection
+### More Journal Entries
 
-Eventually, you will have multiple journal entries, so you need to define an appropriately named variable that will have the value of an array.
+Take a few minutes and add two or three more JavaScript objects to represent journal entries for some other things that you have learned about so far at NSS.
 
-Once you define that variable and give it a default value of a blank array, use the `push()` method to add the `journalEntry` object you defined above to the array.
-
-## More Journal Entries
-
-Take a few minutes and define two or three more JavaScript objects to represent journal entries for some other things that you have learned about so far at NSS.
-
-Add those new objects to your journal entries array.
+Add those new objects to your journal entries array. Make sure you separate each object with a comma, and do not put a comma after the last one.
 
 ## Talk to your Instructors
 

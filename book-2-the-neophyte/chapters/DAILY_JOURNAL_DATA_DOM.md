@@ -9,47 +9,13 @@ By the end of this chapter - once you have all the functionality written - you w
 ![](./images/first-journal-entry.png)
 
 
-## Data Structure for Journal Entries
-
-In the last daily journal chapter, you defined an object data structure for the following four pieces of information that you will collect from the user.
-
-1. Date
-1. Concept/Title
-1. Journal entry
-1. Mood
-
-Since a journal entry is actual thing that you want to track in JavaScript, you need an object. Here's a sample representation.
-
-```js
-{
-    date: "07/24/2018",
-    concept: "Array methods",
-    entry: "We learned about 4 different array methods today. forEach made sense, but the others still confuse me.",
-    mood: "Ok"
-}
-```
-
-## Defining Journal Entries
-
-Combining the definition of the daily journal objects, and the daily journal collection. Open `journal.js` and define your journal entry objects by inside the journal entries array.
-
-```js
-const journalEntries = [
-    {
-        date: "07/24/2018",
-        concept: "Array methods",
-        entry: "We learned about 4 different array methods today. forEach made sense, but the others still confuse me.",
-        mood: "Ok"
-    },
-    etc...
-]
-```
-
 ## Journal Entries in the DOM
 
-The last step in this chapter is to take your raw data structures, and create HTML representations of them so they can be added to the DOM.
+In this chapter you will take your raw data structures, and create HTML representations of them so they can be added to the DOM. You can't add JavaScript objects to the DOM. Only HTML can be rendered by the browser.
 
-### Journal Entry Component Function
+### Journal Entry Component
+
+Add a two, new JavaScript modules to your application named `JournalEntryList.js` which will be responsible for rendering a list of entry components, and `JournalEntry.js` which will be responsible for rendering a single journal entry.
 
 You've worked on exercises in which you wrote functions that returned HTML components. Now write a function that builds a journal entry HTML string template.
 

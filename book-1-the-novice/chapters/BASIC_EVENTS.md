@@ -70,16 +70,14 @@ Just like you have started to do already with CSS by making it modular so that i
 1. Create another JavaScript module in the directory named `dialogs.js`. This module's Single Responsibility will be to manage the showing and hiding of the dialog windows in the application.
 1. Place this code at the top of the `dialogs.js` module. This code requires no modification for now.
     ```js
-    const allDialogs = document.querySelectorAll(".dialog--fish")
     const allCloseButtons = document.querySelectorAll(".button--close")
 
     for (const btn of allCloseButtons) {
         btn.addEventListener(
             "click",
             theEvent => {
-                for (const dialog of allDialogs) {
-                    dialog.close()
-                }
+                const dialogElement = theEvent.target.parentNode
+                dialogElement.close()
             }
         )
     }
@@ -122,6 +120,11 @@ Just like you have started to do already with CSS by making it modular so that i
 Now refresh your browser and click on Bart's detail button.
 
 > **Tip:** If you dialog isn't working, please see a member of the instruction team before you move on. Moving on without this code working will be wasted time.
+
+You may wonder why you did not just place all of the event listener code in `main.js`. There are two reasons you started this way.
+
+1. The `main.js` module rarely contains any actual logic itself. Its job is to import tools from other modules and invoke them so that the initial UI is rendered to the user.
+1. What must happen to present the initial UI to the user will become more complex over time. Putting all of that code in one module not only makes the code harder to read and maintain, but violates [encapsulation](https://stackify.com/oop-concept-for-beginners-what-is-encapsulation/) and the Single Responsibility Principle.
 
 ## Dialog All The Things!!
 

@@ -27,3 +27,5 @@ Given those feature requests, what you need to do in this chapter is the followi
 1. Decide on a layout for your Twhoops application. Draw a simple wireframe that shows where each component will be rendered.
 1. Come see a member of the instruction team to review your component layout.
 1. One you and one of your instructors discuss your layout, then you can create a new project directory of `~/workspace/twhoops`, and start building the HTML and CSS of your components and layout.
+
+> **Reminder:** Remember to create a CSS file for each component, and use the `@import` statement in `main.css` to include each one.
