@@ -1,5 +1,13 @@
 # Git and Github Basics
 
+## Why Are You Learning This?
+
+As a professional developer, you **will** be working on a team. Modern software development is a team sport, not an individual one. Teams members need the ability to write code independently, but then merge their individual code together when it's time to release a version of the software.
+
+Git is the tool to allow a developer to work on an independent branch of the code base, and then merge in the work of others.
+
+Github is a tool which allows you to easily share your code with other people, regardless of where they are located.
+
 ## Configure Git on Your Machine
 
 You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
@@ -38,7 +46,7 @@ The magic is the `.git` directory that gets create when the `git init` command i
 This is the process you will be following thousands of times while you are here at NSS. You tell git to track changes first, then you commit those changes, and then upload your changes to Github.
 
 ```sh
-git add .
+git add --all
 git commit -m "Message about commit"
 git push origin master
 ```
@@ -48,7 +56,7 @@ git push origin master
 Time to make your first commit on your aquarium project. Make sure you are in `~/workspace/aquarium` and then tell git that you want to track all of your files.
 
 ```sh
-git add .
+git add --all
 ```
 
 ```sh
@@ -78,33 +86,32 @@ Github is a _software as a service_ (SAAS) that allows you to back up your repos
 
 When you are ready to share your code with your teammates, or the general public, you can push your repository to Github. Think of Github as an external drive you plug into your laptop to use as backup. Instead of it backing up the entire hard drive, you will back things up, one project at a time, only when you want to.
 
-## Create Github Repository
-
-The first thing you need to do is create a new repository on Github's platform that you will use to backup the code on your laptop. Once the repository is created, you will need to copy the connection string for it.
+The first thing you need to do is create a new repository on Github's platform that you will use to backup the code on your laptop.
 
 ### Create Github Repo
 
-### Copy the Connection String
+1. Log into your Github account.
+1. Click the `+` sign in the top right corner.
+1. Choose "New repository".
+1. In the "Repository name" field, enter in `nss-aquarium`.
+1. Scroll down and click the green "Create Repository" button.
+1. Copy the repository's connection string.
+    ![](./images/copy-github-connection-string.gif)
+1. Follow the second set of instructions.
+    ![](./images/add-origin.png)
 
-### Connect your Local Repository to your Backup
-
-Now you tell your local repository where you would like it to send the code when you're ready to back it up.
-
-```sh
-git remote add origin paste-connection-string-here
-```
-
-Now it's time to do the backup. You use the `git push origin master` command to do that.
-
-```sh
-git push origin master
-```
+Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your aquarium HTML, JavaScript and CSS files in it.
 
 
-Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your aquarium HTML and CSS files in it.
+## Practice: Backup Exercise
 
+* Create a Github repository for the Congressional Representative exercise, and push up that code.
+* Create a Github repository for the Coffee Houses exercise, and push up that code.
 
-## Practice: Backup Congressional Representative Exercise
+When you are done, you should have three new repositories in your Github account.
 
+1. Aquarium
+1. Coffee Houses
+1. Congressional Representative
 
-## Practice: Backup Coffee Houses Exercise
+> **Tip:** If you have any issues getting your code onto Github, see a member of your instructional team immediately so that you have a backup of your code. Pushing your code to Github is not optional. It's a required part of this program.

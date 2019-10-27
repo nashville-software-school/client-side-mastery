@@ -19,7 +19,7 @@
 
 > ## [**_Hello World Group Project_**](./chapters/HELLO_WORLD.md)
 
-* Chapter 10 - [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)
+* Chapter 11 - [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)
 
 
 ## Supplementary Content

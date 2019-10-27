@@ -7,6 +7,7 @@
 * Chapter 2 - [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md)
 * Chapter 3 - [Twhoops Part 2](./chapters/TWHOOPS_OBJECTS_ARRAYS.md)
 * Chapter 4 - [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md)
+* Chapter 4 - [Big Fish, Little Fish](./chapters/FILTERING_FISH.md)
 
 ---
 
