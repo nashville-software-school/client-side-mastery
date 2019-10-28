@@ -1,30 +1,19 @@
-# Book 2 - The Neophyte
+# Book 2 - Glassdale Cold Case Cyber Police
 
 
 ## Chapters
 
-* Chapter 1 - [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md)
-* Chapter 2 - [Making Collections of Fish](./chapters/BASIC_COLLECTIONS.md)
-* Chapter 3 - [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md)
-* Chapter 4 - [Twhoops Part 2](./chapters/TWHOOPS_OBJECTS_ARRAYS.md)
-* Chapter 5 - [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md)
-* Chapter 6 - [Big Fish, Little Fish](./chapters/FILTERING_FISH.md)
-
----
-
-* Chapter 4 - [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md)
-* Chapter 5 - [CCCP: Criminal API](./chapters/GLASSDALE_CRIMINAL_API.md)
-* Chapter 6 - [CCCP: Likely Suspects](./chapters/GLASSDALE_CRIMINAL_HISTORY.md)
-* Chapter 7 - [CCCP: What's Your Alibi?](./chapters/GLASSDALE_ALIBI.md)
-* Chapter 8 - [CCCP: Hidden Witnesses](./chapters/GLASSDALE_WITNESSES.md)
+* Chapter 1 - [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md)
+* Chapter 2 - [CCCP: Criminal API](./chapters/GLASSDALE_CRIMINAL_API.md)
+* Chapter 3 - [CCCP: Likely Suspects](./chapters/GLASSDALE_CRIMINAL_HISTORY.md)
+* Chapter 4 - [Twhoops - Part 3](./chapters/TWHOOPS_OBJECTS_ARRAYS.md)
+* Chapter 5 - [CCCP: What's Your Alibi?](./chapters/GLASSDALE_ALIBI.md)
+* Chapter 6 - [CCCP: Hidden Witnesses](./chapters/GLASSDALE_WITNESSES.md)
+* Chapter 7 - [Twhoops - Part 4](./chapters/TWHOOPS_OBJECTS_ARRAYS.md)
 
 
 ---
 
-* Chapter 1 - [Fun with Manipulating DOM](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
-* Chapter 2 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
-* Chapter 3 - [Daily Journal - Part 2](./chapters/DAILY_JOURNAL_OBJECT_DOM.md)
-* Chapter 4 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
 * Chapter 5 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
 * Chapter 6 - [Objects Representing Things](./chapters/OBJECTS_AS_THINGS.md)
 * Chapter 8 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
@@ -41,11 +30,9 @@
 
 > ### LinkedIn Projects update with Welcome to Nashville
 
-## Supplementary Content
+## Review Chapters
 
-* Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
-* Supplement - [Data and Metadata](./chapters/METADATA.md)
-* Supplement - [jQuery](./chapters/JQUERY.md)
-* Supplement - [Automation with Grunt](./chapters/GRUNT_INTRO.md)
-
-Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
+* Chapter 1 - [Review: Functions](./chapters/JS_FUNCTION_BASICS.md)
+* Chapter 2 - [Review: JavaScript Objects](./chapters/JS_OBJECTS.md)
+* Chapter 3 - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
+* Chapter 4 - [Data and Metadata](./chapters/METADATA.md)

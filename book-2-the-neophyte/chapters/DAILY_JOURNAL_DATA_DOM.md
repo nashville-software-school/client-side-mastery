@@ -9,69 +9,90 @@ By the end of this chapter - once you have all the functionality written - you w
 ![](./images/first-journal-entry.png)
 
 
-## Journal Entries in the DOM
+## Journal Entry Components
 
 In this chapter you will take your raw data structures, and create HTML representations of them so they can be added to the DOM. You can't add JavaScript objects to the DOM. Only HTML can be rendered by the browser.
 
 ### Journal Entry Component
 
-Add a two, new JavaScript modules to your application named `JournalEntryList.js` which will be responsible for rendering a list of entry components, and `JournalEntry.js` which will be responsible for rendering a single journal entry.
+Add two, new JavaScript modules to your application named `JournalEntryList.js` which will be responsible for rendering a list of entry components, and `JournalEntry.js` which will be responsible for rendering a single journal entry.
 
-You've worked on exercises in which you wrote functions that returned HTML components. Now write a function that builds a journal entry HTML string template.
+Just like Martin's Aquarium application, you are going to make each component return a `render()` function that, when invoked, will generate an HTML string.
 
-> src/scripts/journal.js
+> **scripts/JournalEntry.js**
 
 ```js
-const journalEntries = [
-    {
-        concept: "Array methods",
-        date: "07/24/2018",
-        entry: "We learned about array methods, but only forEach made sense",
-        mood: "Ok"
+/*
+ *  Purpose: To render a single journal entry as an
+ *           HTML representation of the data
+ */
+const JournalEntryComponent = () => {
+
+    return {
+        render: entry => {
+            return `
+                <section id="entry--${entry.id}" class="journalEntry">
+                    Display the entry's full text, and the date
+                    it was entered here.
+                </section>
+            `
+        }
     }
-]
-
-/*
-    Purpose: To create, and return, a string template that
-    represents a single journal entry object as HTML
-
-    Arguments: journalEntry (object)
-*/
-const makeJournalEntryComponent = (journalEntry) {
-    // Create your own HTML structure for a journal entry
-    return `
-
-    `
 }
+
+export default JournalEntryComponent
 ```
 
-## Render Journal Entries to the DOM
+### Journal List Component
 
-Create a new element in your `index.html` file that will be the container for all of your journal entries. Place it beneath the form component.
+The list component, just like Martin's Aquarium, will take all of the individual entry HTML strings and inject it into the browser DOM.
 
-> src/index.html
-
-```html
-<article class="entryLog">
-
-</article>
-```
-
-Now write a function whose reponsibility is to iterate your array of journal entries and add them to the DOM.
-
-> src/scripts/journal.js
+> **scripts/JournalEntryList.js**
 
 ```js
 /*
-    Purpose: To render all journal entries to the DOM
+ *  Purpose:
+ *    To render as many journal entry components as
+ *    there are items in the collection exposed by the
+ *    data provider component
+ */
+import { useJournalEntries } from "./JournalDataProvider.js"
+import JournalEntryComponent from "./JournalEntry.js"
 
-    Arguments: entries (array of objects)
-*/
-const renderJournalEntries = (entries) => {
+// DOM reference to where all entries will be rendered
+const entryLog = document.querySelector("#entryLog")
 
+const EntryListComponent = () => {
+    // Use the journal entry data from the data provider component
+    const entries = useJournalEntries()
+
+    return {
+        render () {
+            entryLog.innerHTML += `
+            ${
+                /*
+                    Invoke the render() function of the
+                    JournalEntryComponent() for each item
+                    in the entries array.
+
+                    Refer to the answer key repo to see an
+                    example of how it's done.
+                */
+                for (const entry of entries) {
+
+                }
+            }
+            `
+        }
+    }
 }
 
-// Invoke the render function
-renderJournalEntries(journalEntries)
+export default EntryListComponent
 ```
 
+## Render the Entry List
+
+Now you need to import the list component into the main module and invoke its `render()` method. If you are still not clear on how to do this...
+
+1. Look at the answer key repository to see an example.
+1. If you still can't get it, see a member of your instruction team and we'll talk through it.

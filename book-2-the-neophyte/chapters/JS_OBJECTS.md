@@ -1,4 +1,4 @@
-# Objects
+# JavaScript Objects
 
 ## What is an Object
 

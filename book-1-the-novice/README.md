@@ -1,4 +1,4 @@
-# Book 1 - The Novice
+# Book 1 - Martin's Aquarium
 
 ## Chapters
 
@@ -15,11 +15,28 @@
 * Chapter 7 - [Time to Organize Again](./chapters/AQUARIUM_JS_DIRECTORIES.md)
 * Chapter 8 - [Track Aquarium Changes](./chapters/GIT_BASICS.md)
 * Chapter 9 - [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md)
-* Chapter 10 - [Twhoops - Part 1](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)
 
 > ## [**_Hello World Group Project_**](./chapters/HELLO_WORLD.md)
 
 * Chapter 11 - [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)
+* Chapter 12 - [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md)
+* Chapter 13 - [Making Collections of Fish](./chapters/BASIC_COLLECTIONS.md)
+* Chapter 14 - [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md)
+* Chapter 16 - [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md)
+* Chapter 17 - [Big Fish, Little Fish](./chapters/FILTERING_FISH.md)
+
+### Side Hustle - Twhoops
+
+* Part 1 - [Application Layout](./chapters/TWOOPS_STRUCTURE_LAYOUT.md)
+* Part 2 - [Rendering Dummy Data](./chapters/TWHOOPS_OBJECTS_ARRAYS.md)
+
+### Side Hustle - Daily Journal
+
+* Part 1 - [Form Layout](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md)
+* Part 2 - [Representing Entries as Object](./chapters/DAILY_JOURNAL_OBJECT_DOM.md)
+* Part 3 - [Rendering Collections of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md)
+
+
 
 
 ## Supplementary Content

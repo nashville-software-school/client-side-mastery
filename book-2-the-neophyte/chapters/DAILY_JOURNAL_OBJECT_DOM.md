@@ -32,7 +32,7 @@ In your `JournalDataProvider.js` module, place the following code at the top.
 const journal = [
     {
         date: "07/24/2025",
-        concept: "Array methods",
+        concept: "HTML & CSS",
         entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
         mood: "Ok"
     }
@@ -49,8 +49,6 @@ export const useJournalEntries = () => {
     )
     return sortedByDate
 }
-
-
 ```
 
 ### More Journal Entries
