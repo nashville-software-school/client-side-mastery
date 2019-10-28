@@ -20,7 +20,7 @@
 
 * Chapter 11 - [Updating LinkedIn](./chapters/LINKEDIN_CELEBRITY_TRIBUTE.md)
 * Chapter 12 - [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md)
-* Chapter 13 - [Making Collections of Fish](./chapters/BASIC_COLLECTIONS.md)
+* Chapter 13 - [Using the Fish Data Provider](./chapters/EXPORTING_FISH.md)
 * Chapter 14 - [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md)
 * Chapter 16 - [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md)
 * Chapter 17 - [Big Fish, Little Fish](./chapters/FILTERING_FISH.md)
@@ -35,9 +35,6 @@
 * Part 1 - [Form Layout](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md)
 * Part 2 - [Representing Entries as Object](./chapters/DAILY_JOURNAL_OBJECT_DOM.md)
 * Part 3 - [Rendering Collections of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md)
-
-
-
 
 ## Supplementary Content
 
