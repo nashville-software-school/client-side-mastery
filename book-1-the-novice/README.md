@@ -22,6 +22,7 @@
 * Chapter 12 - [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md)
 * Chapter 13 - [Using the Fish Data Provider](./chapters/EXPORTING_FISH.md)
 * Chapter 14 - [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md)
+* Chapter 15 - [Automated Event Listners](./chapters/DYNAMIC_EVENT_LISTENERS.md)
 * Chapter 16 - [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md)
 * Chapter 17 - [Big Fish, Little Fish](./chapters/FILTERING_FISH.md)
 

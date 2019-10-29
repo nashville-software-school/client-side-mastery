@@ -69,28 +69,47 @@ Just like you have started to do already with CSS by making it modular so that i
     </body>
     ```
 1. Create another JavaScript module in the directory named `dialogs.js`. This module's Single Responsibility will be to manage the showing and hiding of the dialog windows in the application.
-1. Place this code at the top of the `dialogs.js` module. This code requires no modification for now.
+1. Place this code at the top of the `dialogs.js` module. This code requires no modification for now. The function `initializeDetailButtonEvents` has the Single Responsbility of defining event listeners that will be responding to the action of a user clicking on the buttons in the application.
     ```js
-    const allCloseButtons = document.querySelectorAll(".button--close")
+    const initializeDetailButtonEvents = () => {
+        // CAN'T TOUCH THIS - START
+        const allCloseButtons = document.querySelectorAll(".button--close")
 
-    for (const btn of allCloseButtons) {
-        btn.addEventListener(
-            "click",
-            theEvent => {
-                const dialogElement = theEvent.target.parentNode
-                dialogElement.close()
-            }
-        )
+        for (const btn of allCloseButtons) {
+            btn.addEventListener(
+                "click",
+                theEvent => {
+                    const dialogElement = theEvent.target.parentNode
+                    dialogElement.close()
+                }
+            )
+        }
+        // CAN'T TOUCH THIS - END
+
+
+        // You will be writing code below this line
+
     }
     ```
-1. Create a function in `dialogs.js` whose Single Responsbility is to define event listeners who will be responding the the action of a user clicking on one of the detail buttons.
+1. In the code below, you have been provided with the first event listener. When the user clicks on the "Details" button underneath Bart's image, it will show the dialog element you created for Bart in the HTML above. Add one of these for every fish that you created. Replace the CSS selectors in both locations, but nothing else needs to change.
     ```js
     const initializeDetailButtonEvents = () => {
-    }
-    ```
-1. Add one of these for every fish that you create. Replace the CSS selectors in both locations, but nothing else needs to change. Here's the first event listner. When the user clicks on the "Details" button underneath Bart's image, it will show the dialog element you created for Bart in the HTML above.
-    ```js
-    const initializeDetailButtonEvents = () => {
+        // CAN'T TOUCH THIS - START
+        const allCloseButtons = document.querySelectorAll(".button--close")
+
+        for (const btn of allCloseButtons) {
+            btn.addEventListener(
+                "click",
+                theEvent => {
+                    const dialogElement = theEvent.target.parentNode
+                    dialogElement.close()
+                }
+            )
+        }
+        // CAN'T TOUCH THIS - END
+
+
+        // You will be writing code below this line
 
         // Show Bart's details when the button is clicked
         document.querySelector("#button--bart").addEventListener(
@@ -103,7 +122,7 @@ Just like you have started to do already with CSS by making it modular so that i
 
     }
     ```
-1. You need to export this function so that the `main.js` module can import it and invoke it. Place this code at the very bottom of the `dialogs.js` file.
+1. Now you need to export this function so that the `main.js` module can import it and invoke it. Place this code at the very bottom of the `dialogs.js` file.
     ```js
     export default initializeDetailButtonEvents
     ```
