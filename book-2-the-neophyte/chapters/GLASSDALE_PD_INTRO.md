@@ -20,6 +20,6 @@
 >
 >"Damn, that's a lot to digest on my first day but I'm up for the challenge and glad I can help out!" you reply eagerly, still shocked that this quiet, small town was victim to such an insane extortion scandal.
 >
->"Amazing! Thank you so much. We're excited to have you on our team," says Police Chief Renee, as hands you your laptop and exits your new office.
+>"Amazing! Thank you so much. We're excited to have you on our team," says Police Chief Renee, as she hands you your laptop and exits your new office.
 >
 >You sit down at your clunky desk that's probably been around since the 80's. For the first time since you arrived in Glassdale, Illinois, you feel the slightest tinge of excitement for this new step in life.
