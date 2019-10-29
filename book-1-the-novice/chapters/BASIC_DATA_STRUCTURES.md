@@ -16,7 +16,7 @@
 >
 > You click on the attached spreadsheet and are shocked at the number of fish that Martin is inheriting. There's over 150 fish in here. Honestly, you don't know how Martin manages to house and feed the number of fish he currently has, let alone these new ones. He must have help, you imagine.
 >
-> After a couple minutes of satisfying your curiosity about his new fish stock, it suddenly hits you have you now have to add 158 new fish HTML elements to the site, and also 158 more event listeners for the detail buttons on each.
+> After a couple minutes of satisfying your curiosity about his new fish stock, it suddenly hits you that you now have to add 158 new fish HTML elements to the site, and also 158 more event listeners for the detail buttons on each.
 >
 > "There's got to be a way to automate this," you mumble to yourself. "What if he adds another 100 fish in a month... I'll be writing fish HTML for the rest of my life!"
 
@@ -24,7 +24,7 @@ Luckily, there is a way to automate this entire process, so that software develo
 
 ## Object Representation of Things
 
-The first step in the process is defining object in code that represent each fish. That's the main purpose of an object - representing real-world things in code.
+The first step in the process is defining an object in code that represent each fish. That's the main purpose of an object - representing real-world things in code.
 
 Before you figure out how to represent a fish, let's look at how you might represent a menu item in a restaurant as an object in code. How about a menu item at a fast food restaurant. What are some common properties of the menu items?
 
