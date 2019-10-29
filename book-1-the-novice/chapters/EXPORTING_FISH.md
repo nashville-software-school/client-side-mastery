@@ -12,19 +12,23 @@ Some common module reponsibilities are:
 
 You start simple and just use `console.log()` to display all the fish that are in application state. First, you need a function in the data provider whose responsibility is to allow other modules to access the state.
 
-Here's the simplest way to do that. The function below just returns a reference to the fish collection. The function is exported so other modules can invoke it.
+Here's the simplest way to do that. The function below just returns a reference to the fish collection. The function is exported so other modules can import it and use it.
 
 > **`scripts/FishDataProvider.js`**
 
 ```js
+// You already have this code. Don't add this
+const fishCollection = [...]
+
+// This is new code. Add this.
 export const useFish = () => {
     return fishCollection
 }
 ```
 
-Next, you import that function in the main module. Note that the function is wrapped in curly braces. This is needed for anything that is exported from a module that isn't the `default` export.
+Next, you import that function in the main module. Then you can invoke the function and store the fish collection in a variable that is scoped to this module. Then just log each fish object to the developer console.
 
-Then you can invoke the function and store the fish collection in a variable that is scoped to this module. Then just out each fish object to the developer console.
+> **Note:** The imported function is wrapped in curly braces. This is needed for anything that is exported from a module that isn't the `default` export.
 
 > **`scripts/main.js`**
 
@@ -38,6 +42,6 @@ for (const fish of allTheFish) {
 }
 ```
 
-## Iterating the Collection
+## Next Steps
 
-Iterate array and console log the object, and then `toString()` method on the object
+Once you get this working, move on to the next chapter to learn how to make modules that are responsible for defining components - one for the list of fish, and one for the individual fish. Once done, you will have an automated machine for generating the HTML representations of the fish.
