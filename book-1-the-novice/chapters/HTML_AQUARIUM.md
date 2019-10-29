@@ -40,7 +40,7 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 >
 > Martin responds, "Right under the navigation bar, and before the list of locations."
 >
-> You note that in your journal, then ask, "Ok, I just want to make sure I get this right for you. The details of each fish should include the image, the species, what you named the fish, where you harvested it, and what it eats... is that all correct?"
+> You note that in your journal, then ask, "Ok, I just want to make sure I get this right for you. The details of each fish should include the image, the species, its length, what you named the fish, where you harvested it, and what it eats... is that all correct?"
 >
 > "That sure is," he says confidently and leans back in his chair with his arms behind his head.
 >

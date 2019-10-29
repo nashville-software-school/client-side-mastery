@@ -50,6 +50,7 @@ First, each of your fish components needs to have a corresponding `<dialog>`
     <dialog class="dialog--fish" id="details--bart">
         <div>Species: Orange Clownfish</div>
         <div>Location: Caribbean</div>
+        <div>Length: 3</div>
         <div>Food: Algae, crustaceans</div>
 
         <button class="button--close" id="close-bart">Close Dialog</button>

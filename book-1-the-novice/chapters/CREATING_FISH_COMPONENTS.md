@@ -34,7 +34,7 @@ Since each of these components have a different responsibility, then each one mu
 > **`scripts/Fish.js`**
 
 ```js
-/*
+/**
  *  FishComponent which renders individual fish objects as HTML
  */
 const FishComponent = fish => {
@@ -49,6 +49,7 @@ const FishComponent = fish => {
             <dialog class="dialog--fish" id="details--bart">
                 <div>Species: ${fish.species}</div>
                 <div>Location: ${fish.location}</div>
+                <div>Length: ${fish.size}</div>
                 <div>Food: ${fish.food.join(",")}</div>
 
                 <button class="button--close" id="close-bart">Close Dialog</button>
@@ -66,7 +67,7 @@ export default FishComponent
 > **`scripts/FishList.js`**
 
 ```js
-/*
+/**
  *  FishListComponent which renders individual fish objects as HTML
  */
 import { useFish } from "./FishDataProvider.js"
@@ -161,3 +162,46 @@ We have also learned that some people like a visualization of how all the pieces
 
 ![dynamically rendered fish components](./images/fish-component-flow.png)
 
+## Practice: Argumentative
+
+Understanding how arguments and parameters work with functions - especially when the functions are defined in a different module that where they are used - is something that is hard to understand. In this practice exercise, you are going to explore this concept.
+
+First, in the following line of code in the **`FishList`** module...
+
+```js
+fishHTMLRepresentations += FishComponent(fish)
+```
+
+Remove the fish argument that is being passed to the **`FishComponent`** component function.
+
+```js
+fishHTMLRepresentations += FishComponent()
+```
+
+Refresh your browser. Make sure your developer console is open and you will see the following exception.
+
+![no argument exception](./images/fish-component-no-argument.png)
+
+The exception tells you exactly where it occurred. Line 8 of the `Fish.js` module (_**Note:** your line number may be different if you have comments or different amounts of whitespace_). If you open that module and go the the line specified, you will see this.
+
+```js
+src="${fish.image}"
+```
+
+The key term is `'image' of undefined`. Whenever you see an exception like that, look to the left of the property being accessed. In this case, look to the left of `'image'`. You will see the variable `fish`. That's undefined.
+
+Why is it undefined? It's because you removed the argument that you were passing in when you invoked the function. This component function defines a parameter.
+
+```js
+const FishComponent = (fish) => {
+```
+
+Since you invoked this function without a corresponding argument...
+
+```js
+fishHTMLRepresentations += FishComponent()
+```
+
+Then the parameter never gets assigned a value to reference. Therefore, it's undefined, and you can't access an `.image` property of something that is undefined.
+
+Now put the argument back in when you invoke the component function and it should all work again.
