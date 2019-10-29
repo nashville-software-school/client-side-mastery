@@ -1,6 +1,6 @@
 # Using the Data Provider
 
-A data provide module in an application has the responsibility of maintaining the state of a particular type of data. In this application, the `FishDataProvider` module holds the state of each fish. Other modules in the application can request that state for what they are responsible for.
+A data provider module in an application has the responsibility of maintaining the state of a particular type of data. In this application, the `FishDataProvider` module holds the state of each fish. Other modules in the application can request that state for what they are responsible for.
 
 Some common module reponsibilities are:
 
