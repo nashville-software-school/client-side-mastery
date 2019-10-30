@@ -41,3 +41,45 @@ The `id` no longer has `sam` in it. It now has `Sam` in it. That capital S makes
 
 You could just modify every event listener, manually, to match the uppercased name of each fish, but then you are back to doing manual work over, and over again if new fish are added or existing ones are removed. You need to write code that automatically handles the user clicking on **ANY** of the detail buttons.
 
+CSS is a powerful tool, and the selectors you can use have many interesting combinations. For example, you can use CSS selectors to get a reference to any `<div>` element whose `class` attribute starts with "fish" by using `^=` in the selector.
+
+```js
+/*
+    The following selector will match all these elements
+    because their class attribute values all start with the
+    string of "fish".
+
+        <div class="fish"></div>
+        <div class="fish__name"></div>
+        <div class="fish__image"></div>
+*/
+document.querySelectorAll("div[class^='fish']")
+```
+
+So you can use that to get a reference to every detail button.
+
+1. The element is `button`
+1. Each one has an `id` attribute
+1. Each `id` attribute value starts with "button--"
+
+```js
+const allDetailButtons = document.querySelectorAll("button[id^='button--']")
+```
+
+Then you can iterate that collection of HTML elements and attach an event listener to each one.
+
+```js
+    // Get a reference to all buttons that start with "button--"
+    const allDetailButtons = document.querySelectorAll("button[id^='button--']")
+
+    // Add an event listener to each one
+    for (const btn of allDetailButtons) {
+        btn.addEventListener(
+            "click",
+            theEvent => {
+                const theDialog = document.querySelector(`#${theEvent.target.id}+dialog`)
+                theDialog.showModal()
+            }
+        )
+    }
+```

@@ -1,6 +1,6 @@
 # Automate Martin's Website
 
-Now that you have a module whose responsibility is to maintain the data and state of your application, now you need to convert that raw data into HTML representations and render them in the browser. This will automate the creation of the HTML list of fish from the objects in your fish collection, so that you never have to copy/paste the HTML directly when a fish dies, or a fish is added.
+Now that you have a module whose responsibility is to maintain the state of your application, now you need to convert that raw data into HTML representations and render them in the browser. In this chapter you will automate the creation of the HTML list of fish from the objects in your fish collection, so that you never have to copy/paste the HTML directly when a fish dies, or a fish is added.
 
 ## Remove Hard-Coded HTML
 
@@ -69,13 +69,16 @@ export default FishComponent
 /**
  *  FishListComponent which renders individual fish objects as HTML
  */
-import { useFish } from "./FishDataProvider.js"
+
+// Import `useFish` from the data provider module
 
 const FishListComponent = () => {
 
-    const contentElement = document.querySelector(".content")
+    // Get a reference to the `<article class="content">` element
+    const contentElement = document.querySelector("insert selector here")
     const fishes = useFish()
 
+    // Add to the existing HTML in the content element
     contentElement.innerHTML += `
         <section class="fishList">
             All the fish go here!
@@ -92,7 +95,8 @@ Since we want the fish to be immediately rendered when the page loads, then that
 
 ```js
 import initializeDetailButtonEvents from './dialogs.js'
-import FishListComponent from './FishLilst.js'
+// Import the FishListComponent here
+
 
 // initializeDetailButtonEvents()
 FishListComponent()
@@ -105,6 +109,8 @@ Refresh your browser again and you should see the following message in the middl
 Hooray!! Your fish list component got rendered to the browser. Next is to render all the fish.
 
 You need the `FishComponent` component function to do that. That function is in the `Fish.js` module, so you need to import it from there.
+
+> **`scripts/FishList.js`**
 
 ```js
 import FishComponent from "./Fish.js"
@@ -127,7 +133,12 @@ const FishListComponent = () => {
     // Generate all of the HTML for all of the fish
     let fishHTMLRepresentations = ""
     for (const fish of fishes) {
-        fishHTMLRepresentations += FishComponent(fish)
+        /*
+            Invoke the FishComponent component function
+            and pass the current fish object as an argument.
+            Each time, add the return value to the
+            fishHTMLRepresentations variable with `+=`
+        */
     }
 
     // Add a section, and all of the fish to the DOM
