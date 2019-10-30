@@ -215,3 +215,5 @@ fishHTMLRepresentations += FishComponent()
 Then the parameter never gets assigned a value to reference. Therefore, it's undefined, and you can't access an `.image` property of something that is undefined.
 
 Now put the argument back in when you invoke the component function and it should all work again.
+
+## Practice: Automate
