@@ -216,4 +216,32 @@ Then the parameter never gets assigned a value to reference. Therefore, it's und
 
 Now put the argument back in when you invoke the component function and it should all work again.
 
-## Practice: Automate
+## Practice: Information Organization
+
+In the following exercises, you are going to building module and components for tips, and locations. You need to separate all of those modules into sub-directories so that you don't end up with dozens of JavaScript files all in one directory. It's confusing.
+
+In the `scripts` directory, create the `fish`, `tips`, and `locations` sub-directories and move all of your current files for automating fish into their `scripts/fish` directory.
+
+This will have the side effect of changing how you import the modules, since their path has changed. You will need to clean up all of your import paths.
+
+## Practice: Automate Martin's Tips
+
+Create a data provider, a tip list component, and a tip component to automate the rendering of Martin's fish care tips.
+
+Suggested files to create:
+
+* `scripts/tips/main.js`
+* `scripts/tips/TipDataProvider.js`
+* `scripts/tips/TipList.js`
+* `scripts/tips/Tip.js`
+
+## Practice: Automate Martin's Locations
+
+Create a data provider, a tip list component, and a tip component to automate the rendering of Martin's locations for the location page.
+
+Suggested files to create:
+
+* `scripts/locations/main.js`
+* `scripts/locations/LocationDataProvider.js`
+* `scripts/locations/LocationList.js`
+* `scripts/locations/Location.js`
