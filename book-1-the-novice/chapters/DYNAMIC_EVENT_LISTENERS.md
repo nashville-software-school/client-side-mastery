@@ -66,7 +66,7 @@ So you can use that to get a reference to every detail button.
 const allDetailButtons = document.querySelectorAll("button[id^='button--']")
 ```
 
-Then you can iterate that collection of HTML elements and attach an event listener to each one.
+Then you can iterate that collection of HTML elements and attach an event listener to each one. Below you will see another type of selector called the [adjacent sibling selector](https://css-tricks.com/child-and-sibling-selectors/) which uses the `+` sign. In this case, you will be selecting the dialog element that directly follows the button the user clicked on.
 
 ```js
     // Get a reference to all buttons that start with "button--"
@@ -77,7 +77,8 @@ Then you can iterate that collection of HTML elements and attach an event listen
         btn.addEventListener(
             "click",
             theEvent => {
-                const theDialog = document.querySelector(`#${theEvent.target.id}+dialog`)
+                const dialogSiblingSelector = `#${theEvent.target.id}+dialog`
+                const theDialog = document.querySelector(dialogSiblingSelector)
                 theDialog.showModal()
             }
         )

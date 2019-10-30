@@ -230,7 +230,6 @@ Create a data provider, a tip list component, and a tip component to automate th
 
 Suggested files to create:
 
-* `scripts/tips/main.js`
 * `scripts/tips/TipDataProvider.js`
 * `scripts/tips/TipList.js`
 * `scripts/tips/Tip.js`
@@ -245,3 +244,5 @@ Suggested files to create:
 * `scripts/locations/LocationDataProvider.js`
 * `scripts/locations/LocationList.js`
 * `scripts/locations/Location.js`
+
+You need a separate main module for locations because those HTML representations are rendered on a separate page. Fish and tips are rendered on the same page, so they use the same main module.
