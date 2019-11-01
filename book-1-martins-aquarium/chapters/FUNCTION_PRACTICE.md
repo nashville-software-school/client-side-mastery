@@ -247,3 +247,19 @@ In this exercise, you are going to define more than one parameter for functions.
     * `The car is moving in circles at 12 mph.`
 1. Add a condition inside the function to check if the speed is greater than 75 mph. If it is, add an additional message of SLOW DOWN!
     > **Example:** The car is moving forward at 82 mph. SLOW DOWN!
+
+## Practice: Evens or Odds
+
+1. Design a function named `evenOrOdd` that takes a single number as an argument.
+1. It should return the string \"Even\" if the number is evenly divisible by two.
+1. It should return the string \"Odd\" if the number is not evenly divisible by two.
+1. Log the result of the function.
+
+> **Hint:** Use the modulo - or remainder - operator in JavaScript to accomplish this.
+>
+> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()
+
+#### Exploration Tasks
+
+* Create an array of numbers outside the function. Some even, some odd. Then, after the function is defined, iterate the array and invoke the `evenOrOdd` passing the current number as the argument.
+* What happens when you pass the argument value of 0?
