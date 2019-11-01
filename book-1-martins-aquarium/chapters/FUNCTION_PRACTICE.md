@@ -203,3 +203,47 @@ console.log(dogAge)
 * Specify the number 22 as input to the function and see what the output is.
 * Change the parameter to `age` instead of `ageOfPerson` and see what happens. Then see if you can resolve any issues that it causes.
 * Remove `const dogAge =` so that you just invoke the function, but don't store what it returns and see what happens.
+
+## Practice: Best in Show
+
+1. Write a function that takes a string of a dog breed as an argument (like 'border collie')
+1. Have the function return the value of `"My favorite dog breed is schnauzer"` if an argument of `"schnauzer"` is provided.
+1. Store the return value of the function into a variable. (e.g. `const myFavorite = someFunction()`)
+1. Log the string of "When it comes to pets," plus the returned value of the function.
+1. If, and only if, an argument value of `"meow"` is provided to the function, it should return the string `"I like cats"`.
+
+#### Questions to Ask
+
+* Does the function require input to do its job?
+* Does the function need to return a value?
+* Am I referencing the return value with a variable?
+* What should I do with the return value?
+* What happens if I don't provide an argument at all?
+* What happens when I remove the parameter from the definition of the function?
+
+## Practice: Addition
+
+In this exercise, you are going to define more than one parameter for functions.
+
+1. Write a function named `add` that returns the sum of two numbers.
+1. Log the result of the add function.
+1. Modify the function to return the sum of three numbers.
+1. If the values of 17, 4, and 11 are provided as arguments, then the function must evaluate to 32.
+
+#### Exploration Tasks
+
+* Switch the order of your parameters. For example, if your parameters are `(first, second, third)`, then change it to `(second, first, third)`. What effect does that have on the unit of work?
+* Remove one parameter, but not the others. Does the function still work?
+* Change the order of the variables when you add them together in the function. Does that affect the output of the function?
+
+## Practice: Self-Driving Cars
+
+1. Create a function named `go` that takes 2 arguments:
+    1. direction (forwards, backwards, etc.)
+    1. speed (mph).
+1. The function, when invoked, will log out the following message format in the console:
+    * `The car is moving forwards at 45 mph.`
+    * `The car is moving backwards at 8 mph.`
+    * `The car is moving in circles at 12 mph.`
+1. Add a condition inside the function to check if the speed is greater than 75 mph. If it is, add an additional message of SLOW DOWN!
+    > **Example:** The car is moving forward at 82 mph. SLOW DOWN!
