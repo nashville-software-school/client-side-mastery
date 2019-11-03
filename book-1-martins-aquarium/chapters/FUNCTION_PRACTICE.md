@@ -261,5 +261,61 @@ In this exercise, you are going to define more than one parameter for functions.
 
 #### Exploration Tasks
 
-* Create an array of numbers outside the function. Some even, some odd. Then, after the function is defined, iterate the array and invoke the `evenOrOdd` passing the current number as the argument.
+* Create an array of numbers outside the function. Some even, some odd. After the function is defined, iterate the array of numbers with a `for..of` loop, and invoke the `evenOrOdd` function with each number as the argument.
 * What happens when you pass the argument value of 0?
+
+## Practice: Double Functions
+
+For this exercise, you are going to utilize two functions; each function will have a single responsibility. The goal of the exercise is to convert an array of words into a sentence, but some of the words in the array should not be included in the sentence.
+
+Therefore, you need two functions.
+
+* One function to filter out the unwanted words.
+* One function to convert an array of words into a single sentence.
+* Each function needs to return a value.
+* The return value from one function needs to be passed to the other function.
+
+In the array of words below, filter out any word that starts with the letter `k`. With the remaining words, combine them all into a single string and log that string to the console.
+
+```js
+const words = [
+    "The", "killing", "complex", "houses",
+    "married", "kittens", "and", "single",
+    "soldiers", "and", "their", "kleptomaniacal",
+    "families"
+]
+
+/*
+    Function to filter out `k` words
+ */
+
+/*
+    Function to build a single string from the array
+ */
+
+
+/*
+    Invoke the filtering function and store its return value
+ */
+
+
+/*
+    Invoke the string building function, and pass the
+    return value of the previous function as an argument
+*/
+
+
+console.log()
+```
+
+## Practice: You Can Tune a Piano, But You Can't...
+
+Sven the Norwegian fisherman goes out at 5:32 AM every day to fish for tuna in the North Sea. Each time he casts his line, he has a 33% chance of catching a tuna.
+
+On a side note, did you know that you can ask JavaScript for a random number? You use the `Math.random()` method which, by default, returns a number between 0 and 1. If you mutiply the result by 2, you will get a number between 0 and 2.
+
+```js
+Math.random() * 2  // Number between 0 and 2
+```
+
+Write a function that simulates Sven's chances of catching a tuna. The function needs no input, and it simply returns `true` or `false`. If a random number falls in a certain range, return `true`. If it falls in any other range, return `false`.
