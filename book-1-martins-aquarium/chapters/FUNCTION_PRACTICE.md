@@ -319,3 +319,15 @@ Math.random() * 2  // Number between 0 and 2
 ```
 
 Write a function that simulates Sven's chances of catching a tuna. The function needs no input, and it simply returns `true` or `false`. If a random number falls in a certain range, return `true`. If it falls in any other range, return `false`.
+
+Invoke the function and then log one of the following messages to the console.
+
+```html
+Sven hooked a tuna!  :)
+```
+
+or
+
+```html
+Sven came up empty-handed.  :(
+```
