@@ -1,6 +1,6 @@
 # Automate Martin's Website
 
-Now that you have a module whose responsibility is to maintain the data and state of your application, now you need to convert that raw data into HTML representations and render them in the browser. This will automate the creation of the HTML list of fish from the objects in your fish collection, so that you never have to copy/paste the HTML directly when a fish dies, or a fish is added.
+Now that you have a module whose responsibility is to maintain the state of your application, now you need to convert that raw data into HTML representations and render them in the browser. In this chapter you will automate the creation of the HTML list of fish from the objects in your fish collection, so that you never have to copy/paste the HTML directly when a fish dies, or a fish is added.
 
 ## Remove Hard-Coded HTML
 
@@ -69,13 +69,16 @@ export default FishComponent
 /**
  *  FishListComponent which renders individual fish objects as HTML
  */
-import { useFish } from "./FishDataProvider.js"
+
+// Import `useFish` from the data provider module
 
 const FishListComponent = () => {
 
-    const contentElement = document.querySelector(".content")
+    // Get a reference to the `<article class="content">` element
+    const contentElement = document.querySelector("insert selector here")
     const fishes = useFish()
 
+    // Add to the existing HTML in the content element
     contentElement.innerHTML += `
         <section class="fishList">
             All the fish go here!
@@ -92,7 +95,8 @@ Since we want the fish to be immediately rendered when the page loads, then that
 
 ```js
 import initializeDetailButtonEvents from './dialogs.js'
-import FishListComponent from './FishList.js'
+// Import the FishListComponent here
+
 
 // initializeDetailButtonEvents()
 FishListComponent()
@@ -105,6 +109,8 @@ Refresh your browser again and you should see the following message in the middl
 Hooray!! Your fish list component got rendered to the browser. Next is to render all the fish.
 
 You need the `FishComponent` component function to do that. That function is in the `Fish.js` module, so you need to import it from there.
+
+> **`scripts/FishList.js`**
 
 ```js
 import FishComponent from "./Fish.js"
@@ -127,7 +133,12 @@ const FishListComponent = () => {
     // Generate all of the HTML for all of the fish
     let fishHTMLRepresentations = ""
     for (const fish of fishes) {
-        fishHTMLRepresentations += FishComponent(fish)
+        /*
+            Invoke the FishComponent component function
+            and pass the current fish object as an argument.
+            Each time, add the return value to the
+            fishHTMLRepresentations variable with `+=`
+        */
     }
 
     // Add a section, and all of the fish to the DOM
@@ -204,3 +215,34 @@ fishHTMLRepresentations += FishComponent()
 Then the parameter never gets assigned a value to reference. Therefore, it's undefined, and you can't access an `.image` property of something that is undefined.
 
 Now put the argument back in when you invoke the component function and it should all work again.
+
+## Practice: Information Organization
+
+In the following exercises, you are going to building module and components for tips, and locations. You need to separate all of those modules into sub-directories so that you don't end up with dozens of JavaScript files all in one directory. It's confusing.
+
+In the `scripts` directory, create the `fish`, `tips`, and `locations` sub-directories and move all of your current files for automating fish into their `scripts/fish` directory.
+
+This will have the side effect of changing how you import the modules, since their path has changed. You will need to clean up all of your import paths.
+
+## Practice: Automate Martin's Tips
+
+Create a data provider, a tip list component, and a tip component to automate the rendering of Martin's fish care tips.
+
+Suggested files to create:
+
+* `scripts/tips/TipDataProvider.js`
+* `scripts/tips/TipList.js`
+* `scripts/tips/Tip.js`
+
+## Practice: Automate Martin's Locations
+
+Create a data provider, a tip list component, and a tip component to automate the rendering of Martin's locations for the location page.
+
+Suggested files to create:
+
+* `scripts/locations/main.js`
+* `scripts/locations/LocationDataProvider.js`
+* `scripts/locations/LocationList.js`
+* `scripts/locations/Location.js`
+
+You need a separate main module for locations because those HTML representations are rendered on a separate page. Fish and tips are rendered on the same page, so they use the same main module.

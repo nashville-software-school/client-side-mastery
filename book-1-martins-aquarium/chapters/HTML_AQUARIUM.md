@@ -56,10 +56,12 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 
 1. What are the components?
 1. What are the properties of each fish that you will be representing in your HTML?
+1. What are the properties of the fish care tips that Martin wants on the side?
+1. What are the properties of the locations Martin has visited?
 1. What should be the class names for each?
 1. Which semantic tags should you use?
 1. How can we use Flexbox to build a better layout of fish and locations?
-1. Should you create multiple CSS files, or keep all of the styles for all of the pages in a single file? If multiple, conside the [@import](https://www.w3schools.com/csSref/pr_import_rule.asp) keyword to modularize.
+1. Which CSS files should be created? Consider the [@import](https://www.w3schools.com/csSref/pr_import_rule.asp) keyword to modularize your styling.
 
 
 ## Time to Build
