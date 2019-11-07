@@ -62,7 +62,7 @@ Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 Now that you have Node installed, you can install some open source software that you will need in the course.
 
 ```sh
-sudo npm i -g http-server
+sudo npm i -g http-server@0.9.0
 ```
 
 ## Xcode Command Line Tools

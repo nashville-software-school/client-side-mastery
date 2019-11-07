@@ -7,6 +7,8 @@ Professional developers do not store all of their application code in a single d
 ```sh
 cd ~/workspace/aquarium
 mkdir styles
+mkdir styles/main
+mkdir styles/locations
 ```
 
 Then move all CSS files into that directory with the `mv` command. The pattern is always the following.
@@ -17,10 +19,11 @@ Then move all CSS files into that directory with the `mv` command. The pattern i
 mv {what you want to move} {where you want to move it}
 ```
 
-Here's an example of how to move the `aquarium.css` file into the subdirectory.
+Here's an example of how to move the `main.css` file into the `styles/main` subdirectory.
 
 ```sh
-mv aquarium.css styles
+mv main.css styles/main
 ```
 
-Move all of the CSS files into the `styles` subdirectory.
+1. Move all of the CSS files for the home page into the `styles/main` subdirectory.
+1. Move all of the CSS files for the locations page into the `styles/locations` subdirectory.

@@ -57,7 +57,7 @@ Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 `http-server` is what you will use to make your web sites work in the browser. Open Git Bash if you haven't yet, and type in the following command.
 
 ```sh
-npm i -g http-server
+sudo npm i -g http-server@0.9.0
 ```
 
 ### Create SSH key
