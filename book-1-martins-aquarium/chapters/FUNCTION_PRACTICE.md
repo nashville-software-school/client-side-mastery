@@ -462,7 +462,7 @@ So think of six random tasks that you perform on a regular basis and define a fu
 const xxxxx = person => `${} ${} `
 ```
 
-### Planning Your Day
+### Lazy Day
 
 Now define a function that has three parameters. The purpose of each parameter is as follows:
 
@@ -478,3 +478,22 @@ The return value of `dayPlanner` should be a string in the following format, ass
 "Yolanda Johnson mowed the lawn on Thursday."
 ```
 
+Log that output to the developer console.
+
+### Busy Day
+
+Refactor the `dayPlanner` higher order function to accept five (5) parameters. The first three should be functions. The fourth should be the person object. The fifth should be the day string.
+
+```js
+(firstChore, secondChore, thirdChore, person, day)
+```
+
+Inside the higher order function, invoke all three chore functions and format the return value for `dayPlanner` to follow this format.
+
+```html
+"On Monday, Yolanda Johnson mowed the lawn, and Yolanda Johnson
+picked up the dry cleaning, and Yolanda Johnson replaced the
+batteries in the smoke detectors."
+```
+
+Log that output to the developer console.
