@@ -37,7 +37,8 @@ Visit the [Git Bash](http://www.git-scm.com/downloads) download page click the "
 Once Git Bash is installed, run it. Once it is running, type in the following command.
 
 ```sh
-echo 'alias gs="git status"' >> ~/.bashrc
+echo 'alias gs="git status"
+alias hs="serve -l 8080"' >> ~/.bashrc
 ```
 
 ### Google Chrome
@@ -54,10 +55,10 @@ Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 
 ### Web Server
 
-`http-server` is what you will use to make your web sites work in the browser. Open Git Bash if you haven't yet, and type in the following command.
+`serve` is what you will use to make your web sites work in the browser. Open Git Bash if you haven't yet, and type in the following command.
 
 ```sh
-sudo npm i -g http-server@0.9.0
+sudo npm i -g serve
 ```
 
 ### Create SSH key

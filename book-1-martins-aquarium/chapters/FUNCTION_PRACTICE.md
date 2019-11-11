@@ -287,10 +287,12 @@ const words = [
 
 /*
     Function to filter out `k` words
+    (Google 'javascript startswith' to get started)
  */
 
 /*
     Function to build a single string from the array
+    (Google 'javascript combine all items in array' to get started)
  */
 
 
@@ -312,7 +314,7 @@ console.log()
 
 Sven the Norwegian fisherman goes out at 5:32 AM every day to fish for tuna in the North Sea. Each time he casts his line, he has a 33% chance of catching a tuna.
 
-On a side note, did you know that you can ask JavaScript for a random number? You use the `Math.random()` method which, by default, returns a number between 0 and 1. If you mutiply the result by 2, you will get a number between 0 and 2.
+On a side note, did you know that you can ask JavaScript for a random number? You use the `Math.random()` method which, by default, returns a number between 0 and 1. If you mutiply the result by 2, you will get a number between 0 and 2. This would allow you to simulate a coin flip. You could check if the value was between 0 and 1 (_heads_), or between 1 and 2 (_tails_).
 
 ```js
 Math.random() * 2  // Number between 0 and 2
@@ -331,3 +333,148 @@ or
 ```html
 Sven came up empty-handed.  :(
 ```
+
+#### Exploration Tasks
+
+* Try multiplying the `random()` method by different values and see how it affects how often Sven catches a fish.
+* Instead of hard-coding the number by which you multiple `random()`, see if you can pass that number in as an argument to the function.
+* Is your function a pure function? Why or why not? If you're unsure, talk to your teammates or your instructors.
+* What happens if you multiply `random()` by 0?
+
+## Practice: Fast Food (_Multiple Parameters_)
+
+Your job in this exercise is to write a function that returns an object that represents a fast food meal. The customer will be able to order a sandwich, a side item (_like fries or apples_), a drink, and a dessert. Your function should take all of those externally defined values as input (_i.e. parameters_) and then `return` an object like this.
+
+```js
+{
+    "sandwich": "Ultimate Slammer",
+    "side": "Potato wedges",
+    "drink": "Mr. Pepper",
+    "dessert": "Fudge sundae"
+}
+```
+
+> **Tip:** Since each of these values are separate items, then there needs to be one parameter for each one. Then you need to specify four arguments.
+
+```js
+const takeOutBag = orderMeal("Ultimate Slammer", "Fudge sundae", "Mr. Pepper", "Potato wedges")
+```
+
+#### Exploration Tasks
+
+* What happens if you define more parameters than arguments?
+* What happens if you change the order of your parameters?
+* What happens if you change the order of your argument values when you invoke the function?
+* What happens if you remove one of your parameters?
+
+## Practice: Same Chores, Different Days
+
+Here's a fancy term for you: _Higher Order Functions_. It's a function that takes another function as a parameter and uses it for its own purposes.
+
+Here's a simple example. This is a function that reads in a number, then returns that number multiplied by 2.
+
+```js
+const twice = number => number * 2
+
+twiceTwo = twice(2)
+console.log(twiceTwo)  // 4
+
+twiceSix = twice(6)
+console.log(twiceSix)  // 12
+
+twiceThirteen = twice(13)
+console.log(twiceThirteen)  // 26
+```
+
+You can make functions that multiply numbers by any amount. Make two more functions: one that multiplies by 5, and one that squares a number.
+
+```js
+const timesFive = number => number * 5
+console.log(timesFive(2))  // 10
+console.log(timesFive(5))  // 25
+
+const square = number => number * number
+console.log(square(4))  // 16
+console.log(square(13))  // 169
+```
+
+So now you have three functions, each of which does something different to a number.
+
+```js
+const twice = number => number * 2
+const timesFive = number => number * 5
+const square = number => number * number
+```
+
+Now you can define another function that takes one of those functions as input. It's a more generic function that will perform _any task_ on a number, but needs you to tell it what it should do.
+
+```js
+/*
+    I can make any number bigger, but you need to tell
+    me how much bigger by giving me the function you
+    want me to invoke on the number
+*/
+const bigify = (number, operationFunction) => {
+    const result = operationFunction(number)
+    return result
+}
+```
+
+Now take the same number and perform all three operations on it by invoking `bigify()`.
+
+```js
+const number = 7
+const by2 = bigify(number, twice)  // 14
+const by5 = bigify(number, timesFive)  // 35
+const byItself = bigify(number, square)  // 49
+```
+
+> **Lightning Exercise:** Define another function that cubes a number. Then augment the code above by passing the function to `bigify()`
+
+You are now going to do something similiar. You are going to make the same person perform a series of three chores. Then you get to decide which three chores, depending on the day.
+
+### Defining the Chores
+
+First define six (6) functions that defines a single parameter whose value should be an object. That object will look like this.
+
+```js
+{
+    firstName: "Donald",
+    lastName: "McLelland"
+}
+```
+
+Each function should return a string in the following format, if the object parameter represents Donald McLelland.
+
+```html
+"Donald McLelland went to the grocery store"
+```
+
+or
+
+```html
+"Donald McLelland got the engine oil changed"
+```
+
+So think of six random tasks that you perform on a regular basis and define a function for each one. We will start you off with a hint.
+
+```js
+const xxxxx = person => `${} ${} `
+```
+
+### Planning Your Day
+
+Now define a function that has three parameters. The purpose of each parameter is as follows:
+
+1. `chore` - A function that will perform a chore
+1. `person` - An object representing a perform. It should have a `firstName` and a `lastName` property.
+1. `day` - The weekday to perform the task (_e.g. "Tuesday"_)
+
+We suggest you name this higher order function `dayPlanner()`.
+
+The return value of `dayPlanner` should be a string in the following format, assuming the `person` object represents Yolanda Johnson, the chore was mowing the lawn, and the day was Thursday.
+
+```html
+"Yolanda Johnson mowed the lawn on Thursday."
+```
+
