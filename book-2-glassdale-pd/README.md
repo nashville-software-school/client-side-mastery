@@ -25,6 +25,16 @@
 
 > ### __Sprint 2__ - [Welcome to Nashville](https://github.com/nashville-software-school/welcome-to-nashville)
 
+## Review Chapters
+
+* [Array Methods](./chapters/JS_ARRAY_METHODS.md)
+* [Factory Functions](./chapters/JS_FACTORY_FUNCTION.md)
+* [Using Related Data](./chapters/JS_JOINING_DATA.md)
+* [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
+
 ## Supplementary Chapters
 
-* Chapter 1 - [Local SSL Certificates](./chapters/LOCAL_CERTS.md)
+* [Customizing the Terminal](./chapters/CLI_PERSONALIZATION.md)
+* [Generator Functions](./chapters/JS_GENERATOR_FUNCTION.md)
+* [CSS Variables](./chapters/CSS_VARIABLES.md)
+* [Local SSL Certificates](./chapters/LOCAL_CERTS.md)
