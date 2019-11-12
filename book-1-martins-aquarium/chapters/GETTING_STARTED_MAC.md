@@ -62,7 +62,7 @@ Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 Now that you have Node installed, you can install some open source software that you will need in the course.
 
 ```sh
-sudo npm i -g http-server@0.9.0
+sudo npm i -g serve
 ```
 
 ## Xcode Command Line Tools
@@ -93,6 +93,11 @@ brew install git
 1. Install [Oh My Zsh](http://ohmyz.sh/) which is a framework for Z shell which makes the terminal a pleasure to work in. Use the following command.
     ```sh
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    ```
+1. Run the following command in Terminal application.
+    ```sh
+    echo 'alias gs="git status"
+    alias hs="serve -l 8080"' >> ~/.zshrc
     ```
 
 ### Show Hidden Files
