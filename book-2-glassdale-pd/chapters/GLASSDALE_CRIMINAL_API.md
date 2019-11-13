@@ -46,3 +46,44 @@ For this book, you will be consuming the Glassdale Police Department Criminal AP
 > That sounded like good knowledge, so you reach quickly for the pen on your desk, click it open and scribble a note in your notepad.
 >
 > Maggies smiles blandly. "Oh, it's all there in the file." She waves at the folder.
+>
+> "So the chief said I should talk to you to get started?" You ask after a brief pause.
+>
+> "Oh yes! So we have this thing called an API that a couple interns built for us about a year ago. It has a record of all criminal activity in this town dating back to, oh, about 1989. I was thinking you could start using it to find out some clues about who are possible suspects at the time of the crime." She then looks at you expectantly.
+>
+> "Sure, let me look at it for the afternoon and see if I can start getting the data from it into something we can use."
+>
+> Maggie taps the table and says, "Great. Grab me before the end of the day and show me what you have."
+
+## Assignment
+
+Your first assignment is to pull all of the data from the API (see above) and display all criminals in a grid format. Start with the following details for each criminal.
+
+1. Name
+1. Age
+1. Conviction
+1. Dates of incarceration
+
+![grid layout of criminals](./images/glassdale-assignment-1.png)
+
+### Tips
+
+1. Use the `toLocateDateString()` method on the dates to get the date in a more human readable format. Example below.
+    ```js
+    ${new Date(criminal.incarceration.start).toLocaleDateString('en-US')
+    ```
+1. Create your criminal provider component, criminal list component, and criminal component in the `scripts/criminal` directory.
+1. The criminal provider component should have the following collections and functions.
+    ```js
+    let criminals = []
+
+    /*
+        Should you just export the private array as is?
+        Should it be sorted in some way?
+    */
+    export const useCriminals = () => criminals
+
+    export const getCriminals = () => {
+        // Load database state into application state with a fetch()
+    }
+    ```
