@@ -18,12 +18,9 @@ After you have completed the form, place a `button` element beneath it labeled `
 ### Project Directory and First Files
 
 1. Create a new sub-directory in your `workspace` directory named `daily-journal`.
-1. In that directory, create another subdirectory named `src`. This directory is where all of your source code will live.
-1. In the `src` directory, create an `index.html` file.
-1. In the `src` directory, create another sub-directory named `scripts`. This directory will contain all of your JavaScript files in the future.
-1. In the `src` directory, create a `styles` directory and create a `journal.css` file in it.
-
-![](./images/97RFcUEOLV.gif)
+1. In that directory, create an `index.html` file.
+1. Create a sub-directory named `scripts`. This directory will contain all of your JavaScript files in the future.
+1. Create a `styles` sub-directory and create a `main.css` file in it.
 
 Once those are created, make sure you are in your root directory and open Visual Studio Code with the `code .` command in the terminal. Once it launches, you are ready to start coding.
 
@@ -31,10 +28,7 @@ Once those are created, make sure you are in your root directory and open Visual
 
 Open your `index.html`. Visual Studio Code provides many shortcuts and can write boilerplate code for you, which you then customize for your needs. Just type in the letters `html` and in the Intellisense context menu that appears, choose the "html:5" item to get some boilerplate HTML.
 
-Inside the `<head>` tag, create a new line, type in `link` and choose the "link:css" item and change the href to `journal.css`
-
-
-![html boilerplate](./images/html-boilerplate.gif)
+Inside the `<head>` tag, create a new line, type in `link` and choose the "link:css" item and change the href to `main.css`
 
 ## Building the Journal Form
 
