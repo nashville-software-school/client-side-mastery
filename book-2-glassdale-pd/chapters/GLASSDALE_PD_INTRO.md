@@ -14,12 +14,46 @@
 >
 > "Perfect! Well, let's get you set up with your laptop because I have the perfect job for you to take on for this first week," Renee excitedly says.
 >
->Immediately, Renee dives into your new assignment, "So, we have this cold case... Five years ago, Glassdale's local businesses were being extorted for 'protection' money over a six month period. Until one night, where one brave shop owner, Carl, finally notified the police when he refused to pay our perp. After reporting it to the police,  Carl returned back to his shop where our masked perp was waiting for him with a loaded gun and threatened to kill him if he didn't pay up. Carl was thankfully able to run and escape, but later that night, the perp broke into the business and emptied the registers and the safe for revenge of going to the police."
+> Immediately, Renee dives into your new assignment, "So, we have this cold case... Five years ago, Glassdale's local businesses were being extorted for 'protection' money over a six month period. Until one night, where one brave shop owner, Carl, finally notified the police when he refused to pay our perp. After reporting it to the police,  Carl returned back to his shop where our masked perp was waiting for him with a loaded gun and threatened to kill him if he didn't pay up."
 >
->You're able to utter one shocked "Wow..." before Renee dives back into your assignment,"No one was ever able to solve it, and I'm hoping now that we have shifted all of our crime data from paper documentation to our new criminal database that you'll be able to use all of those fancy coding skills of yours to solve it."
+> She takes a long sip of her coffee and opens a manila folder she placed in front of you and turns to a photo. You assume that it's Carl.
 >
->"Damn, that's a lot to digest on my first day but I'm up for the challenge and glad I can help out!" you reply eagerly, still shocked that this quiet, small town was victim to such an insane extortion scandal.
+>  She points at the photo and continues, "Carl was, thankfully, able to run and escape. Later that night, the perp broke into the business and emptied the registers and the safe."
 >
->"Amazing! Thank you so much. We're excited to have you on our team," says Police Chief Renee, as she hands you your laptop and exits your new office.
+> Renee pauses, raises her eyebrows slightly, and says, "Revenge for going to the police."
 >
->You sit down at your clunky desk that's probably been around since the 80's. For the first time since you arrived in Glassdale, Illinois, you feel the slightest tinge of excitement for this new step in life.
+> You're able to utter one shocked "Wow..." before Renee dives back into your assignment, "No one was ever able to solve it, and I'm hoping now that we have shifted all of our crime data from paper documentation to our new criminal database that you'll be able to use all of those fancy coding skills of yours to solve it."
+>
+> You smile ever so slightly at how she said _"fancy coding skills"_, but recover in a split second.
+>
+> "Damn, that's a lot to digest on my first day but I'm up for the challenge and glad I can help out!" you reply eagerly, still shocked that this quiet, small town was victim to such an insane extortion scandal.
+>
+> The police chief slaps the manila folder with satisfaction and a glint in her eyes. "Believe me, we're glad to have you on our team."
+>
+> She stands up, pulls a laptop from the desk behind yours and hands it to you. "This is yours now. Brady down in procurement has all the details of how to get into it."
+>
+> You take the laptop in both hands and stare at it for a few seconds. It looks like it's been around the block a few times, and it's heavier than any laptop you've ever owned.
+>
+> Renee starts to walk away and flatly says, "Review that case file. Get your laptop set up, and then go talk to Captain Debrowski." She points to an office in the corner of the floor with its door shut.
+>
+> You sit down at your clunky desk that's probably been around since the 80's. For the first time since you arrived in Glassdale, Illinois, you feel the slightest tinge of excitement for this new step in life.
+
+In this book, you will be using your _fancy coding skills_ to review all of the evidence for the case that the police chief handed off to you. The data exists, but you will be writing code that will help you filter through the data and find relevent hints that are hidden in it as you grow your skills.
+
+## Setup
+
+1. Create the `~/workspace/glassdale` directory with the `mkdir` command.
+1. Create the following directory structures.
+    1. `~/workspace/glassdale/api`
+    1. `~/workspace/glassdale/scripts/criminals`
+    1. `~/workspace/glassdale/scripts/crimes`
+    1. `~/workspace/glassdale/scripts/officers`
+    1. `~/workspace/glassdale/styles`
+1. Create your `index.html`, `scripts/main.js`, and `styles/main.css` files.
+1. Make sure that `json-server` was installed correctly by typing it into your terminal. If you get feedback that your system doesn't recognize the `json-server` command, speak to an instructor immediately.
+1. If you haven't yet, create following alias in `.bashrc` for Windows or `.zshrc` for OSX.
+    ```sh
+    alias hs="serve -l 8080"
+    ```
+1. `source ~/.zshrc` or `source ~/.bashrc` to make the alias active.
+1. Type the command `hs` in your terminal and verify that your web server starts on port 8080.

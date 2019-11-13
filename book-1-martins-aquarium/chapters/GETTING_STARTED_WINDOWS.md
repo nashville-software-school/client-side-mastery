@@ -34,7 +34,7 @@ Visit the [Git Bash](http://www.git-scm.com/downloads) download page click the "
 
 ### Git Bash Initialization File
 
-Once Git Bash is installed, run it. Once it is running, type in the following command.
+Once Git Bash is installed, run it. Once it is running, type in the following command _(you can copy/paste)_.
 
 ```sh
 echo 'alias gs="git status"

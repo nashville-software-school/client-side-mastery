@@ -4,8 +4,15 @@ For this book, you will be consuming the Glassdale Police Department Criminal AP
 
 ## Setup
 
-1. Create following aliases in `.bashrc` for Windows or `.zshrc` for OSX.
-    ```sh
-    alias hs="serve -l 8080"
-    ```
-1. `source ~/.zshrc` or `source ~/.bashrc` to make the alias active.
+1. Install [Postman](https://www.getpostman.com/). You instruction team will walk you through the basics of usage.
+
+
+## Introduction
+
+> While you are still getting settled at your new desk and Brady finally figured out how to get into your laptop, you walk over to your captain's door and rap your knuckles on it confidently.
+>
+> Silence...
+>
+> "Captain?" you ask with your face right in front of the door.
+>
+> More silence...

@@ -19,8 +19,6 @@
 | 12 | [Your Next Case](./chapters/GLASSDALE_MANY_TO_MANY.md) | [Data Relationships](./chapters/DAILY_JOURNAL_MOOD_TABLE.md) |  |
 
 
-
-
 ---
 
 > ### __Sprint 2__ - [Welcome to Nashville](https://github.com/nashville-software-school/welcome-to-nashville)
