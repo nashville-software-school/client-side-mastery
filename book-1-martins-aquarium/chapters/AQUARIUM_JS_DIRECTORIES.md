@@ -9,7 +9,7 @@ cd ~/workspace/aquarium
 mkdir scripts
 ```
 
-Then move all CSS files into that directory with the `mv` command. The pattern is always the following.
+Then move all Javascript files into that directory with the `mv` command. The pattern is always the following.
 
 > **TIP:** When you see curly braces like this in documentation, it usually means _"place your text here, but without the curly braces"_
 
