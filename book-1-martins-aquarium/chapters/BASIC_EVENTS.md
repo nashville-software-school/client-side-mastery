@@ -152,6 +152,6 @@ Now you must make all the fish have a button. Modify your aquarium project to...
 
 1. Have a `<dialog>` for each fish and put the corresponding properties in it.
 1. Add a new event listener inside the `initializeDetailButtonEvents()` function in `dialogs.js` for each fish's detail button.
-1. Once done, very that all buttons work as intended.
+1. Once done, verify that all buttons work as intended.
 
 > **Tip:** Make sure you use your debugger and breakpoints if any of your code doesn't work. If you are still uncomfortable with the debugger, see your instruction team for a review.
