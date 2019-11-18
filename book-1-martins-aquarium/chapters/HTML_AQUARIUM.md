@@ -52,6 +52,11 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 >
 > You both shake hands and you head back home to start work on the site.
 
+## Goals
+
+1. Use `index.html` to build a web page that lists fish in the main content area, and then some fish/tank care tips on the right side of the page.
+1. Using `locations.html` to list the locations Martin has been to, and his travel tips for each one.
+
 ## Discussion Points
 
 1. What are the components?

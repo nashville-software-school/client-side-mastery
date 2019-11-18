@@ -2,7 +2,7 @@
 
 ## Chapters
 
-| #  | Aquarium | Daily Journal | Twhoops |
+| #  | Aquarium | Daily Journal | The Daily Mars |
 |--|--|--|--|
 | 🍎  | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) |       |      |
 | 💻  | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |  |  |
@@ -17,9 +17,9 @@
 | 8 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) |  |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Hello, World_**](./chapters/HELLO_WORLD.md) |  |  |
 | 9 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD.md) |  |  |
-| 10 | [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md) |  | [Twhoops Politicians](./chapters/DUMMY_POLITICIANS.md) |
+| 10 | [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md) |  |  |
 | 11 | [Using the Fish Data Provider](./chapters/EXPORTING_FISH.md) | [Journal Entry Objects](./chapters/DAILY_JOURNAL_OBJECT_DOM.md) |  |
-| 12 | [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md) |  |  |
+| 12 | [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md) |  | [Mars Photo Data](./chapters/DUMMY_MARS_DATA.md) |
 | 13 | [Automated Event Listeners](./chapters/DYNAMIC_EVENT_LISTENERS.md) |  |  |
 | 14 | [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md) | [Rendering Collections of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md) |  |
 | 15 | [Big Fish, Little Fish](./chapters/FILTERING_FISH.md) |  | [Rendering Dummy Data](./chapters/TWHOOPS_OBJECTS_ARRAYS.md) |
