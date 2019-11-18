@@ -17,7 +17,7 @@ In this chapter you will take your raw data structures, and create HTML represen
 
 Add two, new JavaScript modules to your application named `JournalEntryList.js` which will be responsible for rendering a list of entry components, and `JournalEntry.js` which will be responsible for rendering a single journal entry.
 
-Just like Martin's Aquarium application, you are going to make each component return a `render()` function that, when invoked, will generate an HTML string.
+Just like Martin's Aquarium application, you are going to make each individual item component return an HTML string.
 
 > **scripts/JournalEntry.js**
 
@@ -26,18 +26,13 @@ Just like Martin's Aquarium application, you are going to make each component re
  *  Purpose: To render a single journal entry as an
  *           HTML representation of the data
  */
-const JournalEntryComponent = () => {
-
-    return {
-        render: entry => {
-            return `
-                <section id="entry--${entry.id}" class="journalEntry">
-                    Display the entry's full text, and the date
-                    it was entered here.
-                </section>
-            `
-        }
-    }
+const JournalEntryComponent = (entry) => {
+    return `
+        <section id="entry--${entry.id}" class="journalEntry">
+            Display the entry's full text, and the date
+            it was entered here.
+        </section>
+    `
 }
 
 export default JournalEntryComponent
@@ -66,25 +61,16 @@ const EntryListComponent = () => {
     // Use the journal entry data from the data provider component
     const entries = useJournalEntries()
 
-    return {
-        render () {
-            entryLog.innerHTML += `
-            ${
+    entryLog.innerHTML += `
+        ${
+            for (const entry of entries) {
                 /*
-                    Invoke the render() function of the
-                    JournalEntryComponent() for each item
-                    in the entries array.
-
-                    Refer to the answer key repo to see an
-                    example of how it's done.
+                  Invoke the component that returns an
+                  HTML representation of a single entry
                 */
-                for (const entry of entries) {
-
-                }
             }
-            `
         }
-    }
+    `
 }
 
 export default EntryListComponent
@@ -92,7 +78,7 @@ export default EntryListComponent
 
 ## Render the Entry List
 
-Now you need to import the list component into the main module and invoke its `render()` method. If you are still not clear on how to do this...
+Now you need to import the list component into the main module and invoke it there. If you are still not clear on how to do this...
 
 1. Look at the answer key repository to see an example.
 1. If you still can't get it, see a member of your instruction team and we'll talk through it.
