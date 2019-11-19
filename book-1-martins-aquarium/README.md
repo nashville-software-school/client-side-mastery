@@ -10,7 +10,7 @@
 | ☠️ | <sub>_[Secret Chapter - All The Answers](./chapters/ANSWER_KEY.md)_</sub> |  |  |
 | 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) |  |  |
 | 3 | [Fish in my Aquarium](./chapters/HTML_AQUARIUM.md) | [Form Layout](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |  |
-| 4 | [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md) |  | [Application Layout](./chapters/TWOOPS_STRUCTURE_LAYOUT.md) |
+| 4 | [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md) |  | [Application Layout](./chapters/DAILY_MARS_STRUCTURE_LAYOUT.md) |
 | 5 | [Using Events for a Better User Experience](./chapters/BASIC_EVENTS.md) |  |  |
 | 6 | [Time to Organize Again](./chapters/AQUARIUM_JS_DIRECTORIES.md) |  |  |
 | 7 | [Track Aquarium Changes](./chapters/GIT_BASICS.md) |  |  |
