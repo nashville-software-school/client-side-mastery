@@ -46,7 +46,7 @@ In this book, you will be using your _fancy coding skills_ to review all of the 
 1. Create the following directory structures.
     1. `~/workspace/glassdale/api`
     1. `~/workspace/glassdale/scripts/criminals`
-    1. `~/workspace/glassdale/scripts/crimes`
+    1. `~/workspace/glassdale/scripts/convictions`
     1. `~/workspace/glassdale/scripts/officers`
     1. `~/workspace/glassdale/styles`
 1. Create your `index.html`, `scripts/main.js`, and `styles/main.css` files.
@@ -56,4 +56,36 @@ In this book, you will be using your _fancy coding skills_ to review all of the 
     alias hs="serve -l 8080"
     ```
 1. `source ~/.zshrc` or `source ~/.bashrc` to make the alias active.
+1. Make an `index.html` file in `~/workspace/glassdale` directory. You are provided some boilerplate HTML below to place in that file.
 1. Type the command `hs` in your terminal and verify that your web server starts on port 8080.
+
+#### Boilerplate HTML
+
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Glassdale PD</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <header>
+            <div class="filters">
+                <div class="filter filters__crime"></div>
+                <div class="filter filters__incarceration"></div>
+                <div class="filter filters__officer"></div>
+            </div>
+        </header>
+        <article class="criminalsContainer"></article>
+    </main>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>
+```

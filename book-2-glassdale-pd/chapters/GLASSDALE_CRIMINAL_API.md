@@ -47,7 +47,7 @@ For this book, you will be consuming the Glassdale Police Department Criminal AP
 >
 > That sounded like good knowledge, so you reach quickly for the pen on your desk, click it open and scribble a note in your notepad.
 >
-> Maggies smiles blandly. "Oh, it's all there in the file." She waves at the folder.
+> Maggie smiles blandly. "Oh, it's all there in the file." She waves at the folder.
 >
 > "So the chief said I should talk to you to get started?" You ask after a brief pause.
 >
@@ -74,7 +74,7 @@ Your first assignment is to pull all of the data from the API (see above) and di
     ```js
     ${new Date(criminal.incarceration.start).toLocaleDateString('en-US')
     ```
-1. Create your criminal provider component, criminal list component, and criminal component in the `scripts/criminal` directory.
+1. Create your criminal data provider component, criminal list component, and criminal component in the `scripts/criminal` directory.
 1. The criminal provider component should have the following collections and functions.
     ```js
     let criminals = []
@@ -88,4 +88,11 @@ Your first assignment is to pull all of the data from the API (see above) and di
     export const getCriminals = () => {
         // Load database state into application state with a fetch()
     }
+    ```
+1. Remember to import the `getCriminals()` function into `main.js` and invoke it there. The criminal list can only be rendered once you know you have the data.
+    ```js
+    // main.js
+    import { getCriminals } from './criminals/CriminalProvider.js'
+
+    getCriminals().then( /* You have the data. What happens next? */ )
     ```
