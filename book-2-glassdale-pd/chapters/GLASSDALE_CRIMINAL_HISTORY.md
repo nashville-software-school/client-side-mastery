@@ -33,6 +33,43 @@ You need to create two, new components in your application
 1. The **`ConvictionProvider`** component will `fetch` those crimes an export a `useConvictions()` method for other components to import.
 1. The **`ConvictionSelect`** component, which will invoke `useConvictions()` and then iterate that collection to fill out the dropdown in the browser.
 
+## Using the map() Array Method
+
+Before you get started on your code, here is a review of how to use the `.map()` array method to iterate a collection, and convert every item in that collection into something else.
+
+Assume that you have a list of people's full names in an array.
+
+```js
+const names = ['Caitlin Stein', 'Ryan Tanay', 'Leah Hoefling', 'Emily Lemmon', 'Bryan Nilson', 'Jenna Solis', 'Meg Ducharme', 'Madi Peper', 'Kristen Norris']
+```
+
+That's the raw data that should _**always remain unchanged**_. However, you want to display only a list of last names in a dropdown list in your user interface, you would need to build a new array containing those values. You can use `.map()` for that.
+
+```js
+const lastNames = names.map(name => name.split(" ")[1])
+
+console.log(lastNames)
+// ['Stein', 'Tanay', 'Hoefling', 'Lemmon', 'Nilson', 'Solis', 'Ducharme', 'Peper', 'Norris']
+```
+
+Now imagine you want to fill a dropdown box in your UI with last names. First, you would get a reference to an existing element, like a `section` or a `div`, and update its `.innerHTML` property like in the example below.
+
+```js
+const nameListContainer = document.querySelector(".names")
+
+nameListContainer.innerHTML = `
+    <select>
+        ${
+            names.map(name =>
+                `<option>${name.split(" ")[1]}</option>`
+            )
+        }
+    </select>
+`
+```
+
+What's confusing, and also powerful, about the aboce code snippet is that you have string template **inside** another string template. That's the true power of the interpolation capability of `${}`. You can put any JavaScript expression inside those curly braces. The only limitation is that it is a single expression. You can't put multiple lines of code inside them. 😢
+
 ## Conviction Data Provider
 
 The **`ConvictionProvider`** component will follow the same structure as your **`CriminalProvider`** component.
@@ -49,8 +86,11 @@ export const getConvictions = () => {
 }
 ```
 
+## Conviction Select Component
 
-## Starter Code
+This component will render a `<select>` element with child `<option>` elements for each crime committed in the API.
+
+#### Starter Code
 
 > **`glassdale/scripts/convictions/ConvictionSelect.js`**
 
