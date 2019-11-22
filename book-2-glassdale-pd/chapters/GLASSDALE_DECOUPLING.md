@@ -6,6 +6,10 @@ Consider the following example. You have two modules in your system responsible 
 
 ## Tightly Coupled Components
 
+Starting off with this default HTML structure in the `index.html` file, the **`FriendList`** component will be rendered in the first section, and the **`MessageList`** component will be rendered in the second section.
+
+When the user chooses a friend in the first component, the second component will render a list of message from that friend. These components are siblings to each other.
+
 ```html
 <body>
     <main id="appContainer" class="container">
@@ -123,7 +127,7 @@ In this application, the agreed-upon location will be the top-most DOM element.
 <main id="appContainer" class="container">
 ```
 
-That is going to be the event hub because it's the element in which all the other ones will be contained.
+That is going to be the event hub because it's the element in which all components will be children of.
 
 ## Loosely Coupled Components
 
@@ -136,7 +140,8 @@ The first step in this process is to have the friend list have control over what
 import { useFriends } from './FriendProvider.js'
 
 /*
-    CHANGE: The event target is now the main container, or the Event Hub
+    CHANGE: The event target is now the `<main class=".appContainer">`
+            element. That element is now the Event Hub.
 */
 const eventTarget = document.querySelector(".appContainer")
 const contentTarget = document.querySelector(".friends")
@@ -165,8 +170,18 @@ const FriendList = () => {
                 Any component that thinks this message is important
                 would also care which friend was chosen. You can pass
                 that information along in the event like this.
+
+                The `detail` property has to be named that. Any sub-keys
+                are yours to define as you wish.
             */
-           message.detail.selectedFriend = selectedFriend
+           message.detail.friend = selectedFriend
+
+            /*
+                Now that the message has been fully constructed, it is
+                time to dispatch it to the Event Hub where other
+                components can listen for it.
+            */
+            eventTarget.dispatchEvent(message)
         }
     })
 
@@ -195,6 +210,10 @@ Now the message list component can listen for any messages that are sent to the 
 // MessageList.js
 import { getMesssageByFriend } from "./MessageProvider.js"
 
+/*
+    CHANGE: The event target is now the `<main class=".appContainer">`
+            element. That element is now the Event Hub.
+*/
 const eventTarget = document.querySelector(".appContainer")
 const contentTarget = document.querySelector(".messages")
 
@@ -207,7 +226,7 @@ const MessageList = () => {
                 the data in the payload and use it however it wants.
     */
     eventTarget.addEventListener("friendSelected", event => {
-            const friendName = event.detail.selectedFriend
+            const friendName = event.detail.friend
             const messages = getMessagesByFriend(friendName)
             render(messages)
         }
@@ -227,3 +246,11 @@ const MessageList = () => {
     }
 }
 ```
+
+## Reminder: This is Hard
+
+Thinking about components talking to each other using custom messages is a large cognitive leap. Your brain needs to build a fairly complex mental model to understand how the signal flow of information works in a system like this.
+
+You are not going to get this right away. It requires practice, conversations with your teammates &amp; instructors, and trying it in different contexts.
+
+Time to move on to the next chapter and actually try this out with the Glassdale Cold Case application you are building. In the previous chapter, you built a dropdown element that lists crimes. You will have that component dispatch a custom message to an Event Hub, and the criminal list component will listen for that event and then behave how it chooses.
