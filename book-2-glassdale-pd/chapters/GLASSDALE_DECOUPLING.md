@@ -163,18 +163,21 @@ const FriendList = () => {
                      sending a message to the Event Hub. Which
                      component would want to "listen" to a message
                      like this?
-            */
-            const message = new CustomEvent("friendSelected")
 
-            /*
-                Any component that thinks this message is important
-                would also care which friend was chosen. You can pass
-                that information along in the event like this.
-
-                The `detail` property has to be named that. Any sub-keys
-                are yours to define as you wish.
+                    Any component that thinks this message is important
+                    would also care which friend was chosen. You can pass
+                    that information along with the event. To do that
+                    you define an object as the second argument. That
+                    object must have a `details` property, which is,
+                    itself, an object. On that details object, you can
+                    make as many key/value pairs as you want to describe
+                    the data you want to send to any listeners.
             */
-           message.detail.friend = selectedFriend
+            const message = new CustomEvent("friendSelected", {
+                detail: {
+                    friend: selectedFriend
+                }
+            })
 
             /*
                 Now that the message has been fully constructed, it is
