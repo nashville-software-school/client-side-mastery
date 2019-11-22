@@ -236,7 +236,7 @@ Suggested files to create:
 
 ## Practice: Automate Martin's Locations
 
-Create a data provider, a tip list component, and a tip component to automate the rendering of Martin's locations for the location page.
+Create a data provider, a location list component, and a location component to automate the rendering of Martin's locations for the location page.
 
 Suggested files to create:
 
