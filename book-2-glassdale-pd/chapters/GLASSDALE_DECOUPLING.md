@@ -1,6 +1,6 @@
 # A Discussion about Loose Coupling
 
-The idea of Coupling in complex software is an important factor. Coupling is defined most generally as how many components know about the existance of each other. The higher that number, the higher your overall coupling is in an application. You want that number to be as low as possible.
+The idea of Coupling in complex software is an important factor. Coupling is defined most generally as how many components know about the existence of each other. The higher that number, the higher your overall coupling is in an application. You want that number to be as low as possible.
 
 Consider the following example. You have two modules in your system responsible for rendering HTML components.
 
@@ -8,7 +8,7 @@ Consider the following example. You have two modules in your system responsible 
 
 Starting off with this default HTML structure in the `index.html` file, the **`FriendList`** component will be rendered in the first section, and the **`MessageList`** component will be rendered in the second section.
 
-When the user chooses a friend in the first component, the second component will render a list of message from that friend. These components are siblings to each other.
+When the user chooses a friend in the first component, the second component will render a list of messages from that friend. These components are siblings to each other.
 
 ```html
 <body>
@@ -93,7 +93,7 @@ const MessageList = () => {
 }
 ```
 
-Unfortunately, these two components are now tighly coupled. What couples them?
+Unfortunately, these two components are now tightly coupled. What couples them?
 
 1. **`MessageList`** knows of the existence of the DOM element with `friends` class name.
 1. It also knows about DOM elements with the `friend` class name and that they emit the "change" event.
