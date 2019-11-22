@@ -20,7 +20,9 @@
 
 ## Goal
 
-In this chapter, you are going to be implementing a `<select>` element so that you have a drop-down element on the screen that lists all of the crimes that have been committed by criminals in the past. Once the user selects a crime, then the only criminals that will be rendered are the ones that have committed that crime.
+In this chapter, you are going to be implementing a `<select>` element so that you have a drop-down element on the screen that lists all of the crimes that have been committed by criminals in the past.
+
+In a future chapter, you are going to implement code that detects when the user selects a crime, and have the criminal list render only those criminals that were convicted of that crime.
 
 ![filter criminals by crime animation](./images/filter-criminals-by-crime.gif)
 
@@ -68,11 +70,13 @@ nameListContainer.innerHTML = `
 `
 ```
 
-What's confusing, and also powerful, about the aboce code snippet is that you have string template **inside** another string template. That's the true power of the interpolation capability of `${}`. You can put any JavaScript expression inside those curly braces. The only limitation is that it is a single expression. You can't put multiple lines of code inside them. 😢
+What's confusing, and also powerful, about the above code snippet is that you have string template **inside another string template**. That's the true power of the interpolation capability of `${}`. You can put any JavaScript expression inside those curly braces. The only limitation is that it is a single expression. You can't put multiple lines of code inside them. 😢
 
 ## Conviction Data Provider
 
 The **`ConvictionProvider`** component will follow the same structure as your **`CriminalProvider`** component.
+
+> **`glassdale/scripts/convictions/ConvictionProvider.js`**
 
 ```js
 let convictions = []
@@ -80,9 +84,11 @@ let convictions = []
 export const useConvictions = () => convictions
 
 export const getConvictions = () => {
-    // Load database state into application state with a fetch().
-    // Make sure the last `then()` sets the local `convictions` variable
-    // to what is in the response from the API.
+    /*
+        Load database state into application state with a fetch().
+        Make sure the last `then()` sets the local `convictions`
+        variable to what is in the response from the API.
+    */
 }
 ```
 
@@ -104,18 +110,19 @@ import { useConvictions } from "./ConvictionProvider.js"
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".filters__crime")
 
-// Component function that renders the HTML representation
 const ConvictionSelect = () => {
-    // Get all con
+    // Get all convictions from application state
     const convictions = useConvictions()
 
     const render = convictionsCollection => {
+        /*
+            Use interpolation here to invoke the map() method on
+            the convictionsCollection to generate the option elements.
+            Look back at the example provided above.
+        */
         contentTarget.innerHTML = `
             <select class="dropdown" id="crimeSelect">
                 <option value="0">Please select a crime...</option>
-
-                Use interpolation here to invoke the map() method on
-                the convictionsCollection
 
             </select>
         `

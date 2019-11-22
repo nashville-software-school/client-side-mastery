@@ -58,14 +58,14 @@ const FriendList = () => {
 // MessageList.js
 import { getMesssageByFriend } from "./MessageProvider.js"
 
-const eventTarget = document.querySelector(".friends")
+const friendListSection = document.querySelector(".friends")
 const contentTarget = document.querySelector(".messages")
 
 const MessageList = () => {
     const appStateFriends = useFriends()
 
     // Listen for when a friend is selected
-    eventTarget.addEventListener("change", changeEvent => {
+    friendListSection.addEventListener("change", changeEvent => {
         // Make sure it's the change event of the friend checkbox
         if (changeEvent.target.classList.contains("friend")) {
 
@@ -143,7 +143,7 @@ import { useFriends } from './FriendProvider.js'
     CHANGE: The event target is now the `<main class=".appContainer">`
             element. That element is now the Event Hub.
 */
-const eventTarget = document.querySelector(".appContainer")
+const eventHub = document.querySelector(".appContainer")
 const contentTarget = document.querySelector(".friends")
 
 const FriendList = () => {
@@ -154,7 +154,7 @@ const FriendList = () => {
                 friend now exists in the FriendList component.
                 This makes more sense.
     */
-    eventTarget.addEventListener("change", changeEvent => {
+    eventHub.addEventListener("change", changeEvent => {
         if (changeEvent.target.classList.contains("friend")) {
             const selectedFriend = changeEvent.target.value
 
@@ -214,7 +214,7 @@ import { getMesssageByFriend } from "./MessageProvider.js"
     CHANGE: The event target is now the `<main class=".appContainer">`
             element. That element is now the Event Hub.
 */
-const eventTarget = document.querySelector(".appContainer")
+const eventHub = document.querySelector(".appContainer")
 const contentTarget = document.querySelector(".messages")
 
 const MessageList = () => {
@@ -225,7 +225,7 @@ const MessageList = () => {
                 specific event that it cares about. It can then extract
                 the data in the payload and use it however it wants.
     */
-    eventTarget.addEventListener("friendSelected", event => {
+    eventHub.addEventListener("friendSelected", event => {
             const friendName = event.detail.friend
             const messages = getMessagesByFriend(friendName)
             render(messages)
