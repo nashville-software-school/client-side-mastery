@@ -31,6 +31,5 @@
 ## Supplementary Content
 
 * Supplemental Chapter - [Muscle Memory: Functions](./chapters/FUNCTION_PRACTICE.md)
-* Supplemental Chapter - [Muscle Memory: Iteration](./chapters/ITERATION_PRACTICE.md)
 * Supplemental Chapter - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
 

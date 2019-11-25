@@ -1,20 +1,7 @@
-# REACT TIPS
+# React Tips and Tricks
 
-A few cool code snippets and shortcuts.
+#### React.Fragment Shortcut
 
-
-```jsx
-render() {
-    const {error, jokeLoaded, objResult, showResult} = this.state;
-
-    return (
-        null
-    )
-
-}
-```
-
-React.Fragment Shortcut
 ```jsx
 <>
   <h1>Hello World</h1>
@@ -23,18 +10,33 @@ React.Fragment Shortcut
 </>
 ```
 
-Inline Style
+#### Debugging in JSX
+
+```jsx
+return(
+    <>
+        {
+            console.log(variable) && <h1>Hello World</h1>
+        }
+    </>
+)
+```
+
+#### Inline Styling
+
 ```jsx
 <h3>Name: <span style={{color: 'darkslategrey'}}>Doodles</span></h3>
 
 ```
 
-Ternary Expressions
+#### Ternary Expressions
+
 ```jsx
   <div>
-      {this.state.loadingStatus
-          ? <p>App is loading</p>
-          : <p>App is done loading</p>
+      {
+          animal.owners.length < 2
+            ? <p>Animal can have one more owner</p>
+            : <p>Animal has enough owners</p>
       }
   </div>
 ```
