@@ -21,9 +21,9 @@
 | 11 | [Using the Fish Data Provider](./chapters/EXPORTING_FISH.md) | [Journal Entry Objects](./chapters/DAILY_JOURNAL_OBJECT_DOM.md) |  |
 | 12 | [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md) |  | [Mars Photo Data](./chapters/DUMMY_MARS_DATA.md) |
 | 13 | [Automated Event Listeners](./chapters/DYNAMIC_EVENT_LISTENERS.md) |  |  |
-| 14 | [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md) | [Rendering Collections of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md) | [Rendering Dummy Data](./chapters/MARS_RENDER.md) |
+| 14 | [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md) | [Rendering Collections of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md) | [Rendering Photo Data](./chapters/MARS_RENDER.md) |
 | 15 | [Big Fish, Little Fish](./chapters/FILTERING_FISH.md) |  | [Picture of the Day Data](./chapters/POTD_DATA.md) |
-| 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](./chapters/AUTO_WORLD.md) |  | [Rendering POTD Data](./chapters/POTD_RENDER.md) |
+| 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](./chapters/AUTO_WORLD.md) |  |  |
 | 16 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) |  |  |
 | 17 | Book 1 Review |  |  |
 

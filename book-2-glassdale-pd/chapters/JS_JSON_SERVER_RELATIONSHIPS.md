@@ -1,4 +1,4 @@
-# Using `_expand` and `_embed` #
+# Querying Related Data in json-server
 
 With JSON Server, you can use parameters such as `_expand` and `_embed` to see relationships. However, to utlize the `_expand` and `_embed` functionality within your fetch requests, you need to abide by certain naming conventions in order for the requests to work properly.
 
@@ -39,7 +39,7 @@ In a parent/child relationship, the child resource has the foreign key property 
 
 ----
 ## _expand ##
- 
+
 `_expand` is used on a child resource as a way to include parent resources.
 
 When writing your fetch request, you will reference the resource(s) you want to `_expand` in the singular form like this `http://localhost:8088/adoptions?_expand=puppy&_expand=owner`

@@ -19,11 +19,8 @@
 | 13 | [Finding the Common Thread](./chapters/GLASSDALE_MULTIPLE_PARAMS.md) | [Searching Entries](./chapters/DAILY_JOURNAL_SEARCHING.md) |  |
 | 14 | [Making the Arrest](./chapters/GLASSDALE_SUMMARY_VIEW.md) |  | [Filtering Favorites](./chapters/EOTS_FILTER_FAVORITES.md) |
 | 15 | [Your Next Case](./chapters/GLASSDALE_MANY_TO_MANY.md) | [Data Relationships](./chapters/DAILY_JOURNAL_MOOD_TABLE.md) |  |
+| 👨‍👨‍👦‍👦 | [**_Group Project: Welcome to Nashville_**](https://github.com/nashville-software-school/welcome-to-nashville) |  | [Rendering POTD Data](./chapters/POTD_RENDER.md) |
 
-
----
-
-> ### __Sprint 2__ - [Welcome to Nashville](https://github.com/nashville-software-school/welcome-to-nashville)
 
 ## Review Chapters
 
