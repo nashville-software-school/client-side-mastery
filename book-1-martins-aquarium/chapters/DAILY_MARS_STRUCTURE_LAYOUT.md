@@ -26,7 +26,6 @@ The learning objectives of this project, by the end of the client side course, a
 Here are the features you will be building over the next few months in this application. It will allow Debra to...
 
 * View Mars probe photos on a specific date.
-* Objects that were near Earth on a specific date.
 * Whatever the most popular atronomy photos was that day.
 * Favorite individual pictures. What will be saved about that picture is as follows:
     * Image URL
