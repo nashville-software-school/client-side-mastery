@@ -4,7 +4,7 @@ Up to this point, you have had your journal entry form hard-coded in your `index
 
 Once that component is complete, make sure you import it into `main.js` and ensure that the form is the first thing rendered.
 
-#### `main.js`
+> #### `main.js`
 
 ```js
 import JournalFormComponent from "./form/JournalForm.js"

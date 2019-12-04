@@ -57,6 +57,54 @@ For this book, you will be consuming the Glassdale Police Department Criminal AP
 >
 > Maggie taps the table and says, "Great. Grab me before the end of the day and show me what you have."
 
+## Requesting Data from an API
+
+In JavaScript, you are going to be using the Fetch API. It provides you with a `fetch()` method to initiate the request to another service on the World Wide Web. Here's an example fetch call to get data about Glassdale police officers from the criminal API that you queried via Postman above.
+
+> #### `glassdale/scripts/officers/OfficerProvider.js`
+```js
+let officers = []
+
+const useOfficers = () => {
+    return officers
+}
+
+const getOfficers = () => {
+    return fetch("http://criminals.glassdale.us/officers")
+        .then(response => response.json())
+        .then(
+            parsedOfficers => {
+                console.table(parsedOfficers)
+                officers = parsedOfficers.slice()
+            }
+        )
+}
+```
+
+Here's the pattern for a fetch call.
+
+1. Request the data
+    ```js
+    fetch("http://criminals.glassdale.us/officers")
+    ```
+1. Convert the JSON string response to a JavaScript data structure (object or array)
+    ```js
+    .then(response => response.json())
+    ```
+1. Do something with the data
+    ```js
+    .then(
+        parsedOfficers => {
+            console.table(parsedOfficers)
+            officers = parsedOfficers.slice()
+        }
+    )
+    ```
+
+
+
+* Reference: [How to Use the JavaScript Fetch API to Get Data](https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data)
+
 ## Assignment
 
 Your first assignment is to pull all of the data from the API (see above) and display all criminals in a grid format. Start with the following details for each criminal.
@@ -79,14 +127,13 @@ Your first assignment is to pull all of the data from the API (see above) and di
     ```js
     let criminals = []
 
-    /*
-        Should you just export the private array as is?
-        Should it be sorted in some way?
-    */
     export const useCriminals = () => criminals
 
     export const getCriminals = () => {
-        // Load database state into application state with a fetch()
+        /*
+            Load database state into application state with a fetch().
+            Make sure the last then() updates the criminals array
+        */
     }
     ```
 1. Remember to import the `getCriminals()` function into `main.js` and invoke it there. The criminal list can only be rendered once you know you have the data.
@@ -94,5 +141,10 @@ Your first assignment is to pull all of the data from the API (see above) and di
     // main.js
     import { getCriminals } from './criminals/CriminalProvider.js'
 
-    getCriminals().then( /* You have the data. What happens next? */ )
+    getCriminals().then(
+        /*
+            Now that you have the data, what
+            component should be rendered?
+        */
+    )
     ```
