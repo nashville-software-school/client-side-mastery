@@ -65,7 +65,7 @@ In JavaScript, you are going to be using the Fetch API. It provides you with a `
 ```js
 let officers = []
 
-const useOfficers = () => {
+export const useOfficers = () => {
     return officers
 }
 
