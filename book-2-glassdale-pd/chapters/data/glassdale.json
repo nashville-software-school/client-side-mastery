@@ -3265,5 +3265,52 @@
         "Sydnee Howell",
         "Ryleigh West",
         "Gino Hill"
+    ],
+    "witnesses": [
+        {
+            "id": 1,
+            "name": "Issac Mosciski",
+            "statements": "Think he drove a large pickup truck"
+        },
+        {
+            "id": 2,
+            "name": "Maud Lueilwitz",
+            "statements": "Used the word 'quickly' too much"
+        },
+        {
+            "id": 3,
+            "name": "Wilhelmine Carter",
+            "statements": "Wasn't very tall"
+        },
+        {
+            "id": 4,
+            "name": "Laury Hickle",
+            "statements": "He wore old, red shoes"
+        },
+        {
+            "id": 5,
+            "name": "Buster Corwin",
+            "statements": "Breath smelled like fish"
+        },
+        {
+            "id": 6,
+            "name": "Ceasar Barrows",
+            "statements": "Was wearing a car dealership hat"
+        },
+        {
+            "id": 7,
+            "name": "Augustus Heidenreich",
+            "statements": "Was wearing a car dealership hat"
+        },
+        {
+            "id": 8,
+            "name": "Candice Grady",
+            "statements": "Think he drove a large pickup truck"
+        },
+        {
+            "id": 9,
+            "name": "Nayeli Altenwerth",
+            "statements": "Mentioned he had a pet"
+        }
     ]
 }
