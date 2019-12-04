@@ -69,7 +69,7 @@ export const useOfficers = () => {
     return officers
 }
 
-const getOfficers = () => {
+export const getOfficers = () => {
     return fetch("http://criminals.glassdale.us/officers")
         .then(response => response.json())
         .then(
