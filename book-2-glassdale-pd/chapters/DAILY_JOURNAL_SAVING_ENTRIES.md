@@ -70,11 +70,3 @@ Add the following validation code to your journal entry form fields.
 
 1. Pick a maximum length for concepts field and provide visual feedback _(e.g. alert box, or putting text in a blank div)_ if you type in a string that is longer than that maximum.
 1. Test that the concept and entry fields contain no curse words. You can use regular expressions for that.
-
-### Challenge: Entry Form Component
-
-Create a module that defines a function for building the form fields dynamically instead of them being hard-coded in the HTML.
-
-### Challenge: Creating Method Abstractions
-
-Write a method in your data provider module that performs a POST and a GET, then use that method in the event listener.
