@@ -19,7 +19,7 @@
 | 12 | [Finding the Common Thread](./chapters/GLASSDALE_MULTIPLE_PARAMS.md) | [Searching Entries](./chapters/DAILY_JOURNAL_SEARCHING.md) |  |
 | 13 | [Making the Arrest](./chapters/GLASSDALE_SUMMARY_VIEW.md) |  | [Filtering Favorites](./chapters/EOTS_FILTER_FAVORITES.md) |
 | 14 | [Your Next Case](./chapters/GLASSDALE_MANY_TO_MANY.md) | [Data Relationships](./chapters/DAILY_JOURNAL_MOOD_TABLE.md) |  |
-| 👨‍👨‍👦‍👦 | **_Group Project: Nutshell** |  |  |
+| 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |
 
 
 ## Review Chapters
