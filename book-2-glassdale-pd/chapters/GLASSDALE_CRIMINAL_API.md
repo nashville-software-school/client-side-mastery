@@ -120,7 +120,7 @@ Your first assignment is to pull all of the data from the API (see above) and di
 
 1. Use the `toLocateDateString()` method on the dates to get the date in a more human readable format. Example below.
     ```js
-    ${new Date(criminal.incarceration.start).toLocaleDateString('en-US')
+    ${new Date(criminal.incarceration.start).toLocaleDateString('en-US')}
     ```
 1. Create your criminal data provider component, criminal list component, and criminal component in the `scripts/criminal` directory.
 1. The criminal provider component should have the following collections and functions.
