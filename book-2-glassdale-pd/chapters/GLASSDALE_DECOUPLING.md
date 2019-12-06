@@ -10,6 +10,8 @@ Starting off with this default HTML structure in the `index.html` file, the **`F
 
 When the user chooses a friend in the first component, the second component will render a list of messages from that friend. These components are siblings to each other.
 
+> #### `scripts/index.html`
+
 ```html
 <body>
     <main id="appContainer" class="container">
@@ -26,6 +28,8 @@ When the user chooses a friend in the first component, the second component will
 
 ### List of all of a user's friends
 
+> #### `scripts/messages/FriendList.js`
+
 ```js
 // FriendList.js
 import { useFriends } from './FriendProvider.js'
@@ -40,23 +44,29 @@ const FriendList = () => {
             ${
                 friendCollection.map(friend => {
                     return `
-                        <input class="friend" type="checkbox" value="${friend.name}">
-                        ${friend.name}
+                        <div>
+                            <input class="friend" name="friend" type="radio" value="${friend.name}">
+                            ${friend.name}
+                        </div>
                     `
-                })
+                }).join("")
             }
         `
     }
 
     render(appStateFriends)
 }
+
+export default FriendList
 ```
 
 ### List of messages from only the selected friend in the list
 
+> #### `scripts/messages/MessageList.js`
+
 ```js
 // MessageList.js
-import { getMesssageByFriend } from "./MessageProvider.js"
+import { getMessagesByFriend } from "./MessageProvider.js"
 
 const friendListSection = document.querySelector(".friends")
 const contentTarget = document.querySelector(".messages")
@@ -64,6 +74,7 @@ const contentTarget = document.querySelector(".messages")
 const MessageList = () => {
     // Listen for when a friend is selected
     friendListSection.addEventListener("change", changeEvent => {
+
         // Make sure it's the change event of the friend checkbox
         if (changeEvent.target.classList.contains("friend")) {
 
@@ -84,6 +95,18 @@ const MessageList = () => {
         `
     }
 }
+
+export default MessageList
+```
+
+> #### `main.js`
+
+```js
+import FriendList from "./friends/FriendList.js"
+import MessageList from "./messages/MessageList.js"
+
+FriendList()
+MessageList()
 ```
 
 Unfortunately, these two components are now tightly coupled. What couples them?
@@ -127,6 +150,8 @@ That is going to be the event hub because it's the element in which all componen
 ### Friend Was Selected
 
 The first step in this process is to have the friend list have control over what happens with itself, and also control what information is wants to share with other components.
+
+> #### `scripts/messages/FriendList.js`
 
 ```js
 // FriendList.js
@@ -177,7 +202,7 @@ const FriendList = () => {
                 time to dispatch it to the Event Hub where other
                 components can listen for it.
             */
-            eventTarget.dispatchEvent(message)
+            eventHub.dispatchEvent(message)
         }
     })
 
@@ -186,61 +211,63 @@ const FriendList = () => {
             ${
                 friendCollection.map(friend => {
                     return `
-                        <input class="friend" type="checkbox" value="${friend.name}">
-                        ${friend.name}
+                        <div>
+                            <input class="friend" name="friend" type="radio" value="${friend.name}">
+                            ${friend.name}
+                        </div>
                     `
-                })
+                }).join("")
             }
         `
     }
 
     render(appStateFriends)
 }
+
+export default FriendList
 ```
 
 ### Components That Listen
 
 Now the message list component can listen for any messages that are sent to the Event Hub that it cares about.
 
+> #### `scripts/messages/MessageList.js`
+
 ```js
 // MessageList.js
-import { getMesssageByFriend } from "./MessageProvider.js"
+import { getMessagesByFriend } from "./MessageProvider.js"
 
 /*
     CHANGE: The event target is now the `<main class=".appContainer">`
             element. That element is now the Event Hub.
 */
-const eventHub = document.querySelector(".appContainer")
+const eventHub = document.querySelector("#appContainer")
 const contentTarget = document.querySelector(".messages")
 
 const MessageList = () => {
-    const appStateFriends = useFriends()
-
     /*
         CHANGE: The message list component is listening for a very
                 specific event that it cares about. It can then extract
                 the data in the payload and use it however it wants.
     */
     eventHub.addEventListener("friendSelected", event => {
-            const friendName = event.detail.friend
-            const messages = getMessagesByFriend(friendName)
-            render(messages)
-        }
+        const friendName = event.detail.friend
+        const messages = getMessagesByFriend(friendName)
+        render(messages)
     })
 
     const render = messageCollection => {
         contentTarget.innerHTML = `
             ${
-                messageCollection.map(friend => {
-                    return `
-                        <input class="friend" type="checkbox" value="${friend.name}">
-                        ${friend.name}
-                    `
-                })
+                messageCollection.map(message => {
+                    return `<section class="message">${message.text}</section>`
+                }).join("")
             }
         `
     }
 }
+
+export default MessageList
 ```
 
 ## Reminder: This is Hard
