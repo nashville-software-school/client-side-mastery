@@ -62,8 +62,6 @@ const friendListSection = document.querySelector(".friends")
 const contentTarget = document.querySelector(".messages")
 
 const MessageList = () => {
-    const appStateFriends = useFriends()
-
     // Listen for when a friend is selected
     friendListSection.addEventListener("change", changeEvent => {
         // Make sure it's the change event of the friend checkbox
@@ -79,14 +77,9 @@ const MessageList = () => {
     const render = messageCollection => {
         contentTarget.innerHTML = `
             ${
-                messageCollection.map(friend => {
-                    return `
-                        <input class="friend"
-                               type="checkbox"
-                               value="${friend.name}">
-                        ${friend.name}
-                    `
-                })
+                messageCollection.map(message => {
+                    return `<section class="message">${message.text}</section>`
+                }).join("")
             }
         `
     }
