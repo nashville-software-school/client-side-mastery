@@ -10,7 +10,7 @@ Starting off with this default HTML structure in the `index.html` file, the **`F
 
 When the user chooses a friend in the first component, the second component will render a list of messages from that friend. These components are siblings to each other.
 
-> #### `scripts/index.html`
+> #### `index.html`
 
 ```html
 <body>
@@ -28,7 +28,22 @@ When the user chooses a friend in the first component, the second component will
 
 ### List of all of a user's friends
 
-> #### `scripts/messages/FriendList.js`
+> #### `scripts/friends/FriendProvider.js`
+
+```js
+let friends = [
+    { name: "Sally", age: 31, location: "Nashville" },
+    { name: "Dominic", age: 39, location: "Knoxville" },
+    { name: "Tamela", age: 29, location: "Louisville" },
+    { name: "Yolanda", age: 42, location: "Asheville" }
+]
+
+export const useFriends = () => {
+    return friends.slice().sort((a,b) => a.age - b.age)
+}
+```
+
+> #### `scripts/friends/FriendList.js`
 
 ```js
 // FriendList.js
@@ -61,6 +76,38 @@ export default FriendList
 ```
 
 ### List of messages from only the selected friend in the list
+
+> #### `scripts/messages/MessageProvider.js`
+
+```js
+let messages = [
+    { friend: "Sally", text: "I saw a dolphin eat a bird." },
+    { friend: "Sally", text: "Where is Kazakhstan?" },
+    { friend: "Sally", text: "I'm going to Vegas this weekend for a professional conference." },
+    { friend: "Dominic", text: "The twins won't stop crying." },
+    { friend: "Dominic", text: "I got a flat tire this morning. I'll be late." },
+    { friend: "Dominic", text: "I think Florida beaches are the best." },
+    { friend: "Tamela", text: "I like margeritas!" },
+    { friend: "Tamela", text: "Since when does Johnathan like hamburgers?" },
+    { friend: "Tamela", text: "I nailed the presentation at work today!" },
+    { friend: "Yolanda", text: "I didn't get any sleep last night." },
+    { friend: "Yolanda", text: "Would you like to come over for coffee this morning?" },
+    { friend: "Yolanda", text: "April saw Mike walking in the park yesterday instead of being at work." }
+]
+
+export const useMessages = () => {
+    return messages.slice()
+}
+
+export const getMessagesByFriend = friend => {
+    const friendMessages = messages.slice()
+    const filteredMessages = friendMessages.filter(
+        m => m.friend === friend
+    )
+
+    return filteredMessages
+}
+```
 
 > #### `scripts/messages/MessageList.js`
 
@@ -99,7 +146,7 @@ const MessageList = () => {
 export default MessageList
 ```
 
-> #### `main.js`
+> #### `scripts/main.js`
 
 ```js
 import FriendList from "./friends/FriendList.js"
@@ -151,7 +198,7 @@ That is going to be the event hub because it's the element in which all componen
 
 The first step in this process is to have the friend list have control over what happens with itself, and also control what information is wants to share with other components.
 
-> #### `scripts/messages/FriendList.js`
+> #### `scripts/friends/FriendList.js`
 
 ```js
 // FriendList.js
