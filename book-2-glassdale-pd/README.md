@@ -9,8 +9,8 @@
 | 3 | [Likely Suspects](./chapters/GLASSDALE_CRIMINAL_HISTORY.md) |  |  |
 | 4 | [Decoupling with Events](./chapters/GLASSDALE_DECOUPLING.md) |  | [Search Form](./chapters/EOTS_FORM.md) |
 | 5 | [Likely Suspects with Event Hub](./chapters/GLASSDALE_EVENT_HUB.md) |  |  |
-| 6 | [Case Notes API - Making Entries](./chapters/GLASSDALE_NOTES_API.md) | [Entry API](./chapters/DAILY_JOURNAL_FETCHING.md) |  |
-| 7 | [What's Your Alibi?](./chapters/GLASSDALE_ALIBI.md) | [Journal Form Component](./chapters/DAILY_JOURNAL_FORM_COMPONENT.md) | [Searching Picture of the Day](./chapters/EOTS_FIRST_FETCH.md) |
+| 6 | [Case Notes API - Making Entries](./chapters/GLASSDALE_NOTES_API.md) | [Entry API](./chapters/DAILY_JOURNAL_FETCHING.md) | [Searching Picture of the Day](./chapters/EOTS_FIRST_FETCH.md) |
+| 7 | [What's Your Alibi?](./chapters/GLASSDALE_ALIBI.md) | [Journal Form Component](./chapters/DAILY_JOURNAL_FORM_COMPONENT.md) |  |
 | 8 | [Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md) | [Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md) | [Searching Mars Probe Photos](./chapters/EOTS_MARS_PROBE.md) |
 | 9 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) |  |
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |
