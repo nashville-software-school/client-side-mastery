@@ -29,6 +29,16 @@ Here's some ideas.
 
 You decide what the properties should be defined on the object.
 
+### Start json-server
+
+Now that your JSON has been created, you can use json-server to start your own Notes API.
+
+```sh
+json-server -p 8088 -w notes.json
+```
+
+Once you run that, you will see a happy little guy displayed, along with the URL that json-server is making available. That URL (http://localhost:8080/notes) will be the target of all your `fetch()` calls when you request notes, add notes, and delete notes.
+
 ## Note Form Container
 
 In order to enter notes, you will need a form. That form needs to rendered on the DOM somewhere. Therefore, you need a DOM element in your `index.html` file to be the container for it.
