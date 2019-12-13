@@ -4,7 +4,7 @@ As you keep notes during your investigation, you will eventually find that some 
 
 ## Adding Delete Button
 
-In your note component, add some HTML that displays a delete button.
+In your note component, add some HTML that displays a delete button. Below is example code you will need.
 
 
 > #### `glassdale/scripts/notes/Note.js`
@@ -43,6 +43,8 @@ const render = notes => {
 
 Add a new method to your note data provider with a fetch that uses the DELETE method.
 
+> #### `glassdale/scripts/notes/NoteProvider.js`
+
 ```js
 const deleteNote = noteId => {
     return fetch(`http://localhost:8088/notes/${noteId}`, {
@@ -71,7 +73,12 @@ eventHub.addEventListener("click", clickEvent => {
             Once the operation is complete you should THEN invoke
             useNotes() and render the note list again.
         */
-       deleteNote(id).then( () => render(useNotes()) )
+       deleteNote(id).then(
+           () => {
+               const updatedNotes = useNotes()
+               render(updatedNotes())
+           }
+       )
     }
 })
 ```
