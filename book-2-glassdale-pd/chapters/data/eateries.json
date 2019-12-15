@@ -97,7 +97,7 @@
         "city": "Denver",
         "id": 7,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -112,7 +112,7 @@
         "city": "New Haven",
         "id": 8,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -262,7 +262,7 @@
         "city": "Salina",
         "id": 18,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -277,7 +277,7 @@
         "city": "Louisville",
         "id": 19,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -292,7 +292,7 @@
         "city": "New Orleans",
         "id": 20,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -307,7 +307,7 @@
         "city": "Cape Elizabeth",
         "id": 21,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -322,7 +322,7 @@
         "city": "Lutherville",
         "id": 22,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -337,7 +337,7 @@
         "city": "Boston",
         "id": 23,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -352,7 +352,7 @@
         "city": "Frankenmuth",
         "id": 24,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -367,7 +367,7 @@
         "city": "Minneapolis",
         "id": 25,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -382,7 +382,7 @@
         "city": "Jackson",
         "id": 26,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -397,7 +397,7 @@
         "city": "Kansas City",
         "id": 27,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -412,7 +412,7 @@
         "city": "Fort Benton",
         "id": 28,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -442,7 +442,7 @@
         "city": "Las Vegas",
         "id": 30,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -451,13 +451,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Hancock Inn",
+        "description": "How embedded in New Hampshire's history is the Hancock? Well, when it first opened its doors, George Washington was in his first year as president, so, you know, pretty embedded. While it's gone by many names over time, the bed & breakfast has the distinction of being the state's oldest continuously operated business. The menu ranges from burgers to pot roast and haddock, but for those looking for a more traditional taste of New England, come for the weekly Innkeeper's Sunday Supper, where you get all regal with a fixed menu served up like they did back when ol' George was running things and America was still in its teething phase.",
+        "state": "NH",
+        "city": "Hancock",
         "id": 31,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -466,13 +466,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Tops Diner",
+        "description": "The NJ Board of Tourism says that there's a higher concentration of diners in Jersey than anywhere else in the country, so it's fitting that a diner is the most iconic in the state. But unlike the typical greasy spoon you might envision when the word "diner" comes to mind (or maybe you're a huge fan of '80s-era Barry Levinson movies), Tops features a full bar and two full-time bakers whipping up fresh cheesecake, plus the usual diner-y fare of beef ribs, meatloaf, and burgers.",
+        "state": "NJ",
+        "city": "East Newark",
         "id": 32,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -481,13 +481,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "El Pinto",
+        "description": "Not only is this New Mexico's most iconic restaurant, it's also one of the best Mexican spots in the country. The red chile ribs are reason enough to schedule a visit soon, but it's also one of the largest restaurants you've ever been in, period. It's like how big your rich friend's house seemed when you were a kid: rooms open up into other rooms. After a few of the margaritas it gets even more difficult to navigate (trust us). Nevertheless, it has iconic status because, in a state of excellent Mexican food, this is a solid standby, and one that people have been returning to time after time.",
+        "state": "NM",
+        "city": "Albuquerque",
         "id": 33,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -496,10 +496,10 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Katz's Delicatessen",
+        "description": "New York is the entry point for many immigrants as they make their way into the US, and back before the Lower East Side had a Whole Foods, it was home to many of those same immigrants and their families. Katz's has been a linchpin of the neighborhood for over 100 years. It's a place where tourists and locals unite over one thing: the consumption of outrageously large meat sandwiches. If there's anything more American than a panoply of cultures, ages, and social classes coming together over food, I don't know what it is.",
+        "state": "NY",
+        "city": "New York",
         "id": 34,
         "ameneties": {
             "wheelchairAccessible": false,
@@ -511,13 +511,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Skylight Inn",
+        "description": "Barbecue is as ingrained in the state's DNA as much as college basketball (or Dawson's Creek), and Skylight has been a shining beacon of the state's vinegar-doused 'cue for 50+ years. If whole-hog pork -- don't skimp on the skin -- is your thing, Skylight is the must-visit BBQ mecca in the state. Hell, it even calls itself 'The Capital of Barbecue.' We're not going to fight that.",
+        "state": "NC",
+        "city": "Ayden",
         "id": 35,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -526,10 +526,10 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Red Pepper",
+        "description": "Described even by the owner as a 'classic hole in the wall,' the Red Pepper has satisfied UND students' late-night cravings for 40+ years. And basically nothing about it has changed in that time... kinda like Susan Sarandon's face. The Grinder -- a strange mash-up of white sauce, lettuce, hot sauce, Swiss, and taco meat, plus either ham, salami, or turkey -- is what's ordered here more than anything else.",
+        "state": "ND",
+        "city": "Grand Forks",
         "id": 36,
         "ameneties": {
             "wheelchairAccessible": false,
@@ -541,13 +541,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "The Golden Lamb",
+        "description": "Staking a claim as Ohio's oldest continually operated business, this joint's got some serious history. Located between Cincinnati and the old National Rd, the hotel and restaurant welcomed everyone from railroad workers to 12 presidents, writers like Mark Twain and Chuck Dickens, and everyone in between. More importantly, the food's good. And yes, lamb is served in the ancient, historic joint.",
+        "state": "OH",
+        "city": "Lebanon",
         "id": 37,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -556,10 +556,10 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Cattlemen's Steakhouse",
+        "description": "OKC remains an active hub in the state's huge cattle industry, and Cattlemen's is the steakhouse beef-crazy Oklahomans have embraced since it operated as a bootlegging and gambling shop that also happened to serve food. Whether you're dining in Cattlemen's older cafe section or the "newer" steakhouse side (decked out in wood paneling and large Western murals of cattle and cowboys), you're getting one of the best steaks in the state at a place where the rib-eye is king. It's even open for breakfast, just like it was in the '30s. And of course you can order a steak for breakfast -- you'd be wrong not to.",
+        "state": "OK",
+        "city": "Oklahoma City",
         "id": 38,
         "ameneties": {
             "wheelchairAccessible": false,
@@ -571,13 +571,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Huber's",
+        "description": "You wouldn't know it looking at the gorgeously preserved vaulted ceilings of Portland's oldest restaurant, but Huber's has been through a lot since opening in 1879. Best known for its traditional turkey dinners and tableside Spanish coffee shows, the place survived Prohibition and Portland's seedy days as a hub of human trafficking on the shoreline. It even made it through a gigantic flood, and stayed open the whole time, serving hungry and stranded workers who rowed up to its windows via boat. To this day, the turkey is the best in the city, though you'd be forgiven for getting a steak to go with that flaming coffee. No boat required.",
+        "state": "OR",
+        "city": "Portland",
         "id": 39,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -586,13 +586,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "DeLuca's",
+        "description": "Pittsburgh is the steel city in a state full of proud, hardworking people, and at DeLuca's you can eat like you just got off work at the steel factory, even if you work as a social media manager for a brand of paper towels. Of course, you'll have to wait in line, as this is a hungry city. Inside, you're greeted with spacious, uncomfortable booths, gaudy tiled floors, and a lunch counter you'd expect in a greasy spoon from the '50s. The menu is enormous: it serves up a million different types of omelets, a calorie-bomb burrito called the MOAB (Mother of All Burritos), pancakes, and crepes. Even a social media manager's gotta eat.",
+        "state": "Pittsburgh",
+        "city": "PA",
         "id": 40,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -601,10 +601,10 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Haven Brothers Diner",
+        "description": "Though the diner was arguably popularized in Jersey, Providence lays claim to its creation. There's nothing anywhere quite like Haven Bros, which dutifully parks its trailer next to City Hall in the early evening and stays open all night, feeding burgers, shakes, and hot dogs to everyone from politicians to the late-night bar crowd. There's not a ton of room inside, so most get the food to go, sit on the steps of City Hall, or chill at one of the tiny plastic tables outside. There's even a new documentary about the truck, in which the director claims that it's the 'last continually operating survivor of the legacy that began the fast food' and food truck trends. Hard to argue with that.",
+        "state": "RI",
+        "city": "Providence",
         "id": 41,
         "ameneties": {
             "wheelchairAccessible": false,
@@ -616,10 +616,10 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Scott's Bar-B-Que",
+        "description": "Scott's isn't just one of the best BBQ spots in SC, it's one of our best BBQ spots in the country. The pork is what keeps South Carolinians (and people from all over these United States) coming back time and time again, and it's manned by the son of the guy who started the whole operation, so he's got a pretty big stake in making sure everything's up to par, year after year. The inside's about as no-frills as it gets, with a few tables and a fridge full of soda. But people don't go to Scott's for the atmosphere -- it's for a pound of BBQ with its spicy sauce and fried skins on the side. As good as it was in '72.",
+        "state": "SC",
+        "city": "Hemingway",
         "id": 42,
         "ameneties": {
             "wheelchairAccessible": false,
@@ -631,13 +631,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Wall Drug",
+        "description": "You begin to see signs for it about 1,000 miles before you arrive in South Dakota. They promise free ice water. Five-cent coffee. A goddamned Tyrannosaurus rex! There are many, many, many finer restaurants in South Dakota, but none are as famous, for good or ill, as the one in Wall Drug. It's impossible to avoid the Badlands-bordering, 76,000sqft wonder of tourist-trapping randomness, so just go in. Hit the cafe and score a hot beef sandwich and a maple donut. It won't hold a candle to the many, many better food options in the state. But you will emerge with a 'Where the Heck is Wall Drug' sticker. You will have chased that sandwich with a T. rex viewing. And you'll be happy you stopped every time you see a roadside Wall Drug sign every five minutes for the next 300 miles",
+        "state": "SD",
+        "city": "Wall",
         "id": 43,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -646,10 +646,10 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Pancake Pantry",
+        "description": "There are actually two different Pancake Pantrys in TN, opened a few years apart from one another (strangely, they have different owners), but the one in Nashville is our pick for the most iconic. From the hordes of people who wait in line to be seated there like extras in a Portlandia episode, to its status as one of America's best breakfast spots, to the generations of Tennesseeans who have frequented the place, Pancake Pantry is legendary. The sweet potato pancakes with homemade cinnamon cream syrup are the flapjacks to get, though you can also go offbeat with the Sante Fe, a cornbread pancake with cheddar, bacon, and green chile cooked right into it. No matter which of the 23 varieties you choose, you can't go wrong.",
+        "state": "TN",
+        "city": "Nashville",
         "id": 44,
         "ameneties": {
             "wheelchairAccessible": false,
@@ -661,13 +661,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Salt Lick",
+        "description": "There are no pits that smell quite as much like Texas as the Salt Lick. Although other smokers' stars have risen higher in recent years, Salt Lick remains the state's quintessential meat pilgrimage because it's just so damn Texan. The whole experience is like the slow unfurling of a Lone Star flag, from the 30-minute journey from Austin down farm-to-ranch roads to the sprawling, wide-open ranch estate to the same circular smoking pit that's been turning out spectacular meat since 1967. There's a reason it goes through over a million pounds of brisket a year, and that reason is Texas.",
+        "state": "TX",
+        "city": "Driftwood",
         "id": 45,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -676,10 +676,10 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Ruth's Diner",
+        "description": "While some diners are in buildings shaped to look like trolley cars, Ruth's is inside an actual trolley car that rolled its way around SLC in the early 1900s. Nowadays, it's home to an iconic breakfast spot (though it serves lunch and dinner too) with an enormous patio providing creek views and a perfect place to soak up the great outdoors. The setting isn't the only reason people have been continually visiting since the '30s -- the gigantic, mile-high biscuits help, too. They come with every entree, including an extraordinary pulled pork Benedict.",
+        "state": "UT",
+        "city": "Salt Lake City",
         "id": 46,
         "ameneties": {
             "wheelchairAccessible": false,
@@ -691,13 +691,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "The Common Man",
+        "description": "Skiing and sustainability are two of the Vermontiest things about Vermont, so it's fitting that the state's most iconic restaurant is linked to both of them. For one, it's located in Warren, which skiers and riders know as the home of Sugarbush. And two, it's committed to sustainability, as Common Man sources most of its ingredients from local producers. Plus, it's in a barn. And not just any barn, but a mid-19th-century Vermont barn -- one that originally burned down in 1987.",
+        "state": "VT",
+        "city": "Warren",
         "id": 47,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -706,13 +706,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Pierce's Pitt Bar-B-Que",
+        "description": "Sometimes, greatness springs from desperation. When Pierce's opened, the guy hired to paint the sign inexplicably added an extra 't' to 'pit' -- and then had the cojones to want more money to fix it, which the owners did not have. So it stuck. That may have been the only setback Pierce's has ever experienced, as the once-tiny operation cooked between 450,000lbs of Boston butt over hickory and oak last year. Not bad for a cinder-block building on the side of a highway. Its Tennessee-style ketchup/vinegar sauce gives the pork a tangy kick. Virginians know a good thing when they taste it, and they've been supporting Pierce's since it opened in the '70s.",
+        "state": "VA",
+        "city": "Williamsburg",
         "id": 48,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -721,13 +721,13 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Canlis",
+        "description": "Canlis almost shouldn't work. It's perched awkwardly on the side of a hill next to a highway, it's one of the few fine-dining spots in decidedly casual Seattle, and it's still serving dishes from the '50s (if you give 'em 48 hours' notice). But once you're inside this quintessential northwest eatery, which was subtly remodeled last year and is currently searching for its sixth chef in 63 years, it is obvious why it does: first, there is the unique and breathtaking view over Seattle's Lake Union/Ship Canal. Then there's the classic, yet effortlessly current food, including the city's best steak -- just make sure you've got a jacket and something that's very rare in Seattle... a reservation.",
+        "state": "WA",
+        "city": "Seattle",
         "id": 49,
         "ameneties": {
-            "wheelchairAccessible": false,
+            "wheelchairAccessible": true,
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
@@ -736,10 +736,10 @@
         }
       },
       {
-        "businessName": "",
-        "description": "",
-        "state": "",
-        "city": "",
+        "businessName": "Frostop Drive-In",
+        "description": "You know that uplifting movie We Are Marshall? The legendary Frostop is about a mile from the campus of Marshall University. And here at Frostop, legions of West Virginians have experienced the joy of having a carhop bring a slaw dog and some homemade root beer in a frosted glass right to your door. It's like a more efficient version of picking up food through a drive-thru, but this way you won't have to do that awkward reach out of your window.",
+        "state": "WV",
+        "city": "Huntington",
         "id": 50,
         "ameneties": {
             "wheelchairAccessible": false,
@@ -749,7 +749,36 @@
             "playground": true,
             "restrooms": true
         }
+      },
+      {
+        "businessName": "Franks Diner",
+        "description": "One thing to know about Franks is that 'the garbage plate' is especially popular, even today. If it was the '60s and you were working a manufacturing job way back when Kenosha had those sorts of gigs, it probably tasted even better. Those hardworking guys got off of third shift and tore into that lusty combination of hash browns, grilled peppers, onion, meat, and cheese. Of course it has cheese: it's Wisconsin. The 'half' version of the dish has three eggs in it. Did we mention that it's in Wisconsin? Another fun fact: Franks seats 55 people in a rail car-style building that was made that way because it was easier to ship on the rails, not because it was a former rail car",
+        "state": "WI",
+        "city": "Kenosha",
+        "id": 51,
+        "ameneties": {
+            "wheelchairAccessible": false,
+            "petFriendly": false,
+            "wifi": false,
+            "diaperFacility": true,
+            "playground": true,
+            "restrooms": true
+        }
+      },
+      {
+        "businessName": "The Virginian",
+        "description": "Located in the historic (and wonderfully preserved) Occidental Hotel in the center of this charming little mountain town, the Virginian looks like it could easily serve as a set for an old-timey period piece with its stately decor and Old West vibe. But you can't get icon status for being purty. Luckily, you're in cattle country, and the Virginian serves up amazing steaks. You don't count Teddy Roosevelt among your fans if you mess up your rib-eye. Or your bison. Or your elk. Hell, could be the ghost of the old Bull Moose is still designing the menu",
+        "state": "WY",
+        "city": "Buffalo",
+        "id": 52,
+        "ameneties": {
+            "wheelchairAccessible": true,
+            "petFriendly": false,
+            "wifi": false,
+            "diaperFacility": true,
+            "playground": true,
+            "restrooms": true
+        }
       }
-
     ]
   }
