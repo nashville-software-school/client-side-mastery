@@ -2,8 +2,10 @@
     "bizarreries": [
         {
             "id": 1,
-            "name": "",
-            "state": "",
+            "name": "Big White Shirt",
+            "state": "AL",
+            "city": "Andalusia",
+            "description": "Andalusia, Alabama, is the white dress-shirt capital of America, and this highly photographed enormous white shirt sign is a reminder of that. According to Roadside America, the tie is changed seasonally.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -11,8 +13,10 @@
         },
         {
             "id": 2,
-            "name": "",
-            "state": "",
+            "name": "Giant Tattoo Needle",
+            "state": "AK",
+            "city": "Anchorage",
+            "description": "If you’re a big fan of tattoos, you’re definitely going to want to snap a pic in front of Anchorage’s giant tattoo needle. On display in the parking lot of a tattoo parlor, this needle is truly eye catching.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -20,8 +24,10 @@
         },
         {
             "id": 3,
-            "name": "",
-            "state": "",
+            "name": "Elvis Memorial Chapel",
+            "state": "AZ",
+            "city": "Apache Junction",
+            "description": "You wouldn’t ever think Elvis Presley would have a place in Arizona, but “the King” lives on in Apache Junction. The Elvis Memorial Chapel survived the devastating fires at the former Apacheland Movie Ranch and has since been reconstructed at the Superstition Mountain Museum.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -29,8 +35,10 @@
         },
         {
             "id": 4,
-            "name": "",
-            "state": "",
+            "name": "Snake World",
+            "state": "AR",
+            "city": "Berryville",
+            "description": "The next time you’re in Arkansas, be sure to stop by Snake World! Owner Dale Ertel claims that the tourist attraction houses over 70 snakes, which is even more than the Little Rock Zoo. The reviews on Trip Advisor are all glowing, and warn visitors not to be dissuaded by Snake World’s sketchy exterior.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -38,8 +46,10 @@
         },
         {
             "id": 5,
-            "name": "",
-            "state": "",
+            "name": "Cabazon Dinosaurs",
+            "state": "CA",
+            "city": "Cabazon",
+            "description": "In the middle of nowhere, California, stand the Cabazon Dinosaurs. There are two dinosaurs, and they are glorious — not to mention highly photographed by tourists on their way to vacation in Palm Springs. These dinosaurs are also known for their appearance in Pee Wee’s Big Adventure. The long-necked dinosaur also houses stairs and a kitschy toy shop inside its body.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -47,8 +57,10 @@
         },
         {
             "id": 6,
-            "name": "",
-            "state": "",
+            "name": "Largest Fork in the US",
+            "state": "Colorado",
+            "city": "Creede",
+            "description": "Creede, Colorado, is home to the largest fork in the United States. The enormous sculpture by Ted Yund is over 40 feet long and weights over 600 pounds, breaking the record of the previous world’s largest fork, which was in Springfield, Missouri.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -56,8 +68,10 @@
         },
         {
             "id": 7,
-            "name": "",
-            "state": "",
+            "name": "Avery’s Beverages",
+            "state": "CT",
+            "city": "New Britain",
+            "description": "This tiny soda factory is also the oldest bottling plant in New England and has been around for almost 100 years. Tours of Avery’s Beverages are highly coveted, as visitors get to make three bottles of their own soda! Be sure to call in advance before your tour to make sure they are bottling the day you go.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -65,8 +79,10 @@
         },
         {
             "id": 8,
-            "name": "",
-            "state": "",
+            "name": "Owney the Stuffed Dog Postal Mascot",
+            "state": "DC",
+            "city": "Washington",
+            "description": "You can see the unofficial postal system mascot, Owney, at the National Postal Museum where he sits wearing a vest decorated with honors for his travels assisting postal professionals. The little dog died in 1897 but has been displayed at the Post Office Headquarters in Washington, D.C., the St. Louis World’s Fair, and the Smithsonian before arriving at his final resting place, where visitors can see him today.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -74,8 +90,10 @@
         },
         {
             "id": 9,
-            "name": "",
-            "state": "",
+            "name": "Fountain of Youth",
+            "state": "DE",
+            "city": "Lewes",
+            "description": "Although many states claim to have a Fountain of Youth, Delaware’s was discovered in 1631, making it one of (if not the) oldest. Unfortunately, the fountain is now dry. Only a small gazebo and a sign marks the spot where the magic waters once were.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -83,8 +101,10 @@
         },
         {
             "id": 10,
-            "name": "",
-            "state": "",
+            "name": "World’s Largest ‘Gone With the Wind’ Collection",
+            "state": "FL",
+            "city": "Plant City",
+            "description": "If you’re a big fan of Gone With the Wind you’re going to want to stop by the world’s largest Gone With the Wind collection. It also houses the world’s largest gift shop dedicated to the movie.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -92,8 +112,10 @@
         },
         {
             "id": 11,
-            "name": "",
-            "state": "",
+            "name": "White House Replica",
+            "state": "GA",
+            "city": "Atlanta",
+            "description": "Want to see the White House without having to go to D.C.? Consider traveling to Atlanta, where they have a replica three-quarters the size! The mini White House used to offer tours of its replica of the Oval Office and the Lincoln bedroom, but now it’s a private home.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -101,17 +123,21 @@
         },
         {
             "id": 12,
-            "name": "",
-            "state": "",
+            "name": "World’s Most Scenic Urinal",
+            "state": "HI",
+            "city": "Kealakekua",
+            "description": "The Hotel Kona is home to the world’s most scenic urinal and they are proud of it. Men using the facilities get to enjoy a gorgeous view of the ocean and the green terrain while they relieve themselves.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
             "id": 13,
-            "name": "",
-            "state": "",
+            "name": "Giant Abraham Lincoln",
+            "state": "ID",
+            "city": "Boise",
+            "description": "You can take a funny picture with an absolutely enormous Abraham Lincoln in Boise, Idaho. People have enjoyed posing with this comically large statute since its unveiling in 2010.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -119,8 +145,10 @@
         },
         {
             "id": 14,
-            "name": "",
-            "state": "",
+            "name": "First Kiss Spot of the Obamas",
+            "state": "IL",
+            "city": "Chicago",
+            "description": "There is a plaque on one of the rocks in front of a Subway restaurant (that used to be a Baskin Robbins) in the Hyde Park neighborhood in Chicago where Barack and Michelle Obama had their first date and subsequently, their first kiss. Whatever you feel about the Obamas, you must admit this is a pretty adorable memorial.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -128,8 +156,10 @@
         },
         {
             "id": 15,
-            "name": "",
-            "state": "",
+            "name": "World’s Largest Egg",
+            "state": "IN",
+            "city": "Mentone",
+            "description": "Mentone is known as “the egg basket of the Midwest” — and they have the world’s largest egg to prove it. No, it’s not real, but this enormous cement egg is still well worth taking a photo next to.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -137,8 +167,10 @@
         },
         {
             "id": 16,
-            "name": "",
-            "state": "",
+            "name": "Mini Statue of Liberty",
+            "city": "Des Moines",
+            "state": "IA",
+            "description": "If you can’t make it to New York to see the real thing, try road-tripping it to Des Moines for a shot with the mini Statue of Liberty. Located on the east side of the Iowa State capitol, this replica isn’t green like the Lady Liberty we know and love on the East Coast but rather a ghostly white.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -146,8 +178,10 @@
         },
         {
             "id": 17,
-            "name": "",
-            "state": "",
+            "name": "Teacher’s Hall of Fame",
+            "city": "Dodge City",
+            "state": "KS",
+            "description": "he Kansas Teachers’ Hall of Fame is a must-see kitschy attraction for anyone who wants to show their admiration of the people who taught us to read, count, and spell. There is even a room in the museum devoted to school artifacts like old wooden desks, mimeograph machines, chalkboards, and a piano!",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -155,8 +189,10 @@
         },
         {
             "id": 18,
-            "name": "",
-            "state": "",
+            "name": "Funny Town Welcome Sign",
+            "city": "Hartford",
+            "state": "KY",
+            "description": "Clearly the town of Hartford has a good sense of humor. 'Home of 2000 happy people and a few soreheads,' reads the iconic welcome sign. Definitely Instagram that!",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -164,8 +200,10 @@
         },
         {
             "id": 19,
-            "name": "",
-            "state": "",
+            "name": "Grave of Marie Laveau, the Voodoo Queen",
+            "city": "New Orleans",
+            "state": "LA",
+            "description": "Visit Marie Laveau’s grave… if you dare. The notorious Louisiana Voodoo queen may have died in 1881, but it’s still widely believed that her spirit will help you with whatever you need should you leave the right combination of offerings or draw three X’s on her tomb. Unfortunately, due to tons of grave-defacing, the only way to visit her final resting place is by taking a tour with a licensed tour guide.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -173,8 +211,10 @@
         },
         {
             "id": 20,
-            "name": "",
-            "state": "",
+            "name": "Giant L.L. Bean Boot",
+            "city": "Freeport",
+            "state": "ME",
+            "description": "If this isn’t the most Instagrammed spot in Maine, it should be. The L.L. Bean flagship store has a 16-foot-tall rubber boot in front of it, perfect for posing with however you choose.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -182,8 +222,10 @@
         },
         {
             "id": 21,
-            "name": "",
-            "state": "",
+            "name": "Ouija Board Inventor’s Tombstone",
+            "city": "Baltimore",
+            "state": "MD",
+            "description": "Carved into the back of Elijah Jefferson Bond’s tombstone is a Ouija Board with the traditional “yes” and “no” in the left and right corners. It’s the perfect spot to snap a cool Instagram or build your Tumblr aesthetic.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -191,8 +233,10 @@
         },
         {
             "id": 22,
-            "name": "",
-            "state": "",
+            "name": "Turtle Boy",
+            "city": "Worcester",
+            "state": "MA",
+            "description": "This statue of a naked boy with a sea turtle is a big (and weird) tourist attraction for its possibly unintentionally suggestive nature. According to Roadside America, the sculptor died before he could complete the statue.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -200,8 +244,10 @@
         },
         {
             "id": 23,
-            "name": "",
-            "state": "",
+            "name": "Man-Killing Clam",
+            "city": "Cheboygan",
+            "state": "MI",
+            "description": "Located inside Sea Shell City, this enormous man-killing clam is totally kitschy-cool- plus there are kooky signs for it on the road the closer you get. Although the clam is admittedly pretty large, it’s more silly than scary, and it’s one of the most photographed items inside Sea Shell City.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -209,8 +255,10 @@
         },
         {
             "id": 24,
-            "name": "",
-            "state": "",
+            "name": "World’s Largest Paul Bunyan",
+            "city": "Akeley",
+            "state": "MN",
+            "description": "This Paul Bunyan statue stands out because you can sit in his huge palm and take the perfect road-trip vacation photo. Although the crouching figure is currently not technically the tallest Paul Bunyan statue in the U.S., his creators say that if he stood upright he would be about 60 feet fall, making him officially the largest Paul Bunyan.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -218,8 +266,10 @@
         },
         {
             "id": 25,
-            "name": "",
-            "state": "",
+            "name": "Town Named Hot Coffee",
+            "city": "Hot Coffee",
+            "state": "MS",
+            "description": "There is a town named Hot Coffee in Mississippi, but if you blink you might miss it. The teeny tiny town is now just a green highway sign and an abandoned grocery store. People often stop to take photos that reaffirm their love of java.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -228,7 +278,9 @@
         {
             "id": 26,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -237,7 +289,9 @@
         {
             "id": 27,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -246,7 +300,9 @@
         {
             "id": 28,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -255,7 +311,9 @@
         {
             "id": 29,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -264,7 +322,9 @@
         {
             "id": 30,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -273,7 +333,9 @@
         {
             "id": 31,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -282,7 +344,9 @@
         {
             "id": 32,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -291,7 +355,9 @@
         {
             "id": 33,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -300,7 +366,9 @@
         {
             "id": 34,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -309,7 +377,9 @@
         {
             "id": 35,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -318,7 +388,9 @@
         {
             "id": 36,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -327,7 +399,9 @@
         {
             "id": 37,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -336,7 +410,9 @@
         {
             "id": 38,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -345,7 +421,9 @@
         {
             "id": 39,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -354,7 +432,9 @@
         {
             "id": 40,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -363,7 +443,9 @@
         {
             "id": 41,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -372,7 +454,9 @@
         {
             "id": 42,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -381,7 +465,9 @@
         {
             "id": 43,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -390,7 +476,9 @@
         {
             "id": 44,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -399,7 +487,9 @@
         {
             "id": 45,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -408,7 +498,9 @@
         {
             "id": 46,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -417,7 +509,9 @@
         {
             "id": 47,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -426,7 +520,9 @@
         {
             "id": 48,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -435,7 +531,9 @@
         {
             "id": 49,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -444,7 +542,9 @@
         {
             "id": 50,
             "name": "",
+            "city": "",
             "state": "",
+            "description": "",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
