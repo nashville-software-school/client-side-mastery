@@ -7,7 +7,7 @@
             "city": "Andalusia",
             "description": "Andalusia, Alabama, is the white dress-shirt capital of America, and this highly photographed enormous white shirt sign is a reminder of that. According to Roadside America, the tie is changed seasonally.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -18,7 +18,7 @@
             "city": "Anchorage",
             "description": "If you’re a big fan of tattoos, you’re definitely going to want to snap a pic in front of Anchorage’s giant tattoo needle. On display in the parking lot of a tattoo parlor, this needle is truly eye catching.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -30,7 +30,7 @@
             "description": "You wouldn’t ever think Elvis Presley would have a place in Arizona, but “the King” lives on in Apache Junction. The Elvis Memorial Chapel survived the devastating fires at the former Apacheland Movie Ranch and has since been reconstructed at the Superstition Mountain Museum.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
@@ -41,7 +41,7 @@
             "description": "The next time you’re in Arkansas, be sure to stop by Snake World! Owner Dale Ertel claims that the tourist attraction houses over 70 snakes, which is even more than the Little Rock Zoo. The reviews on Trip Advisor are all glowing, and warn visitors not to be dissuaded by Snake World’s sketchy exterior.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
@@ -62,7 +62,7 @@
             "city": "Creede",
             "description": "Creede, Colorado, is home to the largest fork in the United States. The enormous sculpture by Ted Yund is over 40 feet long and weights over 600 pounds, breaking the record of the previous world’s largest fork, which was in Springfield, Missouri.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -74,7 +74,7 @@
             "description": "This tiny soda factory is also the oldest bottling plant in New England and has been around for almost 100 years. Tours of Avery’s Beverages are highly coveted, as visitors get to make three bottles of their own soda! Be sure to call in advance before your tour to make sure they are bottling the day you go.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
@@ -84,7 +84,7 @@
             "city": "Washington",
             "description": "You can see the unofficial postal system mascot, Owney, at the National Postal Museum where he sits wearing a vest decorated with honors for his travels assisting postal professionals. The little dog died in 1897 but has been displayed at the Post Office Headquarters in Washington, D.C., the St. Louis World’s Fair, and the Smithsonian before arriving at his final resting place, where visitors can see him today.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -107,7 +107,7 @@
             "description": "If you’re a big fan of Gone With the Wind you’re going to want to stop by the world’s largest Gone With the Wind collection. It also houses the world’s largest gift shop dedicated to the movie.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
@@ -117,8 +117,8 @@
             "city": "Atlanta",
             "description": "Want to see the White House without having to go to D.C.? Consider traveling to Atlanta, where they have a replica three-quarters the size! The mini White House used to offer tours of its replica of the Oval Office and the Lincoln bedroom, but now it’s a private home.",
             "ameneties": {
-                "souvenirs": true,
-                "restrooms": false
+                "souvenirs": false,
+                "restrooms": true
             }
         },
         {
@@ -128,7 +128,7 @@
             "city": "Kealakekua",
             "description": "The Hotel Kona is home to the world’s most scenic urinal and they are proud of it. Men using the facilities get to enjoy a gorgeous view of the ocean and the green terrain while they relieve themselves.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": true
             }
         },
@@ -139,7 +139,7 @@
             "city": "Boise",
             "description": "You can take a funny picture with an absolutely enormous Abraham Lincoln in Boise, Idaho. People have enjoyed posing with this comically large statute since its unveiling in 2010.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -150,7 +150,7 @@
             "city": "Chicago",
             "description": "There is a plaque on one of the rocks in front of a Subway restaurant (that used to be a Baskin Robbins) in the Hyde Park neighborhood in Chicago where Barack and Michelle Obama had their first date and subsequently, their first kiss. Whatever you feel about the Obamas, you must admit this is a pretty adorable memorial.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -184,7 +184,7 @@
             "description": "he Kansas Teachers’ Hall of Fame is a must-see kitschy attraction for anyone who wants to show their admiration of the people who taught us to read, count, and spell. There is even a room in the museum devoted to school artifacts like old wooden desks, mimeograph machines, chalkboards, and a piano!",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
@@ -194,7 +194,7 @@
             "state": "KY",
             "description": "Clearly the town of Hartford has a good sense of humor. 'Home of 2000 happy people and a few soreheads,' reads the iconic welcome sign. Definitely Instagram that!",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -205,7 +205,7 @@
             "state": "LA",
             "description": "Visit Marie Laveau’s grave… if you dare. The notorious Louisiana Voodoo queen may have died in 1881, but it’s still widely believed that her spirit will help you with whatever you need should you leave the right combination of offerings or draw three X’s on her tomb. Unfortunately, due to tons of grave-defacing, the only way to visit her final resting place is by taking a tour with a licensed tour guide.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -227,7 +227,7 @@
             "state": "MD",
             "description": "Carved into the back of Elijah Jefferson Bond’s tombstone is a Ouija Board with the traditional “yes” and “no” in the left and right corners. It’s the perfect spot to snap a cool Instagram or build your Tumblr aesthetic.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -238,7 +238,7 @@
             "state": "MA",
             "description": "This statue of a naked boy with a sea turtle is a big (and weird) tourist attraction for its possibly unintentionally suggestive nature. According to Roadside America, the sculptor died before he could complete the statue.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
@@ -261,7 +261,7 @@
             "description": "This Paul Bunyan statue stands out because you can sit in his huge palm and take the perfect road-trip vacation photo. Although the crouching figure is currently not technically the tallest Paul Bunyan statue in the U.S., his creators say that if he stood upright he would be about 60 feet fall, making him officially the largest Paul Bunyan.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
@@ -272,70 +272,70 @@
             "description": "There is a town named Hot Coffee in Mississippi, but if you blink you might miss it. The teeny tiny town is now just a green highway sign and an abandoned grocery store. People often stop to take photos that reaffirm their love of java.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
             "id": 26,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "1950s Gas Station With Dummies",
+            "city": "MO",
+            "state": "Clarence",
+            "description": "This Missouri curiosity is an old MFA oil service station that appears to be busy with cars. Upon closer inspection, the cars turn out to be full of mannequins. According to one reviewer, the stuffed monkeys in the taxi cab are rumored to be from the Barnum and Bailey’s Circus.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
             "id": 27,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "The Sip ‘n Dip Lounge Mermaids",
+            "city": "Great Falls",
+            "state": "MT",
+            "description": "The O’Haire Motor Inn boasts one of the greatest attractions for people who love mermaids! In their Sip ‘n Dip Lounge is a window that looks into an indoor swimming pool where six “mermaids” entertain tiki-drink-sipping guests by swimming by.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
             "id": 28,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Spinning Yellow Giant",
+            "city": "Omaha",
+            "state": "NE",
+            "description": "Only in Omaha can you see a 20-foot-tall man wearing a yellow rain coat, rotating in front of a car wash (and in multiple locations). These car washes are also staffed by much smaller animatronic mannequins, all wearing similar yellow raincoats, to delight and terrify you throughout your car wash experience.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 29,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "E.T. Fresh Jerky",
+            "city": "Hiko",
+            "state": "NV",
+            "description": "If you love aliens, this is a must-see roadside attraction. E.T. Fresh Jerky, formerly known as “Alien Fresh Jerky,” is a kooky shop with fun alien murals, U.F.O. signage, alien souvenirs, and, yes, jerky that is simply out of this world.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
             "id": 30,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Hot Dog Man",
+            "city": "Winchester",
+            "state": "NH",
+            "description": "He’s a little creepy, because he appears to be carved out of a dead tree, but he’s also kind of cute! What’s not to like about an enormous hot dog by the side of the road wearing nothing but a baseball cap, a tasteful smear of mustard, a bun, and a charming smile?",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 31,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Death Rock of Alexander Hamilton",
+            "city": "Weehawken",
+            "state": "NJ",
+            "description": "If you’re a Hamilton fan, this is a must-see. The actual rock where Alexander Hamilton rested his head after he lost his duel with Aaron Burr is now a monument! Plus it’s seriously close to the Lincoln Tunnel, so you could always see the Broadway show, hop in a cab, and go.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -343,54 +343,54 @@
         },
         {
             "id": 32,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "UFO Crashed Here",
+            "city": "Aztec",
+            "state": "NM",
+            "description": "Supposedly a UFO crash landed on this site in 1948. Now all that remains is a plaque with the gory details of the crash and some rocks gathered into the shape of an alien’s face.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 33,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Ghostbusters Headquarters",
+            "city": "New York",
+            "state": "NY",
+            "description": "The Tribeca firehouse Hook and Ladder Company 8 was used as the Ghostbusters headquarters in the film Ghostbusters and it’s still around and super easy to get to. This New York City attraction is right off of a subway line and full of nods to its film history. According to Roadside America, when actor Harold Ramis died in 2014, fans set up a memorial on the sidewalk outside of the fire house.",
             "ameneties": {
-                "souvenirs": true,
-                "restrooms": false
+                "souvenirs": false,
+                "restrooms": true
             }
         },
         {
             "id": 34,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Plastic Flamingo Petting Zoo",
+            "city": "Cedar Point",
+            "state": "NC",
+            "description": "You can pet the birds without the fishy smell or the worry of getting pecked at this plastic flamingo petting zoo in North Carolina! Located in the front yard of a tourist information center next to the highway, this is an incredible Instagram opportunity just waiting to happen. The flamingos aren’t just for petting and photos — they can also be adopted (purchased).",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
             "id": 35,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Enchanted Highway",
+            "city": "Regent",
+            "state": "ND",
+            "description": "You may think that there is a whole lot of nothing in North Dakota, but you would be wrong. The Enchanted Highway, a creation by retired school teacher and metal sculptor Gary Greff, features fantastical sculptures along an empty road in Regent, North Dakota. Visitors can see enormous birds, grasshoppers, deer jumping fences, fish, seaweed, and even more incredible designs. Greff has also opened the Enchanted Castle Hotel, where guests can stay while taking in his creative constructions, because other hotels may be hard to find. It truly is in the middle of nowhere.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 36,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Frankenstein’s Grave",
+            "city": "Canton",
+            "state": "OH",
+            "description": "This grave is rumored to belong to Dr. Frankenstein. According to one post on Roadside America, 'Rumor has it that a Timken family member in Germany wrote to his successful cousin in America and told him how the grave site of Victor Frankenstein was being defaced and spit upon in their small town. The American Timken and founder of Timken Roller Bearings paid for the remains of the body to be flown to Canton to give Dr. Frankenstein a peaceful resting place.'",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -398,87 +398,87 @@
         },
         {
             "id": 37,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "World’s Largest Peanut",
+            "city": "Durant",
+            "state": "OK",
+            "description": "The best and weirdest attractions are always large versions of everyday things. Durant’s “World’s Largest Peanut” is no exception. Although the hefty peanut was taken down in 2010 because college kids kept stealing it, it is now back on its pedestal, looking enormous as ever.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 38,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "The Dave Vail Memorial Toilet",
+            "city": "Estacada",
+            "state": "OR",
+            "description": "The funny thing about the Memorial Toilet, according to my mom who lives in Estacada (and it's where I grew up), is that the guy it was named for was alive when they built the ‘memorial toilet’ in his honor.",
             "ameneties": {
-                "souvenirs": true,
-                "restrooms": false
+                "souvenirs": false,
+                "restrooms": true
             }
         },
         {
             "id": 39,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Coffee Pot-Shaped Building",
+            "city": "Bedford",
+            "state": "PA",
+            "description": "There is truly an enormous coffee pot-shaped building in Pennsylvania that people like to pose by. Formerly a 1920s luncheonette, it was restored in 2003 and includes a gift shop next door.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 40,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Mrs. Potato Head Statue",
+            "city": "Westerly",
+            "state": "RI",
+            "description": "What’s cuter than Mr. Potato Head? Mrs. Potato Head. This version stands 6 feet tall in her bikini and sunglasses at the Westerly State Airport greeting visitors. She is certainly one hot potato.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 41,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Luke Skywalker’s House",
+            "city": "Sullivan’s Island",
+            "state": "SC",
+            "description": "This house became a hot spot for photos as it looks just like Star Wars character Luke Skywalker’s home on Tatooine. Don’t forget to bring your lightsabers.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
             "id": 42,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Corn Palace",
+            "city": "Mitchell",
+            "state": "SD",
+            "description": "South Dakota’s Corn Palace is a magnificent building covered in creative murals made out of corn to resemble various themes. 2016’s theme, which coincidentally was 2017’s theme (for monetary reasons) happened to be “Rock of Ages” and included corn depictions of the likes of Elvis, Willie Nelson, and John Travolta.",
             "ameneties": {
                 "souvenirs": true,
-                "restrooms": false
+                "restrooms": true
             }
         },
         {
             "id": 43,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Chicken Wire Minnie Pearl",
+            "city": "Centerville",
+            "state": "TN",
+            "description": "A local artist from the town of Centerville made various Minnie Pearl statues out of chicken wire. His first, an 8-foot-high chicken wire bust of the Grand Ole Opry and Hee Haw actress, was donated to the town of Centerville once completed.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 44,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Wax Last Supper",
+            "city": "Fort Worth",
+            "state": "TX",
+            "description": "Fort Worth is home to a life-size wax recreation of da Vinci’s “The Last Supper” that you can walk up to and take a photo of. The statues are complete with real human hair. Think of it as a more religious Madame Tussaud’s.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -486,54 +486,54 @@
         },
         {
             "id": 45,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Nursing Home Stonehenge",
+            "city": "American Fork",
+            "state": "UT",
+            "description": "Strangely, there is a mini replica of Stonehenge on the front lawn of a nursing home in Utah. It was built in 2012 and has become a tourist attraction just because it’s impressive and a little odd.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 46,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Grave With a Window",
+            "city": "New Haven",
+            "state": "VT",
+            "description": "The grave of Timothy Clark Smith was outfitted with a little window because Mr. Smith feared being buried alive. Although it’s hard to see through the window (the man was buried in 1893) it is still worth a trip to see it (just for the pure spookiness).",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 47,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Love Butt",
+            "city": "Charlottesville",
+            "state": "VA",
+            "description": "This 10-foot-tall, 1,600-pound piece of artwork was originally featured on a comedy show pilot but is now a permanent fixture in Charlottesville, Virginia. Big, pink, and embarrassing, it’s the perfect road trip attraction for using the “I’m just pulling over to use the restroom” excuse.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 48,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Where Kurt Cobain Lived in a Refrigerator Box",
+            "city": "Aberdeen",
+            "state": "WA",
+            "description": "Devoted Kurt Cobain and Nirvana fans have made pilgrimage to the former home of Dale Crover (the Melvins drummer who was also the first drummer of Nirvana) to take pictures of the enclosed entryway where Cobain lived in a refrigerator box. Come as you are.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
                 "restrooms": false
             }
         },
         {
             "id": 49,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Pope John Paul II Outside a Restaurant",
+            "city": "Wheeling",
+            "state": "WV",
+            "description": "A 6-foot-tall statue of Pope John Paul II holds his arms open outside Generations Restaurant and Pub in West Virginia. The statue was commissioned by restaurant owner Mike Duplaga Jr. after seeing the impressive 45-foot-tall version in Poland.",
             "ameneties": {
                 "souvenirs": true,
                 "restrooms": false
@@ -541,12 +541,23 @@
         },
         {
             "id": 50,
-            "name": "",
-            "city": "",
-            "state": "",
-            "description": "",
+            "name": "Forest of Chainsaw Totem Poles",
+            "city": "Medford",
+            "state": "WI",
+            "description": "If you’re looking to be terrified and impressed, look no further than the forest of “chainsaw totem poles” in Medford, Wisconsin. Don’t be too fearful — the hundreds of old chainsaws are “mounted” into roadside poles.",
             "ameneties": {
-                "souvenirs": true,
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 51,
+            "name": "Pit of Buffalo Bones",
+            "city": "Vore",
+            "state": "WY",
+            "description": "Hunters once drove herds of bison off the neighboring cliff into this pit to kill them, and over roughly 300 years of use, the site accumulated the remains of between 10,000 to 20,000 buffalo. Visitors and archeologists are welcome, but only 5 percent of the bones have been excavated, so who really knows what could be under there! In the mood for a road trip now.",
+            "ameneties": {
+                "souvenirs": false,
                 "restrooms": false
             }
         }
