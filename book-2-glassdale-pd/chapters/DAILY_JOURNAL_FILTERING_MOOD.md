@@ -12,6 +12,51 @@ Before you go to the instruction team for help on this section, make sure you us
 
 ![mood radio buttons](./images/42YaMLSHb7.gif)
 
+## Filter Bar Component
+
+The fieldset that has the sad, happy, and ok radio buttons in it is a component. If you haven't set it up as one yet, it is time to make a **`FilterBar`** component. This component will set up the container for the radio buttons. It should then, in turn render a **`MoodFilters`** component. Here's an example.
+
+> #### `daily-journal/scripts/filter/FilterBar.js`
+
+```js
+import MoodFilter from "./MoodFilter.js"
+
+/*
+ You need to make a new HTML element with a class of
+ `filters` in index.html
+*/
+const contentTarget = document.querySelector(".filters")
+
+const FilterBar = () => {
+    render = () => {
+        contentTarget.innerHTML = `
+            ${MoodFilter()}
+        `
+    }
+
+    render()
+}
+```
+
+> #### `daily-journal/scripts/filter/MoodFilter.js`
+
+```js
+const MoodFilter = () => {
+    return `
+        <fieldset class="fieldset">
+            <label for="journalDate">Mood for the day</label>
+            <select name="mood" id="mood">
+                <option value="sad">Sad</option>
+                <option value="ok">Ok</option>
+                <option value="happy">Happy</option>
+            </select>
+        </fieldset>
+        `
+}
+
+export default MoodFilter
+```
+
 ## Add Event Listeners
 
 Each one of the radio buttons needs to have a click event listener attached to it. When any of them are clicked, then the only articles that should appear are the ones with the corresponding mood.
