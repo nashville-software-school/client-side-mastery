@@ -54,7 +54,7 @@
         "ameneties": {
             "wheelchairAccessible": false,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
             "playground": true,
             "restrooms": true
@@ -69,7 +69,7 @@
         "ameneties": {
             "wheelchairAccessible": false,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
             "playground": true,
             "restrooms": true
@@ -86,7 +86,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -101,7 +101,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -114,9 +114,9 @@
         "ameneties": {
             "wheelchairAccessible": true,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -129,7 +129,7 @@
         "ameneties": {
             "wheelchairAccessible": false,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
             "playground": true,
             "restrooms": true
@@ -191,7 +191,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -206,7 +206,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -221,7 +221,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -236,7 +236,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -251,7 +251,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -311,7 +311,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -326,7 +326,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -339,9 +339,9 @@
         "ameneties": {
             "wheelchairAccessible": true,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -354,9 +354,9 @@
         "ameneties": {
             "wheelchairAccessible": true,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -371,7 +371,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -386,7 +386,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -401,7 +401,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -416,7 +416,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -467,7 +467,7 @@
       },
       {
         "businessName": "Tops Diner",
-        "description": "The NJ Board of Tourism says that there's a higher concentration of diners in Jersey than anywhere else in the country, so it's fitting that a diner is the most iconic in the state. But unlike the typical greasy spoon you might envision when the word "diner" comes to mind (or maybe you're a huge fan of '80s-era Barry Levinson movies), Tops features a full bar and two full-time bakers whipping up fresh cheesecake, plus the usual diner-y fare of beef ribs, meatloaf, and burgers.",
+        "description": "The NJ Board of Tourism says that there's a higher concentration of diners in Jersey than anywhere else in the country, so it's fitting that a diner is the most iconic in the state. But unlike the typical greasy spoon you might envision when the word diner comes to mind (or maybe you're a huge fan of '80s-era Barry Levinson movies), Tops features a full bar and two full-time bakers whipping up fresh cheesecake, plus the usual diner-y fare of beef ribs, meatloaf, and burgers.",
         "state": "NJ",
         "city": "East Newark",
         "id": 32,
@@ -504,9 +504,9 @@
         "ameneties": {
             "wheelchairAccessible": false,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -519,9 +519,9 @@
         "ameneties": {
             "wheelchairAccessible": true,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -534,9 +534,9 @@
         "ameneties": {
             "wheelchairAccessible": false,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -551,13 +551,13 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
       {
         "businessName": "Cattlemen's Steakhouse",
-        "description": "OKC remains an active hub in the state's huge cattle industry, and Cattlemen's is the steakhouse beef-crazy Oklahomans have embraced since it operated as a bootlegging and gambling shop that also happened to serve food. Whether you're dining in Cattlemen's older cafe section or the "newer" steakhouse side (decked out in wood paneling and large Western murals of cattle and cowboys), you're getting one of the best steaks in the state at a place where the rib-eye is king. It's even open for breakfast, just like it was in the '30s. And of course you can order a steak for breakfast -- you'd be wrong not to.",
+        "description": "OKC remains an active hub in the state's huge cattle industry, and Cattlemen's is the steakhouse beef-crazy Oklahomans have embraced since it operated as a bootlegging and gambling shop that also happened to serve food. Whether you're dining in Cattlemen's older cafe section or the newer steakhouse side (decked out in wood paneling and large Western murals of cattle and cowboys), you're getting one of the best steaks in the state at a place where the rib-eye is king. It's even open for breakfast, just like it was in the '30s. And of course you can order a steak for breakfast -- you'd be wrong not to.",
         "state": "OK",
         "city": "Oklahoma City",
         "id": 38,
@@ -566,7 +566,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -581,7 +581,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -639,9 +639,9 @@
         "ameneties": {
             "wheelchairAccessible": true,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -654,9 +654,9 @@
         "ameneties": {
             "wheelchairAccessible": false,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -671,7 +671,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -686,7 +686,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -701,7 +701,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -744,7 +744,7 @@
         "ameneties": {
             "wheelchairAccessible": false,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
             "playground": true,
             "restrooms": true
@@ -759,9 +759,9 @@
         "ameneties": {
             "wheelchairAccessible": false,
             "petFriendly": false,
-            "wifi": false,
+            "wifi": true,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       },
@@ -776,7 +776,7 @@
             "petFriendly": false,
             "wifi": false,
             "diaperFacility": true,
-            "playground": true,
+            "playground": false,
             "restrooms": true
         }
       }
