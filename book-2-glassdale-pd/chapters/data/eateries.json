@@ -58,7 +58,7 @@
         {
             "id": 6,
             "name": "Largest Fork in the US",
-            "state": "Colorado",
+            "state": "CO",
             "city": "Creede",
             "description": "Creede, Colorado, is home to the largest fork in the United States. The enormous sculpture by Ted Yund is over 40 feet long and weights over 600 pounds, breaking the record of the previous world’s largest fork, which was in Springfield, Missouri.",
             "ameneties": {
@@ -278,8 +278,8 @@
         {
             "id": 26,
             "name": "1950s Gas Station With Dummies",
-            "city": "MO",
-            "state": "Clarence",
+            "city": "Clarence",
+            "state": "Mo",
             "description": "This Missouri curiosity is an old MFA oil service station that appears to be busy with cars. Upon closer inspection, the cars turn out to be full of mannequins. According to one reviewer, the stuffed monkeys in the taxi cab are rumored to be from the Barnum and Bailey’s Circus.",
             "ameneties": {
                 "souvenirs": true,
@@ -1151,8 +1151,8 @@
         {
             "businessName": "DeLuca's",
             "description": "Pittsburgh is the steel city in a state full of proud, hardworking people, and at DeLuca's you can eat like you just got off work at the steel factory, even if you work as a social media manager for a brand of paper towels. Of course, you'll have to wait in line, as this is a hungry city. Inside, you're greeted with spacious, uncomfortable booths, gaudy tiled floors, and a lunch counter you'd expect in a greasy spoon from the '50s. The menu is enormous: it serves up a million different types of omelets, a calorie-bomb burrito called the MOAB (Mother of All Burritos), pancakes, and crepes. Even a social media manager's gotta eat.",
-            "state": "Pittsburgh",
-            "city": "PA",
+            "state": "PA",
+            "city": "Pittsburgh",
             "id": 40,
             "ameneties": {
                 "wheelchairAccessible": true,
