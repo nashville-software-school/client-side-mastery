@@ -17,7 +17,7 @@
 | 10 | [Editing Case File Notes](./chapters/GLASSDALE_EDIT_NOTES.md) | [Editing Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md) | [Saving Favorite Photos](./chapters/EOTS_FAVORITES.md) |
 | 11 | [Arresting Officer](./chapters/GLASSDALE_ARRESTING_OFFICERS.md) | [Mood Filtering](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) | [Unfavoriting Photos](./chapters/EOTS_FAVORITE_REMOVE.md) |
 | 12 | [Finding the Common Thread](./chapters/GLASSDALE_MULTIPLE_PARAMS.md) | [Searching Entries](./chapters/DAILY_JOURNAL_SEARCHING.md) |  |
-| 13 | [Making the Arrest](./chapters/GLASSDALE_SUMMARY_VIEW.md) |  | [Filtering Favorites](./chapters/EOTS_FILTER_FAVORITES.md) |
+| 13 | [Data Relationships](./chapters/DATA_RELATIONSHIPS.md) |  |  |
 | 14 | [Your Next Case](./chapters/GLASSDALE_MANY_TO_MANY.md) | [Data Relationships](./chapters/DAILY_JOURNAL_MOOD_TABLE.md) |  |
 | 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |
 
