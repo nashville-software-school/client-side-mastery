@@ -478,6 +478,33 @@ Create at least 4 customers. Then assign each employee to 2 customers. In the ex
 1. Create a new **`CustomerProvider`** component which gets all customers.
 1. Create a new **`EmployeeCustomerProvider`** component which gets all customer/employee relationships.
 
+To get all the related data for a single employee, you won't be using the `find()` method like you did for the 1 -> * relationships. You will be using the `filter()` method.
+
+```js
+const EmployeeList = () => {
+    const customers = useCustomers()
+    const customerRelationships = useEmployeeCustomers()
+
+    const render = () => {
+        contentTarget.innerHTML = `
+            ${
+                employees.map(employee => {
+                    // Find all the customer relationships
+                    const relationships = customerRelationships.filter()
+
+                    // Find the related customer for each relationship
+                    const assignedCustomers = relationships.map(rel => {
+                        customers.find()
+                    })
+                }).join("")
+            }
+        `
+    }
+
+    render()
+}
+```
+
 The final HTML representation should look like this.
 
 ```html
