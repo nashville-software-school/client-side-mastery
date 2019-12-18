@@ -453,10 +453,57 @@ Table EmployeeCustomers {
 }
 ```
 
+Then add two new resources in your `database.json`.
+
+```json
+"customers": [
+    {
+        "id": 1,
+        "name": "Juniper Distribution"
+    }
+],
+"employeeCustomers": [
+    {
+        "id": 1,
+        "customerId": 1,
+        "employeeId": 2
+    }
+]
+```
+
+Create at least 4 customers. Then assign each employee to 2 customers. In the example above, I am recording the fact that the employee with an `id` of 2 worked for the customer with an `id` of 1.
+
 ### HTML Representations
 
 1. Create a new **`CustomerProvider`** component which gets all customers.
 1. Create a new **`EmployeeCustomerProvider`** component which gets all customer/employee relationships.
+
+The final HTML representation should look like this.
+
+```html
+<div class="employee">
+    <header class="employee__name">
+        <h1>Rainu Ittycheriah</h1>
+    </header>
+    <section class="employee__department">
+        Works in the IT department
+    </section>
+    <section class="employee__computer">
+        Currently using a 2015 MacBook Pro
+    </section>
+    <section class="employee__location">
+        Works at the Memphis office
+    </section>
+    <section class="employee__customers">
+        Has worked for the following customers.
+        <ul>
+            <li>Juniper Distribution</li>
+            <li>Bluelife Health Services</li>
+        </ul>
+    </section>
+</div>
+```
+
 
 ## Challenge: Follow the Money
 
