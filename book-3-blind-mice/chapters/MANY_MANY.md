@@ -68,22 +68,22 @@ You would add the following `familyChores` property to your JSON file.
     "familyChores": [
         {
             "id": 1,
-            "familyId": 1,
+            "familyMemberId": 1,
             "choreId": 4
         },
         {
             "id": 2,
-            "familyId": 1,
+            "familyMemberId": 1,
             "choreId": 5
         },
         {
             "id": 3,
-            "familyId": 2,
+            "familyMemberId": 2,
             "choreId": 5
         },
         {
             "id": 4,
-            "familyId": 2,
+            "familyMemberId": 2,
             "choreId": 3
         }
     ]
@@ -146,21 +146,27 @@ export const getFamilyChores = () => fetch("http://localhost:8088/familychores")
 import { useChores } from "./ChoreProvider.js"
 import { useFamilyMembers } from "./FamilyProvider.js"
 import { useFamilyChores } from "./FamilyChoreProvider.js"
-import Product from "./Product.js"
+import FamilyMember from "./FamilyMember.js"
 
-const contentTarget = document.querySelector(".products")
+const contentTarget = document.querySelector(".family")
 
-export const ProductList = () => {
-    const products = useProducts()
-    const productTypes = useProductTypes()
+export const FamilyList = () => {
+    const chores = useChores()
+    const people = useFamilyMembers()
+    const peopleChores = useFamilyChores()
 
     const render = () => {
-        contentTarget.innerHTML = products.map(product => {
-            // Find this product's type
-            const type = productTypes.find(type => type.id === product.productTypeId)
+        contentTarget.innerHTML = people.map(person => {
+            // Find related chore ids
+            let relatedChores = peopleChores.filter(pc => pc.familyMemberId === person.id)
+
+            // Convert the array from relationship objects to chore objects
+            relatedChores = relatedChores.map(rc => {
+                return chores.find(chore => chore.id === rc.choreId)
+            })
 
             // Get HTML representation of product
-            const html = Product(product, type)
+            const html = FamilyMember(person, relatedChores)
 
             return html
         }).join("")
@@ -169,14 +175,46 @@ export const ProductList = () => {
     render()
 }
 
-export default ProductList
+export default FamilyList
 ```
-
 
 > ##### `chores/scripts/FamilyMember.js`
 
+```js
+const FamilyMember = (person, chores) => {
+    return `
+        <section class="familyMember">
+            <header>
+                <h2>${person.name}</h2>
+            </header>
+            <div>
+                <ol>
+                    ${
+                        chores.map(chore => `<li>${chore.task}</li>`).join("")
+                    }
+                </ol>
+            </div>
+        </section>
+    `
+}
 
-> ##### `chores/scripts/ProductProvider.js`
+export default FamilyMember
+```
 
+> ##### `chores/scripts/main.js`
 
-> ##### `chores/scripts/ProductProvider.js`
+```js
+import { getChores } from "./ChoreProvider.js"
+import { getFamilyMembers } from "./FamilyProvider.js"
+import { getFamilyChores } from "./FamilyChoreProvider.js"
+import FamilyList from "./FamilyList.js"
+
+getChores()
+    .then(getFamilyMembers)
+    .then(getFamilyChores)
+    .then(FamilyList)
+```
+
+It should render the following output
+
+![image of rendered family members and their chores](./images/family-chores.png)
