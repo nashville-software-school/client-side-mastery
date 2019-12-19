@@ -127,6 +127,9 @@ const Product = (product, type) => {
                 <h2>${product.name}</h2>
             </header>
             <div>
+                Price $${product.price}
+            </div>
+            <div>
                 In category ${type.name}
             </div>
         </section>
@@ -148,3 +151,7 @@ getProducts()
     .then(getProductTypes)
     .then(ProductList)
 ```
+
+Once you have all that code in place, start json-server and your web server and load your app in Chrome. You will see the following list.
+
+![](./images/product-list.png)
