@@ -66,7 +66,7 @@ const EmployeeList = () => {
 
                     // Find the related customer for each relationship
                     const assignedCustomers = relationships.map(rel => {
-                        customers.find()
+                        return customers.find()
                     })
                 }).join("")
             }
