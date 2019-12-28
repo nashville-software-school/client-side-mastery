@@ -18,4 +18,6 @@ The obvious resources in this system are as follows:
 1. Politician
 1. Legislative Bill
 
-There are other resources (tables) that you will need to create to fulfill the requirements and represent the complex relationships. Build an ERD to visualize these relationships.
+There are other resources that you will need to create to fulfill the requirements and represent the complex relationships. Build an ERD to visualize these relationships.
+
+> **Important:** Before moving on to the next chapter in Honest Abe, you need to review your ERD with a member of the instruction team. It is critical that your ERD is structured correctly, or it will be impossible to complete this application.
