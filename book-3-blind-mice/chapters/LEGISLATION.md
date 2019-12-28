@@ -1,6 +1,10 @@
 # Final Challenge: Tracking the Money
 
-Use `fetch` to get all of the related data to build a card for each politician. It should list the bills they have sponsored, and any companies that have contributed to a PAC that has a shared interest for each bill.
+In this final part of Honest Abe, you task is to list all politicians along with the following information for each one.
+
+* Bills the politician has sponsored.
+* PACs that have donated to the politician's campaign.
+* Corporate influencers. Influencing corporations share the same interests as the politician's legislation, and have contributed to PACs that have contributed to the politician.
 
 > **HINT:** We will give you **one** hint. You will need to use the [`Promise.all()`](https://attacomsian.com/blog/promise-all-javascript) method to [resolve multiple fetch](https://appdividend.com/2019/01/03/javascript-promise-all-example-promise-all-tutorial/) calls at the same time.
 
@@ -15,16 +19,13 @@ Use `fetch` to get all of the related data to build a card for each politician. 
             <div>Represents: Bethpage, Maine</div>
         </div>
         <div class="politician__bills">
-            <h3>Sponsored Bills</h3>
+            <h2>Sponsored Bills</h2>
             <div>
-                <h4>H.R. 5215: Veterans Affairs Purchase Card Misuse Mitigation Act</h4>
-                <ul>
-                    <li>Military</li>
-                </ul>
+                H.R. 5215: Veterans Affairs Purchase Card Misuse Mitigation Act (Interest: Military)
             </div>
         </div>
         <div class="politician__funders">
-            <h3>Related PACs</h3>
+            <h2>Related PACs</h2>
             <ul>
                 <li>American Gas Association</li>
                 <li>League of Conservation Voters Action Fund</li>
@@ -40,5 +41,3 @@ Use `fetch` to get all of the related data to build a card for each politician. 
     </section>
 </article>
 ```
-
-![animation of some rendered politicians](./images/honest-abe.gif)
