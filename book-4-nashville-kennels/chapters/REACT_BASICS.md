@@ -80,7 +80,7 @@ Even though we write `<Kennel>` in React code, which looks like an HTML element,
 
 To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
 
-> #### `src/index.js`
+> ##### `src/index.js`
 
 ```js
 import React from "react"
@@ -96,7 +96,7 @@ After the company information, we want to list all of the animals. I **could** h
 
 Therefore, I'm going to create another component for displaying an animal. Consider how we have structured our previous projects and make a new file specific to the animal display. Copy pasta the following code into the following file.
 
-> #### `src/components/animal/Animal.js`
+> ##### `src/components/animal/Animal.js`
 
 ```jsx
 import React from "react"
@@ -113,7 +113,7 @@ This component can be included as a child of the **`Kennel`** component. Look at
 
 Update your **`Kennel`** component with the code provided below. Now when the **`Kennel`** component is rendered it will render 3 child **`Animal`** components.
 
-> #### `src/components/Kennel.js`
+> ##### `src/components/Kennel.js`
 
 ```jsx
 import React from "react"
@@ -139,7 +139,7 @@ export default () => (
 
 ## Kennel Styles
 
-> #### `src/components/Kennel.css`
+> ##### `src/components/Kennel.css`
 
 ```css
 /* Import the google web fonts you want to use */
@@ -180,7 +180,7 @@ address {
 
 ## Animal Styles
 
-> #### `src/components/animal/Animals.css`
+> ##### `src/components/animal/Animals.css`
 
 ```css
 
