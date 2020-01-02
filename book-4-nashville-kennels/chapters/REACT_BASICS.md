@@ -15,7 +15,13 @@ You can install the React Developer Tools via the [Chrome Store](https://chrome.
 
 ## Getting Started with create-react-app
 
-Visit the [create-react-app](https://github.com/facebook/create-react-app/) Github repo and follow the instructions for getting yourself set up with a simple React application.
+```sh
+cd ~/workspace
+npx create-react-app kennels
+# Wait for installation to complete
+cd kennels/src
+rm App*
+```
 
 ### Getting Setup
 
@@ -26,13 +32,14 @@ Before we grow this application, let's create a meaningful directory structure.
 3. `touch` `Kennel.js` and `Kennel.css`.
 4. Within components, `mkdir` an `animal` directory
 5. `cd` into the `animal` directory.
-6. `touch` AnimalCard.js.
+6. `touch Animal.js Animals.css`
 
 ```
 - src
     - components
         - animal
-            - AnimalCard.js
+            - Animal.js
+            - Animals.css
         - Kennel.js
         - Kennel.css
   index.js
@@ -98,20 +105,20 @@ export default () => (
     <section className="animal">
         <h3 className="animal__name">Doodles</h3>
         <div className="animal__breed">Breed: Poodle</div>
-    </div>
+    </section>
 )
 ```
 
-This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<Animal />`. JSX interprets this as a component and will render the class you defined.
+This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<Animal />`. React interprets this as a component and will run the function that you imported from `Animal.js` and then render the JSX that it defines.
 
-Update your **`Kennel`** component. Now when the **`Kennel`** component is rendered it will render the **`Animal`** component. We can say that the Kennel component is a parent of the **`Animal`** component.
+Update your **`Kennel`** component with the code provided below. Now when the **`Kennel`** component is rendered it will render 3 child **`Animal`** components.
 
 > #### `src/components/Kennel.js`
 
 ```jsx
 import React from "react"
 import Animal from "./animal/Animal"
-import "./Kennel.css"
+import "./Animals.css"
 
 export default () => (
     <>
@@ -121,16 +128,18 @@ export default () => (
             <div>Visit Us at the Nashville North Location</div>
             <div>500 Puppy Way</div>
         </address>
-        <article class="animals">
-            <AnimalCard />
-            <AnimalCard />
-            <AnimalCard />
+        <article className="animals">
+            <Animal />
+            <Animal />
+            <Animal />
         </article>
     </>
 )
 ```
 
-## Add some styles to Kennel.css
+## Kennel Styles
+
+> #### `src/components/Kennel.css`
 
 ```css
 /* Import the google web fonts you want to use */
@@ -167,6 +176,13 @@ strong {
 address {
   margin: 0 0 1.5em;
 }
+```
+
+## Animal Styles
+
+> #### `src/components/animal/Animals.css`
+
+```css
 
 .animals {
   display: flex;
@@ -184,10 +200,14 @@ address {
 
 ## Practice
 
-The Nashville Kennel application needs to include locations, owners, and employees. Create static card components for each (`Location.js`, `Customer.js` and `Employee.js`).
+The Nashville Kennel application needs to include locations, owners, and employees. Create static card components for each (`Location.js`, `Customer.js` and `Employee.js`) and a corresponding CSS file.
 
 Remember the Single Responsibility Principle. You should have a component whose sole responsibility is to render the location, or customer, or employee information. Make sure you create a different sub-directory for each kind of resource.
+
+Yes, each one will display the identical information. This is just to practice making components. You'll be making real, data-driven components soon.
 
 * Show 2 locations
 * Show 4 customers
 * Show 3 employees
+
+![all components rendered in a grid](./images/hard-coded-components.png)
