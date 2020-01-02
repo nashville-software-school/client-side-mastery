@@ -4,7 +4,7 @@ Your data providers have so far been fairly simple modules. They have a module-s
 
 Here's some example vanilla JavaScript code for a data provider.
 
-> #### `scripts/location/LocationProvider.js`
+> ##### `scripts/location/LocationProvider.js`
 
 ```js
 const locations = []
@@ -39,7 +39,7 @@ In the React library, there is a feature called the Context API. This API provid
 
 The following data provider component serves the exact same purpose in a React application as the vanilla one above does. However, there are plenty of new keywords and statements that will be explained.
 
-> #### `src/components/location/LocationProvider.js`
+> ##### `src/components/location/LocationProvider.js`
 
 ```js
 import React, { useState, useEffect } from "react"
@@ -210,6 +210,18 @@ useEffect(() => {
 ```
 
 ### Returning the Context for Usage
+
+Now you can define what this component will expose to other components. All you really need to worry about understanding in this block of code is the two variables in the value attribute.
+
+With the following code, other components can access the array of objects being stored in the `locations` variable, and they can invoke the `addLocation` function.
+
+They have access to nothing else.
+
+* They cannot invoke the `getLocations` function
+* They cannot access the `LocationContext` variable
+* They cannot influence what is happening in this component's `useEffect` functions.
+
+Only what is exposed in the `value` attribute of the `LocationContext.Provider` component can be accessed.
 
 ```jsx
 return (
