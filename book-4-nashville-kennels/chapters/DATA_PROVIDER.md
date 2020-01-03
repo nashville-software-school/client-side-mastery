@@ -53,7 +53,7 @@ export const LocationContext = React.createContext()
 /*
  This component establishes what data can be used.
  */
-export const LocationProvider = () => {
+export const LocationProvider = (props) => {
     const [locations, setLocations] = useState([])
 
     const getLocations = () => {
@@ -77,7 +77,9 @@ export const LocationProvider = () => {
         Load all animals when the component is mounted. Ensure that
         an empty array is the second argument to avoid infinite loop.
     */
-    useEffect(getLocations, [])
+    useEffect(() => {
+        getLocations()
+    }, [])
 
     useEffect(() => {
         console.log("****  LOCATION APPLICATION STATE CHANGED  ****")
@@ -127,10 +129,12 @@ Nothing is stored in the context when it's defined. At this point, it's just an 
 Now that the required hooks are imported, and an empty context is created, it's time for you to define the data provider component that will allow other components to use the data in the context.
 
 ```js
-export const LocationProvider = () => {
+export const LocationProvider = (props) => {
 
 }
 ```
+
+You need to define a single property for each provider that you define in your system. This is because the components that use the data must be defined as children components _(more about this in the next chapter)_, and React will send an object to each component. One of the properties on that object will be `children`, which contains the child elements.
 
 ### Defining Component State
 
@@ -196,7 +200,9 @@ If you put a variable inside the array, then any time the value of that variable
 Since there is nothing in the array, there's no reason for `getLocations` to ever execute again!
 
 ```js
-useEffect(getLocations, [])
+useEffect(() => {
+    getLocations()
+}, [])
 ```
 
 ### Secondary Effect Hook
@@ -206,6 +212,7 @@ With this Effect hook, the function that is defined as the first argument _will_
 ```js
 useEffect(() => {
     console.log("****  LOCATION APPLICATION STATE CHANGED  ****")
+    console.log(locations)
 }, [locations])
 ```
 
@@ -213,15 +220,7 @@ useEffect(() => {
 
 Now you can define what this component will expose to other components. All you really need to worry about understanding in this block of code is the two variables in the value attribute.
 
-With the following code, other components can access the array of objects being stored in the `locations` variable, and they can invoke the `addLocation` function.
-
-They have access to nothing else.
-
-* They cannot invoke the `getLocations` function
-* They cannot access the `LocationContext` variable
-* They cannot influence what is happening in this component's `useEffect` functions.
-
-Only what is exposed in the `value` attribute of the `LocationContext.Provider` component can be accessed.
+With the following code, other components can access the array of objects being stored in the `locations` variable, and they can invoke the `addLocation` function. You will see the syntax for using these in the next chapter.
 
 ```jsx
 return (
