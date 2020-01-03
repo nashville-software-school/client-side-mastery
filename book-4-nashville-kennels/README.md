@@ -8,7 +8,7 @@
 | 2 | [Kennel API](./chapters/KENNEL_API.md) | [Kandy Korner API](./chapters/KANDY_API.md) |
 | 3 | [Location Data Provider](./chapters/DATA_PROVIDER.md) |  |
 | 4 | [Listing Locations](./chapters/LIST_USECONTEXT.md) | [Store Locations](./chapters/KK_STORES.md) |
-| 5 | [Location Component and Props](./chapters/PROPS.md) | [Inventory](./chapters/KK_INVENTORY.md) |
+| 5 | [Listing Animals, Employees, and Customers](./chapters/LIVE_DATA.md) | [Inventory](./chapters/KK_INVENTORY.md) |
 | 6 | [Navigation Bar with Routing](./chapters/ROUTING.md) |  |
 | 7 | [Hiring Employees](./chapters/FORMS_USEREF.md) | [Employees](./chapters/KK_EMPLOYEES.md) |
 | 8 | [Registering Customers](./chapters/AUTHENTICATION.md) | [Rewards Program](./chapters/KK_CUSTOMERS.md) |

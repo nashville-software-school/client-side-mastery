@@ -6,6 +6,8 @@ Now it's time to get the location data from the API and then refactor the **`Loc
 
 But first, you need to define your list component. This component is the first one in the application that needs data from a data provider component. Note that the `LocationContext` is imported from the **`LocationProvider`** component.
 
+> ##### `src/components/location/LocationList.js`
+
 ```js
 import React, { useContext } from "react"
 import { LocationContext } from "./LocationProvider"
@@ -75,6 +77,8 @@ In React, that gets shortened to the following JSX.
 
 Now you need to refactor your Kennel component. You are going to start using live data, so you will be removing all the hard-coded components. Replace the contents of your component with the code below.
 
+> ##### `src/components/Kennel.js`
+
 ```js
 import React from "react"
 import LocationList from "./location/LocationList"
@@ -113,6 +117,8 @@ You will see more about this in later chapters.
 ## Location
 
 Refactor your **`Location`** component to use the location property that was provided by the parent component of **`LocationList`**.
+
+> ##### `src/components/location/Location.js`
 
 ```js
 import React from "react"
