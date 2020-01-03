@@ -79,7 +79,7 @@ Now you need to refactor your Kennel component. You are going to start using liv
 
 > ##### `src/components/Kennel.js`
 
-```js
+```jsx
 import React from "react"
 import LocationList from "./location/LocationList"
 import { LocationProvider } from "./location/LocationProvider"
