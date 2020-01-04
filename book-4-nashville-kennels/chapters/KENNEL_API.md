@@ -18,7 +18,8 @@ Then copy the following JSON into the `database.json` file.
             "id": 1,
             "name": "Doodles",
             "breed": "Poodle",
-            "customerId": 1
+            "customerId": 1,
+            "locationId": 2
         }
     ],
     "customers": [

@@ -24,7 +24,7 @@ Now create the following components for animals, employees, and customers.
 * List
 * Individual item
 
-Then refactor the **`Kennel`** component to render each list component. Remember to wrap each list component in its corresponding data provider component. For example...
+Then refactor the **`Kennel`** component to render each list component. Remember to wrap each list component in its corresponding data provider component.
 
 ```jsx
 <h2>Animals</h2>
@@ -32,3 +32,5 @@ Then refactor the **`Kennel`** component to render each list component. Remember
     <AnimalList />
 </AnimalProvider>
 ```
+
+> **Note:** For now, just display the foreign key value for each animal and employee. You will learn how to join data from multiple resources in later chapters.
