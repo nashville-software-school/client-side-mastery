@@ -18,8 +18,8 @@ So if you choose a crime, and then choose an officer, the criminals that should 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".filter__button")
 
-const selectedOfficer = null
-const selectedCrime = null
+let selectedOfficer = null
+let selectedCrime = null
 
 const FilterComponent = () => {
 
