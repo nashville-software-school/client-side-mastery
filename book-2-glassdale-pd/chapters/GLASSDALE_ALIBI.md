@@ -22,7 +22,7 @@
 >
 > She starts to walk away, but as she leaves, she half-yells, "I need to get help Maggie with her auto theft case, so I'll talk to you later!"
 >
-> With an internal sigh, you head back to your office to go with what you've got.
+> With an internal sigh, you head to the coffee machine on the way to your office. Outside, you see Chief Watson talking to Maggie in her pickup truck. You then head to your office to go with what you've got.
 
 ## Goal
 
