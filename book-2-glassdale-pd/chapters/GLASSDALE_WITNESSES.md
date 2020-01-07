@@ -1,6 +1,6 @@
 # Checking Witness Statements
 
-> Maggie is grumbly today, you think.
+> Maggie is grumbly today, you think. When you saw her get out of her pickup truck this morning, you could hear her slamming the door from inside.
 >
 > You wander in to her room, holding your laptop, to show her your progress so far. She barely glances at you and she moves papers and photos around on her desk.
 >
