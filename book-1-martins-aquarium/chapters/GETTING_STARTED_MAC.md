@@ -81,6 +81,7 @@ Git is how you and your teammates will work on a shard codebase during your time
 
 ```sh
 brew install git
+brew install tig
 ```
 
 ### Oh My Zsh

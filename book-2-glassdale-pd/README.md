@@ -18,7 +18,6 @@
 | 11 | [Arresting Officer](./chapters/GLASSDALE_ARRESTING_OFFICERS.md) | [Mood Filtering](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) | [Unfavoriting Photos](./chapters/EOTS_FAVORITE_REMOVE.md) |
 | 12 | [Finding the Common Thread](./chapters/GLASSDALE_MULTIPLE_PARAMS.md) | [Searching Entries](./chapters/DAILY_JOURNAL_SEARCHING.md) |  |
 
-
 ## Review Chapters
 
 * [Array Methods](./chapters/JS_ARRAY_METHODS.md)
