@@ -277,7 +277,7 @@ If you want to display all of the animals that are currently being boarded, you 
 ```js
 const boardedAnimals = kennel.currentAnimals
 
-for (let i = 0; i < boardedAnimals.length: i++) {
+for (let i = 0; i < boardedAnimals.length; i++) {
     console.log(boardedAnimals[i])
 }
 
