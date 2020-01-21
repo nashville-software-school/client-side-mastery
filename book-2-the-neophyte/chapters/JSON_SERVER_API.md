@@ -132,7 +132,7 @@ Or curry dishes.
 
 ## Using Postman for API Queries
 
-Postman is a valuable tool for software developers who want to explore any API resources. When you are building your own API for a group project, or when you are building one for a personal project or your capstone, Postman will help you test the API before you starting writing your application code.
+Postman is a valuable tool for software developers who want to explore any API resources. When you are building your own API for a group project, or when you are building one for a personal project or your capstone, Postman will help you test the API before you start writing your application code.
 
 1. Visit the [Postman apps page](https://www.getpostman.com/apps) and download the application for your OS.
 1. Watch the wonderful [Postman Beginner Tutorial](https://www.youtube.com/playlist?list=PLhW3qG5bs-L-oT0GenwPLcJAPD_SiFK3C) series on YouTube.
