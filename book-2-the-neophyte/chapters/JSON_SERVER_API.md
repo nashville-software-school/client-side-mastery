@@ -128,7 +128,7 @@ Now filter the food to only show Italian dishes
 
 Or curry dishes.
 
-[http://localhost:8088/food?type=curry](http://localhost:8088/food?type=curry)
+[http://localhost:8088/food?category=curry](http://localhost:8088/food?category=curry)
 
 ## Using Postman for API Queries
 
