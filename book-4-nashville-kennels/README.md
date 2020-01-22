@@ -13,7 +13,7 @@
 | 7 | [Real Data for Animals](./chapters/MULTIPLE_PROVIDERS.md) |  |
 | 8 | [Hiring Employees](./chapters/FORMS_USEREF.md) | [Employees](./chapters/KK_EMPLOYEES.md) |
 | 9 | [Registering Customers](./chapters/AUTHENTICATION.md) | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
-| 10 | [Admitting Animals](./chapters/HOC_PROVIDER.md) | [Purchase History](./chapters/KK_PURCHASES.md) |
+| 10 | [Admitting Animals](./chapters/ADMIT_ANIMAL.md) | [Purchase History](./chapters/KK_PURCHASES.md) |
 | 11 | [Viewing Individual Animals](./chapters/DYNAMIC_ROUTING.md) | [Customer Report](./chapters/KK_REPORT.md) |
 | 12 | [Release Animals](./chapters/DELETE.md) |  |
 | 13 | [Animal Treatment History](./chapters/EDIT.md) | [Customer Profiles](./chapters/KK_PROFILES.md) |
