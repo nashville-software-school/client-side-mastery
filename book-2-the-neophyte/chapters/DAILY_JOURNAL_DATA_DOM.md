@@ -71,7 +71,7 @@ const journalEntries = [
 
     Arguments: journalEntry (object)
 */
-const makeJournalEntryComponent = (journalEntry) {
+const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
     return `
 
