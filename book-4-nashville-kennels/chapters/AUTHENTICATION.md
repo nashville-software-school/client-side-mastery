@@ -36,30 +36,53 @@ const Login = props => {
     const customerName = useRef()
     const address = useRef()
 
+    const existingUserCheck = () => {
+        fetch(`http://localhost:5002/customers?email=${email.current.value}`)
+        .then(_ => _.json())
+        .then(user => {
+            if (user) {
+                return user
+            }
+            return false
+        })
+    }
+
     // Simplistic handler for login submit
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetch("http://localhost:5002/customers", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                email: email.current.value,
-                password: password.current.value,
-                name: customerName.current.value,
-                address: address.current.value
-            })
-        })
-        .then(_ => _.json())
-        .then(response => {
-            localStorage.setItem("kennel_customer", response.id)
+        existingUserCheck()
+            .then(exists => {
+                if (exists && exists.password === password.current.value) {
+                    localStorage.setItem("kennel_customer", exists.id)
 
-            props.history.push({
-                pathname: "/locations"
+                    props.history.push({
+                        pathname: "/locations"
+                    })
+                } else if (!exists) {
+                    fetch("http://localhost:5002/customers", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            email: email.current.value,
+                            password: password.current.value,
+                            name: customerName.current.value,
+                            address: address.current.value
+                        })
+                    })
+                    .then(_ => _.json())
+                    .then(response => {
+                        localStorage.setItem("kennel_customer", response.id)
+
+                        props.history.push({
+                            pathname: "/locations"
+                        })
+                    })
+                }
             })
-        })
+
 
     }
 
