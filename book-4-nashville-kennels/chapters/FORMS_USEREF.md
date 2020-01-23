@@ -2,7 +2,7 @@
 
 ## Goal
 
-In this chapter, you are going to write a components whose reposibility to is create a new employee record and assigns that employee to a location.
+In this chapter, you are going to write a component whose responsibility is to create a new employee record and assign that employee to a location.
 
 ## New Concepts
 
@@ -233,7 +233,7 @@ const constructNewEmployee = () => {
     if (locationId === 0) {
         window.alert("Please select a location")
     } else {
-        hireEmployee({
+        addEmployee({
             name: employeeName.current.value,
             locationId: locationId
         })
