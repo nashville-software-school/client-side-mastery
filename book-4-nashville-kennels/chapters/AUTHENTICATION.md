@@ -1,4 +1,4 @@
-# Mock Authentication and Custom Hooks
+# Mock Authentication
 
 In this chapter, you are going to create a very simple login screen where a customer can enter in their name, email address, street address and a password. This is not going to be a real authentication system. Real authentication systems are vastly more secure, complex, and robust.
 
@@ -164,3 +164,7 @@ Then put the condition in the route. If the user is authenticated, return the co
     }
 } />
 ```
+
+## Protect All Routes
+
+Update your **`ApplicationViews`** component so that user cannot see any view without authenticating first.
