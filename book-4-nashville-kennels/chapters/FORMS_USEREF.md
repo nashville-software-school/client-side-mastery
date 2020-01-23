@@ -12,8 +12,6 @@ In this chapter, you are going to write a component whose responsibility is to c
 
 ## Process
 
-
-
 ### Add Hire Button to List
 
 In React, you can add the event listener directly on a button's `onClick` attribute instead of writing it as a separate function in the component module.
@@ -44,6 +42,15 @@ Because you need to change the route when the button is clicked, you can use the
 <Route exact path="/employees" render={
     props => <EmployeeList {...props} />
 } />
+```
+
+
+Since you are passing a property object to the employee list, you must define a parameters to capture that object.
+
+> ##### `src/components/employee/EmployeeList.js`
+
+```js
+export default (props) => {
 ```
 
 ### Create Route
