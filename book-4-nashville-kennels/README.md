@@ -9,7 +9,7 @@
 | 3 | [Location Data Provider](./chapters/DATA_PROVIDER.md) |  |
 | 4 | [Listing Locations](./chapters/LIST_USECONTEXT.md) | [Store Locations](./chapters/KK_STORES.md) |
 | 5 | [Listing Animals, Employees, and Customers](./chapters/LIVE_DATA.md) | [Inventory](./chapters/KK_INVENTORY.md) |
-| 6 | [Navigation Bar with Routing](./chapters/ROUTING.md) |  |
+| 6 | [Navigation Bar with Routing](./chapters/ROUTING.md) | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
 | 7 | [Real Data for Animals](./chapters/MULTIPLE_PROVIDERS.md) | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
 | 8 | [Hiring Employees](./chapters/FORMS_USEREF.md) | [Employees](./chapters/KK_EMPLOYEES.md) |
 | 9 | [Registering Customers](./chapters/AUTHENTICATION.md) | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
