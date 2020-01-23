@@ -26,7 +26,7 @@ Now the **`AnimalList`** component can access data from all three data providers
 
 The next step is to access the context from the two, new providers by importing the context, and then using the Context hook to get the `locations` array and the `customers` array.
 
-> ##### `src/components/ApplicationViews.js`
+> ##### `src/components/animal/AnimalList.js`
 
 ```js
 import React, { useContext } from "react"
