@@ -184,8 +184,8 @@ First, add new new reference objects and provide default values. The default val
 export default props => {
     const { addEmployee } = useContext(EmployeeContext)
     const { locations } = useContext(LocationContext)
-    const [ employeeName ] = useRef("")
-    const [ employeeLocation ] = useRef(0)
+    const employeeName = useRef("")
+    const employeeLocation = useRef(0)
 ```
 
 Then create a `ref` attribute on the employee name field.
