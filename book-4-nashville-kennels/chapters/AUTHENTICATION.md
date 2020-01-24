@@ -2,7 +2,22 @@
 
 In this chapter, you are going to create a very simple login screen where a customer can enter in their name, email address, street address and a password. This is not going to be a real authentication system. Real authentication systems are vastly more secure, complex, and robust.
 
+The best part about this chapter is that you don't need to understand **any of it**. Just copy pasta the code into your application, verify it works, talk to your instructors if it doesn't so they can fix it, and then move on.
+
+Here's the process that this code follows.
+
+1. When the user clicks on the "Employees" item in the navigation bar, check for a `kennel_customer` item in local storage.
+1. If the item is there, the user is authenticated. Re-route to root URL.
+1. If the item is not there, render the Login form instead of the employee list.
+1. When the user fills out the form and clicks the submit button, query the API to see if a user with the specified email already exists.
+1. If the user already exists, and the passwords match, set the `kennel_customer` item in local storage, and re-route user to root URL.
+1. If the user exists, but the passwords don't match, display and alert about that to the user.
+1. If the user does not exist, create the new customer resource in the API, set the `kennel_customer` item in local storage, and re-route user to root URL.
+1. Only display the "Logout" item in the navigation bar if the user is authenticated.
+
 ## Login Form Component
+
+> ##### `src/components/auth/Login.css`
 
 ### Styling
 
@@ -18,16 +33,22 @@ In this chapter, you are going to create a very simple login screen where a cust
     width: 25em;
 }
 
-input[name="remember"] {
-    margin: 1em 0.5em 0 0;
+.label--login {
+    width: 8rem;
+    display: inline-block;
+}
+
+.form-control {
+    width: 72%;
 }
 ```
 
 ### Starter Component
 
+> ##### `src/components/auth/Login.js`
+
 ```jsx
 import React, { useRef } from "react"
-import { withRouter } from "react-router-dom"
 import "./Login.css"
 
 const Login = props => {
@@ -38,13 +59,13 @@ const Login = props => {
 
     const existingUserCheck = () => {
         fetch(`http://localhost:5002/customers?email=${email.current.value}`)
-        .then(_ => _.json())
-        .then(user => {
-            if (user) {
-                return user
-            }
-            return false
-        })
+            .then(_ => _.json())
+            .then(user => {
+                if (user) {
+                    return user
+                }
+                return false
+            })
     }
 
     // Simplistic handler for login submit
@@ -72,69 +93,66 @@ const Login = props => {
                             address: address.current.value
                         })
                     })
-                    .then(_ => _.json())
-                    .then(response => {
-                        localStorage.setItem("kennel_customer", response.id)
+                        .then(_ => _.json())
+                        .then(response => {
+                            localStorage.setItem("kennel_customer", response.id)
 
-                        props.history.push({
-                            pathname: "/locations"
+                            props.history.push({
+                                pathname: "/locations"
+                            })
                         })
-                    })
                 }
             })
-
-
     }
 
     return (
-        <main style={{textAlign:"center"}}>
+        <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleLogin}>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-                <fieldset>
-                    <label htmlFor="customerName"> Your name </label>
+                <fieldset className="fieldset--login">
+                    <label className="label--login" htmlFor="customerName"> Your name </label>
                     <input ref={customerName} type="text"
                         name="customerName"
                         className="form-control"
                         placeholder=""
-                        value="Seamus Flannigan"
+                        defaultValue="Seamus Flannigan"
                         required autoFocus />
                 </fieldset>
-                <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
+                <fieldset className="fieldset--login">
+                    <label className="label--login" htmlFor="inputEmail"> Email address </label>
                     <input ref={email} type="email"
                         name="inputEmail"
                         className="form-control"
                         placeholder="Email address"
-                        value="seamus@gmail.com"
+                        defaultValue="seamus@gmail.com"
                         required />
                 </fieldset>
-                <fieldset>
-                    <label htmlFor="address"> Street Address </label>
+                <fieldset className="fieldset--login">
+                    <label className="label--login" htmlFor="address"> Street Address </label>
                     <input ref={address} type="text"
                         name="address"
                         className="form-control"
                         placeholder="Your address"
-                        value="1000 Universal Court"
+                        defaultValue="1000 Universal Court"
                         required />
                 </fieldset>
-                <fieldset>
-                    <label htmlFor="inputPassword"> Password </label>
+                <fieldset className="fieldset--login">
+                    <label className="label--login" htmlFor="inputPassword"> Password </label>
                     <input ref={password} type="password"
                         id="password"
                         className="form-control"
                         placeholder="Password"
                         required />
                 </fieldset>
-                <fieldset>
-                    <button type="submit">
-                        Sign in
-                    </button>
-                </fieldset>
+                <button type="submit">
+                    Sign in
+                </button>
             </form>
         </main>
     )
 }
- export default withRouter(Login)
+
+export default Login
 ```
 
 ## Requiring User to Login
@@ -156,15 +174,53 @@ Then put the condition in the route. If the user is authenticated, return the co
 ```js
 <Route exact path="/employees" render={
     props => {
-        if (localStorage.getItem("kennel_token") !== null) {
+        if (localStorage.getItem("kennel_customer") !== null) {
             return <EmployeeList {...props} />
-        } else {
-            return <Login />
         }
+        return <Login {...props} />
     }
 } />
 ```
 
-## Protect All Routes
+## Logout Link
+
+> ##### `src/components/nav/NavBar.js`
+
+```jsx
+<li className="navbar__item">
+    <Link className="navbar__link" to="/employees">Employees</Link>
+</li>
+
+{
+    localStorage.getItem("kennel_customer")
+        ? <li className="navbar__item">
+            <Link className="navbar__link"
+                to=""
+                onClick={e => {
+                    e.preventDefault()
+                    localStorage.removeItem("kennel_customer")
+                    props.history.push("/")
+                }}
+            >Logout</Link>
+        </li>
+        : ""
+}
+```
+
+## Allow NavBar to use History
+
+> ##### `src/components/Kennel.js`
+
+```jsx
+export default () => (
+    <>
+        <Route render={props => <NavBar {...props} />} />
+        <Route render={props => <ApplicationViews {...props} />} />
+    </>
+)
+```
+
+## Practice: Protect All Routes
 
 Update your **`ApplicationViews`** component so that user cannot see any view without authenticating first.
+
