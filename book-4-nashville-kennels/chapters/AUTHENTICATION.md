@@ -49,6 +49,7 @@ Here's the process that this code follows.
 
 ```jsx
 import React, { useRef } from "react"
+import { withRouter } from "react-router-dom"
 import "./Login.css"
 
 const Login = props => {
@@ -58,11 +59,11 @@ const Login = props => {
     const address = useRef()
 
     const existingUserCheck = () => {
-        fetch(`http://localhost:5002/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
             .then(_ => _.json())
             .then(user => {
-                if (user) {
-                    return user
+                if (user.length) {
+                    return user[0]
                 }
                 return false
             })
@@ -76,12 +77,11 @@ const Login = props => {
             .then(exists => {
                 if (exists && exists.password === password.current.value) {
                     localStorage.setItem("kennel_customer", exists.id)
-
-                    props.history.push({
-                        pathname: "/locations"
-                    })
+                    props.history.push("/")
+                } else if (exists && exists.password !== password.current.value) {
+                    window.alert("Password does not match")
                 } else if (!exists) {
-                    fetch("http://localhost:5002/customers", {
+                    fetch("http://localhost:8088/customers", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
@@ -97,9 +97,7 @@ const Login = props => {
                         .then(response => {
                             localStorage.setItem("kennel_customer", response.id)
 
-                            props.history.push({
-                                pathname: "/locations"
-                            })
+                            props.history.push("/locations")
                         })
                 }
             })
