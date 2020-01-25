@@ -148,4 +148,4 @@ const chosenAnimalId = props.match.params.animalId
 
 Now when you click on an animal's name in the list view, you should see your new animal detail view.
 
-![image of animal detail view](./images/animal-details.png)
+![image of animal detail view](./images/animal-details.gif)
