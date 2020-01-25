@@ -149,3 +149,13 @@ const chosenAnimalId = props.match.params.animalId
 Now when you click on an animal's name in the list view, you should see your new animal detail view.
 
 ![image of animal detail view](./images/animal-details.gif)
+
+## Practice: Locations
+
+Your next task is to refactor your location components. On your location list, display the location name, the number of animals currently being treated, and the number of employees.
+
+When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being treated, and the names of all employees working there.
+
+> **Tip:** You don't need all of the fancy styling like you see below. Just get the information displayed.
+
+![animation of location list and location details](./images/location-details.gif)
