@@ -143,3 +143,9 @@ Notice the `:animalId` in the `path` attribute? What that does is capture the 1,
 ```js
 const chosenAnimalId = props.match.params.animalId
 ```
+
+## Try it Out
+
+Now when you click on an animal's name in the list view, you should see your new animal detail view.
+
+![image of animal detail view](./images/animal-details.png)
