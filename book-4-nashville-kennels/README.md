@@ -14,7 +14,7 @@
 | 8 | [Hiring Employees](./chapters/FORMS_USEREF.md) | [Employees](./chapters/KK_EMPLOYEES.md) | [Distributing Flowers](./chapters/TR_DISTRIBUTORS.md) |
 | 9 | [Registering Customers](./chapters/AUTHENTICATION.md) | [Rewards Program](./chapters/KK_CUSTOMERS.md) | [Retail Locations](./chapters/TH_RETAILERS.md) |
 | 10 | [Admitting Animals](./chapters/ADMIT_ANIMAL.md) | [Purchase History](./chapters/KK_PURCHASES.md) |   |
-| 11 | [Viewing Individual Animals](./chapters/DYNAMIC_ROUTING.md) | [Customer Report](./chapters/KK_REPORT.md) | [Getting Customers](./chapters/TR_PURCHASING.md) |
+| 11 | [Viewing Individual Animals](./chapters/DYNAMIC_ROUTING.md) | [Customer Report](./chapters/KK_REPORT.md) | [Wedding Planners](./chapters/TR_PURCHASING.md) |
 | 12 | [Release Animals](./chapters/DELETE.md) |  |   |
 | 13 | [Animal Treatment History](./chapters/EDIT.md) | [Customer Profiles](./chapters/KK_PROFILES.md) | [Shopping Cart](./chapters/TR_SHOPPING_CART.md) |
 | 14 | [Employee Turnover](./chapters/DELETE.md) | [Been Caught Stealing](./chapters/KK_DELETE.md) |   |
