@@ -78,7 +78,7 @@ When you hire an employee, you immediately want to assign that employee to a loc
 > ##### `src/components/employee/EmployeeForm.js`
 
 ```js
-import React, { useContext } from "react"
+import React, { useContext, useRef } from "react"
 import { EmployeeContext } from "./EmployeeProvider"
 import { LocationContext } from "../location/LocationProvider"
 import "./Employees.css"
