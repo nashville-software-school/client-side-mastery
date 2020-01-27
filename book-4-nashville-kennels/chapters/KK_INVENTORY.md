@@ -13,7 +13,7 @@ These objects should be in the `productTypes` resource array.
 
 ## Products
 
-Now create as many products as you want to sell at your locations. Each product should have a foreign key to which category it belongs to.
+Now create as many products as you want to sell at your locations. Each product should have a foreign key to which category it belongs to. It should also have a product name, and a price.
 
 Then create a directory for your product components and create a module for your product provider component, your list component, and your individual product component.
 
