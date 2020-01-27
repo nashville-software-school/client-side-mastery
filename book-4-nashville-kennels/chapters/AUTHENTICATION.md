@@ -19,11 +19,32 @@ Here's the process that this code follows.
 
 ## Login Form Component
 
+### Nashville Kennels Logo Dog
+
+First, download the following image to the path specified.
+
+> ##### `src/components/auth/logo.png`
+
+![](./images/logo.png)
+
 ### Styling
+
+Then create the stylesheet for the login component.
 
 > ##### `src/components/auth/Login.css`
 
 ```css
+.h1, h1 {
+    font-size: 2.5rem;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 1rem 0;
+    margin: 0;
+    border: 0;
+}
+
 .form--login {
     display: inline-block;
     margin: 0 auto;
@@ -41,7 +62,20 @@ Here's the process that this code follows.
 }
 
 .form-control {
-    width: 72%;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .container--login {
@@ -50,8 +84,9 @@ Here's the process that this code follows.
 
 .form--login {
     background-position-x: right;
-    /* background-image: url(logo.png); */
+    background-image: url(logo.png);
     z-index: 1;
+    min-height: 25rem;
     min-width: 45rem;
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
