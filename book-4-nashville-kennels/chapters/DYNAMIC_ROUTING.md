@@ -40,7 +40,7 @@ export default ({ animalp }) => (
 
 Since the specific details of an animals are no longer being displayed in the list view, you can remove the import of the customer and location data.
 
-> ##### `/src/components/animal/AnimalLlist.js`
+> ##### `/src/components/animal/AnimalList.js`
 
 ```js
 // Remove these
@@ -50,7 +50,7 @@ import { CustomerContext } from "../customer/CustomerProvider"
 
 Then remove the context hooks to get the data arrays.
 
-> ##### `/src/components/animal/AnimalLlist.js`
+> ##### `/src/components/animal/AnimalList.js`
 
 ```js
 // Remove these
@@ -60,7 +60,7 @@ const { customers } = useContext(CustomerContext)
 
 Remove the code that joined the data.
 
-> ##### `/src/components/animal/AnimalLlist.js`
+> ##### `/src/components/animal/AnimalList.js`
 
 ```js
 // Remove these
@@ -70,7 +70,7 @@ const clinic = locations.find(l => l.id === animal.locationId)
 
 And remove the properties that you were sending to the **`Animal`** component. It should look like this now.
 
-> ##### `/src/components/animal/AnimalLlist.js`
+> ##### `/src/components/animal/AnimalList.js`
 
 ```js
 animals.map(animal => {
