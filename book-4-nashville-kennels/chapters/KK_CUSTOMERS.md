@@ -2,6 +2,11 @@
 
 In this chapter, you are going to create a login form where customers can provide their authentication and personal information so that they can make purchases online.
 
-* Create an `components/auth/Login.js` that is nearly identical to the one you made for Kennel. The only change is that the local storage key to create should be `kandy_customer` which will store the user's primary key.
-* Users can always see the list of locations.
-* Update **`ApplicationViews`** so that users can only see the list of products if they have authenticated.
+Utilize the same components as you did in Kennels to implement a login screen in Kandy Korner.
+
+* `src/components/auth/Login.js`
+* `src/components/auth/Register.js`
+
+Use `kandy_customer` as the local storage item for tracking authentication.
+
+Then refactor **`KandyKorner`** to implement the login screen.
