@@ -21,6 +21,8 @@ Just get them all listed on the page first, knowing that there will be duplicate
 
 ## Challenge: Aggregating Order
 
+> **Note:** Only attempt challenges once all other features are complete. These are optional. Moving on to the next chapter and skipping this is perfectly fine.
+
 You can accept this challenge if you like.
 
 Instead of displaying each individual Customer <-> Candy relationship, you should aggregate the candies together. For example, if the user purchased 2 orange sodas, 8 chocolate bars, and 3 root beer barrels, you would currently see.
@@ -50,6 +52,8 @@ Refactor the order view to display this instead.
 | Root Beer Barrel | 3 | 0.24 |
 
 ## Advanced Challenge: Total Cost
+
+> **Note:** Only attempt challenges once all other features are complete. These are optional. Moving on to the next chapter and skipping this is perfectly fine.
 
 Refactor the order view to display the total line item cost instead of the price per unit.
 
