@@ -17,10 +17,8 @@
 | 11 | [Viewing Individual Animals](./chapters/DYNAMIC_ROUTING.md) | [Customer Report](./chapters/KK_REPORT.md) |  |
 | 12 | [Release Animals](./chapters/DELETE.md) |  |   |
 | 13 | [Animal Treatment History](./chapters/EDIT.md) |  |  |
-| 14 | [Employee Turnover](./chapters/QUITTING.md) | [Been Caught Stealing](./chapters/KK_DELETE.md) |   |
-| 15 | [Employees &amp; Animals at Facility](./chapters/FACILITY_PROVIDERS.md) |  | [Wedding Planners](./chapters/TR_PURCHASING.md) |
-| 16 | [Animal Owners](./chapters/ANIMAL_PROVIDERS.md) | [Products at Store](./chapters/KK_STORE_PROVIDERS.md) | [Shopping Cart](./chapters/TR_SHOPPING_CART.md) |
-| 17 | [Animal Caretakers](./chapters/EMPLOYEE_PROVIDERS.md) | [Popular Candy](./chapters/KK_CANDY_PROVIDERS.md) |   |
+| 14 | [Employee Turnover](./chapters/QUITTING.md) | [Been Caught Stealing](./chapters/KK_DELETE.md) | [Wedding Planners](./chapters/TR_PURCHASING.md) |
+| 15 | [Employees &amp; Animals at Facility](./chapters/FACILITY_PROVIDERS.md) | [Products at Store](./chapters/KK_STORE_PROVIDERS.md) | [Shopping Cart](./chapters/TR_SHOPPING_CART.md) |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Reactive Nutshell_**](./chapters/REACT_NUTSHELL.md) |  |   |
 | 😱 | Capstone time! |  |   |
 
