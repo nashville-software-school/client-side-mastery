@@ -1,16 +1,18 @@
-# Bludgeons &amp; Flagons
+# Truncheons &amp; Flagons
+
+> **Instructor Note:** This application is complex, but once complete, provides people with a strong foundation in how modern component-based applications work. It is **strongly encouraged** that you work on this application with your teammates and not alone.
 
 ## The Making of the Most Popular Tavern Game of the Middle Ages
 
 ![](./images/tattered-flagon.jpeg)
 
-In the roaring 1130's, peasants and serfs across Europe and Western Asia popularized a tavern game known as Bludgeons & Flagons. Scholars believe that the game originated in the Tattered Flagon tavern located in Southern Aragon, near the city of Jara.
+In the roaring 1130's, peasants and serfs across Europe and Western Asia popularized a tavern game known as Truncheon & Flagons. Scholars believe that the game originated in the Tattered Flagon tavern located in Southern Aragon, near the city of Jara.
 
 Since it was not an official game of the royalty or merchant classes at the time, writings about it are rare and often vague. However, what modern anthropologists have been able to piece together paint a picture of an odd, fun, and sometimes violent game - depending on how drunk the contestants became.
 
 The rules of the game were fairly simple, yet allowed for some subtlety.
 
-1. There are three teams in a game of Bludgeons & Flagons.
+1. There are three teams in a game of Truncheon & Flagons.
     * The Knights
     * The Fairies
     * The Goblins
@@ -20,11 +22,11 @@ The rules of the game were fairly simple, yet allowed for some subtlety.
 1. The Knights have to throw a small wooden ball into one of the flagons. Each Knight has their own ball.
 1. Each Knight that successfully throws a ball into a flagon earns 2 points for the Knights.
 1. Each Knight that successfully throws a ball that lands on the table earns 1 point for the Knights.
-1. The Goblins guard the flagons by swinging small bludgeons to knock the ball out of the air before it landed in a flagon or on the table.
+1. The Goblins guard the flagons by swinging small truncheons to knock the ball out of the air before it landed in a flagon or on the table.
 1. Each Goblin that successfully knocks a thrown wooden ball out of the air earns 1 point for the Goblins.
 1. The Fairies can distract the Knights or the Goblins.
 1. If a Fairy distract a Knight enough that a ball is dropped, or thrown out of the playing area, the Fairies receive 1 point.
-1. If a Fairy distracts a Goblin enough so that a thrown ball lands anywhere in the playing area _(on the table or in a flagon)_ without any defensive bludgeons swings, the Fairies receive 1 point.
+1. If a Fairy distracts a Goblin enough so that a thrown ball lands anywhere in the playing area _(on the table or in a flagon)_ without any defensive truncheon swings, the Fairies receive 1 point.
 1. There are three rounds so that each team can play each role.
 1. At the end of round three, whichever team has the most points earns the honor of drinking the contents of the six flagons.
 
@@ -50,12 +52,21 @@ The learning objectives of this project, by the end of the client side course, a
 1. You need to have a form where you can enter in a contestant name and assign the player to a team.
 1. You need to display the scores of each team in a current game of Bludgeons & Flagons.
 
-| Team | Current Points |
-|--|--|
-| Green Wyverns | 5 |
-| French Flagons | 5 |
-| Green Wyverns | 5 |
-1. You need
+    | Team | Current Points |
+    |--|--|
+    | Green Wyverns | 5 |
+    | French Flagons | 6 |
+    | Black Knights | 3 |
+
+1. You need a component that shows the cumulative of all points for each team for all games that they have played.
+
+    | Team | Current Points |
+    |--|--|
+    | Green Wyverns | 51 |
+    | French Flagons | 35 |
+    | Black Knights | 42 |
+
+
 
 Given those feature requests, what you need to do in this chapter is the following tasks.
 

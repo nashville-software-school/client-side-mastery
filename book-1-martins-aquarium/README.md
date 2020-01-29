@@ -2,7 +2,7 @@
 
 ## Chapters
 
-| #  | Aquarium 🐠 | Daily Journal 📔 | Bludgeons &amp; Flagons 🏏 🍺 |
+| #  | Aquarium 🐠 | Daily Journal 📔 | Truncheons &amp; Flagons 🏏 🍺 |
 |--|--|--|--|
 | 🍎  | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) |       |      |
 | 💻  | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |  |  |
