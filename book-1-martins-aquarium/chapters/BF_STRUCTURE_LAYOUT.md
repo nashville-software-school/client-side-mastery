@@ -44,10 +44,21 @@ The learning objectives of this project, by the end of the client side course, a
 * Modular CSS
 * Modular JavaScript
 
+## Application Features
+
+1. You need to have a form where you can enter in a team name. For example, _The Green Wyverns_ or _French Flagons_.
+1. You need to have a form where you can enter in a contestant name and assign the player to a team.
+1. You need to display the scores of each team in a current game of Bludgeons & Flagons.
+
+| Team | Current Points |
+|--|--|
+| Green Wyverns | 5 |
+| French Flagons | 5 |
+| Green Wyverns | 5 |
+1. You need
 
 Given those feature requests, what you need to do in this chapter is the following tasks.
 
-1. Visit https://api.nasa.gov/ and get yourself an API key so you can access their data.
 1. Identify the components that need to be rendered in this application.
 1. Identify the structure and relationship of the components _(e.g. a Photo component is rendered as a child of the MarsDay component, etc...)_
 1. Decide on a layout for your Daily Mars application. Draw a simple wireframe that shows where each component will be rendered.
