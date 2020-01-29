@@ -2,14 +2,23 @@
 
 ## The Making of the Most Popular Tavern Game of the Middle Ages
 
-You are going to be building an application that uses two [NASA APIs](https://api.nasa.gov/).
+![](./images/tattered-flagon.jpeg)
 
-1. Mars Rover Photos API
-1. Astronomy Picture of the Day API
+In the roaring 1130's, peasants and serfs across Europe and Western Asia popularized a tavern game known as Bludgeons & Flagons. Scholars believe that the game originated in the Tattered Flagon tavern located in Southern Aragon, near the city of Jara.
 
-Your client is [Debra Fischer](https://www.radcliffe.harvard.edu/people/debra-ann-fischer), a principal investigator with the N2K Consortium searching for exoplanets. She was part of the team to discover the first known multiple-planet system.
+Since it was not an official game of the royalty or merchant classes at the time, writings about it are rare and often vague. However, what modern anthropologists have been able to piece together paint a picture of an odd, fun, and sometimes violent game - depending on how drunk the contestants became.
 
-Debra is starting an amateur atronomers club and she wants an application that the kids can use to explore what was going on in the Solar System on different dates.
+The rules of the game were fairly simple, yet allowed for some subtlety.
+
+1. There were three teams in a game of Bludgeons & Flagons.
+    * The Knights
+    * The Fairies
+    * The Goblins
+1. Each team had three players.
+1. Five flagons of ale, mead, or wine would be arranged on a table. Four flagons making the corners of a square, and the fifth being placed in the middle of the square. The table should be in an area of a tavern where the teams had some ability to move around.
+
+
+
 
 ## Learning Objectives
 
@@ -23,16 +32,6 @@ The learning objectives of this project, by the end of the client side course, a
 * Modular JavaScript
 * Identifying and building components
 
-Here are the features you will be building over the next few months in this application. It will allow Debra to...
-
-* View Mars probe photos on a specific date.
-* Whatever the most popular atronomy photos was that day.
-* Favorite individual pictures. What will be saved about that picture is as follows:
-    * Image URL
-    * If it was from a probe, the probe name
-    * If it was from a probe, the probe camera
-* Remove photos from favorite list.
-* Filter photos by specific cameras. Each probe has a different set of cameras.
 
 Given those feature requests, what you need to do in this chapter is the following tasks.
 
