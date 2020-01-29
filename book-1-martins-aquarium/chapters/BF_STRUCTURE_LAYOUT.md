@@ -28,19 +28,21 @@ The rules of the game were fairly simple, yet allowed for some subtlety.
 1. There are three rounds so that each team can play each role.
 1. At the end of round three, whichever team has the most points earns the honor of drinking the contents of the six flagons.
 
+![](./images/bludgeon.jpg)
+
 
 
 ## Learning Objectives
 
 The learning objectives of this project, by the end of the client side course, are the following.
 
-* Using `fetch` to retrieve data from 3rd-party providers
-* Event listeners
+* Identifying and building components
+* Using `fetch` to store and retrieve data from a persistent data store.
+* Handling browser-generated and custom events
 * Understanding asynchronous programming
 * Collecting user input and acting on it
 * Modular CSS
 * Modular JavaScript
-* Identifying and building components
 
 
 Given those feature requests, what you need to do in this chapter is the following tasks.
