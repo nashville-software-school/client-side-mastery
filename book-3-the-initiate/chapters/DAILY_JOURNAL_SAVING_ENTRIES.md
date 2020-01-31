@@ -54,7 +54,7 @@ fetch("url", { // Replace "url" with your API's URL
 post.then(get).then(render)
 ```
 
-##Challenge: Input Validation
+## Challenge: Input Validation
 1. No characters other than letters, numbers, `()`, `{}`, `:`, and `;`
 
 
