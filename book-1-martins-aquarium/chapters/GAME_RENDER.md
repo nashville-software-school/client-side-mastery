@@ -1,4 +1,4 @@
-# Rendering the Data
+# Displaying Game Data
 
 In this chapter, you are going to render the data to the browser DOM. You are going to start simple. Each collection of data will be converted into HTML, and just listed with the `<ul>` element.
 
