@@ -51,29 +51,36 @@ The learning objectives of this project, by the end of the client side course, a
 1. You need to have a form where you can enter in a team name. For example, _The Green Wyverns_ or _French Flagons_.
 1. You need to have a form where you can enter in a contestant name and assign the player to a team.
 1. You need to display the scores of each team in a current game of Bludgeons & Flagons.
-
     | Team | Current Points |
     |--|--|
     | Green Wyverns | 5 |
     | French Flagons | 6 |
     | Black Knights | 3 |
-
 1. You need a component that shows the cumulative of all points for each team for all games that they have played.
-
     | Team | Current Points |
     |--|--|
     | Green Wyverns | 51 |
     | French Flagons | 35 |
     | Black Knights | 42 |
+1. You need a component that is the main game scoring area. Requirements for this component are below.
 
+## Game Play
 
+* When the application first renders, there should be a button labeled _"Start Game"_ in the game scoring area.
+* When the user clicks on the _"Start Game"_ button, the user should be presented with three dropdowns. Each dropdown should list all teams.
+* When the user has selected three _**distinct**_ teams to play a game of Truncheons & Flagons, the user should be presented with a view to enter in the scores. It should have three input fields. The label for each field should be the name of a team. At the bottom on the form, there must be a button labeled "Save Round Score".
+* The user must be able to enter in the scores for all three rounds. When the user enters in scores for all three teams for round one and clicks the "Save Round Score" button, the form should be presented again to enter in the scores for round two.
+* Each time a round is complete, the current total score for each team should be displayed.
+* Once the scores have been entered for all three rounds, the _"Start Game"_ button should appear again and the leaderboard should have the scores for each team updated with their scores for this game added to their cumulative score.
+
+## Component Design
 
 Given those feature requests, what you need to do in this chapter is the following tasks.
 
 1. Identify the components that need to be rendered in this application.
-1. Identify the structure and relationship of the components _(e.g. a Photo component is rendered as a child of the MarsDay component, etc...)_
-1. Decide on a layout for your Daily Mars application. Draw a simple wireframe that shows where each component will be rendered.
+1. Identify the structure and relationship of the components _(e.g. a **`TeamForm`** component is rendered as a child of the **`Game`** component, etc...)_
+1. Decide on a layout for your Truncheon &amp; Flagons application. Draw a simple wireframe that shows where each component will be rendered.
 1. Come see a member of the instruction team to review your component layout.
-1. After discussing your layout, you can then create a new project directory of `~/workspace/eyes-on-the-sky`, and start building the HTML and CSS of your components and layout.
+1. After discussing your layout, you can then create a new project directory of `~/workspace/flagons`, and start building the HTML and CSS of your components and layout.
 
 > **Reminder:** Remember to create a CSS file for each component, and use the `@import` statement in `main.css` to include each one. Also consider what sub-directories you will need under the `scripts` directory, if any. Discuss with your instructor.

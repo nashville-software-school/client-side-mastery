@@ -35,9 +35,9 @@ Since each of these components have a different responsibility, then each one mu
 
 ```js
 /**
- *  FishComponent which renders individual fish objects as HTML
+ *  Fish which renders individual fish objects as HTML
  */
-const FishComponent = (fish) => {
+const Fish = (fish) => {
     return `
         <div class="fish">
             <div>
@@ -58,7 +58,7 @@ const FishComponent = (fish) => {
     `
 }
 
-export default FishComponent
+export default Fish
 ```
 
 ### Fish List Component
@@ -67,12 +67,12 @@ export default FishComponent
 
 ```js
 /**
- *  FishListComponent which renders individual fish objects as HTML
+ *  FishList which renders individual fish objects as HTML
  */
 
 // Import `useFish` from the data provider module
 
-const FishListComponent = () => {
+const FishList = () => {
 
     // Get a reference to the `<article class="content">` element
     const contentElement = document.querySelector("insert selector here")
@@ -86,7 +86,7 @@ const FishListComponent = () => {
     `
 }
 
-export default FishListComponent
+export default FishList
 ```
 
 ## Rendering the List in Main Module
@@ -95,11 +95,11 @@ Since we want the fish to be immediately rendered when the page loads, then that
 
 ```js
 import initializeDetailButtonEvents from './dialogs.js'
-// Import the FishListComponent here
+// Import the FishList here
 
 
 // initializeDetailButtonEvents()
-FishListComponent()
+FishList()
 ```
 
 Refresh your browser again and you should see the following message in the middle of the screen.
@@ -108,24 +108,24 @@ Refresh your browser again and you should see the following message in the middl
 
 Hooray!! Your fish list component got rendered to the browser. Next is to render all the fish.
 
-You need the `FishComponent` component function to do that. That function is in the `Fish.js` module, so you need to import it from there.
+You need the `Fish` component function to do that. That function is in the `Fish.js` module, so you need to import it from there.
 
 > **`scripts/FishList.js`**
 
 ```js
-import FishComponent from "./Fish.js"
+import Fish from "./Fish.js"
 ```
 
 Now you can write a `for..of` loop to generate all of the individual fish HTML representations, and keep appending the HTML to a variable. After the loop is done, you have one, long string containing all the HTML.
 
 ```js
 /**
- *   FishListComponent which renders individual fish objects as HTML
+ *   FishList which renders individual fish objects as HTML
  */
 import { useFish } from "./FishDataProvider.js"
-import FishComponent from "./Fish.js"
+import Fish from "./Fish.js"
 
-const FishListComponent = () => {
+const FishList = () => {
 
     const contentElement = document.querySelector(".content")
     const fishes = useFish()
@@ -134,7 +134,7 @@ const FishListComponent = () => {
     let fishHTMLRepresentations = ""
     for (const fish of fishes) {
         /*
-            Invoke the FishComponent component function
+            Invoke the Fish component function
             and pass the current fish object as an argument.
             Each time, add the return value to the
             fishHTMLRepresentations variable with `+=`
@@ -149,7 +149,7 @@ const FishListComponent = () => {
     `
 }
 
-export default FishListComponent
+export default FishList
 ```
 
 Now refresh your browser again and all of your fish should be back.
@@ -179,13 +179,13 @@ Understanding how arguments and parameters work with functions - especially when
 First, in the following line of code in the **`FishList`** module...
 
 ```js
-fishHTMLRepresentations += FishComponent(fish)
+fishHTMLRepresentations += Fish(fish)
 ```
 
-Remove the fish argument that is being passed to the **`FishComponent`** component function.
+Remove the fish argument that is being passed to the **`Fish`** component function.
 
 ```js
-fishHTMLRepresentations += FishComponent()
+fishHTMLRepresentations += Fish()
 ```
 
 Refresh your browser. Make sure your developer console is open and you will see the following exception.
@@ -203,13 +203,13 @@ The key term is `'image' of undefined`. Whenever you see an exception like that,
 Why is it undefined? It's because you removed the argument that you were passing in when you invoked the function. This component function defines a parameter.
 
 ```js
-const FishComponent = (fish) => {
+const Fish = (fish) => {
 ```
 
 Since you invoked this function without a corresponding argument...
 
 ```js
-fishHTMLRepresentations += FishComponent()
+fishHTMLRepresentations += Fish()
 ```
 
 Then the parameter never gets assigned a value to reference. Therefore, it's undefined, and you can't access an `.image` property of something that is undefined.
