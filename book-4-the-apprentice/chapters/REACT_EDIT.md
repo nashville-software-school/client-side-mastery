@@ -149,7 +149,7 @@ In the **`<AnimalCard>`** component, you will add a new button: `Edit`. When the
 ![edit animal button](./images/animals-with-edit-button.png)
 
 
-At this point, view an AnimalDetail. You should see the `Edit` button. Test it out.
+At this point, view an AnimalCard. You should see the `Edit` button. Test it out.
 
 Oh no, **Error**. `TypeError: Cannot read property 'push' of undefined`. What is that? The router props need to be passed through the **`<AnimalList>`** to the **`<AnimalCard>`**  component. We can do that with `{...props}`. The spread operator copies own enumerable properties from a provided object onto a new object.
 
@@ -196,5 +196,3 @@ update(editedAnimal) {
 3. In the edit form components, fetch the data of the employee, location, or owner within `componentDidMount` and pre-fill the forms.
 3. Add the appropriate routes to `ApplicationViews` to render the edit form when the user clicks the edit button.
 4. Update **`<EmployeeManager>`**, **`<LocationManager>`** and **`<OwnerManager>`** with an `update` method to modify existing objects in the API.
-
-

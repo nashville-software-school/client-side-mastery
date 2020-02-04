@@ -40,7 +40,7 @@ render(){
 
 **What is the key?** Each child in a list should have a unique "key" prop. This is how React keeps track of re-rendering only the things that have changed.
 
-**What is happening?** Using the array method `map`, for each item/animal in the array animals, return an **`<AnimalCard />`** with a refernce to the single item/animal. This reference is now a property on the **`<AnimalCard />`** and is referred to as `props`.
+**What is happening?** Using the array method `map`, for each item/animal in the array animals, return an **`<AnimalCard />`** with a reference to the single item/animal. This reference is now a property on the **`<AnimalCard />`** and is referred to as `props`.
 
 Because **`<AnimalCard />`** is included in the render method of **`<AnimalList />`**, it is a  _child component_ of the **`<AnimalList />`** component.
 
@@ -65,8 +65,11 @@ render() {
 
 ```
 
-Add CSS. Note: you will import a single CSS file directly into this component. Good practice would be to only import CSS that applies to the JSX elements of this component.
+Create a CSS file for Animal:
 
+```sh
+touch components/animal/Animal.css
+```
 
 > components/animal/Animal.css
 
@@ -120,9 +123,11 @@ Add CSS. Note: you will import a single CSS file directly into this component. G
 }
 ```
 
+Note: you will import this CSS file directly into the AnimalCard component. Good practice would be to only import CSS that applies to the JSX elements of this component.
+
 ## Passing State to a Child Component
 
-![](./images/state-propogation-visual.png)
+![](./images/state-propagation-visual.png)
 
 
 
@@ -146,7 +151,3 @@ To change `state`, you _must_ use `this.setState()`, and that method, in turn, i
 ## Practice Exercise - Displaying Data
 
 Update your application so that each section (locations, employees, owners) displays a list of cards with the API data.
-
-
-
-

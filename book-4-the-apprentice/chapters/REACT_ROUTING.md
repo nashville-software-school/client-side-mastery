@@ -185,7 +185,7 @@ The `<Link/>` and the `<Route/>` JSX elements are complementary to each other. I
 As mentioned above, **`Kennel`** is a container component. It renders no HTML itself. It simply *contains* other components that are responsible for the presentation and behavior of the application. In the case of our Kennel, it contains two different kinds of components.
 
 1. **`Navbar`**: This is a _Presentation Component_. Directly expresses HTML.
-2. **`ApplicationViews`**: This is a _Controller Component_. Its only responsibility to to control the behavior of the system and maps URLs to components.
+2. **`ApplicationViews`**: This is a _Controller Component_. Its only responsibility is to control the behavior of the system and maps URLs to components.
 
 > Kennel.js
 
@@ -244,4 +244,3 @@ Once all of this is in place, you will have the base of a single page applicatio
 
 1. Create links in your navigation bar for `/locations`, `/employees`, and `/owners` paths.
 1. Have each route render the respective component.
-
