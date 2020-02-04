@@ -130,7 +130,7 @@ This component can be included as a child of the **`Kennel`** component. Look at
 Update your **`Kennel`** component. Now when the **`Kennel`** component is rendered it will render the **`AnimalCard`** component. We can say that the Kennel component is a parent of the AnimalCard component. (Starting Kennel.css is below.)
 
 ```jsx
-import React, { Component } from "react";
+import React from "react";
 import AnimalCard from "./animal/AnimalCard";
 import "./Kennel.css";
 

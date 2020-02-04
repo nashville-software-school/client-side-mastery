@@ -76,12 +76,41 @@ export default {
 
 Our `AnimalCard` does a great job of rendering a single animal. So, let's make a new file that will initiate the AnimalManager `getAll()` call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
 
-When the data is returned, we can hold on to it by placing it in the component's `state`.
+When the data is returned, we can hold on to it by placing it in the component's `state`. _More on `state` later._
+
+## Fetching Data from a Component
+
+Because interacting with an external API in a React application is a common need for most apps, the creators of React have given us a tool for just that purpose.
+
+### useEffect()
+
+`useEffect` is a function provided by React that gives us a place from which to access external data and resources (such as an API) from our component.
+
+Because `useEffect` is provided by the React library, we must import it.
+```js
+import React, { useEffect } from 'react';
+```
+
+`useEffect` is a member of a family of tools that React broadly calls _"hooks"_. The `useEffect` hook accepts two arguments: a function and an array.
+
 
 ## What is State?
-A component's state is an object that can be modified over time in response to user actions, network responses, and anything. State determines how a component renders and behaves.
 
-State is initialized by defining `state` at the top of a class definition and then it is automatically included in the construction of the component. Once the data is returned from the AnimalManager, we invoke a React method `setState()` which allows us to update/hold the values and when state is updated, React automatically invokes the render method, again.
+A component's state is mechanism for storing data that modified over time in response to user actions, network responses, and anything. State determines how a component renders and behaves.
+
+State is initialized by calling a function named `useState`. This function is supplied by React and must be imported.
+
+```js
+import React, { useState } from 'react';
+```
+
+
+
+```js
+const [animals, setAnimals] = useState([]);
+```
+
+`useState` should be called at the top of the component's definition and then it is automatically included in the construction of the component. Once the data is returned from the AnimalManager, we invoke a React method `setState()` which allows us to update/hold the values and when state is updated, React automatically invokes the render method, again.
 
 Create the AnimalList file.
 
