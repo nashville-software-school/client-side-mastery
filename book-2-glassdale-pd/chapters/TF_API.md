@@ -56,3 +56,7 @@ json-server -p 8088 -w database.json
 ```
 
 > **Explanation:** `json-server` starts the service to make the data available over HTTP. The `-p` flag lets you specify the port on which the service will listen. In this case, your API will respond to requests on `http://localhost:8088`. The `-w` flag tells json-server to reload the database whenever a change is made. It is short for "watch".
+
+You should see the following output in your terminal.
+
+![](./images/tf-api-start.png)
