@@ -16,7 +16,7 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 12 - [Daily Journal - Part 11](./chapters/DAILY_JOURNAL_SEARCHING.md)
 * Chapter 15 - [CSS Variables](./chapters/CSS_VARIABLES.md)
 * Chapter 16 - [Joining Related Data](./chapters/JS_JOINING_DATA.md)
-* Chapter 17 - [Daily Journal - Part 13](./chapters/DAILY_JOURNAL_MOOD_TABLE.md)
+* Chapter 17 - [Daily Journal - Part 12](./chapters/DAILY_JOURNAL_MOOD_TABLE.md)
 
 > ## Sprint 3 - Nutshell
 
