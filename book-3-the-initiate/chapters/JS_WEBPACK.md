@@ -6,7 +6,7 @@ Webpack is a task runner and a module bundler. It originally started as a module
 
 Visit the [Webpack documentation](https://webpack.js.org/concepts/) if you want to explore more.
 
-![visualization of how javascript modules depdendencies are resolved and bundled](./images/module-bundling.png)
+![visualization of how javascript modules dependencies are resolved and bundled](./images/module-bundling.png)
 
 ## Quick Start
 
@@ -67,7 +67,7 @@ You are going to create a new project that uses Webpack, which will do the follo
 1. Check your JavaScript syntax and alert you of any problems.
 1. Convert your ES6 Javascript to ES5.
 1. Bundle all your Javascript files
-1. Put your `index.html` and CSS directory in a `dist/` directory ( this direcotry will be explained later )
+1. Put your `index.html` and CSS directory in a `dist/` directory ( this directory will be explained later )
 1. Start up a web server for your application.
 1. Start `json-server` for you.
 
@@ -127,7 +127,7 @@ You will also notice the presence of an additional file called `package-lock.jso
 
 Linting is the process of checking the code for any potential errors. We can provide a set of rules that specify how our code should be written. The linter will check to make sure the code follows these rules. We are using ESLint for linting.
 
-To use ESLint we will need two different configuration files. In your root directory, create two files: `.eslintrc` and `.eslintignore`. Both of these will be hidden files, as indicatd by the `.` in the front of the filenames. The first will specify the rules our linter will follow to check for syntax errors in the code. The second will specify which files or directories to skip when checking for errors.
+To use ESLint we will need two different configuration files. In your root directory, create two files: `.eslintrc` and `.eslintignore`. Both of these will be hidden files, as indicated by the `.` in the front of the filenames. The first will specify the rules our linter will follow to check for syntax errors in the code. The second will specify which files or directories to skip when checking for errors.
 
 ##### .eslintrc
 
