@@ -45,10 +45,21 @@ Assume that you have a list of people's full names in an array.
 const names = ['Caitlin Stein', 'Ryan Tanay', 'Leah Hoefling', 'Emily Lemmon', 'Bryan Nilson', 'Jenna Solis', 'Meg Ducharme', 'Madi Peper', 'Kristen Norris']
 ```
 
-That's the raw data that should _**always remain unchanged**_. However, you want to display only a list of last names in a dropdown list in your user interface, you would need to build a new array containing those values. You can use `.map()` for that.
+That's the raw data that should _**always remain unchanged**_. Since you want to display only a list of last names in a dropdown list in your user interface, you would need to build a brand, new array containing those values. You can use `.map()` for that.
 
 ```js
-const lastNames = names.map(name => name.split(" ")[1])
+/*
+    The .split() method creates an array of words from a single
+    string. It splits the single string into multiple strings
+    based on the parameter you send it. It uses that character
+    to do the splitting.
+*/
+const lastNames = names.map(
+    fullName => {
+        [firstName, lastName] = fullName.split(" ")
+        return lastName
+    }
+)
 
 console.log(lastNames)
 // ['Stein', 'Tanay', 'Hoefling', 'Lemmon', 'Nilson', 'Solis', 'Ducharme', 'Peper', 'Norris']
