@@ -2,12 +2,6 @@
 
 When working on applications that is composed of many component that may share common styles, you can now use variables and modules to break up your CSS into more manageable pieces.
 
-Also, it has a benefit that Webpack has. When we bundle our JavaScript, then our HTML file only specifies a single JavaScript file.
-
-```html
-<script src="bundle.js"></script>
-```
-
 By using CSS modules, we only need to include a single CSS file, regardless of how many CSS files actually exist for our project.
 
 ```html
