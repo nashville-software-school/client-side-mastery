@@ -132,7 +132,7 @@ Remember that hidden input field you added to your HTML? Well, we can use that t
 saveButton.addEventListener("click", event => {
     const hiddenRecipeId = document.querySelector("#recipeId")
 
-    if (hiddenRecipeId.value <> "") {
+    if (hiddenRecipeId.value !== "") {
         editRecipe(recipeId)
     } else {
         // Save functionality goes here

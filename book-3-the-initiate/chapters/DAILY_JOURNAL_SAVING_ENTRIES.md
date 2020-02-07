@@ -17,8 +17,7 @@ In your main JavaScript module (`journal.js`) add a click event listener to the 
 
 ### Basic Input Validation
 
-1. Using required attribute to ensure no blank entries
-1. No characters other than letters, numbers, `()`, `{}`, `:`, and `;`
+1. Use a conditional to ensure no blank entries
 
 ## Journal Entry Factory Function
 
@@ -54,6 +53,10 @@ fetch("url", { // Replace "url" with your API's URL
 ```js
 post.then(get).then(render)
 ```
+
+## Challenge: Input Validation
+1. No characters other than letters, numbers, `()`, `{}`, `:`, and `;`
+
 
 ## Challenge: Advanced Form Validation
 

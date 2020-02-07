@@ -277,7 +277,7 @@ If you want to display all of the animals that are currently being boarded, you 
 ```js
 const boardedAnimals = kennel.currentAnimals
 
-for (let i = 0; i < boardedAnimals.length: i++) {
+for (let i = 0; i < boardedAnimals.length; i++) {
     console.log(boardedAnimals[i])
 }
 
@@ -365,7 +365,7 @@ Paul McCartney was in the Beatles from 1960 to 1970. He was born in 1942. He con
 1. Create a file named `github_data.js`
 1. Copy the contents of [github_data.js](./github_data.js) here in the course to your local file.
 
-Your task it to use your knowledge of accessing property values and array indices to output the commit message for the push event with an id of `8030403992`.
+Your task is to use your knowledge of accessing property values and array indices to output the commit message for the push event with an id of `8030403992`.
 
 ```js
 // Start with this

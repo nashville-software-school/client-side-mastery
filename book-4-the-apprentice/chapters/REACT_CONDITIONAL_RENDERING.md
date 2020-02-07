@@ -103,7 +103,7 @@ class ApplicationViews extends Component {
 
     // Check if credentials are in local storage
     //returns true/false
-    isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+    isAuthenticated = () => localStorage.getItem("credentials") !== null
 
     ...
 }

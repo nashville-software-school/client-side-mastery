@@ -221,7 +221,7 @@ If you want to use what's being exported from another module in your current mod
 
 import libraryMembers from "./libraryMembers.js"
 
-let booksRose = anotherFile.getCheckedOutBooks("Rose","Thorne");
+let booksRose = libraryMembers.getCheckedOutBooks("Rose","Thorne");
 console.log("Rose's Books: ", booksRose);
 
 libraryMembers.memberCheckOutBook("Rose","Thorne", "The Little Prince");

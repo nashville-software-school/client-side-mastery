@@ -122,7 +122,8 @@ The following code snippets should look familiar.
 Get all of the animals from the API:
 
 ```js
-    AnimalManager.getAll(animalResults => {
+    AnimalManager.getAll()
+    .then(animalResults => {
         console.log("animals", animalResults);
     })
 ```
@@ -158,9 +159,9 @@ Let's build the **`<AnimalList >`** component.
         console.log("ANIMAL LIST: ComponentDidMount");
         //getAll from AnimalManager and hang on to that data; put it in state
         AnimalManager.getAll()
-        .then((animals) => {
+        .then((animalResults) => {
             this.setState({
-                animals: animals
+                animals: animalResults
             })
         })
     }
@@ -185,6 +186,29 @@ Modify `ApplicationViews.js` route for animals to load the **`<AnimalList />`** 
 
 Also, update the import statement. You will need the `AnimalList` instead of the `AnimalCard`.
 
+
+```js
+import AnimalList from './animal/AnimalList'
+
+class ApplicationViews extends Component {
+
+  render() {
+    return (
+
+    ...
+
+        <Route path="/animals" render={(props) => {
+          return <AnimalList />
+        }} />
+
+    ...
+
+    )
+  }
+}
+
+export default ApplicationViews
+```
 
 Run the code. We have 3 cards displaying (and an error message. We will fix the error and display the correct data in the next chapter.). Take a look at the console. This is the order of the code running:
 
@@ -224,10 +248,5 @@ The `componentDidMount()` lifecycle hook runs after the component output has bee
 
 **Note**
 * Owners should have the `id`, `phoneNumber`, and `name` properties.
-* Animals can have multiple owners.
 
 ![](./images/eB9CCcrUHy.gif)
-
-
-
-
