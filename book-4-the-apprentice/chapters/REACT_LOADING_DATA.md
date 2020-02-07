@@ -51,7 +51,31 @@ As we have done before, let's create a module for database calls.
 ## Setup
 
 1. Create a `src/modules` directory
-2. In that directory, create a file named `AnimalManager.js`
+1. In that directory, create a file named `AnimalManager.js`
+1. Create a new component in a file named `src/components/animal/AnimalList.js`
+1. For now the animal list should look like this:
+
+    ```jsx
+    import React from 'react';
+
+    const AnimalList = () => {
+        return (
+            <div className="container-cards">
+            We'll put some animals here eventually...
+            </div>
+        );
+    };
+
+    export default AnimalList
+    ```
+
+1. Update the `ApplicationViews` component so that the route now refers to the `AnimalList` instead of the `AnimalCard`. Don't forget to import the `AnimalList` component
+
+    ```jsx
+        <Route path="/animals" render={(props) => {
+          return <AnimalList />
+        }} />
+    ```
 
 ## Single Responsibility Principle
 
@@ -74,7 +98,7 @@ export default {
 }
 ```
 
-Our `AnimalCard` does a great job of rendering a single animal. So, let's make a new file that will initiate the AnimalManager `getAll()` call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
+Our `AnimalCard` does a great job of rendering a single animal, but our database has more than one animal. That's where the `AnimalList` component will come in. By the time we're done, it will initiate the AnimalManager `getAll()` call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
 
 When the data is returned, we can hold on to it by placing it in the component's `state`. _More on `state` later._
 
@@ -91,151 +115,137 @@ Because `useEffect` is provided by the React library, we must import it.
 import React, { useEffect } from 'react';
 ```
 
-`useEffect` is a member of a family of tools that React broadly calls _"hooks"_. The `useEffect` hook accepts two arguments: a function and an array.
+> **NOTE:** `useEffect` is a member of a family of tools that React broadly calls _"hooks"_. Hooks are a way to gain access to some of React's underlying functionality.
 
+The `useEffect` hook accepts two parameters: a function and an array.
 
-## What is State?
+The function parameter is where you place the code that interacts with an external resource. The array parameter is used to control when the function parameter is executed.
 
-A component's state is mechanism for storing data that modified over time in response to user actions, network responses, and anything. State determines how a component renders and behaves.
+Consider the following component:
 
-State is initialized by calling a function named `useState`. This function is supplied by React and must be imported.
+```jsx
+import React, { useEffect } from 'react';
+import AnimalManager from '../../modules/AnimalManager';
+
+const AnimalList = () => {
+  const getAnimals = () => {
+    return AnimalManager.getAll().then(animalsFromAPI => {
+      // We'll do something more interesting with this data soon.
+      console.log(animalsFromAPI);
+    });
+  };
+
+  useEffect(() => {
+    getAnimals();
+  }, []);
+
+  return (
+    <div className="container-cards">
+      We'll put some animals here eventually...
+    </div>
+  );
+};
+
+export default AnimalList
+```
+
+The function argument to `useEffect` tells React the call the `getAnimals()` function (that will fetch data from our API). The empty array argument tells React to call the function on the **_first render_** of the component.
+
+```jsx
+  useEffect(() => {
+    getAnimals();
+  }, []);
+```
+
+Why do we need to specify an action to be performed _only_ on the first render? It turns out that React components repeatedly re-render throughout the lifetime of an application (often at surprising times). It would be a waste to make an API request each time the component re-renders. Instead we can save the data after the first render and simply use that saved data when we need it.
+
+> **NOTE:** We'll see more complex uses of the array parameter later, but for now it's ok to pass an empty array.
+
+## Component State
+
+A component's state is mechanism for storing data that is modified over time in response to user actions, network responses, and anything. State determines how a component renders and behaves.
+
+A few points about **state**
+
+* State is a way of storing data in a component.
+* State must be given an initial value.
+* The data stored in state can change over time.
+* When state is changed the component will re-render.
+
+### useState()
+
+State is accessed by calling a function named `useState`. Like `useEffect` this function is another _hook_ supplied by React and must be imported.
 
 ```js
 import React, { useState } from 'react';
 ```
 
-
+Here's an example of calling `useState`.
 
 ```js
 const [animals, setAnimals] = useState([]);
 ```
 
+Let's break this down.
+
+The empty array passed to `useState` is the **_initial value_** of the state.
+
+`useState(`**[ ]**`)`
+
+`useState` returns an array. The first element in the array is the **_current value_** of the state.
+
+`const [`**animals**`, setAnimals]`
+
+Remember the value of state can change over time, so the current value is probably not the same as the initial value.
+
+The second element in the array is a function that gives us access to change the state.
+
+`const [animals,`**setAnimals**`]`
+
+We can call `setAnimals` when we need to change the value of the animals stored in state.
+
+`setAnimals(someNewAnimalsArray);`
+
+Let's incorporate state into the `AnimalList` component.
+
+```jsx
+import React, { useState, useEffect } from 'react';
+//import the components we will need
+import AnimalCard from './AnimalCard';
+import AnimalManager from '../../modules/AnimalManager';
+
+const AnimalList = () => {
+  // The initial state is an empty array
+  const [animals, setAnimals] = useState([]);
+
+  const getAnimals = () => {
+    // After the data comes back from the API, we
+    //  use the setAnimals function to update state
+    return AnimalManager.getAll().then(animalsFromAPI => {
+      setAnimals(animalsFromAPI)
+    });
+  };
+
+  // got the animals fromm the API on the component's first render
+  useEffect(() => {
+    getAnimals();
+  }, []);
+
+  // Finally we use map() to "loop over" the animals array to show a list of animal cards
+  return (
+    <div className="container-cards">
+      {animals.map(animal => <AnimalCard />)}
+    </div>
+  );
+};
+export default AnimalList
+```
+
 `useState` should be called at the top of the component's definition and then it is automatically included in the construction of the component. Once the data is returned from the AnimalManager, we invoke a React method `setState()` which allows us to update/hold the values and when state is updated, React automatically invokes the render method, again.
 
-Create the AnimalList file.
+## Using Components within Components
 
-```sh
-touch src/components/animal/AnimalList.js
-```
-
-The following code snippets should look familiar.
-Get all of the animals from the API:
-
-```js
-    AnimalManager.getAll()
-    .then(animalResults => {
-        console.log("animals", animalResults);
-    })
-```
-
-Render each animal with an **`<AnimalCard>`** component.
-
-```js
-    allAnimals.map(animal => <AnimalCard />)
-```
-For each animal in allAnimals, return an **`<AnimalCard>`** component.
-
-
-`render()` is a built in method of React. Another built in method is `componentDidMount()`. Once a component is loaded and after render is called, `componentDidMount()` is invoked.
-
-
-Let's build the **`<AnimalList >`** component.
-
-> src/components/animal/AnimalList.js
-
-```js
-    import React, { Component } from 'react'
-    //import the components we will need
-    import AnimalCard from './AnimalCard'
-    import AnimalManager from '../../modules/AnimalManager'
-
-    class AnimalList extends Component {
-        //define what this component needs to render
-        state = {
-            animals: [],
-        }
-
-    componentDidMount(){
-        console.log("ANIMAL LIST: ComponentDidMount");
-        //getAll from AnimalManager and hang on to that data; put it in state
-        AnimalManager.getAll()
-        .then((animalResults) => {
-            this.setState({
-                animals: animalResults
-            })
-        })
-    }
-
-    render(){
-        console.log("ANIMAL LIST: Render");
-
-        return(
-            <div className="container-cards">
-                {this.state.animals.map(animal => <AnimalCard />)}
-            </div>
-        )
-    }
-}
-
-export default AnimalList
-
-
-```
-
-Modify `ApplicationViews.js` route for animals to load the **`<AnimalList />`** instead of **`<AnimalCard />`**.
-
-Also, update the import statement. You will need the `AnimalList` instead of the `AnimalCard`.
-
-
-```js
-import AnimalList from './animal/AnimalList'
-
-class ApplicationViews extends Component {
-
-  render() {
-    return (
-
-    ...
-
-        <Route path="/animals" render={(props) => {
-          return <AnimalList />
-        }} />
-
-    ...
-
-    )
-  }
-}
-
-export default ApplicationViews
-```
-
-Run the code. We have 3 cards displaying (and an error message. We will fix the error and display the correct data in the next chapter.). Take a look at the console. This is the order of the code running:
-
-```
-AnimalList: Render
-AnimalList: ComponentDidMount
-AnimalList: Render
-```
-
-In React, retrieving state from a remote API works in, what seems like, a counterintuitive way. React must first render the component to the DOM without any existing data (held in state), then you request the data, `setState()`, and then the component will invoke render again.
-
-One of the lifecycle methods available to every React component is [componentDidMount](https://reactjs.org/docs/react-component.html#the-component-lifecycle). Straight from their docs (emphasis mine):
-
-> `componentDidMount()` is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. _If you need to load data from a remote endpoint, this is a good place to instantiate the network request._
-
-The `componentDidMount()` lifecycle hook runs after the component output has been rendered to the DOM, so if your component needs API data, this is the place to do it.
-
-
-## Component LifeCycle
-
-* [Component Lifecycle Hooks Documentation](https://reactjs.org/docs/react-component.html)
-* [Lifecycle Hooks Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-
-## Resources
-
-* [React App Requests to JSON API](https://www.youtube.com/watch?v=vwWPM7za3Pk&list=PLhScwEnhQ-bmroyHFduwgOZ1KrdDvk_44) video series
-* [React for Everyone](https://www.youtube.com/playlist?list=PLLnpHn493BHFfs3Uj5tvx17mXk4B4ws4p) video series
+Take another look at the `AnimalList` component, you'll notice we are importing the `AnimalCard` component and using it in the JSX code. This _composability_ is one of the amazing benefits of components.
 
 ## Practice - NSS Kennels API
 
