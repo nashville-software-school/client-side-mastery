@@ -2,7 +2,7 @@
 
 ## Why Are You Learning This?
 
-Properly structured and normalized databases can save a development team, and an entire business, hundreds of hours and millions of dollars over a pooly designed one. The database design is, by far, the most important thing to get right in an application because it is also is the hardest to change, and those changes affect everything about the application.
+Properly structured and normalized databases can save a development team, and an entire business, hundreds of hours and millions of dollars over a poorly designed one. The database design is, by far, the most important thing to get right in an application because it is also is the hardest to change, and those changes affect everything about the application.
 
 ![visualization of database being highest cost of change](./images/cost-of-change.png)
 
@@ -267,7 +267,7 @@ A small business wants to keep track of its employees and the computers that the
 
 Create an API to be served with `json-server` and create the following resources in your `database.json` file. **Do not** build the arrays of objects in your JavaScript code.
 
-1. Build arrays of objects that represent _Employees_, _Departments_, and _Computers_ in yuor `database.json` file.
+1. Build arrays of objects that represent _Employees_, _Departments_, and _Computers_ in your `database.json` file.
 1. Assign every resource a unique `id` property.
 1. Assign each employee to a department using a foreign key.
 1. Assign each employee a computer using a foreign key.
