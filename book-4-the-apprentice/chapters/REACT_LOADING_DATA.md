@@ -20,7 +20,7 @@ Add animal data to the JSON file.
 {
     "animals": [
         { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Sheperd" },
+        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
         { "id": 3, "name": "Esme", "breed": "Pitbull" }
     ]
 }
@@ -40,7 +40,7 @@ Currently, this is the flow of code in your application:
 1. `Kennel.js` renders the `<NavBar>` and `<ApplicationViews>`
 1. `<NavBar>` contains links to other views
 1. `<ApplicationViews>` renders routes based on the URL.
-1. When viewing the Animals section, AnimalCard.js will load up and invoke `render()`.
+1. When viewing the Animals section, `AnimalCard.js` will load up and invoke `render()`.
 1. Our page displays.
 
 
@@ -52,7 +52,7 @@ As we have done before, let's create a module for database calls.
 
 1. Create a `src/modules` directory
 1. In that directory, create a file named `AnimalManager.js`
-1. Create a new component in a file named `src/components/animal/AnimalList.js`
+1. Create a new component in a file named `src/components/animal/AnimalList.js` _**NOTE:** This file is being created in a folder called `animal`_.
 1. For now the animal list should look like this:
 
     ```jsx
@@ -149,7 +149,7 @@ const AnimalList = () => {
 export default AnimalList
 ```
 
-The function argument to `useEffect` tells React the call the `getAnimals()` function (that will fetch data from our API). The empty array argument tells React to call the function on the **_first render_** of the component.
+The function argument to `useEffect` tells React to call the `getAnimals()` function (that will fetch data from our API). The empty array argument tells React to call the function on the **_first render_** of the component.
 
 ```jsx
   useEffect(() => {
@@ -241,17 +241,26 @@ const AnimalList = () => {
 export default AnimalList
 ```
 
-`useState` should be called at the top of the component's definition and then it is automatically included in the construction of the component. Once the data is returned from the AnimalManager, we invoke a React method `setState()` which allows us to update/hold the values and when state is updated, React automatically invokes the render method, again.
+`useState` should be called at the top of the component's definition and then it is automatically included in the construction of the component. Once the data is returned from the AnimalManager, we invoke the `setAnimals()` function to save the animals in the component's state. After `setAnimals()` executes, the component re-renders and displays the animals.
+
+## Rendering and Re-rendering
+
+What do we mean when we say a component "renders"? Rendering happens when a component returns HTML and then React puts that HTML onto the DOM.
+
+A component re-renders any time it's state changes. Re-rendering essentially means React calls the component function again,  takes whatever HTML it returns, and places it on the DOM.
 
 ## Using Components within Components
 
 Take another look at the `AnimalList` component, you'll notice we are importing the `AnimalCard` component and using it in the JSX code. This _composability_ is one of the amazing benefits of components.
 
+> **NOTE:** Notice that, although we have three instances of the animal card (matching the three records in the database), we do NOT see the data from our database. Don't worry, we'll take care of this in the next chapter.
+
 ## Practice - NSS Kennels API
 
+1. Add some example data for employees, locations and owners to `api/kennel.json`.
 1. Create modules to query the database for employees, locations, and owners from your API.
-2. Create list components to handle calling the database modules.
-3. Display a static *designed* card for each section. We will get to displaying the correct data next.
+1. Create list components to handle calling the database modules.
+1. Display a static *designed* card for each section. We will get to displaying the correct data next.
 
 
 > **Pro tip:** Remember to use your network tab in the Chrome Developer Tools to watch your network requests and preview the responses.
