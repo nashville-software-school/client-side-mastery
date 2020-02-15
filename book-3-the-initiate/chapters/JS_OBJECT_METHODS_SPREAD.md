@@ -349,7 +349,7 @@ Your first task is to use object methods to match the value of all properties of
 ```js
 const searchInput = document.querySelector("#searchInput")
 
-searchInput.addEventListner('', event => {
+searchInput.addEventListener('', event => {
   if (event.charCode === 13) {
     const searchTerm = event.target.value
 
