@@ -128,11 +128,13 @@ nav .container li {
   list-style-type: none;
 }
 
-nav .container a {
+.nav-link {
   color: cornsilk;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-nav .container a:hover {
+.nav-link:hover {
   color: maroon;
 }
 ```
