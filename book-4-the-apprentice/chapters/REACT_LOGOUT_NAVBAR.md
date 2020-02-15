@@ -1,11 +1,12 @@
 # React Logout Functionality on Navbar
 
 1. When a user logs in, we should remove the login link and display a logout link.
-2. When a user logs out, they should be directed to the home page.
+1. When a user logs out, they should be directed to the home page.
 
 **There are several parts that will need to be refactored for the logout to work.**
 
 ## Refactor Kennel
+
 Since the state of user is held in **`<Kennel>`**, we need to write a function that will clear the user and update state. We will then pass `clearUser()` to the **`<NavBar>`** component.
 
 >Kennel.js

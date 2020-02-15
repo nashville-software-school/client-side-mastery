@@ -138,6 +138,8 @@ const ApplicationViews = (props) => {
   }} />
 ```
 
+Remember to update the `handleLogin()` function in the `<Login>` component to use the `setUser()` function.
+
 ### Spread Syntax
 
 Allows an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
