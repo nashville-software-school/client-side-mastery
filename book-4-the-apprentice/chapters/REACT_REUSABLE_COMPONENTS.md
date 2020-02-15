@@ -9,6 +9,7 @@ Right now, the only place that you're rendering an animal is when you select the
 First, you will need to update your database to include an employees collection and include an employeeId on each animal.
 
 > kennel.json
+
 ```json
   {
   "animals": [
@@ -80,6 +81,7 @@ export default {
 We need to add a button to the **`<EmployeeCard>`** for details using `history.push` of react-router-dom.
 
 > EmployeeCard.js
+
 ```jsx
 <button type="button"
         onClick={() => { this.props.history.push(`/employees/${this.props.employee.id}/details`) }}>Details</button>
@@ -90,7 +92,7 @@ We also need to add a route to **`<ApplicationViews>`** to handle displaying det
 > ApplicationViews.js
 
 ```js
- <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
+<Route path="/employees/:employeeId(\d+)/details" render={(props) => {
     return <EmployeeWithAnimals {...props} />
 }} />
 
@@ -98,85 +100,82 @@ We also need to add a route to **`<ApplicationViews>`** to handle displaying det
 Be sure to import **`EmployeesWithAnimals`** into `ApplicationViews`.
 
 ## New Component - EmployeeWithAnimals
+
 This component will display a single employee and include an **`<AnimalCard>`** for each animal. We can re-use the previously created AnimalCard component. This component will accept `props` and `return` the employee name and then `map` over the animals returning **`<AnimalCard>`** for only the pets the employee is responsible for.
 
 > src/components/employee/EmployeeWithAnimals.js
 
 ```jsx
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import EmployeeManager from '../../modules/EmployeeManager'
 import AnimalCard from '../animal/AnimalCard'
 
-class EmployeeWithAnimals extends Component {
-    state = {
-      employee: {},
-      animals: []
-    }
+const EmployeeWithAnimals = props => {
+  const [employee, setEmployee] = useState({});
+  const [animals, setAnimals] = useState([]);
 
-    componentDidMount(){
-        //got here now make call to get employee with animal
-        EmployeeManager.getWithAnimals(this.props.match.params.employeeId)
-            .then((APIResult) => {
-            this.setState({
-              employee: APIResult,
-              animals: APIResult.animals,
-            })
-        })
-    }
+  useEffect(() => {
+    //got here now make call to get employee with animal
+    EmployeeManager.getWithAnimals(props.match.params.employeeId)
+      .then(APIResult => {
+        setEmployee(APIResult);
+        setAnimals(APIResult.animals);
+      });
+  }, []);
 
-    render(){
-        return (
-          <div className="card">
-            <p>Employee: {this.state.employee.name}</p>
-            {this.state.animals.map(animal =>
-              <AnimalCard
-                key={animal.id}
-                animal={animal}
-                {...this.props}
-              />
-            )}
-          </div>
-        )
-      }
-    }
+  return (
+    <div className="card">
+      <p>Employee: {employee.name}</p>
+      {animals.map(animal =>
+        <AnimalCard
+          key={animal.id}
+          animal={animal}
+          {...props}
+        />
+      )}
+    </div>
+  );
+};
 
 export default EmployeeWithAnimals;
-
 ```
-
 
 Test it out. Each employee should display a list of animals. However, we are not done.
 
 If we edit an animal, the employeeId is missing. We need to add it to the **`<AnimalEditForm>`**.
 
 ## Refactor AnimalEditForm
+
 Add the **employeeId** to:
+
 * `state`
-* `componentDidMount()` - where does the employeeId come from?
 * `updateExistingAnimal()` - where does the employeeId come from?
 
-> **Hint:** Maybe a `select` would the the approprate way to choose an employee?
+> **Hint:** Maybe a `select` would the the appropriate way to choose an employee?
 > The following code might come in handy.
 
 ```jsx
 <select
   className="form-control"
   id="employeeId"
-  value={this.state.employeeId}
-  onChange={this.handleFieldChange}
+  value={animal.employeeId}
+  onChange={handleFieldChange}
 >
-   {this.state.employees.map(employee =>
-     <option key={employee.id} value={employee.id}>
-       {employee.name}
-     </option>
-   )}
+  {employees.map(employee =>
+    <option key={employee.id} value={employee.id}>
+      {employee.name}
+    </option>
+  )}
 </select>
+<label htmlFor="employeeId">Employee</label>
 ```
+
 > The code above is not all you will need, however. Read it carefully. What does it _imply_ about the other changes you will need to make to the `AnimalEditForm` component?
 
 Once complete, you should be able to edit an animal.
 
 ## Refactor the NavBar
+
 If you haven't already done so, be sure to add the link to employees in the **`<NavBar>`** component
 
 ```js
@@ -185,19 +184,18 @@ If you haven't already done so, be sure to add the link to employees in the **`<
 
 ## Practice - Handle the delete
 
-If we discharge an animal from the `EmployeeWithAnimals` component, we will recieve an error `this.props.deleteAnimal is not a function`.
+If we discharge an animal from the `EmployeeWithAnimals` component, we will receive an error `props.deleteAnimal is not a function`.
 
 There are a few of ways to handle this situation.
+
 1. Use a conditional and only render the button if the prop `deleteAnimal` exist.
-2. Include the same `handleDelete` function within **`<EmployeeWithAnimals>`**
-3. Extract the `handleDelete` function and place inside a module that can be imported whenever needed.
-4. **Lift** the `handleDelete` function to a common parent component thus allowing both components access.
+1. Include the same `handleDelete` function within **`<EmployeeWithAnimals>`**
+1. Extract the `handleDelete` function and place inside a module that can be imported whenever needed.
+1. **Lift** the `handleDelete` function to a common parent component thus allowing both components access.
 
 Choose one of the options above and handle the delete button when the **`<AnimalCard>`** is viewed within the **`<EmployeeWithAnimals>`** component.
-
 
 ## Practice: Employees per Location
 
 1. Modify your API data so that employees have a `locationId` property designating at which location they work.
-2. For each location, display the employees that work there.
-
+1. For each location, display the employees that work there.

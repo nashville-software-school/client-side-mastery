@@ -177,7 +177,7 @@ fieldset {
     background: aliceblue;
 }
 
-fieldset input, fieldset button{
+fieldset input, fieldset button, fieldset select{
     box-sizing: border-box;
     padding: .2em .4em;
     margin: .2em 0;
@@ -205,6 +205,7 @@ fieldset label {
     box-sizing: border-box;
     user-select: none;
     cursor: pointer;
+    text-align: right;
 }
 fieldset input:focus + label {
     color: #933;
@@ -218,7 +219,7 @@ fieldset .formgrid {
     align-items: center;
 }
 
-fieldset input, fieldset button {
+fieldset input, fieldset button, fieldset select {
     grid-column: 2 /4;
     width: auto;
     margin: 0
