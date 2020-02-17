@@ -63,11 +63,12 @@ The learning objectives of this project, by the end of the client side course, a
     | French Flagons | 35 |
     | Black Knights | 42 |
 1. You need a component that is the main game scoring area. Requirements for this component are below.
+1. No more than three players can be added to a team.
 
 ## Game Play
 
 * When the application first renders, there should be a button labeled _"Start Game"_ in the game scoring area.
-* When the user clicks on the _"Start Game"_ button, the user should be presented with three dropdowns. Each dropdown should list all teams.
+* When the user clicks on the _"Start Game"_ button, the user should be presented with three dropdowns. Each dropdown should only list teams with three players.
 * When the user has selected three _**distinct**_ teams to play a game of Truncheons & Flagons, the user should be presented with a view to enter in the scores. It should have three input fields. The label for each field should be the name of a team. At the bottom on the form, there must be a button labeled "Save Round Score".
 * The user must be able to enter in the scores for all three rounds. When the user enters in scores for all three teams for round one and clicks the "Save Round Score" button, the form should be presented again to enter in the scores for round two.
 * Each time a round is complete, the current total score for each team should be displayed.

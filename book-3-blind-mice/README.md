@@ -2,7 +2,7 @@
 
 ## Chapters
 
-| #  | Three Blind Mice Consulting | Are You Feeling Bouquet? | Honest Abe |
+| #  | Three Blind Mice Consulting 🐭🐭🐭 | Are You Feeling Bouquet? 💐 | Honest Abe 🇺🇸 |
 |--|--|--|--|
 | 1 | [One to Many Relationships](./chapters/ONE_MANY.md) |  |  |
 | 2 | [Entity Relationship Diagram](./chapters/ERD.md) |  |  |
