@@ -109,7 +109,7 @@ Refactor the route to `/animals`:
 ```jsx
 <Route exact path="/animals" render={props => {
   if (isAuthenticated()) {
-    return <AnimalList />
+    return <AnimalList {...props} />
   } else {
     return <Redirect to="/login" />
   }

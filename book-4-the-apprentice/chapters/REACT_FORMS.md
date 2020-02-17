@@ -33,19 +33,18 @@ import AnimalForm from './animal/AnimalForm'
 
 ## Add a button for Admitting a New Animal
 
-Update **`<AnimalList>`** with a button that uses the `history.push()` to change the URL of the browser. This will only work if you updated your routes correctly and have access to the router `props` object.
+Update **`<AnimalList>`** with a button that uses the `props.history.push()` to change the URL of the browser. This will only work if you updated your routes correctly to provide access to the router `props` object, and you add a props parameter to the AnimalList component function.
 
 **NOTE** You will need to wrap the return in a React.Fragment. Remember, only one element can be returned.
 
 > AnimalList.js
-
 
 ```js
 //add this button above your display of animal cards
 <section className="section-content">
   <button type="button"
       className="btn"
-      onClick={() => {this.props.history.push("/animals/new")}}>
+      onClick={() => {props.history.push("/animals/new")}}>
       Admit Animal
   </button>
 </section>
