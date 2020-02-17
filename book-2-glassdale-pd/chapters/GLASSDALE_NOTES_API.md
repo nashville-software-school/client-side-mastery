@@ -76,19 +76,19 @@ Define your component function and have it render the input fields you want to b
 ```js
 const contentTarget = document.querySelector(".noteFormContainer")
 
-const NoteFormComponent = () => {
-    const render = () => {
-        contentTarget.innerHTML = `
-            Put some input fields and prompts here
+const render = () => {
+    contentTarget.innerHTML = `
+        Put some input fields and prompts here
 
-            <button id="saveNote">Save Note</button>
-        `
-    }
+        <button id="saveNote">Save Note</button>
+    `
+}
 
+const NoteForm = () => {
     render()
 }
 
-export default NoteFormComponent
+export default NoteForm
 ```
 
 Import that component into the main component and add it to your component render chain. Perhaps before the criminal list is rendered, but its order in the chain is not truly relevent.
@@ -106,6 +106,23 @@ Add the following method to your provider.
 > **glassdale/scripts/notes/NoteProvider.js**
 
 ```js
+const eventHub = document.querySelector(".container")
+
+const dispatchStateChangeEvent = () => {
+    const noteStateChangedEvent = new CustomEvent("noteStateChanged")
+
+    eventHub.dispatchEvent(noteStateChangedEvent)
+}
+
+const getNotes = () => {
+    fetch('http://localhost:8080/notes')
+        .then(response => response.json())
+        .then(parsedNotes => {
+            notes = parsedNotes
+        })
+
+}
+
 export const saveNote = note => {
     fetch('http://localhost:8080/notes', {
         method: "POST",
@@ -115,6 +132,7 @@ export const saveNote = note => {
         body: JSON.stringify(note)
     })
     .then(getNotes)
+    .then(dispatchStateChangeEvent)
 }
 ```
 
@@ -123,21 +141,21 @@ export const saveNote = note => {
 Now you need to add an event listener on the Event Hub to capture when the user clicks on the "Save Note" button, and when that happens, save a new note object to your json-server API.
 
 ```js
-const NoteFormComponent = () => {
+// Handle browser-generated click event in component
+contentTarget.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "saveNote") {
 
-    // Handle internal element click
-    eventHub.addEventListener("click", clickEvent => {
-        if (clickEvent.target.id === "saveNote") {
-
-            // Make a new object representation of a note
-            const newNote = {
-                // Key/value pairs here
-            }
-
-            // Change API state and application state
-            saveNote(newNote)
+        // Make a new object representation of a note
+        const newNote = {
+            // Key/value pairs here
         }
-    })
 
+        // Change API state and application state
+        saveNote(newNote)
+    }
+})
+
+const NoteForm = () => {
     // rest of the code here
+}
 ```
