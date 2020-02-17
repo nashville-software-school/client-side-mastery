@@ -303,6 +303,10 @@ const MessageList = () => {
 export default MessageList
 ```
 
+## Visualization
+
+![](./images/friendSelected.gif)
+
 ## Reminder: This is Hard
 
 Thinking about components talking to each other using custom messages is a large cognitive leap. Your brain needs to build a fairly complex mental model to understand how the signal flow of information works in a system like this.
