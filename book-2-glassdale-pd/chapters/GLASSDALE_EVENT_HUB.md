@@ -78,32 +78,33 @@ Time for your to implement the Event Hub, get components sending and listening t
     Which element in your HTML contains all components?
     That's your Event Hub. Get a reference to it here.
 */
-const eventHub =
+const eventHub = document.querySelector(you_fill_this_in)
 const contentTarget = document.querySelector(".filters__crime")
+
+// On the content target, listen for a "change" event.
+contentTarget.addEventListener("which event?", event => {
+
+    // Only do this if the `crimeSelect` element was changed
+    if (you_fill_this_in) {
+        // Create custom event. Provide an appropriate name.
+
+        // Dispatch to event hub
+    }
+})
+
+
+const render = convictionsCollection => {
+    contentTarget.innerHTML = `
+        <select class="dropdown" id="crimeSelect">
+            <option value="0">Please select a crime...</option>
+            ... you wrote awesome code here ...
+        </select>
+    `
+}
+
 
 const ConvictionSelect = () => {
     const convictions = useConvictions()
-
-    /*
-        On the Event Hub, listen for a "change" event. Remember to write
-        an `if` condition to make sure that it was the `#crimeSelect`
-        element that changed.
-
-        When that event happens, dispatch a custom message to your Event
-        Hub so that the criminal list can listen for it and change what
-        it renders.
-    */
-    eventHub.addEventListener()
-
-    const render = convictionsCollection => {
-        contentTarget.innerHTML = `
-            <select class="dropdown" id="crimeSelect">
-                <option value="0">Please select a crime...</option>
-                ... you wrote awesome code here ...
-            </select>
-        `
-    }
-
     render(convictions)
 }
 ```
@@ -113,26 +114,30 @@ const ConvictionSelect = () => {
 ```js
 const eventHub = document.querySelector(".container")
 
+// Listen for the custom event you dispatched in ConvictionSelect
+eventHub.addEventListener('what custom event did you dispatch?', event => {
+    // You remembered to add the id of the crime to the event detail, right?
+    if ("crimeId" in event.detail) {
+        /*
+            Filter the criminals application state down to the people that committed the crime
+        */
+        const matchingCriminals = appStateCriminals.filter()
+
+        /*
+            Then invoke render() and pass the filtered collection as
+            an argument
+        */
+    }
+})
+
+const render = criminalCollection => {
+    contentTarget.innerHTML = you_fill_this_in
+}
+
+
+// Render ALL criminals initally
 const CriminalList = () => {
-    // Load the application state to be used by this component
     const appStateCriminals = useCriminals()
-
-    // What should happen when detective selects a crime?
-    eventHub.addEventListener('what custom event did you dispatch?', event => {
-        // You remembered to add the id of the crime to the event detail, right?
-        if ("crimeId" in event.detail) {
-            /*
-                Filter the criminals application state down to the people that committed the crime
-            */
-            const matchingCriminals = appStateCriminals.filter()
-
-            /*
-                Then invoke render() and pass the filtered collection as
-                an argument
-            */
-        }
-    })
-
-    ...
+    render(appStateCriminals)
 }
 ```
