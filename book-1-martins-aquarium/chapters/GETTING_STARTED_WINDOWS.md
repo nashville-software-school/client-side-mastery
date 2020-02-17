@@ -46,10 +46,12 @@ Later in the instructions, we will ask you to type a command into your terminal.
 Visit the [Windows Terminal (Preview)](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab) download page and open it in the Microsoft Store App. This will be your default terminal (using Ubuntu) which you will use to navigate your file system, and run development tools throughout the course.
 
 Once Windows Terminal is installed:
-1. Go to the `Start` menu (windows key) and search for Windows Terminal
-2. Open Windows Terminal (Preview)
-3. This will open up a new Command Prompt window by default. In the top left corner of the terminal click the `Down Arrow`, and select **Ubuntu** to open a new Ubuntu Tab.
+1. Go to the `Start` menu (windows key) and search for `Windows Terminal`
+2. Open `Windows Terminal (Preview)`
+3. This will open up a new PowerShell Tab by default. In the top left corner of the terminal click the `Down Arrow`, and select **Ubuntu** to open a new Ubuntu Tab.
+
     > Ubuntu will begin to install and you'll be asked to wait for a minute or two for the installation to complete.
+
 4. Once Ubuntu is done installing, you'll be prompted to create a new user (and its password).
 
 ### Google Chrome
@@ -62,11 +64,16 @@ Visit the [Visual Studio Code](https://code.visualstudio.com/) website to downlo
 
 ### Node
 
-Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
+You will install Node.js using the Windows Terminal. Open Windows Terminal, and in a **new Ubuntu Tab**, copy and paste the following lines:
+```
+curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+After a while, you will be prompted with a message asking for permissions. Using the arrow keys on your keyboard, select **Yes** and hit the enter key to continue installing Node.js.
 
 ### Web Server
 
-`serve` is what you will use to make your web sites work in the browser. Open Git Bash if you haven't yet, and type in the following command.
+`serve` is what you will use to make your web sites work in the browser. Open Windows Terminal, (in a new Ubuntu Tab), if you haven't yet, and type in the following command:
 
 ```sh
 sudo npm i -g serve
@@ -79,4 +86,4 @@ SSH is a technology that allows you to create a very secure connection between y
 1. A public key file that you share with other people and computers. It is usually named `id_rsa.pub`.
 1. A private key file that you never, ever, ever, ever, ever share with anyone. It is usually named `id_rsa`.
 
-Follow the [Github instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows) for creating a new SSH key, and providing your public key to Github, so that you can establish a secure connection between your computer and Github's computers.
+Follow the [Github instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux) for creating a new SSH key **FOR LINUX** (not Windows), and providing your public key to Github, so that you can establish a secure connection between your computer and Github's computers.
