@@ -44,7 +44,7 @@ const deleteAnimal = id => {
 };
 ```
 
-Remember that every time you invoke the `setAnimals()` method, it automatically invokes the `render()` method. The `deleteAnimal()` function deletes an animal object from the API, and then queries the database for all the animals(now updated). When state is updated, render runs and `maps` the new animal array to the **`<AnimalCard />`** component.
+Remember that every time you invoke the `setAnimals()` method, it changes the state of the component and forces React to re-render it. The `deleteAnimal()` function deletes an animal object from the API, and then queries the database for all the animals(now updated). When state is updated, the component renders again using the data in the new animal array.
 
 
 ## Pass the Delete Function to AnimalCard Component

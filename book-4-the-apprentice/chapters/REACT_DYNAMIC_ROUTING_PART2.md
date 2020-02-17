@@ -43,7 +43,7 @@ Consider the flow of code for the **`<AnimalDetails>`** component
 1. The initial state is created with empty values for name and breed.
 1. The component renders displaying those empty values for name and breed.
 1. The function passed to `useEffect()` is invoked, getting data for one animal.
-1. Data for one animal loaded, `setAnima()` is invoked with the details.
+1. Data for one animal loaded, `setAnimal()` is invoked with the details.
 1. The component runs again (it _re-renders_) to display the new animal details.
 
 When there are empty values, what happens if the user clicks on discharge? Best practice would be to disable functionality until the data has loaded. We can do that by introducing a new value into our state. `isLoading` is a boolean value that will indicate whether or not the component is loading. A value of `true` should disable the button and a value of `false` should enable it. Bu putting `isLoading` in the component's state, we can trigger a re-render by changing it's value.
