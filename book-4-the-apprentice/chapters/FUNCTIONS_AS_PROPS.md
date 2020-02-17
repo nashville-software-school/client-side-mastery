@@ -10,10 +10,9 @@ First add the `delete` function to your `AnimalManager` module.
 
 ```js
 delete(id) {
-  return fetch(`http://localhost:5002/animals/${id}`, {
-      method: "DELETE"
-  })
-  .then(result => result.json())
+  return fetch(`${remoteURL}/animals/${id}`, {
+    method: "DELETE"
+  }).then(result => result.json())
 }
 ```
 
