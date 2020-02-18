@@ -36,7 +36,7 @@ Since all of the work you will be doing at NSS will be contained in the `~/works
         +-- aquarium
 ```
 
-Once the directory is created, you need to create the HTML file and the CSS file. THe standard name for the initial HTML for any web site is `index.html`. Go ahead and `cd` into the `~/workspace/aquarium` directory if you aren't there already.
+Once the directory is created, you need to create the HTML file and the CSS file. The standard name for the initial HTML for any web site is `index.html`. Go ahead and `cd` into the `~/workspace/aquarium` directory if you aren't there already.
 
 Create the file with the following command.
 
@@ -44,7 +44,9 @@ Create the file with the following command.
 touch index.html
 ```
 
-Next, create the file to hold your CSS. In the same directory, create a file named `main.css`.
+Next, create a `styles` subdirectory and create a file named `main.css` in it.
+
+Then `cd ..` to go up one directory level. Create another subdirectory named `scripts` and create a file named `main.js` in it.
 
 ## Challenge: Creating Content in a File
 

@@ -1,26 +1,64 @@
-# Organizational Directories
+# Bash Functions
 
-Here we are again. Our project directory now contains a mixture of HTML and JavaScript files. Time to clean up the mess.
-
-## Scripts Directory
+Open your zshell initialization file with the following command.
 
 ```sh
-cd ~/workspace/aquarium
-mkdir scripts
+code ~/.zshrc
 ```
 
-Then move all CSS files into that directory with the `mv` command. The pattern is always the following.
-
-> **TIP:** When you see curly braces like this in documentation, it usually means _"place your text here, but without the curly braces"_
-
-```html
-mv {what you want to move} {where you want to move it}
-```
-
-Here's an example of how to move the `main.js` file into the sub-directory.
+Then place this content at the bottom of the file and save it.
 
 ```sh
-mv main.js scripts
+simplehtml () {
+    mkdir styles
+    mkdir scripts
+    echo '<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nashville Software School</title>
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+
+    <body>
+        <main id="container">
+
+        </main>
+
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
+</html>' >> index.html
+
+    echo '@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+}' >> styles/main.css
+
+    echo 'console.log("Welcome to the main module")' >> scripts/main.js
+  }
 ```
 
-Move `dialog.js` into the sub-directory as well.
+Back in your terminal, reload the initialization file with the following command.
+
+```sh
+source ~/.zshrc
+```
+
+## Usage
+
+Now in your terminal, you can create a new directory and type `simplehtml` and it will create the boilerplate files for you.
