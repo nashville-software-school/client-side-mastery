@@ -26,11 +26,19 @@ Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation f
 
 ## Software
 
+### Google Chrome
+
+[Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
+
+### Visual Studio Code
+
+Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the editor you will be using for the next 6 months.
+
 ### Install the Windows Subsystem for Linux
 
 You'll need to install and enable the Windows Subsystem for Linux by:
 1. Go to the `Start` menu (windows key) and search for `PowerShell`.
-2. Run PowerShell as an Administrator
+2. Run PowerShell as an Administrator. To do this, find the PowerShell application, then right-click on it and choose "Open as adminsitrator".
 3. Copy and paste this command into your PowerShell:
 
         Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -53,14 +61,6 @@ Once Windows Terminal is installed:
     > Ubuntu will begin to install and you'll be asked to wait for a minute or two for the installation to complete.
 
 4. Once Ubuntu is done installing, you'll be prompted to create a new user (and its password).
-
-### Google Chrome
-
-[Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
-
-### Visual Studio Code
-
-Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the editor you will be using for the next 6 months.
 
 ### Node
 
