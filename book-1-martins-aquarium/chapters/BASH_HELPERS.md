@@ -6,6 +6,21 @@ Open your zshell initialization file with the following command.
 code ~/.zshrc
 ```
 
+## Make a Directory and Immediately Navigate to It
+
+Add the following function to the file.
+
+```sh
+mg () {
+  mkdir -p "$1" && cd $_
+}
+```
+
+This function combines `mkdir` and `cd`. If you are in workspace, you can type in the command `mg practice` and it will make the `practice` directory and immediately place you in it.
+
+## Boilerplate Project Code
+
+
 Then place this content at the bottom of the file and save it.
 
 ```sh
@@ -58,7 +73,5 @@ Back in your terminal, reload the initialization file with the following command
 ```sh
 source ~/.zshrc
 ```
-
-## Usage
 
 Now in your terminal, you can create a new directory and type `simplehtml` and it will create the boilerplate files for you.
