@@ -11,9 +11,9 @@
 | 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) |  |  |
 | 3 | [Fish in my Aquarium](./chapters/HTML_AQUARIUM.md) | [Form Layout](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |  |
 | 4 | [Track Aquarium Changes](./chapters/GIT_BASICS.md) |  |  |
-| 5 | [Aquarium Directory Structure](./chapters/BASH_HELPERS.md) |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |
+| 5 | [Aquarium Directory Structure](./chapters/AQUARIUM_DIRECTORIES.md) |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |
 | 6 | [Using Events for a Better User Experience](./chapters/BASIC_EVENTS.md) |  |  |
-| 7 | [Quick Project Creation with Bash Function](./chapters/AQUARIUM_JS_DIRECTORIES.md) |  |  |
+| 7 | [Quick Project Creation with Bash Function](./chapters/BASH_HELPERS.md) |  |  |
 | 8 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) |  |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Hello, World_**](./chapters/HELLO_WORLD.md) |  |  |
 | 9 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD.md) |  |  |
