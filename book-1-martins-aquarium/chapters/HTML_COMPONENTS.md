@@ -214,7 +214,7 @@ From that HTML, use Flexbox to achieve this layout. You don't need to add the bo
 
 ## Congressional Representative UI/UX Challenge
 
-**This is an optional challenge once you meet the requirements above. Make a new GitHub branch for this challenge.**
+**This is an optional challenge once you meet the requirements above. Make a new directory for this challenge.**
 
 > UX CONCEPT: Web pages should be designed in such a way that they are easy to scan.
 
