@@ -158,7 +158,7 @@ Now refresh your browser again and all of your fish should be back.
 
 ## Ok, So, What Just Happened
 
-You may have understood each step as you did, or you may not have.
+You may have understood each step as you did it, or you may not have.
 
 You may have understood how all the pieces connect, or you may not have.
 
@@ -166,7 +166,7 @@ With our years of experience introducing beginners to these abstract concepts, w
 
 There are several abstract concepts at play here, and your brain's neural network has not been tuned to understand these complex connections yet. That doesn't mean your mind **can't** do it.
 
-It just can't do it yet.
+It just can't do it **yet**.
 
 We have also learned that some people like a visualization of how all the pieces work together, so here's one that shows all the components, and what each module exports for use in other modules.
 
