@@ -107,26 +107,24 @@ Next, define a new route in **`<ApplicationViews>`** for editing a single animal
 
 ```jsx
 <Route path="/animals/:animalId(\d+)/edit" render={props => {
-    if (isAuthenticated()) {
-      return <AnimalEditForm {...props} />
-    } else {
-      return <Redirect to="/login" />
-    }
-  }}
-/>
+  if (isAuthenticated()) {
+    return <AnimalEditForm {...props} />
+  } else {
+    return <Redirect to="/login" />
+  }
+}} />
 ```
 
 You will also need to add `exact` to the route for `AnimalDetail`
 
 ```jsx
-<Route path="/animals/:animalId(\d+)/edit" render={props => {
-    if (isAuthenticated()) {
-      return <AnimalEditForm {...props} />
-    } else {
-      return <Redirect to="/login" />
-    }
-  }}
-/>
+<Route exact path="/animals/:animalId(\d+)" render={props => {
+  if (isAuthenticated()) {
+    return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
+  } else {
+    return <Redirect to="/login" />
+  }
+}} />
 ```
 
 At this point you should be able to see the edit animal form with a URL like this: `http://localhost:3000/animals/2/edit`

@@ -69,7 +69,7 @@ const AnimalList = () => {
 };
 ```
 
-**`AnimaCard`** component receives two props:
+**`AnimalCard`** component receives two props:
 
 1. The `props.deleteAnimal` function reference
 1. The `props.animal` object

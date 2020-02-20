@@ -226,7 +226,7 @@ const AnimalList = () => {
     });
   };
 
-  // got the animals fromm the API on the component's first render
+  // got the animals from the API on the component's first render
   useEffect(() => {
     getAnimals();
   }, []);
