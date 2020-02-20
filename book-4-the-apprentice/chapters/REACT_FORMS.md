@@ -33,19 +33,18 @@ import AnimalForm from './animal/AnimalForm'
 
 ## Add a button for Admitting a New Animal
 
-Update **`<AnimalList>`** with a button that uses the `history.push()` to change the URL of the browser. This will only work if you updated your routes correctly and have access to the router `props` object.
+Update **`<AnimalList>`** with a button that uses the `props.history.push()` to change the URL of the browser. This will only work if you updated your routes correctly to provide access to the router `props` object, and you add a props parameter to the AnimalList component function.
 
 **NOTE** You will need to wrap the return in a React.Fragment. Remember, only one element can be returned.
 
 > AnimalList.js
-
 
 ```js
 //add this button above your display of animal cards
 <section className="section-content">
   <button type="button"
       className="btn"
-      onClick={() => {this.props.history.push("/animals/new")}}>
+      onClick={() => {props.history.push("/animals/new")}}>
       Admit Animal
   </button>
 </section>
@@ -79,14 +78,11 @@ Now it's time to make the **`<AnimalForm>`** component.
 
 Our component's inputs will render based on what is in state. Ultimately, we will collect what is in state and pass it to the `AnimalManager.post` method. This allows the UI and state to stay in sync.
 
-In state, you will have three properties:
+State will contain both animal data as well as an isLoading flag.
 
 ```
-state = {
-    animalName: "",
-    breed: "",
-    loadingStatus: false,
-};
+const [animal, setAnimal] = useState({ name: "", breed: "" });
+const [isLoading, setIsLoading] = useState(false);
 ```
 
 The input fields will have corresponding id's:
@@ -94,91 +90,80 @@ The input fields will have corresponding id's:
 1. `<input id="animalName" ... />`
 2. `<input id="breed" ... />`
 
-We will also incorporate `loadingStatus` (Dynamic Routing Part 2) so a user cannot select the button multiple times.
+We will also incorporate `isLoading` (Dynamic Routing Part 2) so a user cannot select the button multiple times.
 
 > components/animal/AnimalForm.js
 
 ```js
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
 import './AnimalForm.css'
 
-class AnimalForm extends Component {
-    state = {
-        animalName: "",
-        breed: "",
-        loadingStatus: false,
-    };
+const AnimalForm = props => {
+  const [animal, setAnimal] = useState({ name: "", breed: "" });
+  const [isLoading, setIsLoading] = useState(false);
 
-    handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value;
-        this.setState(stateToChange);
-    };
+  const handleFieldChange = evt => {
+    const stateToChange = { ...animal };
+    stateToChange[evt.target.id] = evt.target.value;
+    setAnimal(stateToChange);
+  };
 
-    /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
-    */
-    constructNewAnimal = evt => {
-        evt.preventDefault();
-        if (this.state.animalName === "" || this.state.breed === "") {
-            window.alert("Please input an animal name and breed");
-        } else {
-            this.setState({ loadingStatus: true });
-            const animal = {
-                name: this.state.animalName,
-                breed: this.state.breed,
-            };
-
-            // Create the animal and redirect user to animal list
-            AnimalManager.post(animal)
-            .then(() => this.props.history.push("/animals"));
-        }
-    };
-
-    render(){
-
-        return(
-            <>
-            <form>
-                <fieldset>
-                    <div className="formgrid">
-                        <input
-                        type="text"
-                        required
-                        onChange={this.handleFieldChange}
-                        id="animalName"
-                        placeholder="Animal name"
-                        />
-                        <label htmlFor="animalName">Name</label>
-                        <input
-                        type="text"
-                        required
-                        onChange={this.handleFieldChange}
-                        id="breed"
-                        placeholder="Breed"
-                        />
-                        <label htmlFor="breed">Breed</label>
-                    </div>
-                    <div className="alignRight">
-                        <button
-                        type="button"
-                        disabled={this.state.loadingStatus}
-                        onClick={this.constructNewAnimal}
-                        >Submit</button>
-                    </div>
-                </fieldset>
-            </form>
-        </>
-        )
+  /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
+  */
+  const constructNewAnimal = evt => {
+    evt.preventDefault();
+    if (animal.Name === "" || animal.breed === "") {
+      window.alert("Please input an animal name and breed");
+    } else {
+      setIsLoading(true);
+      // Create the animal and redirect user to animal list
+      AnimalManager.post(animal)
+        .then(() => props.history.push("/animals"));
     }
-}
+  };
+
+  return (
+    <>
+      <form>
+        <fieldset>
+          <div className="formgrid">
+            <input
+              type="text"
+              required
+              onChange={handleFieldChange}
+              id="name"
+              placeholder="Animal name"
+            />
+            <label htmlFor="animalName">Name</label>
+            <input
+              type="text"
+              required
+              onChange={handleFieldChange}
+              id="breed"
+              placeholder="Breed"
+            />
+            <label htmlFor="breed">Breed</label>
+          </div>
+          <div className="alignRight">
+            <button
+              type="button"
+              disabled={isLoading}
+              onClick={constructNewAnimal}
+            >Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </>
+  );
+};
 
 export default AnimalForm
 ```
 
 **NOTE** `<>` is a shortcut for React.Fragment. Be sure to close it at the bottom `</>`
 
-> AnimalForm.css
+> components/animal/AnimalForm.css
 
 ```css
 fieldset {
@@ -191,7 +176,7 @@ fieldset {
     background: aliceblue;
 }
 
-fieldset input, fieldset button{
+fieldset input, fieldset button, fieldset select{
     box-sizing: border-box;
     padding: .2em .4em;
     margin: .2em 0;
@@ -219,6 +204,7 @@ fieldset label {
     box-sizing: border-box;
     user-select: none;
     cursor: pointer;
+    text-align: right;
 }
 fieldset input:focus + label {
     color: #933;
@@ -232,7 +218,7 @@ fieldset .formgrid {
     align-items: center;
 }
 
-fieldset input, fieldset button {
+fieldset input, fieldset button, fieldset select {
     grid-column: 2 /4;
     width: auto;
     margin: 0

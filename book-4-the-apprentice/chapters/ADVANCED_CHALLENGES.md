@@ -31,23 +31,27 @@ export default {
 ```
 
 ## Challenge: Add employee selection dropdown to the AnimalForm.
+
 **Be sure to complete the chapter on forms before tackling this challenge.**
 Each animal in the kennel should have an employee responsible for its care. Add a dropdown selection to the **`<AnimalForm>`** and update the database with an employeeId for each pet.
 
 1. Modify your API to include an employeeId for each pet.
-2. Within the **`<AnimalForm />`** component get the employees data.
-3. Create a dropdown to allow selecting an employee responsible for the pet.
-4. Save the employeeId with the new pet.
+1. Within the **`<AnimalForm />`** component get the employees data.
+1. Create a dropdown to allow selecting an employee responsible for the pet.
+1. Save the employeeId with the new pet.
 
 ## Challenge: Add location selection dropdown to the EmployeeForm
+
 Each employee should work at a specific location. Add a dropdown selection to the **`<EmployeeForm>`** and update the database with a locationId for each employee.
+
 1. Modify your API to include an location for each employee.
 1. Within the **`<EmployeeForm />`** component get the locations data.
-2. Create a dropdown to allow selecting a location for the employee.
-3. Save the locationId with the new employee.
+1. Create a dropdown to allow selecting a location for the employee.
+1. Save the locationId with the new employee.
 
 
 ## Challenge: Search your Data
+
 > Remember that challenges, especially advanced ones, are completely optional and should not be attempted until you have completed the practice exercises and understand the concepts used in them.
 
 Not for the weak of heart, is this challenge. Put an input box in your navigation bar. When your customer types in any characters, then you must find any objects in the animals, locations, or employees collections that have a name which contains that string.
@@ -59,37 +63,15 @@ When the customer presses the ENTER key, all three collections in your API need 
 ### Hints
 
 1. Create a **`SearchResults`** component.
-2. Add a `path="/search"` route in your app that renders **`SearchResults`**.
-3. Use the [`_like` operator](https://github.com/typicode/json-server#operators) available with json-server.
-4. You'll need to use chained `fetch` calls to each of the collections in your API and build up an object of found items.
-5. After all calls are successful, you'll need to use the `this.props.history.push()` method to show a **`SearchResults`** component.
-
-
-
-## Challenge: Multiple Database calls
-1. Modify your API to include an employeeId for each pet.
-2. Within the **`<AnimalList />`** component get the employee data and within each **`<AnimalCard />`** display the employee responsible for each pet.
-3. When changing multiple items in state, it is good practice to set a variable equal to the new data and then call `setState()` only once.
-
-```js
-  componentDidMount() {
-    const newState = {}
-
-    fetch("http://localhost:5002/animals")
-    .then(r => r.json())
-    .then(animals => newState.animals = animals)
-    .then(() => fetch("http://localhost:5002/employees")
-    .then(r => r.json()))
-    .then(employees => newState.employees = employees)
-    .then(() => this.setState(newState))
-  }
-```
-*[You could also use json-server "Relationships"](https://github.com/typicode/json-server)*
-
+1. Add a `path="/search"` route in your app that renders **`SearchResults`**.
+1. Use the [`_like` operator](https://github.com/typicode/json-server#operators) available with json-server.
+1. You'll need to use chained `fetch` calls to each of the collections in your API and build up an object of found items.
+1. After all calls are successful, you'll need to use the `props.history.push()` method to show a **`SearchResults`** component.
 
 
 ## Challenge: Animal Owners
-**Complete the chapter related to intial state and props before this challenge.**
+
+**Complete the chapter related to initial state and props before this challenge.**
 
 1. Create a join table and assign each animal to an owner.
 
@@ -101,5 +83,6 @@ You will need to load the owner's data within the **`<AnimalList />`** and then 
 
 
 ## Challenge: Reusable Form
+
 **Be sure to complete the chapter on Edit before tackling this challenge.**
 Refactor your application to use one form for the AnimalForm and the AnimalEditForm. Do the same for employees, locations, and owners.

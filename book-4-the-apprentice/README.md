@@ -8,7 +8,7 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * Chapter 4 - [React: State and Props](./chapters/COMPONENT_STATE_PROPS.md)
 * Chapter 5 - [React: Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md)
 * Chapter 6 - [React: Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md)
-* Chapter 7 - [React: Dynamic Routing Part 2 with Delete and loadingStatus](./chapters/REACT_DYNAMIC_ROUTING_PART2.md)
+* Chapter 7 - [React: Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md)
 * Chapter 8 - [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
 * Chapter 9 - [React: Create Animal With A Form](./chapters/REACT_FORMS.md)
 * Chapter 10 - [React: Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
@@ -19,18 +19,18 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * Chapter 13 - [React: Lifting state and passing props with Login](./chapters/REACT_LIFT_STATE_PASS_PROPS.md)
 * Chapter 14 - [React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md)
 
-
 **More Good Stuff**
+
 * Chapter 15 - [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
-* Chapter 16 - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
+* Chapter 16 - [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
+* Chapter 17 - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
 
 > ## Sprint 4: Reactive Nutshell
 
+> ### LinkedIn Projects update with Reactive Nutshell
 
-> ### LinkedIn Projects update with Reactive Nuthsell
-
-* Chapter 17 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
-* Chapter 18 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
+* Chapter 18 - [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+* Chapter 19 - [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
 * Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 > ## **Begin Client Side Capstone Development**

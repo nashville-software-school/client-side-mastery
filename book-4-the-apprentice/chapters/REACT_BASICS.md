@@ -50,31 +50,30 @@ Here is a simple example of a React component. Please read through the following
 > src/components/Kennel.js
 
 ```jsx
+import React from "react";
+import "./Kennel.css";
 
-import React, { Component } from 'react'
-import './Kennel.css'
+const Kennel = () => {
+  return (
+    <div>
+      <h2>
+        Student Kennels
+        <br />
+        <small>Loving care when you're not there.</small>
+      </h2>
+      <address>
+        Visit Us at the Nashville North Location
+        <br />
+        500 Puppy Way
+      </address>
+    </div>
+  );
+};
 
-class Kennel extends Component {
-    render() {
-        return (
-            <div>
-                <h2>Student Kennels<br />
-                    <small>Loving care when you're not there.</small>
-                </h2>
-                <address>
-                    Visit Us at the Nashville North Location
-                    <br />500 Puppy Way
-                </address>
-            </div>
-        );
-    }
-}
-
-export default Kennel
+export default Kennel;
 ```
 
 Some of this looks familiar, sort of. This is simply another way of building a JavaScript object (Kennel) that has a single property -- a method called render -- that returns an HTML representation of some (hard-coded) data. You've done all of that before.
-
 
 That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code, so we can better visualize what the eventual rendered HTML structure will look like.
 
@@ -83,41 +82,39 @@ Even though we write `<Kennel>` in React code, which looks like an HTML element,
 To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Kennel from './components/Kennel';
+import React from "react";
+import ReactDOM from "react-dom";
+import Kennel from "./components/Kennel";
 
-ReactDOM.render(<Kennel />, document.getElementById('root'));
-
+ReactDOM.render(<Kennel />, document.getElementById("root"));
 ```
-
 
 ### Child Component
 
-After the company information, we want to list all of the animals. I **could** hard code them inside the kennel component, but as a good developer, I try to adhere to the *Single Responsibility Principle* whenever I can.
+After the company information, we want to list all of the animals. I **could** hard code them inside the kennel component, but as a good developer, I try to adhere to the _Single Responsibility Principle_ whenever I can.
 
 Therefore, I'm going to create another component for displaying an animal. Consider how we have structured our previous projects and make a new file specific to the animal display. Copy pasta this code into a new file called `AnimalCard.js`.
 
 > src/components/animal/AnimalCard.js
 
 ```jsx
-import React, { Component } from 'react';
+import React from "react";
 
-class AnimalCard extends Component {
-  render() {
-    return (
-      <div className="card">
-        <div className="card-content">
-          <picture>
-            <img src={require('./dog.svg')} alt="My Dog" />
-          </picture>
-          <h3>Name: <span className="card-petname">Doodles</span></h3>
-          <p>Breed: Poodle</p>
-        </div>
+const AnimalCard = () => {
+  return (
+    <div className="card">
+      <div className="card-content">
+        <picture>
+          <img src={require("./dog.svg")} alt="My Dog" />
+        </picture>
+        <h3>
+          Name: <span className="card-petname">Doodles</span>
+        </h3>
+        <p>Breed: Poodle</p>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default AnimalCard;
 ```
@@ -128,41 +125,40 @@ Right click and save this image to the above location.
 
 ![Dog icon](./images/dog.svg)
 
-
-This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<AnimalCard />`. JSX interprets this as a component and will render the class you defined.
+This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<AnimalCard />`. JSX interprets each occurrence of `<AnimalCard />` as a component and will render each one as part of the process of rendering the `<Kennel>` component.
 
 Update your **`Kennel`** component. Now when the **`Kennel`** component is rendered it will render the **`AnimalCard`** component. We can say that the Kennel component is a parent of the AnimalCard component. (Starting Kennel.css is below.)
 
 ```jsx
-import React, { Component } from 'react'
-import AnimalCard from './animal/AnimalCard'
-import './Kennel.css'
+import React from "react";
+import AnimalCard from "./animal/AnimalCard";
+import "./Kennel.css";
 
-class Kennel extends Component {
-  render() {
-    return (
+const Kennel = () => {
+  return (
+    <div>
       <div>
-        <div>
-          <h2>Student Kennels<br />
-            <small>Loving care when you're not there.</small>
-          </h2>
-          <address>
-            Visit Us at the Nashville North Location
-            <br />500 Puppy Way
-          </address>
-        </div>
-        <div>
-          <AnimalCard />
-          <AnimalCard />
-          <AnimalCard />
-        </div>
+        <h2>
+          Student Kennels
+          <br />
+          <small>Loving care when you're not there.</small>
+        </h2>
+        <address>
+          Visit Us at the Nashville North Location
+          <br />
+          500 Puppy Way
+        </address>
       </div>
-    );
-  }
-}
+      <div>
+        <AnimalCard />
+        <AnimalCard />
+        <AnimalCard />
+      </div>
+    </div>
+  );
+};
 
 export default Kennel;
-
 ```
 
 > **Note:** The render method for a React component can only return a single element that encompasses child elements.
@@ -171,7 +167,7 @@ export default Kennel;
 
 ```css
 /* Import the google web fonts you want to use */
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Patua+One');
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
 /*Typography
 --------------------------------------------------------------*/
@@ -180,14 +176,19 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: 'Comfortaa', Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
+  color: #404040;
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Patua One', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
 
@@ -221,10 +222,8 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 ```
 
 ## Practice
+
 The Kennel App needs to include locations, owners, and employees. Create static card components for each (`LocationCard.js`, `OwnerCard.js` and `EmployeeCard.js`). This is another example of the Single Responsibility Principle. We should have a component whose sole responsibility is to render the location, or owner, or employee information. Follow the same directory structure and include the components in the JSX for **`Kennel`**.
-
-
