@@ -40,7 +40,7 @@ The first step is to create a date field.
 
 Then create an `<h1>` element above the form containing the text _Daily Journal_.
 
-Save your file. Go to the terminal. Type in `hs -o` ( _`hs` is an alias for running `http-server`. If you haven't created this particular alias yet, take a minute to do so. You'll be running this command a lot. `-o` is an optional command argument that tells it to launch your browser after starting the server_). Once the browser launches, open your dev tools to ensure you aren't viewing a cached version of the site. Refresh the browser if you need to.
+Save your file. Go to the terminal. Type in `serve`.Then go to Chrome and open your dev tools to ensure you aren't viewing a cached version of the site. Refresh the browser if you need to.
 
 You should see this.
 
