@@ -29,7 +29,7 @@ Before we include the delete functionality in a component, consider following:
 1. Invoke a `handleDelete` function which will invoke the AnimalManager delete function, be sure to pass the id.
 1. Once an item is deleted, we should invoke the AnimalManager `getAll()` method.
 1. With new data, invoke `setAnimals()` and set **animals** equal to the new data.
-1. Render is automatically called using the new state of animals.
+1. The component re-renders to display the new `animal` data.
 1. **`<AnimalList>`** render maps over the data and displays cards for each animal.
 
 **The component where state lives is the only place state can change. Children components cannot change state.**
