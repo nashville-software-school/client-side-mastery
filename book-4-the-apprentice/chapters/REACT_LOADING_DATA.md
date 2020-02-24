@@ -40,7 +40,7 @@ Currently, this is the flow of code in your application:
 1. `Kennel.js` renders the `<NavBar>` and `<ApplicationViews>`
 1. `<NavBar>` contains links to other views
 1. `<ApplicationViews>` renders routes based on the URL.
-1. When viewing the Animals section, `AnimalCard.js` will load up and invoke `render()`.
+1. When viewing the Animals section, `AnimalCard.js` will be rendered`.
 1. Our page displays.
 
 
