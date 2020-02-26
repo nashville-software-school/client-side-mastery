@@ -154,7 +154,7 @@ In the NavBar, highlight the active section. For example, if you are viewing `An
 
 1. Add a checkbox beneath the login form labeled _Remember Me_.
 2. When the customer logs in and the checkbox is not checked, then save their information to session storage
-3. When the customer logs in and the checkbox is checked, then save their information to session storage
+3. When the customer logs in and the checkbox is checked, then save their information to local storage
 4. **Tip** You will need to store the value of the checkbox in state.
 
 ![session versus local](./images/WwftJ1Ds2R.gif)
