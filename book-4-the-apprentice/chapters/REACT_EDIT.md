@@ -4,7 +4,6 @@ In this chapter, you are going to learn how to edit an animal's information. We 
 
 **_Quick Note_:** All of the code you will see from here to the end of this chapter needs to be in place before this feature will work.
 
-
 ## Create the AnimalEditForm Component
 
 This component will populate the input fields with the current values from the API. We will obtain the animal details via a fetch call using a `useEffect()` hook.
