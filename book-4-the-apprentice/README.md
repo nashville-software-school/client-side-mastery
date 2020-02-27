@@ -16,7 +16,7 @@ In this book, you will be learning the concepts and tools of React. React is a c
 
 **All of the above should be complete before proceeding.**
 
-* Chapter 12 - [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEREFFECT_DEPS.md)
+* Chapter 12 - [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEEFFECT_DEPS.md)
 * Chapter 13 - [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
 * Chapter 14 - [React: Lifting state and passing props with Login](./chapters/REACT_LIFT_STATE_PASS_PROPS.md)
 * Chapter 15 - [React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md)
