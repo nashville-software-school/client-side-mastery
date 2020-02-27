@@ -20,11 +20,11 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * Chapter 13 - [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
 * Chapter 14 - [React: Lifting state and passing props with Login](./chapters/REACT_LIFT_STATE_PASS_PROPS.md)
 * Chapter 15 - [React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md)
+* Chapter 16 - [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
 
 **More Good Stuff**
 
-* Chapter 16 - [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
-* Chapter 17 - [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
+* Chapter 17 - [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
 * Chapter 18 - [Tips and Shortcuts](./chapters/REACT_TIPS.md)
 
 > ## Sprint 4: Reactive Nutshell
