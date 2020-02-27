@@ -77,7 +77,7 @@ export default AnimalSpotlight;
 Notice the `<AnimalSpotlight>` component expects an `animalId` prop. We use this prop to get a single animal from the API.
 Also notice that we are passing an empty array in the `useEffect()` function call. We'll come back to this in a bit.
 
-Next, Next let's update the `<Home>` component.
+Next, let's update the `<Home>` component.
 
 > src/components/home/Home.js
 
