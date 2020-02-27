@@ -113,7 +113,7 @@ const AnimalForm = props => {
   */
   const constructNewAnimal = evt => {
     evt.preventDefault();
-    if (animal.Name === "" || animal.breed === "") {
+    if (animal.name === "" || animal.breed === "") {
       window.alert("Please input an animal name and breed");
     } else {
       setIsLoading(true);

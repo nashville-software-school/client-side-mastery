@@ -148,7 +148,7 @@ In the NavBar, highlight the active section. For example, if you are viewing `An
 
 > You'll need to import `withRouter` from `react-router-dom`.
 
-> You might want to heck out the docs for [`<NavLink>`](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/NavLink.md)
+> You might want to check out the docs for [`<NavLink>`](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/NavLink.md)
 
 ## Fun Challenge: Remember Me
 
