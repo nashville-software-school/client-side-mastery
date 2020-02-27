@@ -18,65 +18,64 @@ First let's add a new component to display the random animal. We'll call it `<An
 
 In the `src/components/animal/` folder, create the following files:
 
-* `AnimalSpotlight.js`
-* `AnimalSpotlight.css`
+- `AnimalSpotlight.js`
+- `AnimalSpotlight.css`
 
 > src/components/animal/AnimalSpotlight.css
 
 ```css
 .animal-spotlight {
-    max-width: 400px;
-    display: flex;
-    border: 1px dashed gray;
-    padding: 10px;
+  max-width: 400px;
+  display: flex;
+  border: 1px dashed gray;
+  padding: 10px;
 }
 
 .animal-spotlight img {
-    width: 200px;
-    margin-right: 20px;
+  width: 200px;
+  margin-right: 20px;
 }
 
 .animal-spotlight p {
-    color: black;
+  color: black;
 }
 ```
 
 > src/components/animal/AnimalSpotlight.js
 
 ```js
-import React, { useState, useEffect } from 'react';
-import AnimalManager from '../../modules/AnimalManager';
-import './AnimalSpotlight.css'
+import React, { useState, useEffect } from "react";
+import AnimalManager from "../../modules/AnimalManager";
+import "./AnimalSpotlight.css";
 
 const AnimalSpotlight = props => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
 
   useEffect(() => {
-    AnimalManager.get(props.animalId)
-      .then(animal => {
-        setAnimal({
-          name: animal.name,
-          breed: animal.breed,
-        });
+    AnimalManager.get(props.animalId).then(animal => {
+      setAnimal({
+        name: animal.name,
+        breed: animal.breed
       });
+    });
   }, []);
 
   return (
     <div className="animal-spotlight">
       <img src={require('./dog.svg')} alt="My Dog" />
-      <p>
+      <div>
         <h3>{animal.name}</h3>
-        <span>{animal.breed}</span>
-      </p>
+        <p>{animal.breed}</p>
+      </div>
     </div>
   );
-}
+};
 
 export default AnimalSpotlight;
 ```
 
-Notice the `<AnimalSpotlight>` component expects an `animalId` prop. We use this prop to get a single animal from the API. 
-Also notice that we are passing an empty array in the `useEffect()` function call. We'll come back to this in a big.
+Notice the `<AnimalSpotlight>` component expects an `animalId` prop. We use this prop to get a single animal from the API.
+Also notice that we are passing an empty array in the `useEffect()` function call. We'll come back to this in a bit.
 
 Next, Next let's update the `<Home>` component.
 
@@ -106,10 +105,8 @@ const Home = () => {
         500 Puppy Way
       </address>
       <h1>Animal Spotlight</h1>
-      <button onClick={refreshSpotlightAnimal}>
-        Reload &#x27f3;
-      </button>
-      <AnimalSpotlight animalId={spotlightId} />
+      <button onClick={refreshSpotlightAnimal}>Reload &#x27f3;</button>
+      {spotlightId && <AnimalSpotlight animalId={spotlightId} />}
     </>
   );
 };
@@ -144,17 +141,32 @@ Also, note that clicking the "reload" button has no affect on the `<AnimalSpotli
 
 To fix this issue, we must tell React to watch the `animalId` prop. We do that by including it in the `useEffect()` array argument.
 
-
 ```js
 useEffect(() => {
-  AnimalManager.get(props.animalId)
-    .then(animal => {
-      setAnimal({
-        name: animal.name,
-        breed: animal.breed,
-      });
+  AnimalManager.get(props.animalId).then(animal => {
+    setAnimal({
+      name: animal.name,
+      breed: animal.breed
     });
+  });
 }, [props.animalId]);
 ```
 
 Now try the app again and notice that it works as expected. When the `animalId` prop changes, the `useEffect()` runs again to retrieve a new animal.
+
+### Conditional Rendering
+
+Did you notice this line in the `<Home>` component?
+
+```jsx
+{
+  spotlightId && <AnimalSpotlight animalId={spotlightId} />;
+}
+```
+
+This is a common approach to _conditional rendering_. The `<AnimalSpotlight>` will only be rendered if the `spotlightId` variable is "_truthy_" (as opposed to "_falsy_"). The value of `0` is _falsy_ any other number is _truthy_.
+
+#### Resources
+
+- [Conditional Rendering with &&](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator)
+- [Truthy Values](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) and [Falsy Values](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
