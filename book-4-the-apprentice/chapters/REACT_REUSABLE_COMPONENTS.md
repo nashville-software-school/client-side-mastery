@@ -84,7 +84,7 @@ We need to add a button to the **`<EmployeeCard>`** for details using `history.p
 
 ```jsx
 <button type="button"
-        onClick={() => { this.props.history.push(`/employees/${this.props.employee.id}/details`) }}>Details</button>
+        onClick={() => { props.history.push(`/employees/${props.employee.id}/details`) }}>Details</button>
 ```
 
 We also need to add a route to **`<ApplicationViews>`** to handle displaying details of a single employee. This route will return a new component: **`<EmployeeWithAnimals>`** which we will build next. Notice that we are passing `{...props}` to enable access to react-router-dom properties.
