@@ -87,7 +87,7 @@ const [isLoading, setIsLoading] = useState(false);
 
 The input fields will have corresponding id's:
 
-1. `<input id="animalName" ... />`
+1. `<input id="name" ... />`
 2. `<input id="breed" ... />`
 
 We will also incorporate `isLoading` (Dynamic Routing Part 2) so a user cannot select the button multiple times.
@@ -135,7 +135,7 @@ const AnimalForm = props => {
               id="name"
               placeholder="Animal name"
             />
-            <label htmlFor="animalName">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               required
