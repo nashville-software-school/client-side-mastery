@@ -106,7 +106,9 @@ const Home = () => {
       </address>
       <h1>Animal Spotlight</h1>
       <button onClick={refreshSpotlightAnimal}>Reload &#x27f3;</button>
-      {spotlightId && <AnimalSpotlight animalId={spotlightId} />}
+      {
+        spotlightId && <AnimalSpotlight animalId={spotlightId} />
+      }
     </>
   );
 };
@@ -156,7 +158,7 @@ Now try the app again and notice that it works as expected. When the `animalId` 
 
 ### Conditional Rendering
 
-Did you notice this line in the `<Home>` component?
+Did you notice this code in the `<Home>` component?
 
 ```jsx
 {
