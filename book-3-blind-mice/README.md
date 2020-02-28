@@ -16,4 +16,3 @@
 | 10 |  |  | [Campaign Donations](./chapters/PAC_DONATIONS.md) |
 | 11 |  |  | [Sponsored Legislation](./chapters/LEGISLATION.md) |
 | 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |
-
