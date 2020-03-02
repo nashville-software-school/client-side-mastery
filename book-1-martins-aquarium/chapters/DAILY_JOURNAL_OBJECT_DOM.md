@@ -28,9 +28,10 @@ In your `JournalDataProvider.js` module, place the following code at the top.
  *      the entries for different purposes.
  */
 
-// This is the original data. Can't Touch This.
+// This is the original data.
 const journal = [
     {
+        id: 1,
         date: "07/24/2025",
         concept: "HTML & CSS",
         entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
@@ -54,6 +55,20 @@ export const useJournalEntries = () => {
 ### More Journal Entries
 
 Take a few minutes and add two or three more JavaScript objects to represent journal entries for some other things that you have learned about so far at NSS.
+
+Make sure you increment the `id` property of each journal entry by 1 each time you add a new object. For example, if you manually create another one right now it should looks like this.
+
+Note the `id` property value is 2.
+
+```json
+{
+    id: 2,
+    date: "07/26/2025",
+    concept: "Complex Flexbox",
+    entry: "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
+    mood: "Sad"
+}
+```
 
 Add those new objects to your journal entries array. Make sure you separate each object with a comma, and do not put a comma after the last one.
 
