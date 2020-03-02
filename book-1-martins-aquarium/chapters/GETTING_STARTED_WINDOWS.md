@@ -76,7 +76,7 @@ After a while, you will be prompted with a message asking for permissions. Using
 `serve` is what you will use to make your web sites work in the browser. Open Windows Terminal, (in a new Ubuntu Tab), if you haven't yet, and type in the following command:
 
 ```sh
-sudo npm i -g serve
+sudo npm i -g serve json-server
 ```
 
 ### Create SSH key
