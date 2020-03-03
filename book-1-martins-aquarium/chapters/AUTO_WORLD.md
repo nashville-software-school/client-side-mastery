@@ -2,15 +2,15 @@
 
 Your task in this group project is to use your newfound skills of automation, and rebuild your travel brochure site using objects, arrays, components, modules, dialogs, CSS selectors, Flexbox, data providers, and event listeners.
 
-Each city, each landmark, and each head of state must be represented in application state as objects. This means that you will need three separate data providers for your application.
+Each city, each landmark, and each head of state must be represented in application state as objects.
 
-You will need three list components.
+This means that you will need multiple separate data providers for your application.
 
-You will need three individual item components.
+You will need multiple list components.
 
-You will need three main components.
+You will need multiple individual item components.
 
-A suggestion is to create three sub-directories under `scripts`. If, for example, your team chose Turkey, Morocco, Tanzania, and Indonesia, you would have the following main modules.
+A suggestion is to create multiple sub-directories under `scripts`. If, for example, your team chose Turkey, Morocco, Tanzania, and Indonesia, you would have the following main modules.
 
 ```sh
 mkdir scripts/turkey
