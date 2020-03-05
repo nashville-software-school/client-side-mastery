@@ -1,16 +1,12 @@
 # Automating the World
 
-Your task in this group project is to use your newfound skills of automation, and rebuild your travel brochure site using objects, arrays, components, modules, dialogs, CSS selectors, Flexbox, data providers, and event listeners.
+Your task in this group project is to use your newfound skills of automation, and rebuild your travel brochure site using objects, arrays, components, modules, CSS selectors, Flexbox, and data providers.
 
-Each city, each landmark, and each head of state must be represented in application state as objects.
-
-This means that you will need multiple separate data providers for your application.
-
-You will need multiple list components.
-
-You will need multiple individual item components.
+Each city, each landmark, and each head of state must be represented in application state as objects. This means that you will need multiple separate data providers, list components, and HTML representation components for each page.
 
 A suggestion is to create multiple sub-directories under `scripts`. If, for example, your team chose Turkey, Morocco, Tanzania, and Indonesia, you would have the following main modules.
+
+> **Note:** Do not make any properties on your resources that involve presentation - like class names, or HTML tags. Only the properties of the resource should be on each object.
 
 ```sh
 mkdir scripts/turkey

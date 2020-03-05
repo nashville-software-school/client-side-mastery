@@ -37,7 +37,38 @@ The `id` no longer has `sam` in it. It now has `Sam` in it. That capital S makes
 
 ![](./images/fish-html-capital-name.png)
 
-## Getting the Name Right
+## Using the Fish Name to Connect the Dots
+
+```html
+<button class="button--Sam">Details</button>
+<dialog class="dialog--fish" id="details--Sam">
+```
+
+What is the common characters between the `class` of the button and the `id` of the dialog?
+
+It's `Sam`.
+
+Since both elements share a common subset of characters, you can use that commonality to make them work together.
+
+Work together?
+
+Well, yes. When you click the button for Sam, you want the dialog for Sam to become visible.
+
+Here's how you can do that.
+
+> #### `scripts/dialog.js`
+
+```js
+document.addEventListener("click", clickEvent => {
+    // Get the id of the element that was clicked
+    const elementId = clickEvent.target.id
+
+    /*
+        If you click on the button for Sam, the elementId
+        variable will have the value of `button--Sam`
+    */
+})
+```
 
 You could just modify every event listener, manually, to match the uppercased name of each fish, but then you are back to doing manual work over, and over again if new fish are added or existing ones are removed. You need to write code that automatically handles the user clicking on **ANY** of the detail buttons.
 

@@ -100,9 +100,17 @@ for (const number of numbers) {
 
 You need to build three functions in your fish data provider. One to return an array of fish that are multiples of 3 in length, one for multiples of 5, and one for all others.
 
+Some starter code is provided below. Use the example code blocks above to have each function filter out the appropriate fish.
+
 ```js
 export const mostHolyFish () => {
     // 3, 6, 9, 12, etc... fish
+    const holyFish = []
+
+    for () {
+
+    }
+
     return holyFish
 }
 
