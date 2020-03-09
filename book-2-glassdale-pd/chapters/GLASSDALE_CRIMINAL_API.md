@@ -1,6 +1,6 @@
 # The Glassdale PD Criminal API
 
-For this book, you will be consuming the Glassdale Police Department Criminal API (http://criminals.glassdale.us) to help you do your job as a highly technical police detective.
+For this book, you will be consuming the Glassdale Police Department Criminal API (https://criminals.glassdale.us) to help you do your job as a highly technical police detective.
 
 ## Setup
 
