@@ -2,7 +2,158 @@
 
 The idea of Coupling in complex software is an important factor. Coupling is defined most generally as how many components know about the existence of each other. The higher that number, the higher your overall coupling is in an application. You want that number to be as low as possible.
 
-Consider the following example. You have two modules in your system responsible for rendering HTML components.
+Consider the following example application that lists text messages your receive from your friends.
+
+## Text Message Reading Application
+
+You'll make millions. No one has ever come up with such a brilliant idea as allowing people to read _all_ of their text messages in ONE, GIANT, LIST.
+
+### HTML
+
+You start off with a standard `index.html` page with a container and a single child article tag. Then you include your main JavaScript module.
+
+> #### `index.html`
+
+```html
+<main id="container">
+    <article id="messages"></article>
+</main>
+
+<script type="module" src="./scripts/main.js"></script>
+```
+
+### Message HTML Generator Component
+
+> #### `scripts/messages/Message.js`
+
+```js
+export const Message = messageObject => {
+    return `
+        <section class="message">${messageObject.friend}: ${messageObject.text}</section>
+    `
+}
+```
+
+### Message List Component
+
+> #### `scripts/messages/MessageList.js`
+
+```js
+import { useMessages } from "./MessageProvider.js"
+import { Message } from "./Message.js"
+
+const contentTarget = document.querySelector("#messages")
+
+/*
+    COMPONENT FUNCTION
+*/
+export const MessageList = () => {
+    const allMessages = useMessages()
+    render(allMessages)
+}
+
+/*
+    RENDERING FUNCTION
+*/
+const render = messageArray => {
+    const convertedMessages = messageArray.map(messageObject => {
+        const messageHTML = Message(messageObject)
+        return messageHTML
+    })
+    const combinedSections = convertedMessages.join("")
+    contentTarget.innerHTML = combinedSections
+}
+```
+
+### Message Data
+
+> #### `scripts/messages/MessageDataProvider.js`
+
+```js
+let messages = [
+    { friend: "Yolanda", text: "Would you like to come over for coffee this morning?" },
+    { friend: "Dominic", text: "The twins won't stop crying." },
+    { friend: "Tamela", text: "Since when does Johnathan like hamburgers?" },
+    { friend: "Sally", text: "I saw a dolphin eat a bird." },
+    { friend: "Dominic", text: "I got a flat tire this morning. I'll be late." },
+    { friend: "Sally", text: "I'm going to Vegas this weekend for a professional conference." },
+    { friend: "Tamela", text: "I like margeritas!" },
+    { friend: "Yolanda", text: "April saw Mike walking in the park yesterday instead of being at work." }
+    { friend: "Sally", text: "Where is Kazakhstan?" },
+    { friend: "Yolanda", text: "I didn't get any sleep last night." },
+    { friend: "Tamela", text: "I nailed the presentation at work today!" },
+    { friend: "Dominic", text: "I think Florida beaches are the best." },
+]
+
+export const useMessages = () => {
+    return messages.slice()
+}
+```
+
+### Theme Buttons Module
+
+The people in marketing and design had this "brilliant" idea that if you let people customize the background of the message list, they would be "more engaged" and "easily retained". Of course, you realize quickly that this is a ridiculous idea, but you get paid to implement technical solution things responsibly and ethically - not make product decisions.
+
+> #### `scripts/themes/themes.js`
+
+```js
+const contentTarget = document.querySelector("#themes")
+
+export const ThemeButtons = () => {
+    contentTarget.innerHTML = `
+        <button class="themeButton" id="themeButton--red">Red</button>
+        <button class="themeButton" id="themeButton--purple">Purple</button>
+        <button class="themeButton" id="themeButton--blue">Blue</button>
+        <button class="themeButton" id="themeButton--green">Green</button>
+    `
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You have two modules in your system responsible for rendering HTML components.
 
 ## Tightly Coupled Components
 
@@ -101,9 +252,15 @@ export const useMessages = () => {
 }
 
 export const getMessagesByFriend = friend => {
-    const friendMessages = messages.slice()
+    const friendMessages = useMessages()
     const filteredMessages = friendMessages.filter(
-        m => m.friend === friend
+        message => {
+            /*
+              Returns true or false. If true, current message
+              goes into new array.
+            */
+            return message.friend === friend
+        }
     )
 
     return filteredMessages
@@ -118,7 +275,12 @@ import { getMessagesByFriend } from "./MessageProvider.js"
 
 const contentTarget = document.querySelector(".messages")
 
-// BAD: Creates a coupling between the two components
+/*
+    BAD: Creates a coupling between the two components.
+        The next two lines of code assume that another
+        component exists, and has a specific class name,
+        and emits a specific browser-generated event.
+*/
 const friendListSection = document.querySelector(".friends")
 
 // Listen for when a friend is selected

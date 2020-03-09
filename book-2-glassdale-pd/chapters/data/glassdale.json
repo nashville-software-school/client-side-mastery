@@ -3223,48 +3223,168 @@
         }
     ],
     "crimes": [
-        "arson",
-        "murder",
-        "grand theft",
-        "vandalism",
-        "assault",
-        "battery",
-        "conspiracy to commit murder",
-        "tax evasion",
-        "theft",
-        "assault with a deadly weapon",
-        "manslaughter",
-        "blackmail",
-        "bribery",
-        "burglary",
-        "forgery",
-        "fraud",
-        "mail fraud",
-        "larceny",
-        "kidnapping",
-        "extortion",
-        "false imprisonment",
-        "criminal negligence",
-        "child abuse",
-        "animal abuse"
+        {
+            "name": "arson",
+            "id": 1
+        },
+        {
+            "name": "murder",
+            "id": 2
+        },
+        {
+            "name": "grand theft",
+            "id": 3
+        },
+        {
+            "name": "vandalism",
+            "id": 4
+        },
+        {
+            "name": "assault",
+            "id": 5
+        },
+        {
+            "name": "battery",
+            "id": 6
+        },
+        {
+            "name": "conspiracy to commit murder",
+            "id": 7
+        },
+        {
+            "name": "tax evasion",
+            "id": 8
+        },
+        {
+            "name": "theft",
+            "id": 9
+        },
+        {
+            "name": "assault with a deadly weapon",
+            "id": 10
+        },
+        {
+            "name": "manslaughter",
+            "id": 11
+        },
+        {
+            "name": "blackmail",
+            "id": 12
+        },
+        {
+            "name": "bribery",
+            "id": 13
+        },
+        {
+            "name": "burglary",
+            "id": 14
+        },
+        {
+            "name": "forgery",
+            "id": 15
+        },
+        {
+            "name": "fraud",
+            "id": 16
+        },
+        {
+            "name": "mail fraud",
+            "id": 17
+        },
+        {
+            "name": "larceny",
+            "id": 18
+        },
+        {
+            "name": "kidnapping",
+            "id": 19
+        },
+        {
+            "name": "extortion",
+            "id": 20
+        },
+        {
+            "name": "false imprisonment",
+            "id": 21
+        },
+        {
+            "name": "criminal negligence",
+            "id": 22
+        },
+        {
+            "name": "child abuse",
+            "id": 23
+        },
+        {
+            "name": "animal abuse",
+            "id": 24
+        }
     ],
     "officers": [
-        "Marques Balistreri",
-        "Alessia Bailey",
-        "Lazaro Leuschke",
-        "Braden Stoltenberg",
-        "Betty Flatley",
-        "Lilian Pfannerstill",
-        "Karolann Green",
-        "Terrence Parisian",
-        "Arne Carroll",
-        "Coleman Rau",
-        "Marlin Oberbrunner",
-        "Katherine Thompson",
-        "Margaret Debrowski",
-        "Sydnee Howell",
-        "Ryleigh West",
-        "Gino Hill"
+        {
+            "name": "Marques Balistreri",
+            "id": 1
+        },
+        {
+            "name": "Alessia Bailey",
+            "id": 2
+        },
+        {
+            "name": "Lazaro Leuschke",
+            "id": 3
+        },
+        {
+            "name": "Braden Stoltenberg",
+            "id": 4
+        },
+        {
+            "name": "Betty Flatley",
+            "id": 5
+        },
+        {
+            "name": "Lilian Pfannerstill",
+            "id": 6
+        },
+        {
+            "name": "Karolann Green",
+            "id": 7
+        },
+        {
+            "name": "Terrence Parisian",
+            "id": 8
+        },
+        {
+            "name": "Arne Carroll",
+            "id": 9
+        },
+        {
+            "name": "Coleman Rau",
+            "id": 10
+        },
+        {
+            "name": "Marlin Oberbrunner",
+            "id": 11
+        },
+        {
+            "name": "Katherine Thompson",
+            "id": 12
+        },
+        {
+            "name": "Margaret Debrowski",
+            "id": 13
+        },
+        {
+            "name": "Sydnee Howell",
+            "id": 14
+        },
+        {
+            "name": "Ryleigh West",
+            "id": 15
+        },
+        {
+            "name": "Gino Hill",
+            "id": 16
+        }
     ],
     "witnesses": [
         {

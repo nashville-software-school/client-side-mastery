@@ -56,7 +56,7 @@ That's the raw data that should _**always remain unchanged**_. Since you want to
 */
 const lastNames = names.map(
     fullName => {
-        [firstName, lastName] = fullName.split(" ")
+        const [firstName, lastName] = fullName.split(" ")
         return lastName
     }
 )
@@ -73,9 +73,10 @@ const nameListContainer = document.querySelector(".names")
 nameListContainer.innerHTML = `
     <select>
         ${
-            names.map(name =>
-                `<option>${name.split(" ")[1]}</option>`
-            )
+            names.map(name => {
+                const [first, last] = name.split(" ")
+                return `<option>${last}</option>`
+            })
         }
     </select>
 `
@@ -92,7 +93,7 @@ The **`ConvictionProvider`** component will follow the same structure as your **
 ```js
 let convictions = []
 
-export const useConvictions = () => convictions
+export const useConvictions = () => convictions.slice()
 
 export const getConvictions = () => {
     /*
@@ -134,7 +135,7 @@ const ConvictionSelect = () => {
         contentTarget.innerHTML = `
             <select class="dropdown" id="crimeSelect">
                 <option value="0">Please select a crime...</option>
-
+                ${ what goes here? }
             </select>
         `
     }

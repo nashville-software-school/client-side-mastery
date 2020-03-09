@@ -66,7 +66,7 @@ In JavaScript, you are going to be using the Fetch API. It provides you with a `
 let officers = []
 
 export const useOfficers = () => {
-    return officers
+    return officers.slice()
 }
 
 export const getOfficers = () => {
@@ -75,7 +75,7 @@ export const getOfficers = () => {
         .then(
             parsedOfficers => {
                 console.table(parsedOfficers)
-                officers = parsedOfficers.slice()
+                officers = parsedOfficers
             }
         )
 }
@@ -96,7 +96,7 @@ Here's the pattern for a fetch call.
     .then(
         parsedOfficers => {
             console.table(parsedOfficers)
-            officers = parsedOfficers.slice()
+            officers = parsedOfficers
         }
     )
     ```
@@ -127,7 +127,7 @@ Your first assignment is to pull all of the data from the API (see above) and di
     ```js
     let criminals = []
 
-    export const useCriminals = () => criminals
+    export const useCriminals = () => criminals.slice()
 
     export const getCriminals = () => {
         /*
