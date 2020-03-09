@@ -8,91 +8,28 @@ Consider the following example application that lists text messages your receive
 
 You'll make millions. No one has ever come up with such a brilliant idea as allowing people to read _all_ of their text messages in ONE, GIANT, LIST.
 
-### HTML
+### Install Application
 
-You start off with a standard `index.html` page with a container and a single child article tag. Then you include your main JavaScript module.
+Run the following command in your terminal.
 
-> #### `index.html`
-
-```html
-<main id="container">
-    <article id="messages"></article>
-</main>
-
-<script type="module" src="./scripts/main.js"></script>
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-39/book-2-glassdale-pd/chapters/scripts/basic-messages-install.sh)"
 ```
 
-### Message HTML Generator Component
+Then change directory to the application and start the web server.
 
-> #### `scripts/messages/Message.js`
-
-```js
-export const Message = messageObject => {
-    return `
-        <section class="message">${messageObject.friend}: ${messageObject.text}</section>
-    `
-}
+```sh
+cd ~/workspace/message-list
+hs
 ```
 
-### Message List Component
-
-> #### `scripts/messages/MessageList.js`
-
-```js
-import { useMessages } from "./MessageProvider.js"
-import { Message } from "./Message.js"
-
-const contentTarget = document.querySelector("#messages")
-
-/*
-    COMPONENT FUNCTION
-*/
-export const MessageList = () => {
-    const allMessages = useMessages()
-    render(allMessages)
-}
-
-/*
-    RENDERING FUNCTION
-*/
-const render = messageArray => {
-    const convertedMessages = messageArray.map(messageObject => {
-        const messageHTML = Message(messageObject)
-        return messageHTML
-    })
-    const combinedSections = convertedMessages.join("")
-    contentTarget.innerHTML = combinedSections
-}
-```
-
-### Message Data
-
-> #### `scripts/messages/MessageDataProvider.js`
-
-```js
-let messages = [
-    { friend: "Yolanda", text: "Would you like to come over for coffee this morning?" },
-    { friend: "Dominic", text: "The twins won't stop crying." },
-    { friend: "Tamela", text: "Since when does Johnathan like hamburgers?" },
-    { friend: "Sally", text: "I saw a dolphin eat a bird." },
-    { friend: "Dominic", text: "I got a flat tire this morning. I'll be late." },
-    { friend: "Sally", text: "I'm going to Vegas this weekend for a professional conference." },
-    { friend: "Tamela", text: "I like margeritas!" },
-    { friend: "Yolanda", text: "April saw Mike walking in the park yesterday instead of being at work." }
-    { friend: "Sally", text: "Where is Kazakhstan?" },
-    { friend: "Yolanda", text: "I didn't get any sleep last night." },
-    { friend: "Tamela", text: "I nailed the presentation at work today!" },
-    { friend: "Dominic", text: "I think Florida beaches are the best." },
-]
-
-export const useMessages = () => {
-    return messages.slice()
-}
-```
+Visit http://localhost:8080 in Chrome to view your list of messages.
 
 ### Theme Buttons Module
 
 The people in marketing and design had this "brilliant" idea that if you let people customize the background of the message list, they would be "more engaged" and "easily retained". Of course, you realize quickly that this is a ridiculous idea, but you get paid to implement technical solution things responsibly and ethically - not make product decisions.
+
+Add the following file to your application.
 
 > #### `scripts/themes/themes.js`
 
@@ -153,9 +90,7 @@ export const ThemeButtons = () => {
 
 
 
-You have two modules in your system responsible for rendering HTML components.
-
-## Tightly Coupled Components
+## Another Example of Coupled Components
 
 Starting off with this default HTML structure in the `index.html` file, the **`FriendList`** component will be rendered in the first section, and the **`MessageList`** component will be rendered in the second section.
 
@@ -165,12 +100,9 @@ When the user chooses a friend in the first component, the second component will
 
 ```html
 <body>
-    <main id="appContainer" class="container">
-
+    <main class="container">
         <section class="friends"></section>
-
         <section class="messages"></section>
-
     </main>
 
     <script type="module" src="./scripts/main.js"></script>
@@ -356,7 +288,7 @@ In your application, your components will use a common system for talking to eac
 In this application, the agreed-upon location will be the top-most DOM element.
 
 ```html
-<main id="appContainer" class="container">
+<main class="container">
 ```
 
 That is going to be the event hub because it's the element in which all components will be children of.
