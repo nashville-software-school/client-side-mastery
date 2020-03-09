@@ -14,8 +14,8 @@ echo '<!doctype html>
     </head>
 
     <body>
-        <main id="container">
-            <div id="messages"></div>
+        <main class="container">
+            <div class="messages"></div>
         </main>
 
         <script type="module" src="./scripts/main.js"></script>
@@ -50,16 +50,20 @@ h1,h2,h3,h4,h5,h6 {
 .green {
     background-color: darkseagreen;
 }
+
 .purple {
     background-color: mediumorchid;
 }
+
 .red {
     background-color: darksalmon;
-}' >> ./styles/main.css
+}
+' >> ./styles/main.css
 
 echo 'import { MessageList } from "./messages/MessageList.js"
 
-MessageList()' >> ./scripts/main.js
+MessageList()
+' >> ./scripts/main.js
 
 echo 'let messages = [
     { friend: "Sally", text: "I saw a dolphin eat a bird." },
@@ -84,7 +88,7 @@ export const useMessages = () => {
 echo 'import { useMessages } from "./MessageProvider.js"
 import { Message } from "./Message.js"
 
-const contentTarget = document.querySelector("#messages")
+const contentTarget = document.querySelector(".messages")
 
 /*
     COMPONENT FUNCTION
@@ -104,12 +108,12 @@ const render = messageArray => {
     })
     const combinedSections = convertedMessages.join("")
     contentTarget.innerHTML = combinedSections
-}' >> ./scripts/messages/MessageList.js
+}
+' >> ./scripts/messages/MessageList.js
 
 echo 'export const Message = messageObject => {
     return `
         <section class="message">${messageObject.friend}: ${messageObject.text}</section>
     `
-}' >> ./scripts/messages/Message.js
-
-# serve -l 8080
+}
+' >> ./scripts/messages/Message.js
