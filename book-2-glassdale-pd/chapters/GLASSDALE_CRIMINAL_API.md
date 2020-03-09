@@ -70,7 +70,7 @@ export const useOfficers = () => {
 }
 
 export const getOfficers = () => {
-    return fetch("http://criminals.glassdale.us/officers")
+    return fetch("https://criminals.glassdale.us/officers")
         .then(response => response.json())
         .then(
             parsedOfficers => {
@@ -85,7 +85,7 @@ Here's the pattern for a fetch call.
 
 1. Request the data
     ```js
-    fetch("http://criminals.glassdale.us/officers")
+    fetch("https://criminals.glassdale.us/officers")
     ```
 1. Convert the JSON string response to a JavaScript data structure (object or array)
     ```js
