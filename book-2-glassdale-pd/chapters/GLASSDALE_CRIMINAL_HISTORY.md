@@ -39,43 +39,47 @@ You need to create two, new components in your application
 
 Before you get started on your code, here is a review of how to use the `.map()` array method to iterate a collection, and convert every item in that collection into something else.
 
-Assume that you have a list of people's full names in an array.
+Assume that you have a list of people objects in an array.
 
 ```js
-const names = ['Caitlin Stein', 'Ryan Tanay', 'Leah Hoefling', 'Emily Lemmon', 'Bryan Nilson', 'Jenna Solis', 'Meg Ducharme', 'Madi Peper', 'Kristen Norris']
+const people = [
+    { id: 1, name: "Caitlin Stein" },
+    { id: 2, name: "Ryan Tanay" },
+    { id: 3, name: "Leah Hoefling" },
+    { id: 4, name: "Emily Lemmon" },
+    { id: 5, name: "Bryan Nilson" },
+    { id: 6, name: "Jenna Solis" },
+    { id: 7, name: "Meg Ducharme" },
+    { id: 8, name: "Madi Peper" },
+    { id: 9, name: "Kristen Norris" }
+]
 ```
 
-That's the raw data that should _**always remain unchanged**_. Since you want to display only a list of last names in a dropdown list in your user interface, you would need to build a brand, new array containing those values. You can use `.map()` for that.
+That's the raw data that should _**always remain unchanged**_. You want to display only a list of names in a dropdown list in your user interface, you would need to build a brand, new array containing those values. You can use `.map()` for that.
 
 ```js
-/*
-    The .split() method creates an array of words from a single
-    string. It splits the single string into multiple strings
-    based on the parameter you send it. It uses that character
-    to do the splitting.
-*/
-const lastNames = names.map(
-    fullName => {
-        const [firstName, lastName] = fullName.split(" ")
-        return lastName
+const fullNames = people.map(
+    personObject => {
+        const valueToBeInNewArray = personObject.name
+        return valueToBeInNewArray
     }
 )
 
-console.log(lastNames)
-// ['Stein', 'Tanay', 'Hoefling', 'Lemmon', 'Nilson', 'Solis', 'Ducharme', 'Peper', 'Norris']
+console.log(fullNames)
+// ['Caitlin Stein', 'Ryan Tanay', 'Leah Hoefling', 'Emily Lemmon', 'Bryan Nilson', 'Jenna Solis', 'Meg Ducharme', 'Madi Peper', 'Kristen Norris']
 ```
 
 Now imagine you want to fill a dropdown box in your UI with last names. First, you would get a reference to an existing element, like a `section` or a `div`, and update its `.innerHTML` property like in the example below.
 
 ```js
-const nameListContainer = document.querySelector(".names")
+const contentTarget = document.querySelector(".names")
 
-nameListContainer.innerHTML = `
+contentTarget.innerHTML = `
     <select>
         ${
-            names.map(name => {
-                const [first, last] = name.split(" ")
-                return `<option>${last}</option>`
+            people.map(personObject => {
+                const fullName = personObject.name
+                return `<option>${fullName}</option>`
             })
         }
     </select>
@@ -135,7 +139,9 @@ const ConvictionSelect = () => {
         contentTarget.innerHTML = `
             <select class="dropdown" id="crimeSelect">
                 <option value="0">Please select a crime...</option>
-                ${ what goes here? }
+                ${
+                    something.map()
+                }
             </select>
         `
     }
