@@ -29,12 +29,23 @@ Visit http://localhost:8080 in Chrome to view your list of messages.
 
 The people in marketing and design had this "brilliant" idea that if you let people customize the background of the message list, they would be "more engaged" and "easily retained". Of course, you realize quickly that this is a ridiculous idea, but you get paid to implement technical solution things responsibly and ethically - not make product decisions.
 
+Refactor your index.html file with the following addition.
+
+> #### `index.html`
+
+```html
+<main class="container">
+    <div class="messages"></div>
+    <div class="themes"></div>
+</main>
+```
+
 Add the following file to your application.
 
 > #### `scripts/themes/ThemeButtons.js`
 
 ```js
-const contentTarget = document.querySelector("#themes")
+const contentTarget = document.querySelector(".themes")
 
 export const ThemeButtons = () => {
     contentTarget.innerHTML = `
