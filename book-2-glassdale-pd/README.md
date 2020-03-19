@@ -12,13 +12,14 @@
 | 6 | [Case Notes API - Making Entries](./chapters/GLASSDALE_NOTES_API.md) | [Entry API](./chapters/DAILY_JOURNAL_FETCHING.md) | [Truncheons &amp; Flagons API](./chapters/TF_API.md) |
 | 7 | [What's Your Alibi?](./chapters/GLASSDALE_ALIBI.md) | [Journal Form Component](./chapters/DAILY_JOURNAL_FORM_COMPONENT.md) | [Adding Teams](./chapters/TF_FORMS.md) |
 | 8 | [Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md) | [Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md) | [Leaderboard / Team List](./chapters/TF_LEADERBOARD_TEAMS.md) |
-| 9 | [One to Many Relationships](./chapters/ONE_MANY.md) |  | [Adding Players](./chapters/TF_PLAYER_FORM.md) |
-| 10 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) |  |  |
-| 11 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) | [Selecting Teams for Game](./chapters/TF_CHOOSE_TEAMS.md) |
+| 9 | [Fundamental Workshop](./chapters/EVENTS_WORKSHOP.md) |  |  |
+| 10 | [One to Many Relationships](./chapters/ONE_MANY.md) |  | [Adding Players](./chapters/TF_PLAYER_FORM.md) |
+| 11 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) |  |  |
+| 12 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) | [Selecting Teams for Game](./chapters/TF_CHOOSE_TEAMS.md) |
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |
-| 12 | [Editing Case File Notes](./chapters/GLASSDALE_EDIT_NOTES.md) | [Editing Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md) | [Saving Round Scores](./chapters/TF_ROUND_FORM.md) |
-| 13 | [Arresting Officer](./chapters/GLASSDALE_ARRESTING_OFFICERS.md) | [Mood Filtering](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) |  |
-| 14 | [Finding the Common Thread](./chapters/GLASSDALE_MULTIPLE_PARAMS.md) | [Searching Entries](./chapters/DAILY_JOURNAL_SEARCHING.md) | [Updating Leaderboard](./chapters/TF_GAME_SCORES.md) |
+| 13 | [Editing Case File Notes](./chapters/GLASSDALE_EDIT_NOTES.md) | [Editing Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md) | [Saving Round Scores](./chapters/TF_ROUND_FORM.md) |
+| 14 | [Arresting Officer](./chapters/GLASSDALE_ARRESTING_OFFICERS.md) | [Mood Filtering](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) |  |
+| 15 | [Finding the Common Thread](./chapters/GLASSDALE_MULTIPLE_PARAMS.md) | [Searching Entries](./chapters/DAILY_JOURNAL_SEARCHING.md) | [Updating Leaderboard](./chapters/TF_GAME_SCORES.md) |
 
 ## Review Chapters
 
