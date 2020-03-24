@@ -79,6 +79,28 @@ After a while, you will be prompted with a message asking for permissions. Using
 sudo npm i -g serve json-server
 ```
 
+## Homebrew
+
+Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed.
+
+## Git
+
+Git is how you and your teammates will work on a shard codebase during your time at NSS. Type in the following command to install. You can install the required software using Homebrew, which you just installed in the step above.
+
+```sh
+brew install git
+brew install tig
+```
+
+### Configuring Git
+
+Once Git is done being installed, watch the video on how to [set up global Git configuration](https://youtu.be/66EB9oxGMzQ) so that you can successfully back up your code to Github in a few days... once we show you how to do it.
+
+### Handling Permission Issues After Setup
+
+Sometimes, a student has permission issues after installing and configuring Git. To ensure that this doesn't happen to you, watch the [Owning Your Git Config Directory](https://youtu.be/exva3J_jojc) video and follow the steps.
+
+
 ### Create SSH key
 
 SSH is a technology that allows you to create a very secure connection between your computer, and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files
@@ -86,4 +108,10 @@ SSH is a technology that allows you to create a very secure connection between y
 1. A public key file that you share with other people and computers. It is usually named `id_rsa.pub`.
 1. A private key file that you never, ever, ever, ever, ever share with anyone. It is usually named `id_rsa`.
 
-Follow the [Github instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux) for creating a new SSH key **FOR LINUX** (not Windows), and providing your public key to Github, so that you can establish a secure connection between your computer and Github's computers.
+### Creating Your SSH Key
+
+Watch a short video for [creating an SSH key in the terminal](https://youtu.be/znRMcNG9_qQ) so that you an work with Github.
+
+### Add SSH Key to Github Account
+
+Now watch the video for [adding your SSH key to your Github account](https://youtu.be/8hlmIObpMd4).
