@@ -82,6 +82,14 @@ brew install git
 brew install tig
 ```
 
+### Configuring Git
+
+Once Git is done being installed, watch the video on how to [set up global Git configuration](https://youtu.be/66EB9oxGMzQ) so that you can successfully back up your code to Github in a few days... once we show you how to do it.
+
+### Handling Permission Issues After Setup
+
+Sometimes, a student has permission issues after installing and configuring Git. To ensure that this doesn't happen to you, watch the [Owning Your Git Config Directory](https://youtu.be/exva3J_jojc) video and follow the steps.
+
 ## Oh My Zsh
 
 1. If you haven't install Homebrew from the previous step, please complete that first.
