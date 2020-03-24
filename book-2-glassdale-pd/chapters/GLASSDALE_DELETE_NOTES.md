@@ -4,40 +4,15 @@ As you keep notes during your investigation, you will eventually find that some 
 
 ## Adding Delete Button
 
-In your note component, add some HTML that displays a delete button. Below is example code you will need.
+In your note component, add the following button HTML.
 
 
 > #### `glassdale/scripts/notes/Note.js`
 
 ```js
-const NoteComponent = noteObject => `
-    <section class="note">
-        <div class="note__text">${noteObject.text}</div>
-        <div class="note__suspect">${noteObject.suspect}</div>
-        <div class="note__timestamp>${noteObject.timestamp}</div>
-        <button id="deleteNote--${noteObject.id}">Delete</button>
-    </section>
-`
-
-export default NoteComponent
+<button id="deleteNote--${noteObject.id}">Delete</button>
 ```
 
-> #### `glassdale/scripts/notes/NoteList.js`
-
-```js
-... awesome code above
-
-const render = notes => {
-    contentTarget.innerHTML = `
-        <h2>Cold Case Notes</h2>
-        ${
-            notes.map(note => NoteComponent(note)).join("")
-        }
-    `
-}
-
-... awesome code below
-```
 
 ## Adding a DELETE Operation
 
