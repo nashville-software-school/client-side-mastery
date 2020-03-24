@@ -24,19 +24,17 @@ Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
 
 Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NSS.
 
-## Software
-
-### Spectacle
+## Spectacle
 
 This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
 
 [Download and install Spectacle](https://www.spectacleapp.com/) and after it is installed, click on the link labeled _**keyboard shortcuts**_ on the web site to try it out.
 
-### Homebrew
+## Homebrew
 
 Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed.
 
-### Visual Studio Code
+## Visual Studio Code
 
 Visual Studio Code is the editor we will all be working on to start the course. To install it, run the following command
 
@@ -44,20 +42,20 @@ Visual Studio Code is the editor we will all be working on to start the course. 
 brew cask install visual-studio-code
 ```
 
-### Command Line Launcher
+## Command Line Launcher
 
 Set up Visual Studio Code to be [launched from the command line](https://code.visualstudio.com/docs/setup/mac).
 
 
-### Google Chrome
+## Google Chrome
 
 [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
 
-### Node
+## Node
 
 Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 
-### Node Packages
+## Node Packages
 
 Now that you have Node installed, you can install some open source software that you will need in the course.
 
@@ -84,7 +82,7 @@ brew install git
 brew install tig
 ```
 
-### Oh My Zsh
+## Oh My Zsh
 
 1. If you haven't install Homebrew from the previous step, please complete that first.
 1. Install zsh which is a powerful replacement for the standard bash terminal by typing the following command into the terminal
@@ -101,7 +99,7 @@ brew install tig
     alias hs="serve -l 8080"' >> ~/.zshrc
     ```
 
-### Show Hidden Files
+## Show Hidden Files
 
 While you have your terminal open, enter in the following command.
 
@@ -111,14 +109,17 @@ defaults write com.apple.finder AppleShowAllFiles YES
 
 This will allow you to view hidden files in the Finder app.
 
-### Create SSH key
+## SSH Key
 
 SSH is a technology that allows you to create a very secure connection between your computer, and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files
 
 1. A public key file that you share with other people and computers. It is usually named `id_rsa.pub`.
 1. A private key file that you never, ever, ever, ever, ever share with anyone. It is usually named `id_rsa`.
 
-Follow the [Github instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-mac) for creating a new SSH key, and providing your public key to Github, so that you can establish a secure connection between your computer and Github's computers.
+### Creating Your SSH Key
 
+Watch a short video for [creating an SSH key in the terminal](https://youtu.be/znRMcNG9_qQ) so that you an work with Github.
 
-<video controls src="./videos/create-ssh-key.webm"></video>
+### Add SSH Key to Github Account
+
+Now watch the video for [adding your SSH key to your Github account](https://youtu.be/8hlmIObpMd4).
