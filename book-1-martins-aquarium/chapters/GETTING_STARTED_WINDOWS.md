@@ -10,46 +10,47 @@ Up until now, you didn't have the power to destroy your machine, but within the 
 
 **Seriously, right now!**
 
-## Online Services
-
-### Github
+## Github
 
 Github is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
 
-### dbdiagram.io
+## dbdiagram.io
 
 Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
 
-### devdocs.io
+## devdocs.io
 
 Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NSS.
 
-## Software
-
-### Google Chrome
+## Google Chrome
 
 [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
 
-### Visual Studio Code
+## Visual Studio Code
 
 Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the editor you will be using for the next 6 months.
 
-### Install the Windows Subsystem for Linux
+## Enable the Windows Subsystem for Linux
 
-You'll need to install and enable the Windows Subsystem for Linux by:
+You'll need to install and enable the Windows Subsystem for Linux. You can follow the instructions below, or you can watch the [Enabling WSL in Powershell](https://youtu.be/Mzv6Pxppwoo) video to see how to enable the Linux subsystem.
+
 1. Go to the `Start` menu (windows key) and search for `PowerShell`.
-2. Run PowerShell as an Administrator. To do this, find the PowerShell application, then right-click on it and choose "Open as adminsitrator".
-3. Copy and paste this command into your PowerShell:
+1. Run PowerShell as an Administrator. To do this, find the PowerShell application, then right-click on it and choose "Open as administrator".
+1. Copy and paste this command into your PowerShell:
 
         Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
-4. Restart your computer when prompted to
+1. Restart your computer when prompted to
 
-Once you've completed the above steps **and** restarted your computer, you will install Ubuntu in the Microsoft Store [here](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab). We'll use this in the next step: Installing the Windows Terminal.
+## Install Ubuntu
 
-### Install Windows Terminal
+Once you've completed the above steps **and** restarted your computer, you will [install Ubuntu from the Microsoft Store](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot:overviewtab).
 
-Later in the instructions, we will ask you to type a command into your terminal. For Windows, this is the **Windows Terminal (Preview)** application using **Ubunutu**.
+This is needed before you instal the Windows Terminal below.
+
+## Install Windows Terminal
+
+Later in the instructions, we will ask you to type a command into your terminal. For Windows, this is the **Windows Terminal (Preview)** application using **Ubuntu**.
 
 Visit the [Windows Terminal (Preview)](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab) download page and open it in the Microsoft Store App. This will be your default terminal (using Ubuntu) which you will use to navigate your file system, and run development tools throughout the course.
 
@@ -62,7 +63,13 @@ Once Windows Terminal is installed:
 
 4. Once Ubuntu is done installing, you'll be prompted to create a new user (and its password).
 
-### Node
+## Ubuntu Starting Directory
+
+By default, when you start the Ubuntu shell in Windows Terminal, your starting directory is your Windows user directory. You need to change it so that it starts in your Linux user directory.
+
+Watch the [WSL Ubuntu Starting Directory](https://youtu.be/1hk6bWD8_5I) video to make that change.
+
+## Node
 
 You will install Node.js using the Windows Terminal. Open Windows Terminal, and in a **new Ubuntu Tab**, copy and paste the following lines:
 ```
@@ -71,7 +78,7 @@ sudo apt-get install -y nodejs
 ```
 After a while, you will be prompted with a message asking for permissions. Using the arrow keys on your keyboard, select **Yes** and hit the enter key to continue installing Node.js.
 
-### Web Server
+## Web Server
 
 `serve` is what you will use to make your web sites work in the browser. Open Windows Terminal, (in a new Ubuntu Tab), if you haven't yet, and type in the following command:
 
@@ -81,7 +88,9 @@ sudo npm i -g serve json-server
 
 ## Homebrew
 
-Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed.
+Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed. You will put the command they show you in your Windows Terminal with the Ubuntu shell running.
+
+If you want, you can watch the [Installing Homebrew](https://youtu.be/fz80EW8MnKQ) video which shows the process.
 
 ## Git
 
