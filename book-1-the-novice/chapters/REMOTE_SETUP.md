@@ -4,7 +4,7 @@
 
 As you know, we are running classes remotely until the experts let everyone know that it's time to reconvene. The tool you will be using is called Zoom. Here is what we need you to do.
 
-1. Visit the [Zoom sign up page](https://zoom.us/signup) and create an account with the same email address that you provided to us.
+1. Visit the [Zoom sign up page](https://zoom.us/signup) and create an account with the **_same email address that you provided to us_**. That's important.
 2. Then visit the [Zoom software download page](https://zoom.us/support/download) page, and the software will immediately start downloading to your machine.
 3. Once the software has been successfully downloaded, run the installer.
 4. That's it! On your first day of class, your senior instructor will share a meeting link with you. When you click on that link, the Zoom software will launch and you can join your classmates and your instructors in the remote classroom.
