@@ -55,49 +55,53 @@ displayName("Sequina", "Rodriguez")
 displayName("Jessawynne", "Parker")
 ```
 
-## Pure Functions
+## Return Statements
 
-A pure function is one that is consistent and has no effect on anything else in your system.
+In the example above, the function _does_ something-- it prints a name to the console. We can think of those as "verb" functions. Sometimes, a function needs to _make_ something. We can think of those functions as "noun" functions. (Note that these are not technical terms, just metaphors that might give you some context).
 
-```js
-const bugSquasher = function (bug, squasher) {
-    return `The ${bug} was squashed by the ${squasher}`
-}
-```
+For example, let's say we're building an application for a coffee shop. Our code needs to do three things:
+1. Calculate the price of a customer's order
+1. Print the price of the customer's order to the DOM
 
-That function will return the exact same value, given the same inputs every time.
+According to the *Single Responsibility Principle*, our functions should only have one job. That means we can write two distinct functions for each of these tasks.
 
 ```js
-bugSquasher("Beetle", "Boot")
-> The Beetle was squashed by the Boot
+// This function has to MAKE something-- it calculates an order total and spits it back out so other functions can use it
+function calculateOrderTotal(orderArray){
+    let sum;
 
-bugSquasher("Beetle", "Boot")
-> The Beetle was squashed by the Boot // Yep, same output
+    for(let i = 0; i < order.length; i++){
+        sum += order[i].price
+    }
 
-bugSquasher("Spider", "thing next to my hand when I saw it")
-> The Spider was squashed by the thing next to my hand when I saw it
-```
-
-## Impure Functions
-
-Impure functions produce different results upon execution...
-
-```js
-const noise = function () {
-  return Math.random()
+    return sum;
 }
 
-console.log(noise())   // ​​​​​0.8521188650079663​​​​​
-console.log(noise())   // 0.311073492244087​​​​​
-```
-
-or affect other parts of the system when executed.
-
-```js
-const updateDOM = function (message) {
-    const el = document.getElementById("messages")
-    el.innerHTML += message
+// This function DOES something-- it prints the order total to the DOM
+function printOrderTotal(orderTotal){
+    document.querySelector("#order-total").innerHTML = orderTotal;
 }
+
+const currentOrder = [
+    {
+        name: "Latte",
+        size: "M"
+        price: 3.99
+    },
+    {
+        name: "Americano",
+        size: "S",
+        price: 2.99
+    }
+]
+
+// Calculate the total price for this order and store it in the totalPrice variable
+const totalPriceForThisOrder = calculateOrderTotal(currentOrder);
+
+// Pass the totalPrice into the function that can print it
+printOrderTotal(totalPriceForThisOrder)
+
+
 ```
 
 ## Videos to Watch
