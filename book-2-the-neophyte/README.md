@@ -6,12 +6,12 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 ## Chapters
 
-* Chapter 1 - [Fun with Manipulating DOM](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
-* Chapter 2 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
-* Chapter 3 - [Daily Journal - Part 2](./chapters/DAILY_JOURNAL_OBJECT_DOM.md)
-* Chapter 4 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
-* Chapter 5 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
-* Chapter 6 - [Objects Representing Things](./chapters/OBJECTS_AS_THINGS.md)
+* Chapter 1 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
+* Chapter 2 - [Daily Journal - Part 2](./chapters/DAILY_JOURNAL_OBJECT_DOM.md)
+* Chapter 3 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
+* Chapter 4 - [Using the Debugger](./chapters/MISC_DEBUGGING.md)
+* Chapter 5 - [Objects Representing Things](./chapters/OBJECTS_AS_THINGS.md)
+* Chapter 6 - [Fun with Manipulating DOM](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
 * Chapter 7 - [Building DOM Components](./chapters/JS_CREATING_COMPONENTS.md)
 * Chapter 8 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
 * Chapter 9 - [Handling Browser Events](./chapters/JS_EVENTS.md)
@@ -23,18 +23,18 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 * Chapter 12 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
 * Chapter 13 - [Fetching Data](./chapters/FETCH_INTRO.md)
-* Chapter 14 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
+* Chapter 14 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_FETCHING.md)
 * Chapter 15 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-* Chapter 16 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
+* Chapter 16 - [Daily Journal - Part 6](./chapters/DAILY_JOURNAL_MODULAR.md)
 
 > ### __Sprint 3__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
-> ### LinkedIn Projects update with Welcome to Nashville
+
 
 ## Supplementary Content
 
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
 * Supplement - [jQuery](./chapters/JQUERY.md)
-* Supplement - [Automation with Grunt](./chapters/GRUNT_INTRO.md)
+
 
 Once you are strong on these foundational concepts, you will move along to [Book 3 - The Initiate](../book-3-the-initiate/README.md).
