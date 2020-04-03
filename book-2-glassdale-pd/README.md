@@ -19,8 +19,8 @@
 | 13 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) | [Selecting Teams for Game](./chapters/TF_CHOOSE_TEAMS.md) |
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |
 | 14 | [Editing Case File Notes](./chapters/GLASSDALE_EDIT_NOTES.md) | [Editing Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md) | [Saving Round Scores](./chapters/TF_ROUND_FORM.md) |
-| 15 |  | [Mood Filtering](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) |  |
-| 16a | [Finding the Common Thread](./chapters/GLASSDALE_MULTIPLE_PARAMS.md) | [Searching Entries](./chapters/DAILY_JOURNAL_SEARCHING.md) | [Updating Leaderboard](./chapters/TF_GAME_SCORES.md) |
+| 15 | [Finding the Common Thread](./chapters/GLASSDALE_MULTIPLE_PARAMS.md)  | [Mood Filtering](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) |  |
+| 16 | | [Searching Entries](./chapters/DAILY_JOURNAL_SEARCHING.md) | [Updating Leaderboard](./chapters/TF_GAME_SCORES.md) |
 
 ## Review Chapters
 
