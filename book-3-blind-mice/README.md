@@ -3,7 +3,7 @@
 ## Chapters
 
 | #  | Three Blind Mice Consulting 🐭🐭🐭 | Are You Feeling Bouquet? 💐 |
-|--|--|--|--|
+|--|--|--|
 | 1 | [Starter Resources for dbdiagram](./chapters/ERD.md) |  |  |
 | 2 | [Many to Many Relationships](./chapters/MANY_MANY.md) |   |
 | 3 | [Employee Computer Report](./chapters/EMPLOYEES.md) | [Flowers](./chapters/FLOWERS.md) |  |
