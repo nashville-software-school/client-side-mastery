@@ -42,5 +42,5 @@ Here's some JSON to get you started. Add at least 4 more computers, and 4 more e
 
 1. Create your employee data provider, employee list, and employee components
 1. Create your computer data provider
-1. Use the employee and computer data in the employee list component to display the employee's name, and age. Also display the model and manufacture year for the computer she is using. Refer back to the code you wrote in chapter 1 for products and product types.
+1. Use the employee and computer data in the employee list component to display the employee's name, and age. Also display the model and manufacture year for the computer she is using.
 
