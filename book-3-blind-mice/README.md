@@ -14,8 +14,8 @@
 | 8 | [Bigger Customers](./chapters/CUSTOMERS.md) | [Nursery Supply Chain](./chapters/NURSERIES.md) |  |
 | 9 | [Customer Report](./chapters/CUSTOMER_REPORT.md) | [Normalization Challenge](./chapters/BOUQUET_NORMALIZE.md) | [Honest Abe ERD](./chapters/HONESTABE_ERD.md) |
 | 10 |  |  | [Elected Officials](./chapters/POLITICIANS.md) |
-| 10 |  |  | [Interested Companies](./chapters/COMPANIES.md) |
-| 11 |  |  | [Corporate PAC Donations](./chapters/COMPANY_DONATIONS.md) |
-| 12 |  |  | [Campaign Donations](./chapters/PAC_DONATIONS.md) |
-| 13 |  |  | [Sponsored Legislation](./chapters/LEGISLATION.md) |
+| 11 |  |  | [Interested Companies](./chapters/COMPANIES.md) |
+| 12 |  |  | [Corporate PAC Donations](./chapters/COMPANY_DONATIONS.md) |
+| 13 |  |  | [Campaign Donations](./chapters/PAC_DONATIONS.md) |
+| 14 |  |  | [Sponsored Legislation](./chapters/LEGISLATION.md) |
 | 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |
