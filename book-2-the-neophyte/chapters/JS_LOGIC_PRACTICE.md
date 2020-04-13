@@ -2,17 +2,6 @@
 
 ## Coins to Cash
 
-```sh
-mkdir -p ~/workspace/javascript/exercises/coins-to-cash && cd $_
-echo '<html>
-  <body>
-    <script src="./coinsToCash.js"></script>
-  </body>
-</html>' > index.html
-touch coinsToCash.js
-code .
-```
-
 Define an object and store it in a variable named `piggyBank`. The object should have the following keys defined.
 
 * quarters
@@ -24,7 +13,7 @@ For each coin type, give yourself as many as you like.
 
 ```js
 // I like pennies
-const piggyBank = { pennies: 342 }
+var piggyBank = { pennies: 342 }
 let dollarAmount = 0
 ```
 
@@ -41,22 +30,11 @@ $3.42
 
 ## Cash to Coins
 
-```sh
-mkdir -p ~/workspace/javascript/exercises/cash-to-coins && cd $_
-echo '<html>
-  <body>
-    <script src="./cashToCoins.js"></script>
-  </body>
-</html>' > index.html
-touch cashToCoins.js
-code .
-```
-
 Now do the reverse. Convert the dollar amount into the coins that make up that dollar amount. The final result is an object with the correct number of quarters, dimes, nickels, and pennies.
 
 ```js
-const dollarAmount = 0.10
-const piggyBank = {}
+var dollarAmount = 0.10
+var piggyBank = {}
 
 // Your magic code here
 
@@ -76,16 +54,6 @@ That should produce the following output.
 
 ## Student Grades
 
-```bash
-mkdir -p ~/workspace/javascript/exercises/grades && cd $_
-echo '<html>
-  <body>
-    <script src="./grades.js"></script>
-  </body>
-</html>' > index.html
-touch grades.js
-code .
-```
 
 ### Requirements
 
@@ -100,10 +68,10 @@ Loop over an array of student grades (values from 50-100) and keep track of how 
 Start with array of random scores in your JavaScript
 
 ```js
-const scores = [82, 71, 62, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87, 60]
-const grades = {} // You'll need to change this line of code
+var scores = [82, 71, 62, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87, 60]
+var grades = {} // You'll need to change this line of code
 
-for (let i = 0; i < scores.length; i++) {
+for (var i = 0; i < scores.length; i++) {
     /*
       If the score is greater than 90, increment grades.A by 1.
 
