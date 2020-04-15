@@ -137,8 +137,10 @@ import ApplicationViews from "./ApplicationViews"
 import "./Kennel.css"
 
 export default () => (
-    <NavBar />
-    <ApplicationViews />
+    <>
+        <NavBar />
+        <ApplicationViews />
+    </>
 )
 ```
 
