@@ -28,7 +28,7 @@ The next step is to access the context from the two, new providers by importing 
 
 > ##### `src/components/animal/AnimalList.js`
 
-```js
+```jsx
 import React, { useContext } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import { LocationContext } from "../location/LocationProvider"
@@ -55,7 +55,7 @@ Then you need to refactor your function that you are passing to the `.map()` met
 
 > ##### `src/components/animal/AnimalList.js`
 
-```js
+```jsx
 animals.map(animal => {
     const owner = customers.find(c => c.id === animal.customerId)
     const clinic = locations.find(l => l.id === animal.locationId)
@@ -71,17 +71,15 @@ animals.map(animal => {
 
 The last step is to extract the new `customer` and `animal` keys on the object passed to the **`Animal`** component.
 
-> ##### `src/components/animal/Animal.js`
-
-```js
-export default ({ animal, customer, location }) => (
-```
-
 Then display the name property of each one.
 
+> ##### `src/components/animal/Animal.js`
+
 ```jsx
-<div className="animal__location">Location: { location.name }</div>
-<div className="animal__owner">Customer: { customer.name }</div>
+export default ({ animal, customer, location }) => (
+    <div className="animal__location">Location: { location.name }</div>
+    <div className="animal__owner">Customer: { customer.name }</div>
+)
 ```
 
 ![animal card showing name of customer and location](./images/animals-after-join.png)
