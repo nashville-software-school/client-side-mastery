@@ -2,13 +2,14 @@
 
 ## Goal
 
-In this chapter, you are going to write a component whose responsibility is to create a new employee record and assign that employee to a location.
+In this chapter, you are going to write a component whose responsibility is to create a new employee record and assign that employee to a location. This component will be dislayed as a modal!!
 
 ## New Concepts
 
 * useRef()
 * Inline event handlers
 * `preventDefault()` for forms
+* Reactstrap Modals
 
 ## Process
 
@@ -22,7 +23,9 @@ In React, you can add the event listener directly on a button's `onClick` attrib
 return (
     <div className="employees">
         <h1>Employees</h1>
-        <button onClick={() => props.history.push("/employees/create")}>
+        <button onClick={() => {
+            /* Insert modal Reactstrap code here */
+        }}>
             Add Employee
         </button>
         <article className="employeeList">
@@ -30,45 +33,6 @@ return (
         </article>
     </div>
 )
-```
-
-### Refactor Employee List Route
-
-Because you need to change the route when the button is clicked, you can use the `history.push()` method that is provided by React Router. In order to make the `history` object available to the **`EmployeeList`** component, the route needs to be rewritten.
-
-> ##### `src/components/ApplicationViews.js`
-
-```jsx
-<Route exact path="/employees" render={
-    props => <EmployeeList {...props} />
-} />
-```
-
-
-Since you are passing a property object to the employee list, you must define a parameters to capture that object.
-
-> ##### `src/components/employee/EmployeeList.js`
-
-```js
-export default (props) => {
-```
-
-### Create Route
-
-Now you can create the route that will respond when the button click changes the URL to `/employees/create`.
-
-> ##### `src/components/ApplicationViews.js`
-
-```jsx
-<EmployeeProvider>
-    <Route exact path="/employees" render={
-        props => <EmployeeList {...props} />
-    } />
-
-    <Route exact path="/employees/create">
-        <EmployeeForm />
-    </Route>
-</EmployeeProvider>
 ```
 
 ### Create Component
@@ -160,12 +124,6 @@ When you click on the save button, the Employee state will change. Just like in 
 1. Immediately update the application state with the new array of employees that are in the API.
 
 Once that process is complete, you will send the user to the list of employees so that she can see that her data has been saved correctly.
-
-> ##### `src/components/employee/EmployeeForm.js`
-
-```js
-
-```
 
 ### Get User Input
 
@@ -263,9 +221,6 @@ Lastly, update the save button.
 </button>
 ```
 
-### Show All Employees on Save
+### Employee List Re-renders on Save
 
-You need to use the `history.push()` method again to take the user to a new view. Reference the code above to see how to do the following two tasks.
-
-1. Provide the React Router history object to the **`EmployeeForm`** component by refactoring **`ApplicationViews`**.
-1. Route the user to `/employees`.
+Since the Employee list component has an effect hook that reponds to the employee state change, once your new employee is saved, the list should immediately re-renders with the new employee in it.
