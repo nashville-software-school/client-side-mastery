@@ -49,8 +49,4 @@ In the list of employees, only show the employee name with a details button next
 
 Your next task is to refactor your location components. On your location list, display the location name, the number of animals currently being treated, and the number of employees.
 
-When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being treated, and the names of all employees working there.
-
-> **Tip:** You don't need all of the fancy styling like you see below. Just get the information displayed.
-
-![animation of location list and location details](./images/location-details.gif)
+When the user click the detail button of a location, then the names of all animals currently being treated, and the names of all employees working there should be displayed in a modal.
