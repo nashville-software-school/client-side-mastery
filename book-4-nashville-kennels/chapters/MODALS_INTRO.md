@@ -12,6 +12,10 @@ So far you are listing all employees, all animals, all customers, and all locati
 
 You are going to start with animals.
 
+In the code below, you will notice that a new `<button>` element has been added to the animal section. The `onClick` attribute specifies that the `toggle()` function will be invoked when the user clicks on it.
+
+Then the ReactStrap `<Modal>` component will display because the `modal` state will be changed from `false` to `true` when the button is clicked.
+
 ```js
 import React, { useState } from "react"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
@@ -32,9 +36,15 @@ export default ({ animal, customer, location }) => {
                     {animal.name}
                 </ModalHeader>
                 <ModalBody>
-                    <div className="animal__breed">{animal.breed}</div>
-                    <div className="animal__location">Location: {location.name}</div>
-                    <div className="animal__owner">Customer: {customer.name}</div>
+                    <div className="animal__breed">
+                        <label className="label--animal">Breed:</label> {animal.breed}
+                    </div>
+                    <div className="animal__location">
+                        <label className="label--animal">Location:</label> {location.name}
+                    </div>
+                    <div className="animal__owner">
+                        <label className="label--animal">Customer:</label> {customer.name}
+                    </div>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="secondary" onClick={toggle}>Close</Button>
@@ -47,9 +57,9 @@ export default ({ animal, customer, location }) => {
 
 ## Practice: Employees
 
-In the list of employees, only show the employee name with a details button next to it. When the user clicks on the button, display the employee's home address and kennel at which the employee works.
+In the list of employees, only show the employee name with a details button. When the user clicks on the button, display the employee's home address and kennel at which the employee works.
 
-## Practice: Locations
+## Challenge: Locations
 
 Your next task is to refactor your location components. On your location list, display the location name, the number of animals currently being treated, and the number of employees.
 
