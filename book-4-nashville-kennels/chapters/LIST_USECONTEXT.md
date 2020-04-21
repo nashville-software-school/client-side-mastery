@@ -122,7 +122,6 @@ Refactor your **`Location`** component to use the location property that was pro
 
 ```js
 import React from "react"
-import "./Locations.css"
 
 export default ({ location }) => (
     <section className="location">
