@@ -13,11 +13,11 @@ You need a new array in your `database.json`, and a new provider component in yo
 
 ## Displaying Order
 
-Once you have the objects saving to the database, you need to put a new link in your **`NavBar`** component labeled "My Order". When the user clicks on that order, a list of all candies that the user wants to purchase should be listed.
+Once you have the objects saving to the database, you need to put a new button at the top of the application labeled "My Order". When the user clicks on that button, a list of all candies that the user wants to purchase should be listed in a modal.
 
 Display the candy name and the price of the candy.
 
-Just get them all listed on the page first, knowing that there will be duplicates if the user clicked on a single candy multiple times.
+Just get them all listed first, knowing that there will be duplicates if the user clicked on a single candy multiple times.
 
 ## Challenge: Aggregating Order
 
