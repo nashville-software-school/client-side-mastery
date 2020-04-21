@@ -212,15 +212,7 @@ import Register from "./auth/Register"
 import "./Kennel.css"
 
 export default () => (
-    <>
-        <Route render={() => {
-            if (localStorage.getItem("kennel_customer")) {
-                return <Kennel />
-            } else {
-                return <Auth />
-            }
-        }} />
-    </>
+    localStorage.getItem("kennel_customer") ? <Dashboard /> : <Auth />
 )
 ```
 
