@@ -4,17 +4,15 @@ Right now, the data being displayed for animals is not useful. For both the loca
 
 ![](./images/animals-before-join.png)
 
-You really want to display the name of the location, and the name of the customer. To do that, you need data from the animal provider, the location provider, and the customer provider. The first step to making it work is updating **`ApplicationViews`** so that the **`AnimalList`** component has all three providers as parent components.
+You really want to display the name of the location, and the name of the customer. To do that, you need data from the animal provider, the location provider, and the customer provider. The first step to making it work is updating **`Kennel`** so that the **`AnimalList`** component has all three providers as parent components.
 
-> ##### `src/components/ApplicationViews.js`
+> ##### `src/components/Kennel.js`
 
 ```jsx
 <AnimalProvider>
     <LocationProvider>
         <CustomerProvider>
-            <Route exact path="/animals">
-                <AnimalList />
-            </Route>
+            <AnimalList />
         </CustomerProvider>
     </LocationProvider>
 </AnimalProvider>

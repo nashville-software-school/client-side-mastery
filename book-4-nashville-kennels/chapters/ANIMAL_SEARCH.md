@@ -4,8 +4,6 @@ Right now, the list of animals just displays the entire state of animals in your
 
 You are going to implement a search feature where you can type in letters and the animal list will render any animal name that matches what you typed in. So the state of the animal list will be different than the state of the application or API. It could only display 2 animals, whereas there are 20 animals total.
 
-![animation of animal search](./images/animal-search.gif)
-
 ## Step 1 - Create a Search Component
 
 ##### **`src/components/animals/AnimalSearch.js`**
@@ -27,17 +25,13 @@ export default () => {
 
 ## Step 2 - Render Search Component as Sibling of List
 
-##### **`src/components/ApplicationViews.js`**
+##### **`src/components/Kennel.js`**
 
 ```jsx
-<Route exact path="/animals" render={
-    props => {
-        return <>
-            <AnimalSearch {...props} />
-            <AnimalList {...props} />
-        </>
-    }
-} />
+<AnimalProvider>
+    <AnimalSearch />
+    <AnimalList />
+</AnimalProvider>
 ```
 
 ## Step 3 - Add Search State to Parent Provider Component
@@ -121,10 +115,6 @@ export default (props) => {
     return (
         <>
             <h1>Animals</h1>
-
-            <button onClick={() => props.history.push("/animals/create")}>
-                Make Reservation
-            </button>
             <div className="animals">
                 {
                     filteredAnimals.map(animal => {
