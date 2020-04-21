@@ -201,12 +201,14 @@ If it does not exist, the user gets redirected to `/login` which renders the **`
 
 If it does exist, the application gets rendered.
 
+Since this is now going tobe the responsiblity of **`Kennel`**, rename your current Kennel component to **`Dashboard`**. Then make `Kennel.js` again and place the following code init.
+
 
 > ##### `src/components/Kennel.js`
 
 ```js
 import React from "react"
-import Kennel from "./Kennel"
+import Dashboard from "./Dashboard"
 import Login from "./auth/Login"
 import Register from "./auth/Register"
 import "./Kennel.css"
