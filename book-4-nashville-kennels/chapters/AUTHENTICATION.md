@@ -206,9 +206,7 @@ If it does exist, the application gets rendered.
 
 ```js
 import React from "react"
-import { Route, Redirect } from "react-router-dom"
-import ApplicationViews from "./ApplicationViews"
-import NavBar from "./nav/NavBar"
+import Kennel from "./Kennel"
 import Login from "./auth/Login"
 import Register from "./auth/Register"
 import "./Kennel.css"
@@ -217,50 +215,31 @@ export default () => (
     <>
         <Route render={() => {
             if (localStorage.getItem("kennel_customer")) {
-                return (
-                    <>
-                        <Route render={props => <NavBar {...props} />} />
-                        <Route render={props => <ApplicationViews {...props} />} />
-                    </>
-                )
+                return <Kennel />
             } else {
-                return <Redirect to="/login" />
+                return <Auth />
             }
         }} />
-
-        <Route path="/login" render={props => <Login {...props} />} />
-        <Route path="/register" render={props => <Register {...props} />} />
     </>
 )
 ```
 
-## Logout Link
+## Auth Component
 
-Now reafactor the navigation bar to display a "Logout" link if the user is authenticated. When the user clicks on the link, clear the local storage item _(remember, that key is what determines if the user is authenticated)_ and redirect the user back to the base route of `http://localhost:3000/`.
+> ##### `src/components/auth/Auth.js`
 
-Then the logic in **`Kennel`** runs again and determines that the local storage item doesn't exist, and renders the **`Login`** component.
-
-> ##### `src/components/nav/NavBar.js`
 
 ```jsx
-<li className="navbar__item">
-    <Link className="navbar__link" to="/employees">Employees</Link>
-</li>
+import React from "react"
+import Login from "./Login"
+import Register from "./Register"
 
-{
-    localStorage.getItem("kennel_customer")
-        ? <li className="navbar__item">
-            <Link className="navbar__link"
-                to=""
-                onClick={e => {
-                    e.preventDefault()
-                    localStorage.removeItem("kennel_customer")
-                    props.history.push("/")
-                }}
-            >Logout</Link>
-        </li>
-        : ""
-}
+export default () => (
+    <div className="formsContainer">
+        <Login />
+        <Register />
+    </div>
+)
 ```
 
 ## Register Component
