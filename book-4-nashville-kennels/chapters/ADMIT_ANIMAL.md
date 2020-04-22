@@ -6,8 +6,6 @@ In this chapter, you are going to write a component whose reposibility to is all
 
 1. Create an **`AnimalForm`** component.
 1. Add a button to the animal list labeled, "Make Appointment".
-1. When the button is clicked, check if the user is authenticated.
-1. If the user is authenticated, show the animal form, otherwise, show the login form.
-1. Once user is authenticated, show the **`AnimalForm`** in a modal which allows the customer to enter the animal's name and choose a location from a dropdown.
+1. When the button is clicked, show the animal form in a modal which allows the customer to enter the animal's name and choose a location from a dropdown.
 1. When user saves the animal, create a new animal object and save it to the API. Make sure that the animal object has the `customerId` and  `locationId` foreign keys on it.
 1. Once the animal is saved, make sure the modal closes.
