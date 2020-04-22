@@ -103,7 +103,7 @@ export default () => {
 }
 ```
 
-### new Employee Form Component
+### New Employee Form Component
 
 When you hire an employee, you immediately want to assign that employee to a location. Therefore, you want a dropdown that lists all of the locations. To get all of the locations, you need to use the **`LocationProvider`** component, and then use the Context hook to pull in the location data.
 

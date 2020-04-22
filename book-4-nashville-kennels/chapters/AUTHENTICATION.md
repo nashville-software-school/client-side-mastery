@@ -41,6 +41,9 @@ Then create the stylesheet for the login component.
 .authContainer {
     display: flex;
     padding: 0 10rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .h1, h1 {
@@ -87,6 +90,8 @@ input[type="password"] {
 
 .container--login {
     text-align: center;
+    flex: 1;
+    flex-basis: 33%;
 }
 
 .form--login {
@@ -95,7 +100,7 @@ input[type="password"] {
     background-image: url(logo.png);
     z-index: 1;
     min-height: 25rem;
-    min-width: 45rem;
+    min-width: 35rem;
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
