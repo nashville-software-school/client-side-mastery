@@ -34,8 +34,21 @@ Then create the stylesheet for the login component.
 > ##### `src/components/auth/Login.css`
 
 ```css
+.darkgray {
+    color: #747678;
+}
+
+.authContainer {
+    display: flex;
+    padding: 0 10rem;
+}
+
 .h1, h1 {
     font-size: 2.5rem;
+}
+
+.welcome {
+    margin-bottom: 4rem;
 }
 
 fieldset {
@@ -45,14 +58,8 @@ fieldset {
     border: 0;
 }
 
-.form--login {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.form--login > fieldset > input[type="email"],
-.form--login > fieldset > input[type="password"] {
+input[type="email"],
+input[type="password"] {
     width: 25em;
 }
 
@@ -63,7 +70,7 @@ fieldset {
 
 .form-control {
     display: block;
-    width: 100%;
+    width: 94%;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -83,6 +90,7 @@ fieldset {
 }
 
 .form--login {
+    font-size: 1.25rem;
     background-position-x: right;
     background-image: url(logo.png);
     z-index: 1;
@@ -91,6 +99,24 @@ fieldset {
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+.form--register {
+    background-position-x: right;
+    z-index: 1;
+    min-height: 25rem;
+    width: 45rem;
+    background-color: hsla(0,0%,100%,0.40);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+
 }
 ```
 
@@ -100,7 +126,6 @@ fieldset {
 
 ```jsx
 import React, { useRef } from "react"
-import { Link } from "react-router-dom";
 import "./Login.css"
 
 
@@ -128,66 +153,45 @@ const Login = props => {
             .then(exists => {
                 if (exists && exists.password === password.current.value) {
                     localStorage.setItem("kennel_customer", exists.id)
-                    props.history.push("/")
+                    props.toggle()
                 } else if (exists && exists.password !== password.current.value) {
                     window.alert("Password does not match")
                 } else if (!exists) {
-                    fetch("http://localhost:8088/customers", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            email: email.current.value,
-                            password: password.current.value,
-                            name: customerName.current.value,
-                            address: address.current.value
-                        })
-                    })
-                        .then(_ => _.json())
-                        .then(response => {
-                            localStorage.setItem("kennel_customer", response.id)
-                            props.history.push("/")
-                        })
+                    window.alert("User account does not exist")
                 }
             })
     }
 
     return (
         <main className="container--login">
-            <section>
-                <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nashville Kennels</h1>
-                    <h2>Please sign in</h2>
-                    <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input ref={email} type="email"
-                            id="email"
-                            className="form-control"
-                            placeholder="Email address"
-                            required autoFocus />
-                    </fieldset>
-                    <fieldset>
-                        <label htmlFor="inputPassword"> Password </label>
-                        <input ref={password} type="password"
-                            id="password"
-                            className="form-control"
-                            placeholder="Password"
-                            required />
-                    </fieldset>
-                    <fieldset>
-                        <button type="submit">
-                            Sign in
+            <form className="form--login" onSubmit={handleLogin}>
+                <h2>Please sign in</h2>
+                <fieldset>
+                    <label htmlFor="inputEmail"> Email address </label>
+                    <input ref={email} type="email"
+                        id="email"
+                        className="form-control"
+                        placeholder="Email address"
+                        required autoFocus />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="inputPassword"> Password </label>
+                    <input ref={password} type="password"
+                        id="password"
+                        className="form-control"
+                        placeholder="Password"
+                        required />
+                </fieldset>
+                <fieldset>
+                    <button type="submit">
+                        Sign in
                     </button>
-                    </fieldset>
-                </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
-            </section>
+                </fieldset>
+            </form>
         </main>
     )
 }
+
 export default Login
 ```
 
@@ -207,15 +211,18 @@ Since this is now going tobe the responsiblity of **`Kennel`**, rename your curr
 > ##### `src/components/Kennel.js`
 
 ```js
-import React from "react"
+import React, { useState } from "react"
 import Dashboard from "./Dashboard"
-import Login from "./auth/Login"
-import Register from "./auth/Register"
-import "./Kennel.css"
+import Auth from "./auth/Auth"
 
-export default () => (
-    localStorage.getItem("kennel_customer") ? <Dashboard /> : <Auth />
-)
+export default () => {
+    const [check, update] = useState(false)
+    const toggle = () => update(!check)
+
+    return (
+        localStorage.getItem("kennel_customer") ? <Dashboard /> : <Auth toggle={toggle} />
+    )
+}
 ```
 
 ## Auth Component
@@ -228,12 +235,17 @@ import React from "react"
 import Login from "./Login"
 import Register from "./Register"
 
-export default () => (
-    <div className="formsContainer">
-        <Login />
-        <Register />
-    </div>
-)
+export default ({toggle}) => {
+    return (
+        <>
+            <h1 className="welcome">Welcome to Nashville Kennels</h1>
+            <div className="authContainer">
+                <Login toggle={toggle} />
+                <Register toggle={toggle} />
+            </div>
+        </>
+    )
+}
 ```
 
 ## Register Component
@@ -287,7 +299,6 @@ const Register = props => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 localStorage.setItem("kennel_customer", createdUser.id)
-                                props.history.push("/")
                             }
                         })
                 })
@@ -297,16 +308,16 @@ const Register = props => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h1>
+        <main className="container--login">
+            <form className="form--register" onSubmit={handleRegister}>
+                <h4 className="darkgray">If you are not a customer yet, please register a new account</h4>
                 <fieldset>
                     <label htmlFor="firstName"> First Name </label>
                     <input ref={firstName} type="text"
                         name="firstName"
                         className="form-control"
                         placeholder="First name"
-                        required autoFocus />
+                        required  />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="lastName"> Last Name </label>
