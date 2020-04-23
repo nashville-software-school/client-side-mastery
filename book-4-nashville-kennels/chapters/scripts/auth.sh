@@ -277,7 +277,7 @@ export default ({toggle}) => {
     )
 }' >> ./Auth.js
 
-curl –O https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-37/book-4-nashville-kennels/chapters/images/logo.png
+curl –O https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-37/book-4-nashville-kennels/chapters/images/logo.png > logo.png
 
 
 
