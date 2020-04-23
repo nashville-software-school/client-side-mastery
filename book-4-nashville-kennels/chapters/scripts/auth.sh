@@ -45,6 +45,7 @@ const Register = props => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 localStorage.setItem("kennel_customer", createdUser.id)
+                                props.toggle()
                             }
                         })
                 })
