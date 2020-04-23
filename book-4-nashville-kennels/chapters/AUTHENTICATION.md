@@ -2,9 +2,14 @@
 
 > **Instructor Note:** Authentication is not a learning objective of your time here at NSS. The code in this chapter is intended to be copied and used, but not understood for now. Your job is still to render UI components using related data.
 
-In this chapter, you are going to create a very simple login screen where a customer can enter in their name, email address, and a password. This is not going to be a real authentication system. Real authentication systems are vastly more secure, complex, and robust.
+In this chapter, you are going to enable two things:
 
-The best part about this chapter is that you don't need to understand **any of it**. Just copy pasta the code into your application, verify it works, talk to your instructors if it doesn't so they can fix it, and then move on.
+1. A login form where a customer can enter in their email address, and a password.
+1. A registration form where the user can enter their name, email, and password.
+
+This is not going to be a real authentication system. Real authentication systems are vastly more secure, complex, and robust.
+
+The best part about this chapter is that you don't need to understand **any of it**. Follow the instructions, verify that registration and login works, or talk to your instructors if it doesn't so they can fix it.
 
 Here's the process that this code follows.
 
@@ -12,22 +17,15 @@ Here's the process that this code follows.
 1. If the item is there, the user is authenticated and the application renders.
 1. If the item is not there, render the Login form instead.
 1. When the user fills out the form and clicks the submit button, query the API to see if a user with the specified email already exists.
-1. If the user already exists, and the passwords match, set the `kennel_customer` item in local storage, and re-route user to root URL.
-1. If the user exists, but the passwords don't match, display and alert about that to the user.
-1. If the user does not exist, create the new customer resource in the API, set the `kennel_customer` item in local storage, and re-route user to root URL.
-1. Only display the "Logout" item in the navigation bar if the user is authenticated.
+1. If the user already exists, and the passwords match, set the `kennel_customer` item in local storage, and display the Dashboard.
+1. If the user exists, but the passwords don't match, display an alert about that to the user.
+1. If the user does not exist, alert that fact to the user.
 
 ## Requiring User to Login
 
 What determines if a user has authenticated? It's the `kennel_customer` key that you set in local storage. If that key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
 
-Time to refactor the **`Kennel`** component again. The new logic will determine if the local storage item exists _(which determines if the user already authenticated)_.
-
-If it does not exist, the user gets redirected to `/login` which renders the **`Login`** component.
-
-If it does exist, the application gets rendered.
-
-Since this is now going tobe the responsiblity of **`Kennel`**, rename your current Kennel component to **`Dashboard`**. Then make `Kennel.js` again and place the following code init.
+Since this is now going to be the new responsiblity of the **`Kennel`** component, rename your current `Kennel.js` file `Dashboard.js`. Then make `Kennel.js` again and place the following code into it.
 
 
 > ##### `src/components/Kennel.js`
@@ -49,16 +47,25 @@ export default () => {
 
 ## Installing Authentication Components
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-39/book-4-nashville-kennels/chapters/scripts/auth.sh)"
-```
+Now you can install the mock authentication components into your application.
 
+1. In the terminal, make sure you are in the `kennels` directory.
+1. Run the following command in that directory.
 
+    ```sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-39/book-4-nashville-kennels/chapters/scripts/auth.sh)"
+    ```
+1. Go to Visual Studio Code and you will see a new `src/components/auth` directory with 5 new files in it.
+    1. `logo.png`
+    1. `Auth.css`
+    1. `Auth.js`
+    1. `Login.js`
+    1. `Register.js`
 
-### Nashville Kennels Logo Dog
+## Register an Account
 
-First, download the following image to the path specified.
+Once you have made all these changes, you should be presented with the Register/Login view. Create an account by filling out the registration form. When you complete that, you will immediately see your Dashboard.
 
-> ##### `src/components/auth/logo.png`
+You will also now see a new entry in your local storage.
 
-![](./images/logo.png)
+![animation showing the creation of local storage key](./images/local-storage-auth.gif)
