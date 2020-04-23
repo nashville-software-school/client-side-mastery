@@ -1,62 +1,87 @@
-# Viewing Details in Modal
+# Viewing Animal Details in Modal
 
-In this chapter, you will be learning how to use modals to display information. It could be details of a resource or a form for creating/editing something.
+## Setup
 
-## Using the Modal
+In your **`Dashboard`** component, remove the **`AnimalList`** component. All animals will no longer be displayed by default. Users will have to search for animal name.
 
-So far you are listing all employees, all animals, all customers, and all locations. By the end of the chapter, you will be able to click on one of the cards in the list view and only view the details of a specific item.
+## Instructions
 
-You are going to start with animals.
+In this chapter, you will change how the modal for animal details works. Instead of having an animal list in the right container of the application, search will be the only way to find an animal.
 
-In the code below, you will notice that a new `<button>` element has been added to the animal section. The `onClick` attribute specifies that the `toggle()` function will be invoked when the user clicks on it.
+Then, you can click on an animal and see the details of it.
 
-Then the ReactStrap `<Modal>` component will display because the `modal` state will be changed from `false` to `true` when the button is clicked.
+![](./images/animal-search-details.gif)
+
+## Update Search Results
+
+Update the **`SearchResults`** component with the code below so that the animal is a fake link, and has an `onClick` attribute. When you click on an animal, a modal should appear with the details.
+
+Your instructor will walk you through the new things introduced here.
+
+1. The spread operator `{...selectedAnimal}`
+1. The default value of the `selectedAnimal` state variable.
+
+##### **`src/components/search/SearchResults.js`**
 
 ```js
-import React, { useState } from "react"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import React, { useState, useContext, useEffect } from "react"
+import { AnimalContext } from "../animal/AnimalProvider"
+import { Modal, ModalHeader, ModalBody } from "reactstrap"
+import Animal from "../animal/Animal"
+import { CustomerContext } from "../customer/CustomerProvider"
+import { LocationContext } from "../location/LocationProvider"
 
-export default ({ animal, customer, location }) => {
+
+
+export const SearchResults = ({ searchTerms }) => {
+    const { animals } = useContext(AnimalContext)
+    const { customers } = useContext(CustomerContext)
+    const { locations } = useContext(LocationContext)
+
+    const [filteredAnimals, setFiltered] = useState([])
+    const [selectedAnimal, setAnimal] = useState({animal: {id:0}, location: null, customer: null})
+
     const [modal, setModal] = useState(false)
     const toggle = () => setModal(!modal)
 
+    useEffect(() => {
+        if (searchTerms !== "") {
+            const subset = animals.filter(animal => animal.name.toLowerCase().includes(searchTerms))
+            setFiltered(subset)
+        } else {
+            setFiltered([])
+        }
+    }, [searchTerms, animals])
+
     return (
-        <>
-            <section className="animal">
-                <h3 className="animal__name">{animal.name}</h3>
-                <button onClick={toggle}>Details</button>
-            </section>
+        <div className="searchResults">
+            <h3>Results</h3>
+            <div className="animals">
+                {
+                    filteredAnimals.map(animal => <div
+                        className="fakeLink href"
+                        key="{ animal.id }"
+                        onClick={() => {
+                            const location = locations.find(l => l.id === animal.locationId)
+                            const customer = customers.find(c => c.id === animal.customerId)
+
+                            setAnimal({ animal, location, customer })
+                            toggle()
+                        }}
+                    >{animal.name}</div>)
+                }
+            </div>
 
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>
-                    {animal.name}
+                    { selectedAnimal.animal.name }
                 </ModalHeader>
                 <ModalBody>
-                    <div className="animal__breed">
-                        <label className="label--animal">Breed:</label> {animal.breed}
-                    </div>
-                    <div className="animal__location">
-                        <label className="label--animal">Location:</label> {location.name}
-                    </div>
-                    <div className="animal__owner">
-                        <label className="label--animal">Customer:</label> {customer.name}
-                    </div>
+                    <Animal key={selectedAnimal.animal.id} {...selectedAnimal} />
                 </ModalBody>
-                <ModalFooter>
-                    <Button color="secondary" onClick={toggle}>Close</Button>
-                </ModalFooter>
             </Modal>
-        </>
+        </div>
     )
 }
 ```
 
-## Practice: Employees
-
-In the list of employees, only show the employee name with a details button. When the user clicks on the button, display the employee's home address and kennel at which the employee works.
-
-## Challenge: Locations
-
-Your next task is to refactor your location components. On your location list, display the location name, the number of animals currently being treated, and the number of employees.
-
-When the user click the detail button of a location, then the names of all animals currently being treated, and the names of all employees working there should be displayed in a modal.
