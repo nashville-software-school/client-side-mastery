@@ -13,7 +13,7 @@
 | 7 | [Hiring Employees](./chapters/FORMS_USEREF.md) | [Employees](./chapters/KK_EMPLOYEES.md) |
 | 8 | [Registering Customers](./chapters/AUTHENTICATION.md) | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
 | 9 | [Admitting Animals](./chapters/ADMIT_ANIMAL.md) | [Purchase History](./chapters/KK_PURCHASES.md) |   |
-| 10 | [Component State: Searching Animals](./chapters/ANIMAL_SEARCH.md) |  |  |
+| 10 | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) |  |  |
 | 11 | [Viewing Individual Animals](./chapters/MODALS_INTRO.md) | [Customer Report](./chapters/KK_REPORT.md) |  |
 | 12 | [Release Animals](./chapters/DELETE.md) |  |   |
 | 13 | [Animal Treatment History](./chapters/EDIT.md) |  |  |
