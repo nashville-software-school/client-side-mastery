@@ -4,7 +4,7 @@ set -u
 mkdir -p ./src/components/auth && cd $_
 
 echo 'import React, { useRef } from "react"
-import "./Login.css"
+
 
 const Register = props => {
     const firstName = useRef()
@@ -111,7 +111,6 @@ export default Register
 ' >> ./Register.js
 
 echo 'import React, { useRef } from "react"
-import "./Login.css"
 
 
 const Login = props => {
@@ -259,11 +258,13 @@ input[type="password"] {
     margin: 0 auto;
     text-align: left;
 }
-' >> ./Login.css
+' >> ./Auth.css
 
 echo 'import React from "react"
 import Login from "./Login"
 import Register from "./Register"
+import "./Auth.css"
+
 
 export default ({toggle}) => {
     return (
