@@ -21,7 +21,7 @@ export const SearchBar = ({ setTerms }) => {
                 <label htmlFor="searchTerms">Search:</label>
                 <input onKeyUp={ e => setTerms(e.target.value) }
                     type="text"
-                    id="employeeNasearchTermsme"
+                    id="searchTerms"
                     ref={terms}
                     required
                     autoFocus
@@ -59,7 +59,7 @@ export const SearchResults = ({ searchTerms }) => {
             <h3>Results</h3>
             <div className="animals">
                 {
-                    filteredAnimals.map(animal => <div key="{ animal.id }">{ animal.name }</div>)
+                    filteredAnimals.map(animal => <div key={ animal.id }>{ animal.name }</div>)
                 }
             </div>
         </div>

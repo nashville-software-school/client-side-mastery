@@ -15,10 +15,11 @@
 | 9 | [Admitting Animals](./chapters/ADMIT_ANIMAL.md) | [Purchase History](./chapters/KK_PURCHASES.md) |   |
 | 10 | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) |  |  |
 | 11 | [Viewing Individual Animals](./chapters/MODALS_INTRO.md) | [Customer Report](./chapters/KK_REPORT.md) |  |
-| 12 | [Release Animals](./chapters/DELETE.md) |  |   |
-| 13 | [Animal Treatment History](./chapters/EDIT.md) |  |  |
-| 14 | [Employee Turnover](./chapters/QUITTING.md) | [Been Caught Stealing](./chapters/KK_DELETE.md) |
-| 15 |  | [Products at Store](./chapters/KK_STORE_PROVIDERS.md) |
+| 12 | [Toggling Lists](./chapters/LIST_SWITCHING.md) |  |   |
+| 13 | [Release Animals](./chapters/DELETE.md) |  |   |
+| 14 | [Animal Treatment History](./chapters/EDIT.md) |  |  |
+| 15 | [Employee Turnover](./chapters/QUITTING.md) | [Been Caught Stealing](./chapters/KK_DELETE.md) |
+| 16 | [DataStore Higher Order Component](./chapters/DATASTORE.md) | [Products at Store](./chapters/KK_STORE_PROVIDERS.md) |
 | 😱 | Capstone time! |  |   |
 
 

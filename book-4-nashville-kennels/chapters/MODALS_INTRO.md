@@ -60,7 +60,7 @@ export const SearchResults = ({ searchTerms }) => {
                 {
                     filteredAnimals.map(animal => <div
                         className="fakeLink href"
-                        key="{ animal.id }"
+                        key={ animal.id }
                         onClick={() => {
                             const location = locations.find(l => l.id === animal.locationId)
                             const customer = customers.find(c => c.id === animal.customerId)
