@@ -118,10 +118,13 @@ import "./Employee.css"
 export default props => {
     const { addEmployee } = useContext(EmployeeContext)
     const { locations } = useContext(LocationContext)
+
+    // Store references to the <input> elements below
     const name = useRef()
     const location = useRef()
     const address = useRef()
 
+    // Function to create an object and save it to the API
     const constructNewEmployee = () => {
         const locationId = parseInt(location.current.value)
 
@@ -179,11 +182,13 @@ export default props => {
                         className="form-control"
                     >
                         <option value="0">Select a location</option>
-                        {locations.map(e => (
-                            <option key={e.id} value={e.id}>
-                                {e.name}
-                            </option>
-                        ))}
+                        {
+                            locations.map(e =>
+                                <option key={e.id} value={e.id}>
+                                    {e.name}
+                                </option>
+                            )
+                        }
                     </select>
                 </div>
             </fieldset>
@@ -249,8 +254,9 @@ First, add new new reference objects and provide default values. The default val
 export default props => {
     const { addEmployee } = useContext(EmployeeContext)
     const { locations } = useContext(LocationContext)
-    const employeeName = useRef("")
-    const employeeLocation = useRef(0)
+
+    const employeeName = useRef()
+    const employeeLocation = useRef()
 ```
 
 Then create a `ref` attribute on the employee name field.

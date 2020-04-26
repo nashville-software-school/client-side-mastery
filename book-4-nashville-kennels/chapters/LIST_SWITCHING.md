@@ -11,33 +11,37 @@ Up until this point in the application, all lists are displayed at the same time
 ```js
 import React, { useState, useEffect } from "react"
 import { LocationProvider } from "./location/LocationProvider"
-import LocationList from "./location/LocationList"
+import { LocationList } from "./location/LocationList"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
-import EmployeeList from "./employee/EmployeeList"
+import { EmployeeList } from "./employee/EmployeeList"
 import { AnimalProvider } from "./animal/AnimalProvider"
 import { CustomerProvider } from "./customer/CustomerProvider"
-import CustomerList from "./customer/CustomerList"
+import { CustomerList } from "./customer/CustomerList"
 import { SearchBar } from "./search/SearchBar"
 import { SearchResults } from "./search/SearchResults"
 import "./Layout.css"
+import "./Kennel.css"
 
-export default () => {
+export const Dashboard = () => {
     const [searchTerms, setTerms] = useState(null)
     const [activeList, setActiveList] = useState("locations")
     const [components, setComponents] = useState()
 
+    // Components needed to display locations
     const showLocations = () => (
         <LocationProvider>
             <LocationList />
         </LocationProvider>
     )
 
+    // Components needed to display customers
     const showCustomers = () => (
         <CustomerProvider>
             <CustomerList />
         </CustomerProvider>
     )
 
+    // Components needed to display employee
     const showEmployees = () => (
         <EmployeeProvider>
             <LocationProvider>

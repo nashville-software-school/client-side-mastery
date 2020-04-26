@@ -25,25 +25,28 @@ Here's the process that this code follows.
 
 What determines if a user has authenticated? It's the `kennel_customer` key that you set in local storage. If that key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
 
-Since this is now going to be the new responsiblity of the **`Kennel`** component, rename your current `Kennel.js` file `Dashboard.js`. Then make `Kennel.js` again and place the following code into it.
+Since this is now going to be the new responsiblity of the **`Kennel`** component, perform the following steps.
 
+1. Rename your current `Kennel.js` file `Dashboard.js`.
+1. Open `DashBoard.js` and change the name of the component from Kennel to Dashboard.
+    ```js
+    export const Dashboard = ...
+    ```
+1. Then create the `Kennel.js` file again and place the following code into it.
+    ```js
+    import React, { useState } from "react"
+    import { Dashboard } from "./Dashboard"
+    import { Auth } from "./auth/Auth"
 
-> ##### `src/components/Kennel.js`
+    export const Kennel = () => {
+        const [check, update] = useState(false)
+        const toggle = () => update(!check)
 
-```js
-import React, { useState } from "react"
-import Dashboard from "./Dashboard"
-import Auth from "./auth/Auth"
-
-export default () => {
-    const [check, update] = useState(false)
-    const toggle = () => update(!check)
-
-    return (
-        localStorage.getItem("kennel_customer") ? <Dashboard /> : <Auth toggle={toggle} />
-    )
-}
-```
+        return (
+            localStorage.getItem("kennel_customer") ? <Dashboard /> : <Auth toggle={toggle} />
+        )
+    }
+    ```
 
 ## Installing Authentication Components
 

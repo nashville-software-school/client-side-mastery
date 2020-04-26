@@ -11,26 +11,19 @@ You are going to implement a search feature where you can type in letters into a
 ```jsx
 import React, { useRef } from "react"
 
-export const SearchBar = ({ setTerms }) => {
-
-    const { terms } = useRef()
-
-    return (
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="searchTerms">Search:</label>
-                <input onKeyUp={ e => setTerms(e.target.value) }
-                    type="text"
-                    id="searchTerms"
-                    ref={terms}
-                    required
-                    autoFocus
-                    className="form-control"
-                />
-            </div>
-        </fieldset>
-    )
-}
+export const SearchBar = ({ setTerms }) => (
+    <fieldset>
+        <div className="form-group">
+            <label htmlFor="searchTerms">Search:</label>
+            <input onKeyUp={ e => setTerms(e.target.value) }
+                type="text"
+                id="searchTerms"
+                autoFocus
+                className="form-control"
+            />
+        </div>
+    </fieldset>
+)
 ```
 
 ## Create a Search Results Component
@@ -85,9 +78,10 @@ import CustomerList from "./customer/CustomerList"
 import { SearchBar } from "./search/SearchBar"
 import { SearchResults } from "./search/SearchResults"
 import "./Layout.css"
+import "./Kennel.css"
 
-export default () => {
-    const [searchTerms, setTerms] = useState(null)
+export const Dashboard = () => {
+    const [searchTerms, setTerms] = useState("")
 
     return (
         <div className="mainContainer">

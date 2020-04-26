@@ -31,7 +31,7 @@ import React, { useContext } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import { LocationContext } from "../location/LocationProvider"
 import { CustomerContext } from "../customer/CustomerProvider"
-import Animal from "./Animal"
+import { Animal } from "./Animal"
 import "./Animals.css"
 
 export default () => {
@@ -74,7 +74,7 @@ Then display the name property of each one.
 > ##### `src/components/animal/Animal.js`
 
 ```jsx
-export default ({ animal, customer, location }) => (
+export const Animal = ({ animal, customer, location }) => (
     <div className="animal__location">Location: { location.name }</div>
     <div className="animal__owner">Customer: { customer.name }</div>
 )

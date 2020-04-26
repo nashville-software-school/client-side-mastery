@@ -26,11 +26,10 @@ Your instructor will walk you through the new things introduced here.
 ```js
 import React, { useState, useContext, useEffect } from "react"
 import { AnimalContext } from "../animal/AnimalProvider"
-import { Modal, ModalHeader, ModalBody } from "reactstrap"
-import Animal from "../animal/Animal"
+import { Animal } from "../animal/Animal"
 import { CustomerContext } from "../customer/CustomerProvider"
 import { LocationContext } from "../location/LocationProvider"
-
+import { Modal, ModalHeader, ModalBody } from "reactstrap"
 
 
 export const SearchResults = ({ searchTerms }) => {
@@ -60,7 +59,6 @@ export const SearchResults = ({ searchTerms }) => {
                 {
                     filteredAnimals.map(animal => <div
                         className="fakeLink href"
-                        key={ animal.id }
                         onClick={() => {
                             const location = locations.find(l => l.id === animal.locationId)
                             const customer = customers.find(c => c.id === animal.customerId)

@@ -59,7 +59,7 @@ Here is a simple example of a React component. Please read through the following
 ```jsx
 import React from "react"
 
-export default () => (
+export const Kennel = () => (
     <>
         <h2>Nashville Kennels</h2>
         <small>Loving care when you're not there.</small>
@@ -85,7 +85,7 @@ To display our `Kennel` component, we need to modify the `index.js` file. This f
 ```js
 import React from "react"
 import ReactDOM from "react-dom"
-import Kennel from "./components/Kennel"
+import { Kennel } from "./components/Kennel"
 
 ReactDOM.render(<Kennel />, document.getElementById("root"))
 ```
@@ -101,7 +101,7 @@ Therefore, I'm going to create another component for displaying an animal. Consi
 ```jsx
 import React from "react"
 
-export default () => (
+export const Animal = () => (
     <section className="animal">
         <h3 className="animal__name">Doodles</h3>
         <div className="animal__breed">Breed: Poodle</div>
@@ -117,10 +117,10 @@ Update your **`Kennel`** component with the code provided below. Now when the **
 
 ```jsx
 import React from "react"
-import Animal from "./animal/Animal"
-import "./Animals.css"
+import { Animal } from "./animal/Animal"
+import "./animal/Animals.css"
 
-export default () => (
+export const Kennel = () => (
     <>
         <h2>Nashville Kennels</h2>
         <small>Loving care when you're not there.</small>

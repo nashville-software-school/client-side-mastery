@@ -6,7 +6,7 @@ mkdir -p ./src/components/auth && cd $_
 echo 'import React, { useRef } from "react"
 
 
-const Register = props => {
+export const Register = (props) => {
     const firstName = useRef()
     const lastName = useRef()
     const email = useRef()
@@ -107,14 +107,12 @@ const Register = props => {
         </div>
     )
 }
-
-export default Register
 ' >> ./Register.js
 
 echo 'import React, { useRef } from "react"
 
 
-const Login = props => {
+export const Login = (props) => {
     const email = useRef()
     const password = useRef()
 
@@ -174,7 +172,6 @@ const Login = props => {
         </div>
     )
 }
-export default Login
 ' >> ./Login.js
 
 echo '.darkgray {
@@ -262,12 +259,12 @@ input[type="password"] {
 ' >> ./Auth.css
 
 echo 'import React from "react"
-import Login from "./Login"
-import Register from "./Register"
+import { Login } from "./Login"
+import { Register } from "./Register"
 import "./Auth.css"
 
 
-export default ({toggle}) => {
+export const Auth = ({toggle}) => {
     return (
         <>
             <h1 className="welcome">Welcome to Nashville Kennels</h1>

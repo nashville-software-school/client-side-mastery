@@ -11,10 +11,10 @@ But first, you need to define your list component. This component is the first o
 ```js
 import React, { useContext } from "react"
 import { LocationContext } from "./LocationProvider"
-import Location from "./Location"
+import { Location } from "./Location"
 import "./Locations.css"
 
-export default () => {
+export const LocationList = () => {
     const { locations } = useContext(LocationContext)
 
     return (
@@ -81,11 +81,11 @@ Now you need to refactor your Kennel component. You are going to start using liv
 
 ```jsx
 import React from "react"
-import LocationList from "./location/LocationList"
+import { LocationList } from "./location/LocationList"
 import { LocationProvider } from "./location/LocationProvider"
 import "./Kennel.css"
 
-export default () => (
+export const Kennel = () => (
     <>
         <h2>Nashville Kennels</h2>
         <small>Loving care when you're not there.</small>
@@ -123,7 +123,7 @@ Refactor your **`Location`** component to use the location property that was pro
 ```js
 import React from "react"
 
-export default ({ location }) => (
+export const Location = ({ location }) => (
     <section className="location">
         <h3 className="location__name">{location.name}</h3>
         <address className="location__address">{location.address}</address>
