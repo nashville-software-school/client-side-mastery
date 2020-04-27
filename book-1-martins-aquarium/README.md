@@ -3,7 +3,7 @@
 ## Chapters
 
 
-| # | 🐠 <br/> Martin's Aquarium | 🚜 <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modern Farm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 📔 <br/> Daily Journal | 🏏 🍺 <br/>Truncheons &amp; Flagons  |
+| # | 🐠 <br/> Martin's Aquarium | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modern&nbsp;Farm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 📔 <br/> Daily Journal | 🏏 🍺 <br/>Truncheons &amp; Flagons  |
 |--|--|---|---|---|
 | 🍎  | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) | | | |
 | 💻  | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |  |  |  |
