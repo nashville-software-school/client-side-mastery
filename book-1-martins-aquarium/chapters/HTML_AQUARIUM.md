@@ -57,6 +57,14 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 1. Use `index.html` to build a web page that lists fish in the main content area, and then some fish/tank care tips on the right side of the page.
 1. Using `locations.html` to list the locations Martin has been to, and his travel tips for each one.
 
+## Developer Vocabulary
+
+> **Vocabulary:** Imagine a chair. Now imagine that you have to write a poem or other paper about the chair you have in your mind. How would you describe it? It could be a tall, white chair. It could be uncomfortable. You could say when you purchased it. When you describe something, you often list its properties. A property of something is just a specific feature of that thing. In the short description above, here are the properties of the chair you were imagining.
+>   1. Height
+>   1. Color
+>   1. Comfort level
+>   1. Date of purchase
+
 ## Discussion Points
 
 1. What are the components?
