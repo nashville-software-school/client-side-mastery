@@ -1,9 +1,27 @@
+<style>
+table th:first-of-type {
+    width: 5%;
+}
+table th:nth-of-type(2) {
+    width: 30%;
+}
+table th:nth-of-type(3) {
+    width: 20%;
+}
+table th:nth-of-type(4) {
+    width: 20%;
+}
+table th:nth-of-type(5) {
+    width: 25%;
+}
+</style>
+
 # Book 1 - Martin's Aquarium
 
 ## Chapters
 
-| #  | Aquarium 🐠 | Modern Farm 🚜 | Daily Journal 📔 | Truncheons &amp; Flagons 🏏 🍺 |
-|--|--|--|--|--|
+| #  | 🐠 <br/> Martin's Aquarium | 🚜 <br/> Modern Farm  | 📔 <br/> Daily Journal | 🏏 🍺 <br/>Truncheons &amp; Flagons  |
+|--|--|---|---|---|
 | 🍎  | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) | | | |
 | 💻  | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |  |  |  |
 | 1 | [Terminal Basics](./chapters/CLI_BASICS.md) |  |  | |
