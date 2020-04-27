@@ -1,3 +1,7 @@
+# Book 1 - Martin's Aquarium
+
+## Chapters
+
 <style>
 table th:first-of-type {
     width: 5%;
@@ -15,10 +19,6 @@ table th:nth-of-type(5) {
     width: 25%;
 }
 </style>
-
-# Book 1 - Martin's Aquarium
-
-## Chapters
 
 | #  | 🐠 <br/> Martin's Aquarium | 🚜 <br/> Modern Farm  | 📔 <br/> Daily Journal | 🏏 🍺 <br/>Truncheons &amp; Flagons  |
 |--|--|---|---|---|
