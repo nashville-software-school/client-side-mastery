@@ -24,7 +24,6 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 12 - [Building and Using an API](./chapters/JSON_SERVER_API.md)
 * Chapter 13 - [Fetching Data](./chapters/FETCH_INTRO.md)
 * Chapter 14 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_FETCHING.md)
-* Chapter 15 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 * Chapter 16 - [Daily Journal - Part 6](./chapters/DAILY_JOURNAL_MODULAR.md)
 
 > ### __Sprint 3__ - [Welcome to Nashville](./chapters/WELCOME_NASHVILLE.md)
