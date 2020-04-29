@@ -48,6 +48,29 @@ For example, it would look like this. Make sure you use the SSH version when you
 git remote add origin git@github.com:yourusername/modern-farm.git
 ```
 
+## Automated Tests
+
+The next step is to get some tools installed. In your terminal, run the following command.
+
+```sh
+npm install
+```
+
+You will then see some required software to start getting installed. If you don't see this happening, or see an error, visit one of your instructors.
+
+![](./images/modern-farm-npm-install.gif)
+
+Once the process completes, then run the following command to start the automated tests.
+
+```sh
+npm run test
+```
+
+You should see the following output. Again, if you don't visit an instructor.
+
+![](./images/modern-farm-automated-tests.gif)
+
+As you start to create the files, and then write the correct JavaScript code for this application, tests will start to pass. Make sure you come back to the terminal as you write code to see if your code works the way it is expected.
 
 ## Creating a Harvest Plan
 
