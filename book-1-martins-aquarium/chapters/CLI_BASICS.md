@@ -40,7 +40,7 @@ Once the directory is created, you need to create the HTML file and the CSS file
 
 Create the file with the following command.
 
-```
+```sh
 touch index.html
 ```
 
