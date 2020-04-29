@@ -1,5 +1,13 @@
 # Tilling the Field
 
+## Setup
+
+Have a terminal window open and change directory to `~/workspace/modern-farm`.
+
+Run `npm start test` to start the automated testing task.
+
+## Tilling Instructions
+
 1. Create a `scripts/field.js` module.
 1. In the module, define and export a function named `addPlant`.
 1. The `addPlant` function must accept a seed object as input.

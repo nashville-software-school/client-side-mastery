@@ -1,5 +1,13 @@
 # Selling the Harvest Online
 
+## Setup
+
+Have a terminal window open and change directory to `~/workspace/modern-farm`.
+
+Run `npm start test` to start the automated testing task.
+
+## Selling Instructions
+
 You are a modern farm, so you want to put everything that you harvested on your farm's ordering web site so that buyers can access it from anywhere. To start, just list each of the plants in your harvest.
 
 Use Flexbox to make a grid layout like below.

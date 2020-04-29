@@ -1,5 +1,13 @@
 # Sowing the Field With Your Tractor
 
+## Setup
+
+Have a terminal window open and change directory to `~/workspace/modern-farm`.
+
+Run `npm start test` to start the automated testing task.
+
+## Sowing Instructions
+
 1. Create a `scripts/tractor.js` module.
 1. In this module, define and export a `plantSeeds` function.
 1. The function must accept the year's planting plan as input _(i.e. it must define a parameter)_.
