@@ -31,7 +31,7 @@ Since a journal entry is actual thing that you want to track in JavaScript, you 
 
 ## Defining Journal Entries
 
-Combining the definition of the daily journal objects, and the daily journal collection. Open `journal.js` and define your journal entry objects by inside the journal entries array.
+Now it's time to combine the definition of the daily journal objects with the daily journal collection. Open `journal.js` and place your journal entry objects inside the journal entries array. Note that you no longer need the variable names for each object. They are now simply elements in the journalEntries array.
 
 ```js
 const journalEntries = [
