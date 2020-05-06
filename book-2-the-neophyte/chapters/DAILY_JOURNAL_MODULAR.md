@@ -1,6 +1,7 @@
 # Daily Journal
 
-In this stage of the application, you are going to modularize your JavaScript code. You will create several JavaScript files, which each have a single responsibility. Then you will need to include them in your `index.html` in the correct order.
+In this stage of the application, you are going to modularize your JavaScript code. You will create several JavaScript files, which each have a single responsibility.
+<!-- Then you will need to include them in your `index.html` in the correct order. -->
 
 My modularizing your code, you achieve two main goals.
 
@@ -17,7 +18,9 @@ Create three new files in your `src/scripts` directory.
 
 > **Tip:** Once this is done, your `journal.js` file should be completely empty.
 
-Now refactor your `index.html` file to include all of your JavaScript files.
+<!-- Now refactor your `index.html` file to include all of your JavaScript files. -->
+
+Now refactor the script element in your `index.html` to include the attribute: `type="module"`
 
 ## Refactor
 
@@ -34,9 +37,11 @@ const APIManager = {
             .then(response => response.json())
     }
 }
+
+export default APIManager
 ```
 
-You may have noticed some strange syntax in the object above. It's ok if you didn't. Take a closer look and you will see that the `getJournalEntries` method on the object was defined with the traditioanltraditional `key: value` syntax. Here's the same object using that syntax.
+You may have noticed some strange syntax in the object above. It's ok if you didn't. Take a closer look and you will see that the `getJournalEntries` method on the object was defined with the traditional `key: value` syntax. Here's the same object using that syntax.
 
 ```js
 const API = {
@@ -45,6 +50,7 @@ const API = {
             .then(response => response.json())
     }
 }
+export default  API
 ```
 
 Both are valid, but the first example saves a few characters.
@@ -53,9 +59,25 @@ Both are valid, but the first example saves a few characters.
 
 Now that you've defined an object whose responsibility is to access the data, you need to write code in `src/scripts/journal.js` to use that object and get the data. Once you know you have the data, pass it along to the `renderJournalEntries` function that now lives in `src/scripts/DOMPrinter.js`.
 
+`DOMPrinter.js:`
+```js
+import APIManager from './APIManager.js'
+
+const DomPrinter = {
+// DOM printer methods go here
+
+}
+
+export default APIManager
+```
+
+
 Put this comment in `src/scripts/journal.js`. Then write the main logic that uses the code in the helper modules.
 
 ```js
+import DOMPrinter from './DOMPrinter.js'
+
+
 /*
     Main application logic that uses the functions and objects
     defined in the other JavaScript files.
