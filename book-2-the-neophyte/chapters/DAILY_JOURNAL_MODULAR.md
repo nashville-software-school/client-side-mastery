@@ -26,7 +26,7 @@ Now refactor the script element in your `index.html` to include the attribute: `
 
 Replace the code in `src/scripts/apiManager.js` with the code below. Since you moved the code to this file, you should consider this file an independent, helper module now. It should not call any functions, just define them. The responsbility for how the application should operate should reside in `src/scripts/journal.js` now.
 
-The code in the `data.js` module, then, should only define functionality for **how** to access the data, but should not immediately run it.
+The code in the `apiManager.js` module, then, should only define functionality for **how** to access the data, but should not immediately run it.
 
 ### API Manager Module
 
@@ -64,11 +64,22 @@ Now that you've defined an object whose responsibility is to access the data, yo
 import APIManager from './APIManager.js'
 
 const DomPrinter = {
-// DOM printer methods go here
+
+    renderJournalEntries () {
+        // method from APIManager that accesses the data goes here
+        ApiManager.getJournalEntries()
+        // Then you need to use the returned data
+        .then(returnedArray => {
+            // code that prints to the dom goes here
+
+        })
+
+
+    }
 
 }
 
-export default APIManager
+export default DOMPrinter
 ```
 
 
@@ -82,11 +93,12 @@ import DOMPrinter from './DOMPrinter.js'
     Main application logic that uses the functions and objects
     defined in the other JavaScript files.
 
-    Change the fake variable names below to what they should be
+    call the method within DOMPrinter
     to get the data and display it.
 */
-objectWithGetterMethod.methodToGetData().then(functionThatRendersData)
+
 ```
+<!-- objectWithGetterMethod.methodToGetData().then(functionThatRendersData) -->
 
 ## Challenge
 
