@@ -44,7 +44,7 @@ const supplies = [
 const supplyList = document.querySelector(".supplies")
 
 // Create a new array that contains supplies that cost less than $50
-const inexpensiveSupplies = supplies.forEach(supplyObject => {
+const inexpensiveSupplies = supplies.filter(supplyObject => {
     if (supplyObject.price < 50.00) {
         return true
     }
@@ -66,28 +66,26 @@ inexpensiveSupplies.forEach(supplyObject => {
 })
 ```
 
-
-```js
-// Array to contain all the New York businesses
-const newYorkBusinesses = businesses.filter(business => {
-  let inNewYork = false
-
-  if (business.addressStateCode === "NY") {
-      inNewYork = true
-  }
-
-  return inNewYork
-})
-```
-
-
-
 ## Task: Listing New York Companies
 
-Use `filter()` to list only Dotard &amp; Simbleton companies located in New York.
+Use `filter()` to list only Dotard &amp; Simbleton companies located in New York. Display them in element in your HTML file that has a class of `businessList--newYork`.
+
+```html
+<article class="businessList--newYork">
+    <!-- New York businesses go here --->
+</article>
+```
 
 ![list of new york businesses](./images/dotard-simbleton-newyork-list.png)
 
 ## Task: Listing Manufacturing Companies
 
 Use `filter()` to list only Dotard &amp; Simbleton companies that are in manufacturing.
+
+Display them in element in your HTML file that has a class of `businessList--manufacturing`.
+
+```html
+<article class="businessList--manufacturing">
+    <!-- Manufacturing businesses go here --->
+</article>
+```
