@@ -82,6 +82,12 @@ document
     });
 ```
 
+## Videos With More Examples
+
+You can watch some videos where other developers show you other examples of how to use the `.map()` method on an array.
+
+* [ES6 Tutorial - how to use javascript array FIND method](https://www.youtube.com/watch?v=PMRkx51LGSQ)
+* [8 Must Know JavaScript Array Methods](https://youtu.be/R8rmfD9Y5-c?t=174)
 
 ## Task: Finding Purchasing Agents by First Name
 

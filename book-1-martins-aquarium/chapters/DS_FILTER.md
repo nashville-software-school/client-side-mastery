@@ -66,6 +66,13 @@ inexpensiveSupplies.forEach(supplyObject => {
 })
 ```
 
+## Videos With More Examples
+
+You can watch some videos where other developers show you other examples of how to use the `.filter()` method on an array.
+
+* [filter Array Method | JavaScript Higher Order Functions & Arrays](https://youtu.be/rRgD1yVwIvE?t=322)
+* [JavaScript Array Filter](https://www.youtube.com/watch?v=4_iT6EGkQfk)
+
 ## Task: Listing New York Companies
 
 Use `filter()` to list only Dotard &amp; Simbleton companies located in New York. Display them in element in your HTML file that has a class of `businessList--newYork`.

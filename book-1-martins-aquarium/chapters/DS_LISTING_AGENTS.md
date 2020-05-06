@@ -54,6 +54,13 @@ brandNameArray.forEach(brandName => {
 })
 ```
 
+## Videos With More Examples
+
+You can watch some videos where other developers show you other examples of how to use the `.map()` method on an array.
+
+* [map Array Method | JavaScript Tutorial](https://www.youtube.com/watch?v=P4RAFdZDn3M)
+* [JavaScript Array Map](https://www.youtube.com/watch?v=G3BS3sh3D8Q)
+
 ## Task: Listing Purchasing Agent Names
 
 Use `map()` to create an array of purchasing agents for companies that purchase from Dotard &amp; Simbleton. Then iterate the array and display each one in element in your HTML file that has a class of `agents`.

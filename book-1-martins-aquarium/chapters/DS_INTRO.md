@@ -204,6 +204,13 @@ supplies.forEach(supplyObject => {
 });
 ```
 
+## Videos With More Examples
+
+You can watch some videos where other developers show you other examples of how to use the `.forEach()` method on an array.
+
+* [forEach Array Method | JavaScript Tutorial](https://www.youtube.com/watch?v=SXb5LN_opbA)
+* [JavaScript Array forEach in 90 Seconds](https://www.youtube.com/watch?v=qdSD5MiqQg0)
+
 ## Task: Listing Purchasing Companies
 
 Your task is to use the `forEach()` array method to list all of the companies so that Doris can easily browse a list of her customers. Use the example code above as a starting point. The list of companies should look like the image below.
