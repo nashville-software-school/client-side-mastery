@@ -3,7 +3,7 @@
 In this book, you will learn tools, libraries and workflows that modern client side developers use.
 
 * Chapter 1 - [ES6 Modules](./chapters/JS_ES6_MODULES.md)
-* Chapter 2 - [Daily Journal - ES6 Modules](./chapters/DAILY_JOURNAL_ES6_MODULES.md)
+* Chapter 2 - [Daily Journal - ES6 Modules](../book-2-the-neophyte/chapters/DAILY_JOURNAL_MODULAR.md)
 * Chapter 3 - [Saving Data From User Input](./chapters/USER_INPUT.md)
 * Chapter 4 - [Daily Journal - Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md)
 * Chapter 5 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
