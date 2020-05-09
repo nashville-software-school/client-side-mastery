@@ -4,6 +4,28 @@ In this project, you are going to practice using `CustomEvent` and `dispatchEven
 
 ![](./images/ohiostatefair.jpg)
 
+## Setup
+
+Open a new terminal window, copy pasta the following command into the terminal and hit enter to run it. It will create a basic file structure for you and create some starter code in the `~/workspace/statefair` directory.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-39/book-2-glassdale-pd/chapters/scripts/statefair-install.sh)"
+```
+
+Then run the following command in your terminal to change directory to the project directory.
+
+```sh
+cd ~/workspace/statefair
+```
+
+Open the directory in Visual Studio Code. Then start the web server and follow the instruction in this project's chapters.
+
+## End Goal
+
+If you complete all of the chapters in this project, this is what your application will be able to do.
+
+![](./images/ticket-count.gif)
+
 ## Custom Events Review
 
 Time to review the three main parts of working with custom events in a JavaScript application.
