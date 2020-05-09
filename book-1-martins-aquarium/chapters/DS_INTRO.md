@@ -14,8 +14,6 @@ To help solve her problems, you will use the following methods that are automati
 1. `filter()`
 1. `map()`
 1. `find()`
-1. `reduce()`
-1. `sort()`
 
 ## Your First Day at Dotard & Simbleton
 
