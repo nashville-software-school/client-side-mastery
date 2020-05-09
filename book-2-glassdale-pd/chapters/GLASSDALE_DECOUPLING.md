@@ -1,6 +1,12 @@
 # A Discussion about Loose Coupling
 
-The idea of Coupling in complex software is an important factor. Coupling is defined most generally as how many components know about the existence of each other. The higher that number, the higher your overall coupling is in an application. You want that number to be as low as possible.
+The concept of _coupling_ in complex software is an important factor. Coupling is defined most generally as how many components know about the existence of each other. The higher that number, the higher your overall coupling is in an application. You want that number to be as low as possible.
+
+---
+
+Please watch the [Component Coupling](https://www.youtube.com/watch?v=lUrgx6UIsWk) video to learn more vocabulary, and get a high-level overview of what coupling means. There are terms and acronyms that you won't recognize in this video so ignore those, but the scenarios are real and the explanations are clear.
+
+---
 
 Consider the following example application that lists text messages your receive from your friends.
 
@@ -281,4 +287,8 @@ Thinking about components talking to each other using custom messages is a large
 
 You are not going to get this right away. It requires practice, conversations with your teammates &amp; instructors, and trying it in different contexts.
 
-Time to move on to the next chapter and actually try this out with the Glassdale Cold Case application you are building. In the previous chapter, you built a dropdown element that lists crimes. You will have that component dispatch a custom message to an Event Hub, and the criminal list component will listen for that event and then behave how it chooses.
+## Next Steps
+
+There is an entire project in this book called [State Fair](./SF_SETUP.md) where you can practice custom events to keep your components decoupled.
+
+In the next chapter you will try this out with the Glassdale Cold Case application you are building. In the previous chapter, you built a dropdown element that lists crimes. You will have that component dispatch a custom message to an Event Hub, and the criminal list component will listen for that event and then behave how it chooses.
