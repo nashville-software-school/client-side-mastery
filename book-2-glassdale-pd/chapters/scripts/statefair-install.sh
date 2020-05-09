@@ -138,54 +138,14 @@ export const TicketBooth = () => {
 }
 ' >> ./scripts/TicketBooth.js
 
-echo 'import { useProducts } from "./ProductProvider.js"
-import { useProductTypes } from "./ProductTypeProvider.js"
-import { Product } from "./Product.js"
-
-const contentTarget = document.querySelector(".products")
-
-export const ProductList = () => {
-    // Get a reference to both arrays
-    const products = useProducts()
-    const productTypes = useProductTypes()
-
-    // Iterate the array of products with .map()
-    const arrayOfProductHTMLRepresentations = products.map(product => {
-
-        /*
-            Find the type for this product by using the .find()
-            method on the product type array
-        */
-        const type = productTypes.find(type => type.id === product.productTypeId)
-
-        // Build HTML representation of a product
-        const html = Product(product, type)
-
-        return html
-    })
-
-    const stringOfAllRepresentations = arrayOfProductHTMLRepresentations.join("")
-
-    contentTarget.innerHTML = stringOfAllRepresentations
-}
-' >> ./scripts/ProductList.js
-
 echo 'const contentTarget = document.querySelector(".rides")
 const eventHub = document.querySelector("#state-fair")
 
 export const RideTicketHolders = () => {
-    eventHub.addEventListener("rideTicketPurchased", customEvent => {
-        contentTarget.innerHTML += `
-            <div class="person rider"> </div>
-        `
-    })
-    eventHub.addEventListener("packageTicketPurchased", customEvent => {
-        contentTarget.innerHTML += `
-            <div class="person bigSpender"> </div>
-        `
+    eventHub.addEventListener("", customEvent => {
     })
 }
-' >> ./rides/RideTicketHolders.js
+' >> ./scripts/rides/RideTicketHolders.js
 
 echo '// Import and invoke the ticket booth component function
 ' >> ./scripts/main.js
