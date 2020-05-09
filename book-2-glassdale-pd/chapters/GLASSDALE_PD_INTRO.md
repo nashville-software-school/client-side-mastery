@@ -49,9 +49,9 @@ In this book, you will be using your _fancy coding skills_ to review all of the 
     1. `~/workspace/glassdale/scripts/convictions`
     1. `~/workspace/glassdale/scripts/officers`
     1. `~/workspace/glassdale/styles`
-1. Create your `index.html`, `scripts/main.js`, and `styles/main.css` files.
+1. Create your `scripts/main.js`, and `styles/main.css` files.
 1. Make sure that `json-server` was installed correctly by typing it into your terminal. If you get feedback that your system doesn't recognize the `json-server` command, speak to an instructor immediately.
-1. If you haven't yet, create following alias in `.zshrc`.
+1. If you haven't yet, create following alias in the `~/.zshrc` file.
     ```sh
     alias hs="serve -l 8080"
     ```
