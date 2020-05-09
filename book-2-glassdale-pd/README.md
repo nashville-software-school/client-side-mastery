@@ -20,15 +20,13 @@
 | 14 |  | | [Updating Leaderboard](./chapters/TF_GAME_SCORES.md) |
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |
 
-## Review Chapters
-
-* [Array Methods](./chapters/JS_ARRAY_METHODS.md)
-* [Factory Functions](./chapters/JS_FACTORY_FUNCTION.md)
-* [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
 
 ## Supplementary Chapters
 
-* [Customizing the Terminal](./chapters/CLI_PERSONALIZATION.md)
-* [Generator Functions](./chapters/JS_GENERATOR_FUNCTION.md)
-* [CSS Variables](./chapters/CSS_VARIABLES.md)
-* [Local SSL Certificates](./chapters/LOCAL_CERTS.md)
+* Supplemental Chapter - [Randall's Used Cars: Object Methods](./chapters/JS_OBJECT_METHODS.md)
+* Supplemental Chapter - [Kneel Diamonds: Factory Functions](./chapters/JS_FACTORY_FUNCTION.md)
+* Supplemental Chapter - [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
+* Supplemental Chapter - [Customizing the Terminal](./chapters/CLI_PERSONALIZATION.md)
+* Supplemental Chapter - [Generator Functions](./chapters/JS_GENERATOR_FUNCTION.md)
+* Supplemental Chapter - [CSS Variables](./chapters/CSS_VARIABLES.md)
+* Supplemental Chapter - [Local SSL Certificates](./chapters/LOCAL_CERTS.md)
