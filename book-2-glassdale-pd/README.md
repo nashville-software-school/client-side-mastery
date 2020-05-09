@@ -4,10 +4,10 @@
 
 | #  | 🚓 <br/> Glassdale Cold Case | 🎢 <br/> State Fair | 📔 <br/> Daily Journal | 🏏 🍺 <br/>Truncheons &amp; Flagons |
 |--|--|--|--|--|
-| 1 | [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md) |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |  |
+| 1 | [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md) |  |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |
 | 2 | [Criminal API](./chapters/GLASSDALE_CRIMINAL_API.md) |  |  |  |
-| 3 | [Likely Suspects](./chapters/GLASSDALE_CRIMINAL_HISTORY.md) |  | [Game Data](./chapters/TF_GAME_DATA.md) |  |
-| 4 | [Decoupling with Events](./chapters/GLASSDALE_DECOUPLING.md) |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |  |
+| 3 | [Likely Suspects](./chapters/GLASSDALE_CRIMINAL_HISTORY.md) |  |  | [Game Data](./chapters/TF_GAME_DATA.md) |
+| 4 | [Decoupling with Events](./chapters/GLASSDALE_DECOUPLING.md) |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
 | 5 | [Likely Suspects with Event Hub](./chapters/GLASSDALE_EVENT_HUB.md) | [Going to the Fair](./chapters/SF_SETUP.md) |  |  |
 | 6 | [Arresting Officer](./chapters/GLASSDALE_ARRESTING_OFFICERS.md) | [Ticket to Ride](./chapters/SF_RIDE_TICKET.md) |  |  |
 | 7 | [Case Notes API - Making Entries](./chapters/GLASSDALE_NOTES_API.md) | [Food Ticket](./chapters/SF_FOOD_TICKET.md) | [Entry API](./chapters/DAILY_JOURNAL_FETCHING.md) | [Truncheons &amp; Flagons API](./chapters/TF_API.md) |
