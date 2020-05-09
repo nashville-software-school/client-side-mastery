@@ -4,11 +4,11 @@
 
 When working with the Git/Github workflow, there are several commands that you type over, and over, and over again. One of those is `git push origin myBranchName`. It becomes tedious to constantly type `git push origin`. Let's create an alias for it.
 
-Open the `.zshrc` initialization file in your favorite code editor, and enter in the following alias.
+Open the `.zshrc` initialization file in Visual Studio Code, and enter in the following alias.
 
 `alias gpo="git push origin "`
 
-> **Pro tip:** Make sure there are no spaces before, or after, the equals sign in an alias.
+> **Note:** Make sure there are no spaces before, or after, the equals sign in an alias.
 
 Save the file, and reload your init file with the `source` command.
 
@@ -26,9 +26,9 @@ You also need to pull branches, including master, quite often. Consider creating
 
 That will let you pull any branch name with `glo teammate-branch`
 
-`alias glom="git checkout master && git pull origin master"`
+`alias glom="git pull origin master"`
 
-A nice, fast way to switch the master branch and pull it when a teammates has merged a PR.
+A nice, fast way to pull the master branch when a teammate has received an approved PR and merged their branch on Github.
 
 ## Test a Teammate's Branch
 

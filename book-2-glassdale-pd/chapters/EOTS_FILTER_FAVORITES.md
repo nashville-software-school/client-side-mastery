@@ -1,1 +1,0 @@
-# Filtering and Finding Favorite Photos

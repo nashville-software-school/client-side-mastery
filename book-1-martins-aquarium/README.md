@@ -20,12 +20,14 @@
 | 11 | [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md) | [Sowing the Field](./chapters/MF_SOWING.md) |  |  |
 | 12 | [Fundamental Workshop](./chapters/COMPONENTS_WORKSHOP.md) | [Harvest Time](./chapters/MF_HARVEST.md) | [Rendering Collections of Entries](./chapters/DS_LISTING_AGENTS.md) | [Listing Purchasing Agents](./chapters/DS_LISTING_AGENTS.md) |
 | 13 | [Big Fish, Little Fish](./chapters/FILTERING_FISH.md) | [Selling the Harvest](./chapters/MF_RENDER_HARVEST.md) |  | [Finding Companies](./chapters/DS_FIND_COMPANY.md) |
+| 14 | [Git Workflow Terminal Shortcuts](./chapters/GIT_CLI_SHORTCUTS.md) |  |  |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](./chapters/AUTO_WORLD.md) |  |  |  |
-| 14 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) | [Optional Challenges](./chapters/MF_CHALLENGES) |  |  |
+| 15 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) | [Optional Challenges](./chapters/MF_CHALLENGES) |  |  |
 
 ## Supplementary Content
 
 * Supplemental Chapter - [Muscle Memory: Functions](./chapters/FUNCTION_PRACTICE.md)
 * Supplemental Chapter - [Muscle Memory: Factory Functions](./chapters/FACTORY_FUNCTIONS.md)
+* Supplemental Chapter - [Scope in JavaScript](./chapters/JS_SCOPE.md)
 * Supplemental Chapter - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
 
