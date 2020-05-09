@@ -17,7 +17,7 @@
 | 11 | [One to Many Relationships](./chapters/ONE_MANY.md) | [Full Package Ticket](./chapters/SF_PACKAGE_TICKET.md) |  | [Adding Players](./chapters/TF_PLAYER_FORM.md) |  |
 | 12 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) |  |  |
 | 13 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) |  | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) | [Selecting Teams for Game](./chapters/TF_CHOOSE_TEAMS.md) |
-| 14 |  |  |  | [Updating Leaderboard](./chapters/TF_GAME_SCORES.md) |
+| 14 |  | [Total Customers Challenge](./chapters/SF_CUSTOMER_COUNT.md) |  | [Updating Leaderboard](./chapters/TF_GAME_SCORES.md) |
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |  |
 
 
