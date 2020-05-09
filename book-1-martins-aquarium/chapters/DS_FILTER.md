@@ -1,4 +1,4 @@
-## Filtering Data to Smaller Sets
+## Showing Different Kinds of Companies
 
 Now you have code to show the businesses that have active accounts. You call Doris over and show her the results, and she's very excited.
 

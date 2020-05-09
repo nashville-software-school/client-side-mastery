@@ -1,5 +1,7 @@
 # Dotard & Simbleton
 
+![dotard and simbleton](./images/dotard-simbleton.jpg)
+
 Since one of your primary jobs as a software developer will be to filter, transform, organize, sort, and then display collections of data, you will need to know how to use some of the helpful methods that software development languages provide to perform those operations.
 
 Up until now, you have relied upon the base `for` loop mechanism in JavaScript. These array methods will let you perform more advanced operations on collections with far less code.
