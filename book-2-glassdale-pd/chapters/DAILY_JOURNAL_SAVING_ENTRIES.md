@@ -6,25 +6,15 @@ The learning objective for this chapter is to apply your knowledge of event list
 
 ![animation of saving new entries and rendering them](./images/QBpNpy7FDL.gif)
 
-## Listen for Submit Button Click
+## State Change
 
-In your main JavaScript module (`journal.js`) add a click event listener to the **Record Journal Entry** button at the bottom of your form. When the user clicks the button, you need to create a new entry in your API. The HTTP method that you use to create resources is POST. Guidance on syntax is provided below.
+Since you will be implementing functionality in the chapter to create new journal entries in your API, you need to implement the a function whose responsibility is to broadcast to the application that the state of the journal entries has changed.
 
-## Collect Form Field Values
-
-1. Use `document.querySelector` to select your input fields.
-1. Use the `.value` property on the input field elements to get the text that you typed/chose.
-
-## Journal Entry Factory Function
-
-In your JournalForm component modules, define a factory function, named `createEntry()`, whose responsibility is to generate an object that represents a journal entry. It should define a parameter for each property on a journal entry and then return a new object that has all the properties defined.
+It's state has changed because a new item was added to the array. Add the following function to your journal data provider module.
 
 ```js
-/*
-    Example with one parameter provided. You must add the rest
-*/
-const createEntry = (mood, ) => {
-    return {}
+const dispatchStateChangeEvent = () => {
+    eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
 }
 ```
 
@@ -32,8 +22,8 @@ const createEntry = (mood, ) => {
 
 Now you must use `fetch` to create your journal entry in the API. The default method is GET, so you've never had to specify and configuration options with your `fetch` statements before. However, with POST, you need to configure the request.
 
-1. Add new method named `saveJournalEntry` to your data provider module. It should take the entry object as an argument.
-1. In the method, use `fetch` to perform a POST request.
+1. Add new function named `saveJournalEntry` to your data provider module. It should take the entry object as a parameter.
+1. In the function, use the `fetch()` function to perform a POST request.
     ```js
     // Use `fetch` with the POST method to add your entry to your API
     fetch("url", { // Replace "url" with your API's URL
@@ -44,21 +34,21 @@ Now you must use `fetch` to create your journal entry in the API. The default me
         body: JSON.stringify(newJournalEntry)
     })
         .then()  // <-- Get all journal entries
+        .then()  // <-- Broadcast the state change event
     ```
-1. In journal form module, invoke method to save entry method.
-1. Once the save operation is complete dispatch a new event to the Event Hub that the state of the entries data provider has changed. Here's an example of what your click event listener would look like in the journal form component.
-    ```js
-    eventHub.addEventListener("click", e => {
-        // Invoke factory function
 
-        // Send new entry object to
-        saveJournalEntry(newEntryObject)
-            .then(
-                // Dispatch new custom event that state has changed
-            )
-    })
-    ```
-1. Now refactor your entry list component to listen for the event you dispatched. That listener function for render the list again with the new data.
+## Saving New Journal Entry Process
+
+
+1. In your **`JournalForm`** component module listen for the click on the **Record Journal Entry** button at the bottom of your form.
+1. Use `document.querySelector` to select your input fields.
+1. Use the `.value` property on the input field elements to get the text that you typed/chose.
+1. Build a new object representation of a journal entry. Make sure the keys are consistent with the existing objects in your API.
+1. Invoke the save function that you created in your provider component above.
+
+## Entry List Reacts to State Change
+
+Now refactor your entry list component to listen for the state change event you dispatched in the data provider module. In the event listener get the new state and render the HTML representations again.
 
 ## Challenges
 
