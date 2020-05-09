@@ -48,110 +48,68 @@ This ERD is the visualization of the data above. It shows how a single product t
 
 The data is separated in the database, but when you want to display HTML representations of the products to the user, you need to pull in the name of the product type from the other table. You don't want tell the user that a Baby Ruth's category is `1`.
 
-1. Create a `~workspace/marketplace` directory
-1. Create a `~workspace/marketplace/api` directory
-1. Create a `~workspace/marketplace/api/database.json` file
-1. Create a `~workspace/marketplace/index.html` file
-1. Create a `~workspace/marketplace/scripts` directory
-1. Create a `~workspace/marketplace/scripts/main.js` file
-1. Create a `~workspace/marketplace/scripts/ProductTypeProvider.js` file
-1. Create a `~workspace/marketplace/scripts/ProductProvider.js` file
-1. Create a `~workspace/marketplace/scripts/ProductList.js` file
-1. Create a `~workspace/marketplace/scripts/Product.js` file
-1. Place the JSON from above in your `database.json` file.
-1. Create an HTML element in your `index.html` with a class of `products`.
+## Setup
 
-> ##### `marketplace/scripts/ProductTypeProvider.js`
+Open a new terminal window, copy pasta the following command into the terminal and hit enter to run it. It will create a basic file structure for you and create some starter code in the `~/workspace/marketplace` directory.
 
-```js
-let types = []
-
-export const useProductTypes = () => types.slice()
-
-export const getProductTypes = () => fetch("http://localhost:8088/producttypes")
-    .then(res => res.json())
-    .then(parsedTypes => types = parsedTypes)
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-39/book-2-glassdale-pd/chapters/scripts/marketplace-install.sh)"
 ```
 
-> ##### `marketplace/scripts/ProductProvider.js`
+Then run the following command in your terminal to change directory to the project directory.
 
-```js
-let products = []
-
-export const useProducts = () => products.slice()
-
-export const getProducts = () => fetch("http://localhost:8088/products")
-    .then(res => res.json())
-    .then(parsedProducts => products = parsedProducts)
+```sh
+cd ~/workspace/marketplace
 ```
 
-> ##### `marketplace/scripts/ProductList.js`
+## Starting the API
 
-```js
-import { useProducts } from "./ProductProvider.js"
-import { useProductTypes } from "./ProductTypeProvider.js"
-import Product from "./Product.js"
+In your current terminal, run the following commands to start json-server and get the API running.
 
-const contentTarget = document.querySelector(".products")
-
-export const ProductList = () => {
-    const products = useProducts()
-    const productTypes = useProductTypes()
-
-    const render = () => {
-        contentTarget.innerHTML = products.map(product => {
-            // Find this product's type
-            const type = productTypes.find(type => type.id === product.productTypeId)
-
-            // Get HTML representation of product
-            const html = Product(product, type)
-
-            return html
-        }).join("")
-    }
-
-    render()
-}
-
-export default ProductList
+```sh
+cd api
+json-server -p 8088 -w database.json
 ```
 
+## Starting the File Server
 
-> ##### `marketplace/scripts/Product.js`
+Start a new terminal, then run the following commands to start the web server.
+
+```sh
+cd ~/workspace/marketplace
+serve -l 8080
+```
+## Viewing the Marketplace
+
+Visit http://localhost:8080 and you should see the following HTML output.
+
+![](./images/marketplace.png)
+
+## Review of Important Code
+
+Open the `ProductList.js` module and you can review how to take two different arrays of data and use the array methods of `.map()` and `.find()` to effectively join the objects in the two arrays to display a single HTML representation.
 
 ```js
-const Product = (product, type) => {
-    return `
-        <section class="product">
-            <header>
-                <h2>${product.name}</h2>
-            </header>
-            <div>
-                Price $${product.price}
-            </div>
-            <div>
-                In category ${type.name}
-            </div>
-        </section>
-    `
-}
+// Get a reference to both arrays
+const products = useProducts()
+const productTypes = useProductTypes()
 
-export default Product
+// Iterate the array of products with .map()
+const arrayOfProductHTMLRepresentations = products.map(product => {
+
+    /*
+        Find the type for this product by using the .find()
+        method on the product type array
+    */
+    const type = productTypes.find(type => type.id === product.productTypeId)
+
+    // Build HTML representation of a product
+    const html = Product(product, type)
+
+    return html
+})
+
+const stringOfAllRepresentations = arrayOfProductHTMLRepresentations.join("")
+
+contentTarget.innerHTML = stringOfAllRepresentations
 ```
-
-
-> ##### `marketplace/scripts/main.js`
-
-```js
-import { getProducts } from "./ProductProvider.js"
-import { getProductTypes } from "./ProductTypeProvider.js"
-import ProductList from "./ProductList.js"
-
-getProducts()
-    .then(getProductTypes)
-    .then(ProductList)
-```
-
-Once you have all that code in place, start json-server and your web server and load your app in Chrome. You will see the following list.
-
-![](./images/product-list.png)

@@ -30,9 +30,8 @@ Review all of the statements, and if any of them are noteworthy, then make sure 
 ## Getting Started
 
 1. Which components do you need to create for this feature?
-1. Where is the data coming from?
-1. Which components need to talk to each other?
-1. Which component is talking when a user performs an action?
-1. Which component would listen?
+1. Where is the data coming from in the API? Do you need a new provider?
+1. Which component is "talking" (_i.e. dispatches a custom event_) when a user performs an action?
+1. Which component would listen and react to that custom event?
 1. Does data need to be send along with the message?
 1. Which DOM element would contain the list of witness statements? Do you need a new one, or can they go in an existing one?
