@@ -6,7 +6,7 @@ In this book, you will learn tools, libraries and workflows that modern client s
 * Chapter 2 - [Daily Journal - ES6 Modules](../book-2-the-neophyte/chapters/DAILY_JOURNAL_MODULAR.md)
 * Chapter 3 - [Saving Data From User Input](./chapters/USER_INPUT.md)
 * Chapter 4 - [Daily Journal - Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md)
-* Chapter 5 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS.md)
+* Chapter 5 - [Filtering Data with Array Methods](./chapters/JS_ARRAY_METHODS_NEW.md)
     - Challenge - [Daily Journal - Filtering Moods](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) (_This adds an extra feature to Daily Journal. You can skip it without missing key functionality._)
 * Chapter 6 - [Deleting Data](./chapters/DELETE.md)
 * Chapter 7 - [Daily Journal - Part 9](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md)
