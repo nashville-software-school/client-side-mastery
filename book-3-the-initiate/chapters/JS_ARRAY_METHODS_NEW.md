@@ -191,14 +191,14 @@ const newYorkBusinesses = businesses.filter(business => {
 
 ![manufacturing businesses list](./images/dotard-simbleton-manufacturing-list.png)
 
-## map
+## map() Method
 
 
-> Doris smiles back and says, "Now that I have a list of businesses, I realize that I would also love to have a list of purchasing agents. All by themselves. On a web page like the business names."
+Now that we have a list of businesses, we would also like to have a list of purchasing agents.
 
-To achieve this task for Doris, you still need to iterate the original array of businesses, but all you need is the purchasing agent names. If you can extract those names and put them in their own array, then you can use `forEach()` to display them in the DOM.
+To achieve this task, you still need to iterate the original array of businesses, but all you need is the purchasing agent names. If you can extract those names and put them in their own array, then you can use `forEach()` to display them in the DOM.
 
-The `map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing the new items in another array. Here's how you would do that for this feature.
+The `map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing the results in another array. Here's how you would do that for this feature.
 
 ```js
 outputContainer.innerHTML += "<h1>Purchasing Agents</h1>";
@@ -237,17 +237,11 @@ You will see the list of agents in the DOM. Also look at the new array in the De
 
 ![list of agents](./images/dotard-simbleton-agent-list.png)
 
-## find
+## find() Method
 
-> You have been spending the morning backing up the hard drives that contain all the customer information to a cloud service. The unlocked desk drawer didn't seem an adequate corporate backup plan to you.
->
-> As you watch your uploading progress bars, you notice with mild interest as Doris has been pacing her office for the last 45 minutes, clearly talking to someone on speaker phone. She doesn't appear to be angry, or even particularly agitated, just a bit nervous.
->
-> You eventually need to use the restroom, and after a few minutes, you are returning to your desk and notice Doris waiting for you. She is sitting on the edge of your desk, staring out of one the windows that faces the faded parking lot at the side of the building. She looks distracted.
->
-> As you grab your chair and slide it towards you so that you can go back to watching progress bars, she turns and smiles perfunctorily at you. As you sink into your chair, she stands up quickly and says, "I just got off the phone with our accountants. We needed to look at each of our customers and review their orders for this past year. It took forever because I kept needing to scroll through our massive list of customers until I found the one they needed."
+ Now, we would like to look at each of our customers and review their orders for this past year.
 
-As you consider this request, you realize that you'll need to provide Doris an input text field so that she can type in the name of a company. You will then need to take that search string, iterate the companies, and as soon as you find a match, display all the properties.
+As you consider this request, you realize that we'll need an input text field so we can type in the name of a company. You will then need to take that search string, iterate the companies, and as soon as you find a match, display all the properties.
 
 The `find()` method on arrays is perfect this.
 
@@ -275,13 +269,13 @@ console.log(firstCheapCandy)
 > { name: "Tootsie Roll", price: 1.49 }
 ```
 
-In order to implement Doris' request, you first must add an input field to your `index.html` file.
+In order to implement the `.find()` method, you first must add an input field to your `index.html` file.
 
 ```html
 <input type="text" placeholder="Enter business name" id="companySearch" />
 ```
 
-To know when Doris is ready to search, you decide to capture the key press event. This will allow her to simply press her return key and execute the search.
+Instead of using a button, We have decided to capture the search with a key press event. This will allow us to simply press the return key and execute the search.
 
 ![searching businesses](./images/AjtphvnYsK.gif)
 
@@ -296,7 +290,7 @@ document
                     business.companyName.includes(keyPressEvent.target.value)
             );
 
-            outEl.innerHTML = `
+            outputContainer.innerHTML = `
                 <h2>
                 ${foundBusiness.companyName}
                 </h2>
@@ -319,19 +313,12 @@ document
 > **Lightning Exercise 2:** Refactor your code so that if the search text is found in the first name, or last name, of any purchasing agent, show that agent.
 
 
-## reduce
+## reduce() Method
 
 **<span style="color: red">Warning:</span>** The `reduce()` array method is going to seem confusing. More than the others, it takes practice, trial, and error to truly understand when it's useful and its power.
 
-> A week goes by as you clean up your code and starting defining a strategy for getting the company on a private Github account so you can have all of the code in one place. Then Doris calls you into a meeting room where you find her, Walter - the head of the office sales team - and Howard sitting in old, burgundy office chairs. They are all looking at your expectantly.
->
-> Doris breaks the silence with, "Walter here has a request, and I told him that you would definitely be able to do it."
->
-> You glance at Walter who flashes his overly-brilliant white teeth at you.
->
-> Doris continues, "Remember that list of businesses I had you make for me? Well, Walter would love to have their total order amount listed for each company in that list."
->
-> Walter speaks in a strong, but slightly annoying baritone voice, and adds, "Yeah just keep the report you have now, but in parenthesis next to the company add the sum of all orders."
+
+ Now we would like to have the total order amount listed for each company in the list in parenthesis next to the company add the sum of all orders.
 
 Now, you could achieve this using `forEach()` on the order property for each business. Below is the existing code for listing businesses, but with the addition of a `forEach()` for calculating the order summary.
 
@@ -342,7 +329,7 @@ businesses.forEach(business => {
     business.orders.forEach(order => totalOrders += order)
 
 
-    outEl.innerHTML += `
+    outputContainer.innerHTML += `
         <h2>
             ${business.companyName}
             ($${totalOrders})
@@ -356,7 +343,7 @@ businesses.forEach(business => {
             ${business.addressZipCode}
         </section>
     `;
-    outEl.innerHTML += "<hr/>";
+    outputContainer.innerHTML += "<hr/>";
 });
 ```
 
@@ -482,23 +469,12 @@ const planetEl = document.getElementById("planets")
 
 You have been tasked with building a list of email addresses of all of our customer's contacts so we can spam them with an email about Miffles the Vampire Weiner Dog.
 
-1. Create a new project in `workspace`.
-1. In your JavaScript file, paste the [customers array](./data/customers.js) that contains the emails we need to retrieve.
+Paste the [customers array](./data/customers.js) that contains the emails we need to retrieve.
 
 From that array, extract just the customers' contact email addresses and store them in a new array. (Hint: look up the `.flat()` array method!)
 
 
 ## Challenge: Chaining Methods
-
-### Setup
-
-These commands are a helpful quick start. You may choose to ignore them completely and create your own directory structure. If you choose to use this recommendation, just copy the commands below and paste. It doesn't matter what directory you are currently in.
-
-```bash
-mkdir -p ~/workspace/exercises/javascript/chaining-methods && cd $_
-touch index.html
-touch chaining.js
-```
 
 ### Requirements
 
