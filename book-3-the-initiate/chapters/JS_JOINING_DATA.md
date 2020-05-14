@@ -265,6 +265,7 @@ Draw an ERD using [draw.io](https://app.diagrams.net/) to represent the data rel
 1. An artist can have many albums, but an album can only have one artist.
 1. An album can have many songs, but a song can only be associated with one album.
 > Once you're done with your ERD, show it to one of your instructors so they can confirm that it's right.
+
 When your ERD is confirmed, build a sample database in `json-server` with at least two artists, at least one album by each artist, and at least two songs on each album. Practice fetching embedded data with `_expand` and `_embed` in your web browser or with Postman. 
 
 
@@ -274,6 +275,7 @@ A small business wants to keep track of its employees and the computers that the
 1. A department can have many employees, but an employee can only have one department. 
 1. An employee can have more than one computer over the course of their tenure at the company, and any given computer can potentially be assigned to many employees. 
 > Once you're done with your ERD, show it to one of your instructors so they can confirm that it's right.
+
 When your ERD is confirmed, build a sample database in `json-server` with at least two departments, at least two employees in each department, and at least two computers. In your sample data, imagine that one of your employees has owned two computers over time-- what would that look like in your json file? Practice fetching embedded data with `_expand` and `_embed` in your web browser or with Postman. 
 
 Once the resources are set up, use `fetch` calls to get your data, and use your DOM skills to display a card for each employee. It should display the employee name, the name of their department, and which computer they are using.
