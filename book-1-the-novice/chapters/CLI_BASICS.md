@@ -91,7 +91,6 @@ Shells offer features geared specifically for interactive use rather than to aug
 1. [Bash Basics Part 1 of 8 | Access and Navigation](https://youtu.be/eH8Z9zeywq0?t=885)
 1. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
 1. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
-1. Go through the CodeAcademy [command line course](https://www.codecademy.com/learn/learn-the-command-line).
 1. [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
 
 ## Practice
