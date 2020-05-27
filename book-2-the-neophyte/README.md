@@ -6,7 +6,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 ## Chapters
 
-* Chapter 1 - [Fun with Manipulating DOM](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
+* Chapter 1 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
 * Chapter 2 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
 * Chapter 3 - [Daily Journal - Part 2](./chapters/DAILY_JOURNAL_OBJECT_DOM.md)
 * Chapter 4 - [Functions & Logic](./chapters/JS_FUNCTION_BASICS.md)
@@ -19,8 +19,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 11 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
 * Chapter 12 - [Handling Browser Events](./chapters/JS_EVENTS.md)
 * Chapter 13 - [Collecting User Input](./chapters/JS_USER_INPUT_BASICS.md)
-* Chapter 14 - [Modular Code for Team-Based Development](./chapters/DESIGN_MODULARITY.md)
-* Chapter 15 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
+* Chapter 14 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
 
 > ### __Sprint 2__ - [Welcome to Nashville](https://github.com/nashville-software-school/welcome-to-nashville)
 
@@ -28,6 +27,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 
 ## Supplementary Content
 
+* Supplement - [Fun with Manipulating DOM](./chapters/IDENTIFYING_DOM_COMPONENTS.md)
 * Supplement - [Practice Logic, Conditions, and Iterating Collections](./chapters/JS_LOGIC_PRACTICE.md)
 * Supplement - [Data and Metadata](./chapters/METADATA.md)
 * Supplement - [jQuery](./chapters/JQUERY.md)
