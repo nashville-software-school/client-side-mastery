@@ -21,9 +21,9 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 13 - [Collecting User Input](./chapters/JS_USER_INPUT_BASICS.md)
 * Chapter 14 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
 
-> ### __Sprint 2__ - [Welcome to Nashville](https://github.com/nashville-software-school/welcome-to-nashville)
+> ### __Sprint 2__ - [Holiday Road](https://github.com/nashville-software-school/holiday-road)
 
-> ### LinkedIn Projects update with Welcome to Nashville
+> ### LinkedIn Projects update with Holiday Road
 
 ## Supplementary Content
 
