@@ -30,10 +30,6 @@ console.log(mustang.color)
 
 // Square bracket notation
 console.log(mustang["color"])
-
-// Dynamic square bracket notation
-const colorProperty = "color"
-console.log(mustang[colorProperty])
 ```
 
 Now you're going to learn how to work with all of the keys and values. You are tasked with taking an array of objects, and displaying all of the values in each one. For example, you work for a car dealership and the manager, Randall, wants to have a report that quickly shows the details of each car. Here's your array of cars.

@@ -3432,5 +3432,730 @@
             "name": "Nayeli Altenwerth",
             "statements": "Mentioned he had a pet"
         }
+    ],
+    "facilities": [
+        {
+            "id": 1,
+            "facilityName": "Menard Correctional Center",
+            "securityLevel": "1 – Maximum",
+            "capacity": 3205
+        },
+        {
+            "id": 2,
+            "facilityName": "Pontiac Correctional Center",
+            "securityLevel": "1 – Maximum",
+            "capacity": 1492
+        },
+        {
+            "id": 3,
+            "facilityName": "Stateville Correctional Center",
+            "securityLevel": "1 – Maximum",
+            "capacity": 1648
+        },
+        {
+            "id": 4,
+            "facilityName": "Northern Reception and Classification (NRC)",
+            "securityLevel": "1 – Maximum",
+            "capacity": 1625
+        },
+        {
+            "id": 5,
+            "facilityName": "Dixon Correctional Center",
+            "securityLevel": "2 – Secure Medium (X-House Psychiatric)",
+            "capacity": 2529
+        },
+        {
+            "id": 6,
+            "facilityName": "Hill Correctional Center",
+            "securityLevel": "2 – Secure Medium",
+            "capacity": 1867
+        },
+        {
+            "id": 7,
+            "facilityName": "Lawrence Correctional Center",
+            "securityLevel": "2 – Secure Medium",
+            "capacity": 2320
+        },
+        {
+            "id": 8,
+            "facilityName": "Pinckneyville Correctional Center",
+            "securityLevel": "2 – Secure Medium",
+            "capacity": 2274
+        },
+        {
+            "id": 9,
+            "facilityName": "Western Illinois Correctional Center",
+            "securityLevel": "2 – Secure Medium",
+            "capacity": 1871
+        },
+        {
+            "id": 10,
+            "facilityName": "Big Muddy River Correctional Center",
+            "securityLevel": "3 – High Medium",
+            "capacity": 1598
+        },
+        {
+            "id": 11,
+            "facilityName": "Danville Correctional Center",
+            "securityLevel": "3 – High Medium",
+            "capacity": 1864
+        },
+        {
+            "id": 12,
+            "facilityName": "Illinois River Correctional Center",
+            "securityLevel": "3 – High Medium",
+            "capacity": 2094
+        },
+        {
+            "id": 13,
+            "facilityName": "Menard Medium Security Unit",
+            "securityLevel": "3 – High Medium",
+            "capacity": 441
+        },
+        {
+            "id": 14,
+            "facilityName": "Pontiac Medium Security Unit",
+            "securityLevel": "3 – High Medium",
+            "capacity": 488
+        },
+        {
+            "id": 15,
+            "facilityName": "Shawnee Correctional Center",
+            "securityLevel": "3 – High Medium",
+            "capacity": 2147
+        },
+        {
+            "id": 16,
+            "facilityName": "Centralia Correctional Center",
+            "securityLevel": "4 – Medium",
+            "capacity": 1528
+        },
+        {
+            "id": 17,
+            "facilityName": "Decatur Correctional Center",
+            "securityLevel": "4 – Medium",
+            "capacity": 790
+        },
+        {
+            "id": 18,
+            "facilityName": "Graham Correctional Center",
+            "securityLevel": "4 – Medium",
+            "capacity": 2012
+        },
+        {
+            "id": 19,
+            "facilityName": "Lincoln Correctional Center",
+            "securityLevel": "4 – Medium",
+            "capacity": 1019
+        },
+        {
+            "id": 20,
+            "facilityName": "Logan Correctional Center",
+            "securityLevel": "4 – Medium",
+            "capacity": 2019
+        },
+        {
+            "id": 21,
+            "facilityName": "Sheridan Correctional Center",
+            "securityLevel": "4 – Medium",
+            "capacity": 2104
+        },
+        {
+            "id": 22,
+            "facilityName": "Jacksonville Correctional Center",
+            "securityLevel": "5 – High Minimum",
+            "capacity": 1012
+        },
+        {
+            "id": 23,
+            "facilityName": "Robinson Correctional Center",
+            "securityLevel": "5 – High Minimum",
+            "capacity": 1223
+        },
+        {
+            "id": 24,
+            "facilityName": "Taylorville Correctional Center",
+            "securityLevel": "5 – High Minimum",
+            "capacity": 1221
+        },
+        {
+            "id": 25,
+            "facilityName": "East Moline Correctional Center",
+            "securityLevel": "6 – Minimum",
+            "capacity": 1228
+        },
+        {
+            "id": 26,
+            "facilityName": "Southwestern Illinois Correctional Center",
+            "securityLevel": "6 – Minimum",
+            "capacity": 621
+        }
+    ],
+    "criminalFacilities": [
+        {
+            "id": 1,
+            "criminalId": 1,
+            "facilityId": 23
+        },
+        {
+            "id": 2,
+            "criminalId": 2,
+            "facilityId": 19
+        },
+        {
+            "id": 101,
+            "criminalId": 2,
+            "facilityId": 3
+        },
+        {
+            "id": 3,
+            "criminalId": 3,
+            "facilityId": 24
+        },
+        {
+            "id": 4,
+            "criminalId": 4,
+            "facilityId": 19
+        },
+        {
+            "id": 5,
+            "criminalId": 5,
+            "facilityId": 5
+        },
+        {
+            "id": 102,
+            "criminalId": 5,
+            "facilityId": 24
+        },
+        {
+            "id": 6,
+            "criminalId": 6,
+            "facilityId": 23
+        },
+        {
+            "id": 7,
+            "criminalId": 7,
+            "facilityId": 4
+        },
+        {
+            "id": 8,
+            "criminalId": 8,
+            "facilityId": 25
+        },
+        {
+            "id": 9,
+            "criminalId": 9,
+            "facilityId": 26
+        },
+        {
+            "id": 10,
+            "criminalId": 10,
+            "facilityId": 7
+        },
+        {
+            "id": 103,
+            "criminalId": 10,
+            "facilityId": 13
+        },
+        {
+            "id": 11,
+            "criminalId": 11,
+            "facilityId": 8
+        },
+        {
+            "id": 12,
+            "criminalId": 12,
+            "facilityId": 8
+        },
+        {
+            "id": 13,
+            "criminalId": 13,
+            "facilityId": 2
+        },
+        {
+            "id": 14,
+            "criminalId": 14,
+            "facilityId": 2
+        },
+        {
+            "id": 15,
+            "criminalId": 15,
+            "facilityId": 2
+        },
+        {
+            "id": 16,
+            "criminalId": 16,
+            "facilityId": 2
+        },
+        {
+            "id": 17,
+            "criminalId": 17,
+            "facilityId": 4
+        },
+        {
+            "id": 18,
+            "criminalId": 18,
+            "facilityId": 1
+        },
+        {
+            "id": 104,
+            "criminalId": 18,
+            "facilityId": 10
+        },
+        {
+            "id": 19,
+            "criminalId": 19,
+            "facilityId": 20
+        },
+        {
+            "id": 20,
+            "criminalId": 20,
+            "facilityId": 4
+        },
+        {
+            "id": 21,
+            "criminalId": 21,
+            "facilityId": 20
+        },
+        {
+            "id": 22,
+            "criminalId": 22,
+            "facilityId": 8
+        },
+        {
+            "id": 23,
+            "criminalId": 23,
+            "facilityId": 24
+        },
+        {
+            "id": 24,
+            "criminalId": 24,
+            "facilityId": 9
+        },
+        {
+            "id": 105,
+            "criminalId": 24,
+            "facilityId": 25
+        },
+        {
+            "id": 25,
+            "criminalId": 25,
+            "facilityId": 9
+        },
+        {
+            "id": 26,
+            "criminalId": 26,
+            "facilityId": 22
+        },
+        {
+            "id": 27,
+            "criminalId": 27,
+            "facilityId": 19
+        },
+        {
+            "id": 28,
+            "criminalId": 28,
+            "facilityId": 19
+        },
+        {
+            "id": 29,
+            "criminalId": 29,
+            "facilityId": 24
+        },
+        {
+            "id": 30,
+            "criminalId": 30,
+            "facilityId": 9
+        },
+        {
+            "id": 31,
+            "criminalId": 31,
+            "facilityId": 5
+        },
+        {
+            "id": 32,
+            "criminalId": 32,
+            "facilityId": 26
+        },
+        {
+            "id": 33,
+            "criminalId": 33,
+            "facilityId": 22
+        },
+        {
+            "id": 34,
+            "criminalId": 34,
+            "facilityId": 2
+        },
+        {
+            "id": 35,
+            "criminalId": 35,
+            "facilityId": 17
+        },
+        {
+            "id": 112,
+            "criminalId": 35,
+            "facilityId": 6
+        },
+        {
+            "id": 36,
+            "criminalId": 36,
+            "facilityId": 9
+        },
+        {
+            "id": 37,
+            "criminalId": 37,
+            "facilityId": 7
+        },
+        {
+            "id": 38,
+            "criminalId": 38,
+            "facilityId": 23
+        },
+        {
+            "id": 106,
+            "criminalId": 38,
+            "facilityId": 26
+        },
+        {
+            "id": 39,
+            "criminalId": 39,
+            "facilityId": 20
+        },
+        {
+            "id": 40,
+            "criminalId": 40,
+            "facilityId": 19
+        },
+        {
+            "id": 41,
+            "criminalId": 41,
+            "facilityId": 16
+        },
+        {
+            "id": 42,
+            "criminalId": 42,
+            "facilityId": 23
+        },
+        {
+            "id": 43,
+            "criminalId": 43,
+            "facilityId": 11
+        },
+        {
+            "id": 44,
+            "criminalId": 44,
+            "facilityId": 14
+        },
+        {
+            "id": 45,
+            "criminalId": 45,
+            "facilityId": 9
+        },
+        {
+            "id": 46,
+            "criminalId": 46,
+            "facilityId": 20
+        },
+        {
+            "id": 47,
+            "criminalId": 47,
+            "facilityId": 16
+        },
+        {
+            "id": 48,
+            "criminalId": 48,
+            "facilityId": 19
+        },
+        {
+            "id": 49,
+            "criminalId": 49,
+            "facilityId": 4
+        },
+        {
+            "id": 50,
+            "criminalId": 50,
+            "facilityId": 4
+        },
+        {
+            "id": 51,
+            "criminalId": 51,
+            "facilityId": 20
+        },
+        {
+            "id": 52,
+            "criminalId": 52,
+            "facilityId": 9
+        },
+        {
+            "id": 53,
+            "criminalId": 53,
+            "facilityId": 24
+        },
+        {
+            "id": 107,
+            "criminalId": 53,
+            "facilityId": 15
+        },
+        {
+            "id": 54,
+            "criminalId": 54,
+            "facilityId": 2
+        },
+        {
+            "id": 55,
+            "criminalId": 55,
+            "facilityId": 19
+        },
+        {
+            "id": 56,
+            "criminalId": 56,
+            "facilityId": 10
+        },
+        {
+            "id": 57,
+            "criminalId": 57,
+            "facilityId": 24
+        },
+        {
+            "id": 58,
+            "criminalId": 58,
+            "facilityId": 10
+        },
+        {
+            "id": 59,
+            "criminalId": 59,
+            "facilityId": 8
+        },
+        {
+            "id": 60,
+            "criminalId": 60,
+            "facilityId": 10
+        },
+        {
+            "id": 61,
+            "criminalId": 61,
+            "facilityId": 2
+        },
+        {
+            "id": 62,
+            "criminalId": 62,
+            "facilityId": 19
+        },
+        {
+            "id": 63,
+            "criminalId": 63,
+            "facilityId": 8
+        },
+        {
+            "id": 64,
+            "criminalId": 64,
+            "facilityId": 13
+        },
+        {
+            "id": 65,
+            "criminalId": 65,
+            "facilityId": 9
+        },
+        {
+            "id": 66,
+            "criminalId": 66,
+            "facilityId": 17
+        },
+        {
+            "id": 107,
+            "criminalId": 66,
+            "facilityId": 12
+        },
+        {
+            "id": 67,
+            "criminalId": 67,
+            "facilityId": 23
+        },
+        {
+            "id": 68,
+            "criminalId": 68,
+            "facilityId": 21
+        },
+        {
+            "id": 69,
+            "criminalId": 69,
+            "facilityId": 6
+        },
+        {
+            "id": 70,
+            "criminalId": 70,
+            "facilityId": 4
+        },
+        {
+            "id": 71,
+            "criminalId": 71,
+            "facilityId": 11
+        },
+        {
+            "id": 72,
+            "criminalId": 72,
+            "facilityId": 21
+        },
+        {
+            "id": 73,
+            "criminalId": 73,
+            "facilityId": 6
+        },
+        {
+            "id": 74,
+            "criminalId": 74,
+            "facilityId": 7
+        },
+        {
+            "id": 75,
+            "criminalId": 75,
+            "facilityId": 14
+        },
+        {
+            "id": 76,
+            "criminalId": 76,
+            "facilityId": 22
+        },
+        {
+            "id": 77,
+            "criminalId": 77,
+            "facilityId": 12
+        },
+        {
+            "id": 78,
+            "criminalId": 78,
+            "facilityId": 15
+        },
+        {
+            "id": 108,
+            "criminalId": 78,
+            "facilityId": 2
+        },
+        {
+            "id": 79,
+            "criminalId": 79,
+            "facilityId": 13
+        },
+        {
+            "id": 80,
+            "criminalId": 80,
+            "facilityId": 26
+        },
+        {
+            "id": 81,
+            "criminalId": 81,
+            "facilityId": 2
+        },
+        {
+            "id": 82,
+            "criminalId": 82,
+            "facilityId": 6
+        },
+        {
+            "id": 83,
+            "criminalId": 83,
+            "facilityId": 14
+        },
+        {
+            "id": 84,
+            "criminalId": 84,
+            "facilityId": 18
+        },
+        {
+            "id": 85,
+            "criminalId": 85,
+            "facilityId": 22
+        },
+        {
+            "id": 86,
+            "criminalId": 86,
+            "facilityId": 19
+        },
+        {
+            "id": 87,
+            "criminalId": 87,
+            "facilityId": 4
+        },
+        {
+            "id": 88,
+            "criminalId": 88,
+            "facilityId": 26
+        },
+        {
+            "id": 109,
+            "criminalId": 88,
+            "facilityId": 19
+        },
+        {
+            "id": 89,
+            "criminalId": 89,
+            "facilityId": 22
+        },
+        {
+            "id": 110,
+            "criminalId": 89,
+            "facilityId": 4
+        },
+        {
+            "id": 90,
+            "criminalId": 90,
+            "facilityId": 17
+        },
+        {
+            "id": 91,
+            "criminalId": 91,
+            "facilityId": 7
+        },
+        {
+            "id": 92,
+            "criminalId": 92,
+            "facilityId": 26
+        },
+        {
+            "id": 93,
+            "criminalId": 93,
+            "facilityId": 3
+        },
+        {
+            "id": 94,
+            "criminalId": 94,
+            "facilityId": 8
+        },
+        {
+            "id": 111,
+            "criminalId": 94,
+            "facilityId": 18
+        },
+        {
+            "id": 95,
+            "criminalId": 95,
+            "facilityId": 26
+        },
+        {
+            "id": 96,
+            "criminalId": 96,
+            "facilityId": 23
+        },
+        {
+            "id": 97,
+            "criminalId": 97,
+            "facilityId": 18
+        },
+        {
+            "id": 98,
+            "criminalId": 98,
+            "facilityId": 11
+        },
+        {
+            "id": 99,
+            "criminalId": 99,
+            "facilityId": 24
+        },
+        {
+            "id": 100,
+            "criminalId": 100,
+            "facilityId": 16
+        }
     ]
 }
