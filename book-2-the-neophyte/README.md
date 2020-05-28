@@ -12,14 +12,14 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 4 - [Designing Martin's Aquarium](./chapters/MARTIN_INTRO.md) [_design, flexbox, components_]
 * Chapter 5 - [Martin's Fish Objects](./chapters/MARTIN_FISH_OBJECTS.md) [objects, properties]
 * Chapter 6 - [Martin's Fish HTML](./chapters/MARTIN_FISH_HTML_REPRESENTATIONS.md) [_functions, string templates, iteration_]
-* Chapter 8 - [Martin's Bad Fish Data](./chapters/MARTIN_DEBUGGING.md) [_debugger_]
-* Chapter 9 - [Martin's Big Fish, Little Fish](./chapters/MARTIN_FUNCTIONS_FILTER.md) [_functions, filtering, modulo_]
-* Chapter 10 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
-* Chapter 11 - [Martin's Fish API](./chapters/MARTIN_API.md) [_JSON, json-server_]
-* Chapter 12 - [Fetching Martin's Fish](./chapters/MARTIN_FETCH_INTRO.md) [_json-server, fetch, functions_]
-* Chapter 13 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
-* Chapter 14 - [Martin's Customer Choices](./chapters/MARTIN_EVENTS.md) [browser events, functions, filtering, DOM]
-* Chapter 16 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
+* Chapter 7 - [Martin's Bad Fish Data](./chapters/MARTIN_DEBUGGING.md) [_debugger_]
+* Chapter 8 - [Martin's Big Fish, Little Fish](./chapters/MARTIN_FUNCTIONS_FILTER.md) [_functions, filtering, modulo_]
+* Chapter 9 - [Daily Journal - Part 3](./chapters/DAILY_JOURNAL_DATA_DOM.md)
+* Chapter 10 - [Martin's Fish API](./chapters/MARTIN_API.md) [_JSON, json-server_]
+* Chapter 11 - [Fetching Martin's Fish](./chapters/MARTIN_FETCH_INTRO.md) [_json-server, fetch, functions_]
+* Chapter 12 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
+* Chapter 13 - [Martin's Customer Choices](./chapters/MARTIN_EVENTS.md) [browser events, functions, filtering, DOM]
+* Chapter 14 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
 
 > ### __Sprint 2__ - [Holiday Road](https://github.com/nashville-software-school/holiday-road)
 
