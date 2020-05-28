@@ -20,10 +20,8 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 12 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
 * Chapter 13 - [Martin's Customer Choices](./chapters/MARTIN_EVENTS.md) [browser events, functions, filtering, DOM]
 * Chapter 14 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
-
+* Workshop: [How to Plan](./chapters/PLANNING_WALKTHROUGH.md)
 > ### __Sprint 2__ - [Holiday Road](https://github.com/nashville-software-school/holiday-road)
-
-> ### LinkedIn Projects update with Holiday Road
 
 ## Supplementary Content
 
