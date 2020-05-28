@@ -19,7 +19,7 @@ Since each of these components have a different responsibility, then each one mu
 
 ### Single Fish Component
 
-> **`scripts/fish.js`**
+> **`scripts/fish/fish.js`**
 
 ```js
 /**
@@ -49,7 +49,7 @@ const fishHTMLRepresentation = (fishObject) => {
 
 ### Fish List Component
 
-> **`scripts/fishList.js`**
+> **`scripts/fish/fishList.js`**
 
 ```js
 /**
@@ -94,7 +94,7 @@ You need the `fish()` component function to do that. That function is in the `fi
 
 Now you can write a `for..of` loop to generate all of the individual fish HTML representations, and keep appending the HTML to a variable. After the loop is done, you have one, long string containing all the HTML.
 
-> **`scripts/fishList.js`**
+> **`scripts/fish/fishList.js`**
 
 ```js
 /**

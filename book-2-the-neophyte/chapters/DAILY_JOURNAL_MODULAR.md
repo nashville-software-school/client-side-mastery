@@ -12,7 +12,7 @@ My modularizing your code, you achieve two main goals.
 Create three new files in your `src/scripts` directory.
 
 1. `data.js` - Move the code that deals with getting the data into this file.
-1. `entriesDOM.js` - Move the code that is responsible for modifying the DOM into this file.
+1. `entryList.js` - Move the code that is responsible for modifying the DOM into this file.
 1. `entryComponent.js` - Move the code that is responsible for creating the journal entry HTML component into this file.
 
 > **Tip:** Once this is done, your `journal.js` file should be completely empty.

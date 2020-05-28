@@ -102,9 +102,11 @@ Some starter code is provided below. Use the example code blocks above to have e
 
 Use the example code provided in this chapter (_filtering and the modulo operator_) to help solve this problem for Martin.
 
+> **`scripts/fish/fishData.js`**
+
 ```js
 // 3, 6, 9, 12, etc... fish
-export const mostHolyFish () => {
+const mostHolyFish () => {
     const holyFish = []
 
     for () {
@@ -115,14 +117,50 @@ export const mostHolyFish () => {
 }
 
 // 5, 10, 15, 20, 25, etc... fish
-export const soldierFish () => {
+const soldierFish () => {
 
     return soldiers
 }
 
 // Any fish not a multiple of 3 or 5
-export const nonHolyFish () => {
+const nonHolyFish () => {
 
     return regularFish
 }
 ```
+
+Next, use these functions in the `fishList` function to display the fish in the order that Martin wants.
+
+1. Holy fish
+1. Soldier fish
+1. All other fish
+
+Here's some starter code.
+
+> **`scripts/fish/fishList.js`**
+
+```js
+// Function to show holy fish in the browser
+const showHolyFish = () => {
+    const fishObjectsArray = mostHolyFish()
+
+    for (const fishObject of fishObjectsArray) {
+        const fishHTMLRepresentation = fish(fishObject)
+        contentTarget.innerHTML += fishHTMLRepresentation
+    }
+}
+
+// Function to show soldier fish in the browser
+
+
+// Function to show common fish in the browser
+
+
+
+const fishList = () => {
+    // Invoke all three functions here
+    showHolyFish()
+}
+```
+
+
