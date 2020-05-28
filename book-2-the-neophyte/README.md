@@ -18,7 +18,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 10 - [Martin's Fish API](./chapters/MARTIN_API.md) [_JSON, json-server_]
 * Chapter 11 - [Fetching Martin's Fish](./chapters/MARTIN_FETCH_INTRO.md) [_json-server, fetch, functions_]
 * Chapter 12 - [Daily Journal - Part 4](./chapters/DAILY_JOURNAL_FETCHING.md)
-* Chapter 13 - [Martin's Customer Choices](./chapters/MARTIN_EVENTS.md) [browser events, functions, filtering, DOM]
+* Chapter 13 - [Martin's Customer Choices](./chapters/MARTIN_EVENTS.md) [_browser events, functions, filtering, DOM_]
 * Chapter 14 - [Daily Journal - Part 5](./chapters/DAILY_JOURNAL_MODULAR.md)
 * Workshop: [How to Plan](./chapters/PLANNING_WALKTHROUGH.md)
 > ### __Sprint 2__ - [Holiday Road](https://github.com/nashville-software-school/holiday-road)
