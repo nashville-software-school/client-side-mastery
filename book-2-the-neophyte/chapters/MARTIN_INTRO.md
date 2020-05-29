@@ -76,10 +76,12 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 Create the directory for building a site for Martin's Aquarium. Use the following commands. It doesn't matter where you are in the terminal.
 
 ```sh
-mkdir -p ~/workspace/martins-aquarium/scripts
+mkdir -p ~/workspace/martins-aquarium/scripts/fish
 mkdir -p ~/workspace/martins-aquarium/styles
 cd ~/workspace/martins-aquarium
 touch index.html
+touch scripts/main.js
+touch styles/main.css
 ```
 
 In the `index.html` file you are going to build a web page that lists fish in the main content area, and then some fish/tank care tips on the right side of the page. Below the list of fish, create another content area to list the locations Martin has been to, and his travel tips for each one.

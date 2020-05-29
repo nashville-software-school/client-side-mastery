@@ -10,7 +10,7 @@ You will learn not only the basics of coding, design, and teamwork skills, but y
 * Chapter 2 - [JavaScript Objects](./chapters/JS_OBJECTS.md)
 * Chapter 3 - [Daily Journal - Part 2](./chapters/DAILY_JOURNAL_OBJECT_DOM.md)
 * Chapter 4 - [Designing Martin's Aquarium](./chapters/MARTIN_INTRO.md) [_design, flexbox, components_]
-* Chapter 5 - [Martin's Fish Objects](./chapters/MARTIN_FISH_OBJECTS.md) [objects, properties]
+* Chapter 5 - [Martin's Fish Objects](./chapters/MARTIN_FISH_OBJECTS.md) [_objects, properties_]
 * Chapter 6 - [Martin's Fish HTML](./chapters/MARTIN_FISH_HTML_REPRESENTATIONS.md) [_functions, string templates, iteration_]
 * Chapter 7 - [Martin's Bad Fish Data](./chapters/MARTIN_DEBUGGING.md) [_debugger_]
 * Chapter 8 - [Martin's Big Fish, Little Fish](./chapters/MARTIN_FUNCTIONS_FILTER.md) [_functions, filtering, modulo_]

@@ -67,7 +67,7 @@ Create a new JavaScript module in your application named `fishData.js`. In that 
 
 Create at least five fish that all have the same properties, but those properties have different values (_or state_) for each fish.
 
-> **`scripts/fishData.js`**
+> **`scripts/fish/fishData.js`**
 
 ```js
 /*
