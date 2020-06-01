@@ -14,7 +14,7 @@ Let's build a dynamic web page whose user will be an avid rare fish collector wh
 >
 > Martin smiles widely, obviously pleased that you appreciate his achievements with his hobby.
 >
-> You continue to pull your notebook and a pen out of your bag, and ask, "So you said that you wanted two different pages for this site, one that lists the fish you currently own, and another one that lists all the places that you've visited to collect the fish..."
+> You continue to pull your notebook and a pen out of your bag, and ask, "So you said that you wanted several sections for this site, one that lists the fish you currently own, and another one that lists all the places that you've visited to collect the fish..."
 >
 > "Harvest the fish," Martin interjects with a forced smile.
 >
