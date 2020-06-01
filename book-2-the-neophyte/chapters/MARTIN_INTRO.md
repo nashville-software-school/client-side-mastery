@@ -1,6 +1,6 @@
 # Project: Fish in my Aquarium
 
-Let's build a couple HTML pages whose user will be an avid rare fish collector who maintains a sophisticated tank in his home. His name is Martin. Martin meets you at a local coffee and explains what he needs to have on his web site.
+Let's build a dynamic web page whose user will be an avid rare fish collector who maintains a sophisticated tank in his home. His name is Martin. Martin meets you at a local coffee and explains what he needs to have on his web site.
 
 > "So nice to meet you finally after all of those emails. Please, grab a chair," says Martin. He uses his leather loafer to gently nudge a chair slightly away from the table. He subtly waves his hand towards the chair in invitation.
 >
