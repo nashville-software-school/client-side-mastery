@@ -79,7 +79,7 @@ Create at least five fish that all have the same properties, but those propertie
 const fishCollection = [
     {
         name: "Bart",
-        food: ["algae", "crustaceans"]
+        food: "algae"
     }
 ]
 ```
