@@ -106,7 +106,7 @@ Use the example code provided in this chapter (_filtering and the modulo operato
 
 ```js
 // 3, 6, 9, 12, etc... fish
-const mostHolyFish () => {
+const mostHolyFish = () => {
     const holyFish = []
 
     for () {
@@ -117,13 +117,13 @@ const mostHolyFish () => {
 }
 
 // 5, 10, 15, 20, 25, etc... fish
-const soldierFish () => {
+const soldierFish = () => {
 
     return soldiers
 }
 
 // Any fish not a multiple of 3 or 5
-const nonHolyFish () => {
+const nonHolyFish = () => {
 
     return regularFish
 }
