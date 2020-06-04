@@ -73,4 +73,4 @@ Practice using Postman to perform GET, POST, PUT, and DELETE operations on your 
 1. GET all fish.
 1. Use POST to create some new fish.
 1. GET all foods and use the [sort capabilities of json-server](https://github.com/typicode/json-server#sort) to sort the fish by size. Ten sort them by location.
-1. Delete a fish from the API by using the DELETE method, and putting in the URL of a specific resource (e.g. `http://localhost:8008/fish/7`)
+1. Delete a fish from the API by using the DELETE method, and putting in the URL of a specific resource (e.g. `http://localhost:8088/fish/7`)
