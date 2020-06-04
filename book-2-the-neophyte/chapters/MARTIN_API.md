@@ -48,6 +48,14 @@ See those empty arrays up there 👆🏿? Look in your `fishData`, `tipsData`, a
 
 Not the variable names, just the array, from `[` to `]`.
 
+## Running JSON Server
+
+Type the following command into the terminal once you navigate to the `api` directory.
+
+```sh
+json-server -p 8088 -w database.json
+```
+
 
 ## Using Postman for API Queries
 
