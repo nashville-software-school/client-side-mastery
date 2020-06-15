@@ -55,7 +55,7 @@ export const getCriminalFacilities = () => {
 
 You want each criminal card in your UI to now show the facilities in which time was spent. This means that the **`Criminal`** component must be modified to show the new HTML representations, and the **`CriminalList`** component must be updated to get the data.
 
-## Get Data Before Rendering
+### Get Data Before Rendering
 
 As the code stands right now, the operation of getting the criminal data is invoked in `main.js` because several components need that data before rendering _(criminal list, notes list, and note form)_. However, the criminal list is the only component that needs information about the facilities, so you will add the code in that component to get the data.
 
@@ -80,7 +80,7 @@ export const CriminalList = () => {
 }
 ```
 
-## Updated Rendering
+### Updated Rendering
 
 > **`scripts/criminal/CriminalList.js`**
 
@@ -105,7 +105,7 @@ const render = (criminalsToRender, allFacilities, allRelationships) => {
 }
 ```
 
-## Facilities HTML Representation in Criminal Component
+### Facilities HTML Representation in Criminal Component
 
 There is a new `<div>` element in the criminal HTML representation that uses the `map()` array method to convert each facility object to a facility HTML representation.
 
