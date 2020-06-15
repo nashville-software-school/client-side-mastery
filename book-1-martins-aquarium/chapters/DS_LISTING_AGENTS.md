@@ -10,6 +10,8 @@ To achieve this task for Doris, you still need to iterate the original array of 
 
 The `map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing the new items in another array. Here's how you would do that for art supplies if you wanted an array that only contained the brands that you sell.
 
+> **`SuppliesProvider.js`**
+
 ```js
 const supplies = [
     {
@@ -35,22 +37,9 @@ const supplies = [
     }
 ]
 
-const brandList = document.querySelector(".brands")
-
 // Create a new array that contains only brand name strings
-const brandNameArray = supplies.map(supplyObject => {
+export const brandNames = supplies.map(supplyObject => {
     return supplyObject.brand
-})
-
-brandList.innerHTML = "<h1>Brands We Sell</h1>"
-
-// Iterate the brand name array and build your DOM
-brandNameArray.forEach(brandName => {
-  brandList.innerHTML += `
-    <section class="brand">
-        <h2 class="brand__name">${brandName}</h2>
-    </section>
-  `
 })
 ```
 

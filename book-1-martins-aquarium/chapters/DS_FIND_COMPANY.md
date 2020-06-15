@@ -14,6 +14,8 @@ The `find()` method on arrays is perfect this.
 
 The method does exactly what it's name suggests. It iterates an array and as soon as it finds one item that passes the condition that you provide, it returns that item to you.
 
+> **`CandyProvider.js`**
+
 ```js
 const candies = [
     {
@@ -30,10 +32,10 @@ const candies = [
     }
 ]
 
-const firstCheapCandy = candies.find(candy => candy.price < 2.00)
-
-console.log(firstCheapCandy)
-> { name: "Tootsie Roll", price: 1.49 }
+// Function to find the FIRST candy that is less than the specified amount
+export const findCandyBelowPrice = (priceCriteria) => {
+    return candies.find(candy => candy.price < priceCriteria)
+}
 ```
 
 In order to implement Doris' request, you first must add an input field to your `index.html` file.
@@ -46,8 +48,12 @@ To know when Doris is ready to search, you decide to capture the key press event
 
 ![searching businesses](./images/searching-companies.gif)
 
+> **`BusinessList.js`**
+
+
 ```js
-const matchingCompanyElement = document.querySelector(".matchingCompany")
+// Place an article element in your HTML with the class below
+const companySearchResultArticle = document.querySelector(".foundCompanies")
 
 document
     .querySelector("#companySearch")
@@ -64,7 +70,7 @@ document
 
             const foundBusiness = // implement .find() method here
 
-            matchingCompanyElement.innerHTML = `
+            companySearchResultArticle.innerHTML = `
                 <h2>
                 ${foundBusiness.companyName}
                 </h2>

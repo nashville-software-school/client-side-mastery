@@ -16,6 +16,8 @@ The filter function creates a new array from the existing one, so you can invoke
 
 Here's an example of how you could filter an array of art supplies.
 
+> **`SuppliesProvider.js`**
+
 ```js
 const supplies = [
     {
@@ -41,28 +43,12 @@ const supplies = [
     }
 ]
 
-const supplyList = document.querySelector(".supplies")
-
 // Create a new array that contains supplies that cost less than $50
-const inexpensiveSupplies = supplies.filter(supplyObject => {
+export const inexpensiveSupplies = supplies.filter(supplyObject => {
     if (supplyObject.price < 50.00) {
         return true
     }
     return false
-})
-
-supplyList.innerHTML = "<h1>Inexpensive Art Supplies</h1>"
-
-// Iterate the inexpesive item array and build your DOM
-inexpensiveSupplies.forEach(supplyObject => {
-  supplyList.innerHTML += `
-    <section class="supply">
-        <h2 class="supply__type">${supplyObject.type}</h2>
-        <div class="supply__price">
-            Price: ${supplyObject.price}
-        </div>
-    </section>
-  `
 })
 ```
 

@@ -81,8 +81,8 @@ Time for your to implement the Event Hub, get components sending and listening t
 const eventHub = document.querySelector(you_fill_this_in)
 const contentTarget = document.querySelector(".filters__crime")
 
-// On the content target, listen for a "change" event.
-contentTarget.addEventListener("which event?", event => {
+// On the event hub, listen for a "change" event.
+eventHub.addEventListener("which event?", event => {
 
     // Only do this if the `crimeSelect` element was changed
     if (you_fill_this_in) {

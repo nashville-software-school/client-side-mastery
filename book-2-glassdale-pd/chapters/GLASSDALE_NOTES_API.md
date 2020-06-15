@@ -142,7 +142,7 @@ Now you need to add an event listener on the Event Hub to capture when the user 
 
 ```js
 // Handle browser-generated click event in component
-contentTarget.addEventListener("click", clickEvent => {
+eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
 
         // Make a new object representation of a note

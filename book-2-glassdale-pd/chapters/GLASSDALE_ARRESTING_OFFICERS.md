@@ -13,7 +13,7 @@ The arresting officers are located at the URL of https://criminals.glassdale.us/
 When an officer is selected by the user the **`OfficerSelect`** component can dispatch a `officerSelected` custom event.
 
 ```js
-contentTarget.addEventListener("change", changeEvent => {
+eventHub.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "officerSelect") {
         // Get the name of the selected officer
         const selectedOfficer = changeEvent.target.value

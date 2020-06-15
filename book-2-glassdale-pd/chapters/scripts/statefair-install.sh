@@ -127,7 +127,7 @@ h1,h2,h3,h4,h5,h6 {
 echo 'const contentTarget = document.querySelector(".entry")
 const eventHub = document.querySelector("#state-fair")
 
-contentTarget.addEventListener()
+eventHub.addEventListener()
 
 export const TicketBooth = () => {
     contentTarget.innerHTML = `

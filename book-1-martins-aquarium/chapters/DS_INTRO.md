@@ -15,6 +15,17 @@ To help solve her problems, you will use the following methods that are automati
 1. `map()`
 1. `find()`
 
+## Setup
+
+Create the directories and files with the following commands. You can copy/pasta all four commands into your terminal at the same time and run them.
+
+```sh
+mkdir -p ~/workspace/dotard-simbleton/scripts
+mkdir -p ~/workspace/dotard-simbleton/styles
+cd ~/workspace/dotard-simbleton
+touch index.html scripts/main.js scripts/BusinessProvider.js scripts/BusinessList.js scripts/Business.js styles/main.css
+```
+
 ## Your First Day at Dotard & Simbleton
 
 It's your first day on the job, and Doris sits with you at your desk and talks about what she needs you to do.
@@ -164,6 +175,10 @@ So Doris just wants to see all of the business names on a web page. You remember
 
 Since each object is identical in its structure (but not its state), you can write some automation logic with `forEach()`. Here's an example of using `forEach` to iterate an array of objects that represent art supplies.
 
+### Example Usage of `forEach()`
+
+> **`SuppliesProvider.js`**
+
 ```js
 const supplies = [
     {
@@ -189,20 +204,46 @@ const supplies = [
     }
 ]
 
-const supplyList = document.querySelector(".supplies")
-supplyList.innerHTML = "<h1>Art Supplies</h1>"
-
-supplies.forEach(supplyObject => {
-  supplyList.innerHTML += `
-    <section class="supply">
-        <h2 class="supply__type">${supplyObject.type}</h2>
-        <div class="supply__price">
-            Price: ${supplyObject.price}
-        </div>
-    </section>
-  `
-});
+export const useSupplies = () => {
+    return supplies.slice()
+}
 ```
+
+> **`SupplyList.js`**
+
+```js
+import { useSupplies } from "./SuppliesProvider.js"
+import { Supply } from "./Supply.js"
+
+const contentTarget = document.querySelector(".supplies")
+
+const SupplyList = () => {
+    const supplyArray = useSupplies()
+    contentTarget.innerHTML = "<h1>Art Supplies</h1>"
+
+    supplies.forEach(
+        (supplyObject) => {
+            contentTarget.innerHTML += Supply(supplyObject)
+        }
+    );
+}
+```
+
+> **`Supply.js`**
+
+```js
+export const Supply = (supplyObject) => {
+    return `
+        <section class="supply">
+            <h2 class="supply__type">${supplyObject.type}</h2>
+            <div class="supply__price">
+                Price: ${supplyObject.price}
+            </div>
+        </section>
+    `
+}
+```
+
 
 ## Videos With More Examples
 

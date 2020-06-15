@@ -58,7 +58,7 @@ Time to review the three main parts of working with custom events in a JavaScrip
     ```
 1. Add a click event listener on the content target element reference. Some starter code below.
     ```js
-    contentTarget.addEventListener()
+    eventHub.addEventListener()
     ```
 1. In the body of the event listener callback function, check if the user clicked on the Ride Ticket button.
 1. If so, create a custom event that describes what happened. For example:
