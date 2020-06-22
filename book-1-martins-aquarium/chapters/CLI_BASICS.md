@@ -28,15 +28,17 @@ Becoming comfortable with your terminal will make you a master of the computer.
 
 Before you start writing code for any application, you want to set up the directory structure, and create some initial files, on the file system first. During this first book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
 
-Since all of the work you will be doing at NSS will be contained in the `~/workspace` directory, you need to create an `aquarium` subdirectory.
+You can watch the [Martin's Aquarium Directories and Files](https://www.youtube.com/watch?v=ogHzpf4Kelk) video that will also show you the basic terminal commands to use for this.
+
+Since all of the work you will be doing at NSS will be contained in the `~/workspace` directory, you need to create an `martins-aquarium` subdirectory.
 
 ```sh
 {home directory}
     +-- workspace
-        +-- aquarium
+        +-- martins-aquarium
 ```
 
-Once the directory is created, you need to create the HTML file and the CSS file. The standard name for the initial HTML for any web site is `index.html`. Go ahead and `cd` into the `~/workspace/aquarium` directory if you aren't there already.
+Once the directory is created, you need to create the HTML file and the CSS file. The standard name for the initial HTML for any web site is `index.html`. Go ahead and `cd` into the `~/workspace/martins-aquarium` directory if you aren't there already.
 
 Create the file with the following command.
 
