@@ -65,7 +65,7 @@ Your job is to define what a JavaScript object would look like. What keys should
 
 Create a new JavaScript module in your application named `FishDataProvider.js`. In that module create objects to represent the state of Martin's fish that you had previously hard-coded in the HTML. You are going to place all of the objects in an array - a collection of fish.
 
-> **`scripts/FishDataProvider.js`**
+> **`martins-aquarium/scripts/FishDataProvider.js`**
 
 ```js
 /*

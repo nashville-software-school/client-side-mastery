@@ -29,9 +29,9 @@ git config --global user.email "email@example.com"
 
 ## Creating a Git Repository for Aquarium
 
-1. `cd` to your aquarium directory
+1. Navigate to your project directory
     ```sh
-    cd ~/workspace/aquarium
+    cd ~/workspace/martins-aquarium
     ```
 1. Type in the `git init` command
 1. You now have a git repository

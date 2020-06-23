@@ -4,21 +4,7 @@ Now that you have a module whose responsibility is to maintain the state of your
 
 ## Remove Hard-Coded HTML
 
-Open `index.html` and delete the `<section class="fishList">` element and all of the children fish elements. Of course, as soon as you do this, all the `<dialog>` elements are now gone and your `dialogs.js` module will now throw an error as it is now trying to add an event listener to elements that no longer exist.
-
-Refresh the browser and look in your developer console. You should see this error message.
-
-![error in dialogs module](./images/no-dialogs.png)
-
-So for the time being, you're going to comment out the code that initializes the event listeners and come back to it later.
-
-> **`scripts/main.js`**
-
-```js
-// initializeDetailButtonEvents()
-```
-
-Now that you have removed the errors, you can move on to creating your automated fish making machine.
+Open `index.html` and delete the `<section class="fishList">` element and all of the children fish elements.
 
 ## Defining the Components
 
@@ -70,7 +56,7 @@ export default Fish
  *  FishList which renders individual fish objects as HTML
  */
 
-// Import `useFish` from the data provider module
+// TODO: Import `useFish` from the data provider module
 
 const FishList = () => {
 
@@ -94,11 +80,9 @@ export default FishList
 Since we want the fish to be immediately rendered when the page loads, then that falls within the responsibility of the `main.js` module. Import the list component into main and invoke the component function.
 
 ```js
-import initializeDetailButtonEvents from './dialogs.js'
 // Import the FishList here
 
 
-// initializeDetailButtonEvents()
 FishList()
 ```
 
