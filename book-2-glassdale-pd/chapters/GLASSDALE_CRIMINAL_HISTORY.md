@@ -126,7 +126,7 @@ import { useConvictions } from "./ConvictionProvider.js"
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".filters__crime")
 
-const ConvictionSelect = () => {
+export const ConvictionSelect = () => {
     // Get all convictions from application state
     const convictions = useConvictions()
 
@@ -148,7 +148,5 @@ const ConvictionSelect = () => {
 
     render(convictions)
 }
-
-export default ConvictionSelect
 ```
 

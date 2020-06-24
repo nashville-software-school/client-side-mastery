@@ -42,7 +42,7 @@ import { AnimalContext } from "./AnimalProvider"
 import { LocationContext } from "../location/LocationProvider"
 
 
-export default props => {
+export const AnimalForm = (props) => {
     const { locations } = useContext(LocationContext)
     const { addAnimal, animals, updateAnimal } = useContext(AnimalContext)
     const [animal, setAnimal] = useState({})

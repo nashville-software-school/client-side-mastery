@@ -11,11 +11,11 @@ In the end, your **`KandyKorner`** component should only render the navigation b
 ```js
 import React from "react"
 import { Route } from "react-router-dom"
-import NavBar from "./nav/NavBar"
-import ApplicationViews from "./ApplicationViews"
+import { NavBar } from "./nav/NavBar"
+import { ApplicationViews } from "./ApplicationViews"
 import "./KandyKorner.css"
 
-export default () => (
+export const KandyKorner = () => (
     <NavBar />
     <ApplicationViews />
 )

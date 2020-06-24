@@ -19,7 +19,7 @@ The fieldset that has the sad, happy, and ok radio buttons in it is a component.
 > #### `daily-journal/scripts/filter/FilterBar.js`
 
 ```js
-import MoodFilter from "./MoodFilter.js"
+import { MoodFilter } from "./MoodFilter.js"
 
 /*
  You need to make a new HTML element with a class of
@@ -41,7 +41,7 @@ const FilterBar = () => {
 > #### `daily-journal/scripts/filter/MoodFilter.js`
 
 ```js
-const MoodFilter = () => {
+export const MoodFilter = () => {
     return `
         <fieldset class="fieldset">
             <label for="journalDate">Mood for the day</label>
@@ -53,8 +53,6 @@ const MoodFilter = () => {
         </fieldset>
         `
 }
-
-export default MoodFilter
 ```
 
 ## Add Event Listeners
@@ -80,4 +78,3 @@ eventHub.addEventListener("click", event => {
 Once you have successfully retrieved the value of `ok`, `happy`, or `sad` based on which radio button was clicked, you need to filter all of the journal entries. The most straightforward way of doing this is to invoke the `useEntries()` method from your **`EntryProvider`** component. Then use the `filter()` array method to extract only the entries that have the same mood as the one the user clicked on.
 
 Once you have filtered the entries by mood, invoke the function that renders the HTML representations to the DOM and pass it the filtered array of entries.
-

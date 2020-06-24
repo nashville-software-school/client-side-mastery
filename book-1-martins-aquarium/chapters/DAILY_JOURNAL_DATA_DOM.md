@@ -26,7 +26,7 @@ Just like Martin's Aquarium application, you are going to make each individual i
  *  Purpose: To render a single journal entry as an
  *           HTML representation of the data
  */
-const JournalEntryComponent = (entry) => {
+export const JournalEntryComponent = (entry) => {
     return `
         <section id="entry--${entry.id}" class="journalEntry">
             Display the entry's full text, and the date
@@ -34,8 +34,6 @@ const JournalEntryComponent = (entry) => {
         </section>
     `
 }
-
-export default JournalEntryComponent
 ```
 
 ### Journal List Component
@@ -52,12 +50,12 @@ The list component, just like Martin's Aquarium, will take all of the individual
  *    data provider component
  */
 import { useJournalEntries } from "./JournalDataProvider.js"
-import JournalEntryComponent from "./JournalEntry.js"
+import { JournalEntryComponent } from "./JournalEntry.js"
 
 // DOM reference to where all entries will be rendered
 const entryLog = document.querySelector("#entryLog")
 
-const EntryListComponent = () => {
+export const EntryListComponent = () => {
     // Use the journal entry data from the data provider component
     const entries = useJournalEntries()
 
@@ -69,8 +67,6 @@ const EntryListComponent = () => {
         entryLog.innerHTML += ???
     }
 }
-
-export default EntryListComponent
 ```
 
 ## Render the Entry List

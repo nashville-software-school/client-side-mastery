@@ -1,15 +1,5 @@
 # React Tips and Tricks
 
-#### React.Fragment Shortcut
-
-```jsx
-<>
-  <h1>Hello World</h1>
-  <p>This is a great idea</p>
-
-</>
-```
-
 #### Debugging in JSX
 
 ```jsx

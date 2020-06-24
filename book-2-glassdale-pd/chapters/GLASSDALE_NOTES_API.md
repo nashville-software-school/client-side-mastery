@@ -84,11 +84,9 @@ const render = () => {
     `
 }
 
-const NoteForm = () => {
+export const NoteForm = () => {
     render()
 }
-
-export default NoteForm
 ```
 
 Import that component into the main component and add it to your component render chain. Perhaps before the criminal list is rendered, but its order in the chain is not truly relevent.

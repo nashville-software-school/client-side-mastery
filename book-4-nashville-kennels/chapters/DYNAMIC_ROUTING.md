@@ -22,7 +22,7 @@ import React from "react"
 import "./Animals.css"
 import { Link } from "react-router-dom"
 
-export default ({ animalp }) => (
+export const Animal = ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
             <Link to={`/animals/${animal.id}`}>
@@ -91,7 +91,7 @@ import { LocationContext } from "../location/LocationProvider"
 import { AnimalContext } from "./AnimalProvider"
 import "./Animals.css"
 
-export default (props) => {
+export const AnimalDetail = (props) => {
     const { animals } = useContext(AnimalContext)
     const { locations } = useContext(LocationContext)
     const { customers } = useContext(CustomerContext)

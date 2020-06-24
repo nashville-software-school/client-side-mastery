@@ -174,14 +174,12 @@ export const FamilyList = () => {
 
     render()
 }
-
-export default FamilyList
 ```
 
 > ##### `chores/scripts/FamilyMember.js`
 
 ```js
-const FamilyMember = (person, chores) => {
+export const FamilyMember = (person, chores) => {
     return `
         <section class="familyMember">
             <header>
@@ -197,8 +195,6 @@ const FamilyMember = (person, chores) => {
         </section>
     `
 }
-
-export default FamilyMember
 ```
 
 > ##### `chores/scripts/main.js`
@@ -207,7 +203,7 @@ export default FamilyMember
 import { getChores } from "./ChoreProvider.js"
 import { getFamilyMembers } from "./FamilyProvider.js"
 import { getFamilyChores } from "./FamilyChoreProvider.js"
-import FamilyList from "./FamilyList.js"
+import { FamilyList } from "./FamilyList.js"
 
 getChores()
     .then(getFamilyMembers)

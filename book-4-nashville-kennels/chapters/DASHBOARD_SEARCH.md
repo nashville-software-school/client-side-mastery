@@ -61,7 +61,7 @@ import { AnimalContext } from "./AnimalProvider"
 import { Animal } from "./Animal"
 import "./Animals.css"
 
-export default ({ history }) => {
+export const AnimalList = ({ history }) => {
     const { animals, searchTerms } = useContext(AnimalContext)
 
     /*

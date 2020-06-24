@@ -50,7 +50,7 @@ Since you are passing a property object to the employee list, you must define a 
 > ##### `src/components/employee/EmployeeList.js`
 
 ```js
-export default (props) => {
+export const EmployeeList = (props) => {
 ```
 
 ### Create Route

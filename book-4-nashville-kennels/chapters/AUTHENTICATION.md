@@ -36,7 +36,7 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import "./Kennel.css"
 
-export default () => (
+export const Kennel = () => (
     <>
         <Route render={() => {
             if (localStorage.getItem("kennel_customer")) {

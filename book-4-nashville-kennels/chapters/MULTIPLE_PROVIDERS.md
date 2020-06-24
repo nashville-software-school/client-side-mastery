@@ -36,7 +36,7 @@ import { CustomerContext } from "../customer/CustomerProvider"
 import { Animal } from "./Animal"
 import "./Animals.css"
 
-export default () => {
+export const AnimalList = () => {
     const { animals } = useContext(AnimalContext)
     const { locations } = useContext(LocationContext)
     const { customers } = useContext(CustomerContext)

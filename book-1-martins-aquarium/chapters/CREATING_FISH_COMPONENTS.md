@@ -23,7 +23,7 @@ Since each of these components have a different responsibility, then each one mu
 /**
  *  Fish which renders individual fish objects as HTML
  */
-const Fish = (fish) => {
+export const Fish = (fish) => {
     return `
         <div class="fish">
             <div>
@@ -43,8 +43,6 @@ const Fish = (fish) => {
         </div>
     `
 }
-
-export default Fish
 ```
 
 ### Fish List Component
@@ -58,7 +56,7 @@ export default Fish
 
 // TODO: Import `useFish` from the data provider module
 
-const FishList = () => {
+export const FishList = () => {
 
     // Get a reference to the `<article class="content">` element
     const contentElement = document.querySelector("insert selector here")
@@ -71,8 +69,6 @@ const FishList = () => {
         </section>
     `
 }
-
-export default FishList
 ```
 
 ## Rendering the List in Main Module
@@ -97,7 +93,7 @@ You need the `Fish` component function to do that. That function is in the `Fish
 > **`scripts/FishList.js`**
 
 ```js
-import Fish from "./Fish.js"
+import { Fish } from "./Fish.js"
 ```
 
 Now you can write a `for..of` loop to generate all of the individual fish HTML representations, and keep appending the HTML to a variable. After the loop is done, you have one, long string containing all the HTML.
@@ -107,9 +103,9 @@ Now you can write a `for..of` loop to generate all of the individual fish HTML r
  *   FishList which renders individual fish objects as HTML
  */
 import { useFish } from "./FishDataProvider.js"
-import Fish from "./Fish.js"
+import { Fish } from "./Fish.js"
 
-const FishList = () => {
+export const FishList = () => {
 
     const contentElement = document.querySelector(".content")
     const fishes = useFish()
@@ -132,8 +128,6 @@ const FishList = () => {
         </section>
     `
 }
-
-export default FishList
 ```
 
 Now refresh your browser again and all of your fish should be back.
