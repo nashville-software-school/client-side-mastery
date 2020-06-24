@@ -25,28 +25,37 @@ Here's the process that this code follows.
 
 What determines if a user has authenticated? It's the `kennel_customer` key that you set in local storage. If that key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
 
-Since this is now going to be the new responsiblity of the **`Kennel`** component, perform the following steps.
+Open your **`Kennel`** component and place the following code in it. Replace what is currently there. This is exactly what your **`KandyKorner`** component will look like in that application. All you will change is the local storage key to something like "kandy_customer".
 
-1. Rename your current `Kennel.js` file `Dashboard.js`.
-1. Open `DashBoard.js` and change the name of the component from Kennel to Dashboard.
-    ```js
-    export const Dashboard = ...
-    ```
-1. Then create the `Kennel.js` file again and place the following code into it.
-    ```js
-    import React, { useState } from "react"
-    import { Dashboard } from "./Dashboard"
-    import { Auth } from "./auth/Auth"
+```js
+import React from "react"
+import { Route, Redirect } from "react-router-dom"
+import { ApplicationViews } from "./ApplicationViews"
+import { NavBar } from "./nav/NavBar"
+import { Login } from "./auth/Login"
+import { Register } from "./auth/Register"
+import "./Kennel.css"
 
-    export const Kennel = () => {
-        const [check, update] = useState(false)
-        const toggle = () => update(!check)
+export default () => (
+    <>
+        <Route render={() => {
+            if (localStorage.getItem("kennel_customer")) {
+                return (
+                    <>
+                        <Route render={props => <NavBar {...props} />} />
+                        <Route render={props => <ApplicationViews {...props} />} />
+                    </>
+                )
+            } else {
+                return <Redirect to="/login" />
+            }
+        }} />
 
-        return (
-            localStorage.getItem("kennel_customer") ? <Dashboard /> : <Auth toggle={toggle} />
-        )
-    }
-    ```
+        <Route path="/login" render={props => <Login {...props} />} />
+        <Route path="/register" render={props => <Register {...props} />} />
+    </>
+)
+```
 
 ## Installing Authentication Components
 
@@ -56,19 +65,16 @@ Now you can install the mock authentication components into your application.
 1. Run the following command in that directory.
 
     ```sh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-39/book-4-nashville-kennels/chapters/scripts/auth.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-4-nashville-kennels/chapters/scripts/auth.sh)"
     ```
-1. Go to Visual Studio Code and you will see a new `src/components/auth` directory with 5 new files in it.
-    1. `logo.png`
-    1. `Auth.css`
-    1. `Auth.js`
-    1. `Login.js`
+1. Go to Visual Studio Code and you will see a new `src/components/auth` directory with 4 new files in it.
     1. `Register.js`
+    1. `Login.js`
+    1. `Login.css`
+    1. `logo.png`
 
 ## Register an Account
 
-Once you have made all these changes, you should be presented with the Register/Login view. Create an account by filling out the registration form. When you complete that, you will immediately see your Dashboard.
+Once you have made all these changes, you should be presented with the Register/Login view. Create an account by filling out the registration form. When you complete that, you will immediately see your main view.
 
 You will also now see a new entry in your local storage.
-
-![animation showing the creation of local storage key](./images/local-storage-auth.gif)

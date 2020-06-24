@@ -92,10 +92,10 @@ import React from "react"
 import { Route } from "react-router-dom"
 import { LocationProvider } from "./location/LocationProvider"
 import { AnimalProvider } from "./animal/AnimalProvider"
-import LocationList from "./location/LocationList"
-import AnimalList from "./animal/AnimalList"
+import { LocationList } from "./location/LocationList"
+import { AnimalList } from "./animal/AnimalList"
 
-export default (props) => {
+export const ApplicationViews = (props) => {
     return (
         <>
             <LocationProvider>
@@ -133,14 +133,12 @@ As mentioned above, **`Kennel`** is a container component. It renders no HTML it
 import React from "react"
 import { Route } from "react-router-dom"
 import NavBar from "./nav/NavBar"
-import ApplicationViews from "./ApplicationViews"
+import { ApplicationViews } from "./ApplicationViews"
 import "./Kennel.css"
 
 export default () => (
-    <>
-        <NavBar />
-        <ApplicationViews />
-    </>
+    <NavBar />
+    <ApplicationViews />
 )
 ```
 
@@ -152,7 +150,7 @@ Now update your `index.js` by adding a root component of `<Router />` which gets
 import React from "react"
 import ReactDOM from "react-dom"
 import { BrowserRouter as Router } from "react-router-dom"
-import Kennel from "./components/Kennel"
+import { Kennel } from "./components/Kennel"
 
 ReactDOM.render(
     <Router>

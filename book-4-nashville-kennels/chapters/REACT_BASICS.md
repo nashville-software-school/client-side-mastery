@@ -118,7 +118,7 @@ Update your **`Kennel`** component with the code provided below. Now when the **
 ```jsx
 import React from "react"
 import { Animal } from "./animal/Animal"
-import "./animal/Animals.css"
+import "./Animals.css"
 
 export const Kennel = () => (
     <>

@@ -2,108 +2,76 @@
 
 ## Goal
 
-In this chapter, you are going to write a component whose responsibility is to create a new employee record and assign that employee to a location. This component will be dislayed as a modal!!
+In this chapter, you are going to write a component whose responsibility is to create a new employee record and assign that employee to a location.
 
 ## New Concepts
 
 * useRef()
 * Inline event handlers
 * `preventDefault()` for forms
-* Reactstrap Modals
-
-## Setup
-
-Visit the [Reactstrap homepage](https://reactstrap.github.io/) and follow the instructions to get it installed for your project.
 
 ## Process
 
-### CSS for Fake Links
+### Add Hire Button to List
 
-React does not like it when you use `<a>` elements in your JSX, so everything must be buttons or divs. However, the design pattern that muggles are used to is having a blue hyperlink to click on in a list.
-
-Add the following styles to `Kennel.css`
-
-```css
-.fakeLink {
-    background: none!important;
-    border: none;
-    font-family: arial, sans-serif;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.href {
-    color: #479cf7d3;
-    text-decoration: underline;
-}
-
-.href:hover {
-    color: #007bff;
-}
-
-.fakeLink:focus {
-    outline: 0;
-}
-
-.icon--delete {
-    padding-left: 0.5rem;
-}
-```
-
-### Add Hire "Link" to List and Modals
-
-In React, you can add the event listener directly on a element by using the `onClick` attribute instead of writing it as a separate function in the component module.
-
-Also below you will see the use of a `<Modal>` from the Reactstrap library.
+In React, you can add the event listener directly on a button's `onClick` attribute instead of writing it as a separate function in the component module.
 
 > ##### `src/components/employee/EmployeeList.js`
 
 ```jsx
-import React, { useContext, useState } from "react"
-import { EmployeeContext } from "./EmployeeProvider"
-import Employee from "./Employee"
-import { LocationContext } from "../location/LocationProvider"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
-import EmployeeForm from "./EmployeeForm"
-
-
-export default () => {
-    const { employees } = useContext(EmployeeContext)
-    const { locations } = useContext(LocationContext)
-
-    const [modal, setModal] = useState(false)
-    const toggle = () => setModal(!modal)
-
-    return (
-        <>
-            <h2>Employees</h2>
-
-            <div className="fakeLink href" onClick={toggle}>New Employee</div>
-
-            <ul className="employees">
-                {
-                    employees.map(employee => {
-                        const loc = locations.find(l => l.id === employee.locationId)
-
-                        return <Employee key={employee.id} location={loc} employee={employee} />
-                    })
-                }
-            </ul>
-
-            <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}>
-                    New Employee
-                </ModalHeader>
-                <ModalBody>
-                    <EmployeeForm toggler={toggle} />
-                </ModalBody>
-            </Modal>
-        </>
-    )
-}
+return (
+    <div className="employees">
+        <h1>Employees</h1>
+        <button onClick={() => props.history.push("/employees/create")}>
+            Add Employee
+        </button>
+        <article className="employeeList">
+            {employees.map(employee => <Employee key={employee.id} employee={employee} />)}
+        </article>
+    </div>
+)
 ```
 
-### New Employee Form Component
+### Refactor Employee List Route
+
+Because you need to change the route when the button is clicked, you can use the `history.push()` method that is provided by React Router. In order to make the `history` object available to the **`EmployeeList`** component, the route needs to be rewritten.
+
+> ##### `src/components/ApplicationViews.js`
+
+```jsx
+<Route exact path="/employees" render={
+    props => <EmployeeList {...props} />
+} />
+```
+
+
+Since you are passing a property object to the employee list, you must define a parameters to capture that object.
+
+> ##### `src/components/employee/EmployeeList.js`
+
+```js
+export default (props) => {
+```
+
+### Create Route
+
+Now you can create the route that will respond when the button click changes the URL to `/employees/create`.
+
+> ##### `src/components/ApplicationViews.js`
+
+```jsx
+<EmployeeProvider>
+    <Route exact path="/employees" render={
+        props => <EmployeeList {...props} />
+    } />
+
+    <Route exact path="/employees/create">
+        <EmployeeForm />
+    </Route>
+</EmployeeProvider>
+```
+
+### Create Component
 
 When you hire an employee, you immediately want to assign that employee to a location. Therefore, you want a dropdown that lists all of the locations. To get all of the locations, you need to use the **`LocationProvider`** component, and then use the Context hook to pull in the location data.
 
@@ -113,95 +81,44 @@ When you hire an employee, you immediately want to assign that employee to a loc
 import React, { useContext, useRef } from "react"
 import { EmployeeContext } from "./EmployeeProvider"
 import { LocationContext } from "../location/LocationProvider"
-import "./Employee.css"
+import "./Employees.css"
 
-export default props => {
+export const EmployeeForm = (props) => {
     const { addEmployee } = useContext(EmployeeContext)
     const { locations } = useContext(LocationContext)
 
-    // Store references to the <input> elements below
-    const name = useRef()
-    const location = useRef()
-    const address = useRef()
-
-    // Function to create an object and save it to the API
-    const constructNewEmployee = () => {
-        const locationId = parseInt(location.current.value)
-
-        if (locationId === 0) {
-            window.alert("Please select a location")
-        } else {
-            addEmployee({
-                name: name.current.value,
-                locationId: locationId,
-                address: address.current.value
-            })
-            .then(props.toggler)
-        }
-    }
 
     return (
         <form className="employeeForm">
             <h2 className="employeeForm__title">New Employee</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="employeeName">Employee name: </label>
-                    <input
-                        type="text"
-                        id="employeeName"
-                        ref={name}
-                        required
-                        autoFocus
-                        className="form-control"
-                        placeholder="Employee name"
-                    />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="employeeAddress">Address: </label>
-                    <input
-                        type="text"
-                        id="employeeAddress"
-                        ref={address}
-                        required
-                        autoFocus
-                        className="form-control"
-                        placeholder="Street address"
-                    />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="location">Assign to location: </label>
-                    <select
-                        defaultValue=""
-                        name="location"
-                        ref={location}
-                        id="employeeLocation"
-                        className="form-control"
-                    >
-                        <option value="0">Select a location</option>
-                        {
-                            locations.map(e =>
-                                <option key={e.id} value={e.id}>
-                                    {e.name}
-                                </option>
-                            )
-                        }
-                    </select>
-                </div>
-            </fieldset>
-            <button type="submit"
-                onClick={
-                    evt => {
-                        evt.preventDefault() // Prevent browser from submitting the form
-                        constructNewEmployee()
-                    }
-                }
-                className="btn btn-primary">
-                Save Employee
-            </button>
+            <div className="form-group">
+                <label htmlFor="employeeName">Employee name</label>
+                <input
+                    type="text"
+                    id="employeeName"
+                    required
+                    autoFocus
+                    className="form-control"
+                    placeholder="Employee name"
+                />
+            </div>
+            <div className="form-group">
+                <label htmlFor="location">Assign to location</label>
+                <select
+                    defaultValue=""
+                    name="location"
+                    id="employeeLocation"
+                    className="form-control"
+                >
+                    <option value="0">Select a location</option>
+                    {locations.map(e => (
+                        <option key={e.id} value={e.id}>
+                            {e.name}
+                        </option>
+                    ))}
+                </select>
+            </div>
+            <button type="submit" className="btn btn-primary"> Save Employee </button>
         </form>
     )
 }
@@ -215,27 +132,40 @@ You should immediately see the following error.
 TypeError: Cannot read property 'locations' of undefined
 ```
 
-This is because you imported the **`LocationProvider`** component and used the Context hook to get the data, but you forgot to make the **`EmployeeForm`** component a child of the **`LocationProvider`** component. Open **`Kennel`** and make the change.
+This is because you imported the **`LocationProvider`** component and used the Context hook to get the data, but you forgot to make the **`EmployeeForm`** component a child of the **`LocationProvider`** component. Open **`ApplicationViews`** and make the change.
 
-> ##### `src/components/Kennel.js`
+> ##### `src/components/ApplicationViews.js`
 
 ```jsx
 <EmployeeProvider>
     <LocationProvider>
-        <EmployeeList />
+        <Route exact path="/employees" render={
+            props => <EmployeeList {...props} />
+        } />
+
+        <Route exact path="/employees/create">
+            <EmployeeForm />
+        </Route>
     </LocationProvider>
 </EmployeeProvider>
 ```
 
 ### Save Button Click Handler
 
-When you click on the Save Employee button, the Employee state will change. Just like in your previous applications, you need to follow these steps.
+When you click on the save button, the Employee state will change. Just like in your previous applications, you need to follow these steps.
 
 1. Define a function that handles the save button click.
 1. Construct a new object representation of the new employee from the user input.
-1. POST the object to your API and change the API state by using the `addEmployee` function that is in the Employee Provider.
+1. POST the object to your API and change the API state.
+1. Immediately update the application state with the new array of employees that are in the API.
 
-Once that process is complete, the list of employees will immediately be re-rendered with the new employee you create.
+Once that process is complete, you will send the user to the list of employees so that she can see that her data has been saved correctly.
+
+> ##### `src/components/employee/EmployeeForm.js`
+
+```js
+
+```
 
 ### Get User Input
 
@@ -251,12 +181,11 @@ You are going to create a reference object and then use the Ref hook to get and 
 First, add new new reference objects and provide default values. The default value is the value that you put in the parenthesis for `useRef()`.
 
 ```js
-export default props => {
+export const EmployeeForm = (props) => {
     const { addEmployee } = useContext(EmployeeContext)
     const { locations } = useContext(LocationContext)
-
-    const employeeName = useRef()
-    const employeeLocation = useRef()
+    const employeeName = useRef("")
+    const employeeLocation = useRef(0)
 ```
 
 Then create a `ref` attribute on the employee name field.
@@ -315,7 +244,6 @@ const constructNewEmployee = () => {
             name: employeeName.current.value,
             locationId: locationId
         })
-        .then(props.toggler)
     }
 }
 ```
@@ -335,6 +263,9 @@ Lastly, update the save button.
 </button>
 ```
 
-### Employee List Re-renders on Save
+### Show All Employees on Save
 
-Since the Employee list component has an effect hook that reponds to the employee state change, once your new employee is saved, the list should immediately re-renders with the new employee in it.
+You need to use the `history.push()` method again to take the user to a new view. Reference the code above to see how to do the following two tasks.
+
+1. Provide the React Router history object to the **`EmployeeForm`** component by refactoring **`ApplicationViews`**.
+1. Route the user to `/employees`.

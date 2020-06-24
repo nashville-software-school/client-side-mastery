@@ -1,44 +1,40 @@
-# Viewing Details in Modal
+# Individual Items with Dynamic Routing
 
-In this chapter, you will be learning how to use modals to display information. It could be details of a resource or a form for creating/editing something.
-
-So far you are listing all employees, all animals, all customers, and all locations. By the end of the chapter, you will be able to click on one of the cards in the list view and only view the details of a specific item.
+In this chapter, you will be learning how to render individual resources. So far you are listing all employees, all animals, all customers, and all locations. By the end of the chapter, you will be able to click on one of the cards in the list view and only view the details of a specific item.
 
 You are going to start with animals.
 
+## Refactor Animal Card
+
+### Display Minimal Data
+
+Remove the location name and customer name from being displayed in the **`Animal`** component. You are going to author a new component to display those details. You want the cards in your list view to contain only the information the user needs to find the animal she is looking for. Make sure that you remove the `location` and `customer` keys from your argument list.
+
+Then, you will make the name of the Animal a hyperlink. When the user clicks on the link, a view of that individual animal will be presented with all of the details. Use the `<Link>` component provided by React.
+
+The link component's `to` attribute must include a route parameter.
+
+* To view all animals, you go to the `/animals` route.
+* To view the animal with an id of 3, you go to the `/animals/3` route.
+
 ```js
 import React from "react"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import "./Animals.css"
+import { Link } from "react-router-dom"
 
-
-export default ({ animal }) => (
-    <>
-        <section className="animal">
-            <h3 className="animal__name"> { animal.name } </h3>
-            <div className="animal__breed">{ animal.breed }</div>
-            <button
-                onClick={() => showAnimalDetails(animal)}
-                >Details</button>
-        </section>
-
-        <Modal isOpen={modal} toggle={toggle} className={className}>
-            <ModalHeader toggle={toggle}>
+export default ({ animalp }) => (
+    <section className="animal">
+        <h3 className="animal__name">
+            <Link to={`/animals/${animal.id}`}>
                 { animal.name }
-            </ModalHeader>
-            <ModalBody>
-                <div className="animal__breed">{ animal.breed }</div>
-                <div className="animal__location">Location: { location.name }</div>
-                <div className="animal__owner">Customer: { customer.name }</div>
-            </ModalBody>
-            <ModalFooter>
-            <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={toggle}>Cancel</Button>
-            </ModalFooter>
-        </Modal>
-    </>
+            </Link>
+        </h3>
+        <div className="animal__breed">{ animal.breed }</div>
+    </section>
 )
 ```
+
+![](./images/minimal-list-items.png)
 
 ## Refactor Animal List
 
@@ -84,25 +80,21 @@ animals.map(animal => {
 
 ## New Animal Details Component
 
-Create a new component in the animal directory which will be responsible for showing all the details of the animal. This information will be displayed in a modal.
+Create a new component in the animal directory which will be responsible for showing all the details of the animal.
 
 > ##### `/src/components/animal/AnimalDetail.js`
 
 ```js
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import { CustomerContext } from "../customer/CustomerProvider"
 import { LocationContext } from "../location/LocationProvider"
 import { AnimalContext } from "./AnimalProvider"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import "./Animals.css"
 
 export default (props) => {
     const { animals } = useContext(AnimalContext)
     const { locations } = useContext(LocationContext)
     const { customers } = useContext(CustomerContext)
-    const [modal, setModal] = useState(false)
-
-    const toggle = () => setModal(!modal)
 
     /*
         This line of code will be explained in the next
@@ -110,29 +102,20 @@ export default (props) => {
     */
     const chosenAnimalId = parseInt(props.match.params.animalId, 10)
 
+    // What on Earth is the `|| {}` at the end of these lines of code?
     const animal = animals.find(a => a.id === chosenAnimalId) || {}
     const customer = customers.find(c => c.id === animal.customerId) || {}
     const location = locations.find(l => l.id === animal.locationId) || {}
 
     return (
-        <div>
-            <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
-            <Modal isOpen={modal} toggle={toggle} className={className}>
-                <ModalHeader toggle={toggle}>
-                    { animal.name }
-                </ModalHeader>
-                <ModalBody>
-                    <div className="animal__breed">{ animal.breed }</div>
-                    <div className="animal__location">Location: { location.name }</div>
-                    <div className="animal__owner">Customer: { customer.name }</div>
-                </ModalBody>
-                <ModalFooter>
-                <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
-                <Button color="secondary" onClick={toggle}>Cancel</Button>
-                </ModalFooter>
-            </Modal>
-        </div>
+        <section className="animal">
+            <h3 className="animal__name">{ animal.name }</h3>
+            <div className="animal__breed">{ animal.breed }</div>
+            <div className="animal__location">Location: { location.name }</div>
+            <div className="animal__owner">Customer: { customer.name }</div>
+        </section>
     )
+
 }
 ```
 

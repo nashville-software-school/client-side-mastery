@@ -4,15 +4,17 @@ Right now, the data being displayed for animals is not useful. For both the loca
 
 ![](./images/animals-before-join.png)
 
-You really want to display the name of the location, and the name of the customer. To do that, you need data from the animal provider, the location provider, and the customer provider. The first step to making it work is updating **`Kennel`** so that the **`AnimalList`** component has all three providers as parent components.
+You really want to display the name of the location, and the name of the customer. To do that, you need data from the animal provider, the location provider, and the customer provider. The first step to making it work is updating **`ApplicationViews`** so that the **`AnimalList`** component has all three providers as parent components.
 
-> ##### `src/components/Kennel.js`
+> ##### `src/components/ApplicationViews.js`
 
 ```jsx
 <AnimalProvider>
     <LocationProvider>
         <CustomerProvider>
-            <AnimalList />
+            <Route exact path="/animals">
+                <AnimalList />
+            </Route>
         </CustomerProvider>
     </LocationProvider>
 </AnimalProvider>
@@ -26,7 +28,7 @@ The next step is to access the context from the two, new providers by importing 
 
 > ##### `src/components/animal/AnimalList.js`
 
-```jsx
+```js
 import React, { useContext } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import { LocationContext } from "../location/LocationProvider"
@@ -53,7 +55,7 @@ Then you need to refactor your function that you are passing to the `.map()` met
 
 > ##### `src/components/animal/AnimalList.js`
 
-```jsx
+```js
 animals.map(animal => {
     const owner = customers.find(c => c.id === animal.customerId)
     const clinic = locations.find(l => l.id === animal.locationId)
@@ -69,15 +71,17 @@ animals.map(animal => {
 
 The last step is to extract the new `customer` and `animal` keys on the object passed to the **`Animal`** component.
 
-Then display the name property of each one.
-
 > ##### `src/components/animal/Animal.js`
 
-```jsx
+```js
 export const Animal = ({ animal, customer, location }) => (
-    <div className="animal__location">Location: { location.name }</div>
-    <div className="animal__owner">Customer: { customer.name }</div>
-)
+```
+
+Then display the name property of each one.
+
+```jsx
+<div className="animal__location">Location: { location.name }</div>
+<div className="animal__owner">Customer: { customer.name }</div>
 ```
 
 ![animal card showing name of customer and location](./images/animals-after-join.png)

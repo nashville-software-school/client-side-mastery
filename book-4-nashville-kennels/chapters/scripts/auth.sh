@@ -4,7 +4,7 @@ set -u
 mkdir -p ./src/components/auth && cd $_
 
 echo 'import React, { useRef } from "react"
-
+import "./Login.css"
 
 export const Register = (props) => {
     const firstName = useRef()
@@ -45,7 +45,7 @@ export const Register = (props) => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 localStorage.setItem("kennel_customer", createdUser.id)
-                                props.toggle()
+                                props.history.push("/")
                             }
                         })
                 })
@@ -55,16 +55,16 @@ export const Register = (props) => {
     }
 
     return (
-        <div className="container--login">
-            <form className="form--register" onSubmit={handleRegister}>
-                <h4 className="darkgray">If you are not a customer yet, please register a new account</h4>
+        <main style={{ textAlign: "center" }}>
+            <form className="form--login" onSubmit={handleRegister}>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h1>
                 <fieldset>
                     <label htmlFor="firstName"> First Name </label>
                     <input ref={firstName} type="text"
                         name="firstName"
                         className="form-control"
                         placeholder="First name"
-                        required  />
+                        required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="lastName"> Last Name </label>
@@ -100,19 +100,21 @@ export const Register = (props) => {
                 </fieldset>
                 <fieldset>
                     <button type="submit">
-                        Register
+                        Sign in
                     </button>
                 </fieldset>
             </form>
-        </div>
+        </main>
     )
 }
 ' >> ./Register.js
 
 echo 'import React, { useRef } from "react"
+import { Link } from "react-router-dom";
+import "./Login.css"
 
 
-export const Login = (props) => {
+export const Login = props => {
     const email = useRef()
     const password = useRef()
 
@@ -134,59 +136,67 @@ export const Login = (props) => {
             .then(exists => {
                 if (exists && exists.password === password.current.value) {
                     localStorage.setItem("kennel_customer", exists.id)
-                    props.toggle()
+                    props.history.push("/")
                 } else if (exists && exists.password !== password.current.value) {
                     window.alert("Password does not match")
                 } else if (!exists) {
-                    window.alert("User account does not exist")
+                    fetch("http://localhost:8088/customers", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            email: email.current.value,
+                            password: password.current.value
+                        })
+                    })
+                        .then(_ => _.json())
+                        .then(response => {
+                            localStorage.setItem("kennel_customer", response.id)
+                            props.history.push("/")
+                        })
                 }
             })
     }
 
     return (
-        <div className="container--login">
-            <form className="form--login" onSubmit={handleLogin}>
-                <h2>Please sign in</h2>
-                <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
-                    <input ref={email} type="email"
-                        id="email"
-                        className="form-control"
-                        placeholder="Email address"
-                        required autoFocus />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="inputPassword"> Password </label>
-                    <input ref={password} type="password"
-                        id="password"
-                        className="form-control"
-                        placeholder="Password"
-                        required />
-                </fieldset>
-                <fieldset>
-                    <button type="submit">
-                        Sign in
+        <main className="container--login">
+            <section>
+                <form className="form--login" onSubmit={handleLogin}>
+                    <h1>Nashville Kennels</h1>
+                    <h2>Please sign in</h2>
+                    <fieldset>
+                        <label htmlFor="inputEmail"> Email address </label>
+                        <input ref={email} type="email"
+                            id="email"
+                            className="form-control"
+                            placeholder="Email address"
+                            required autoFocus />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="inputPassword"> Password </label>
+                        <input ref={password} type="password"
+                            id="password"
+                            className="form-control"
+                            placeholder="Password"
+                            required />
+                    </fieldset>
+                    <fieldset>
+                        <button type="submit">
+                            Sign in
                     </button>
-                </fieldset>
-            </form>
-        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section className="link--register">
+                <Link to="/register">Not a member yet?</Link>
+            </section>
+        </main>
     )
 }
 ' >> ./Login.js
 
-echo '.darkgray {
-    color: #747678;
-}
-
-.authContainer {
-    display: flex;
-    padding: 0 10rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.h1, h1 {
+echo '.h1, h1 {
     font-size: 2.5rem;
 }
 
@@ -197,8 +207,14 @@ fieldset {
     border: 0;
 }
 
-input[type="email"],
-input[type="password"] {
+.form--login {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form--login > fieldset > input[type="email"],
+.form--login > fieldset > input[type="password"] {
     width: 25em;
 }
 
@@ -226,60 +242,19 @@ input[type="password"] {
 
 .container--login {
     text-align: center;
-    flex: 1;
-    flex-basis: 33%;
 }
 
 .form--login {
-    font-size: 1.25rem;
     background-position-x: right;
+    background-image: url(logo.png);
     z-index: 1;
     min-height: 25rem;
-    min-width: 35rem;
-    background-color: hsla(0,0%,100%,0.40);
-    background-blend-mode: overlay;
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
-
-}
-
-.form--register {
-    background-position-x: right;
-    z-index: 1;
-    min-height: 25rem;
-    width: 45rem;
+    min-width: 45rem;
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
 }
-' >> ./Auth.css
+' >> ./Login.css
 
-echo 'import React from "react"
-import { Login } from "./Login"
-import { Register } from "./Register"
-import "./Auth.css"
-
-
-export const Auth = ({toggle}) => {
-    return (
-        <>
-            <h1 className="welcome">Welcome to Nashville Kennels</h1>
-            <div className="authContainer">
-                <Login toggle={toggle} />
-                <Register toggle={toggle} />
-            </div>
-        </>
-    )
-}' >> ./Auth.js
-
-curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-37/book-4-nashville-kennels/chapters/images/logo.png > logo.png
-
-
-
-
-
+curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-4-nashville-kennels/chapters/images/logo.png > logo.png
 

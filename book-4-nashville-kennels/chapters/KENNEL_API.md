@@ -20,13 +20,6 @@ Then copy the following JSON into the `database.json` file.
             "breed": "Poodle",
             "customerId": 1,
             "locationId": 2
-        },
-        {
-            "id": 2,
-            "name": "Barney",
-            "breed": "Boxer",
-            "customerId": 2,
-            "locationId": 1
         }
     ],
     "customers": [
@@ -34,27 +27,9 @@ Then copy the following JSON into the `database.json` file.
             "id": 1,
             "name": "Hannah Hall",
             "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 2,
-            "name": "Caitlin Stein",
-            "address": "4 Killian Trace"
         }
     ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Emma Beaton",
-            "address": "54 Sycamore Avenue",
-            "locationId": 1
-        },
-        {
-            "id": 2,
-            "name": "Michael Conrad",
-            "address": "1906 Pelargir Circle",
-            "locationId": 2
-        }
-    ],
+    "employees": [],
     "locations": [
         {
             "id": 1,
