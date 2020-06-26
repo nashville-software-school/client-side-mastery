@@ -34,6 +34,10 @@ This application will allow you to use certain combinations of keys on your keyb
 
 Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed.
 
+Make sure that homebrew was installed successfully by typing this in your terminal: `brew help`.
+
+If you see the message `command not found`, go through the homebrew instructions again.
+
 ## Visual Studio Code
 
 Visual Studio Code is the editor we will all be working on to start the course. To install it, run the following command
@@ -55,6 +59,15 @@ Set up Visual Studio Code to be [launched from the command line](https://code.vi
 
 Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 
+### Did it work?
+
+Make sure that Node was installed successfully by typing in your terminal:
+```
+node -v
+```
+
+If you see the message `command not found`, go through the node installation again.
+
 ## Node Packages
 
 Now that you have Node installed, you can install some open source software that you will need in the course.
@@ -62,6 +75,21 @@ Now that you have Node installed, you can install some open source software that
 ```sh
 sudo npm i -g serve json-server
 ```
+
+### Did it work?
+Make sure that `serve` was installed successfully by typing in your terminal:
+```
+serve -v
+```
+
+If you see the message `command not found`, type in `sudo npm i -g serve` again.
+
+Make sure that `json-server` was installed successfully by typing in your terminal:
+```
+json-server -v
+```
+
+If you see the message `command not found`, type in `sudo npm i -g json-server` again.
 
 ## Xcode Command Line Tools
 
@@ -81,6 +109,14 @@ Git is how you and your teammates will work on a shard codebase during your time
 brew install git
 brew install tig
 ```
+
+### Did it work?
+Make sure that Git was installed successfully by typing in your terminal: 
+```
+git --version
+```
+
+If you see the message `command not found`, go through the git installation again.
 
 ### Configuring Git
 
