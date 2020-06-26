@@ -78,6 +78,15 @@ sudo apt-get install -y nodejs
 ```
 After a while, you will be prompted with a message asking for permissions. Using the arrow keys on your keyboard, select **Yes** and hit the enter key to continue installing Node.js.
 
+### Did it work?
+
+Make sure that Node was installed successfully by typing in your terminal:
+```
+node -v
+```
+
+- If you see the message `command not found`, go through the node installation again.
+
 ## Web Server
 
 `serve` is what you will use to make your web sites work in the browser. Open Windows Terminal, (in a new Ubuntu Tab), if you haven't yet, and type in the following command:
@@ -85,12 +94,36 @@ After a while, you will be prompted with a message asking for permissions. Using
 ```sh
 sudo npm i -g serve json-server
 ```
+### Did it work?
+
+Make sure that `serve` was installed successfully by typing in your terminal:
+```
+serve -v
+```
+
+If you see the message `command not found`, type in `sudo npm i -g serve` again.
+
+Make sure that `json-server` was installed successfully by typing in your terminal:
+```
+json-server -v
+```
+
+If you see the message `command not found`, type in `sudo npm i -g json-server` again.
 
 ## Homebrew
 
 Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed. You will put the command they show you in your Windows Terminal with the Ubuntu shell running.
 
 If you want, you can watch the [Installing Homebrew](https://youtu.be/fz80EW8MnKQ) video which shows the process.
+
+### Did it work?
+
+Make sure that homebrew was installed successfully by typing this in your terminal:
+```
+brew help
+```
+
+If you see the message `command not found`, go through the homebrew instructions again.
 
 ## Git
 
@@ -100,6 +133,16 @@ Git is how you and your teammates will work on a shard codebase during your time
 brew install git
 brew install tig
 ```
+
+### Did it work?
+
+Make sure that Git was installed successfully by typing in your terminal: 
+```
+git --version
+```
+
+If you see the message `command not found`, go through the git installation again.
+
 
 ### Configuring Git
 
