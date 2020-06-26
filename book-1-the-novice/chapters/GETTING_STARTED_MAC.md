@@ -34,7 +34,11 @@ This application will allow you to use certain combinations of keys on your keyb
 
 Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed.
 
-Make sure that homebrew was installed successfully by typing this in your terminal: `brew help`.
+### Did it work?
+Make sure that homebrew was installed successfully by typing this in your terminal:
+```
+brew help
+```
 
 If you see the message `command not found`, go through the homebrew instructions again.
 

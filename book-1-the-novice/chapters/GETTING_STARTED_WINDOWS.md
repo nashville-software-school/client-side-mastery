@@ -78,6 +78,8 @@ sudo apt-get install -y nodejs
 ```
 After a while, you will be prompted with a message asking for permissions. Using the arrow keys on your keyboard, select **Yes** and hit the enter key to continue installing Node.js.
 
+### Did it work?
+
 Make sure that Node was installed successfully by typing in your terminal:
 ```
 node -v
