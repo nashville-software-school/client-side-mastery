@@ -18,7 +18,7 @@
 | 9 | [Using the Fish Data Provider](./chapters/EXPORTING_FISH.md) | [Creating Seeds](./chapters/MF_SEED_MODULES.md) | [Journal Entry Objects](./chapters/DAILY_JOURNAL_OBJECT_DOM.md) |  |
 | 10 | [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md) | [Tilling the Field](./chapters/MF_FIELD.md) |  | [Listing New York Companies](./chapters/DS_FILTER.md) |
 | 11 | [Debugging Bad Fish](./chapters/DEBUG_THE_AQUARIUM.md) | [Sowing the Field](./chapters/MF_SOWING.md) |  |  |
-| 12 | [Fundamental Workshop](./chapters/COMPONENTS_WORKSHOP.md) | [Harvest Time](./chapters/MF_HARVEST.md) | [Rendering Collections of Entries](./chapters/DS_LISTING_AGENTS.md) | [Listing Purchasing Agents](./chapters/DS_LISTING_AGENTS.md) |
+| 12 | [Fundamental Workshop](./chapters/COMPONENTS_WORKSHOP.md) | [Harvest Time](./chapters/MF_HARVEST.md) | [Rendering Collections of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md) | [Listing Purchasing Agents](./chapters/DS_LISTING_AGENTS.md) |
 | 13 | [Big Fish, Little Fish](./chapters/FILTERING_FISH.md) | [Selling the Harvest](./chapters/MF_RENDER_HARVEST.md) |  | [Finding Companies](./chapters/DS_FIND_COMPANY.md) |
 | 14 | [Git Workflow Terminal Shortcuts](./chapters/GIT_CLI_SHORTCUTS.md) |  |  |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](./chapters/AUTO_WORLD.md) |  |  |  |
