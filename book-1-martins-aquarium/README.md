@@ -7,11 +7,11 @@
 | 🍎 | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) | | | |
 | 💻 | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |  |  |  |
 | 1 | [Terminal Basics](./chapters/CLI_BASICS.md) |  |  | |
-| 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) |  |  |  |
+| 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) |  | [Wireframes](./chapters/DAILY_JOURNAL_WIREFRAME.md) |  |
 | 3 | [Fish in my Aquarium](./chapters/HTML_AQUARIUM.md) |  |  |  |
 | 4 | [Track Aquarium Changes](./chapters/GIT_BASICS.md) |  |  |  |
 | 5 | [Quick Project Creation with Bash Function](./chapters/BASH_HELPERS.md) |  |  |  |
-| 6 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) |  | [Form Layout](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |  |
+| 6 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) |  | [HTML Layout and Form](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Hello, World_**](./chapters/HELLO_WORLD.md) |  |  |  |
 | 7 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD.md) |  |  |
 | 8 | [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md) | [Harvest Plan](./chapters/MF_INSTALL_PLAN.md) |  | [Doris' Company List](./chapters/DS_INTRO.md) |
