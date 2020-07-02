@@ -37,7 +37,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
 
-export default (props) => {
+export const NavBar = (props) => {
     return (
         <ul className="navbar">
             <li className="navbar__item active">
@@ -136,7 +136,7 @@ import NavBar from "./nav/NavBar"
 import { ApplicationViews } from "./ApplicationViews"
 import "./Kennel.css"
 
-export default () => (
+export const Kennel = () => (
     <NavBar />
     <ApplicationViews />
 )

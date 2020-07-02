@@ -93,7 +93,7 @@ Just like you have started to do already with CSS by making it modular so that i
     ```
 1. In the code below, you have been provided with the first event listener. When the user clicks on the "Details" button underneath Bart's image, it will show the dialog element you created for Bart in the HTML above. Add one of these for every fish that you created. Replace the CSS selectors in both locations, but nothing else needs to change.
     ```js
-    const initializeDetailButtonEvents = () => {
+    export const initializeDetailButtonEvents = () => {
         // CAN'T TOUCH THIS - START
         const allCloseButtons = document.querySelectorAll(".button--close")
 
@@ -122,17 +122,13 @@ Just like you have started to do already with CSS by making it modular so that i
 
     }
     ```
-1. Now you need to export this function so that the `main.js` module can import it and invoke it. Place this code at the very bottom of the `dialogs.js` file.
-    ```js
-    export default initializeDetailButtonEvents
-    ```
 1. Import the function into `main.js` and invoke it.
     ```js
     /**
      *  Import the initializeDetailButtonEvents function
      *  reference and then invoke it
      */
-    import initializeDetailButtonEvents from './dialogs.js'
+    import { initializeDetailButtonEvents } from './dialogs.js'
 
     initializeDetailButtonEvents()
     ```
