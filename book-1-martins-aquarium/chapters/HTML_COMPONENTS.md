@@ -183,6 +183,9 @@ You're going to create an HTML component to represent a political candidate. Spe
 
 Make sure you use good BEM-style class names for each element in your components. Put a comment above each component explaining what it is.
 
+## Practice: Flexbox Froggie 
+[Flexbox Froggie](http://flexboxfroggy.com/) - online game with 24 challenges.
+
 ## Practice: Coffee Houses of Nashville
 
 > The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
@@ -190,22 +193,22 @@ Make sure you use good BEM-style class names for each element in your components
 ```html
 <header class="pageHeader">Coffee Houses of Nashville</header>
 
-<article class="list">
-  <section class="shop">The Jam</section>
-  <section class="shop">The Well</section>
-  <section class="shop">Red Bicycle</section>
-  <section class="shop">Crema</section>
-  <section class="shop">Frothy Monkey</section>
-  <section class="shop">8th &amp; Roast</section>
-  <section class="shop">Bongo Java</section>
-  <section class="shop">Flatrock</section>
-  <section class="shop">Fido</section>
-  <section class="shop">Steadfast Coffee</section>
-  <section class="shop">Dose Coffee</section>
-  <section class="shop">Sam &amp; Zoes</section>
-  <section class="shop">Slow Hand Coffee</section>
-  <section class="shop">The Horn</section>
-</article>
+<section class="list">
+  <article class="shop">The Jam</article>
+  <article class="shop">The Well</article>
+  <article class="shop">Red Bicycle</article>
+  <article class="shop">Crema</article>
+  <article class="shop">Frothy Monkey</article>
+  <article class="shop">8th &amp; Roast</article>
+  <article class="shop">Bongo Java</article>
+  <article class="shop">Flatrock</article>
+  <article class="shop">Fido</article>
+  <article class="shop">Steadfast Coffee</article>
+  <article class="shop">Dose Coffee</article>
+  <article class="shop">Sam &amp; Zoes</article>
+  <article class="shop">Slow Hand Coffee</article>
+  <article class="shop">The Horn</article>
+</section>
 ```
 
 From that HTML, use Flexbox to achieve this layout. You don't need to add the border to each coffee house component, but you can if you like. It's been added in this example to highlight the alignment and spacing you're shooting for.
@@ -219,14 +222,17 @@ From that HTML, use Flexbox to achieve this layout. You don't need to add the bo
 > UX CONCEPT: Web pages should be designed in such a way that they are easy to scan.
 
 How to improve scannability?
-* Create visual hierarchies. What is the most important information on the page? What is supportive information? Can you use bulleted lists?
+* Create visual hierarchies: What is the most important information on the page? What is supportive information? Can you use bulleted lists?
 * Use universally accepted conventions: These may include logo/tagline position, buttons/links, social networking options, etc.
 * Break a page into clearly defined sections.
 * Make it obvious what’s clickable.
 
 Review the page you just created. Based on the items above, identify some opportunities to improve the UI/UX. Refactor your page to improve the usability. You may add semantic tags, content, and styles.
 
-Background color - if you add a background color/image, ensure the copy (text color) has good contrast and is legible.
+Background color/image - ensure the copy (text color) has good contrast and is legible. Use the Dev Tools to inspect your color choices.
+
+![dev tools](./images/devtools-contrast.png)
+
 
 
 ## Coffee Houses UI/UX Challenge
@@ -234,12 +240,10 @@ Background color - if you add a background color/image, ensure the copy (text co
 
 Creating visual hierarchies.
 
-1. Add an address, phone number, and website link to each coffee house (you may use mock/fake data)
-1. You can make each coffee house component utilize Flexbox to build the layout that you want to achieve.
-1. Using semantic HTML and CSS, style each coffee house component with the goals of easy scannability. At a minimum, you will emphasize the name of each shop and make the website link clearly clickable.
-1. Since you are going to defining several styles for the coffee shop component, write the CSS in `shop.css` and use `@import` to include those styles in the main CSS file.
+1. Add an address, phone number, website link, and menu link to each coffee house (you may use mock/fake data).
+1. Each coffee house component should utilize Flexbox for the layout.
+1. Use semantic HTML and CSS to style each coffee house component with the goal of easy scannability. Consider which semantic tags you will use for each piece of content. At a minimum, you will emphasize the name of each shop and make the links clearly clickable.
+1. Since you are defining several styles for the coffee shop component, write the CSS in `shop.css` and use `@import` to include those styles in the main CSS file.
 
-Background color - if you add a background color/image, ensure the copy (text color) has good contrast and is legible.
-
-![coffee shop component layout](./images/coffee-shop-layout.png)
+Background color/image - ensure the copy (text color) has good contrast and is legible. Use the Dev Tools to inspect your color choices. (see dev tool image above).
 
