@@ -77,7 +77,7 @@ Create a new JavaScript module in your application named `FishDataProvider.js`. 
 const fishCollection = [
     {
         name: "Bart",
-        food: ["algae", "crustaceans"]
+        food: "crustaceans"
     }
 ]
 ```
