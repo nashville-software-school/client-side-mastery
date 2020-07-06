@@ -14,7 +14,7 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 >
 > Martin smiles widely, obviously pleased that you appreciate his achievements with his hobby.
 >
-> You continue to pull your notebook and a pen out of your bag, and ask, "So you said that you wanted two different pages for this site, one that lists the fish you currently own, and another one that lists all the places that you've visited to collect the fish..."
+> You continue to pull your notebook and a pen out of your bag, and ask, "So you said that you wanted multiple sections on your site - one that lists the fish you currently own, and another one that lists all the places that you've visited to collect the fish..."
 >
 > "Harvest the fish," Martin interjects with a forced smile.
 >
@@ -28,17 +28,17 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 >
 > "All the sites had a navigation bar at the top. I'd like to have a navigation bar. Were you planning on having a navigation bar?" It's clear the way Martin places an emphasis on _navigation bar_ that he's proud that he knows what that's called.
 >
-> You smile slightly and say, "Oh absolutely. Any web site that has more than one page would definitely need one of those."
+> You smile slightly and say, "For you, I don't think it's needed since all the information is going to be on one page."
 >
-> Martin smiles smugly and says, "I thought so. Just make it look clean and minimal."
+> Martin frowns quickly, but recovers and says, "Hm, I suppose. Well, just make it look clean and minimal. Maybe when there is more information in the future, I can have you add another page and then I can have a _navigation bar_."
 >
-> _"Martin's been doing a little research on web stuff,"_ you think as you pointedly write down 'Must have nav bar' in your notes.
+> _"Martin's been doing a little research on web stuff,"_ you think as you pointedly write down 'Nav bar in future?' in your notes.
 >
 > He patiently waits for you to finish jotting down these important notes, and then says, "Lastly, the _'Buoys and Gills'_ site had a part that listed travel tips for people who love to scuba and harvest fish. On the page that lists all of the out-of-the-way places I've visited, I would like to provide a few quotes to help people."
 >
 > "Where would you like that to appear?" you ask briskly.
 >
-> Martin responds, "Right under the navigation bar, and before the list of locations."
+> Martin responds, "Right above the list of locations."
 >
 > You note that in your journal, then ask, "Ok, I just want to make sure I get this right for you. The details of each fish should include the image, the species, its length, what you named the fish, where you harvested it, and what it eats... is that all correct?"
 >
@@ -52,10 +52,11 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 >
 > You both shake hands and you head back home to start work on the site.
 
-## Goals
+## Goal
 
-1. Use `index.html` to build a web page that lists fish in the main content area, and then some fish/tank care tips on the right side of the page.
-1. Using `locations.html` to list the locations Martin has been to, and his travel tips for each one.
+Use `index.html` to build a web page that lists fish, quotes, harvesting locations, and fish/tank care tips on the right side of the page. You will accomplish it by first decomposing the site into smaller components, and using tools like https://sketchboard.io/ to wireframe the layout.
+
+The more time you spend in the design stage, the less code you need to write.
 
 ## Developer Vocabulary
 
@@ -68,6 +69,7 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 ## Discussion Points
 
 1. What are the components?
+1. What do you think the layout of the site should be?
 1. What are the properties of each fish that you will be representing in your HTML?
 1. What are the properties of the fish care tips that Martin wants on the side?
 1. What are the properties of the locations Martin has visited?
@@ -75,7 +77,6 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 1. Which semantic tags should you use?
 1. How can we use Flexbox to build a better layout of fish and locations?
 1. Which CSS files should be created? Consider the [@import](https://www.w3schools.com/csSref/pr_import_rule.asp) keyword to modularize your styling.
-
 
 ## Time to Build
 
