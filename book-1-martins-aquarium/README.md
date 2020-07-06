@@ -2,7 +2,7 @@
 
 ## Chapters
 
-| # | 🐠 <br/> Martin's Aquarium | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modern&nbsp;Farm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 📔 <br/> Daily Journal | 📝 <br/> Dotard &amp; Simbleton |
+| # | 🐠 <br/> Martin's Aquarium <br/><sub>(_Guided tour_)</sub> | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modern&nbsp;Farm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br/><sub>(_Fundamentals with automated tests_)</sub> | 📔 <br/> Daily Journal <br/><sub>(_Component application_)</sub> | 📝 <br/> Dotard &amp; Simbleton<br/><sub>(_Array methods_)</sub> |
 |--|--|---|---|---|
 | 🍎 | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) | | | |
 | 💻 | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |  |  |  |
