@@ -53,7 +53,7 @@ git push origin master
 
 ### Commit Aquarium
 
-Time to make your first commit on your aquarium project. Make sure you are in `~/workspace/aquarium` and then tell git that you want to track all of your files.
+Time to make your first commit on your aquarium project. Make sure you are in `~/workspace/martins-aquarium` and then tell git that you want to track all of your files.
 
 ```sh
 git add --all
