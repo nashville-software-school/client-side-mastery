@@ -170,22 +170,6 @@ The final touch is to center align the text in each of the interest boxes.
 1. [CSS Tricks - BEM](https://css-tricks.com/bem-101/)
 1. [Introduction to BEM - A front-end methodology](https://www.youtube.com/watch?v=IO-4Z32O--c)
 
-## Practice: Congressional Representative
-
-You're going to create an HTML component to represent a political candidate. Specifically, the representative of your Congressional district. Visit the GovTrack site link below, enter in your home address, and you'll find basic information about your representative.
-
-[GovTrack - Congressional District Map](https://www.govtrack.us/congress/members/map)
-
-1. In your HTML, create an `article` element that will serve as your main representative component. Give the element a unique identifier.
-1. In this component, create a sub-component for basic information using the `section` element. In this section create elements for the representative's image, name, district info, and political affiliation.
-1. Beneath the basic information, you will create a sub-component, using a `section` element, to list any committees the candidate is serving on.
-1. The last component will hold links to any legislation that your representative has enacted.
-
-Make sure you use good BEM-style class names for each element in your components. Put a comment above each component explaining what it is.
-
-## Practice: Flexbox Froggie 
-[Flexbox Froggie](http://flexboxfroggy.com/) - online game with 24 challenges.
-
 ## Practice: Coffee Houses of Nashville
 
 > The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
@@ -214,6 +198,23 @@ Make sure you use good BEM-style class names for each element in your components
 From that HTML, use Flexbox to achieve this layout. You don't need to add the border to each coffee house component, but you can if you like. It's been added in this example to highlight the alignment and spacing you're shooting for.
 
 ![flexbox layout](./images/flexbox.png)
+
+
+## Practice: Flexbox Froggie
+[Flexbox Froggie](http://flexboxfroggy.com/) - online game with 24 challenges.
+
+## Practice: Congressional Representative
+
+You're going to create an HTML component to represent a political candidate. Specifically, the representative of your Congressional district. Visit the GovTrack site link below, enter in your home address, and you'll find basic information about your representative.
+
+[GovTrack - Congressional District Map](https://www.govtrack.us/congress/members/map)
+
+1. In your HTML, create an `article` element that will serve as your main representative component. Give the element a unique identifier.
+1. In this component, create a sub-component for basic information using the `section` element. In this section create elements for the representative's image, name, district info, and political affiliation.
+1. Beneath the basic information, you will create a sub-component, using a `section` element, to list any committees the candidate is serving on.
+1. The last component will hold links to any legislation that your representative has enacted.
+
+Make sure you use good BEM-style class names for each element in your components. Put a comment above each component explaining what it is.
 
 ## Congressional Representative UI/UX Challenge
 
