@@ -30,6 +30,26 @@ Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation f
 
 Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the editor you will be using for the next 6 months.
 
+#### Troubleshooting for instructors (don't try this yourself)
+
+If the `code` command still doesn't work, adding this to `.zshrc` to update the path.
+
+`export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"`
+
+and if that doesn't work, set up a bash function in `.zshrc`
+
+```sh
+code () {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
+    fi
+}
+```
+
 ## Enable the Windows Subsystem for Linux
 
 You'll need to install and enable the Windows Subsystem for Linux. You can follow the instructions below, or you can watch the [Enabling WSL in Powershell](https://youtu.be/Mzv6Pxppwoo) video to see how to enable the Linux subsystem.

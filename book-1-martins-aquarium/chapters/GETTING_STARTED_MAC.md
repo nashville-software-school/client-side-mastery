@@ -47,6 +47,27 @@ brew cask install visual-studio-code
 Set up Visual Studio Code to be [launched from the command line](https://code.visualstudio.com/docs/setup/mac).
 
 
+#### Troubleshooting for instructors (don't try this yourself)
+
+If the `code` command still doesn't work, adding this to `.zshrc` to update the path.
+
+`export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"`
+
+and if that doesn't work, set up a bash function in `.zshrc`
+
+```sh
+code () {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
+    fi
+}
+```
+
+
 ## Google Chrome
 
 [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
