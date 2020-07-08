@@ -45,3 +45,6 @@ The checklist below is for you. You will use it during the practice exercise, an
 ## Visual Workflow of Github
 
 ![](./images/github-workflow.png)
+![](./images/github-merge-mybranch.JPG)
+![](./images/github-review-teammates-pr.JPG)
+![](./images/github-teammate-code-merged.JPG)
