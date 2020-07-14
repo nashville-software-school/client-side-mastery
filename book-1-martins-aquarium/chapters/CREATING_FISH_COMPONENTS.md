@@ -210,7 +210,6 @@ Create a data provider, a location list component, and a location component to a
 
 Suggested files to create:
 
-* `scripts/locations/main.js`
 * `scripts/locations/LocationDataProvider.js`
 * `scripts/locations/LocationList.js`
 * `scripts/locations/Location.js`
