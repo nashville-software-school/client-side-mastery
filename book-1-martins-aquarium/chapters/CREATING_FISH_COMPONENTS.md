@@ -99,7 +99,7 @@ import { Fish } from "./Fish.js"
 
 export const FishList = () => {
 
-    const contentElement = document.querySelector(".content")
+    const contentElement = document.querySelector("fill this in")
     const fishes = useFish()
 
     // Generate all of the HTML for all of the fish
@@ -115,9 +115,9 @@ export const FishList = () => {
 
     // Add a section, and all of the fish to the DOM
     contentElement.innerHTML += `
-        <section class="fishList">
+        <article class="fishList">
             ${fishHTMLRepresentations}
-        </section>
+        </article>
     `
 }
 ```
