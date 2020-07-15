@@ -22,7 +22,7 @@
 | 13 | [Big Fish, Little Fish](./chapters/FILTERING_FISH.md) <br/> <sub style="font-size:0.85rem;">#filtering #functions</sub> | [Selling the Harvest](./chapters/MF_RENDER_HARVEST.md) |  | [Finding Companies](./chapters/DS_FIND_COMPANY.md) <br/> <sub style="font-size:0.85rem;">#arrays #find</sub> |
 | 14 | [Git Workflow Terminal Shortcuts](./chapters/GIT_CLI_SHORTCUTS.md) <br/> <sub style="font-size:0.85rem;">#terminal #github</sub> |  |  |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](./chapters/AUTO_WORLD.md) |  |  |  |
-| 15 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) | [Optional Challenges](./chapters/MF_CHALLENGES) |  |  |
+| 15 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) | [Optional Challenges](./chapters/MF_CHALLENGES.md) |  |  |
 
 ## Supplementary Content
 
