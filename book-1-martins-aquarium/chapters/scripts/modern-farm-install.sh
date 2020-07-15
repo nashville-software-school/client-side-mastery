@@ -204,7 +204,7 @@ describe("HTML representation of harvest", () => {
             headless: true
         })
         const page = await browser.newPage();
-        await page.goto("http://localhost:8080");
+        await page.goto("http://localhost:5000");
         await page.waitForSelector(".plant")
 
         let section = await page.$eval(".container", _ => _.innerHTML)
