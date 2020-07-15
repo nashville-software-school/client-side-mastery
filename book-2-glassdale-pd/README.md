@@ -2,7 +2,7 @@
 
 ## Chapters
 
-| #  | 🚓 <br/> Glassdale Cold Case <br/> <sub>(_Guided tour_)</sub> | 🎢 <br/> State Fair <sub>(_Custom events_)</sub> | 📔 <br/> Daily Journal <br/> <sub>(_Component application_)</sub> | 🏏 🍺 <br/>Truncheons &amp; Flagons <br/> <sub>(_Component application_)</sub>|
+| #  | 🚓 <br/> Glassdale Cold Case <br/> <sub>(_Guided tour_)</sub> | 🎢 <br/> State Fair <sub> <br/> (_Custom events_)</sub> | 📔 <br/> Daily Journal <br/> <sub>(_Component application_)</sub> | 🏏 🍺 <br/>Truncheons &amp; Flagons <br/> <sub>(_Component application_)</sub>|
 |--|--|--|--|--|
 | 1 | [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md) |  |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |
 | 2 | [Criminal API](./chapters/GLASSDALE_CRIMINAL_API.md) |  |  |  |
