@@ -74,7 +74,9 @@ As you start to create the files, and then write the correct JavaScript code for
 
 ## Start Your Web Server
 
-In the `modern-farm` directory, navigate to the `src` sub-directory and start your web server.
+1. Keep your current terminal running, and open a new one so that you have two active terminals open.
+1. In the new terminal session you created, make sure you navigate back to the `~/workspace/modern-farm` directory
+1. Then use `cd` to navigate to the `src` sub-directory and start your web server.
 
 ![](./images/modern-farm-web-server.gif)
 
