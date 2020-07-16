@@ -34,6 +34,6 @@ Please do not try to make it identical. Just make sure you are displaying them i
 
 ## Verifying that Your Code is Correct
 
-Now that you have compeleted all of the tasks of running a modern farm, go back to the terminal and make sure that all of the automated tests are passing. You output should look like this:
+Now that you have completed all of the tasks of running a modern farm, go back to the terminal and make sure that all of the automated tests are passing. You output should look like this:
 
 ![](./images/modern-farm-tests-pass.gif)
