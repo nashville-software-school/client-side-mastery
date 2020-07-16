@@ -4,7 +4,7 @@
 
 Have a terminal window open and change directory to `~/workspace/modern-farm`.
 
-Run `npm start test` to start the automated testing task.
+Run `npm run test` to start the automated testing task.
 
 ## Seed Instructions
 
