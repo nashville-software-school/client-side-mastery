@@ -31,3 +31,9 @@ Use Flexbox to make a grid layout like below.
 In the `main.js` module, invoke the Catalog function and make sure you pass the array of food as an argument. Make sure your web server is running and refresh the browser. Your DOM should look similar to the image above.
 
 Please do not try to make it identical. Just make sure you are displaying them in a grid layout.
+
+## Verifying that Your Code is Correct
+
+Now that you have compeleted all of the tasks of running a modern farm, go back to the terminal and make sure that all of the automated tests are passing. You output should look like this:
+
+![](./images/modern-farm-tests-pass.gif)
