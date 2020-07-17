@@ -109,7 +109,7 @@ export const Register = (props) => {
         </main>
     )
 }
-' >> ./Register.js
+' > ./Register.js
 
 echo 'import React, { useRef } from "react"
 import { Link } from "react-router-dom";
@@ -187,7 +187,7 @@ export const Login = props => {
         </main>
     )
 }
-' >> ./Login.js
+' > ./Login.js
 
 echo '.h1, h1 {
     font-size: 2.5rem;
@@ -257,7 +257,7 @@ fieldset {
     min-width: 15rem;
     min-height: 5rem;
 }
-' >> ./Login.css
+' > ./Login.css
 
 curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-4-nashville-kennels/chapters/images/logo.png > logo.png
 

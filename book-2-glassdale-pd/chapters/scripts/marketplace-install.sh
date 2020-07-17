@@ -19,7 +19,7 @@ echo '{
         { "id": 5, "name": "Xbox One", "price": 216.49, "productTypeId": 2 }
     ]
 }
-' >> ./api/database.json
+' > ./api/database.json
 
 echo '<!doctype html>
 <html lang="en">
@@ -37,7 +37,7 @@ echo '<!doctype html>
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
-' >> index.html
+' > index.html
 
 echo '@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
@@ -78,7 +78,7 @@ h1,h2,h3,h4,h5,h6 {
 .product {
     padding: 0 3rem;
 }
-' >> ./styles/main.css
+' > ./styles/main.css
 
 echo 'import { getProducts } from "./ProductProvider.js"
 import { getProductTypes } from "./ProductTypeProvider.js"
@@ -87,7 +87,7 @@ import { ProductList } from "./ProductList.js"
 getProducts()
     .then(getProductTypes)
     .then(ProductList)
-' >> ./scripts/main.js
+' > ./scripts/main.js
 
 echo 'export const Product = (product, type) => {
     return `
@@ -104,7 +104,7 @@ echo 'export const Product = (product, type) => {
         </section>
     `
 }
-' >> ./scripts/Product.js
+' > ./scripts/Product.js
 
 echo 'import { useProducts } from "./ProductProvider.js"
 import { useProductTypes } from "./ProductTypeProvider.js"
@@ -136,7 +136,7 @@ export const ProductList = () => {
 
     contentTarget.innerHTML = stringOfAllRepresentations
 }
-' >> ./scripts/ProductList.js
+' > ./scripts/ProductList.js
 
 echo 'let products = []
 
@@ -145,7 +145,7 @@ export const useProducts = () => products.slice()
 export const getProducts = () => fetch("http://localhost:8088/products")
     .then(res => res.json())
     .then(parsedProducts => products = parsedProducts)
-' >> ./scripts/ProductProvider.js
+' > ./scripts/ProductProvider.js
 
 echo 'let types = []
 
@@ -154,4 +154,4 @@ export const useProductTypes = () => types.slice()
 export const getProductTypes = () => fetch("http://localhost:8088/producttypes")
     .then(res => res.json())
     .then(parsedTypes => types = parsedTypes)
-' >> ./scripts/ProductTypeProvider.js
+' > ./scripts/ProductTypeProvider.js
