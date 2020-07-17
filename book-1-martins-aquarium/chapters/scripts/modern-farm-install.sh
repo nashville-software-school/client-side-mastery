@@ -51,7 +51,7 @@ echo '{
   },
   "dependencies": {}
 }
-' >> package.json
+' > package.json
 
 cd $HOME/workspace/modern-farm/test
 
@@ -186,7 +186,7 @@ describe("Harvesting the grown plants", () => {
             .toEqual(6)
     })
 })
-' >> farm.test.js
+' > farm.test.js
 
 cd $HOME/workspace/modern-farm/src
 
@@ -206,7 +206,7 @@ echo '<!doctype html>
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
-' >> index.html
+' > index.html
 
 echo '@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
@@ -243,10 +243,10 @@ h1,h2,h3,h4,h5,h6 {
 .red {
     background-color: darksalmon;
 }
-' >> ./styles/main.css
+' > ./styles/main.css
 
 echo 'console.log("Welcome to the main module")
-' >> ./scripts/main.js
+' > ./scripts/main.js
 
 echo 'const types = ["Soybean", "Corn", "Asparagus", "Wheat", "Potato", "Sunflower"]
 
@@ -279,5 +279,5 @@ const crop = function* () {
         yield types[typeIdx]
     }
 }()
-' >> ./scripts/plan.js
+' > ./scripts/plan.js
 
