@@ -15,12 +15,13 @@
 | 9 | [Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md) | [Sideshow Thrills](./chapters/SF_SIDESHOW_TICKET.md) |  [Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md) | [Leaderboard / Team List](./chapters/TF_LEADERBOARD_TEAMS.md) |
 | 10 | [Fundamental Workshop](./chapters/EVENTS_WORKSHOP.md) |  |  |  |
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |  |
-| 11 | [One to Many Relationships](./chapters/ONE_MANY.md) | [Full Package Ticket](./chapters/SF_PACKAGE_TICKET.md) |  | [Adding Players](./chapters/TF_PLAYER_FORM.md) |  |
-| 12 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) |  |  |
-| 13 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) |  | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) | [Selecting Teams for Game](./chapters/TF_CHOOSE_TEAMS.md) |
-| 14 | [Many to Many Relationships](./chapters/MANY_MANY.md) | [Total Tickets Challenge](./chapters/SF_CUSTOMER_COUNT.md) |  | [Recording Scores](./chapters/TF_ROUND_SCORES.md) |
-| 15 | [Multiple Facilities](./chapters/GLASSDALE_CRIMINAL_FACILITIES.md) |  |  |  |
-| 16 | [Facility List](./chapters/GLASSDALE_FACILITY_LIST.md) |  |  |  |
+| 11 | [Entity Relationship Diagram](./chapters/ERD.md) |  |  |
+| 12 | [One to Many Relationships](./chapters/ONE_MANY.md) | [Full Package Ticket](./chapters/SF_PACKAGE_TICKET.md) |  | [Adding Players](./chapters/TF_PLAYER_FORM.md) |  |
+| 13 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) |  |  |
+| 14 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) |  | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) | [Selecting Teams for Game](./chapters/TF_CHOOSE_TEAMS.md) |
+| 15 | [Many to Many Relationships](./chapters/MANY_MANY.md) | [Total Tickets Challenge](./chapters/SF_CUSTOMER_COUNT.md) |  | [Recording Scores](./chapters/TF_ROUND_SCORES.md) |
+| 16 | [Multiple Facilities](./chapters/GLASSDALE_CRIMINAL_FACILITIES.md) |  |  |  |
+| 17 | [Facility List](./chapters/GLASSDALE_FACILITY_LIST.md) |  |  |  |
 | 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |  |
 
 ## Supplementary Chapters
