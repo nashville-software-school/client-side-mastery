@@ -26,10 +26,17 @@
 
 ## Supplementary Chapters
 
+Supplementary chapters are for people who want to explore  beyond what is covered in the main course above. This is all completely optional and is not assessed by your instruction team, nor viewed as Core Learning Objectives.
+
+* Supplemental Chapter - [Editing Glassdale Notes](./chapters/GLASSDALE_EDIT_NOTES.md)
+* Supplemental Chapter - [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
+* Supplemental Chapter - [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
 * Supplemental Chapter - [Randall's Used Cars: Object Methods](./chapters/JS_OBJECT_METHODS.md)
 * Supplemental Chapter - [Kneel Diamonds: Factory Functions](./chapters/JS_FACTORY_FUNCTION.md)
-* Supplemental Chapter - [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
 * Supplemental Chapter - [Customizing the Terminal](./chapters/CLI_PERSONALIZATION.md)
+
+## Related, Non-Essential Content
+
 * Supplemental Chapter - [Generator Functions](./chapters/JS_GENERATOR_FUNCTION.md)
 * Supplemental Chapter - [CSS Variables](./chapters/CSS_VARIABLES.md)
 * Supplemental Chapter - [Local SSL Certificates](./chapters/LOCAL_CERTS.md)
