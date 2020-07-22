@@ -26,10 +26,10 @@ Then change directory to the application and start the web server.
 
 ```sh
 cd ~/workspace/message-list
-hs
+serve
 ```
 
-Visit http://localhost:8080 in Chrome to view your list of messages.
+Open Chrome to view your list of messages.
 
 ### Theme Buttons Module
 

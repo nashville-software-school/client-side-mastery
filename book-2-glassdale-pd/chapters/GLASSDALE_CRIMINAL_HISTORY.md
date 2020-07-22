@@ -150,3 +150,51 @@ export const ConvictionSelect = () => {
 }
 ```
 
+## Optional Advanced Challenge: Map the Aquarium
+
+If you want to practice using the `map()` array method a handful of times to build up the mental muscle, you can go back to your Martin's Aquarium application and replace all of the `for..of` loops in the list components to use `map()` instead.
+
+For example...
+
+```js
+let locationListHTML = ""
+
+for (const location of locations){
+    locationListHTML += LocationAsHTML(location)
+}
+
+contentElement.innerHTML += `
+    <article class="locations">
+        ${locationListHTML}
+    </article>
+`
+```
+
+Would become...
+
+```js
+contentElement.innerHTML += `
+    <article class="locations">
+        ${locations.map(location => LocationAsHTML(location))}
+    </article>
+`
+```
+
+## Optional Advanced Challenge: Map the Farm
+
+Likewise, the Modern Farm application code has many `for..of` loops in it to plant the seeds and harvest the seeds. Here's the modules you can refactor to use `map()`.
+
+* catalog.js
+* harvester.js
+
+## Optional Advanced Challenge: Map the Journal
+
+Open your `JournalEntryList.js` module and see if you can rewrite the `for..of` loop that iterates your entries
+
+```js
+for (const entry of entries) {
+
+}
+```
+
+To work correctly with `entries.map()`.

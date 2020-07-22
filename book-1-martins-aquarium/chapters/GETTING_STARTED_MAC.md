@@ -122,11 +122,6 @@ Sometimes, a student has permission issues after installing and configuring Git.
     ```sh
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     ```
-1. Run the following command in Terminal application.
-    ```sh
-    echo 'alias gs="git status"
-    alias hs="serve -l 8080"' >> ~/.zshrc
-    ```
 
 ## Show Hidden Files
 
