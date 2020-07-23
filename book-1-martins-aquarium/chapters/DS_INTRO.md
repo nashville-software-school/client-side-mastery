@@ -221,7 +221,7 @@ const SupplyList = () => {
     const supplyArray = useSupplies()
     contentTarget.innerHTML = "<h1>Art Supplies</h1>"
 
-    supplies.forEach(
+    supplyArray.forEach(
         (supplyObject) => {
             contentTarget.innerHTML += Supply(supplyObject)
         }

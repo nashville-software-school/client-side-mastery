@@ -25,22 +25,14 @@ Since each of these components have a different responsibility, then each one mu
  */
 export const Fish = (fish) => {
     return `
-        <div class="fish">
-            <div>
-                <img class="fish__image" src="${fish.image}" alt="">
-            </div>
+        <section class="fish card">
+            <div><img  class="fish__image image--card" src="${fish.image}" /></div>
             <div class="fish__name">${fish.name}</div>
-            <button id="button--${fish.name}">Details</button>
-
-            <dialog class="dialog--fish" id="details--${fish.name}">
-                <div>Species: ${fish.species}</div>
-                <div>Location: ${fish.location}</div>
-                <div>Length: ${fish.size}</div>
-                <div>Food: ${fish.food.join(",")}</div>
-
-                <button class="button--close">Close Dialog</button>
-            </dialog>
-        </div>
+            <div class="fish__species">${fish.species}</div>
+            <div class="fish__length">${fish.length}</div>
+            <div class="fish__location">${fish.location}</div>
+            <div class="fish__diet">${fish.food}</div>
+        </section>
     `
 }
 ```
@@ -64,9 +56,9 @@ export const FishList = () => {
 
     // Add to the existing HTML in the content element
     contentElement.innerHTML += `
-        <section class="fishList">
+        <article class="fishList">
             All the fish go here!
-        </section>
+        </article>
     `
 }
 ```
@@ -107,7 +99,7 @@ import { Fish } from "./Fish.js"
 
 export const FishList = () => {
 
-    const contentElement = document.querySelector(".content")
+    const contentElement = document.querySelector("fill this in")
     const fishes = useFish()
 
     // Generate all of the HTML for all of the fish
@@ -123,9 +115,9 @@ export const FishList = () => {
 
     // Add a section, and all of the fish to the DOM
     contentElement.innerHTML += `
-        <section class="fishList">
+        <article class="fishList">
             ${fishHTMLRepresentations}
-        </section>
+        </article>
     `
 }
 ```
@@ -218,7 +210,6 @@ Create a data provider, a location list component, and a location component to a
 
 Suggested files to create:
 
-* `scripts/locations/main.js`
 * `scripts/locations/LocationDataProvider.js`
 * `scripts/locations/LocationList.js`
 * `scripts/locations/Location.js`

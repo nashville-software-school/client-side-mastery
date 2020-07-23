@@ -23,7 +23,7 @@ echo '<!doctype html>
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
-' >> index.html
+' > index.html
 
 echo '@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
@@ -50,7 +50,7 @@ h1,h2,h3,h4,h5,h6 {
     padding: 1rem;
     margin: 1rem;
 }
-' >> ./styles/main.css
+' > ./styles/main.css
 
 echo 'let friends = [
     { name: "Sally", age: 31, location: "Nashville" },
@@ -61,7 +61,7 @@ echo 'let friends = [
 
 export const useFriends = () => {
     return friends.slice().sort((a,b) => a.age - b.age)
-}' >> ./scripts/friends/FriendProvider.js
+}' > ./scripts/friends/FriendProvider.js
 
 echo 'import { useFriends } from "./FriendProvider.js"
 
@@ -89,14 +89,14 @@ export const FriendList = () => {
     const appStateFriends = useFriends()
     render(appStateFriends)
 }
-' >> ./scripts/friends/FriendList.js
+' > ./scripts/friends/FriendList.js
 
 echo 'import { FriendList } from "./friends/FriendList.js"
 import { MessageList } from "./messages/MessageList.js"
 
 FriendList()
 MessageList()
-' >> ./scripts/main.js
+' > ./scripts/main.js
 
 echo 'let messages = [
     { friend: "Sally", text: "I saw a dolphin eat a bird." },
@@ -131,7 +131,7 @@ export const getMessagesByFriend = friend => {
 
     return filteredMessages
 }
-' >> ./scripts/messages/MessageProvider.js
+' > ./scripts/messages/MessageProvider.js
 
 echo 'import { getMessagesByFriend } from "./MessageProvider.js"
 import { Message } from "./Message.js"
@@ -168,12 +168,12 @@ friendListSection.addEventListener("change", changeEvent => {
         render(messages)
     }
 })
-' >> ./scripts/messages/MessageList.js
+' > ./scripts/messages/MessageList.js
 
 echo 'export const Message = messageObject => {
     return `
         <section class="message">${messageObject.friend}: ${messageObject.text}</section>
     `
-}' >> ./scripts/messages/Message.js
+}' > ./scripts/messages/Message.js
 
 # serve -l 8080

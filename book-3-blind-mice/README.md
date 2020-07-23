@@ -17,4 +17,3 @@
 | 11 |  |  | [Corporate PAC Donations](./chapters/COMPANY_DONATIONS.md) |
 | 12 |  |  | [Campaign Donations](./chapters/PAC_DONATIONS.md) |
 | 13 |  |  | [Sponsored Legislation](./chapters/LEGISLATION.md) |
-| 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |

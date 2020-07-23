@@ -104,8 +104,11 @@ const render = convictionsCollection => {
 
 
 const ConvictionSelect = () => {
-    const convictions = useConvictions()
-    render(convictions)
+    getConvictions()
+        .then(() => {
+            const convictions = useConvictions()
+            render(convictions)
+        })
 }
 ```
 
@@ -137,7 +140,10 @@ const render = criminalCollection => {
 
 // Render ALL criminals initally
 const CriminalList = () => {
-    const appStateCriminals = useCriminals()
-    render(appStateCriminals)
+    getCriminals()
+        .then(() => {
+            const appStateCriminals = useCriminals()
+            render(appStateCriminals)
+        })
 }
 ```

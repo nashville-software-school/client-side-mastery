@@ -45,7 +45,7 @@ echo '<!doctype html>
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
-' >> index.html
+' > index.html
 
 echo '@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
@@ -122,7 +122,7 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
     padding: 1rem;
 }
-' >> ./styles/main.css
+' > ./styles/main.css
 
 echo 'const contentTarget = document.querySelector(".entry")
 const eventHub = document.querySelector("#state-fair")
@@ -136,7 +136,7 @@ export const TicketBooth = () => {
         </div>
     `
 }
-' >> ./scripts/TicketBooth.js
+' > ./scripts/TicketBooth.js
 
 echo 'const contentTarget = document.querySelector(".rides")
 const eventHub = document.querySelector("#state-fair")
@@ -145,7 +145,7 @@ export const RideTicketHolders = () => {
     eventHub.addEventListener("", customEvent => {
     })
 }
-' >> ./scripts/rides/RideTicketHolders.js
+' > ./scripts/rides/RideTicketHolders.js
 
 echo '// Import and invoke the ticket booth component function
-' >> ./scripts/main.js
+' > ./scripts/main.js

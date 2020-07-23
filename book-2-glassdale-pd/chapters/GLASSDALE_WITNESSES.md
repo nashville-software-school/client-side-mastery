@@ -25,7 +25,7 @@ When the user clicks the button, you should request all witnesses and display th
 1. The name of the witness.
 1. Their statement text.
 
-Review all of the statements, and if any of them are noteworthy, then make sure you create a new notes and POST it to your personal notes API.
+Review all of the statements, and if any of them are noteworthy, then make sure you create a new note and POST it to your personal notes API.
 
 ## Getting Started
 

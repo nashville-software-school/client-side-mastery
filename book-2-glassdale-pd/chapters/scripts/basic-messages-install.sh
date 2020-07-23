@@ -21,7 +21,7 @@ echo '<!doctype html>
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
-' >> index.html
+' > index.html
 
 echo '@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
@@ -58,12 +58,12 @@ h1,h2,h3,h4,h5,h6 {
 .red {
     background-color: darksalmon;
 }
-' >> ./styles/main.css
+' > ./styles/main.css
 
 echo 'import { MessageList } from "./messages/MessageList.js"
 
 MessageList()
-' >> ./scripts/main.js
+' > ./scripts/main.js
 
 echo 'let messages = [
     { friend: "Sally", text: "I saw a dolphin eat a bird." },
@@ -83,7 +83,7 @@ echo 'let messages = [
 export const useMessages = () => {
     return messages.slice()
 }
-' >> ./scripts/messages/MessageProvider.js
+' > ./scripts/messages/MessageProvider.js
 
 echo 'import { useMessages } from "./MessageProvider.js"
 import { Message } from "./Message.js"
@@ -109,11 +109,11 @@ const render = messageArray => {
     const combinedSections = convertedMessages.join("")
     contentTarget.innerHTML = combinedSections
 }
-' >> ./scripts/messages/MessageList.js
+' > ./scripts/messages/MessageList.js
 
 echo 'export const Message = messageObject => {
     return `
         <section class="message">${messageObject.friend}: ${messageObject.text}</section>
     `
 }
-' >> ./scripts/messages/Message.js
+' > ./scripts/messages/Message.js

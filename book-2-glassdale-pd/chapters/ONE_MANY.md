@@ -71,17 +71,10 @@ cd api
 json-server -p 8088 -w database.json
 ```
 
-## Starting the File Server
-
-Start a new terminal, then run the following commands to start the web server.
-
-```sh
-cd ~/workspace/marketplace
-serve -l 8080
-```
 ## Viewing the Marketplace
 
-Visit http://localhost:8080 and you should see the following HTML output.
+1. Start a new terminal and start the web server.
+2. Open the site in your browser and you should see the following HTML output.
 
 ![](./images/marketplace.png)
 

@@ -37,7 +37,7 @@ Now that your JSON has been created, you can use json-server to start your own N
 json-server -p 8088 -w notes.json
 ```
 
-Once you run that, you will see a happy little guy displayed, along with the URL that json-server is making available. That URL (http://localhost:8080/notes) will be the target of all your `fetch()` calls when you request notes, add notes, and delete notes.
+Once you run that, you will see a happy little guy displayed, along with the URL that json-server is making available. That URL (http://localhost:8088/notes) will be the target of all your `fetch()` calls when you request notes, add notes, and delete notes.
 
 ## Note Form Container
 
@@ -113,7 +113,7 @@ const dispatchStateChangeEvent = () => {
 }
 
 const getNotes = () => {
-    fetch('http://localhost:8080/notes')
+    fetch('http://localhost:8088/notes')
         .then(response => response.json())
         .then(parsedNotes => {
             notes = parsedNotes
@@ -122,7 +122,7 @@ const getNotes = () => {
 }
 
 export const saveNote = note => {
-    fetch('http://localhost:8080/notes', {
+    fetch('http://localhost:8088/notes', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

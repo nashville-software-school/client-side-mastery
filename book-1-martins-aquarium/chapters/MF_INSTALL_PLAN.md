@@ -72,6 +72,14 @@ You should see the following output. Again, if you don't visit an instructor.
 
 As you start to create the files, and then write the correct JavaScript code for this application, tests will start to pass. Make sure you come back to the terminal as you write code to see if your code works the way it is expected.
 
+## Start Your Web Server
+
+1. Keep your current terminal running, and open a new one so that you have two active terminals open.
+1. In the new terminal session you created, make sure you navigate back to the `~/workspace/modern-farm` directory
+1. Then use `cd` to navigate to the `src` sub-directory and start your web server.
+
+![](./images/modern-farm-web-server.gif)
+
 ## Creating a Harvest Plan
 
 There is an existing `plan.js` module in this application that is reponsible for defining 3 rows of crops to be planted. In each row, there are 6 plots of land. Each plot is randomly assigned one of the following types of food to grow.
@@ -83,7 +91,7 @@ There is an existing `plan.js` module in this application that is reponsible for
 1. Sunflower
 1. Soybean
 
-Examine the `plan.js` module. Then, in the `main.js` module, execute the proper function to generate the plan. Store the output of that function into a variable named `yearlyPlan`.
+In the `plan.js` module, there is a `createPlan()` function that is exported. In the `main.js` module, import that function and invoke it. Since that function returns a value, you need to store that value in a variable named `yearlyPlan`.
 
 Remember that to assign what a function returns as a value of a variable, the syntax is...
 

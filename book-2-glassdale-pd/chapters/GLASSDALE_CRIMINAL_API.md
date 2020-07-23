@@ -136,15 +136,17 @@ Your first assignment is to pull all of the data from the API (see above) and di
         */
     }
     ```
-1. Remember to import the `getCriminals()` function into `main.js` and invoke it there. The criminal list can only be rendered once you know you have the data.
+1. Remember to import the `getCriminals()` function into `CriminalList.js` and invoke it there. The criminal list can only be rendered once you know you have the data.
     ```js
-    // main.js
-    import { getCriminals } from './criminals/CriminalProvider.js'
+    import { getCriminals, useCriminals } from './criminals/CriminalProvider.js'
 
-    getCriminals().then(
-        /*
-            Now that you have the data, what
-            component should be rendered?
-        */
-    )
+    export const CriminalList = () => {
+        getCriminals().then(
+            /*
+                Now that you have the data, what
+                component should be rendered?
+            */
+        )
+    }
+
     ```
