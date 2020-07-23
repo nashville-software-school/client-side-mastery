@@ -44,9 +44,13 @@ const render = (noteCollection, criminalCollection) => {
 }
 
 const NoteList = () => {
-    const notes = useNotes()
-    const criminals = useCriminals()
+    getNotes()
+        .then(getCriminals)
+        .then(() => {
+            const notes = useNotes()
+            const criminals = useCriminals()
 
-    render(notes, criminals)
+            render(notes, criminals)
+        })
 }
 ```
