@@ -82,13 +82,19 @@ const eventHub = document.querySelector(you_fill_this_in)
 const contentTarget = document.querySelector(".filters__crime")
 
 // On the event hub, listen for a "change" event.
-eventHub.addEventListener("which event?", event => {
+eventHub.addEventListener("change", event => {
 
     // Only do this if the `crimeSelect` element was changed
-    if (you_fill_this_in) {
+    if (event.target.id === "crimeSelect") {
         // Create custom event. Provide an appropriate name.
+        const customEvent = new CustomEvent("crimeChosen", {
+            details: {
+                crimeThatWasChosen: event.target.value
+            }
+        })
 
         // Dispatch to event hub
+        eventHub.dispatchEvent(customEvent)
     }
 })
 
@@ -118,7 +124,7 @@ const ConvictionSelect = () => {
 const eventHub = document.querySelector(".container")
 
 // Listen for the custom event you dispatched in ConvictionSelect
-eventHub.addEventListener('what custom event did you dispatch?', event => {
+eventHub.addEventListener('what custom event did you dispatch in ConvictionSelect?', event => {
     // You remembered to add the id of the crime to the event detail, right?
     if ("crimeId" in event.detail) {
         /*
