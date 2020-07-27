@@ -4,10 +4,9 @@ As you keep notes during your investigation, you will eventually find that some 
 
 ## Adding Delete Button
 
-In your note component, add the following button HTML.
+In your note HTML representation, add the following button.
 
-
-> #### `glassdale/scripts/notes/Note.js`
+> #### `glassdale/scripts/notes/NoteList.js`
 
 ```js
 <button id="deleteNote--${noteObject.id}">Delete</button>
