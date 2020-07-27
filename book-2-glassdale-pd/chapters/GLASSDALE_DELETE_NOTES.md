@@ -50,7 +50,8 @@ eventHub.addEventListener("click", clickEvent => {
        deleteNote(id).then(
            () => {
                const updatedNotes = useNotes()
-               render(updatedNotes())
+               const criminals = useCriminals()
+               render(updatedNotes, criminals)
            }
        )
     }
