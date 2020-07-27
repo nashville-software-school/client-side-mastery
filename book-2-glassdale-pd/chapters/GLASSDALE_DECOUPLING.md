@@ -1,6 +1,8 @@
 # A Discussion about Loose Coupling
 
-The concept of _coupling_ in complex software is an important factor. Coupling is defined most generally as how many components know about the existence of each other. The higher that number, the higher your overall coupling is in an application. You want that number to be as low as possible.
+The concept of _coupling_ in complex software is an important factor. Coupling is defined most generally as how many components know about the existence of each other and how restrictive the interactions are.
+
+The higher that number, the higher your overall coupling is in an application. You want that number to be as low as possible.
 
 ---
 
@@ -8,7 +10,14 @@ Please watch the [Component Coupling](https://www.youtube.com/watch?v=lUrgx6UIsW
 
 ---
 
-Consider the following example application that lists text messages your receive from your friends.
+## Interactive Workshop
+
+Below, there are instructions for installing an example application on your machine that you can use to play around with JavaScript components and explore the concept of coupled components.
+
+You can also explore this concept by watching two interactive workshops about component coupling on scrimba.com. They cover the example application below.
+
+* [Decoupling Components in JavaScript - Part 1](https://scrimba.com/p/p4Kwxcx/cvwpqVSK)
+* [Decoupling Components in JavaScript - Part 2](https://scrimba.com/p/p4Kwxcx/cmpRQ8Hb)
 
 ## Text Message Reading Application
 
@@ -226,7 +235,7 @@ This creates a new directory in workspace named `message-filter`. Change to that
 
 ```sh
 cd ~/workspace/message-filter
-hs
+serve
 ```
 
 ### Filtering Messages
