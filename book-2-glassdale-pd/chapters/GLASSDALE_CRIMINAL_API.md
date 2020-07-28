@@ -118,7 +118,7 @@ Your first assignment is to pull all of the data from the API (see above) and di
 
 ### Tips
 
-1. Use the `toLocateDateString()` method on the dates to get the date in a more human readable format. Example below.
+1. Use the `toLocaleDateString()` method on the dates to get the date in a more human readable format. Example below.
     ```js
     ${new Date(criminal.incarceration.start).toLocaleDateString('en-US')}
     ```
