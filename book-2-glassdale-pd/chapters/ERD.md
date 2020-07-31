@@ -2,6 +2,19 @@
 
 In this chapter, you will be working with the dbdiagram.io site's diagramming tool, so visit that site and register an account. Then open their diagramming tool.
 
+## Videos to Watch Before Class
+
+### Databases and Normalization
+
+1. [Database Tutorial for Beginners](https://www.youtube.com/watch?v=wR0jg0eQsZA)
+1. [MicroNugget: How to Normalize Databases](https://www.youtube.com/watch?v=upS2HlUj1gI)
+1. [Basic Concept of Database Normalization - Simple Explanation for Beginners](https://www.youtube.com/watch?v=xoTyrdT9SZI)
+
+### Entity Relationship Diagrams
+
+1. [Entity Relationship Diagram (ERD) Tutorial - Part 1](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
+1. [Entity Relationship Diagram (ERD) Tutorial - Part 2](https://www.youtube.com/watch?v=-CuY5ADwn24)
+
 ## Criminals and Notes
 
 In the next couple chapters, you will be learning how to store two objects in your database that are related to each other through what's called a foreign key.
