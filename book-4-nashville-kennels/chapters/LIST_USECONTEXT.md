@@ -34,17 +34,18 @@ In the above component, you will notice a new hook being imported from React - t
 * The `locations` array
 * The `addLocations` function
 
-Right now, all you need is the array, so that's all you will explicitly use.
+To start, you need to import the context object that you created in the provider component so that the Context hook can access the objects that it exposes.
+
+```js
+import { LocationContext } from "./LocationProvider"
+```
+
+Right now, all you need is the array of locations, so that's all you will explicitly use.
 
 ```js
 const { locations } = useContext(LocationContext)
 ```
 
-You need to import the context object that you create in a provider component so that the Context hook can access the objects that it exposes.
-
-```js
-import { LocationContext } from "./LocationProvider"
-```
 
 Lastly, just as you have been doing, you need to use the `.map()` array method to iterate the array of locations and generate HTML for each one by invoking the **`Location`** component function.
 
