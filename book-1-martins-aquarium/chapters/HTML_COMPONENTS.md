@@ -166,7 +166,8 @@ The final touch is to center align the text in each of the interest boxes.
 
 
 ## Additional References
-
+1. [HTML Semantic Tag Cheatsheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
+1. [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 1. [CSS Tricks - BEM](https://css-tricks.com/bem-101/)
 1. [Introduction to BEM - A front-end methodology](https://www.youtube.com/watch?v=IO-4Z32O--c)
 
