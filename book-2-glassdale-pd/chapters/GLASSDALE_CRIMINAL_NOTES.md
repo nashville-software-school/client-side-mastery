@@ -18,6 +18,29 @@ Here is a quick example of how the data will look in your `database.json` file.
 }
 ```
 
+## Changing the Note Form
+
+Since you are going to record the `criminalId` on the note, you need to change the note form. Instead of having a text input field, you need to have a `<select>` element instead. It will contain an `<option>` element for each criminal.
+
+Each option's value attribute must have a unique value. For example...
+
+```html
+<select id="noteForm--criminal" class="criminalSelect">
+    <option value="criminal--${ criminal.id }">${ criminal.name }</option>
+</select>
+```
+
+Then, when you build a note object to be saved to the database, you would use `split("--")` on the value of the dropdown to extract just the criminal id.
+
+So an example object would look like this.
+
+```js
+const noteToSave = {
+    text: noteText,
+    criminalId: selectedCriminalId
+}
+```
+
 ## Multiple Providers
 
 When you have two objects in different collections in your database that are related to each, that means that you need to pull in both collections to a component that wants to render information about both resources. For example, if you want your notes to render with the criminal name, then just using `useNotes()` will not be enough because each note only have the criminal's number on it.
