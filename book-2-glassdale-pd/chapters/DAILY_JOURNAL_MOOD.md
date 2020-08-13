@@ -18,7 +18,7 @@ Until now, you've been storing each entry's mood as a direct property of the ent
 }
 ```
 
-In this chapter, you need to make a collection of moods in your `database.json` file. You choose how many mood objects you want to be available to your application.
+In this chapter, you need to make a collection of moods in your `notes.json` file. You choose how many mood objects you want to be available to your application.
 
 ```json
 "moods": [
