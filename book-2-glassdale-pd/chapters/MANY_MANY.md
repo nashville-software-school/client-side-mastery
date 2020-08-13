@@ -57,6 +57,14 @@ The next step is to define an intersection table to store the relationships betw
 
 You can also see that mom and dad are both assigned to the same `taskId` of 5 - which is game night.
 
+## Family Chores ERD
+
+Here is a visualization of the tables (entities) and their relationships.
+
+![](./images/erd-family-chores.png)
+
+## Family Chores Data
+
 You would add the following `familyChores` property to your JSON file.
 
 > #### `database.json`
@@ -146,33 +154,82 @@ export const getFamilyChores = () => fetch("http://localhost:8088/familychores")
 import { useChores } from "./ChoreProvider.js"
 import { useFamilyMembers } from "./FamilyProvider.js"
 import { useFamilyChores } from "./FamilyChoreProvider.js"
-import FamilyMember from "./FamilyMember.js"
+import { FamilyMember } from "./FamilyMember.js"
 
 const contentTarget = document.querySelector(".family")
 
+/*
+    Component state variables with initial values
+*/
+let chores = []
+let people = []
+let peopleChores = []
+
+
+/*
+    Main component logic function
+*/
 export const FamilyList = () => {
-    const chores = useChores()
-    const people = useFamilyMembers()
-    const peopleChores = useFamilyChores()
+    getChores()
+        .then(getFamilyMembers)
+        .then(getFamilyChores)
+        .then(() => {
+            chores = useChores()
+            people = useFamilyMembers()
+            peopleChores = useFamilyChores()
 
-    const render = () => {
-        contentTarget.innerHTML = people.map(person => {
-            // Find related chore ids
-            let relatedChores = peopleChores.filter(pc => pc.familyMemberId === person.id)
+            render()
+        })
+}
 
-            // Convert the array from relationship objects to chore objects
-            relatedChores = relatedChores.map(rc => {
-                return chores.find(chore => chore.id === rc.choreId)
-            })
+/*
+    Component render function
+*/
+const render = () => {
+    contentTarget.innerHTML = people.map(person => {
+        const relationshipObjects = getChoreRelationships(person)
+        /*
+            End result for family member 1...
 
-            // Get HTML representation of product
-            const html = FamilyMember(person, relatedChores)
+            [
+                { "id": 1, "familyMemberId": 1, "choreId": 4 },
+                { "id": 2, "familyMemberId": 1, "choreId": 5 }
+            ]
+        */
 
-            return html
-        }).join("")
-    }
+        const choreObjects = convertChoreIdsToChores(relationshipObjects)
+        /*
+            End result for family member 1...
 
-    render()
+            [
+                { "id": 4, "task": "Clean the bedrooms" },
+                { "id": 5, "task": "Family game night" }
+            ]
+        */
+
+        // Get HTML representation of product
+        const html = FamilyMember(person, choreObjects)
+
+        return html
+    }).join("")
+}
+
+
+
+// Get corresponding relationship objects for a person
+const getChoreRelationships = (person) => {
+    const relatedChores = peopleChores.filter(pc => pc.familyMemberId === person.id)
+
+    return relatedChores
+}
+
+// Convert array of foreign keys to array of objects
+const convertChoreIdsToChores = (relationships) => {
+    const choreObjects = relationships.map(rc => {
+        return chores.find(chore => chore.id === rc.choreId)
+    })
+
+    return choreObjects
 }
 ```
 
@@ -200,15 +257,9 @@ export const FamilyMember = (person, chores) => {
 > ##### `chores/scripts/main.js`
 
 ```js
-import { getChores } from "./ChoreProvider.js"
-import { getFamilyMembers } from "./FamilyProvider.js"
-import { getFamilyChores } from "./FamilyChoreProvider.js"
 import { FamilyList } from "./FamilyList.js"
 
-getChores()
-    .then(getFamilyMembers)
-    .then(getFamilyChores)
-    .then(FamilyList)
+FamilyList()
 ```
 
 It should render the following output
