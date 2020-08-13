@@ -12,7 +12,7 @@
 | 4 | [Track Aquarium Changes](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |  |  |  |
 | 5 | [Quick Project Creation with Bash Function](./chapters/BASH_HELPERS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |  |  |  |
 | 6 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |  | [HTML Layout and Form](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |  |
-| 👨‍👨‍👦‍👦 | [**_Group Project: Hello, World_**](./chapters/HELLO_WORLD.md) |  |  |  |
+| 👨‍👨‍👦‍👦 | [**_Group Project: Hello, World_**](https://github.com/nashville-software-school/hello-world) |  |  |  |
 | 7 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD.md) |  |  |
 | 8 | [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md) <br/> <sub style="font-size:0.85rem;">#components #objects</sub> | [Harvest Plan](./chapters/MF_INSTALL_PLAN.md) |  | [Doris' Company List](./chapters/DS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#arrays #foreach</sub> |
 | 9 | [Using the Fish Data Provider](./chapters/EXPORTING_FISH.md) <br/> <sub style="font-size:0.85rem;">#components #import #export</sub> | [Creating Seeds](./chapters/MF_SEED_MODULES.md) | [Journal Entry Objects](./chapters/DAILY_JOURNAL_OBJECT_DOM.md) |  |
