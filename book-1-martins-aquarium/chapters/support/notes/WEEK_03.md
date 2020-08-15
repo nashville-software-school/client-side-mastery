@@ -32,11 +32,13 @@ o Team retros at 13:00
 
 ## Day 3
 
+o Assign Clinic assessment via Github Classroom at 9:00
+
 o Student 1:1s start at 9:30
 
 o 1:1s completed at 13:30
 
-* Lab time for the rest of the afternoon.
+* Lab time all day for assessment, one-on-ones, and any other project work they want to do once the assessment is complete.
 
 ## Day 4
 
@@ -61,3 +63,4 @@ o Populating conviction dropdown at 13:30
 * Lab time all day
 
 * Giving students the space to explore the projects, with nothing that HAD to be done, resulted in 4 more Truncheons & Flagons teams forming to create wireframes and dependency graphs, and also define the data structures that are needed for the application.
+* At 14:30, I told them that the next couple chapters are going to introduce a new concept that will take a while to understand _(Custom Events)_ and that I wanted them to watch the Component Coupling YouTube video in chapter 4  before Monday.
