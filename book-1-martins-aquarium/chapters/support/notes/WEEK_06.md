@@ -63,6 +63,7 @@ o Meet their little sibs at 15:30
 o Live code chapter 13 at 9:00
 
 * Live coded chapter 13 first thing, and wow, what a difference it made assigning them to try it first yesterday. Instead of me talking about low level concepts and syntax, they were very active and engaged asking high level questions and offering differing opinions based on how they implemented it.
+* Lab day the rest of the day
 
 ## Day 5
 
