@@ -4,6 +4,8 @@ Your data providers have so far been fairly simple modules. They have a module-s
 
 Here's some example vanilla JavaScript code for a data provider.
 
+> **This is example VanillaJS code. Do not make this file in your app.**
+
 > ##### `scripts/location/LocationProvider.js`
 
 ```js
@@ -74,20 +76,14 @@ export const LocationProvider = (props) => {
     }
 
     /*
-        Load all animals when the component is mounted. Ensure that
-        an empty array is the second argument to avoid infinite loop.
+        You return a context provider which has the
+        `locations` state, the `addLocation` function,
+        and the `getLocation` function as keys. This
+        allows any child elements to access them.
     */
-    useEffect(() => {
-        getLocations()
-    }, [])
-
-    useEffect(() => {
-        console.log("****  LOCATION APPLICATION STATE CHANGED  ****")
-    }, [locations])
-
     return (
         <LocationContext.Provider value={{
-            locations, addLocation
+            locations, addLocation, getLocations
         }}>
             {props.children}
         </LocationContext.Provider>
@@ -189,33 +185,6 @@ Just like in your vanilla provider, you need some functions that perform state t
     }
 ```
 
-### Initial Effect Hook
-
-The Effect hook is used to define what happens when things change. In this component, there are two Effect hooks defined.
-
-The first one runs the `getLocations` function when the provider first loads. Then it never runs `getLocations` again. How would you know this? Well, that second argument is used by developers (i.e. you) to be explicit about when the function should be executed.
-
-If you put a variable inside the array, then any time the value of that variable changes, the function defined as the first argument gets executed.
-
-Since there is nothing in the array, there's no reason for `getLocations` to ever execute again!
-
-```js
-useEffect(() => {
-    getLocations()
-}, [])
-```
-
-### Secondary Effect Hook
-
-With this Effect hook, the function that is defined as the first argument _will_ get executed more than once - every time the value of the `locations` variable changes. Therefore, every time the location state is loaded from the API via `getLocations()`, or a new location is added via `addLocation()`, a message will be output to the developer console in the browser.
-
-```js
-useEffect(() => {
-    console.log("****  LOCATION APPLICATION STATE CHANGED  ****")
-    console.log(locations)
-}, [locations])
-```
-
 ### Returning the Context for Usage
 
 Now you can define what this component will expose to other components. All you really need to worry about understanding in this block of code is the two variables in the value attribute.
@@ -225,7 +194,7 @@ With the following code, other components can access the array of objects being 
 ```jsx
 return (
     <LocationContext.Provider value={{
-        locations, addLocation
+        locations, addLocation, getLocations
     }}>
         {props.children}
     </LocationContext.Provider>

@@ -10,11 +10,10 @@ Make sure you are in your project's root directory. First, we need to install `r
 
 ```sh
 npm i --save react-router-dom
-cd src/components
-touch ApplicationViews.js
-mkdir nav
-touch nav/NavBar.js
-touch nav/NavBar.css
+touch src/components/ApplicationViews.js
+mkdir src/components/nav
+touch src/components/nav/NavBar.js
+touch src/components/nav/NavBar.css
 ```
 
 ## Making Your Components
@@ -132,13 +131,15 @@ As mentioned above, **`Kennel`** is a container component. It renders no HTML it
 ```js
 import React from "react"
 import { Route } from "react-router-dom"
-import NavBar from "./nav/NavBar"
+import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./ApplicationViews"
 import "./Kennel.css"
 
 export const Kennel = () => (
-    <NavBar />
-    <ApplicationViews />
+    <>
+        <NavBar />
+        <ApplicationViews />
+    </>
 )
 ```
 
@@ -147,16 +148,20 @@ Now update your `index.js` by adding a root component of `<Router />` which gets
 > ##### `src/index.js`
 
 ```js
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from "react-router-dom"
-import { Kennel } from "./components/Kennel"
+import { Kennel } from './components/Kennel.js'
+import './index.css'
 
 ReactDOM.render(
-    <Router>
-        <Kennel />
-    </Router>
-    , document.getElementById("root"))
+    <React.StrictMode>
+        <Router>
+            <Kennel />
+        </Router>
+    </React.StrictMode>,
+    document.getElementById('root')
+)
 ```
 
 When all of this code is in place, your location list and animal list should display HTML representations of the data in your database.

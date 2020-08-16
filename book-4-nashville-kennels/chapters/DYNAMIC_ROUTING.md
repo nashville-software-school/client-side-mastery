@@ -96,16 +96,28 @@ export const AnimalDetail = (props) => {
     const { locations } = useContext(LocationContext)
     const { customers } = useContext(CustomerContext)
 
+    const animal = useState({})
+    const customer = useState({})
+    const location = useState({})
+
     /*
         This line of code will be explained in the next
         section of the chapter.
     */
-    const chosenAnimalId = parseInt(props.match.params.animalId, 10)
+    useEffect(() => {
+        const chosenAnimalId = parseInt(props.match.params.animalId, 10)
 
-    // What on Earth is the `|| {}` at the end of these lines of code?
-    const animal = animals.find(a => a.id === chosenAnimalId) || {}
-    const customer = customers.find(c => c.id === animal.customerId) || {}
-    const location = locations.find(l => l.id === animal.locationId) || {}
+        /*
+            What on Earth is the `|| {}` at the end of these
+            lines of code? Remember that find() return either
+            the thing you are looking for, or "undefined".
+        */
+        const animal = animals.find(a => a.id === chosenAnimalId) || {}
+        const customer = customers.find(c => c.id === animal.customerId) || {}
+        const location = locations.find(l => l.id === animal.locationId) || {}
+
+    }, [props.match.params.animalId])
+
 
     return (
         <section className="animal">
