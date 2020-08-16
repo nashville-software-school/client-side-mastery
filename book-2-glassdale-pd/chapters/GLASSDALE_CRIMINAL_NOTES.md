@@ -26,11 +26,11 @@ Each option's value attribute must have a unique value. For example...
 
 ```html
 <select id="noteForm--criminal" class="criminalSelect">
-    <option value="criminal--${ criminal.id }">${ criminal.name }</option>
+    <option value="${ criminal.id }">${ criminal.name }</option>
 </select>
 ```
 
-Then, when you build a note object to be saved to the database, you would use `split("--")` on the value of the dropdown to extract just the criminal id.
+Then, when you build a note object to be saved to the database, you would get the value of the dropdown to determine the criminal id.
 
 So an example object would look like this.
 
