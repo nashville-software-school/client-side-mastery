@@ -5,7 +5,8 @@
 | # | 🐠 <br/> Martin's Aquarium <br/><sub>(_Guided tour_)</sub> | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modern&nbsp;Farm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br/><sub>(_Fundamentals with <br/>automated tests_)</sub> | 📔 <br/> Daily Journal <br/><sub>(_Component application_)</sub> | 📝 <br/> Dotard &amp; Simbleton<br/><sub>(_Array methods_)</sub> |
 |--|--|---|---|---|
 | 🍎 | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) | | | |
-| 💻 | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |  |  |  |
+| 💻 | [Python Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |  |  |  |
+| 💻 | [C# Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_C_SHARP.md) |  |  |  |
 | 1 | [Terminal Basics](./chapters/CLI_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |  |  | |
 | 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |  | [Wireframes](./chapters/DAILY_JOURNAL_WIREFRAME.md) |  |
 | 3 | [Fish in my Aquarium](./chapters/HTML_AQUARIUM.md) <br/> <sub style="font-size:0.85rem;">#html</sub> |  |  |  |

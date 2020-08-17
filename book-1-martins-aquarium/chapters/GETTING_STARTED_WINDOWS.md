@@ -60,13 +60,13 @@ You'll need to install and enable the Windows Subsystem for Linux. You can follo
 
         Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
-1. Restart your computer when prompted to
+1. Restart your computer when prompted to.
 
 ## Install Ubuntu
 
 Once you've completed the above steps **and** restarted your computer, you will [install Ubuntu from the Microsoft Store](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot:overviewtab).
 
-This is needed before you instal the Windows Terminal below.
+This is needed before you install the Windows Terminal below.
 
 ## Install Windows Terminal
 
