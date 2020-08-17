@@ -2,7 +2,7 @@
 
 In this chapter, you are going to allow users to update the treatment history of an animal. The treatment history should be displayed on the animal detail view, not on the card in the animal list.
 
-**WARNING:** Edit is hard. This chapter, and the component that is shown below, is _very complex_ for beginners to comprehend. We will do our best to walk through all the parts and the data flow, but be prepared to feel more confused than usual.
+**WARNING:** Edit is hard. This chapter, and the component that is shown below, is _very complex_ for beginners to comprehend. We will do our best to walk through all the parts and the data flow, but be prepared to feel more confused than usual. There are several new concepts thrown at you.
 
 ## Controlled Components
 
@@ -13,7 +13,7 @@ In this chapter, you are going to allow users to update the treatment history of
 
 ## Implementation
 
-### Update Data
+### Update Existing Data
 
 Add a new property `treatment` to each of the animals in your database. The value should be just an empty string for now.
 
@@ -25,6 +25,23 @@ Add a new property `treatment` to each of the animals in your database. The valu
     "customerId": 3,
     "locationId": 1,
     "treatment": ""
+}
+```
+
+### Add PUT Method to Provider
+
+Add the following function to your **`AnimalProvider`** component.
+
+```js
+const updateAnimal = animal => {
+    return fetch(`http://localhost:8088/animals/${animal.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(animal)
+    })
+        .then(getAnimals)
 }
 ```
 
@@ -65,7 +82,7 @@ import { LocationContext } from "../location/LocationProvider"
 
 export const AnimalForm = (props) => {
     // Use the required context providers for data
-    const { locations } = useContext(LocationContext)
+    const { locations, getLocations } = useContext(LocationContext)
     const { addAnimal, animals, updateAnimal, getAnimals } = useContext(AnimalContext)
 
     // Component state
@@ -102,9 +119,10 @@ export const AnimalForm = (props) => {
     // Get animals from API when component initializes
     useEffect(() => {
         getAnimals()
+        getLocations()
     }, [])
 
-    // Once providers state is updated, determine the animal (if edit)
+    // Once provider state is updated, determine the animal (if edit)
     useEffect(() => {
         getAnimalInEditMode()
     }, [animals])
