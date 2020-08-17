@@ -13,6 +13,8 @@ In this chapter, you are going to allow users to update the treatment history of
 
 ## Implementation
 
+### Update Data
+
 Add a new property `treatment` to each of the animals in your database. The value should be just an empty string for now.
 
 ```json
@@ -26,7 +28,9 @@ Add a new property `treatment` to each of the animals in your database. The valu
 }
 ```
 
-Create a new button in the **`AnimalDetails`** component that redirects the user to the `/animals/edit/n` route so that the animal's details can be edited.
+### Edit Button
+
+Create a new button in the **`AnimalDetails`** component that redirects the user to the `/animals/edit/{id}` route so that the animal's details can be edited.
 
 ```jsx
 <div className="animal__owner">Customer: {customer.name}</div>
@@ -36,7 +40,22 @@ Create a new button in the **`AnimalDetails`** component that redirects the user
 }}>Edit</button>
 ```
 
-Replace the current contents of the **`AnimalForm`** component with the following code.
+### Editing Route
+
+Add a new route in **`ApplicationViews`** beneath the animal detail route, for editing an animal.
+
+```jsx
+<Route path="/animals/:animalId(\d+)" render={
+    props => <AnimalDetails {...props} />
+} />
+<Route path="/animals/edit/:animalId(\d+)" render={
+    props => <AnimalForm {...props} />
+} />
+```
+
+### Edit Form Component
+
+Replace the current contents of the **`AnimalForm`** component with the following code. You will walk through all of this code with your instruction team. It won't make sense for a while. It just takes time, practice, and patience.
 
 ```js
 import React, { useContext, useState, useEffect } from "react"
