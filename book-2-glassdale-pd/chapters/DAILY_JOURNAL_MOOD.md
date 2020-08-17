@@ -84,7 +84,7 @@ Then, in the form component, you need to use the `map()` array function to conve
 ${
     allMoods.map(
         (mood) => {
-            return `<option id="mood--${ mood.id }">${ mood.label }</option>`
+            return `<option value="${ mood.id }">${ mood.label }</option>`
         }
     ).join("")
 }
