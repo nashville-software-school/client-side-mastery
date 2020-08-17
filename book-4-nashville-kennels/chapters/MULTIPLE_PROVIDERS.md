@@ -75,6 +75,17 @@ animals.map(animal => {
 })
 ```
 
+Again, here's what is actually sent to the **`Animal`** component.
+
+```js
+{
+    location: { id: 2, name: "Nashville North", etc... },
+    customer: { id: 2, name: "Madi Peper", etc... },
+    animal: { id: 1, name: "Snickers", etc...},
+    key: 1
+}
+```
+
 ## Display Full Names
 
 The last step is to extract the new `customer` and `animal` keys on the object passed to the **`Animal`** component.

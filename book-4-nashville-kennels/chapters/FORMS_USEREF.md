@@ -78,14 +78,22 @@ When you hire an employee, you immediately want to assign that employee to a loc
 > ##### `src/components/employee/EmployeeForm.js`
 
 ```js
-import React, { useContext, useRef } from "react"
+import React, { useContext, useRef, useEffect } from "react"
 import { EmployeeContext } from "./EmployeeProvider"
 import { LocationContext } from "../location/LocationProvider"
 import "./Employees.css"
 
 export const EmployeeForm = (props) => {
     const { addEmployee } = useContext(EmployeeContext)
-    const { locations } = useContext(LocationContext)
+    const { locations, getLocations } = useContext(LocationContext)
+
+    /*
+        Get the locations from the API after component
+        initialization is complete
+    */
+    useEffect(() => {
+        getLocations()
+    }, [])
 
 
     return (
@@ -178,14 +186,14 @@ document.querySelector("#employeeName").value
 
 You are going to create a reference object and then use the Ref hook to get and set the value of the input fields.
 
-First, add new new reference objects and provide default values. The default value is the value that you put in the parenthesis for `useRef()`.
+First, add new new reference objects and provide default values. The default value is the value that you put in the parenthesis for `useRef()`. Since you are going to be using these references to access DOM elements, the initial value is null.
 
 ```js
 export const EmployeeForm = (props) => {
     const { addEmployee } = useContext(EmployeeContext)
     const { locations } = useContext(LocationContext)
-    const employeeName = useRef("")
-    const employeeLocation = useRef(0)
+    const employeeName = useRef(null)
+    const employeeLocation = useRef(null)
 ```
 
 Then create a `ref` attribute on the employee name field.
@@ -194,7 +202,7 @@ Then create a `ref` attribute on the employee name field.
 <input
     type="text"
     id="employeeName"
-    ref={employeeName}
+    ref={ employeeName }
     required
     autoFocus
     className="form-control"
@@ -208,7 +216,7 @@ Then create one for the location dropdown.
 <select
     defaultValue=""
     name="location"
-    ref={employeeLocation}
+    ref={ employeeLocation }
     id="employeeLocation"
     className="form-control"
 >

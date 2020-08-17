@@ -92,30 +92,43 @@ import { AnimalContext } from "./AnimalProvider"
 import "./Animals.css"
 
 export const AnimalDetail = (props) => {
-    const { animals } = useContext(AnimalContext)
-    const { locations } = useContext(LocationContext)
-    const { customers } = useContext(CustomerContext)
 
-    const animal = useState({})
-    const customer = useState({})
-    const location = useState({})
+    // Context providers needed for the data to be displayed
+    const { animals, getAnimals } = useContext(AnimalContext)
+    const { locations, getLocations } = useContext(LocationContext)
+    const { customers, getCustomers } = useContext(CustomerContext)
 
-    /*
-        This line of code will be explained in the next
-        section of the chapter.
-    */
+
+    // Component state variables
+    const [ animal, setAnimal ] = useState({})
+    const [ customer, setCustomer ] = useState({})
+    const [ location, setLocation ] = useState({})
+    const [ animalId, setId ] = useState({})
+
+    // Effects hooks to run after state changes
     useEffect(() => {
-        const chosenAnimalId = parseInt(props.match.params.animalId, 10)
-
-        /*
-            What on Earth is the `|| {}` at the end of these
-            lines of code? Remember that find() return either
-            the thing you are looking for, or "undefined".
-        */
         const animal = animals.find(a => a.id === chosenAnimalId) || {}
-        const customer = customers.find(c => c.id === animal.customerId) || {}
-        const location = locations.find(l => l.id === animal.locationId) || {}
+        setAnimal(animal)
+    }, [animals])
 
+    useEffect(() => {
+        const location = locations.find(l => l.id === animal.locationId) || {}
+        setLocation(location)
+    }, [locations])
+
+    useEffect(() => {
+        const customer = customers.find(c => c.id === animal.customerId) || {}
+        setCustomer(customer)
+    }, [customers])
+
+    useEffect(() => {
+        console.log("AnimalDetail: animalId from URL detected")
+        const chosenAnimalId = parseInt(props.match.params.animalId)
+        setId(chosenAnimalId)
+
+        getAnimals()
+        getCustomers()
+        getLocations()
     }, [props.match.params.animalId])
 
 
