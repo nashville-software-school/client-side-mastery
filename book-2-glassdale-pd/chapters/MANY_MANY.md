@@ -151,9 +151,9 @@ export const getFamilyChores = () => fetch("http://localhost:8088/familychores")
 > ##### `chores/scripts/FamilyList.js`
 
 ```js
-import { useChores } from "./ChoreProvider.js"
-import { useFamilyMembers } from "./FamilyProvider.js"
-import { useFamilyChores } from "./FamilyChoreProvider.js"
+import { getChores, useChores } from "./ChoreProvider.js"
+import { getFamilyMembers, useFamilyMembers } from "./FamilyProvider.js"
+import { getFamilyChores, useFamilyChores } from "./FamilyChoreProvider.js"
 import { FamilyMember } from "./FamilyMember.js"
 
 const contentTarget = document.querySelector(".family")
