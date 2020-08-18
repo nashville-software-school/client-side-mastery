@@ -174,6 +174,12 @@ export const FamilyList = () => {
         .then(getFamilyMembers)
         .then(getFamilyChores)
         .then(() => {
+            /*
+                Update component state, which comes from application
+                state, which came from API state.
+
+                API -> Application -> Component
+            */
             chores = useChores()
             people = useFamilyMembers()
             peopleChores = useFamilyChores()
