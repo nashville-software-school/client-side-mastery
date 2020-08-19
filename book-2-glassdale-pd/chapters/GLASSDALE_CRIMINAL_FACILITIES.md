@@ -43,7 +43,7 @@ export const useCriminalFacilities = () => {
 }
 
 export const getCriminalFacilities = () => {
-    return fetch("http://localhost:8088/criminalFacilities")
+    return fetch("http://criminals.glassdale.us/criminalFacilities")
         .then(response => response.json())
         .then(apiData => {
             criminalFacilities = apiData
@@ -138,5 +138,3 @@ export const Criminal = (criminalObject, facilities) => {
     `
 }
 ```
-
-
