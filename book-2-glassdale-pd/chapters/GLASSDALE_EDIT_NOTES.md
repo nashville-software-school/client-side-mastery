@@ -6,7 +6,7 @@ Misspelled words. Incorrect sentences. Using the wrong name. Oour capacity for e
 
 ## Editing Form
 
-1. Create a **`JournalForm`** component. It should accept a note object as a parameter. It should define an HTML form with two fields.
+1. Modify the **`NoteForm`** component. It should accept a note object as a parameter. It should define an HTML form with two fields.
     * A hidden input field to hold the `id` of the note.
     * A text field to hold the text of the note.
 1. It should also have a button to save.
