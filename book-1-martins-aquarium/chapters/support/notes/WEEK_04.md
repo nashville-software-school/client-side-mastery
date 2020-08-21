@@ -12,6 +12,10 @@ o Lab time all afternoon
 * Students all initially went into their own rooms for quiet, focused time to play around with the code.
 * By mid-afternoon, small groups started to form again to discuss and share knowledge.
 
+### Session Video
+
+[Introduction to Custom Events](https://drive.google.com/file/d/1Tt40TL9gxZmecEWkVMxAHkHXVjrTupV8/view?usp=sharing)
+
 ## Day 2
 
 o Make students focus on State Fair at 9:30
@@ -25,6 +29,10 @@ o Arresting officers at 14:45
 
 ![](./images/event-flow-diagram-officers.png)
 
+### Session Video
+
+[Using custom events for Officer select](https://drive.google.com/file/d/1W_3AV5QkftaZEgBr6Xz4mTRv6E9qxzOe/view?usp=sharing)
+
 ## Day 3
 
 o Notes API chapter at 9:15
@@ -34,6 +42,10 @@ o Notes API chapter at 9:15
 
 ![](./images/event-flow-diagram-notes-api.png)
 
+### Session Video
+
+[Notes API and json-server](https://drive.google.com/file/d/1CnEUF1PORCSh8hMC1_ba21nEnLebyCmi/view?usp=sharing)
+
 ## Day 4
 
 o Implementation of `noteStateChanged` custom event at 13:00
@@ -41,6 +53,8 @@ o Implementation of `noteStateChanged` custom event at 13:00
 * Lab time all morning
 * After lunch, I live-coded how to use the `noteStateChanged` custom event that is dispatched by the data provider so that every time a new note is entered by a detective, it immediately shows up the notes list component.
 * At 14:30, we popped into every breakout room and had a quick check in with everyone.
+
+[Data providers dispatching state change events](https://drive.google.com/file/d/1U6xQB3JS-2MOWHW_XZkPfcweo1lAqBmv/view?usp=sharing)
 
 ## Day 5
 

@@ -23,13 +23,17 @@ o Automating Martin's Aquarium at 9:45
 * At 14:00, we completed all the code, pushed it up, and I told them that the rest of the day was theirs to get their own automated aquarium site working, using ours as a reference.
 * Told them that they could now work on Modern Farm, Daily Journal, and Dotard & Simbleton.
 
+### Session Video
+
+[Automating Marin's Aquarium with JavaScript](https://drive.google.com/file/d/16ISZVX4NcSPSQhHf3IUwuwkyZ4oj4GLb/view?usp=sharing)
+
 ## Day 3
 
 o Lab time at 9:00
 
 o Show debugger at 13:30
 
-* It was a lab day, with a brief interlude at 13:30 to show them the basics of using the Chrome debugger. This took ~35 minutes.
+* It was a lab day, with a brief interlude at 13:30 to show them the basics of using the Chrome debugger. This took ~35 minutes. I introduced all kinds of bugs that beginner's will often make with their code, then showed them how to use the debugger to track each of them down.
 * Lab time the rest of the afternoon.
 
 ## Day 4

@@ -58,6 +58,10 @@ o Populating conviction dropdown at 13:30
 
 * Going to leave tomorrow as a lab day to encourage teams to form for Truncheons & Flagons. One team already formed today.
 
+### Session Video
+
+[Introduction to Glassdale data using APIs, fetch, and then](https://drive.google.com/file/d/1993yXcrqhGGkDygUoDsutq-OR8hsHEcm/view?usp=sharing)
+
 ## Day 5
 
 * Lab time all day

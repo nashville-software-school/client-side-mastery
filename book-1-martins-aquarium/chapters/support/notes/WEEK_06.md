@@ -57,6 +57,9 @@ o Meet their little sibs at 15:30
     1. It puts them in control of the coversation, which lowers their walls and allows them to be honest and candid.
     2. It lets them know that it truly was a self-assessment and was not being used by me as a tool for judgement. This is a long play you are setting up by doing this. Students will eventually feel that their learning is 100% under their control, and that the assessments are not to be feared, but rather valuable tools for them to utilize.
 
+### Session Video
+
+[Introduction to ERDs and data relationships](https://drive.google.com/file/d/1MChmnOj2JjXaAyZEZLNu7QDqaJBj7zf7/view?usp=sharing)
 
 ## Day 4
 
@@ -64,6 +67,10 @@ o Live code chapter 13 at 9:00
 
 * Live coded chapter 13 first thing, and wow, what a difference it made assigning them to try it first yesterday. Instead of me talking about low level concepts and syntax, they were very active and engaged asking high level questions and offering differing opinions based on how they implemented it.
 * Lab day the rest of the day
+
+### Session Video
+
+[Glassdale adding criminals to notes](https://drive.google.com/file/d/14rqvBqyxqSKcA7qce9C3EGRkbcL8_Tnc/view?usp=sharing)
 
 ## Day 5
 

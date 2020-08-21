@@ -31,6 +31,10 @@ o Start wireframing Martin's Aquarium at 13:30
 * Before I pushed it up, I talked about git and Github. Showed them the command for branching, adding, committing, pushing up, and how to create pull requests. This took about 20 minutes.
 * Then I sent them off on lab time to build their own Martin's Aquarium with mine as a reference.
 
+### Session Video
+
+[Designing Martin's Aquarium with sketchboard](https://drive.google.com/file/d/15uvqr5zl7y7drT8wsxZH6S8UCdqEg5Ps/view?usp=sharing)
+
 ## Day 4
 
 o Lab time at 9:00 until 11:00
