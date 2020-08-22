@@ -20,11 +20,11 @@ Make the following changes to you `database.json` file.
         {
             "id": 1,
             "subject": "API"
-        }
+        },
         {
             "id": 2,
             "subject": "components"
-        }
+        },
         {
             "id": 3,
             "subject": "fetch"
