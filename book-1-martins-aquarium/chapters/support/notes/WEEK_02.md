@@ -51,3 +51,11 @@ o Fundamental Workshop at 9:30
 * Told students to push up whatever they had done so far to Github, and to be back in the main session at 9:30 for a Fundamental Workshop.
 * Kristen and James took turns showing how to use the Component Triad to get data from a provider component into the list component, and use the converter component to change the objects into HTML. It was highly interactive and both of them prompted the students at every opportunity to tell them what to type.
 * Lab time the rest of the day.
+
+---
+
+> **Personal Note:** My constant repetition of several key phrases/questions throughout the first 6 weeks are paying off. Students are immediately responding correctly to these. I recommend you start a similar strategy at this point in the course.
+> * If a function returns a value, what should you do with that value?
+> * Which array method is used to convert the items in the array to something else?
+> * If I want to find all the items in an array that pass a certain condition, which method should I use?
+> * If I want to find a single item in an array that passes a conditions, which method should I use?
