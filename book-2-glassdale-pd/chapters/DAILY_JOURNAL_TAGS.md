@@ -10,6 +10,20 @@ This is a many-to-many relationship.
 
 This is the last feature of Daily Journal, so you are going to be tasked with implementing this feature with minimal helper code shown at the end of the chapter.
 
+## Goal
+
+Implementing tagging is a deep rabbit hole, so we want to set expectations of what you need to focus on for this chapter.
+
+When you save a new journal entry, the tags should be created and applied in the database. Then, when you refresh the browser, you should have the tags displayed on the new journal entry.
+
+Things we **do not** expect you to implement:
+
+1. Tags showing up immediately when list re-renders. Only looking for them to appear on refresh.
+1. Deleting related tags when you delete a journal entry.
+1. Updating the tags when you edit an entry.
+
+All three of those features are very challenging and lead down a path to using [Promise.all()](https://www.youtube.com/watch?v=SyL1thdXmlE) which is not part of your base learning experience. If you are curious about it, then by all means you should expand your learning and try it out, but it is advanced, so be prepared for lots of fails before success.
+
 ## Data Structures
 
 Make the following changes to you `database.json` file.
