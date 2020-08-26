@@ -104,7 +104,6 @@ export const AnimalList = ({ history }) => {
 }
 ```
 
-
 ## Update ApplicationViews to Include Search
 
 Now, when the application URL is http://localhost:3000/animals, you will render both the animal search component **and** animal list component.

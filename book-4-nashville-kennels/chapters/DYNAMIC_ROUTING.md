@@ -2,145 +2,67 @@
 
 In this chapter, you will be learning how to render individual resources. So far you are listing all employees, all animals, all customers, and all locations. By the end of the chapter, you will be able to click on one of the cards in the list view and only view the details of a specific item.
 
-You are going to start with animals.
+You are going to start with employees. You are going to change the list of employees to display the employee name, as a hyperlink, and then have a separate component for displaying more details.
 
-## Refactor Animal Card
+## New Employee Details Component
 
-### Display Minimal Data
+With the code below, you will create a new component in the employee directory which will be responsible for showing all the details of the employee.
 
-Remove the location name and customer name from being displayed in the **`Animal`** component. You are going to author a new component to display those details. You want the cards in your list view to contain only the information the user needs to find the animal she is looking for. Make sure that you remove the `location` and `customer` keys from your argument list.
+Note that you are using the `useEffect()` hook to listen for state change event dispatch for animals, employees, and locations. When the data is finally pulled into application state from the API, the animal and location that is related to the current employee is determined with `.find()` methods.
 
-Then, you will make the name of the Animal a hyperlink. When the user clicks on the link, a view of that individual animal will be presented with all of the details. Use the `<Link>` component provided by React.
+> ##### `/src/components/employee/EmployeeDetail.js`
 
-The link component's `to` attribute must include a route parameter.
-
-* To view all animals, you go to the `/animals` route.
-* To view the animal with an id of 3, you go to the `/animals/3` route.
-
-```js
-import React from "react"
-import "./Animals.css"
-import { Link } from "react-router-dom"
-
-export const Animal = ({ animal }) => (
-    <section className="animal">
-        <h3 className="animal__name">
-            <Link to={`/animals/${animal.id}`}>
-                { animal.name }
-            </Link>
-        </h3>
-        <div className="animal__breed">{ animal.breed }</div>
-    </section>
-)
-```
-
-![](./images/minimal-list-items.png)
-
-## Refactor Animal List
-
-Since the specific details of an animals are no longer being displayed in the list view, you can remove the import of the customer and location data.
-
-> ##### `/src/components/animal/AnimalList.js`
-
-```js
-// Remove these
+```jsx
+import React, { useState, useEffect, useContext } from "react"
+import { AnimalContext } from "../animal/AnimalProvider"
 import { LocationContext } from "../location/LocationProvider"
-import { CustomerContext } from "../customer/CustomerProvider"
-```
+import { EmployeeContext } from "./EmployeeProvider"
+import "./Employees.css"
 
-Then remove the context hooks to get the data arrays.
 
-> ##### `/src/components/animal/AnimalList.js`
-
-```js
-// Remove these
-const { locations } = useContext(LocationContext)
-const { customers } = useContext(CustomerContext)
-```
-
-Remove the code that joined the data.
-
-> ##### `/src/components/animal/AnimalList.js`
-
-```js
-// Remove these
-const owner = customers.find(c => c.id === animal.customerId)
-const clinic = locations.find(l => l.id === animal.locationId)
-```
-
-And remove the properties that you were sending to the **`Animal`** component. It should look like this now.
-
-> ##### `/src/components/animal/AnimalList.js`
-
-```js
-animals.map(animal => {
-    return <Animal key={animal.id} animal={animal} />
-})
-```
-
-## New Animal Details Component
-
-Create a new component in the animal directory which will be responsible for showing all the details of the animal.
-
-> ##### `/src/components/animal/AnimalDetail.js`
-
-```js
-import React, { useContext } from "react"
-import { CustomerContext } from "../customer/CustomerProvider"
-import { LocationContext } from "../location/LocationProvider"
-import { AnimalContext } from "./AnimalProvider"
-import "./Animals.css"
-
-export const AnimalDetail = (props) => {
-
-    // Context providers needed for the data to be displayed
+export const EmployeeDetail = (props) => {
     const { animals, getAnimals } = useContext(AnimalContext)
     const { locations, getLocations } = useContext(LocationContext)
-    const { customers, getCustomers } = useContext(CustomerContext)
+    const { employees, getEmployees } = useContext(EmployeeContext)
 
+    const [animal, setAnimal] = useState({})
+    const [employee, setEmployee] = useState({})
+    const [location, setLocation] = useState({})
 
-    // Component state variables
-    const [ animal, setAnimal ] = useState({})
-    const [ customer, setCustomer ] = useState({})
-    const [ location, setLocation ] = useState({})
-    const [ animalId, setId ] = useState({})
-
-    // Effects hooks to run after state changes
     useEffect(() => {
-        const animal = animals.find(a => a.id === chosenAnimalId) || {}
+        getEmployees()
+            .then(getAnimals)
+            .then(getLocations)
+    }, [])
+
+    useEffect(() => {
+        const animal = animals.find(a => a.id === employee.animalId) || {}
         setAnimal(animal)
     }, [animals])
 
     useEffect(() => {
-        const location = locations.find(l => l.id === animal.locationId) || {}
+        const employee = employees.find(e => e.id === parseInt(props.match.params.employeeId)) || {}
+        setEmployee(employee)
+    }, [employees])
+
+    useEffect(() => {
+        const location = locations.find(l => l.id === employee.locationId) || {}
         setLocation(location)
     }, [locations])
 
-    useEffect(() => {
-        const customer = customers.find(c => c.id === animal.customerId) || {}
-        setCustomer(customer)
-    }, [customers])
-
-    useEffect(() => {
-        console.log("AnimalDetail: animalId from URL detected")
-        const chosenAnimalId = parseInt(props.match.params.animalId)
-        setId(chosenAnimalId)
-
-        getAnimals()
-        getCustomers()
-        getLocations()
-    }, [props.match.params.animalId])
-
-
     return (
-        <section className="animal">
-            <h3 className="animal__name">{ animal.name }</h3>
-            <div className="animal__breed">{ animal.breed }</div>
-            <div className="animal__location">Location: { location.name }</div>
-            <div className="animal__owner">Customer: { customer.name }</div>
+        <section className="employee">
+            <h3 className="employee__name">{employee.name}</h3>
+            <div>Currently working at { location.name }</div>
+            <div>
+                {
+                (employee.animalId === null)
+                    ? "Not assigned to an animal"
+                    : `Currently taking care of ${animal.name}`
+                }
+            </div>
         </section>
     )
-
 }
 ```
 
@@ -148,40 +70,87 @@ export const AnimalDetail = (props) => {
 
 A dynamic route component is one that matches a pattern, instead of a static route.
 
+Notice the route that renders **`EmployeeDetail`**. It has `:employeeId(/d+)` at the end of the URL. What that does is handle if the URL is http://locahost:3000/employees/3, the value of 3 will be stored in a variable named `employeeId`. That variable can then be used inside **`EmployeeDetail`**.
+
+Look back at the code you put in the detail component.
+
+See the `props.match.params.employeeId`?
+
+That's how you access the number 3 inside the component. It's part of the routing package you installed. Don't worry, that one's tricky. We'll help you remember it.
+
 > ##### `/src/components/ApplicationViews.js`
 
-```js
-<Route path="/animals/:animalId(\d+)" render={
-    props => <AnimalDetails {...props} />
-} />
+```jsx
+<EmployeeProvider>
+    <LocationProvider>
+        <AnimalProvider>
+            <Route path="/employees/create" render={
+                props => <EmployeeForm {...props} />
+            } />
+
+            {/* New route for showing employee details */}
+            <Route path="/employees/:employeeId(\d+)" render={
+                props => <EmployeeDetail {...props} />
+            } />
+        </AnimalProvider>
+    </LocationProvider>
+</EmployeeProvider>
 ```
 
 This route will match any of the following URIs in the browser.
 
-* `http://localhost:3000/animals/1`
-* `http://localhost:3000/animals/42`
-* `http://localhost:3000/animals/8`
-* `http://localhost:3000/animals/70021`
-* `http://localhost:3000/animals/319`
+* `http://localhost:3000/employees/1`
+* `http://localhost:3000/employees/42`
+* `http://localhost:3000/employees/8`
+* `http://localhost:3000/employees/70021`
+* `http://localhost:3000/employees/319`
 
-Notice the `:animalId` in the `path` attribute? What that does is capture the 1, 42, 8, 70021, 319, or **whatever number** is at the end of the route. The **`AnimalDetails`** component is the child component of this route, so by using this technique, that component now can access the number with the following property.
+## Refactor Employee List
 
-```js
-const chosenAnimalId = props.match.params.animalId
+On the **`EmployeeList`** component, each employee's name will be a hyperlink that, when clicked, will show further details about the employee.
+
+Note in the new code that the `<Link>` component is being imported from the `react-router-dom` package, and then is used to make the employee name a hyperlink.
+
+> ##### `/src/components/employee/EmployeeList.js`
+
+```jsx
+import React, { useContext, useEffect } from "react"
+import { EmployeeContext } from "./EmployeeProvider"
+import { Link } from "react-router-dom"
+import "./Employees.css"
+
+export const EmployeeList = props => {
+    const { employees, getEmployees } = useContext(EmployeeContext)
+
+    useEffect(() => {
+        getEmployees()
+    }, [])
+
+    return (
+        <div className="employees">
+            <h1>Employees</h1>
+
+            <button onClick={() => props.history.push("/employees/create")}>
+                Add Employee
+            </button>
+
+            <article className="employeeList">
+                {
+                    employees.map(employee => {
+                        return <Link key={employee.id} to={`/employees/${employee.id}`}>
+                            <h3>{employee.name}</h3>
+                        </Link>
+                    })
+                }
+            </article>
+        </div>
+    )
+}
 ```
 
 ## Try it Out
 
 Now when you click on an animal's name in the list view, you should see your new animal detail view.
 
-![image of animal detail view](./images/animal-details.gif)
+![image of animal detail view](./images/employee-list-and-details.gif)
 
-## Practice: Locations
-
-Your next task is to refactor your location components. On your location list, display the location name, the number of animals currently being treated, and the number of employees.
-
-When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being treated, and the names of all employees working there.
-
-> **Tip:** You don't need all of the fancy styling like you see below. Just get the information displayed.
-
-![animation of location list and location details](./images/location-details.gif)
