@@ -44,12 +44,16 @@ const FilterBar = () => {
 export const MoodFilter = () => {
     return `
         <fieldset class="fieldset">
-            <label for="journalDate">Mood for the day</label>
-            <select name="mood" id="mood">
-                <option value="sad">Sad</option>
-                <option value="ok">Ok</option>
-                <option value="happy">Happy</option>
-            </select>
+            <legend>Filter Journal Entries by Mood</legend>
+            ${
+                allMoods.map(
+                    (mood) => {
+                        return `<input type="radio" name="moodFilter" value="${ mood.id }"/>
+                        <label for="moodFilter--happy">${ mood.label }</label>
+                        `
+                    }
+                ).join("")
+            }
         </fieldset>
         `
 }
@@ -61,20 +65,22 @@ Each one of the radio buttons needs to have a click event listener attached to i
 
 ![journal entries filtered by mood when radio button is clicked](./images/E0uirNa8Af.gif)
 
-Now, you could attach the event listeners to each individually. You could also use the `document.getElementsByName()` method, and a `forEach()` to add them more dynamically.
+A radio button group acts just like a `<select>` element. When the user clicks on one of the options, it generates a "change" event which you can capture on the event hub.
 
-To get the selected mood, you need to look at the value property of the radio button that was clicked. When you click on any DOM element, that element becomes the `target` of the click event. You can access the element, and its value with the code below.
+Then you can check the name property of the event target to make sure the logic only runs when the user has selected a mood.
+
 
 ```js
-eventHub.addEventListener("click", event => {
-    if (event.target.name === "moodFilter") {
-        const mood = event.target.value
+eventHub.addEventListener("change", e => {
+    if (e.target.name === "moodFilter") {
+
     }
-})
+}
 ```
 
 ## Filtering the Journal Entries
 
-Once you have successfully retrieved the value of `ok`, `happy`, or `sad` based on which radio button was clicked, you need to filter all of the journal entries. The most straightforward way of doing this is to invoke the `useEntries()` method from your **`EntryProvider`** component. Then use the `filter()` array method to extract only the entries that have the same mood as the one the user clicked on.
+Once you have successfully retrieved the value of selected mood, you need to filter all of the journal entries.
 
-Once you have filtered the entries by mood, invoke the function that renders the HTML representations to the DOM and pass it the filtered array of entries.
+1. The mood filter component needs to broadcast a message that a mood was chosen, and the event needs to specify which mood was chosen.
+1. The entry list should react to that event and display only entries that have the matching mood.

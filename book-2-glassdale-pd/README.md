@@ -19,9 +19,9 @@
 | 12 | [One to Many Relationships](./chapters/ONE_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> | [Full Package Ticket](./chapters/SF_PACKAGE_TICKET.md) |  | [Adding Players](./chapters/TF_PLAYER_FORM.md) |
 | 13 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) <br/> <sub style="font-size:0.85rem;">#user-input #fetch #POST</sub> |  | [Recording your Mood](./chapters/DAILY_JOURNAL_MOOD.md) |  |
 | 14 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) <br/> <sub style="font-size:0.85rem;">#fetch #DELETE #custom-events</sub> |  | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) | [Selecting Teams for Game](./chapters/TF_CHOOSE_TEAMS.md) |
-| 15 | [Many to Many Relationships](./chapters/MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> | [Total Tickets Challenge](./chapters/SF_CUSTOMER_COUNT.md) |  | [Recording Scores](./chapters/TF_ROUND_SCORES.md) |
+| 15 | [Many to Many Relationships](./chapters/MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> | [Total Tickets Challenge](./chapters/SF_CUSTOMER_COUNT.md) | [Filtering by Mood](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) | [Recording Scores](./chapters/TF_ROUND_SCORES.md) |
 | 16 | [Multiple Facilities](./chapters/GLASSDALE_CRIMINAL_FACILITIES.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |  |
-| 17 | [Facility List](./chapters/GLASSDALE_FACILITY_LIST.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  | [Tagging Journal Entries](./chapters/DAILY_JOURNAL_TAGS.md) |  |
+| 17 | [Facility List](./chapters/GLASSDALE_FACILITY_LIST.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  | [Challenge: Tagging Journal Entries](./chapters/DAILY_JOURNAL_TAGS.md) |  |
 | 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |  |
 
 ## Supplementary Chapters
