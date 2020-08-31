@@ -58,6 +58,7 @@ Here is a simple example of a React component. Please read through the following
 
 ```jsx
 import React from "react"
+import "./Kennel.css"
 
 export const Kennel = () => (
     <>
@@ -86,7 +87,12 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Kennel } from "./components/Kennel"
 
-ReactDOM.render(<Kennel />, document.getElementById("root"))
+ReactDOM.render(
+  <React.StrictMode>
+    <Kennel />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 ```
 
 ### Child Component
@@ -99,6 +105,7 @@ Therefore, I'm going to create another component for displaying an animal. Consi
 
 ```jsx
 import React from "react"
+import "./Animal.css"
 
 export const Animal = () => (
     <section className="animal">

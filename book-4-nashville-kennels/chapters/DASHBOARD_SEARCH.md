@@ -9,13 +9,13 @@ You are going to implement a search feature where you can type in letters into a
 Right now, the only state in your animal provider is **all** of the animals. The array of animals is currently being stored in the `animals` state variable.
 
 ```js
-const [animals, setAnimals] = useState([])
+const [ animals, setAnimals ] = useState([])
 ```
 
 Since the goal of this code is to search the animals for specific ones, and what the user is going to type into a search field is considered state, then the animal provider is a place to store that state. Add the state variable below to your animal provider.
 
 ```js
-const [searchTerms, setTerms] = useState("")
+const [ searchTerms, setTerms ] = useState("")
 ```
 
 ## Create a Search Bar Component
@@ -103,7 +103,6 @@ export const AnimalList = ({ history }) => {
     )
 }
 ```
-
 
 ## Update ApplicationViews to Include Search
 

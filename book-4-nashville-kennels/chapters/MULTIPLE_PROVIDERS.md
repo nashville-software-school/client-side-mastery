@@ -22,9 +22,9 @@ You really want to display the name of the location, and the name of the custome
 
 Now the **`AnimalList`** component can access data from all three data providers in order to access the name property on both the customer and the location.
 
-## Importing Multiple Contexts
+## Using Multiple Contexts
 
-The next step is to access the context from the two, new providers by importing the context, and then using the Context hook to get the `locations` array and the `customers` array.
+The next step is to access the context from the two, new providers. Then you need to use the `useContext()` hook to get the state variables, and the functions to get the data from the API for each of those providers.
 
 > ##### `src/components/animal/AnimalList.js`
 
@@ -37,9 +37,17 @@ import { Animal } from "./Animal"
 import "./Animals.css"
 
 export const AnimalList = () => {
-    const { animals } = useContext(AnimalContext)
-    const { locations } = useContext(LocationContext)
-    const { customers } = useContext(CustomerContext)
+    const { animals, getAnimals } = useContext(AnimalContext)
+    const { locations, getLocations } = useContext(LocationContext)
+    const { customers, getCustomers } = useContext(CustomerContext)
+
+    useEffect(() => {
+        console.log("AnimalList: Initial render before data")
+        getAnimals()
+        getLocations()
+        getCustomers()
+    }, [])
+
 
     return (
         <div className="animals">
@@ -55,7 +63,7 @@ Then you need to refactor your function that you are passing to the `.map()` met
 
 > ##### `src/components/animal/AnimalList.js`
 
-```js
+```jsx
 animals.map(animal => {
     const owner = customers.find(c => c.id === animal.customerId)
     const clinic = locations.find(l => l.id === animal.locationId)
@@ -67,13 +75,24 @@ animals.map(animal => {
 })
 ```
 
+Again, here's what is actually sent to the **`Animal`** component.
+
+```js
+{
+    location: { id: 2, name: "Nashville North", etc... },
+    customer: { id: 2, name: "Madi Peper", etc... },
+    animal: { id: 1, name: "Snickers", etc...},
+    key: 1
+}
+```
+
 ## Display Full Names
 
 The last step is to extract the new `customer` and `animal` keys on the object passed to the **`Animal`** component.
 
 > ##### `src/components/animal/Animal.js`
 
-```js
+```jsx
 export const Animal = ({ animal, customer, location }) => (
 ```
 

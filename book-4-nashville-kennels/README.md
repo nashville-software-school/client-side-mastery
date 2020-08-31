@@ -14,12 +14,14 @@
 | 8 | [Hiring Employees](./chapters/FORMS_USEREF.md) <br/> <sub style="font-size:0.85rem;">#api #forms #useRef</sub>  | [Employees](./chapters/KK_EMPLOYEES.md) | [Distributing Flowers](./chapters/TR_DISTRIBUTORS.md) |
 | 9 | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub>  | [Rewards Program](./chapters/KK_CUSTOMERS.md) | [Retail Locations](./chapters/TH_RETAILERS.md) |
 | 10 | [Admitting Animals](./chapters/ADMIT_ANIMAL.md) <br/> <sub style="font-size:0.85rem;">#forms</sub>  | [Purchase History](./chapters/KK_PURCHASES.md) |   |
-| 11 | [Viewing Individual Animals](./chapters/DYNAMIC_ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing</sub>  | [Customer Report](./chapters/KK_REPORT.md) |  |
-| 12 | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) <br/> <sub style="font-size:0.85rem;">#state #shared-state</sub>  |  |  |
-| 13 | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Product Search](./chapters/KK_SEARCH.md) |   |
-| 14 | [Animal Treatment History](./chapters/EDIT.md) <br/> <sub style="font-size:0.85rem;">#api #edit #forms</sub>  |  |  |
-| 15 | [Employee Turnover](./chapters/QUITTING.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Been Caught Stealing](./chapters/KK_DELETE.md) | [Wedding Planners](./chapters/TR_PURCHASING.md) |
-| 16 | [Employees &amp; Animals at Facility](./chapters/FACILITY_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#providers</sub>  | [Products at Store](./chapters/KK_STORE_PROVIDERS.md) | [Shopping Cart](./chapters/TR_SHOPPING_CART.md) |
+| 11 | [Viewing Individual Employees](./chapters/DYNAMIC_ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #flat-data</sub> |  |  |
+| 11 | [Viewing Individual Locations](./chapters/LOCATION_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#routing #event-payload-data</sub>  | [Customer Report](./chapters/KK_REPORT.md) |  |
+| 12 | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub>  |  |  |
+| 13 | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) <br/> <sub style="font-size:0.85rem;">#state #shared-state</sub>  |  |  |
+| 14 | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Product Search](./chapters/KK_SEARCH.md) |   |
+| 15 | [Animal Treatment History](./chapters/EDIT.md) <br/> <sub style="font-size:0.85rem;">#api #edit #forms</sub>  |  |  |
+| 16 | [Employee Turnover](./chapters/QUITTING.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Been Caught Stealing](./chapters/KK_DELETE.md) | [Wedding Planners](./chapters/TR_PURCHASING.md) |
+| 17 | [Employees &amp; Animals at Facility](./chapters/FACILITY_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#providers</sub>  | [Products at Store](./chapters/KK_STORE_PROVIDERS.md) | [Shopping Cart](./chapters/TR_SHOPPING_CART.md) |
 | 😱 | Capstone time! |  |   |
 
 

@@ -2,6 +2,8 @@
 
 In this chapter, you are going to allow users to update the treatment history of an animal. The treatment history should be displayed on the animal detail view, not on the card in the animal list.
 
+**WARNING:** Edit is hard. This chapter, and the component that is shown below, is _very complex_ for beginners to comprehend. We will do our best to walk through all the parts and the data flow, but be prepared to feel more confused than usual. There are several new concepts thrown at you.
+
 ## Controlled Components
 
 > **React Documentation:** In HTML, form elements such as `<input>`, `<textarea>`, and `<select>` typically maintain their own state and update it based on user input. In React, mutable state is typically kept in the state property of components, and only updated with setState().
@@ -10,6 +12,8 @@ In this chapter, you are going to allow users to update the treatment history of
 
 
 ## Implementation
+
+### Update Existing Data
 
 Add a new property `treatment` to each of the animals in your database. The value should be just an empty string for now.
 
@@ -24,7 +28,26 @@ Add a new property `treatment` to each of the animals in your database. The valu
 }
 ```
 
-Create a new button in the **`AnimalDetails`** component that redirects the user to the `/animals/edit/n` route so that the animal's details can be edited.
+### Add PUT Method to Provider
+
+Add the following function to your **`AnimalProvider`** component.
+
+```js
+const updateAnimal = animal => {
+    return fetch(`http://localhost:8088/animals/${animal.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(animal)
+    })
+        .then(getAnimals)
+}
+```
+
+### Edit Button
+
+Create a new button in the **`AnimalDetails`** component that redirects the user to the `/animals/edit/{id}` route so that the animal's details can be edited.
 
 ```jsx
 <div className="animal__owner">Customer: {customer.name}</div>
@@ -34,7 +57,22 @@ Create a new button in the **`AnimalDetails`** component that redirects the user
 }}>Edit</button>
 ```
 
-Replace the current contents of the **`AnimalForm`** component with the following code.
+### Editing Route
+
+Add a new route in **`ApplicationViews`** beneath the animal detail route, for editing an animal.
+
+```jsx
+<Route path="/animals/:animalId(\d+)" render={
+    props => <AnimalDetails {...props} />
+} />
+<Route path="/animals/edit/:animalId(\d+)" render={
+    props => <AnimalForm {...props} />
+} />
+```
+
+### Edit Form Component
+
+Replace the current contents of the **`AnimalForm`** component with the following code. You will walk through all of this code with your instruction team. It won't make sense for a while. It just takes time, practice, and patience.
 
 ```js
 import React, { useContext, useState, useEffect } from "react"
@@ -43,10 +81,14 @@ import { LocationContext } from "../location/LocationProvider"
 
 
 export const AnimalForm = (props) => {
-    const { locations } = useContext(LocationContext)
-    const { addAnimal, animals, updateAnimal } = useContext(AnimalContext)
+    // Use the required context providers for data
+    const { locations, getLocations } = useContext(LocationContext)
+    const { addAnimal, animals, updateAnimal, getAnimals } = useContext(AnimalContext)
+
+    // Component state
     const [animal, setAnimal] = useState({})
 
+    // Is there a a URL parameter??
     const editMode = props.match.params.hasOwnProperty("animalId")
 
     const handleControlledInputChange = (event) => {
@@ -59,7 +101,14 @@ export const AnimalForm = (props) => {
         setAnimal(newAnimal)
     }
 
-    const setDefaults = () => {
+    /*
+        If there is a URL parameter, then the user has chosen to
+        edit an animal.
+            1. Get the value of the URL parameter.
+            2. Use that `id` to find the animal.
+            3. Update component state variable.
+    */
+    const getAnimalInEditMode = () => {
         if (editMode) {
             const animalId = parseInt(props.match.params.animalId)
             const selectedAnimal = animals.find(a => a.id === animalId) || {}
@@ -67,9 +116,17 @@ export const AnimalForm = (props) => {
         }
     }
 
+    // Get animals from API when component initializes
     useEffect(() => {
-        setDefaults()
+        getAnimals()
+        getLocations()
+    }, [])
+
+    // Once provider state is updated, determine the animal (if edit)
+    useEffect(() => {
+        getAnimalInEditMode()
     }, [animals])
+
 
     const constructNewAnimal = () => {
         const locationId = parseInt(animal.locationId)

@@ -37,7 +37,7 @@ Expose the method via the _AnimalContext_.
 
 ```jsx
 <AnimalContext.Provider value={{
-    animals, addAnimal, releaseAnimal
+    animals, addAnimal, getAnimals, releaseAnimal
 }}>
 ```
 
@@ -50,7 +50,7 @@ Get a reference to the release function in your animal component.
 
 ```js
 // Update this line of code to include releaseAnimal
-const { animals, releaseAnimal } = useContext(AnimalContext)
+const { animals, getAnimals, releaseAnimal } = useContext(AnimalContext)
 ```
 
 And then invoke the function when the button is clicked. Once the delete operation is complete, redirect the user back to the list of animals.
