@@ -175,7 +175,7 @@ Would become...
 ```js
 contentElement.innerHTML += `
     <article class="locations">
-        ${locations.map(location => LocationAsHTML(location))}
+        ${locations.map(location => LocationAsHTML(location)).join("")}
     </article>
 `
 ```
