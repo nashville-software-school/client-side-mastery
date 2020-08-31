@@ -43,43 +43,47 @@ Assume that you have a list of people objects in an array.
 
 ```js
 const people = [
-  { id: 1, name: "Caitlin Stein" },
-  { id: 2, name: "Ryan Tanay" },
-  { id: 3, name: "Leah Hoefling" },
-  { id: 4, name: "Emily Lemmon" },
-  { id: 5, name: "Bryan Nilson" },
-  { id: 6, name: "Jenna Solis" },
-  { id: 7, name: "Meg Ducharme" },
-  { id: 8, name: "Madi Peper" },
-  { id: 9, name: "Kristen Norris" },
-];
+    { id: 1, name: "Caitlin Stein" },
+    { id: 2, name: "Ryan Tanay" },
+    { id: 3, name: "Leah Hoefling" },
+    { id: 4, name: "Emily Lemmon" },
+    { id: 5, name: "Bryan Nilson" },
+    { id: 6, name: "Jenna Solis" },
+    { id: 7, name: "Meg Ducharme" },
+    { id: 8, name: "Madi Peper" },
+    { id: 9, name: "Kristen Norris" }
+]
 ```
 
 That's the raw data that should _**always remain unchanged**_. You want to display only a list of names in a dropdown list in your user interface, you would need to build a brand, new array containing those values. You can use `.map()` for that.
 
 ```js
-const fullNames = people.map((personObject) => {
-  const valueToBeInNewArray = personObject.name;
-  return valueToBeInNewArray;
-});
+const fullNames = people.map(
+    personObject => {
+        const valueToBeInNewArray = personObject.name
+        return valueToBeInNewArray
+    }
+)
 
-console.log(fullNames);
+console.log(fullNames)
 // ['Caitlin Stein', 'Ryan Tanay', 'Leah Hoefling', 'Emily Lemmon', 'Bryan Nilson', 'Jenna Solis', 'Meg Ducharme', 'Madi Peper', 'Kristen Norris']
 ```
 
 Now imagine you want to fill a dropdown box in your UI with last names. First, you would get a reference to an existing element, like a `section` or a `div`, and update its `.innerHTML` property like in the example below.
 
 ```js
-const contentTarget = document.querySelector(".names");
+const contentTarget = document.querySelector(".names")
 
 contentTarget.innerHTML = `
     <select>
-        ${people.map((personObject) => {
-          const fullName = personObject.name;
-          return `<option>${fullName}</option>`;
-        })}
+        ${
+            people.map(personObject => {
+                const fullName = personObject.name
+                return `<option>${fullName}</option>`
+            })
+        }
     </select>
-`;
+`
 ```
 
 What's confusing, and also powerful, about the above code snippet is that you have string template **inside another string template**. That's the true power of the interpolation capability of `${}`. You can put any JavaScript expression inside those curly braces. The only limitation is that it is a single expression. You can't put multiple lines of code inside them. 😢
@@ -91,17 +95,17 @@ The **`ConvictionProvider`** component will follow the same structure as your **
 > **`glassdale/scripts/convictions/ConvictionProvider.js`**
 
 ```js
-let convictions = [];
+let convictions = []
 
-export const useConvictions = () => convictions.slice();
+export const useConvictions = () => convictions.slice()
 
 export const getConvictions = () => {
-  /*
+    /*
         Load database state into application state with a fetch().
         Make sure the last `then()` sets the local `convictions`
         variable to what is in the response from the API.
     */
-};
+}
 ```
 
 ## Conviction Select Component
@@ -117,31 +121,33 @@ This component will render a `<select>` element with child `<option>` elements f
  *   ConvictionSelect component that renders a select HTML element
  *   which lists all convictions in the Glassdale PD API
  */
-import { useConvictions } from "./ConvictionProvider.js";
+import { useConvictions } from "./ConvictionProvider.js"
 
 // Get a reference to the DOM element where the <select> will be rendered
-const contentTarget = document.querySelector(".filters__crime");
+const contentTarget = document.querySelector(".filters__crime")
 
 export const ConvictionSelect = () => {
-  // Get all convictions from application state
-  const convictions = useConvictions();
+    // Get all convictions from application state
+    const convictions = useConvictions()
 
-  const render = (convictionsCollection) => {
-    /*
+    const render = convictionsCollection => {
+        /*
             Use interpolation here to invoke the map() method on
             the convictionsCollection to generate the option elements.
             Look back at the example provided above.
         */
-    contentTarget.innerHTML = `
+        contentTarget.innerHTML = `
             <select class="dropdown" id="crimeSelect">
                 <option value="0">Please select a crime...</option>
-                ${something.map()}
+                ${
+                    something.map()
+                }
             </select>
-        `;
-  };
+        `
+    }
 
-  render(convictions);
-};
+    render(convictions)
+}
 ```
 
 ## Optional Advanced Challenge: Map the Aquarium
@@ -151,17 +157,17 @@ If you want to practice using the `map()` array method a handful of times to bui
 For example...
 
 ```js
-let locationListHTML = "";
+let locationListHTML = ""
 
-for (const location of locations) {
-  locationListHTML += LocationAsHTML(location);
+for (const location of locations){
+    locationListHTML += LocationAsHTML(location)
 }
 
 contentElement.innerHTML += `
     <article class="locations">
         ${locationListHTML}
     </article>
-`;
+`
 ```
 
 Would become...
@@ -169,17 +175,17 @@ Would become...
 ```js
 contentElement.innerHTML += `
     <article class="locations">
-        ${locations.map((location) => LocationAsHTML(location)).join("")}
+        ${locations.map(location => LocationAsHTML(location)).join("")}
     </article>
-`;
+`
 ```
 
 ## Optional Advanced Challenge: Map the Farm
 
 Likewise, the Modern Farm application code has many `for..of` loops in it to plant the seeds and harvest the seeds. Here's the modules you can refactor to use `map()`.
 
-- catalog.js
-- harvester.js
+* catalog.js
+* harvester.js
 
 ## Optional Advanced Challenge: Map the Journal
 
@@ -187,6 +193,7 @@ Open your `JournalEntryList.js` module and see if you can rewrite the `for..of` 
 
 ```js
 for (const entry of entries) {
+
 }
 ```
 
