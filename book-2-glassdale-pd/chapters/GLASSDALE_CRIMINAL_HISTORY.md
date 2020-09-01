@@ -28,7 +28,7 @@ In a future chapter, you are going to implement code that detects when the user 
 
 The Glassdale PD API has a resource that gives you a collection of all possible crimes that have been committed.
 
-http://criminals.glassdale.us/crimes
+https://criminals.glassdale.us/crimes
 
 You need to create two, new components in your application
 
@@ -129,24 +129,23 @@ const contentTarget = document.querySelector(".filters__crime")
 export const ConvictionSelect = () => {
     // Get all convictions from application state
     const convictions = useConvictions()
-
-    const render = convictionsCollection => {
-        /*
-            Use interpolation here to invoke the map() method on
-            the convictionsCollection to generate the option elements.
-            Look back at the example provided above.
-        */
-        contentTarget.innerHTML = `
-            <select class="dropdown" id="crimeSelect">
-                <option value="0">Please select a crime...</option>
-                ${
-                    something.map()
-                }
-            </select>
-        `
-    }
-
     render(convictions)
+}
+
+const render = convictionsCollection => {
+    /*
+        Use interpolation here to invoke the map() method on
+        the convictionsCollection to generate the option elements.
+        Look back at the example provided above.
+    */
+    contentTarget.innerHTML = `
+        <select class="dropdown" id="crimeSelect">
+            <option value="0">Please select a crime...</option>
+            ${
+                something.map()
+            }
+        </select>
+    `
 }
 ```
 
