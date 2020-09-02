@@ -95,6 +95,16 @@ ReactDOM.render(
 );
 ```
 
+## Starting Your React Application
+
+Make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory. Once there in your terminal, type the following command.
+
+```sh
+npm start
+```
+
+It will take about 30 seconds to run all of your code, and then the process will automatically open a new tab in your browser and then render your HTML.
+
 ### Child Component
 
 After the company information, we want to list all of the animals. I **could** hard code them inside the kennel component, but as a good developer, I try to adhere to the _Single Responsibility Principle_ whenever I can.
