@@ -126,7 +126,7 @@ const eventHub = document.querySelector(".container")
 // Listen for the custom event you dispatched in ConvictionSelect
 eventHub.addEventListener('what custom event did you dispatch in ConvictionSelect?', event => {
     // Use the property you added to the event detail.
-    if ("crimeThatWasChosen" in event.detail) {
+    if (event.detail.crimeThatWasChosen !== "0"){
         /*
             Filter the criminals application state down to the people that committed the crime
         */
