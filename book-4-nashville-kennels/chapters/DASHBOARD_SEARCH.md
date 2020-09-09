@@ -62,12 +62,16 @@ import { Animal } from "./Animal"
 import "./Animals.css"
 
 export const AnimalList = ({ history }) => {
-    const { animals, searchTerms } = useContext(AnimalContext)
+    const { animals, searchTerms, getAnimals } = useContext(AnimalContext)
 
     /*
         Since you are no longer ALWAYS going to be displaying all animals
     */
     const [ filteredAnimals, setFiltered ] = useState([])
+
+    useEffect(() => {
+        getAnimals()
+    }, [])
 
     /*
         This effect hook function will run when the following two state changes happen:
