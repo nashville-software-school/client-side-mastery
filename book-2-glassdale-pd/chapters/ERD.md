@@ -19,7 +19,7 @@ In this chapter, you will be working with the dbdiagram.io site's diagramming to
 
 In the next couple chapters, you will be learning how to store two objects in your database that are related to each other through what's called a foreign key.
 
-To prepare you for that, you need to create your first visualization of entities and their relationship in dbdiagram.
+To prepare you for that, you need to create your first visualization of entities and their relationship in [dbdiagram](https://dbdiagram.io/).
 
 Copy the following text and paste it into the editor on the left side of the screen. Your instruction team will walk you through what all of the information means in these descriptors.
 
