@@ -23,6 +23,10 @@ o Introduction to React at 10:30
 
 o Provider/List Components @ 1:37
 
+### Session Videos
+
+[React Context Providers with Locations](https://drive.google.com/file/d/16263XO_dheeSbiKSvPGOR1YIpOVftVBu/view?usp=sharing)
+
 
 ## Day 4
 
