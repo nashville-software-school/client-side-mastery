@@ -69,7 +69,7 @@ json-server -w entries.json -p 8088
 
 ![starting json-server](./images/gklBlNixxn.gif)
 
-Go to your browser now, and visit the URL listed in the output. It should be `http://localhost:3000`. Then click on the hyperlink for `entries` and you should see the objects that you created.
+Go to your browser now, and visit the URL listed in the output. It should be `http://localhost:8088`. Then click on the hyperlink for `entries` and you should see the objects that you created.
 
 ![json server entries](./images/jason-server-entries.png)
 
