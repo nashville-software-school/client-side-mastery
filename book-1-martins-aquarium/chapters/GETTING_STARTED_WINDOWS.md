@@ -139,3 +139,12 @@ Watch a short video for [creating an SSH key in the terminal](https://youtu.be/z
 ### Add SSH Key to Github Account
 
 Now watch the video for [adding your SSH key to your Github account](https://youtu.be/8hlmIObpMd4).
+
+## Installing Zsh
+
+1. Open your Ubuntu terminal.
+1. Type in `sudo apt install -y zsh` and then type in your Ubuntu password when it prompts you.
+1. Install [Oh My Zsh](http://ohmyz.sh/) which makes the terminal a pleasure to work in. Copy the following command, and then right-click in your terminal to paste it in. Then press the enter key.
+    ```sh
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    ```
