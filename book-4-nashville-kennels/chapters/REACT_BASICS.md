@@ -32,14 +32,14 @@ Before we grow this application, let's create a meaningful directory structure.
 3. `touch` `Kennel.js` and `Kennel.css`.
 4. Within components, `mkdir` an `animal` directory
 5. `cd` into the `animal` directory.
-6. `touch Animal.js Animals.css`
+6. `touch Animal.js Animal.css`
 
 ```
 - src
     - components
         - animal
             - Animal.js
-            - Animals.css
+            - Animal.css
         - Kennel.js
         - Kennel.css
   index.js
@@ -134,7 +134,7 @@ Update your **`Kennel`** component with the code provided below. Now when the **
 ```jsx
 import React from "react"
 import { Animal } from "./animal/Animal"
-import "./Animals.css"
+import "./animal/Animal.css"
 
 export const Kennel = () => (
     <>
@@ -204,7 +204,7 @@ address {
 
 ## Animal Styles
 
-> ##### `src/components/animal/Animals.css`
+> ##### `src/components/animal/Animal.css`
 
 ```css
 
