@@ -109,7 +109,7 @@ const render = convictionsCollection => {
 }
 
 
-const ConvictionSelect = () => {
+export const ConvictionSelect = () => {
     getConvictions()
         .then(() => {
             const convictions = useConvictions()
@@ -145,7 +145,7 @@ const render = criminalCollection => {
 
 
 // Render ALL criminals initally
-const CriminalList = () => {
+export const CriminalList = () => {
     getCriminals()
         .then(() => {
             const appStateCriminals = useCriminals()
