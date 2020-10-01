@@ -10,11 +10,11 @@
 | 4 | [Animal Data Provider](./chapters/DATA_PROVIDER.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #providers #context</sub>  |  |   |
 | 5 | [Listing Animals](./chapters/LIST_USECONTEXT.md) <br/> <sub style="font-size:0.85rem;">#useContext #properties #providers</sub>  | [Store Locations](./chapters/KK_STORES.md) |   |
 | 6 | [Listing Locations, Employees, and Customers](./chapters/LIVE_DATA.md) <br/> <sub style="font-size:0.85rem;">#api (practice)</sub>  | [Inventory](./chapters/KK_INVENTORY.md) | [Thorns &amp; Roses API](./chapters/TR_API.md) |
+| 7 | [Multiple Resources](./chapters/MULTIPLE_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#providers #nesting (overview)</sub>  | [Product Types](./chapters/KK_PRODUCT_TYPES.md) | [Growing &amp; Selling Flowers](./chapters/TR_NURSERIES.md) |
+| 8 | [Adding Animals](./chapters/FORMS_USEREF.md) <br/> <sub style="font-size:0.85rem;">#api #forms #useRef</sub>  | [Employees](./chapters/KK_EMPLOYEES.md) | [Distributing Flowers](./chapters/TR_DISTRIBUTORS.md) |
 
 | #  | Nashville Kennels II | Kandy Korner | Thorns &amp; Roses |
 |--|--|--|--|
-| 8 | [Adding Animals](./chapters/FORMS_USEREF.md) <br/> <sub style="font-size:0.85rem;">#api #forms #useRef</sub>  | [Employees](./chapters/KK_EMPLOYEES.md) | [Distributing Flowers](./chapters/TR_DISTRIBUTORS.md) |
-| 7 | [Multiple Resources](./chapters/MULTIPLE_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#providers #nesting</sub>  | [Product Types](./chapters/KK_PRODUCT_TYPES.md) | [Growing &amp; Selling Flowers](./chapters/TR_NURSERIES.md) |
 | 9 | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub>  | [Rewards Program](./chapters/KK_CUSTOMERS.md) | [Retail Locations](./chapters/TH_RETAILERS.md) |
 | 10 | [Hire Employees, New Locations and Customers](./chapters/ADMIT_ANIMAL.md) <br/> <sub style="font-size:0.85rem;">#forms (practice)</sub>  | [Purchase History](./chapters/KK_PURCHASES.md) |   |
 | 11 | [Viewing Individual Employees](./chapters/DYNAMIC_ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #flat-data</sub> |  |  |
