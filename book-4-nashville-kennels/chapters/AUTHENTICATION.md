@@ -42,8 +42,8 @@ export const Kennel = () => (
             if (localStorage.getItem("kennel_customer")) {
                 return (
                     <>
-                        <Route render={props => <NavBar {...props} />} />
-                        <Route render={props => <ApplicationViews {...props} />} />
+                    <NavBar />
+                    <ApplicationViews />  
                     </>
                 )
             } else {
@@ -51,8 +51,12 @@ export const Kennel = () => (
             }
         }} />
 
-        <Route path="/login" render={props => <Login {...props} />} />
-        <Route path="/register" render={props => <Register {...props} />} />
+        <Route path="/login">
+			<Login />
+        </Route>
+        <Route path="/register">
+			<Register />
+        </Route>
     </>
 )
 ```
@@ -72,6 +76,8 @@ Now you can install the mock authentication components into your application.
     1. `Login.js`
     1. `Login.css`
     1. `logo.png`
+
+**Check for react-router-dom useHistory()** You may need to import the `useHistory` into your Login and Register components and then invoke it.
 
 ## Register an Account
 
