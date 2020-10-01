@@ -32,13 +32,13 @@ Before we grow this application, let's create a meaningful directory structure.
 3. `touch` `Kennel.js` and `Kennel.css`.
 4. Within components, `mkdir` an `animal` directory
 5. `cd` into the `animal` directory.
-6. `touch Animal.js Animal.css`
+6. `touch AnimalCard.js Animal.css`
 
 ```
 - src
     - components
         - animal
-            - Animal.js
+            - AnimalCard.js
             - Animal.css
         - Kennel.js
         - Kennel.css
@@ -111,13 +111,13 @@ After the company information, we want to list all of the animals. I **could** h
 
 Therefore, I'm going to create another component for displaying an animal. Consider how we have structured our previous projects and make a new file specific to the animal display. Copy pasta the following code into the following file.
 
-> ##### `src/components/animal/Animal.js`
+> ##### `src/components/animal/AnimalCard.js`
 
 ```jsx
 import React from "react"
 import "./Animal.css"
 
-export const Animal = () => (
+export const AnimalCard = () => (
     <section className="animal">
         <h3 className="animal__name">Doodles</h3>
         <div className="animal__breed">Breed: Poodle</div>
@@ -125,15 +125,15 @@ export const Animal = () => (
 )
 ```
 
-This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<Animal />`. React interprets this as a component and will run the function that you imported from `Animal.js` and then render the JSX that it defines.
+This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<AnimalCard />`. React interprets this as a component and will run the function that you imported from `AnimalCard.js` and then render the JSX that it defines.
 
-Update your **`Kennel`** component with the code provided below. Now when the **`Kennel`** component is rendered it will render 3 child **`Animal`** components.
+Update your **`Kennel`** component with the code provided below. Now when the **`Kennel`** component is rendered it will render 3 child **`AnimalCard`** components.
 
 > ##### `src/components/Kennel.js`
 
 ```jsx
 import React from "react"
-import { Animal } from "./animal/Animal"
+import { AnimalCard } from "./animal/AnimalCard"
 import "./animal/Animal.css"
 
 export const Kennel = () => (
@@ -148,9 +148,9 @@ export const Kennel = () => (
 
         <h2>Animals</h2>
         <article className="animals">
-            <Animal />
-            <Animal />
-            <Animal />
+            <AnimalCard />
+            <AnimalCard />
+            <AnimalCard />
         </article>
     </>
 )
