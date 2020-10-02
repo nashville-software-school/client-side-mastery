@@ -1,6 +1,6 @@
 # Individual Items with Nested Data
 
-In this chapter, you are going to use one of the features of `json-server` to get nested data back from the API instead of getting flat data and performing the joins in JavaScript.
+In this chapter, you are going to use one of the features of `json-server` to get nested data back from the API.
 
 You are going to do this with animals.
 
@@ -14,9 +14,17 @@ Add the following method to the animal provider. It allows any component to get 
 
 ```js
 const getAnimalById = (id) => {
-    return fetch(`http://localhost:8088/animals/${ id }?_expand=location&_expand=customer`)
+    return fetch(`http://localhost:8088/animals/${id}?_expand=location&_expand=customer`)
         .then(res => res.json())
 }
+```
+Be sure to include this method in the export of the provider
+```js
+<AnimalContext.Provider value={{
+    animals, addAnimal, getAnimals, getAnimalById
+    }}>
+        {props.children}
+</AnimalContext.Provider>
 ```
 
 Here's how the response will look.
@@ -43,50 +51,51 @@ Here's how the response will look.
 }
 ```
 
-This eliminates the need to get all of the locations, and all of the customers and use `.find()` array method to get the matching ones inside your code.
-
-The server did the work for you!!
+The server (API) did the work for you!!
 
 ## Animal List Refactor
 
-Just like you did with the employee list, the animal list will now just show a list of animal names, which are hyperlinks. When you click on one animal name, an animal detail component will render.
+The animal list will show a list of animal names, which are hyperlinks. When you click on one animal name, an animal detail component will render.
 
 > ##### `/src/components/animal/AnimalList.js`
 
 ```jsx
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import Animal from "./Animal"
-import "./Animals.css"
+import { AnimalCard } from "./AnimalCard"
+import "./Animal.css"
+import { useHistory } from "react-router-dom"
 
-export const AnimalList = ({ history }) => {
-    const { getAnimals, animals } = useContext(AnimalContext)
-
-    // Initialization effect hook -> Go get animal data
-    useEffect(()=>{
-        getAnimals()
+export const AnimalList = () => {
+    const { animals, getAnimals } = useContext(AnimalContext)
+	
+	//useEffect - Side effects are things that cannot be done during render 
+	//for example: reaching out to the world for something
+    useEffect(() => {
+		console.log("AnimalList: useEffect - getAnimals")
+		getAnimals()
+		
     }, [])
 
-    return (
-        <>
-            <h1>Animals</h1>
-
-            <button onClick={() => history.push("/animals/create")}>
-                Make Reservation
-            </button>
-            <div className="animals">
-                {
-                    animals.map(animal => {
-                        return <Animal key={animal.id} animal={animal} />
-                    })
-                }
-            </div>
-        </>
+	const history = useHistory()
+    return (	
+		<div className="animals">
+			{console.log("AnimalList: Render")}
+			<h2>Animals</h2>
+			<button onClick={() => {history.push("/animals/create")}}>
+            Add Animal
+        	</button>
+            {
+			animals.map(animal => {
+				return <AnimalCard key={animal.id} animal={animal} />
+			})
+            }
+        </div>
     )
 }
 ```
-
-> ##### `/src/components/animal/Animal.js`
+## AnimalCard refactor
+> ##### `/src/components/animal/AnimalCard.js`
 
 ```jsx
 import React from "react"
@@ -114,37 +123,48 @@ Create a new component in the animal directory which will be responsible for sho
 ```js
 import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import "./Animals.css"
+import "./Animal.css"
+import { useParams, useHistory } from "react-router-dom"
 
-export const AnimalDetails = (props) => {
+export const AnimalDetail = () => {
     const { releaseAnimal, getAnimalById } = useContext(AnimalContext)
-
-    const [animal, setAnimal] = useState({ location: {}, customer: {}})
+	
+	const [animal, setAnimal] = useState({})
+	const [location, setLocation] = useState({})
+	const [customer, setCustomer] = useState({})
+	
+	const {id} = useParams();
+	const history = useHistory();
 
     useEffect(() => {
-        const animalId = parseInt(props.match.params.animalId)
-        getAnimalById(animalId)
-            .then(setAnimal)
-    }, [])
+		console.log("useEffect", id)
+        getAnimalById(id)
+        .then((response) => {
+			console.log("response", response)
+			setAnimal(response)
+			setLocation(response.location)
+			setCustomer(response.customer)
+		})
+			}, [])
 
     return (
         <section className="animal">
             <h3 className="animal__name">{animal.name}</h3>
             <div className="animal__breed">{animal.breed}</div>
-            <div className="animal__location">Location: {animal.location.name}</div>
-            <div className="animal__owner">Customer: {animal.customer.name}</div>
+			<div className="animal__location">Location: {location.name}</div>
+			<div className="animal__owner">Customer: {customer.name}</div>
+			
             <button onClick={
                 () => {
                     releaseAnimal(animal)
                         .then(() => {
-                            props.history.push("/animals")
+                            history.push("/animals")
                         })
                 }
-            }>
-                Release Animal
-            </button>
+            }>Release Animal</button>
+            
             <button onClick={() => {
-                props.history.push(`/animals/edit/${animal.id}`)
+                history.push(`/animals/edit/${animal.id}`)
             }}>Edit</button>
         </section>
     )
@@ -153,19 +173,19 @@ export const AnimalDetails = (props) => {
 
 ## Create a New Dynamic Route
 
-Again, just like employees, you have to support a route like the following.
+You will need to support a route like the following.
 
 http://localhost:3000/animals/7
 
-We need that 7 in the component so we can get that animal from the API. It's stored in `props.match.params.animalId` in the code above.
+Within ApplicationViews, add the route for animal details within the **AnimalProvider** component.
 
 > ##### `/src/components/ApplicationViews.js`
 
 ```js
 <AnimalProvider>
-    <Route path="/animals/:animalId(\d+)" render={
-        props => <AnimalDetails {...props} />
-    } />
+   <Route exact path="/animals/:id">
+		<AnimalDetail />
+	</Route>
 </AnimalProvider>
 ```
 

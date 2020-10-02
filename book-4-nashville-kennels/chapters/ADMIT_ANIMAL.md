@@ -1,4 +1,4 @@
-# Adding Employees
+# Adding Employees and Locations
 
 ## Goal
 
@@ -14,4 +14,5 @@ Refer back to the [Adding an Animal](./FORMS_USEREF.md) chapter to review how to
 1. When user saves the employee, create a new employee object and save it to the API. Make sure that the employee object has the `locationId` foreign key on it.
 1. Once the employee is saved, re-route the user to the list of employees.
 
-New locations and customers will follow a similar pattern. 
+## New locations 
+Practice adding new locations. This will follow a similar pattern. 

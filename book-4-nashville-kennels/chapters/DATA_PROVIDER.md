@@ -6,7 +6,7 @@ Here's some example vanilla JavaScript code for a data provider.
 
 > **This is example VanillaJS code. Do not make this file in your app.**
 
-> ##### `scripts/location/LocationProvider.js`
+> ##### `scripts/animal/AnimalProvider.js`
 
 ```js
 const animals = []
