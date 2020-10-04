@@ -17,10 +17,8 @@
 | 11 | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub>  | [Customer Report](./chapters/KK_REPORT.md) |  |
 | 12 | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Been Caught Stealing](./chapters/KK_DELETE.md) | [Wedding Planners](./chapters/TR_PURCHASING.md)  |
 | 13 | [Edit Animal Information](./chapters/EDIT.md) <br/> <sub style="font-size:0.85rem;">#api #edit #forms</sub>  |  | [Shopping Cart](./chapters/TR_SHOPPING_CART.md) |
-| #  | Nashville Kennels II | Kandy Korner | Thorns &amp; Roses |
-|--|--|--|--|
 | 14 | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) <br/> <sub style="font-size:0.85rem;">#state #shared-state</sub>  |  [Product Search](./chapters/KK_SEARCH.md) |  |
-| 😱 | Group Project: React Nutshell |  |   |
+| 🌰 | Group Project: React Nutshell |  |   |
 | 😱 | Capstone time! |  |   |
 
 ## Supplementary Chapters
