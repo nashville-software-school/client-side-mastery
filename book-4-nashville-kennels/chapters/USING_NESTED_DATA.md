@@ -140,7 +140,6 @@ export const AnimalDetail = () => {
 		console.log("useEffect", id)
         getAnimalById(id)
         .then((response) => {
-			console.log("response", response)
 			setAnimal(response)
 			setLocation(response.location)
 			setCustomer(response.customer)
@@ -162,7 +161,7 @@ export const AnimalDetail = () => {
                         })
                 }
             }>Release Animal</button>
-            
+
             <button onClick={() => {
                 history.push(`/animals/edit/${animal.id}`)
             }}>Edit</button>
@@ -195,11 +194,22 @@ Now when you click on an animal's name in the list view, you should see your new
 
 ![image of animal detail view](./images/animal-details.gif)
 
+## Practice: Employees
+
+Refactor your employee components. Start with a list of employee names that when clicked, displays the full details about an employee.
+
 ## Practice: Locations
+Refactor your location components. Start with your location list and display the location name, the number of employees, and the number of animals currently being treated for each location.
 
-Your next task is to refactor your location components. On your location list, display the location name, the number of animals currently being treated, and the number of employees.
+When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being treated, and the names of all employees working there. You can use the json-server feature: `_embed`.
 
-When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being treated, and the names of all employees working there.
+Your starting API call will look similar to this:
+
+```js 
+http://localhost:8088/locations?_embed=employees&_embed=animals
+```
+
+How do you return the information about one location?
 
 > **Tip:** You don't need all of the fancy styling like you see below. Just get the information displayed.
 
