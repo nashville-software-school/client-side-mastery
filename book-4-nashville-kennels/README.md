@@ -14,17 +14,14 @@
 | 8 | [Adding Animals](./chapters/FORMS_USEREF.md) <br/> <sub style="font-size:0.85rem;">#api #forms #useRef</sub>  | [Employees](./chapters/KK_EMPLOYEES.md) | [Distributing Flowers](./chapters/TR_DISTRIBUTORS.md) |
 | 9 | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub>  | [Rewards Program](./chapters/KK_CUSTOMERS.md) | [Retail Locations](./chapters/TH_RETAILERS.md) |
 | 10 | [Hire Employees, and open New Locations](./chapters/ADMIT_ANIMAL.md) <br/> <sub style="font-size:0.85rem;">#forms (practice)</sub>  | [Purchase History](./chapters/KK_PURCHASES.md) |   |
-| 11 | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub>  |  |  |
+| 11 | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub>  | [Customer Report](./chapters/KK_REPORT.md) |  |
+| 12 | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Been Caught Stealing](./chapters/KK_DELETE.md) | [Wedding Planners](./chapters/TR_PURCHASING.md)  |
+| 13 | [Edit Animal Information](./chapters/EDIT.md) <br/> <sub style="font-size:0.85rem;">#api #edit #forms</sub>  |  | [Shopping Cart](./chapters/TR_SHOPPING_CART.md) |
 | #  | Nashville Kennels II | Kandy Korner | Thorns &amp; Roses |
 |--|--|--|--|
-| 12 | [Viewing Individual Locations](./chapters/LOCATION_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#routing #event-payload-data</sub>  | [Customer Report](./chapters/KK_REPORT.md) |  |
-| 14 | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) <br/> <sub style="font-size:0.85rem;">#state #shared-state</sub>  |  |  |
-| 15 | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Product Search](./chapters/KK_SEARCH.md) |   |
-| 16 | [Animal Treatment History](./chapters/EDIT.md) <br/> <sub style="font-size:0.85rem;">#api #edit #forms</sub>  |  |  |
-| 17 | [Employee Turnover](./chapters/QUITTING.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Been Caught Stealing](./chapters/KK_DELETE.md) | [Wedding Planners](./chapters/TR_PURCHASING.md) |
-| 18 | [Employees &amp; Animals at Facility](./chapters/FACILITY_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#providers</sub>  | [Products at Store](./chapters/KK_STORE_PROVIDERS.md) | [Shopping Cart](./chapters/TR_SHOPPING_CART.md) |
+| 14 | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) <br/> <sub style="font-size:0.85rem;">#state #shared-state</sub>  |  [Product Search](./chapters/KK_SEARCH.md) |  |
+| 😱 | Group Project: React Nutshell |  |   |
 | 😱 | Capstone time! |  |   |
-
 
 ## Supplementary Chapters
 

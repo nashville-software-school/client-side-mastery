@@ -1,20 +1,7 @@
 # Releasing Happy Animals From Your Care
 
-In this chapter, you are going to provide the ability to release animals from your care. Once an animal is ready to go home with their owner, it doesn't need to be in your system any more, so you need to delete it from your database of active animals.
+In this chapter, you are going to provide the ability to release animals from your care. Once an animal is ready to go home with their owner, it doesn't need to be in your system any more. You will need to delete it from your database of active animals.
 
-## Add a Release Button
-
-First, add a button to your animal details component that will allow the user to release the animal from care.
-
-> ##### `/src/components/animal/AnimalDetails.js`
-
-```jsx
-<button className="btn--release"
-        onClick={() => {
-            // Code to delete animal from database
-        }}
->Release</button>
-```
 
 ## Implement and Expose DELETE Method in Provider
 
@@ -53,17 +40,17 @@ Get a reference to the release function in your animal component.
 const { animals, getAnimals, releaseAnimal } = useContext(AnimalContext)
 ```
 
-And then invoke the function when the button is clicked. Once the delete operation is complete, redirect the user back to the list of animals.
+Add a button to your animal details component that will allow the user to release the animal from care. Then invoke the function when the button is clicked. Once the delete operation is complete, redirect the user back to the list of animals.
 
 > ##### `/src/components/animal/AnimalDetails.js`
 
 ```jsx
-<button className="btn--release"
-        onClick={() => {
-            releaseAnimal(chosenAnimalId)
-                .then(() => {
-                    props.history.push("/animals")
-                })
-        }}
->Release</button>
+<button onClick={
+    () => {
+        releaseAnimal(animal.id)
+            .then(() => {
+                history.push("/animals")
+            })
+    }}>Release Animal
+</button>
 ```

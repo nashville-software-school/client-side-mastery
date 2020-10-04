@@ -6,6 +6,8 @@ You are going to start with animals. You are going to change the list of animals
 
 You will need to add a method to the `AnimalProvider` to get a single animal by id.
 
+## AnimalProvider
+
 ## New Animal Details Component
 
 With the code below, you will create a new component in the employee directory which will be responsible for showing all the details of the employee.

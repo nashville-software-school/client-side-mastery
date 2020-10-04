@@ -105,7 +105,7 @@ import { Link } from "react-router-dom"
 export default ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
-            <Link to={`/animals/${animal.id}`}>
+            <Link to={`/animals/detail/${animal.id}`}>
                 { animal.name }
             </Link>
         </h3>
@@ -116,7 +116,7 @@ export default ({ animal }) => (
 
 ## New Animal Details Component
 
-Create a new component in the animal directory which will be responsible for showing all the details of the animal.
+Create a new component in the animal directory which will be responsible for showing all the details of the animal. Be sure to include state for the various pieces of data you are expecting with `useState` and setting the data with `useEffect`.
 
 > ##### `/src/components/animal/AnimalDetail.js`
 
@@ -153,22 +153,30 @@ export const AnimalDetail = () => {
 			<div className="animal__location">Location: {location.name}</div>
 			<div className="animal__owner">Customer: {customer.name}</div>
 			
-            <button onClick={
-                () => {
-                    releaseAnimal(animal)
-                        .then(() => {
-                            history.push("/animals")
-                        })
-                }
-            }>Release Animal</button>
-
-            <button onClick={() => {
-                history.push(`/animals/edit/${animal.id}`)
-            }}>Edit</button>
+            
         </section>
     )
 }
 ```
+## Create a New Dynamic Route
+
+A dynamic route component is one that matches a pattern, instead of a static route.
+
+Notice the route that renders **`AnimalDetail`**. 
+
+```js
+<Route exact path="/animals/detail/:id(/d+)">
+    <AnimalDetail />
+</Route>
+```
+
+It has `:id(/d+)` at the end of the URL. If the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in a variable named `id`. The variable can then be used inside **`AnimalDetail`**.
+
+Look back at the code you put in the detail component.
+
+See the `const {id} = useParams();`
+
+This is how you access the number 3 inside the component. It's part of the routing package (react-router-dom) you installed. Don't worry, that one's tricky. We'll help you remember it.
 
 ## Create a New Dynamic Route
 
@@ -182,7 +190,7 @@ Within ApplicationViews, add the route for animal details within the **AnimalPro
 
 ```js
 <AnimalProvider>
-   <Route exact path="/animals/:id">
+   <Route exact path="/animals/detail/:id">
 		<AnimalDetail />
 	</Route>
 </AnimalProvider>

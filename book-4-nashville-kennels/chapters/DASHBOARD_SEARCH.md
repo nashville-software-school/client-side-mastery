@@ -15,7 +15,7 @@ const [ animals, setAnimals ] = useState([])
 Since the goal of this code is to search the animals for specific ones, and what the user is going to type into a search field is considered state, then the animal provider is a place to store that state. Add the state variable below to your animal provider.
 
 ```js
-const [ searchTerms, setTerms ] = useState("")
+const [ searchTerms, setSearchTerms ] = useState("")
 ```
 
 ## Create a Search Bar Component
@@ -27,10 +27,10 @@ A search feature on any site can easily be considered its own component, so you 
 ```jsx
 import React, { useContext } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import "./Animals.css"
+import "./Animal.css"
 
-export const AnimalSearch = (props) => {
-    const { setSearch } = useContext(AnimalContext)
+export const AnimalSearch = () => {
+    const { setSearchTerms } = useContext(AnimalContext)
 
     return (
         <>
@@ -38,7 +38,7 @@ export const AnimalSearch = (props) => {
             <input type="text"
                 className="input--wide"
                 onKeyUp={
-                    (keyEvent) => setSearch(keyEvent.target.value)
+                    (keyEvent) => setSearchTerms(keyEvent.target.value)
                 }
                 placeholder="Search for an animal... " />
         </>
@@ -51,33 +51,32 @@ export const AnimalSearch = (props) => {
 Since the animal list needs to react when the user types something into the search field, you need to do two things:
 
 1. Get the `searchTerms` state from the provider.
-2. Implement a `useEffect()` hook the will filter the animals to ones that match what the user typed in.
+2. Implement a `useEffect()` hook that will filter the animals to the ones that match what the user typed in.
 
 ##### **`src/components/animals/AnimalList.js`**
 
 ```jsx
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import { Animal } from "./Animal"
-import "./Animals.css"
+import { AnimalCard } from "./AnimalCard"
+import "./Animal.css"
+import { useHistory } from "react-router-dom"
 
 export const AnimalList = ({ history }) => {
-    const { animals, searchTerms, getAnimals } = useContext(AnimalContext)
+    const { animals, getAnimals, searchTerms } = useContext(AnimalContext)
 
-    /*
-        Since you are no longer ALWAYS going to be displaying all animals
-    */
+    // Since you are no longer ALWAYS displaying all of the animals
     const [ filteredAnimals, setFiltered ] = useState([])
 
+    const history = useHistory()
+
+    // Empty dependency array - useEffect only runs after first render
     useEffect(() => {
         getAnimals()
     }, [])
 
-    /*
-        This effect hook function will run when the following two state changes happen:
-            1. The animal state changes. First when it is created, then once you get the animals from the API
-            2. When the search terms change, which happens when the user types something in the AnimalSearch component
-    */
+    // useEffect dependency array with dependencies - will run if dependency changes (state)
+    // searchTerms will cause a change
     useEffect(() => {
         if (searchTerms !== "") {
             // If the search field is not blank, display matching animals
@@ -97,12 +96,12 @@ export const AnimalList = ({ history }) => {
                 Make Reservation
             </button>
             <div className="animals">
-                {
-                    filteredAnimals.map(animal => {
-                        return <Animal key={animal.id} animal={animal} />
-                    })
-                }
-            </div>
+				{
+				filteredAnimals.map(animal => {
+					return <AnimalCard key={animal.id} animal={animal} />
+				})
+				}
+			</div>
         </>
     )
 }
@@ -118,51 +117,28 @@ Now, when the application URL is http://localhost:3000/animals, you will render 
 import { AnimalSearch } from "./animal/AnimalSearch"
 
 
-<Route exact path="/animals" render={
-    props => <>
-        <AnimalSearch />
-        <AnimalList {...props} />
-    </>
-} />
+<Route exact path="/animals">
+    <AnimalSearch />
+    <AnimalList />
+</Route>
 ```
 
 ## Epilogue: How Can Sibling Components Communicate?
 
-Unlike in vanilla JavaScript, you can't dispatch a custom message from one component and have a sibling component listen for that event and react to it. In the React library, all communication between sibling component **must go through their common ancestor**.
+Unlike in vanilla JavaScript, you can't dispatch a custom message from one component and have a sibling component listen for the event and react to it. In the React library, all communication between sibling component **must go through their common ancestor**.
 
 What is the common ancestor of the animal search component and the animal list component?
 
 ```jsx
 <AnimalProvider>
-    <LocationProvider>
-        <CustomerProvider>
-            <Route exact path="/animals" render={
-                props => {
-                    return <>
-                        <AnimalSearch />
-                        <AnimalList {...props} />
-                    </>
-                }
-            } />
-            <Route exact path="/animals/create" render={
-                props => <AnimalForm {...props} />
-            } />
-            <Route path="/animals/:animalId(\d+)" render={
-                props => <AnimalDetails {...props} />
-            } />
-            <Route path="/animals/edit/:animalId(\d+)" render={
-                props => <AnimalForm {...props} />
-            } />
-        </CustomerProvider>
-    </LocationProvider>
+    <Route exact path="/animals">
+        <AnimalSearch />
+        <AnimalList />
+    </Route>
 </AnimalProvider>
 ```
 
 It's **`Route`**!
-
-It's also **`CustomerProvider`**!
-
-And **`LocationProvider`**!
 
 They are also children of **`AnimalProvider`**!
 
@@ -172,4 +148,4 @@ So which parent component should contain the state that its two children will us
 
 It depends.
 
-In this specific case, the animal provider makes the most sense since that component has the responsibiity of maintaining animal state already. This is just a different kind of state about animals - the one the user is searching for.
+In this specific case, the AnimalProvider is a good choice since it already maintains `animals` state.
