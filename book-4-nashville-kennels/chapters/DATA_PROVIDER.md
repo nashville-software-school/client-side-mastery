@@ -19,13 +19,13 @@ export const getAnimals = () => {
         .then(parsedAnimals => animals = parsedAnimals)
 }
 
-export const addAnimal = location => {
+export const addAnimal = animalObj => {
     return fetch("http://localhost:8088/animals", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(animal)
+        body: JSON.stringify(animalObj)
     })
         .then(res => res.json())
         .then(getAnimals)
@@ -64,13 +64,13 @@ export const AnimalProvider = (props) => {
             .then(setAnimals)
     }
 
-    const addAnimal = location => {
+    const addAnimal = animalObj => {
         return fetch("http://localhost:8088/animals", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(location)
+            body: JSON.stringify(animalObj)
         })
             .then(getAnimals)
     }
@@ -169,13 +169,13 @@ Just like in your vanilla provider, you need some functions that perform state t
             .then(setLocations)
     }
 
-    const addAnimals = location => {
+    const addAnimals = animalObj => {
         return fetch("http://localhost:8088/animals", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(location)
+            body: JSON.stringify(animalObj)
         })
             .then(getAnimals)
     }
