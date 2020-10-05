@@ -25,17 +25,19 @@ In React, you can add the event listener directly on a button's `onClick` attrib
 const history = useHistory()
 
 return (
-    <div className="animals">
+    <>
         <h2>Animals</h2>
-			<button onClick={() => {history.push("/animals/create")}}>
-                Add Animal
-        	</button>
-         {
+		<button onClick={() => {history.push("/animals/create")}}>
+            Add Animal
+        </button>
+        <div className="animals">
+        {
 			animals.map(animal => {
 				return <AnimalCard key={animal.id} animal={animal} />
 			})
         }
-    </div>
+        </div>
+    </>
 )
 ```
 
@@ -55,7 +57,9 @@ Now you can create the route that will respond when the button click changes the
     <Route exact path="/animals">
         <AnimalList />
     </Route>
+</AnimalProvider> 
 
+<AnimalProvider>
     <CustomerProvider>
         <LocationProvider>
             <Route exact path="/animals/create">
@@ -63,7 +67,6 @@ Now you can create the route that will respond when the button click changes the
             </Route>
         </LocationProvider>
     </CustomerProvider>
-
 </AnimalProvider>  
 ```
 
@@ -74,7 +77,7 @@ When you add an animal, you immediately want to assign that animal to a location
 > ##### `src/components/animal/AnimalForm.js`
 
 ```js
-mport React, { useContext, useRef, useEffect } from "react"
+import React, { useContext, useRef, useEffect } from "react"
 import { LocationContext } from "../location/LocationProvider"
 import { AnimalContext } from "../animal/AnimalProvider"
 import { CustomerContext } from "../customer/CustomerProvider"
@@ -127,7 +130,8 @@ export const AnimalForm = (props) => {
         }
     }
 
-	const history = useHistory();
+    const history = useHistory();
+
     return (
         <form className="animalForm">
             <h2 className="animalForm__title">New Animal</h2>
@@ -190,7 +194,7 @@ const addAnimal = animal => {
         },
         body: JSON.stringify(animal)
     })
-        .then(getAnimals)
+    .then(getAnimals)
 }
 ```
 
