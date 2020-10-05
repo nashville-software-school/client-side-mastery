@@ -27,8 +27,8 @@ export const addAnimal = animalObj => {
         },
         body: JSON.stringify(animalObj)
     })
-        .then(res => res.json())
-        .then(getAnimals)
+    .then(res => res.json())
+    .then(getAnimals)
 }
 ```
 
@@ -46,22 +46,18 @@ The following data provider component serves the exact same purpose in a React a
 ```js
 import React, { useState, createContext } from "react"
 
-/*
-    The context is imported and used by individual components
-    that need data
-*/
+// The context is imported and used by individual components that need data
+
 export const AnimalContext = createContext()
 
-/*
- This component establishes what data can be used.
- */
+// This component establishes what data can be used.
 export const AnimalProvider = (props) => {
     const [animals, setAnimals] = useState([])
 
     const getAnimals = () => {
         return fetch("http://localhost:8088/animals?_expand=location")
-            .then(res => res.json())
-            .then(setAnimals)
+        .then(res => res.json())
+        .then(setAnimals)
     }
 
     const addAnimal = animalObj => {
@@ -72,7 +68,7 @@ export const AnimalProvider = (props) => {
             },
             body: JSON.stringify(animalObj)
         })
-            .then(getAnimals)
+        .then(getAnimals)
     }
 
     /*
@@ -165,8 +161,8 @@ Just like in your vanilla provider, you need some functions that perform state t
 ```js
     const getAnimals = () => {
         return fetch("http://localhost:8088/animals?_expand=location")
-            .then(res => res.json())
-            .then(setLocations)
+        .then(res => res.json())
+        .then(setAnimals)
     }
 
     const addAnimals = animalObj => {
@@ -177,7 +173,7 @@ Just like in your vanilla provider, you need some functions that perform state t
             },
             body: JSON.stringify(animalObj)
         })
-            .then(getAnimals)
+        .then(getAnimals)
     }
 ```
 

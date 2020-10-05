@@ -31,7 +31,7 @@ export const AnimalList = () => {
 		    {console.log("AnimalList: Render")}
         {
 			animals.map(animal => {
-				return <AnimalCard key={animal.id} location={animal.location.name} animal={animal} />
+				return <AnimalCard key={animal.id} animal={animal} />
 			})
         }
         </div>
@@ -53,8 +53,8 @@ Define useEffect() to get the API data, which in turn updates state, and then re
 
 ```js
 useEffect(() => {
-		getAnimals()	
-    }, [])
+	getAnimals()	
+}, [])
 ```
 
 Use the `.map()` array method to iterate the array of animals and generate HTML for each one by invoking the **`AnimalCard`** component function.
@@ -89,7 +89,7 @@ In React, that gets shortened to the following JSX.
 Now you need to refactor the `AppicationViews` component to use live data. Replace the animals route with the following.
 
 > ##### `src/components/ApplicationViews.js`
-```js
+```jsx
 <AnimalProvider>
     <Route exact path="/animals">
         <AnimalList />
@@ -114,7 +114,7 @@ Refactor your **`AnimalCard`** component to use the data provided by the parent 
 
 ```js
 import React from "react"
-import "./animal.css"
+import "./Animal.css"
 
 export const AnimalCard = ({ animal }) => (
     <section className="animal">
