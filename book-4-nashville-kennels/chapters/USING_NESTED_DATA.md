@@ -102,7 +102,7 @@ import React from "react"
 import "./Animals.css"
 import { Link } from "react-router-dom"
 
-export default ({ animal }) => (
+export const AnimalCard ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
             <Link to={`/animals/detail/${animal.id}`}>
@@ -152,8 +152,6 @@ export const AnimalDetail = () => {
             <div className="animal__breed">{animal.breed}</div>
 			<div className="animal__location">Location: {location.name}</div>
 			<div className="animal__owner">Customer: {customer.name}</div>
-			
-            
         </section>
     )
 }
@@ -178,19 +176,16 @@ See the `const {animalId} = useParams();`
 
 This is how you access the number 3 inside the component. It's part of the routing package (react-router-dom) you installed. Don't worry, that one's tricky. We'll help you remember it.
 
-## Create a New Dynamic Route
 
-You will need to support a route like the following.
+Within ApplicationViews, add the route for animal details within the **AnimalProvider** component. You will need to support a route like the following.
 
 http://localhost:3000/animals/7
-
-Within ApplicationViews, add the route for animal details within the **AnimalProvider** component.
 
 > ##### `/src/components/ApplicationViews.js`
 
 ```js
 <AnimalProvider>
-   <Route exact path="/animals/detail/:animalId">
+   <Route exact path="/animals/detail/:animalId(\d+)">
 		<AnimalDetail />
 	</Route>
 </AnimalProvider>
