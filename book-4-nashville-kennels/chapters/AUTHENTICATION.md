@@ -86,3 +86,5 @@ Now you can install the mock authentication components into your application.
 Once you have made all these changes, you should be presented with the Register/Login view. Create an account by filling out the registration form. When you complete that, you will immediately see your main view.
 
 You will also now see a new entry in your local storage.
+
+**NOTE ABOUT A "USER ALREADY EXISTS" ERROR:** If you're seeing this message the first time registering a user, try going into your database json file and adding an `email` to any objects in the `customers` array
