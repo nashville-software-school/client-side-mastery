@@ -165,12 +165,12 @@ A dynamic route component is one that matches a pattern, instead of a static rou
 Notice the route that renders **`AnimalDetail`**. 
 
 ```js
-<Route exact path="/animals/detail/:animalId(/d+)">
+<Route exact path="/animals/detail/:animalId(\d+)">
     <AnimalDetail />
 </Route>
 ```
 
-It has `:animalId(/d+)` at the end of the URL. If the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in a variable named `animalId`. The variable can then be used inside **`AnimalDetail`**.
+It has `:animalId(\d+)` at the end of the URL. If the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in a variable named `animalId`. The variable can then be used inside **`AnimalDetail`**.
 
 Look back at the code you put in the detail component.
 
