@@ -44,7 +44,7 @@ const hamburger = {
 }
 ```
 
-Is this object, `name`, `type`, `size`, and `temperature` are the keys. `"Whopper"`, `"Sandwich"`, `"Large"`, and `"Hot"` are the value of those keys. Together, those values make up the **state of the hamburger object**.
+In this object, `name`, `type`, `size`, and `temperature` are the keys. `"Whopper"`, `"Sandwich"`, `"Large"`, and `"Hot"` are the value of those keys. Together, those values make up the **state of the hamburger object**.
 
 How about some fried potatoes?
 
