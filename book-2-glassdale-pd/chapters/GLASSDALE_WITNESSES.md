@@ -18,7 +18,7 @@
 >
 > "No worries, Maggie. I'll get started on witness statements," you say cheerily, hoping it will help her mood.
 
-In this chapter, you will be refactoring your application to implement a new button that will allow you to review all witness statements. The witness data is at the URL http://criminals.glassdale.us/witnesses. Place a button in the UI labeled "Witness Statements".
+In this chapter, you will be refactoring your application to implement a new button that will allow you to review all witness statements. The witness data is at the URL https://criminals.glassdale.us/witnesses. Place a button in the UI labeled "Witness Statements".
 
 When the user clicks the button, you should request all witnesses and display the following information. If criminals are currently rendered, this information should take its place.
 
