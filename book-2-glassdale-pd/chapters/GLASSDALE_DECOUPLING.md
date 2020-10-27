@@ -28,7 +28,7 @@ You'll make millions. No one has ever come up with such a brilliant idea as allo
 Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-2-glassdale-pd/chapters/scripts/basic-messages-install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-2-glassdale-pd/chapters/scripts/basic-messages-install.sh)"
 ```
 
 Then change directory to the application and start the web server.
@@ -228,7 +228,7 @@ Ok, so after releasing the software to the public, no one really wants to see al
 Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-2-glassdale-pd/chapters/scripts/filter-messages-install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-2-glassdale-pd/chapters/scripts/filter-messages-install.sh)"
 ```
 
 This creates a new directory in workspace named `message-filter`. Change to that directory and start your web server.

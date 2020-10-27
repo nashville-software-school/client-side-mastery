@@ -248,5 +248,5 @@ fieldset {
 }
 ' > ./Login.css
 
-curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-4-nashville-kennels/chapters/images/logo.png > logo.png
+curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-4-nashville-kennels/chapters/images/logo.png > logo.png
 
