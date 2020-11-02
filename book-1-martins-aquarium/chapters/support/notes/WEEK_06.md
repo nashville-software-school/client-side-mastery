@@ -22,7 +22,7 @@ o Reviewed assessment questions at 15:30
 * Since everyone had done an amazing job on their project, especially how much thought they put into customizing it for their chosen persona, I decided to have class demos so they all see what each team did.
 * After demos, gave them the rest of morning for lab time. Was just over an hour for reflection and decompression.
 * After lunch, told team that I was giving them a self-assessment and really emphasized that this was for them to assess their own level of understanding of the syntax and concepts so far.
-* My plan was to assign the Harry Potter assessment to anyone who didn't perform well on the questions about fundamentals so I could see, in further detail, where they were weak. No one performed poorly, which was encouraging.
+* My plan is to have anyone who didn't perform well on the questions about fundamentals to do the assessment again so I could see, in further detail, where they were weak. No one performed poorly, which was encouraging.
 
 ## Day 3
 
