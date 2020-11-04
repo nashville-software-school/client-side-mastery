@@ -9,7 +9,7 @@ In this project, you are going to practice using `CustomEvent` and `dispatchEven
 Open a new terminal window, copy pasta the following command into the terminal and hit enter to run it. It will create a basic file structure for you and create some starter code in the `~/workspace/statefair` directory.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-2-glassdale-pd/chapters/scripts/statefair-install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-2-glassdale-pd/chapters/scripts/statefair-install.sh)"
 ```
 
 Then run the following command in your terminal to change directory to the project directory.

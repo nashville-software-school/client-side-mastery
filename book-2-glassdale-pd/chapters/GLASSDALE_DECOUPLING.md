@@ -28,7 +28,7 @@ You'll make millions. No one has ever come up with such a brilliant idea as allo
 Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-2-glassdale-pd/chapters/scripts/basic-messages-install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-2-glassdale-pd/chapters/scripts/basic-messages-install.sh)"
 ```
 
 Then change directory to the application and start the web server.
@@ -78,7 +78,7 @@ Then update `main.js` to render your new buttons.
 
 ```js
 import { MessageList } from "./messages/MessageList.js"
-import { ThemeButtons } from "./theme/ThemeButtons.js"
+import { ThemeButtons } from "./themes/ThemeButtons.js"
 
 MessageList()
 ThemeButtons()
@@ -88,7 +88,7 @@ ThemeButtons()
 
 Your message list now needs to respond to a user action. When one of the buttons is clicked, the background color of the message list needs to change.
 
-Copy pasta the following code to the very bottom of your message list module.
+Copypasta the following code to the very bottom of your message list module.
 
 > #### `scripts/messages/MessageList.js`
 
@@ -126,13 +126,13 @@ Imagine the scenario in which the developer who originally authored the **`Theme
 
 The application doesn't work now.
 
-A refactor of the class names in one component should **never** affect the functionality of another component. In this scenario, both component need to be refactored to keep the application working.
+A refactor of the class names in one component should **never** affect the functionality of another component. In this scenario, both components need to be refactored to keep the application working.
 
 ### Avoid Coupling When Possible
 
 Professional developers want to avoid that. This is one of the underlying principles to the Single Responsibility Principle. Any change to a component's functionality should only require changes to that component, and no others.
 
-## Event Based Programming
+## Event-Based Programming
 
 One common way around this problem is to have the components talk to each other in an agreed-upon format. Think of the components as a bunch of old friends gathering at a party. They can talk to each other and let everyone at the party know what happens to them.
 
@@ -142,7 +142,7 @@ You can do the same thing in your application. Components can broadcast custom m
 
 In your application, your components will use a common system for talking to each other. That will be the only type of coupling between components: a shared language. Components will be self-contained and will control everything that happens to them and simply dispatch messages in the agreed-upon format to an agreed-upon location.
 
-In this application, the agreed-upon location will be the top-most DOM element.
+In this application, the agreed-upon location will be the topmost DOM element.
 
 ```html
 <main class="container">
@@ -215,12 +215,12 @@ eventHub.addEventListener("colorChosen", event => {
 })
 ```
 
-Now the only thing that connects the two components is the custom message. Neither is aware that the other component exists at all, or it's internal implementation.
+Now the only thing that connects the two components is the custom message. Neither is aware that the other component exists at all, or its internal implementation.
 
 
 ## Practice: Filtering Messages with Custom Events
 
-Ok, so after releasing the software to the public, no one really wants to see all of their messages in one, giant list. They would much rather see a list of their friends, choose one, and then see the message from that friend.
+Ok, so after releasing the software to the public, no one really wants to see all of their messages in one giant list. They would much rather see a list of their friends, choose one, and then see the message from that friend.
 
 
 ### Install Application
@@ -228,7 +228,7 @@ Ok, so after releasing the software to the public, no one really wants to see al
 Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-42/book-2-glassdale-pd/chapters/scripts/filter-messages-install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-2-glassdale-pd/chapters/scripts/filter-messages-install.sh)"
 ```
 
 This creates a new directory in workspace named `message-filter`. Change to that directory and start your web server.
@@ -240,7 +240,7 @@ serve
 
 ### Filtering Messages
 
-Currently the two component are coupled. The message list component is targeting a DOM element rendered by the friend list component, and is listening for a browser-generated event emitted by that component.
+Currently the two component are coupled. The message list component is targeting a DOM element rendered by the friend list component and is listening for a browser-generated event emitted by that component.
 
 Any changes to the friend list component's implementation will break the message list.
 

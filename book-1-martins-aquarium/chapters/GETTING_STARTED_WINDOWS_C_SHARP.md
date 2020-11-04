@@ -51,7 +51,7 @@ Visit the [Node.js](https://www.nodejs.org) site and click on the install button
 Open Windows Terminal, start a new Git Bash terminal window, and type in the following command. These are commands you will be using in the course to run simple servers for various purposes.
 
 ```sh
-sudo npm i -g serve json-server
+npm i -g serve json-server
 ```
 
 ### Create SSH key

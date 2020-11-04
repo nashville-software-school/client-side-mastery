@@ -103,7 +103,7 @@ You need to build three functions in your fish data provider. One to return an a
 Some starter code is provided below. Use the example code blocks above to have each function filter out the appropriate fish.
 
 ```js
-export const mostHolyFish () => {
+export const mostHolyFish = () => {
     // 3, 6, 9, 12, etc... fish
     const holyFish = []
 
@@ -114,12 +114,12 @@ export const mostHolyFish () => {
     return holyFish
 }
 
-export const soldierFish () => {
+export const soldierFish = () => {
     // 5, 10, 15, 20, 25, etc... fish
     return soldiers
 }
 
-export const nonHolyFish () => {
+export const nonHolyFish = () => {
     // Any fish not a multiple of 3 or 5
     return regularFish
 }

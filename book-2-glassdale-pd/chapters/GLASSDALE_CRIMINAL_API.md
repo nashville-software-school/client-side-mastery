@@ -4,7 +4,7 @@ For this book, you will be consuming the Glassdale Police Department Criminal AP
 
 ## Setup
 
-1. Install [Postman](https://www.getpostman.com/). You instruction team will walk you through the basics of usage.
+1. Install [Postman](https://www.postman.com/downloads/). You instruction team will walk you through the basics of usage.
 1. If you are on a Mac or Linux, you need to get oh-my-zsh installed if you haven't yet. See an instructor for help if you need it.
 
 

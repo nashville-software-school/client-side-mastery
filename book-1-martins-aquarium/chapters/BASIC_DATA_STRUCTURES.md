@@ -16,7 +16,7 @@
 >
 > You click on the attached spreadsheet and are shocked at the number of fish that Martin is inheriting. There's over 150 fish in here. Honestly, you don't know how Martin manages to house and feed the number of fish he currently has, let alone these new ones. He must have help, you imagine.
 >
-> After a couple minutes of satisfying your curiosity about his new fish stock, it suddenly hits you that you now have to add 158 new fish HTML elements to the site, and also 158 more event listeners for the detail buttons on each.
+> After a couple minutes of satisfying your curiosity about his new fish stock, it suddenly hits you that you now have to add 158 new fish HTML elements to the site.
 >
 > "There's got to be a way to automate this," you mumble to yourself. "What if he adds another 100 fish in a month... I'll be writing fish HTML for the rest of my life!"
 
@@ -44,7 +44,7 @@ const hamburger = {
 }
 ```
 
-Is this object, `name`, `type`, `size`, and `temperature` are the keys. `"Whopper"`, `"Sandwich"`, `"Large"`, and `"Hot"` are the value of those keys. Together, those values make up the **state of the hamburger object**.
+In this object, `name`, `type`, `size`, and `temperature` are the keys. `"Whopper"`, `"Sandwich"`, `"Large"`, and `"Hot"` are the value of those keys. Together, those values make up the **state of the hamburger object**.
 
 How about some fried potatoes?
 

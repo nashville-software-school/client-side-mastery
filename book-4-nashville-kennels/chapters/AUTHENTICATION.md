@@ -69,10 +69,9 @@ Now you can install the mock authentication components into your application.
 1. In the terminal, make sure you are in the `kennels` directory.
 1. Run the following command in that directory.
 
-   ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-43/book-4-nashville-kennels/chapters/scripts/auth.sh)"
-   ```
-
+    ```sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-4-nashville-kennels/chapters/scripts/auth.sh)"
+    ```
 1. Go to Visual Studio Code and you will see a new `src/components/auth` directory with 4 new files in it.
    1. `Register.js`
    1. `Login.js`
