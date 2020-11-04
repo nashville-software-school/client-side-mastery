@@ -74,9 +74,12 @@ export const Kennel = () => (
 
 Some of this looks familiar, sort of. This is simply another way of building a JavaScript object (Kennel) that has a single property -- a method called render -- that returns an HTML representation of some (hard-coded) data. You've done all of that before.
 
-That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code, so we can better visualize what the eventual rendered HTML structure will look like.
+That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code. With JSX, we can better visualize the eventual rendered HTML structure.
 
 Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a factory function. It's just a function that returns an object.
+
+**What is `<>` and `</>`**
+Remember, within a function, the return can only return one thing. This is a `React.Fragment` and gives us the ability to wrap the content and return one item.
 
 To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
 
@@ -97,7 +100,7 @@ ReactDOM.render(
 
 ## Starting Your React Application
 
-Make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory. Once there in your terminal, type the following command.
+Make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory. Once there, in your terminal, type the following command.
 
 ```sh
 npm start
@@ -127,7 +130,7 @@ export const AnimalCard = () => (
 
 This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<AnimalCard />`. React interprets this as a component and will run the function that you imported from `AnimalCard.js` and then render the JSX that it defines.
 
-Update your **`Kennel`** component with the code provided below. Now when the **`Kennel`** component is rendered it will render 3 child **`AnimalCard`** components.
+Update your **`Kennel`** component with the code provided below. Be sure to import the **`AnimalCard`**. Now when the **`Kennel`** component is rendered it will display 3 child **`AnimalCard`** components.
 
 > ##### `src/components/Kennel.js`
 
@@ -157,6 +160,7 @@ export const Kennel = () => (
 ```
 
 ## Kennel Styles
+In React, we add classes to a component with `className` instead of `class`.
 
 > ##### `src/components/Kennel.css`
 

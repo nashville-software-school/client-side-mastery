@@ -27,7 +27,7 @@ Be sure to include this method in the export of the provider
 </AnimalContext.Provider>
 ```
 
-Here's how the response will look.
+The response for an animal will include objects for the location and customer information.
 
 ```json
 {
@@ -44,7 +44,6 @@ Here's how the response will look.
   },
   "customer": {
     "email": "steve@stevebrownlee.com",
-    "password": "123",
     "name": "Steve Brownlee",
     "id": 4
   }
@@ -53,48 +52,11 @@ Here's how the response will look.
 
 The server (API) did the work for you!!
 
-## Animal List Refactor
+## AnimalCard inside of AnimalList Refactor
 
-The animal list will show a list of animal names, which are hyperlinks. When you click on one animal name, an animal detail component will render.
+Change the AnimalCard to display animal names, as hyperlinks. When you click on one animal name, an animal detail component will render.
 
-> ##### `/src/components/animal/AnimalList.js`
 
-```jsx
-import React, { useContext, useEffect } from "react"
-import { AnimalContext } from "./AnimalProvider"
-import { AnimalCard } from "./AnimalCard"
-import "./Animal.css"
-import { useHistory } from "react-router-dom"
-
-export const AnimalList = () => {
-    const { animals, getAnimals } = useContext(AnimalContext)
-	
-	//useEffect - Side effects are things that cannot be done during render 
-	//for example: reaching out to the world for something
-    useEffect(() => {
-		console.log("AnimalList: useEffect - getAnimals")
-		getAnimals()
-		
-    }, [])
-
-	const history = useHistory()
-    return (	
-		<div className="animals">
-			{console.log("AnimalList: Render")}
-			<h2>Animals</h2>
-			<button onClick={() => {history.push("/animals/create")}}>
-            Add Animal
-        	</button>
-            {
-			animals.map(animal => {
-				return <AnimalCard key={animal.id} animal={animal} />
-			})
-            }
-        </div>
-    )
-}
-```
-## AnimalCard refactor
 > ##### `/src/components/animal/AnimalCard.js`
 
 ```jsx
@@ -105,9 +67,9 @@ import { Link } from "react-router-dom"
 export const AnimalCard ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
-            <Link to={`/animals/detail/${animal.id}`}>
-                { animal.name }
-            </Link>
+          <Link to={`/animals/detail/${animal.id}`}>
+            { animal.name }
+          </Link>
         </h3>
         <div className="animal__breed">{ animal.breed }</div>
     </section>
@@ -116,51 +78,50 @@ export const AnimalCard ({ animal }) => (
 
 ## New Animal Details Component
 
-Create a new component in the animal directory which will be responsible for showing all the details of the animal. Be sure to include state for the various pieces of data you are expecting with `useState` and setting the data with `useEffect`.
+Create a new component in the animal directory which will be responsible for showing all the details of an animal. Consider the flow of a React component. What will you need to store as state? Will you need `useEffect`?
+
+We will also include `useParams` from react-router-dom allowing the app to read a parameter from the URL.
 
 > ##### `/src/components/animal/AnimalDetail.js`
 
-```js
+```jsx
 import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import "./Animal.css"
 import { useParams, useHistory } from "react-router-dom"
 
 export const AnimalDetail = () => {
-    const { releaseAnimal, getAnimalById } = useContext(AnimalContext)
-	
+  const { getAnimalById } = useContext(AnimalContext)
+
 	const [animal, setAnimal] = useState({})
-	const [location, setLocation] = useState({})
-	const [customer, setCustomer] = useState({})
-	
+
 	const {animalId} = useParams();
 	const history = useHistory();
 
-    useEffect(() => {
-		console.log("useEffect", animalId)
-        getAnimalById(animalId)
-        .then((response) => {
-			setAnimal(response)
-			setLocation(response.location)
-			setCustomer(response.customer)
-		})
-			}, [])
+  useEffect(() => {
+    console.log("useEffect", animalId)
+    getAnimalById(animalId)
+    .then((response) => {
+      setAnimal(response)
+    })
+    }, [])
 
-    return (
-        <section className="animal">
-            <h3 className="animal__name">{animal.name}</h3>
-            <div className="animal__breed">{animal.breed}</div>
-			<div className="animal__location">Location: {location.name}</div>
-			<div className="animal__owner">Customer: {customer.name}</div>
-        </section>
-    )
+  return (
+    <section className="animal">
+      <h3 className="animal__name">{animal.name}</h3>
+      <div className="animal__breed">{animal.breed}</div>
+      {/* What's up with the question mark???? See below.*/}
+      <div className="animal__location">Location: {animal.location?.name}</div>
+      <div className="animal__owner">Customer: {animal.customer?.name}</div>
+    </section>
+  )
 }
 ```
+Immediate properties of an empty object will not break, however nested properties of an empty object will. Use [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator to prevent nested values from breaking the code. Try with and without the `?.`
+
 ## Create a New Dynamic Route
 
-A dynamic route component is one that matches a pattern, instead of a static route.
-
-Notice the route that renders **`AnimalDetail`**. 
+A dynamic route component is one that matches a pattern. Notice the route that renders **`AnimalDetail`**. The `animalId` is a parameter passed on the URL.
 
 ```js
 <Route exact path="/animals/detail/:animalId(\d+)">
@@ -208,8 +169,9 @@ When you click the name of a location, you should be taken to a detail view that
 
 Your starting API call will look similar to this:
 
-```js 
-http://localhost:8088/locations?_embed=employees&_embed=animals
+```js
+http://localhost:8088/locations?_embed=employees_embed=animals
+
 ```
 
 How do you return the information about one location?

@@ -1,4 +1,4 @@
-# Keeping a Treatment History for Animals
+# Updating Animal Details
 
 In this chapter, you are going to allow users to update an animal's name, location and customer. The edit button is only available from a "detail" view.
 
@@ -10,9 +10,9 @@ In this chapter, you are going to allow users to update an animal's name, locati
 
 > In React, mutable state is typically kept in the state property of components, and only updated with `setState()`.
 
-Since our `render` displays values based on current state (or props) we need to always keep the current value of an input in the component's state. This allows for mutable state. 
+Since we start with data from the API, our `render` displays values based on current state (or props). We need to always keep the current value of an input in the component's state. This allows for mutable state.
 
-An input form element whose value is controlled by React in this way is called a “controlled component”. 
+An input form element whose value is controlled by React in this way is called a “controlled component”.
 
 
 ## Implementation
@@ -23,14 +23,14 @@ Add the following function to your **`AnimalProvider`** component.
 > ##### `/src/components/animal/AnimalProvider.js`
 ```js
 const updateAnimal = animal => {
-    return fetch(`http://localhost:8088/animals/${animal.id}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(animal)
-    })
-        .then(getAnimals)
+  return fetch(`http://localhost:8088/animals/${animal.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(animal)
+  })
+    .then(getAnimals)
 }
 ```
 Expose the method via the AnimalContext.
@@ -69,25 +69,22 @@ Create a new button in the **`AnimalDetails`** component that redirects the user
 
 ### Edit The Form Component
 
-Consider: what is different when we add an animal vs. edit? In edit mode, we should have an animalId in the URL. Otherwise, it is a new animal.
-
-
-Consider the flow of this component:
-1. Component Loads
-
-This component will populate the input fields with the current values from the API. We will obtain all necessary values using a `useEffect()` hook.
+**Consider:** What is different when we add an animal vs. edit? In edit mode, we should have an animalId in the URL. Otherwise, it is a new animal.
 
 ### Here is the flow of the AnimalForm component:
 
 1. Component loads and renders - Save button should be disabled since the data is not available yet.
 1. `useEffect()` invoked. For the dropdowns get data for locations and customers.
-1. Determine if this is an `edit` based on animalId in the URL. If true, invoke `getAnimalById()` and then `setAnimal` state
+1. Determine if this is an `edit` based on `animalId` in the URL. If true, invoke `getAnimalById()` and then `setAnimal` state
 1. Render (display new state in DOM)
-1. User makes changes. As changes are made, state is updated. The DOM always displays what is in state.
+1. User makes changes. As changes are made, state is updated. **The DOM always displays what is in state.**
 1. Select `Save`
-1. Invoke `constructAnimalObject()`. This functions determines if this is a new animal or edit, prepares an object with the animal data and invokes the appropriate provider method (`addAnimal` or `updateAnimal`).
-1. The `constructAnimalObject` method will also `setIsLoading(true)` - this ensures the user cannot repeatedly click the button while the API is being updated.
+1. Invoke `handleSaveAnimal()`. This functions determines if this is a new animal or edit, prepares an object with the animal data and invokes the appropriate provider method (`addAnimal` or `updateAnimal`).
+1. The `handleSaveAnimal` method will also `setIsLoading(true)` - this ensures the user cannot repeatedly click the button while the API is being updated.
 1. Once the API has updated, change the view to display updated data
+
+
+This component will populate the input fields with the current values from the API. We will obtain all necessary values using a `useEffect()` hook.
 
 Replace the current contents of the **`AnimalForm`** component with the following code. You will walk through all of this code with your instruction team.
 
@@ -110,114 +107,117 @@ export const AnimalForm = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const {animalId} = useParams();
-	const history = useHistory();
+	  const history = useHistory();
 
     //when field changes, update state. This causes a re-render and updates the view.
     //Controlled component
     const handleControlledInputChange = (event) => {
-        //When changing a state object or array, 
-        //always create a copy make changes, and then set state.
-        const newAnimal = { ...animal }
-        //animal is an object with properties. 
-        //set the property to the new value
-        newAnimal[event.target.name] = event.target.value
-        //update state
-        setAnimal(newAnimal)
+      //When changing a state object or array,
+      //always create a copy make changes, and then set state.
+      const newAnimal = { ...animal }
+      //animal is an object with properties.
+      //set the property to the new value
+      newAnimal[event.target.name] = event.target.value
+      //update state
+      setAnimal(newAnimal)
     }
-    
+
+    const handleSaveAnimal = () => {
+      if (parseInt(animal.locationId) === 0) {
+          window.alert("Please select a location")
+      } else {
+        //disable the button - no extra clicks
+        setIsLoading(true);
+        if (animalId){
+          //PUT - update
+          updateAnimal({
+              id: animal.id,
+              name: animal.name,
+              locationId: parseInt(animal.locationId),
+              customerId: parseInt(animal.customerId)
+          })
+          .then(() => history.push(`/animals/detail/${animal.id}`))
+        }else {
+          //POST - add
+          addAnimal({
+              name: animal.name,
+              locationId: parseInt(animal.locationId),
+              customerId: parseInt(animal.customerId)
+          })
+          .then(() => history.push("/animals"))
+        }
+      }
+    }
+
     // Get customers and locations. If animalId is in the URL, getAnimalById
     useEffect(() => {
-        getCustomers().then(getLocations).then(()=> {
-            if (animalId){
-                getAnimalById(animalId)
-                .then(animal => {
-                    setAnimal(animal)
-                    setIsLoading(false)
-                })
-            } else {
-                setIsLoading(false)
-            }
-       })
+      getCustomers().then(getLocations).then(() => {
+        if (animalId){
+          getAnimalById(animalId)
+          .then(animal => {
+              setAnimal(animal)
+              setIsLoading(false)
+          })
+        } else {
+          setIsLoading(false)
+        }
+      })
     }, [])
 
-    const constructAnimalObject = () => {
-        if (parseInt(animal.locationId) === 0) {
-            window.alert("Please select a location")
-        } else {
-            //disable the button - no extra clicks
-            setIsLoading(true);
-            if (animalId){
-                //PUT - update
-                updateAnimal({
-                    id: animal.id,
-                    name: animal.name,
-                    locationId: parseInt(animal.locationId),
-                    customerId: parseInt(animal.customerId)
-                })
-                .then(() => history.push(`/animals/detail/${animal.id}`))
-            }else {
-                //POST - add
-                addAnimal({
-                    name: animal.name,
-                    locationId: parseInt(animal.locationId),
-                    customerId: parseInt(animal.customerId)
-                })
-                .then(() => history.push("/animals"))
-            }
-        }
-    }
-    
+    //since state controlls this component, we no longer need
+    //useRef(null) or ref
+
     return (
-        <form className="animalForm">
-            <h2 className="animalForm__title">New Animal</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="animalName">Animal name: </label>
-                    <input type="text" id="animalName" name="name" required autoFocus className="form-control" 
-                    placeholder="Animal name" 
-                    onChange={handleControlledInputChange} 
-                    defaultValue={animal.name}/>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="location">Assign to location: </label>
-                    <select value={animal.locationId} name="locationId" id="animalLocation" className="form-control" onChange={handleControlledInputChange}>
-                        <option value="0">Select a location</option>
-                        {locations.map(l => (
-                            <option key={l.id} value={l.id}>
-                                {l.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="customer">Customer: </label>
-                    <select value={animal.customerId} name="customerId" id="customerAnimal" className="form-control" onChange={handleControlledInputChange}>
-                        <option value="0">Select a customer</option>
-                        {customers.map(c => (
-                            <option key={c.id} value={c.id}>
-                                {c.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            </fieldset>
-            <button className="btn btn-primary"
-                disabled={isLoading}
-                onClick={event => {
-                    event.preventDefault() // Prevent browser from submitting the form
-                    constructAnimalObject()
-                }}>
-            {animalId ? <>Save Animal</> : <>Add Animal</>}</button>
-        </form>
+      <form className="animalForm">
+        <h2 className="animalForm__title">New Animal</h2>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="animalName">Animal name: </label>
+            <input type="text" id="animalName" name="name" required autoFocus className="form-control"
+            placeholder="Animal name"
+            onChange={handleControlledInputChange}
+            defaultValue={animal.name}/>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="location">Assign to location: </label>
+            <select value={animal.locationId} name="locationId" id="animalLocation" className="form-control" onChange={handleControlledInputChange}>
+              <option value="0">Select a location</option>
+              {locations.map(l => (
+                <option key={l.id} value={l.id}>
+                  {l.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="customer">Customer: </label>
+            <select value={animal.customerId} name="customerId" id="customerAnimal" className="form-control" onChange={handleControlledInputChange}>
+              <option value="0">Select a customer</option>
+              {customers.map(c => (
+                <option key={c.id} value={c.id}>
+                    {c.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </fieldset>
+        <button className="btn btn-primary"
+          disabled={isLoading}
+          onClick={event => {
+            event.preventDefault() // Prevent browser from submitting the form and refreshing the page
+            handleSaveAnimal()
+          }}>
+        {animalId ? <>Save Animal</> : <>Add Animal</>}</button>
+      </form>
     )
 }
 ```
 ## Practice Locations and Employees
 Allow user to edit Locations and Employees.
-1. Write out the flow of an edit form component in "words". 
-1. Plan the steps 
+1. Write out the flow of an edit form component in "words".
+1. Plan the steps
 1. Write small chunks of code and test for desired results.

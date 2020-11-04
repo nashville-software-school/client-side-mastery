@@ -93,6 +93,7 @@ In the **`ApplicationViews`** component, you will define how your application wi
 > ##### `src/components/Home.js`
 ```
 import React from "react";
+import { PropsAndState } from './PropsAndState'
 
 export const Home = () => (
     <>
@@ -103,6 +104,7 @@ export const Home = () => (
             <div>Visit Us at the Nashville North Location</div>
             <div>500 Puppy Way</div>
         </address>
+        <PropsAndState yourName={"Brenda"} />
     </>
 )
 ```
@@ -115,7 +117,7 @@ import { Route } from "react-router-dom"
 import { Home } from "./Home"
 import { AnimalCard } from "./animal/AnimalCard"
 
-export const ApplicationViews = (props) => {
+export const ApplicationViews = () => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
@@ -132,7 +134,7 @@ export const ApplicationViews = (props) => {
 }
 ```
 
-`exact` is needed on the first route, otherwise it will also match the other two routes, and the **`LocationList`** will be the only component rendered, no matter what the URL is.
+`exact` is needed on the first route, otherwise it will also match the other routes, and the **`Home`** will render for every route.
 
 The `<Link/>` and the `<Route/>` JSX elements are complementary to each other. If you add a new **`Link`** element in your application with a new URL, then you must create a matching **`Route`** element.
 
@@ -147,7 +149,6 @@ As mentioned above, **`Kennel`** is a container component. It renders no HTML it
 
 ```js
 import React from "react"
-import { Route } from "react-router-dom"
 import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./ApplicationViews"
 import "./Kennel.css"
@@ -181,7 +182,7 @@ ReactDOM.render(
 )
 ```
 
-With code in place, you should be able to navigate between multiple views and with an HTML representation. 
+With code in place, you should be able to navigate between multiple views and display different HTML representations.
 
 ## Practice: Customers and Employees
 

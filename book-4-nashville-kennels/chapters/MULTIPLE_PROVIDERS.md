@@ -2,7 +2,7 @@
 
 Sometimes we need data from multiple resources. For example, to add a new animal with dropdown options for both the locations and the customer.
 
-We will need data from the location provider and customer provider. The first step to making it work is updating **`ApplicationViews`** so the component has all necessary providers as parent components.
+In the next chapter we will create the AnimalForm component but first we need data from the location provider and customer provider. Update the **`ApplicationViews`** so the component has all the necessary providers as parent components.
 
 > ##### `src/components/ApplicationViews.js`
 
@@ -19,4 +19,4 @@ We will need data from the location provider and customer provider. The first st
 
 ```
 
-Now the **`AnimalForm`** component can access data from all of the data providers in to produce dropdown options.
+Now the **`AnimalForm`** component can access data from all of the data providers to produce dropdown options.

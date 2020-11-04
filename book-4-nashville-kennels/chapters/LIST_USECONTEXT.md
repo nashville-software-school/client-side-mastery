@@ -1,6 +1,6 @@
 # Listing Animals from the Database
 
-Now it's time to get the animal data from the API and then refactor the **`AnimalCard`** component to display the live data instead of it being hard-coded.
+Now it's time to get the animals data from the API and then refactor the **`AnimalCard`** component to display the live data instead of it being hard-coded.
 
 ## Animal List
 
@@ -8,40 +8,42 @@ First, you need to define the animal list component. Note that the `AnimalContex
 
 > ##### `src/components/animal/AnimalList.js`
 
-```js
+```jsx
 import React, { useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import { AnimalCard } from "./AnimalCard"
 import "./Animal.css"
 
 export const AnimalList = () => {
-   // This state changes when `getAnimals()` is invoked below
-    const { animals, getAnimals } = useContext(AnimalContext)
-	
-	//useEffect - reach out to the world for something
-    useEffect(() => {
-		console.log("AnimalList: useEffect - getAnimals")
-		getAnimals()
-		
-    }, [])
+  // This state changes when `getAnimals()` is invoked below
+  const { animals, getAnimals } = useContext(AnimalContext)
+
+  //useEffect - reach out to the world for something
+  useEffect(() => {
+    console.log("AnimalList: useEffect - getAnimals")
+    getAnimals()
+
+  }, [])
 
 
-    return (	
-		<div className="animals">
-		    {console.log("AnimalList: Render")}
-        {
-			animals.map(animal => {
-				return <AnimalCard key={animal.id} animal={animal} />
-			})
-        }
-        </div>
-    )
+  return (
+    <div className="animals">
+      {console.log("AnimalList: Render", animals)}
+      {
+        animals.map(animal => {
+          return <AnimalCard key={animal.id} animal={animal} />
+        })
+      }
+    </div>
+  )
 }
 ```
 
 ### Breaking it Down
 
-In the above component, you will notice a new hook being imported from React - the Context hook. This hook allows you to use data structures and functions that a parent provider component exposes. 
+In the above component, you will notice a 2 new hooks: `useContext` and `useEffect`.
+
+The `useContext` hook allows you to use data structures and functions that a parent provider component exposes.
 
 To start, you need to import the context object you created in the provider component so that the Context hook can access the objects it exposes.
 
@@ -49,13 +51,23 @@ To start, you need to import the context object you created in the provider comp
 import { AnimalContext } from "./AnimalProvider"
 ```
 
-Define useEffect() to get the API data, which in turn updates state, and then re-renders the component.
+The `useEffect` hook allows the component to reach out into the world for anything that cannot be handled during render. In this case, it is the API call for the animals.
+
 
 ```js
 useEffect(() => {
-	getAnimals()	
+	getAnimals()
 }, [])
 ```
+
+ #### What is that empty array bracket?
+ The **dependency array**.
+ Logic within functions only occur when a function is invoked. Within a React component, `useEffect` is a function. After the return, `useEffect` is automatically invoked and since the dependency array is empty, it only runs the first time the component renders.
+
+ You can include dependencies in the array to cause the useEffect to run additional times.
+
+Be careful setting state within the `useEffect`. State changes cause a re-render. Re-render can invoke `useEffect` (depending on the dependency array values). This would result in an infinate loop.
+
 
 Use the `.map()` array method to iterate the array of animals and generate HTML for each one by invoking the **`AnimalCard`** component function.
 
@@ -67,7 +79,7 @@ Use the `.map()` array method to iterate the array of animals and generate HTML 
 
 Note that even though it looks like you are specifying an HTML component, you are actually invoking a function. Also, the `key` and `animal` arguments look like HTML attributes here, but they actually become properties on an object that gets passed as an argument.
 
-It is the equivalent of writing the following code.
+It is the equivalent of writing the following vanilla JS code.
 
 ```js
 const properties = {
@@ -94,7 +106,7 @@ Now you need to refactor the `AppicationViews` component to use live data. Repla
     <Route exact path="/animals">
         <AnimalList />
     </Route>
-</AnimalProvider> 
+</AnimalProvider>
 ```
 
 Be sure to import at the top
