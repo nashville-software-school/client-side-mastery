@@ -41,7 +41,7 @@ Table Notes {
     criminalId int
 }
 
-Ref: "Criminal"."id" < "Notes"."criminalId"
+Ref: "Criminals"."id" < "Notes"."criminalId"
 
 ```
 
