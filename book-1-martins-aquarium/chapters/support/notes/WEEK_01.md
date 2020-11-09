@@ -20,9 +20,9 @@ o Sally's Interests at 13:30
 
 o Flexbox lab time at 9:00
 
-o Tell students to read chapter 3 at 13:05
+o Tell students to read chapter 3 at 11:05 ( master says 13:05 but video shows wireframing started at 11:30, not 13:30. Just changing here to remind us that the entire morning shouldn't be spent on flexbox lab time )
 
-o Start wireframing Martin's Aquarium at 13:30
+o Start wireframing Martin's Aquarium at 11:30
 
 * I assigned students the task of reading chapter 3 - while referencing chapter 2 - and be prepared to offer their ideas about the discussion points in the chapter.
 * After giving them 20 minutes to read and take notes, I started recording, and opened sketchboard.io.
