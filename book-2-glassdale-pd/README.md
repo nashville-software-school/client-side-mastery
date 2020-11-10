@@ -15,22 +15,11 @@
 | 9 | [Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md) <br/> <sub style="font-size:0.85rem;">#custom-events #user-input #fetch #POST</sub> |  |  |
 | 10 | [Fundamental Workshop](./chapters/EVENTS_WORKSHOP.md) | [Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md) |  [Sideshow Thrills](./chapters/SF_SIDESHOW_TICKET.md) | [Leaderboard / Team List](./chapters/TF_LEADERBOARD_TEAMS.md) |
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |  |
-| 11 | [Entity Relationship Diagram](./chapters/ERD.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |
-| 12 | [One to Many Relationships](./chapters/ONE_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  | [Full Package Ticket](./chapters/SF_PACKAGE_TICKET.md) | [Adding Players](./chapters/TF_PLAYER_FORM.md) |
-| 13 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) <br/> <sub style="font-size:0.85rem;">#user-input #fetch #POST</sub> | [Recording your Mood](./chapters/DAILY_JOURNAL_MOOD.md) |  |  |
-| 14 | [Deleting Case File Notes](./chapters/GLASSDALE_DELETE_NOTES.md) <br/> <sub style="font-size:0.85rem;">#fetch #DELETE #custom-events</sub> | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) |  | [Selecting Teams for Game](./chapters/TF_CHOOSE_TEAMS.md) |
-| 15 | [Many to Many Relationships](./chapters/MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> | [Filtering by Mood](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) | [Total Tickets Challenge](./chapters/SF_CUSTOMER_COUNT.md) | [Recording Scores](./chapters/TF_ROUND_SCORES.md) |
-| 16 | [Multiple Facilities](./chapters/GLASSDALE_CRIMINAL_FACILITIES.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |  |
-| 17 | [Facility List](./chapters/GLASSDALE_FACILITY_LIST.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> | [Challenge: Tagging Journal Entries](./chapters/DAILY_JOURNAL_TAGS.md) |  |  |
-| 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |  |
 
 ## Supplementary Chapters
 
 Supplementary chapters are for people who want to explore  beyond what is covered in the main course above. This is all completely optional and is not assessed by your instruction team, nor viewed as Core Learning Objectives.
 
-* Supplemental Chapter - [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
-* Supplemental Chapter - [Editing Glassdale Notes](./chapters/GLASSDALE_EDIT_NOTES.md)
-* Supplemental Chapter - [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
 * Supplemental Chapter - [Randall's Used Cars: Object Methods](./chapters/JS_OBJECT_METHODS.md)
 * Supplemental Chapter - [Kneel Diamonds: Factory Functions](./chapters/JS_FACTORY_FUNCTION.md)
 * Supplemental Chapter - [Customizing the Terminal](./chapters/CLI_PERSONALIZATION.md)
