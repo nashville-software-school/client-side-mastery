@@ -26,6 +26,11 @@ Then use the following command, but instead of typing `email@example.com`, enter
 git config --global user.email "email@example.com"
 ```
 
+Finally we'll configure git to use `main` as the default branch instead of `master`.
+
+```sh
+git config --global init.defaultBranch main
+```
 
 ## Creating a Git Repository for Aquarium
 
