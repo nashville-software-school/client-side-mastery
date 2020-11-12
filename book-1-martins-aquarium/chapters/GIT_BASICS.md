@@ -10,7 +10,31 @@ Github is a tool which allows you to easily share your code with other people, r
 
 ## Configure Git on Your Machine
 
-You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
+### Git Version
+
+Before we configure git, let's make sure your computer is up-to-date with a modern version. Run the following command.
+
+```sh
+git --version
+```
+
+You should see something like the following:
+
+```sh
+git version 2.29.2
+```
+
+Any version greater than `2.27` is sufficient. If you have a lesser version, you will need to upgrade. Let your instructor know and they will help you.
+
+### Configuring Git
+
+First we'll configure git to use `main` as the default branch instead of `master`.
+
+```sh
+git config --global init.defaultBranch main
+```
+
+Next, we'll tell git who you are. You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
 
 ![username and email](./images/git-username-email.png)
 
@@ -24,12 +48,6 @@ Then use the following command, but instead of typing `email@example.com`, enter
 
 ```sh
 git config --global user.email "email@example.com"
-```
-
-Finally we'll configure git to use `main` as the default branch instead of `master`.
-
-```sh
-git config --global init.defaultBranch main
 ```
 
 ## Creating a Git Repository for Aquarium
