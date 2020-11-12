@@ -2,8 +2,7 @@
 
 ### Aliases
 
-Aliases are useful for accelerating your development workflow. You define aliases in your `.zshrc` file with the `alias` keyword. Let's look at an example.
-
+Aliases are useful for accelerating your development workflow. You define aliases in your shell's initialization file (`.bashrc` or `.zshrc`) with the `alias` keyword. Let's look at an example.
 
 ```sh
 alias gs="git status"
@@ -13,6 +12,10 @@ alias gpom="git push origin master"
 ```
 
 Save the file, and reload your init file with the `source` command in the terminal.
+
+`source ~/.bashrc`
+
+or
 
 `source ~/.zshrc`
 
@@ -31,11 +34,11 @@ cd MyAwesomeApp
 
 Let's create a bash function to accelerate that workflow. Open `.zshrc` and enter in the following function.
 
- ```sh
+```sh
 mg() {
-  [ -n "$1" ] && mkdir -p "$@" && cd $_;
+ [ -n "$1" ] && mkdir -p "$@" && cd $_;
 }
- ```
+```
 
 `mg` is shorthand for `make and goto`. Source your init file, and then try it out.
 
@@ -62,10 +65,12 @@ help () {
 
 Source your initialization file.
 
+`source ~/.bashrc`
+
+or
+
 `source ~/.zshrc`
 
 Then you can use your help function.
 
 ![help command example](./images/Bn6CSVqGxO.gif)
-
-
