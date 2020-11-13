@@ -50,6 +50,14 @@ Then use the following command, but instead of typing `email@example.com`, enter
 git config --global user.email "email@example.com"
 ```
 
+Finally, we will tell git which _merge strategy_ to use when we do a `git pull`.
+
+```sh
+git config --global pull.rebase false
+```
+
+> **NOTE:** We don't expect you to understand the above. Don't worry.
+
 ## Creating a Git Repository for Aquarium
 
 1. Navigate to your project directory
