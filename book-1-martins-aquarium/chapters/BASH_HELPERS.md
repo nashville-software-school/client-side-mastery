@@ -75,7 +75,13 @@ h1,h2,h3,h4,h5,h6 {
   }
 ```
 
-Back in your terminal, reload the initialization file with the following command.
+Back in your terminal, reload the initialization file with the `source` command.
+
+```sh
+source ~/.bashrc
+```
+
+or
 
 ```sh
 source ~/.zshrc
