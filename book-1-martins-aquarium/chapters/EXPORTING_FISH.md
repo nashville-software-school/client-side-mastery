@@ -41,6 +41,13 @@ for (const fish of allTheFish) {
     console.log(fish)
 }
 ```
+Now, you're ready to see if your fish print to the console. But, first you'll need to tell your browser to load and run your javascript. To do that, add a `<script>` tag to `index.html`, right above the closing `<body>` tag.
+
+```js
+<script type="module" src="scripts/main.js"></script>
+``` 
+
+Designating `main.js` as `type="module"` allows you to utilize the import and export syntax. Note that `main.js` is the only file we need to load via a `<script>` tag. The import statements will cause a daisy-chain effect of sorts, causing any other imported modules to also be loaded and evaluated by the browser.
 
 ## Next Steps
 
