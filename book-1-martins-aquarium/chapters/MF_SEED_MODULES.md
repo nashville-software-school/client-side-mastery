@@ -8,7 +8,6 @@ Run `npm run test` to start the automated testing task.
 
 ## Seed Instructions
 
-1. Create a `scripts/seeds` directory. The `scripts` directory already exists, so create the `seeds` sub-directory in it.
 1. Create a module for each type of possible plant in the `seeds` directory. For example, one of the types of food you grow is corn. Create a `scripts/seeds/corn.js` module. Make sure that each file uses all lowercase letters for the file name.
 1. In each module define and export a function for creating a seed. Define the functions with the following syntax. If the plant is Asparagus, the function should be named `createAsparagus`. Same thing for all the others. Use arrow functions. Do not use the `function` keyword.
 1. Each of these functions should return an object with the following properties. Look at the table below the instructions to see what the values for each object are.
