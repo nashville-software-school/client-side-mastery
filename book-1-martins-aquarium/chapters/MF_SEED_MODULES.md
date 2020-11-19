@@ -19,7 +19,7 @@ Run `npm run test` to start the automated testing task.
 
 ### Plant Properties Table
 
-| Plant | Height | Output |
+| Type | Height | Output |
 |--|--|--|
 | Soybean | 20 | 4 |
 | Corn | 180 | 6 |
@@ -32,7 +32,7 @@ Run `npm run test` to start the automated testing task.
 
 Write some temporary, test code in the main module to invoke some of your seed creation functions that you defined in your modules. Use `console.log()` to ensure that you get the right value back.
 
-The following code should display an object with three properties - shape, weight, height - the developer console.
+The following code should display an object with three properties - type, height, output - in the developer console.
 
 > ##### `/scripts/main.js`
 
