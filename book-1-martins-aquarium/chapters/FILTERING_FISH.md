@@ -14,7 +14,7 @@ Filtering is a very common process that applications provide for their users. Th
 
 ### Filtering with a for..of Loop
 
-One thing that many people despise is when they discover that a sock was devoured by the Dryer Monster. I't sbeen a while since you did laundry, you get out of the shower, put on some nice black pants and start searching in your socks drawer for some black socks. A minute later, you realize that there is only 1 black sock left.
+One thing that many people despise is when they discover that a sock was devoured by the Dryer Monster. It's been a while since you did laundry, you get out of the shower, put on some nice black pants and start searching in your socks drawer for some black socks. A minute later, you realize that there is only 1 black sock left.
 
 How did that happen? I just put all my black socks through the wash last time and I counted out 8 of them. How do I only have 7 now?
 
