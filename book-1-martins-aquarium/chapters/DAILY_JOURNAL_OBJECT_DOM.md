@@ -60,7 +60,7 @@ Make sure you increment the `id` property of each journal entry by 1 each time y
 
 Note the `id` property value is 2.
 
-```json
+```js
 {
     id: 2,
     date: "07/26/2025",
