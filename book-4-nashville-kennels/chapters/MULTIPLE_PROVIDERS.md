@@ -43,9 +43,9 @@ export const AnimalList = () => {
 
     useEffect(() => {
         console.log("AnimalList: Initial render before data")
-        getAnimals()
         getLocations()
-        getCustomers()
+        .then(getCustomers)
+        .then(getAnimals)
     }, [])
 
 
