@@ -5,9 +5,6 @@ For this book, you will be consuming the Glassdale Police Department Criminal AP
 ## Setup
 
 1. Install [Postman](https://www.postman.com/downloads/). You instruction team will walk you through the basics of usage.
-1. If you are on a Mac or Linux, you need to get oh-my-zsh installed if you haven't yet. See an instructor for help if you need it.
-
-
 
 ## Introduction
 
@@ -61,7 +58,7 @@ For this book, you will be consuming the Glassdale Police Department Criminal AP
 
 In JavaScript, you are going to be using the Fetch API. It provides you with a `fetch()` method to initiate the request to another service on the World Wide Web. Here's an example fetch call to get data about Glassdale police officers from the criminal API that you queried via Postman above.
 
-> #### `glassdale/scripts/officers/OfficerProvider.js`
+> `glassdale/scripts/officers/OfficerProvider.js`
 ```js
 let officers = []
 
@@ -84,14 +81,19 @@ export const getOfficers = () => {
 Here's the pattern for a fetch call.
 
 1. Request the data
+
     ```js
     fetch("https://criminals.glassdale.us/officers")
     ```
+
 1. Convert the JSON string response to a JavaScript data structure (object or array)
+
     ```js
     .then(response => response.json())
     ```
+
 1. Do something with the data
+
     ```js
     .then(
         parsedOfficers => {
@@ -100,8 +102,6 @@ Here's the pattern for a fetch call.
         }
     )
     ```
-
-
 
 * Reference: [How to Use the JavaScript Fetch API to Get Data](https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data)
 
