@@ -196,10 +196,10 @@ This is because you imported the **`LocationProvider`** component and used the C
         <Route exact path="/employees" render={
             props => <EmployeeList {...props} />
         } />
-
-        <Route exact path="/employees/create">
-            <EmployeeForm />
-        </Route>
+        
+        <Route exact path="/employees/create" render={
+            props => <EmployeeForm {...props} />
+            
     </LocationProvider>
 </EmployeeProvider>
 ```
