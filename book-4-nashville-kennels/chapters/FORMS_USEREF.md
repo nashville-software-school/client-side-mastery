@@ -65,9 +65,9 @@ Now you can create the route that will respond when the button click changes the
         props => <EmployeeList {...props} />
     } />
 
-    <Route exact path="/employees/create">
-        <EmployeeForm />
-    </Route>
+    <Route exact path="/employees/create" render={
+        props => <EmployeeForm {...props} />
+    } />
 </EmployeeProvider>
 ```
 
