@@ -103,8 +103,6 @@ Here's the pattern for a fetch call.
     )
     ```
 
-* Reference: [How to Use the JavaScript Fetch API to Get Data](https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data)
-
 ## Assignment
 
 Your first assignment is to pull all of the data from the API (see above) and display all criminals in a grid format. Start with the following details for each criminal.
