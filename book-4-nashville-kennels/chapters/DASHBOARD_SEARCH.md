@@ -20,7 +20,7 @@ const [ searchTerms, setTerms ] = useState("")
 
 Make sure to modify your return statement to include the new state variable and function.
 
-```
+```js
 return (
     <AnimalContext.Provider value={
       {
