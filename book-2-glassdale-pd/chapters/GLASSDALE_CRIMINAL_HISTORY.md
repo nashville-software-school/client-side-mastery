@@ -10,7 +10,7 @@
 >
 > Maggie leans back and says, "It took us a whole week to review all of the files for past offenders to filter it down to a list of likely suspects." She raises her eyebrows at you, and pauses.
 >
-> "Ah, gotcha. If I could provide a way to look at only those criminals who committed a crime in the past, we could cut that work down to just a couple minutes instead of a week," you say happily.
+> "Ah, gotcha. If I could provide a way to look at only those criminals who committed a particular type of crime in the past, we could cut that work down to just a couple minutes instead of a week," you say happily.
 >
 > "Exactly!" Maggie exclaims.
 >
@@ -32,12 +32,12 @@ https://criminals.glassdale.us/crimes
 
 You need to create two, new components in your application
 
-1. The **`ConvictionProvider`** component will `fetch` those crimes an export a `useConvictions()` method for other components to import.
+1. The **`ConvictionProvider`** component will `fetch` those crimes and export a `useConvictions()` method for other components to import.
 1. The **`ConvictionSelect`** component, which will invoke `useConvictions()` and then iterate that collection to fill out the dropdown in the browser.
 
 ## Using the map() Array Method
 
-Before you get started on your code, here is a review of how to use the `.map()` array method to iterate a collection, and convert every item in that collection into something else.
+Before you get started on your code, here is a look at how to use the `.map()` array method to iterate a collection, and convert every item in that collection into something else.
 
 Assume that you have a list of people objects in an array.
 
@@ -55,7 +55,7 @@ const people = [
 ]
 ```
 
-That's the raw data that should _**always remain unchanged**_. You want to display only a list of names in a dropdown list in your user interface, you would need to build a brand, new array containing those values. You can use `.map()` for that.
+That's the raw data that should _**always remain unchanged**_. If you want to display only a list of names in a dropdown list in your user interface, you would need to build a brand new array containing those values. You can use `.map()` for that.
 
 ```js
 const fullNames = people.map(
@@ -127,9 +127,13 @@ import { useConvictions } from "./ConvictionProvider.js"
 const contentTarget = document.querySelector(".filters__crime")
 
 export const ConvictionSelect = () => {
-    // Get all convictions from application state
-    const convictions = useConvictions()
-    render(convictions)
+    // Trigger fetching the API data and loading it into application state
+    getConvictions()
+    .then( () => {
+      // Get all convictions from application state
+      const convictions = useConvictions()
+      render(convictions)
+    })
 }
 
 const render = convictionsCollection => {
