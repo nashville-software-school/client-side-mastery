@@ -19,6 +19,20 @@ const getAnimalById = (id) => {
 }
 ```
 
+Add the new method to your return at the bottom of `AnimalProvider`.
+
+```js
+return (
+    <AnimalContext.Provider value={
+      {
+        animals, addAnimal, getAnimals, getAnimalById
+      }
+    }>
+      {props.children}
+    </AnimalContext.Provider>
+  )
+```
+
 Here's how the response will look.
 
 ```json
