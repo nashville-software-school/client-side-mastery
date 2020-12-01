@@ -150,7 +150,7 @@ export const EmployeeList = props => {
 
 ## Try it Out
 
-Now when you click on an animal's name in the list view, you should see your new animal detail view.
+Now when you click on an employee's name in the list view, you should see your new employee detail view.
 
-![image of animal detail view](./images/employee-list-and-details.gif)
+![image of employee detail view](./images/employee-list-and-details.gif)
 
