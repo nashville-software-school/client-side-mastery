@@ -70,7 +70,7 @@ Just like you did with the employee list, the animal list will now just show a l
 ```jsx
 import React, { useState, useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import Animal from "./Animal"
+import { Animal } from "./Animal"
 import "./Animals.css"
 
 export const AnimalList = ({ history }) => {
@@ -107,7 +107,7 @@ import React from "react"
 import "./Animals.css"
 import { Link } from "react-router-dom"
 
-export default Animal = ({ animal }) => (
+export const Animal = ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
             <Link to={`/animals/${animal.id}`}>
