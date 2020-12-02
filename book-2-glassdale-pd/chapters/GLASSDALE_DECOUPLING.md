@@ -298,6 +298,6 @@ You are not going to get this right away. It requires practice, conversations wi
 
 ## Next Steps
 
-There is an entire project in this book called [State Fair](./SF_SETUP.md) where you can practice custom events to keep your components decoupled.
-
 In the next chapter you will try this out with the Glassdale Cold Case application you are building. In the previous chapter, you built a dropdown element that lists crimes. You will have that component dispatch a custom message to an Event Hub, and the criminal list component will listen for that event and then behave how it chooses.
+
+There is an entire project in this book called [State Fair](./SF_SETUP.md) where you can practice custom events to keep your components decoupled.
