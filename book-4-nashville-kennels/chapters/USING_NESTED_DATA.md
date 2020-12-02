@@ -107,7 +107,7 @@ import React from "react"
 import "./Animals.css"
 import { Link } from "react-router-dom"
 
-export default ({ animal }) => (
+export default Animal = ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
             <Link to={`/animals/${animal.id}`}>
