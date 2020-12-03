@@ -164,9 +164,8 @@ export const AnimalForm = (props) => {
                 <div className="form-group">
                     <label htmlFor="name">Animal name: </label>
                     <input type="text" name="name" required autoFocus className="form-control"
-                        proptype="varchar"
                         placeholder="Animal name"
-                        defaultValue={animal.name}
+                        value={animal.name}
                         onChange={handleControlledInputChange}
                     />
                 </div>
@@ -175,9 +174,8 @@ export const AnimalForm = (props) => {
                 <div className="form-group">
                     <label htmlFor="breed">Animal breed: </label>
                     <input type="text" name="breed" required className="form-control"
-                        proptype="varchar"
                         placeholder="Animal breed"
-                        defaultValue={animal.breed}
+                        value={animal.breed}
                         onChange={handleControlledInputChange}
                     />
                 </div>
@@ -186,7 +184,6 @@ export const AnimalForm = (props) => {
                 <div className="form-group">
                     <label htmlFor="locationId">Location: </label>
                     <select name="locationId" className="form-control"
-                        proptype="int"
                         value={animal.locationId}
                         onChange={handleControlledInputChange}>
 
@@ -203,7 +200,6 @@ export const AnimalForm = (props) => {
                 <div className="form-group">
                     <label htmlFor="treatment">Treatments: </label>
                     <textarea type="text" name="treatment" className="form-control"
-                        proptype="varchar"
                         value={animal.treatment}
                         onChange={handleControlledInputChange}>
                     </textarea>
