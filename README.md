@@ -1,19 +1,16 @@
-# Mastery Learning
+# Welcome to Nashville Software School
 
 Welcome to an experiment in education. Learning software development isn't like learning anything else, so we're not going to treat it like anything else. This is likely going to be a very different experience from your high school chemistry class or your college intro to philosophy.
 
-## Difference of Mastery Learning
+You must be curious.
 
-We're aiming for 100% of students to have 100% mastery of the material. This is an ambitous plan, and we're plannning on reaching it by allowing students to work at their own pace, providing students with lots of instructor guidance, and giving students access to all the resources they will need to succeed.
+You must ask questions.
 
-## Differences between traditional education and mastery learning
+You must be ok with a serious amount of failing before succeeding.
 
-| Mastery Learning   | Traditional Education  |
-| :----------------- |:-----------------------|
-| Individualized progress and flexible class timing aimed at 100% of students achieving 100% comprehension of concepts      | Learning on a schedule with a syllabus, regardless of student understanding |
-| Students work through material at their own pace      | All students work on the same material at the same time      |
-| Instructor will make sure that all material has been  presented by the end of the class, but individual students are responsible for their own progress through the material | Teacher takes responsibility for keeping the class on schedule and for finishing the material by the end of the course      |
+You must be ok with being uncomfortable.
 
+<<<<<<< HEAD
 ## Instructor Responsibilities
 
 1. The instructor will present all of the critical material necessary to build a capstone by the end of the course.
@@ -41,3 +38,5 @@ First, and most importantly, in software development, each concept builds upon t
 ![objectives](./nss-objectives.png)
 
 ![detailed objectives](./detailed-learning-objectives.png)
+=======
+>>>>>>> upstream/master
