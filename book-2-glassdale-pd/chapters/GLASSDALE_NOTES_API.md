@@ -76,7 +76,7 @@ Define your component function and have it render the input fields you want to b
 ```js
 const contentTarget = document.querySelector(".noteFormContainer")
 
-const render = () => {
+const NoteForm = () => {
     contentTarget.innerHTML = `
         Put some input fields and prompts here
 
@@ -84,12 +84,9 @@ const render = () => {
     `
 }
 
-export const NoteForm = () => {
-    render()
-}
 ```
 
-Import that component into the main component and add it to your component render chain. Perhaps before the criminal list is rendered, but its order in the chain is not truly relevent.
+Import that component into the main component and add it to your component render chain.
 
 ## Note Provider
 
@@ -104,14 +101,6 @@ Add the following method to your provider.
 > **glassdale/scripts/notes/NoteProvider.js**
 
 ```js
-const eventHub = document.querySelector(".container")
-
-const dispatchStateChangeEvent = () => {
-    const noteStateChangedEvent = new CustomEvent("noteStateChanged")
-
-    eventHub.dispatchEvent(noteStateChangedEvent)
-}
-
 const getNotes = () => {
     return fetch('http://localhost:8088/notes')
         .then(response => response.json())
@@ -129,8 +118,7 @@ export const saveNote = note => {
         },
         body: JSON.stringify(note)
     })
-    .then(getNotes)
-    .then(dispatchStateChangeEvent)
+    .then(getNotes) // After we add a note, get them all again so our new note appears in our collection
 }
 ```
 
@@ -150,6 +138,7 @@ eventHub.addEventListener("click", clickEvent => {
 
         // Change API state and application state
         saveNote(newNote)
+        .then(NoteList) // Refresh your list of notes once you've saved your new one
     }
 })
 
@@ -157,3 +146,9 @@ const NoteForm = () => {
     // rest of the code here
 }
 ```
+> How will you know if it works?
+At this point you should see your newly created note in `glassdale/api/notes.json`.
+
+## Printing Notes
+Now fill in your `NoteList` and `Note` components to print your notes from the API.
+>

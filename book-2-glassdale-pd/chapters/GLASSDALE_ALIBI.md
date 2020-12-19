@@ -29,7 +29,7 @@
 In this chapter, you will be refactoring your application to implement a new button on each criminal representation. The button must be labeled "Associate Alibis". Give each button a unique id by interpolating the `id` property of the criminal in the value.
 
 ```html
-<button id="associates--${criminal.id}">Associate Alibis</button>
+<button id="associates--${criminal.id}">Known Associates</button>
 ```
 
 When the user clicks the button, you must iterate the array of `known_associates` for that criminal and then display the following information. You can display it in a dialog box, as a sidebar, at the top of the screen, or wherever you like.

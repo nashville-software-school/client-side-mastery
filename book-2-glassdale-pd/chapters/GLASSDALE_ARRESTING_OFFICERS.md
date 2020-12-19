@@ -18,34 +18,12 @@ eventHub.addEventListener("change", changeEvent => {
         // Get the name of the selected officer
         const selectedOfficer = changeEvent.target.value
 
-        // Define a custom event
-        const customEvent = new CustomEvent("officerSelected", {
-            detail: {
-                officer: selectedOfficer
-            }
-        })
+        // Write your code here
 
-        // Dispatch event to event hub
-        eventHub.dispatchEvent(customEvent)
     }
 })
 ```
 
 1. What component would need to react to the fact that the user chose an officer? Conviction select? Criminal list?
-1. Once you determine which component should react to the user action, implement an event listener in that component.
-    ```js
-    eventHub.addEventListener("officerSelect", event => {
-        // How can you access the officer name that was selected by the user?
-        const officerName = event.???
-
-        // How can you get the criminals that were arrested by that officer?
-        const criminals = useCriminals()
-        criminals.???(
-            criminalObject => {
-                if (criminalObject.??? === officerName) {
-                    return true
-                }
-            }
-        )
-    })
+1. Once you determine which component should react to the user action, implement a filter in that component.
     ```
