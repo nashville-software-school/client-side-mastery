@@ -1,6 +1,87 @@
 # Filtering Criminals by Crime
 
-In this chapter, you are going to implement the idea of the Event Hub from the last chapter and get your components talking to each other with messages.
+In the last chapter, you build a dropdown menu of crimes. Right now the dropdown menu doesn't work, but that's about to change!
+
+## Let's Talk About Event Listeners
+
+When a user performs any kind of gesture (click, key press, mouse over, etc.), the JavaScript layer will listen for that event and then perform some appropriate logic.
+
+Let's imagine we want to add a "dark mode" to our website. When the user clicks on a button, the background color of our page should turn from white to dark gray and the text should change to white. For this example, we're assuming that the button we want to click on is already hard-coded into our HTML document, like this:
+
+##### index.html
+```html
+<button id="dark-mode">Dark Mode</button>
+```
+Next, we need to grab a reference to that button in our JavaScript so we can manipulate it:
+#### event.js
+```js
+const darkModeButton = document.querySelector("#dark-mode")
+```
+So far, so good. Now let's add an _event listener_ to the button so that JavaScript will know when a user clicks on it.
+```js
+darkModeButton.addEventListener("click", function(){
+    console.log("You clicked the dark mode button")
+  // our logic for activating dark mode goes here-- this code only runs AFTER the button is clicked
+})
+```
+See where we had a string of "click" up there? That's because we're specifically looking for a click event. We could also change that to `dblclick` if we wanted to listen for a double click, `keyup` if we wanted to listen for a keypress (in an input field), etc. But for now we can just stick with our click.
+
+Let's write the logic that we want to happen after the button is clicked:
+
+```js
+darkModeButton.addEventListener("click", function(){
+  // Select the entire body tag
+  const bodyElement = document.querySelector("body)
+
+  // Add a class
+  bodyElement.classList.add("dark-background")
+})
+```
+Right now, this code will add a class of `"dark-background"` to the entire body tag. To change how our website actually looks, we'd have to add some CSS.
+
+##### events.css
+```css
+.dark-background{
+  background-color: #2b362e;
+  color: #fafcfb;
+}
+```
+
+## Event Delegation
+
+The event listener example we just saw works great as long as the dark mode button is hard coded into our HTML. But what if we want to put an event listener on an element that is build dynamically with JavaScript?
+
+If we use the example code above and try to select our convictions dropdown, we'll get an error message.
+
+> **`glassdale/scripts/convictions/ConvictionSelect.js`**
+```js
+// This code won't work!!
+document.querySelector("#crimeSelect").addEventListener("change", (eventObject) => {
+    console.log("You selected something from the convictions dropdown")
+})
+
+```
+We run into trouble when JavaScript tries to place an event listener on an element that doesn't exist yet when the page initially loads. To get around this, we can put the event listener on a parent element that _definitely_ exists when the page loads. Let's use the `<main>` element that we hard coded into our HTML in Chapter One.
+
+> **`glassdale/scripts/convictions/ConvictionSelect.js`**
+```js
+// This won't throw an error, but it will fire any time there's a change event anywhere in the main container
+const eventHub = document.querySelector("main")
+eventHub.addEventListener("change", (eventObject) => {
+    console.log("You clicked somewhere in the main container")
+
+    // To be more specific, we need to know specifically what we clicked on
+    console.log("Here is the element you clicked on: ", eventObject.target)
+
+    if(event.target.id === "crimeSelect"){
+        console.log("You selected something from the crime dropdown")
+        console.log("This is the crime that was selected: ", eventObject.target.value)
+        // Your code goes here!
+    }
+})
+```
+Okay, we've gotten our event listener to work. What next?
+
 
 ## Let's Talk About Filter
 
@@ -69,87 +150,58 @@ console.log(legalPatrons)
 
 ## Implement Event Hub and Get Your Components Talking and Listening
 
-Time for your to implement the Event Hub, get components sending and listening to messages, and then filtering the list of criminals with the `filter()` array method.
+Here's where we left the event listener in our conviction select component:
 
 > **`glassdale/scripts/convictions/ConvictionSelect.js`**
 
 ```js
-/*
-    Which element in your HTML contains all components?
-    That's your Event Hub. Get a reference to it here.
-*/
-const eventHub = document.querySelector(you_fill_this_in)
-const contentTarget = document.querySelector(".filters__crime")
 
-// On the event hub, listen for a "change" event.
-eventHub.addEventListener("change", event => {
+const eventHub = document.querySelector("main")
 
-    // Only do this if the `crimeSelect` element was changed
-    if (event.target.id === "crimeSelect") {
-        // Create custom event. Provide an appropriate name.
-        const customEvent = new CustomEvent("crimeChosen", {
-            detail: {
-                crimeThatWasChosen: event.target.value
-            }
-        })
+eventHub.addEventListener("change", (eventObject) => {
 
-        // Dispatch to event hub
-        eventHub.dispatchEvent(customEvent)
+    if(event.target.id === "crimeSelect"){
+        console.log("You selected something from the crime dropdown")
+        console.log("This is the crime that was selected: ", eventObject.target.value)
+        // ---------- Your code goes here ----------- //
+        /*
+        - When we select a crime, we need to filter the criminals in CriminalList.
+        - Start by importing the CriminalList component at the top of this file.
+        - Then call CriminalList, and pass in information about the crime that was chosen
+        */
+
     }
 })
-
-
-const render = convictionsCollection => {
-    contentTarget.innerHTML = `
-        <select class="dropdown" id="crimeSelect">
-            <option value="0">Please select a crime...</option>
-            ... you wrote awesome code here ...
-        </select>
-    `
-}
-
-
-export const ConvictionSelect = () => {
-    getConvictions()
-        .then(() => {
-            const convictions = useConvictions()
-            render(convictions)
-        })
-}
 ```
+
+This also means that we need to refactor our CriminalList component to accept an optional argument of a crime. If no crime is passed in, we should render all of the criminals. If a crime is passed in, we should filter our list of criminals and only render criminals who committed that crime.
 
 > **`glassdale/scripts/criminal/CriminalList.js`**
 
 ```js
-const eventHub = document.querySelector(".container")
+export const CriminalList = (convictionFilter) => {
+  let criminalListContainer = document.querySelector(".criminal-list");
 
-// Listen for the custom event you dispatched in ConvictionSelect
-eventHub.addEventListener('what custom event did you dispatch in ConvictionSelect?', event => {
-    // Use the property you added to the event detail.
-    if (event.detail.crimeThatWasChosen !== "0"){
-        /*
-            Filter the criminals application state down to the people that committed the crime
-        */
-        const matchingCriminals = appStateCriminals.filter()
+  criminalListContainer.innerHTML = ""
 
-        /*
-            Then invoke render() and pass the filtered collection as
-            an argument
-        */
+  getCriminals().then(() => {
+    let criminals = useCriminals();
+
+    // If we get input from the convictions filter, filter our criminals so that we only see ones with that conviction
+    if(convictionFilter){
+
+      criminals = // write your filter here
+
     }
-})
 
-const render = criminalCollection => {
-    contentTarget.innerHTML = you_fill_this_in
-}
-
-
-// Render ALL criminals initally
-export const CriminalList = () => {
-    getCriminals()
-        .then(() => {
-            const appStateCriminals = useCriminals()
-            render(appStateCriminals)
-        })
-}
+    criminals.forEach((singleCriminal) => {
+      criminalListContainer.innerHTML += Criminal(singleCriminal);
+    });
+  });
+};
 ```
+
+## Videos to Watch
+
+1. NSS Learning Team video [Basic JavaScript Event Listeners](https://www.youtube.com/watch?v=4XvM096cQF4&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC&index=3)
+1. NSS Learning Team video [JavaScript Event Listener Types](https://www.youtube.com/watch?v=5zlueGaybjc&index=4&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC)

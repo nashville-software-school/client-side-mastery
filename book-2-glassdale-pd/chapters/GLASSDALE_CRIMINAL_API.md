@@ -141,12 +141,10 @@ Your first assignment is to pull all of the data from the API (see above) and di
     import { getCriminals, useCriminals } from './criminals/CriminalProvider.js'
 
     export const CriminalList = () => {
-        getCriminals().then(
-            /*
-                Now that you have the data, what
-                component should be rendered?
-            */
-        )
+        getCriminals().then(() => {
+            let criminals = useCriminals();
+            // Now that you have the data, what component should be rendered?
+        })
     }
 
     ```

@@ -72,7 +72,6 @@ In this book, you will be using your _fancy coding skills_ to review all of the 
         <header>
             <div class="filters">
                 <div class="filter filters__crime"></div>
-                <div class="filter filters__incarceration"></div>
                 <div class="filter filters__officer"></div>
             </div>
         </header>
