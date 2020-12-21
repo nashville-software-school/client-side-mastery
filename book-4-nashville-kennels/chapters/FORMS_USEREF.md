@@ -175,7 +175,37 @@ export const AnimalForm = () => {
 }
 ```
 
+<<<<<<< HEAD
 ### Provider Function to Save Animal
+=======
+### Wrap it in the Provider Component
+
+You should immediately see the following error.
+
+```html
+TypeError: Cannot read property 'locations' of undefined
+```
+
+This is because you imported the **`LocationProvider`** component and used the Context hook to get the data, but you forgot to make the **`EmployeeForm`** component a child of the **`LocationProvider`** component. Open **`ApplicationViews`** and make the change.
+
+> ##### `src/components/ApplicationViews.js`
+
+```jsx
+<EmployeeProvider>
+    <LocationProvider>
+        <Route exact path="/employees" render={
+            props => <EmployeeList {...props} />
+        } />
+        
+        <Route exact path="/employees/create" render={
+            props => <EmployeeForm {...props} />
+            
+    </LocationProvider>
+</EmployeeProvider>
+```
+
+### Provider Function to Save Employee
+>>>>>>> master
 
 Now it is time for you to save your animal. First, create a function in your provider to perform the fetch operation.
 
@@ -211,5 +241,10 @@ Write a component whose responsibility is to hire a new employee, assigned to a 
 * On `Save`, create a new employee object and POST it to the API. The employee object should include the locationId as a foreign key.
 * Once the employee is saved, re-route the user to the list of employees.
 
+<<<<<<< HEAD
 ## Practice: Open New locations
 Write a component whose responsibility is to open a new location. This will follow a similar pattern.
+=======
+1. Provide the React Router history object to the **`EmployeeForm`** component by refactoring **`ApplicationViews`**.
+1. Route the user to `/employees`.
+>>>>>>> master

@@ -19,6 +19,20 @@ const [ searchTerms, setSearchTerms ] = useState("")
 ```
 Be sure to expose these methods via the AnimalContext.
 
+Make sure to modify your return statement to include the new state variable and function.
+
+```js
+return (
+    <AnimalContext.Provider value={
+      {
+      animals, addAnimal, getAnimals, getAnimalById, searchTerms, setTerms
+      }
+    }>
+      {props.children}
+    </AnimalContext.Provider>
+  )
+``` 
+
 ## Create a Search Bar Component
 
 A search feature on any site can easily be considered its own component. You will create a new component whose sole responsibility is to capture the text from the user. As the user types, you must immediately update the `searchTerms` state variable in the parent component.
