@@ -19,7 +19,7 @@ We represented this data with a DOM component that looks like this:
   <p>Boat</p>
   <p>Emily Lemmon</p>
   <button class="edit-btn" id="edit-1">Edit</button>
-  <buton class="delete-btn" id="delete-1">Delete</button>
+  <button class="delete-btn" id="delete-1">Delete</button>
 </section>
 
 ```
@@ -41,10 +41,10 @@ When a user clicks the edit button, we need to show them an edit form so they ca
 
 Just like with our delete button, we can't add our event listener to the edit button directly because it's generated dynamically with JavaScript. Instead, we add it to the closest hard-coded ancestor in our HTML file.
 ```js
-document.querySelector("body").addEventListener("click", () => {
+document.querySelector("body").addEventListener("click", (eventObject) => {
   // Check to see if the user clicked on something with a class of edit-btn
-  if(event.target.classList.contains("edit-btn")){
-    const legoId = event.target.id.split("-")[1] // "1"
+  if(eventObject.target.classList.contains("edit-btn")){
+    const legoId = eventObject.target.id.split("-")[1] // "1"
 
     // the rest of our logic will go right here
   }

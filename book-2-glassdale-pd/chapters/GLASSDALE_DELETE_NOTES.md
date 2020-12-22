@@ -24,7 +24,6 @@ const deleteNote = noteId => {
     return fetch(`http://localhost:8088/notes/${noteId}`, {
         method: "DELETE"
     })
-        .then(getNotes)
 }
 ```
 
@@ -37,23 +36,13 @@ In your note list component, add a new event listener to the event hub that capt
 ```js
 const eventHub = document.querySelector(".container")
 
-eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id.startsWith("deleteNote--")) {
-        const [prefix, id] = clickEvent.target.id.split("--")
+eventHub.addEventListener("click", (eventObject) => {
+  if (e.target.id.startsWith("delete-note")) {
+    const idToDelete = eventObject.target.id.split("-")[2]
+    // ---------- Write your code here -------------//
+    // Call the deleteNote function and pass in the appropriate id
+    // Then call NoteList to refresh the list of notes
+  }
+});
 
-        /*
-            Invoke the function that performs the delete operation.
-
-            Once the operation is complete you should THEN invoke
-            useNotes() and render the note list again.
-        */
-       deleteNote(id).then(
-           () => {
-               const updatedNotes = useNotes()
-               const criminals = useCriminals()
-               render(updatedNotes, criminals)
-           }
-       )
-    }
-})
 ```

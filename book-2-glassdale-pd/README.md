@@ -14,8 +14,8 @@
 | 7 | [Entity Relationship Diagram](./chapters/ERD.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |
 | 8 | [One to Many Relationships](./chapters/ONE_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |
 | 9 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) <br/> <sub style="font-size:0.85rem;">#user-input #fetch #POST</sub> | [Recording your Mood](./chapters/DAILY_JOURNAL_MOOD.md) |  |  |
-| 10 | [To Do - Deleting Case Note Files](./chapters/GLASSDALE_DELETE_NOTES.md) <br/> <sub style="font-size:0.85rem;">#fetch #DELETE #custom-events</sub> | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) |   |
-| 11 | [To Do - Editing Case Note Files - To Do](./chapters/GLASSDALE_EDIT_NOTES.md.md)  | [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
+| 10 | [Deleting Case Note Files](./chapters/GLASSDALE_DELETE_NOTES.md) <br/> <sub style="font-size:0.85rem;">#fetch #DELETE #events</sub> | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) |   |
+| 11 | [Editing Case Note Files](./chapters/GLASSDALE_EDIT_NOTES.md)  | [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
 | 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |  |
 
 ## Supplementary Chapters
