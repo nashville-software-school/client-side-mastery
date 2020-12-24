@@ -1,4 +1,4 @@
-# Book 2 - Glassdale Cold Case Cyber Police
+# Book 2 - Giffygram
 
 ## Chapters
 
