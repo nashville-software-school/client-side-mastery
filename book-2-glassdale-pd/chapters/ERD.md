@@ -1,6 +1,14 @@
 # Entity Relationship Diagrams
 
-In this chapter, you will be working with the dbdiagram.io site's diagramming tool, so visit that site and register an account. Then open their diagramming tool.
+In this chapter, you are going to use, discuss, and learn how to create your first Entity Relationship Diagram (ERD). An ERD is a vital tool for software developers so that the data and the relationships between them can be visualized.
+
+## Learning Objectives
+
+* You should be able to explain the purpose of an ERD.
+* You should be able to identify resources, fields, primary keys, and foreign keys on an ERD.
+* You should be able to define resources, their fields, and their relationships in dbdiagram.
+* You should be able to explain what a _1 -> many_ relationship is.
+* You should be able to explain what a _many -> many_ relationship is.
 
 ## Videos to Watch Before Class
 
@@ -26,9 +34,9 @@ There are relationships between these entities, and those relationships are esta
 
 You are going to visualize these relationships with [dbdiagram](https://dbdiagram.io/). If you didn't do it during initial installations and setup of your computer, go to that site and now register an account.
 
-Your instruction team will walk you through how to use dbdiagram to make an ERD for the data you currently have in Giffygram. To start, go to the dbdiagram app and create a new ERD.
+To start, go to the dbdiagram app and create a new ERD.
 
-Paste the following code into the bar on the left and see your first, simple ERD. You and your instructors will build on this for the rest of the relationships.
+Paste the following code into the bar on the left and see your first, simple ERD. Your instruction team discuss how to use dbdiagram and how to identify and design the relationships between the data.
 
 ```html
 Table Users {

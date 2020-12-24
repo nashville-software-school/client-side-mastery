@@ -12,12 +12,12 @@
 | 6 | [Showing all Posts](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#for-of #interpolation</sub> |  |  |  |
 | 7 | [Creating Post List Component](./chapters/GG_POST_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-reponsibility</sub> |  |  |  |
 | 8 | [Posts by User](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #component-state</sub> |  |  |  |
-| 9 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods</sub> |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
+| 9 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods #component-state</sub> |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
 | 10 | [Display User Name in Post](./chapters/GG_JOIN_USER.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |  |
 | 11 | [Login Form](./chapters/GG_LOGIN_FORM.md) <br/> <sub style="font-size:0.85rem;">#components #forms</sub> |  |  |  |
 | 12 | [User Authentication](./chapters/GG_AUTH.md) <br/> <sub style="font-size:0.85rem;">#local-storage #events</sub> |  |  |  |
 | 13 | [Creating Posts](./chapters/GG_POST_CREATION.md) <br/> <sub style="font-size:0.85rem;">#events #forms #state</sub> |  |  |  |
-| 14 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
+| 14 | [Giffygram ERD](./chapters/ERD.md) <br/> <sub style="font-size:0.85rem;">#ERD #data-relationships</sub> |  |  |  |
 | 15 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
 | 16 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
 | 17 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
