@@ -7,7 +7,6 @@ In this chapter, you will be working with the dbdiagram.io site's diagramming to
 ### Databases and Normalization
 
 1. [Database Tutorial for Beginners](https://www.youtube.com/watch?v=wR0jg0eQsZA)
-1. [MicroNugget: How to Normalize Databases](https://www.youtube.com/watch?v=upS2HlUj1gI)
 1. [Basic Concept of Database Normalization - Simple Explanation for Beginners](https://www.youtube.com/watch?v=xoTyrdT9SZI)
 
 ### Entity Relationship Diagrams
@@ -15,44 +14,48 @@ In this chapter, you will be working with the dbdiagram.io site's diagramming to
 1. [Entity Relationship Diagram (ERD) Tutorial - Part 1](https://www.youtube.com/watch?v=QpdhBUYk7Kk)
 1. [Entity Relationship Diagram (ERD) Tutorial - Part 2](https://www.youtube.com/watch?v=-CuY5ADwn24)
 
-## Criminals and Notes
+## Posts, Users, and Likes Visualization
 
-In the next couple chapters, you will be learning how to store two objects in your database that are related to each other through what's called a foreign key.
+In the previous few chapters, you created three different colletions in your data store module.
 
-To prepare you for that, you need to create your first visualization of entities and their relationship in [dbdiagram](https://dbdiagram.io/).
+1. Users
+1. Posts
+1. Likes
 
-Copy the following text and paste it into the editor on the left side of the screen. Your instruction team will walk you through what all of the information means in these descriptors.
+There are relationships between these entities, and those relationships are established by using the primary key _(the `id` property)_ from an object in one collection and storing it as a foreign key on an object in another collection _(e.g. the `userId` property on a Post object)_.
 
-For now, the foreign key is the `criminalId` attribute on the **`Notes`** entity in the diagram. It is a numeric representation of the entire criminal object that is stored in another collection (_or table in database-speak_).
+You are going to visualize these relationships with [dbdiagram](https://dbdiagram.io/). If you didn't do it during initial installations and setup of your computer, go to that site and now register an account.
+
+Your instruction team will walk you through how to use dbdiagram to make an ERD for the data you currently have in Giffygram. To start, go to the dbdiagram app and create a new ERD.
+
+Paste the following code into the bar on the left and see your first, simple ERD. You and your instructors will build on this for the rest of the relationships.
 
 ```html
-Table Criminals {
+Table Users {
     id int pk
-    age int
-    eyeColor varchar
     name varchar
-    phone varchar
-    address varchar
+    email varchar
+    password varchar
 }
 
-Table Notes {
-    id int pk
-    text varchar
-    criminalId int
+Table Posts {
+    id int
+    userId int
+    title varchar
+    imageURL varchar
+    description varchar
+    timestamp date
 }
 
-Ref: "Criminal"."id" < "Notes"."criminalId"
+Table UserLikes {
+    id int
+    userId int
+    postId int
+}
 
+Ref: "Users"."id" < "Posts"."userId"
+Ref: "Users"."id" < "UserLikes"."userId"
+Ref: "Posts"."id" < "UserLikes"."postId"
 ```
 
----
-
-> **Tips:**
->
-> **int** = Integer value  (e.g. 2, 81, 2054)
->
-> **double** - Double precision floating point number (e.g. 1.414, 3.14159)
->
-> **varchar** = Variable length character value
->
-> **pk** = Primary key field
+![animation of creating ERD](./images/first-erd-animation.gif)
