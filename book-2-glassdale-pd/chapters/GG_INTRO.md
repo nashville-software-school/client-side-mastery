@@ -15,6 +15,8 @@ Here are some example MVP features.
 
 If you build those, you can have people use it. They can start providing you feedback and additional feature requests while you are building the features that you want to add, but weren't needed for MVP.
 
+You will be guided through how to create all of the components for this application, how to think about how they work together to make a good user experience, and how to manage the state of the entire application, and of individual components.
+
 Here's the MVP that you will be building for Giffygram.
 
 ![animation of Giffygram MVP](./images/giffygram-basic.gif)
