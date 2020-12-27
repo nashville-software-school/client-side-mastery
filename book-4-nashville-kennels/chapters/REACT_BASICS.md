@@ -57,32 +57,6 @@ Here is a simple example of a React component. Please read through the following
 > src/components/Kennel.js
 
 ```jsx
-<<<<<<< HEAD:book-4-the-apprentice/chapters/REACT_BASICS.md
-
-import React, { Component } from 'react'
-import './Kennel.css'
-
-class Kennel extends Component {
-    render() {
-        return (
-	<div class="container-main">
-	    	<div class="section-content">
-                	<h2>Student Kennels<br />
-                   	 	<small>Loving care when you're not there.</small>
-                	</h2>
-                	<address>
-                    		Visit Us at the Nashville North Location
-                    		<br />500 Puppy Way
-                	</address>
-            	</div>
-	</div>
-	
-        );
-    }
-}
-
-export default Kennel
-=======
 import React from "react"
 import "./Kennel.css"
 
@@ -96,7 +70,6 @@ export const Kennel = () => (
         </address>
     </>
 )
->>>>>>> upstream/master:book-4-nashville-kennels/chapters/REACT_BASICS.md
 ```
 
 Some of this looks familiar, sort of. This is simply another way of building a JavaScript object (Kennel) that has a single property -- a method called render -- that returns an HTML representation of some (hard-coded) data. You've done all of that before.
@@ -159,41 +132,6 @@ Update your **`Kennel`** component with the code provided below. Now when the **
 > ##### `src/components/Kennel.js`
 
 ```jsx
-<<<<<<< HEAD:book-4-the-apprentice/chapters/REACT_BASICS.md
-import React, { Component } from "react";
-import AnimalCard from "./animal/AnimalCard";
-import "./Kennel.css";
-
-class Kennel extends Component {
-  render() {
-    return (
-      <div class="container-main">
-        <div class="section-content">
-          <h2>
-            Student Kennels
-            <br />
-            <small>Loving care when you're not there.</small>
-          </h2>
-          <address>
-            Visit Us at the Nashville North Location
-            <br />
-            500 Puppy Way
-          </address>
-        </div>
-        <div class="container-cards">
-          <AnimalCard />
-          <AnimalCard />
-          <AnimalCard />
-        </div>
-      </div>
-    );
-  }
-}
-
-export default Kennel;
-
-
-=======
 import React from "react"
 import { Animal } from "./animal/Animal"
 import "./animal/Animal.css"
@@ -216,7 +154,6 @@ export const Kennel = () => (
         </article>
     </>
 )
->>>>>>> upstream/master:book-4-nashville-kennels/chapters/REACT_BASICS.md
 ```
 
 ## Kennel Styles
@@ -259,26 +196,6 @@ h6 {
 }
 ```
 
-<<<<<<< HEAD:book-4-the-apprentice/chapters/REACT_BASICS.md
-.container-cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card{
-    width: 25vw;
-    padding: 1em;
-    margin: 1em;
-    border: 1x solid gray;
-}
-
-img{
-    display: block;
-    height: auto;
-    border-radius: 50%;
-    width: 80%
-=======
 ## Animal Styles
 
 > ##### `src/components/animal/Animal.css`
@@ -289,7 +206,6 @@ img{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
->>>>>>> upstream/master:book-4-nashville-kennels/chapters/REACT_BASICS.md
 }
 
 .animal {
