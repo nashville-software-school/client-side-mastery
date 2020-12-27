@@ -15,25 +15,27 @@
 | 8 | [One to Many Relationships](./chapters/ONE_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |
 | 9 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) <br/> <sub style="font-size:0.85rem;">#user-input #fetch #POST</sub> | [Recording your Mood](./chapters/DAILY_JOURNAL_MOOD.md) |  |  |
 | 10 | [Deleting Case Note Files](./chapters/GLASSDALE_DELETE_NOTES.md) <br/> <sub style="font-size:0.85rem;">#fetch #DELETE #events</sub> | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) |   |
-| 11 | [Editing Case Note Files](./chapters/GLASSDALE_EDIT_NOTES.md)  | [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
+| 11 | [Many to Many Relationships](book-2-glassdale-pd/chapters/MANY_MANY.md) | | |
+| 12 | [Multiple Facilities](./chapters/GLASSDALE_CRIMINAL_FACILITIES.md) |  [Tagging Journal Entries](./chapters/DAILY_JOURNAL_TAGS.md) | |
 | 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |  |
 
 ## Supplementary Chapters
 
-Supplementary chapters are for people who want to explore  beyond what is covered in the main course above. This is all completely optional and is not assessed by your instruction team, nor viewed as Core Learning Objectives.
+Supplementary chapters are for people who want extra practice beyond what is covered in the main course. These are all completely optional. 
 
 
 Glassdale PD
+
 * [Filtering- Arresting Officers](./chapters/GLASSDALE_ARRESTING_OFFICERS.md)
 * [Printing to the DOM- Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md)
 * [Conditional Rendering - Known Associates](./chapters/GLASSDALE_ALIBI.md)
-* [Many to Many Relationships - Multiple Facilities](./chapters/GLASSDALE_CRIMINAL_FACILITIES.md)
 * [Many to Many Relationships - Facility List](./chapters/GLASSDALE_FACILITY_LIST.md)
-
+* [Editing Case Note Files](./chapters/GLASSDALE_EDIT_NOTES.md)
 
 Daily Journal
 * [One to Many Relationships - Filtering by Mood](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md)
 * [Many to Many Relationships - Tagging Journal Entries](./chapters/DAILY_JOURNAL_TAGS.md)
+* [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
 
 Extra Practice
 * [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
