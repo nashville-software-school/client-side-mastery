@@ -28,21 +28,6 @@ Be sure to include this method in the export of the provider
 ```
 
 The response for an animal will include objects for the location and customer information.
-Add the new method to your return at the bottom of `AnimalProvider`.
-
-```js
-return (
-    <AnimalContext.Provider value={
-      {
-        animals, addAnimal, getAnimals, getAnimalById
-      }
-    }>
-      {props.children}
-    </AnimalContext.Provider>
-  )
-```
-
-Here's how the response will look.
 
 ```json
 {
@@ -66,6 +51,20 @@ Here's how the response will look.
 ```
 
 The server (API) did the work for you!!
+
+Add the new method to your return at the bottom of `AnimalProvider`.
+
+```js
+return (
+    <AnimalContext.Provider value={
+      {
+        animals, addAnimal, getAnimals, getAnimalById
+      }
+    }>
+      {props.children}
+    </AnimalContext.Provider>
+  )
+```
 
 ## AnimalCard inside of AnimalList Refactor
 

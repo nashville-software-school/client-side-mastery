@@ -41,7 +41,7 @@ export const AnimalList = () => {
 
 ### Breaking it Down
 
-In the above component, you will notice a 2 new hooks: `useContext` and `useEffect`.
+In the above component, you will notice a two new hooks: `useContext` and `useEffect`.
 
 The `useContext` hook allows you to use data structures and functions that a parent provider component exposes.
 
