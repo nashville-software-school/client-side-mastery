@@ -213,5 +213,3 @@ Suggested files to create:
 * `scripts/locations/LocationDataProvider.js`
 * `scripts/locations/LocationList.js`
 * `scripts/locations/Location.js`
-
-You need a separate main module for locations because those HTML representations are rendered on a separate page. Fish and tips are rendered on the same page, so they use the same main module.

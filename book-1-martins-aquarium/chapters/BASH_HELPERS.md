@@ -1,6 +1,14 @@
 # Bash Functions
 
-Open your zshell initialization file with the following command.
+Open your shell's initialization file with the following command.
+
+If you're using Windows/bash
+
+```sh
+code ~/.bashrc
+```
+
+If you're using MacOS/zsh
 
 ```sh
 code ~/.zshrc
@@ -19,7 +27,6 @@ mg () {
 This function combines `mkdir` and `cd`. If you are in workspace, you can type in the command `mg practice` and it will make the `practice` directory and immediately place you in it.
 
 ## Boilerplate Project Code
-
 
 Then place this content at the bottom of the file and save it.
 
@@ -68,7 +75,13 @@ h1,h2,h3,h4,h5,h6 {
   }
 ```
 
-Back in your terminal, reload the initialization file with the following command.
+Back in your terminal, reload the initialization file with the `source` command.
+
+```sh
+source ~/.bashrc
+```
+
+or
 
 ```sh
 source ~/.zshrc

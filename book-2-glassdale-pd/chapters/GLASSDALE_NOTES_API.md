@@ -157,3 +157,136 @@ const NoteForm = () => {
     // rest of the code here
 }
 ```
+
+Remember, json-server allows you to access your notes data via an HTTP request. That means you can throw `http://wwwlocalhost:8088/notes` into a browser tab URL bar, or use Postman, to `GET` your data. Of course, you can just peek at `notes.json` to see if your POST works, as well. But where's the fun in that? 
+
+## Viewing Notes
+
+Next, it's time to find a way to display the notes in the DOM. Start by updating `index.html` to add a home for your notes. How about a nice sidebar to diplasy the notes in a column.
+
+```html
+
+<!-- existing code -->
+<article class="noteFormContainer"></article>
+<article class="criminalsContainer" id="criminalsContainer"></article>
+
+<!-- new code -->
+<aside class="noteListContainer">
+  <div class="noteListButton"></div>
+  <article class="noteList"></article>
+</aside>
+```
+
+Notice that we've given your user an affordance for doing just that, by adding a `show notes` button. Or at least a spot to dynamically add one. ( Be aware that the button will be at the very bottom of the page until you add the proper styling )
+
+Where do you write that JavaScript button code, though? The note form component shouldn't have that responsibility. You *could* put it in the `NoteList` component, but let's drink the component KoolAid to the fullest and make a whole component just to render that button. Add the following new file to the notes directory.
+
+> **glassdale/scripts/notes/ShowNotesButton.js**
+
+```js
+const contentTarget = document.querySelector(".noteListButton")
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "showNotes") {
+        const customEvent = new CustomEvent("showNotesClicked")
+        eventHub.dispatchEvent(customEvent)
+    }
+})
+
+export const ShowNoteButton = () => {
+    contentTarget.innerHTML = "<button id='showNotes'>Show Notes</button>"
+}
+```
+Here, you display the button and then create a custom event that simply declares the button was clicked. Is that enough? It will be, once your note list component gets in the game. 
+
+First, remember to import and execute `ShowNoteButton()` in main,js.
+
+Then, toss this into `Note.js`  
+> **glassdale/scripts/notes/Note.js**
+
+```js
+export const NoteHTMLConverter = (noteObject) => {
+    return `
+        <section class="note">
+            <div class="note__text">${ noteObject.text }</div>
+            <div class="note__suspect">Title: ${ noteObject.suspect }</div>
+            <div class="note__author">Author: ${ noteObject.author }</div>
+            <div class="note__timestamp">Timestamp: ${ new Date(noteObject.timestamp).toLocaleDateString('en-US')  }</div>
+        </section>
+    `
+}
+```
+
+Now you're ready to fire up your note list component.  
+
+> **glassdale/scripts/notes/NoteList.js**
+
+```js
+import { getNotes, useNotes } from "./NoteProvider.js";
+import { NoteHTMLConverter } from "./Note.js";
+
+// Query the DOM for the element that your notes will be added to 
+const contentTarget = document.querySelector(???)
+// Define ye olde Evente Hubbe
+const eventHub = ???
+
+eventHub.addEventListener("showNotesClicked", customEvent => {
+    NoteList()
+})
+
+const render = (noteArray) => {
+    const allNotesConvertedToStrings = noteArray.map(
+        // convert the notes objects to HTML with NoteHTMLConverter
+
+    ).join("")
+
+    contentTarget.innerHTML = ???
+}
+
+// Standard list function you're used to writing by now. BUT, don't call this in main.js! Why not?
+export const NoteList = () => {
+    getNotes()
+        .then(() => {
+            const allNotes = useNotes()
+            render(allNotes)
+        })
+}
+```
+Pretty standard looking list component, right? Except for that event listener. That's new. Here, instead of calling `NoteList` when the app loads, you want the notes to display only after the user clicks the `show notes` button.
+
+> NOTE: You are going to run across some errors as you build this. Some will be yours, but some will be from the code you've been given. Aren't we stinkers? You'll need to read the errors and use your debugging skills to get past them. Welcome to your new career.
+
+## Styling break
+
+By this point, you should be seeing your notes appear on the page when the button is clicked. Yay! But it probably looks like garbage. Boo. If you just can't look at that mess, this is a great time to throw in some CSS and flex those boxes 'til your `<aside>` is actually, well, on the side.
+
+
+## Synching your API state and App state
+
+Now that you're adding and displaying notes, you're just about ready to show off this latest feature to Chief Watson. But not quite.  
+
+Try adding a new note. Check the db to verify that the new note is there. If it is, good job! You didn't break that code while working on displaying the notes. Look at the DOM, though. It still shows the previous notes. Clicking the notes button will fix that, but it's not a great user experience. The Chief will definitely not want to waste time clicking that button over and over.
+
+To steal a line from *Cool Hand Luke*, what we've got here is a failure to communicate. Your database state has changed. And, thanks to the last couple of lines in `saveNote` in your note provider, your application state has been updated to match that new API state. Then, another helpful custom event has dispatched that news far and wide.
+
+```js
+export const saveNote = note => {
+    let stringifiedObj = JSON.stringify(note)
+    debugger
+    return fetch('http://localhost:8088/notes', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: stringifiedObj
+    })
+    .then(getNotes) // fetch the notes collection containing the newly added note
+    .then(dispatchStateChangeEvent) // tell any component listening that the notes state has been updated
+}
+```
+But, is anyone out there listeneing? Which component needs to know about this important update? Bet you can figure it out. 
+
+Once you do, notice what happens when you add a new note when the note list isn't being shown already. Does the list now display? If so, how might you keep that from happening? 
+
+Discuss with your classmates and try a couple of different solutions to the problem. Which solution is most satisfying. Why? We'd love to hear what you come up with!

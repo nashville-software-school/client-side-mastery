@@ -1,183 +1,179 @@
-# Adding Employees with React
+# Adding Animals with React
 
 ## Goal
 
-In this chapter, you are going to write a component whose responsibility is to create a new employee record and assign that employee to a location.
+In this chapter, you are going to write a component whose responsibility is to create a new animal record with a customer and location.
+
+**You will need to have completed a `LocationProvider` and `CustomerProvider`** before this chapter.
 
 ## New Concepts
 
 * useRef()
 * Inline event handlers
 * `preventDefault()` for forms
+* `useHistory` from react-router-dom
 
 ## Process
 
-### Add Hire Button to List
+### Add New Animal Button to List
 
-In React, you can add the event listener directly on a button's `onClick` attribute instead of writing it as a separate function in the component module.
+In React, we add the event listener directly on a button's `onClick` attribute instead of writing it as a separate function in a component module.
 
-> ##### `src/components/employee/EmployeeList.js`
+`useHistory` is provided by react-router-dom. It contains a method, `push()` which we can use to change the URL. Be sure to import it at the top of the document.
+
+> ##### `src/components/animal/AnimalList.js`
 
 ```jsx
+const history = useHistory()
+
 return (
-    <div className="employees">
-        <h1>Employees</h1>
-        <button onClick={() => props.history.push("/employees/create")}>
-            Add Employee
+    <>
+        <h2>Animals</h2>
+		<button onClick={() => {history.push("/animals/create")}}>
+            Add Animal
         </button>
-        <article className="employeeList">
-            {employees.map(employee => <Employee key={employee.id} employee={employee} />)}
-        </article>
-    </div>
+        <div className="animals">
+        {
+			animals.map(animal => {
+				return <AnimalCard key={animal.id} animal={animal} />
+			})
+        }
+        </div>
+    </>
 )
 ```
 
-### Refactor Employee List Route
-
-Because you need to change the route when the button is clicked, you can use the `history.push()` method that is provided by React Router. In order to make the `history` object available to the **`EmployeeList`** component, the route needs to be rewritten.
-
-> ##### `src/components/ApplicationViews.js`
-
-```jsx
-<Route exact path="/employees" render={
-    props => <EmployeeList {...props} />
-} />
-```
-
-
-Since you are passing a property object to the employee list, you must define a parameters to capture that object.
-
-> ##### `src/components/employee/EmployeeList.js`
-
-```js
-export const EmployeeList = (props) => {
-```
 
 ### Create Route
 
-Now you can create the route that will respond when the button click changes the URL to `/employees/create`.
+Now create the route that will respond when the button click changes the URL to `/animals/create`.
+
+**Consider: what data providers do we need?**
 
 > ##### `src/components/ApplicationViews.js`
 
 ```jsx
-<EmployeeProvider>
-    <Route exact path="/employees" render={
-        props => <EmployeeList {...props} />
-    } />
+<AnimalProvider>
+  <Route exact path="/animals">
+      <AnimalList />
+  </Route>
 
-    <Route exact path="/employees/create" render={
-        props => <EmployeeForm {...props} />
-    } />
-</EmployeeProvider>
+  <CustomerProvider>
+    <LocationProvider>
+      <Route exact path="/animals/create">
+        <AnimalForm />
+      </Route>
+    </LocationProvider>
+  </CustomerProvider>
+</AnimalProvider>
+
 ```
 
 ### Create Component
 
-When you hire an employee, you immediately want to assign that employee to a location. Therefore, you want a dropdown that lists all of the locations. To get all of the locations, you need to use the **`LocationProvider`** component, and then use the Context hook to pull in the location data.
+When you add an animal, you immediately want to assign that animal to a location and customer. Therefore, you want a dropdown list for all of the locations and another list for the customers. To get the data, you need to use the **`LocationProvider`** and **`CustomerProvider`** components along with the Context hooks for each.
 
-> ##### `src/components/employee/EmployeeForm.js`
+> ##### `src/components/animal/AnimalForm.js`
 
 ```js
 import React, { useContext, useRef, useEffect } from "react"
-import { EmployeeContext } from "./EmployeeProvider"
 import { LocationContext } from "../location/LocationProvider"
 import { AnimalContext } from "../animal/AnimalProvider"
-import "./Employees.css"
+import { CustomerContext } from "../customer/CustomerProvider"
+import "./Animal.css"
+import { useHistory } from 'react-router-dom';
 
-export const EmployeeForm = (props) => {
-    const { addEmployee } = useContext(EmployeeContext)
+export const AnimalForm = () => {
+    const { addAnimal } = useContext(AnimalContext)
     const { locations, getLocations } = useContext(LocationContext)
-    const { animals, getAnimals } = useContext(AnimalContext)
+    const { customers, getCustomers } = useContext(CustomerContext)
 
     /*
-        Create references that can be attached to the input
-        fields in the form. This will allow you to get the
-        value of the input fields later when the user clicks
-        the save button.
+    With React, we do not target the DOM with `document.querySelector()`. Instead, our return (render) reacts to state or props
 
-        No more `document.querySelector()` in React.
+    We can create references that can be attached to the input fields in the form. This allows us to get the value of the input fields later once the save button is clicked.
     */
+
     const name = useRef(null)
     const location = useRef(null)
-    const animal = useRef(null)
+    const customer = useRef(null)
+
+    const history = useHistory();
 
     /*
-        Get animal state and location state on initialization.
+    Reach out to the world and get customers state
+    and locations state on initialization.
     */
     useEffect(() => {
-       getAnimals().then(getLocations)
+      getCustomers().then(getLocations)
     }, [])
 
-    const constructNewEmployee = () => {
-        /*
-            The `location` and `animal` variables below are
-            the references attached to the input fields. You
-            can't just ask for the `.value` property directly,
-            but rather `.current.value` now in React.
-        */
-        const locationId = parseInt(location.current.value)
-        const animalId = parseInt(animal.current.value)
+    const handleClickNewAnimal = (event) => {
+    event.preventDefault() //Prevent browser from submitting the form
+    /*
+      The `location` and `customer` variables below are
+      the references attached to the input fields.
+      In React, use `.currentValue` instead of `.value`
+    */
+    const locationId = parseInt(location.current.value)
+    const customerId = parseInt(customer.current.value)
 
-        if (locationId === 0) {
-            window.alert("Please select a location")
-        } else {
-            addEmployee({
-                name: name.current.value,
-                locationId,
-                animalId
-            })
-            .then(() => props.history.push("/employees"))
-        }
+    if (locationId === 0) {
+      window.alert("Please select a location")
+    } else {
+      //the following properties match with the database
+      addAnimal({
+        name: name.current.value,
+        locationId,
+        customerId
+      })
+        .then(() => history.push("/animals"))
+      }
     }
 
     return (
-        <form className="employeeForm">
-            <h2 className="employeeForm__title">New Employee</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="employeeName">Employee name: </label>
-                    <input type="text" id="employeeName" ref={name} required autoFocus className="form-control" placeholder="Employee name" />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="location">Assign to location: </label>
-                    <select defaultValue="" name="location" ref={location} id="employeeLocation" className="form-control" >
-                        <option value="0">Select a location</option>
-                        {locations.map(e => (
-                            <option key={e.id} value={e.id}>
-                                {e.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="location">Caretaker for: </label>
-                    <select defaultValue="" name="animal" ref={animal} id="employeeAnimal" className="form-control" >
-                        <option value="0">Select an animal</option>
-                        {animals.map(e => (
-                            <option key={e.id} value={e.id}>
-                                {e.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            </fieldset>
-            <button type="submit"
-                onClick={evt => {
-                    evt.preventDefault() // Prevent browser from submitting the form
-                    constructNewEmployee()
-                }}
-                className="btn btn-primary">
-                Save Employee
-            </button>
-        </form>
+      <form className="animalForm">
+          <h2 className="animalForm__title">New Animal</h2>
+          <fieldset>
+              <div className="form-group">
+                  <label htmlFor="animalName">Animal name: </label>
+                  <input type="text" id="animalName" ref={name} required autoFocus className="form-control" placeholder="Animal name" />
+              </div>
+          </fieldset>
+          <fieldset>
+              <div className="form-group">
+                  <label htmlFor="location">Assign to location: </label>
+                  <select defaultValue="" name="location" ref={location} id="animalLocation" className="form-control" >
+                      <option value="0">Select a location</option>
+                      {locations.map(l => (
+                          <option key={l.id} value={l.id}>
+                              {l.name}
+                          </option>
+                      ))}
+                  </select>
+              </div>
+          </fieldset>
+          <fieldset>
+              <div className="form-group">
+                  <label htmlFor="customer">Customer: </label>
+                  <select defaultValue="" name="customer" ref={customer} id="customerAnimal" className="form-control" >
+                      <option value="0">Select a customer</option>
+                      {customers.map(c => (
+                          <option key={c.id} value={c.id}>
+                              {c.name}
+                          </option>
+                      ))}
+                  </select>
+              </div>
+          </fieldset>
+          <button className="btn btn-primary"
+            onClick={handleClickNewAnimal}>
+            Save Animal
+          </button>
+      </form>
     )
 }
 ```
-
 ### Wrap it in the Provider Component
 
 You should immediately see the following error.
@@ -204,26 +200,41 @@ This is because you imported the **`LocationProvider`** component and used the C
 </EmployeeProvider>
 ```
 
-### Provider Function to Save Employee
+### Provider Function to Save Animal
 
-Now it is time for you to save your employee. First, create a function in your provider to perform the fetch operation.
+Now it is time for you to save your animal. First, create a function in your provider to perform the fetch operation.
 
 ```js
-const addEmployee = employee => {
-    return fetch("http://localhost:8088/employees", {
+const addAnimal = animal => {
+    return fetch("http://localhost:8088/animals", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(employee)
+        body: JSON.stringify(animal)
     })
-        .then(getEmployees)
+    .then(getAnimals)
 }
 ```
 
-### Show All Employees on Save
+### Show All Animals on Save
 
-You need to use the `history.push()` method again to take the user to a new view. Reference the code above to see how to do the following two tasks.
+Once a new animal has been saved, you will route the user to `/animals`.
 
-1. Provide the React Router history object to the **`EmployeeForm`** component by refactoring **`ApplicationViews`**.
-1. Route the user to `/employees`.
+
+
+## Practice: Hire Employee
+
+Write a component whose responsibility is to hire a new employee, assigned to a location.
+
+
+### Create an EmployeeForm component.
+* Create a route in ApplicationViews for /employees/create that renders an EmployeeForm.
+* Add a button to the employee list labeled, "New Employee".
+* When the button is clicked, show the employee form by using history.push() to change the route.
+* The employee form should include an input for the name and a dropdown for the location.
+* On `Save`, create a new employee object and POST it to the API. The employee object should include the locationId as a foreign key.
+* Once the employee is saved, re-route the user to the list of employees.
+
+### Practice: Open New locations
+Write a component whose responsibility is to open a new location. This will follow a similar pattern.

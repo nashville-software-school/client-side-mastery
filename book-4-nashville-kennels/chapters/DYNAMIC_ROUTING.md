@@ -2,26 +2,28 @@
 
 In this chapter, you will be learning how to render individual resources. So far you are listing all employees, all animals, all customers, and all locations. By the end of the chapter, you will be able to click on one of the cards in the list view and only view the details of a specific item.
 
-You are going to start with employees. You are going to change the list of employees to display the employee name, as a hyperlink, and then have a separate component for displaying more details.
+You are going to start with animals. You are going to change the list of animals to display the animal name, as a hyperlink, and then have a separate component for displaying more details.
 
-## New Employee Details Component
+You will need to add a method to the `AnimalProvider` to get a single animal by id.
+
+## AnimalProvider
+
+## New Animal Details Component
 
 With the code below, you will create a new component in the employee directory which will be responsible for showing all the details of the employee.
 
-Note that you are using the `useEffect()` hook to listen for state change event dispatch for animals, employees, and locations. When the data is finally pulled into application state from the API, the animal and location that is related to the current employee is determined with `.find()` methods.
 
-> ##### `/src/components/employee/EmployeeDetail.js`
+> ##### `/src/components/animal/AnimalDetail.js`
 
 ```jsx
 import React, { useState, useEffect, useContext } from "react"
 import { AnimalContext } from "../animal/AnimalProvider"
-import { LocationContext } from "../location/LocationProvider"
-import { EmployeeContext } from "./EmployeeProvider"
-import "./Employees.css"
+import { useParams } from "react-router-dom"
+import "./Animal.css"
 
 
-export const EmployeeDetail = (props) => {
-    const { animals, getAnimals } = useContext(AnimalContext)
+export const AnimalDetail = (props) => {
+    const { animals, getOneAnimal } = useContext(AnimalContext)
     const { locations, getLocations } = useContext(LocationContext)
     const { employees, getEmployees } = useContext(EmployeeContext)
 

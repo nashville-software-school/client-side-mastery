@@ -32,13 +32,13 @@ Before we grow this application, let's create a meaningful directory structure.
 3. `touch` `Kennel.js` and `Kennel.css`.
 4. Within components, `mkdir` an `animal` directory
 5. `cd` into the `animal` directory.
-6. `touch Animal.js Animal.css`
+6. `touch AnimalCard.js Animal.css`
 
 ```
 - src
     - components
         - animal
-            - Animal.js
+            - AnimalCard.js
             - Animal.css
         - Kennel.js
         - Kennel.css
@@ -74,9 +74,12 @@ export const Kennel = () => (
 
 Some of this looks familiar, sort of. This is simply another way of building a JavaScript object (Kennel) that has a single property -- a method called render -- that returns an HTML representation of some (hard-coded) data. You've done all of that before.
 
-That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code, so we can better visualize what the eventual rendered HTML structure will look like.
+That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code. With JSX, we can better visualize the eventual rendered HTML structure.
 
 Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a factory function. It's just a function that returns an object.
+
+**What is `<>` and `</>`**
+Remember, within a function, the return can only return one thing. This is a `React.Fragment` and gives us the ability to wrap the content and return one item.
 
 To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
 
@@ -97,7 +100,7 @@ ReactDOM.render(
 
 ## Starting Your React Application
 
-Make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory. Once there in your terminal, type the following command.
+Make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory. Once there, in your terminal, type the following command.
 
 ```sh
 npm start
@@ -111,13 +114,13 @@ After the company information, we want to list all of the animals. I **could** h
 
 Therefore, I'm going to create another component for displaying an animal. Consider how we have structured our previous projects and make a new file specific to the animal display. Copy pasta the following code into the following file.
 
-> ##### `src/components/animal/Animal.js`
+> ##### `src/components/animal/AnimalCard.js`
 
 ```jsx
 import React from "react"
 import "./Animal.css"
 
-export const Animal = () => (
+export const AnimalCard = () => (
     <section className="animal">
         <h3 className="animal__name">Doodles</h3>
         <div className="animal__breed">Breed: Poodle</div>
@@ -125,15 +128,15 @@ export const Animal = () => (
 )
 ```
 
-This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<Animal />`. React interprets this as a component and will run the function that you imported from `Animal.js` and then render the JSX that it defines.
+This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<AnimalCard />`. React interprets this as a component and will run the function that you imported from `AnimalCard.js` and then render the JSX that it defines.
 
-Update your **`Kennel`** component with the code provided below. Now when the **`Kennel`** component is rendered it will render 3 child **`Animal`** components.
+Update your **`Kennel`** component with the code provided below. Be sure to import the **`AnimalCard`**. Now when the **`Kennel`** component is rendered it will display 3 child **`AnimalCard`** components.
 
 > ##### `src/components/Kennel.js`
 
 ```jsx
 import React from "react"
-import { Animal } from "./animal/Animal"
+import { AnimalCard } from "./animal/AnimalCard"
 import "./animal/Animal.css"
 
 export const Kennel = () => (
@@ -148,15 +151,16 @@ export const Kennel = () => (
 
         <h2>Animals</h2>
         <article className="animals">
-            <Animal />
-            <Animal />
-            <Animal />
+            <AnimalCard />
+            <AnimalCard />
+            <AnimalCard />
         </article>
     </>
 )
 ```
 
 ## Kennel Styles
+In React, we add classes to a component with `className` instead of `class`.
 
 > ##### `src/components/Kennel.css`
 

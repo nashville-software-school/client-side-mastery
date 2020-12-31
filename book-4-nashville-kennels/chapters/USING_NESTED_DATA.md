@@ -1,6 +1,6 @@
 # Individual Items with Nested Data
 
-In this chapter, you are going to use one of the features of `json-server` to get nested data back from the API instead of getting flat data and performing the joins in JavaScript.
+In this chapter, you are going to use one of the features of `json-server` to get nested data back from the API.
 
 You are going to do this with animals.
 
@@ -14,26 +14,20 @@ Add the following method to the animal provider. It allows any component to get 
 
 ```js
 const getAnimalById = (id) => {
-    return fetch(`http://localhost:8088/animals/${ id }?_expand=location&_expand=customer`)
+    return fetch(`http://localhost:8088/animals/${id}?_expand=location&_expand=customer`)
         .then(res => res.json())
 }
 ```
-
-Add the new method to your return at the bottom of `AnimalProvider`.
-
+Be sure to include this method in the export of the provider
 ```js
-return (
-    <AnimalContext.Provider value={
-      {
-        animals, addAnimal, getAnimals, getAnimalById
-      }
-    }>
-      {props.children}
-    </AnimalContext.Provider>
-  )
+<AnimalContext.Provider value={{
+    animals, addAnimal, getAnimals, getAnimalById
+    }}>
+        {props.children}
+</AnimalContext.Provider>
 ```
 
-Here's how the response will look.
+The response for an animal will include objects for the location and customer information.
 
 ```json
 {
@@ -50,20 +44,32 @@ Here's how the response will look.
   },
   "customer": {
     "email": "steve@stevebrownlee.com",
-    "password": "123",
     "name": "Steve Brownlee",
     "id": 4
   }
 }
 ```
 
-This eliminates the need to get all of the locations, and all of the customers and use `.find()` array method to get the matching ones inside your code.
+The server (API) did the work for you!!
 
-The server did the work for you!!
+Add the new method to your return at the bottom of `AnimalProvider`.
 
-## Animal List Refactor
+```js
+return (
+    <AnimalContext.Provider value={
+      {
+        animals, addAnimal, getAnimals, getAnimalById
+      }
+    }>
+      {props.children}
+    </AnimalContext.Provider>
+  )
+```
 
-Just like you did with the employee list, the animal list will now just show a list of animal names, which are hyperlinks. When you click on one animal name, an animal detail component will render.
+## AnimalCard inside of AnimalList Refactor
+
+Change the AnimalCard to display animal names, as hyperlinks. When you click on one animal name, an animal detail component will render.
+
 
 > ##### `/src/components/animal/AnimalList.js`
 
@@ -107,12 +113,12 @@ import React from "react"
 import "./Animals.css"
 import { Link } from "react-router-dom"
 
-export const Animal = ({ animal }) => (
+export const AnimalCard ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
-            <Link to={`/animals/${animal.id}`}>
-                { animal.name }
-            </Link>
+          <Link to={`/animals/detail/${animal.id}`}>
+            { animal.name }
+          </Link>
         </h3>
         <div className="animal__breed">{ animal.breed }</div>
     </section>
@@ -121,65 +127,77 @@ export const Animal = ({ animal }) => (
 
 ## New Animal Details Component
 
-Create a new component in the animal directory which will be responsible for showing all the details of the animal.
+Create a new component in the animal directory which will be responsible for showing all the details of an animal. Consider the flow of a React component. What will you need to store as state? Will you need `useEffect`?
+
+We will also include `useParams` from react-router-dom allowing the app to read a parameter from the URL.
 
 > ##### `/src/components/animal/AnimalDetail.js`
 
-```js
+```jsx
 import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import "./Animals.css"
+import "./Animal.css"
+import { useParams, useHistory } from "react-router-dom"
 
-export const AnimalDetails = (props) => {
-    const { releaseAnimal, getAnimalById } = useContext(AnimalContext)
+export const AnimalDetail = () => {
+  const { getAnimalById } = useContext(AnimalContext)
 
-    const [animal, setAnimal] = useState({ location: {}, customer: {}})
+	const [animal, setAnimal] = useState({})
 
-    useEffect(() => {
-        const animalId = parseInt(props.match.params.animalId)
-        getAnimalById(animalId)
-            .then(setAnimal)
+	const {animalId} = useParams();
+	const history = useHistory();
+
+  useEffect(() => {
+    console.log("useEffect", animalId)
+    getAnimalById(animalId)
+    .then((response) => {
+      setAnimal(response)
+    })
     }, [])
 
-    return (
-        <section className="animal">
-            <h3 className="animal__name">{animal.name}</h3>
-            <div className="animal__breed">{animal.breed}</div>
-            <div className="animal__location">Location: {animal.location.name}</div>
-            <div className="animal__owner">Customer: {animal.customer.name}</div>
-            <button onClick={
-                () => {
-                    releaseAnimal(animal)
-                        .then(() => {
-                            props.history.push("/animals")
-                        })
-                }
-            }>
-                Release Animal
-            </button>
-            <button onClick={() => {
-                props.history.push(`/animals/edit/${animal.id}`)
-            }}>Edit</button>
-        </section>
-    )
+  return (
+    <section className="animal">
+      <h3 className="animal__name">{animal.name}</h3>
+      <div className="animal__breed">{animal.breed}</div>
+      {/* What's up with the question mark???? See below.*/}
+      <div className="animal__location">Location: {animal.location?.name}</div>
+      <div className="animal__owner">Customer: {animal.customer?.name}</div>
+    </section>
+  )
 }
 ```
+Immediate properties of an empty object will not break, however nested properties of an empty object will. Use [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator to prevent nested values from breaking the code. Try with and without the `?.`
 
 ## Create a New Dynamic Route
 
-Again, just like employees, you have to support a route like the following.
+A dynamic route component is one that matches a pattern. Notice the route that renders **`AnimalDetail`**. The `animalId` is a parameter passed on the URL.
+
+```js
+<Route exact path="/animals/detail/:animalId(\d+)">
+    <AnimalDetail />
+</Route>
+```
+
+It has `:animalId(\d+)` at the end of the URL. If the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in a variable named `animalId`. The variable can then be used inside **`AnimalDetail`**.
+
+Look back at the code you put in the detail component.
+
+See the `const {animalId} = useParams();`
+
+This is how you access the number 3 inside the component. It's part of the routing package (react-router-dom) you installed. Don't worry, that one's tricky. We'll help you remember it.
+
+
+Within ApplicationViews, add the route for animal details within the **AnimalProvider** component. You will need to support a route like the following.
 
 http://localhost:3000/animals/7
-
-We need that 7 in the component so we can get that animal from the API. It's stored in `props.match.params.animalId` in the code above.
 
 > ##### `/src/components/ApplicationViews.js`
 
 ```js
 <AnimalProvider>
-    <Route path="/animals/:animalId(\d+)" render={
-        props => <AnimalDetails {...props} />
-    } />
+   <Route exact path="/animals/detail/:animalId(\d+)">
+		<AnimalDetail />
+	</Route>
 </AnimalProvider>
 ```
 
@@ -189,11 +207,23 @@ Now when you click on an animal's name in the list view, you should see your new
 
 ![image of animal detail view](./images/animal-details.gif)
 
+## Practice: Employees
+
+Refactor your employee components. Start with a list of employee names that when clicked, displays the full details about an employee.
+
 ## Practice: Locations
+Refactor your location components. Start with your location list and display the location name, the number of employees, and the number of animals currently being treated for each location.
 
-Your next task is to refactor your location components. On your location list, display the location name, the number of animals currently being treated, and the number of employees.
+When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being treated, and the names of all employees working there. You can use the json-server feature: `_embed`.
 
-When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being treated, and the names of all employees working there.
+Your starting API call will look similar to this:
+
+```js
+http://localhost:8088/locations?_embed=employees_embed=animals
+
+```
+
+How do you return the information about one location?
 
 > **Tip:** You don't need all of the fancy styling like you see below. Just get the information displayed.
 

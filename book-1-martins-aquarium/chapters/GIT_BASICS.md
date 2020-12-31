@@ -10,7 +10,31 @@ Github is a tool which allows you to easily share your code with other people, r
 
 ## Configure Git on Your Machine
 
-You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
+### Git Version
+
+Before we configure git, let's make sure your computer is up-to-date with a modern version. Run the following command.
+
+```sh
+git --version
+```
+
+You should see something like the following:
+
+```sh
+git version 2.29.2
+```
+
+Any version greater than `2.27` is sufficient. If you have a lesser version, you will need to upgrade. Let your instructor know and they will help you.
+
+### Configuring Git
+
+First we'll configure git to use `main` as the default branch instead of `master`.
+
+```sh
+git config --global init.defaultBranch main
+```
+
+Next, we'll tell git who you are. You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
 
 ![username and email](./images/git-username-email.png)
 
@@ -26,6 +50,13 @@ Then use the following command, but instead of typing `email@example.com`, enter
 git config --global user.email "email@example.com"
 ```
 
+Finally, we will tell git which _merge strategy_ to use when we do a `git pull`.
+
+```sh
+git config --global pull.rebase false
+```
+
+> **NOTE:** We don't expect you to understand the above. Don't worry.
 
 ## Creating a Git Repository for Aquarium
 
@@ -48,7 +79,7 @@ This is the process you will be following thousands of times while you are here 
 ```sh
 git add --all
 git commit -m "Message about commit"
-git push origin master
+git push origin main
 ```
 
 ### Commit Aquarium
