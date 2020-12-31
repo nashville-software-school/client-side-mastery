@@ -43,7 +43,7 @@ The magic is the `.git` directory that gets create when the `git init` command i
 
 ### Workflow to Remember
 
-This is the process you will be following thousands of times while you are here at NSS. You tell git to track changes first, then you commit those changes, and then upload your changes to Github.
+This is the process you will be following thousands of times while you are here at NewForce. You tell git to track changes first, then you commit those changes, and then upload your changes to Github.
 
 ```sh
 git add --all
@@ -93,7 +93,7 @@ The first thing you need to do is create a new repository on Github's platform t
 1. Log into your Github account.
 1. Click the `+` sign in the top right corner.
 1. Choose "New repository".
-1. In the "Repository name" field, enter in `nss-aquarium`.
+1. In the "Repository name" field, enter in `newforce-aquarium`.
 1. Scroll down and click the green "Create Repository" button.
 1. Copy the repository's connection string.
     ![](./images/copy-github-connection-string.gif)

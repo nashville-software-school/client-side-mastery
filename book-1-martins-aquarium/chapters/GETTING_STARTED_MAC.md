@@ -6,7 +6,7 @@ Get a nice journal and a comfortable pen, and start keeping a daily journal of w
 
 ## Hardware
 
-Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive RIGHT NOW and start backing up your entire hard drive.
+Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending NewForce you will have that power. Go buy a backup drive RIGHT NOW and start backing up your entire hard drive.
 
 **Seriously, right now!**
 
@@ -22,7 +22,7 @@ Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
 
 ### devdocs.io
 
-Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NSS.
+Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NewForce.
 
 ## Spectacle
 
@@ -107,7 +107,7 @@ xcode-select --install
 
 ## Git
 
-Git is how you and your teammates will work on a shard codebase during your time at NSS. Type in the following command to install.
+Git is how you and your teammates will work on a shard codebase during your time at NewForce. Type in the following command to install.
 
 ```sh
 brew install git

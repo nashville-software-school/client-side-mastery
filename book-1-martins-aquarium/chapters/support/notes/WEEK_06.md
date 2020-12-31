@@ -37,7 +37,7 @@ o 1:1 start at 13:45
 o Meet their little sibs at 15:30
 
 * Started by stating that the goal of the the code for today is so that when a detective records a note, she can specify the criminal that the note is about. The name of the criminal should come from the API, and should not be typed by the detective. Thus, we need a foreign key called `criminalId`.
-* 🌟🌟🌟 Make a point to tell students that data relationships is the most important technical learning objective at NSS 🌟🌟🌟
+* 🌟🌟🌟 Make a point to tell students that data relationships is the most important technical learning objective at NewForce 🌟🌟🌟
 * Polled students to see if eveyone had watched the videos in the chapter. Not everyone had. I told everyone who had not watched them to go do it now.
 * About 30 minutes later, I fired up dbdiagram.io and copy pasta the table definitions from the chapter. Gave a vocabulary review.
     1. Collections of data in a database are called tables.

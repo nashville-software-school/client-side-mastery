@@ -62,7 +62,7 @@ alias gcm="git commit -m "
 alias gb="git checkout -b "
 
 # Change the remote repository URL. This is useful when you
-# clone an instructors, or one of NSS's boilerate, repositories
+# clone an instructors, or one of NewForce's boilerate, repositories
 # and want to then have the code on your account and you don't
 # want to fork.
 #

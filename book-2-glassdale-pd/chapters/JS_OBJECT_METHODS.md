@@ -2,7 +2,7 @@
 
 ## Why are you Learning This?
 
-Since objects are the core concept behind Object Oriented Programming - what you are learning here at NSS - this chapter is going to prepare you for working with object methods which allow you to search object key and values and display them with more ease.
+Since objects are the core concept behind Object Oriented Programming - what you are learning here at NewForce - this chapter is going to prepare you for working with object methods which allow you to search object key and values and display them with more ease.
 
 You are also going to learn a new kind of `for` loop in JavaScript. It's the [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop.
 

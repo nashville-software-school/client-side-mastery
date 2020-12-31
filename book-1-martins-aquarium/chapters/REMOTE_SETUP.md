@@ -1,4 +1,4 @@
-# Welcome new NSS students!
+# Welcome new NewForce students!
 
 ## Installing Zoom Remote Classroom
 

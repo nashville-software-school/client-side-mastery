@@ -54,7 +54,7 @@ export const useJournalEntries = () => {
 
 ### More Journal Entries
 
-Take a few minutes and add two or three more JavaScript objects to represent journal entries for some other things that you have learned about so far at NSS.
+Take a few minutes and add two or three more JavaScript objects to represent journal entries for some other things that you have learned about so far at NewForce.
 
 Make sure you increment the `id` property of each journal entry by 1 each time you add a new object. For example, if you manually create another one right now it should looks like this.
 
