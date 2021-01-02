@@ -96,7 +96,5 @@ export const Animal = ({ animal, customer, location }) => (
 
 Then display the name property of each one.
 
-```
-
 Now the **`AnimalForm`** component can access data from all of the data providers to produce dropdown options.
 ![animal card showing name of customer and location](./images/animals-after-join.png)
