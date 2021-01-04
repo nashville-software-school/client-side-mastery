@@ -6,7 +6,7 @@
 |--|--|--|--|
 | 1 | [Basic React Vocabulary](./chapters/REACT_BASICS.md) | [Store Locations](./chapters/KK_STORES.md) |   |
 | 2 | [Kennel API](./chapters/KENNEL_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub>  | [Kandy Korner API](./chapters/KANDY_API.md) | [Thorns &amp; Roses API](./chapters/TR_API.md)  |
-| 3 | [Intro To Props and State](./chapters/PROPS_STATE_Intro.md) | | |
+| 3 | [Intro To Props and State](./chapters/PROPS_STATE_INTRO.md) | | |
 | 4 | [Navigation Bar with Routing](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #navigation</sub>  | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) | [Retailers, Distributors and Nurseries](./chapters/TH_NAVBAR.md)  |
 | 5 | [Animal Data Provider](./chapters/DATA_PROVIDER.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #providers #context</sub>  |  |   |
 | 6 | [Listing Animals](./chapters/LIST_USECONTEXT.md) <br/> <sub style="font-size:0.85rem;">#useContext #properties #providers </sub>  | [Inventory](./chapters/KK_INVENTORY.md) | |
