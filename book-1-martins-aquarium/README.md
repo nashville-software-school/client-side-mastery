@@ -25,6 +25,7 @@
 
 ## Supplementary Content
 
+* Supplemental Chapter - [DOM Prep](./chapters/DOM.md)
 * Supplemental Chapter - [Muscle Memory: Functions](./chapters/JS_FUNCTION_BASICS.md)
 * Supplemental Chapter - [*EXTRA: Function Practice*](./chapters/FUNCTION_PRACTICE.md)
 * Supplemental Chapter - [Scope in JavaScript](./chapters/JS_SCOPE.md)
