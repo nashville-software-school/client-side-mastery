@@ -104,17 +104,6 @@ printOrderTotal(totalPriceForThisOrder)
 
 ```
 
-## Videos to Watch
-
-1. NSS Learning Team video showing the usage of [functions as sub-programs](https://www.youtube.com/watch?v=XBVombfX-lQ&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC&index=1)
-1. [Functions Introduction to JavaScript Learn JavaScript](https://www.youtube.com/watch?v=cX4tVeJXp3Y)
-1. [Javascript Tutorial For Beginners - #3 Javascript Functions Tutorial](https://www.youtube.com/watch?v=AY6X5jZZ_JE)
-1. [What the Function: Introduction to Javascript Functions - 1 of 3](https://www.youtube.com/watch?v=hVHl20w0glE)
-1. [What the Function: Writing Your Own JavaScript Functions - 2 of 3](https://www.youtube.com/watch?v=Q_GZtTwhjFQ)
-1. [What the Function: Higher Order Functions - 3 of 3](https://www.youtube.com/watch?v=jE7MAh2EgSQ)
-1. [ES6 Arrow Functions in JavaScript tutorial](https://www.youtube.com/watch?v=_pfXEv9cFGE)
-1. [Understanding Closures (In Under 10 Minutes!)](https://www.youtube.com/watch?v=rBBwrBRoOOY)
-1. [Javascript Closures Tutorial - What makes Javascript Weird...and Awesome Pt 3](https://www.youtube.com/watch?v=ZqGFKcCcO-Y)
 
 ## Practice: ChickenMonkey
 
@@ -435,3 +424,16 @@ addExcitement(sentence, "*", 4)
 > Challenges are optional exercises that you can work once you've completed all the practice exercises and understand the concepts in them.
 
 Watch the video (_see above_) about arrow functions, and see if you can rewrite `addExcitement` using that syntax.
+
+## Supplemental Videos
+## Videos to Watch
+
+1. NSS Learning Team video showing the usage of [functions as sub-programs](https://www.youtube.com/watch?v=XBVombfX-lQ&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC&index=1)
+1. [Functions Introduction to JavaScript Learn JavaScript](https://www.youtube.com/watch?v=cX4tVeJXp3Y)
+1. [Javascript Tutorial For Beginners - #3 Javascript Functions Tutorial](https://www.youtube.com/watch?v=AY6X5jZZ_JE)
+1. [What the Function: Introduction to Javascript Functions - 1 of 3](https://www.youtube.com/watch?v=hVHl20w0glE)
+1. [What the Function: Writing Your Own JavaScript Functions - 2 of 3](https://www.youtube.com/watch?v=Q_GZtTwhjFQ)
+1. [What the Function: Higher Order Functions - 3 of 3](https://www.youtube.com/watch?v=jE7MAh2EgSQ)
+1. [ES6 Arrow Functions in JavaScript tutorial](https://www.youtube.com/watch?v=_pfXEv9cFGE)
+1. [Understanding Closures (In Under 10 Minutes!)](https://www.youtube.com/watch?v=rBBwrBRoOOY)
+1. [Javascript Closures Tutorial - What makes Javascript Weird...and Awesome Pt 3](https://www.youtube.com/watch?v=ZqGFKcCcO-Y)
