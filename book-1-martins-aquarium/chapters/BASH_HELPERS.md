@@ -1,9 +1,14 @@
 # Bash Functions
 
-Open your zshell initialization file with the following command.
-
+Open your shell initialization file with the following command.
+#### On Macs:
 ```sh
 code ~/.zshrc
+```
+
+#### On Windows:
+```sh
+code ~/.bashrc
 ```
 
 ## Make a Directory and Immediately Navigate to It
@@ -70,8 +75,14 @@ h1,h2,h3,h4,h5,h6 {
 
 Back in your terminal, reload the initialization file with the following command.
 
+#### On Macs:
 ```sh
 source ~/.zshrc
+```
+
+#### On Windows:
+```sh
+source ~/.bashrc
 ```
 
 Now in your terminal, you can create a new directory and type `simplehtml` and it will create the boilerplate files for you.
