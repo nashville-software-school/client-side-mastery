@@ -10,9 +10,11 @@ Close your terminal and reopen, then check version.
 ###Windows Users
 Here are the commands to run in your terminal if you are on a Windows machine.
 
-```sudo add-apt-repository ppa:git-core/ppa
+```
+sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
-sudo apt install git```
+sudo apt install git
+```
 
 Close your terminal and reopen, then check version.
 ```$ git --version```
