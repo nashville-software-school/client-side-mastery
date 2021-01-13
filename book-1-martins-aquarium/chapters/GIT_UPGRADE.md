@@ -16,3 +16,7 @@ Here are the commands to run in your terminal if you are on a Windows machine.
 
 Close your terminal and reopen, then check version.
 ```$ git --version```
+
+If you were unable to upgrade your git to the latest version, let one of your instructors help you.
+
+To return to the GIT_BASICS chapter, click [here](book-1-martins-aquarium/chapters/GIT_BASICS.md)
