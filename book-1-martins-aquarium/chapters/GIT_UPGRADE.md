@@ -26,4 +26,4 @@ Close your terminal and reopen, then check version.
 
 If you were unable to upgrade your git to the latest version, let one of your instructors help you.
 
-To return to the GIT_BASICS chapter, click [here](book-1-martins-aquarium/chapters/GIT_BASICS.md)
+To return to the GIT_BASICS chapter, click [here](./GIT_BASICS.md)

@@ -24,7 +24,7 @@ You should see something like the following:
 git version 2.29.2
 ```
 
-Any version greater than `2.27` is sufficient. If you have a lesser version, you will need to upgrade. If you need to upgrade git, click [here](book-1-martins-aquarium/chapters/GIT_BASICS.md).
+Any version greater than `2.27` is sufficient. If you have a lesser version, you will need to upgrade. If you need to upgrade git, click [here](./GIT_UPGRADE.md).
 
 ### Configuring Git
 
