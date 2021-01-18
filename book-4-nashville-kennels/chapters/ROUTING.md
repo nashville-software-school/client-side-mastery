@@ -91,7 +91,7 @@ In the **`ApplicationViews`** component, you will define how your application wi
 **For this example, convert the static content of the `Kennel` component into a `Home` component.
 
 > ##### `src/components/Home.js`
-```
+```jsx
 import React from "react";
 import { PropsAndState } from './PropsAndState'
 
@@ -111,7 +111,7 @@ export const Home = () => (
 
 > ##### `src/components/ApplicationViews.js`
 
-```js
+```jsx
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"

@@ -38,7 +38,7 @@ export const Register = (props) => {
                             name: `${firstName.current.value} ${lastName.current.value}`
                         })
                     })
-                        .then(_ => _.json())
+                        .then(res => res.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 localStorage.setItem("kennel_customer", createdUser.id)
@@ -221,4 +221,3 @@ fieldset {
 ' > ./Login.css
 
 curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-4-nashville-kennels/chapters/images/logo.png > logo.png
-

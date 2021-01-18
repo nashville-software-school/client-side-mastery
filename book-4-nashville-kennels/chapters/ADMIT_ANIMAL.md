@@ -4,7 +4,7 @@
 
 In this chapter, you are going to write a component whose responsibility to is create a new employee assigned to a location.
 
-Refer back to the [Adding an Animal](./FORMS_USEREF.md) chapter to review how to make a form in React.
+Refer back to the [Adding an Animal](./FORMS_CONTROLLED_COMPONENT.md) chapter to review how to make a form in React.
 
 1. Create an **`EmployeeForm`** component.
 1. Create a route in **`ApplicationViews`** for `/employees/create` that renders **`EmployeeForm`**.
@@ -14,5 +14,5 @@ Refer back to the [Adding an Animal](./FORMS_USEREF.md) chapter to review how to
 1. When user saves the employee, create a new employee object and save it to the API. Make sure that the employee object has the `locationId` foreign key on it.
 1. Once the employee is saved, re-route the user to the list of employees.
 
-## New locations 
-Practice adding new locations. This will follow a similar pattern. 
+## New locations
+Practice adding new locations. This will follow a similar pattern.
