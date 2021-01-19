@@ -28,14 +28,14 @@ cd ~/workspace/modern-farm
 
 After that runs, you can use the `code .` command to view the code, and then move on to the next section.
 
-## Repository Setup
+## Git Repository Setup
 
-The install script also ran the `git init` command for you in the `~/workspace/modern-farm` directory.
+The install script also ran the `git init` command for you in the `~/workspace/modern-farm` directory. You don't need to run it again.
 
 > **Note:** If you need help with these steps, please talk to your instructors. It's important that they are done in the exact order specified and use the exact values specified.
 
 1. Log into your Github account.
-1. Create a new repository named `modern-farm`.
+1. Create a new repository on GitHub named `modern-farm`.
 1. Once the repo is created, click the "Clone or download" button. Make sure the "Clone with HTTPS" option is chosen, not SSH.
 1. Copy the URL.
 1. Then use the following command to connect your local repository to the Github repository.
@@ -63,15 +63,15 @@ Once the process completes, then run the following command to start the automate
 npm run test
 ```
 
-You should see the following output. Again, if you don't visit an instructor.
+You should some output that looks like this. It **should say that your tests have failed**. That's ok! They're supposed to fail at this point. As you write code, the tests will start to pass. If you don't see any output at all, visit an instructor. 
 
 ![](./images/modern-farm-automated-tests.gif)
 
-As you start to create the files, and then write the correct JavaScript code for this application, tests will start to pass. Make sure you come back to the terminal as you write code to see if your code works the way it is expected.
+Make sure you come back to the terminal as you write code to see if your code works the way it is expected.
 
 ## Start Your Web Server
 
-1. Open up your new project in VS Code and click "Go Live"
+1. Open up your project in VS Code and click "Go Live"
 
 ## Creating a Harvest Plan
 
