@@ -12,6 +12,8 @@ In this project, you will be practicing the following skills.
 
 ## Setup
 
+> You have to follow all of these steps in order for this to work.
+
 Open a new terminal window, copy pasta the following command into the terminal and hit enter to run it. It will create a basic file structure for you and create some starter code in the `~/workspace/modern-farm` directory.
 
 ```sh
@@ -34,7 +36,7 @@ The install script also ran the `git init` command for you in the `~/workspace/m
 
 1. Log into your Github account.
 1. Create a new repository named `modern-farm`.
-1. Once the repo is created, click the "Clone or download" button. Make sure the "Clone with SSH" option is chosen, not HTTPS.
+1. Once the repo is created, click the "Clone or download" button. Make sure the "Clone with HTTPS" option is chosen, not SSH.
 1. Copy the URL.
 1. Then use the following command to connect your local repository to the Github repository.
 
@@ -42,11 +44,6 @@ The install script also ran the `git init` command for you in the `~/workspace/m
 git remote add origin paste_your_github_repo_url_here
 ```
 
-For example, it would look like this. Make sure you use the SSH version when you copy the URL from your Github repository.
-
-```sh
-git remote add origin git@github.com:yourusername/modern-farm.git
-```
 
 ## Automated Tests
 
@@ -74,11 +71,7 @@ As you start to create the files, and then write the correct JavaScript code for
 
 ## Start Your Web Server
 
-1. Keep your current terminal running, and open a new one so that you have two active terminals open.
-1. In the new terminal session you created, make sure you navigate back to the `~/workspace/modern-farm` directory
-1. Then use `cd` to navigate to the `src` sub-directory and start your web server.
-
-![](./images/modern-farm-web-server.gif)
+1. Open up your new project in VS Code and click "Go Live"
 
 ## Creating a Harvest Plan
 
