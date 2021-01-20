@@ -4,7 +4,9 @@
 
 When working with the Git/Github workflow, there are several commands that you type over, and over, and over again. One of those is `git push origin myBranchName`. It becomes tedious to constantly type `git push origin`. Let's create an alias for it.
 
-Open the `.zshrc` initialization file in Visual Studio Code, and enter in the following alias.
+> If you're on a mac, you will be doing all of this work in your `.zshrc` file. If you're on Windows, you will be doing this in your `.bashrc` file. 
+
+Open the `.zshrc` / `.bashrc` initialization file in Visual Studio Code, and enter in the following alias.
 
 `alias gpo="git push origin "`
 
@@ -12,7 +14,7 @@ Open the `.zshrc` initialization file in Visual Studio Code, and enter in the fo
 
 Save the file, and reload your init file with the `source` command.
 
-`source ~/.zshrc`
+`source ~/.zshrc` or `source ~/.bashrc`
 
 The next time you need to push a local branch to Github, you can use this alias to save yourself a lot of typing.
 
@@ -75,7 +77,7 @@ changeorigin () {
 
 ## Adding to your Help Function
 
-Open `~/.zshrc` and add some git commands to your help manual.
+Open `~/.zshrc`/ `.bashrc` and add some git commands to your help manual.
 
 ```sh
 help () {
