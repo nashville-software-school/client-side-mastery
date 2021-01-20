@@ -2,7 +2,7 @@
 
 Your data providers have so far been fairly simple modules. They have a module-scoped data structure that contains the raw data for a resource used within the application. They also include a few methods: get, create, edit, or delete data from the API.
 
-Here's an example vanilla JavaScript code for a data provider.
+Here's an example vanilla JavaScript module for a data provider.
 
 > **This is example VanillaJS code. Do not make this file in your app.**
 
@@ -122,7 +122,7 @@ You define a single property for each provider defined in your system. This is b
 
 ### Defining State Within a Component
 
-Next, you will use the State hook to define a variable that holds the state of the component, **and** a function that updates it.
+Next, you will use the `useState()` hook to define a variable that holds the state of the component, **and** a function that updates it.
 
 ```js
 const [animals, setAnimals] = useState([])

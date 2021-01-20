@@ -1,6 +1,6 @@
 # React Props and State
 
-Inside of components, make another file `PropsAndState.js`.
+Inside of the `components` directory, make another file `PropsAndState.js`.
 
 
 ## Props
@@ -24,7 +24,7 @@ Display this component from the *Kennel* component and pass in your name. Don't 
 > Kennel.js
 ```
 //--------
- <PropsAndState yourName={"Brenda"} />
+ <PropsAndState yourName="Brenda" />
   <h2>Animals</h2>
   <article className="animals">
     <AnimalCard />
@@ -45,7 +45,7 @@ Display this component from the *Kennel* component and pass in your name. Don't 
 
 #### Goal: Display how many times a button has been clicked.
 
-Within the **StateAndProps** component, we will define state and a function to update state with the `useState` hook. We will also create a function `to handleClick`.
+Within the **StateAndProps** component, we will define state and a function to update state with the `useState` hook. We will also create a function to `handleClick`.
 
 > PropsAndState.js - updated
 ```
@@ -70,7 +70,3 @@ export const PropsAndState = ({ yourName }) => {
   )
 }
 ```
-
-
-
-

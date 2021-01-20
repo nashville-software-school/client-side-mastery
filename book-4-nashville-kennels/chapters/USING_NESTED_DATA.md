@@ -52,12 +52,61 @@ The response for an animal will include objects for the location and customer in
 
 The server (API) did the work for you!!
 
+Add the new method to your return at the bottom of `AnimalProvider`.
+
+```js
+return (
+    <AnimalContext.Provider value={
+      {
+        animals, addAnimal, getAnimals, getAnimalById
+      }
+    }>
+      {props.children}
+    </AnimalContext.Provider>
+  )
+```
+
 ## AnimalCard inside of AnimalList Refactor
 
 Change the AnimalCard to display animal names, as hyperlinks. When you click on one animal name, an animal detail component will render.
 
 
-> ##### `/src/components/animal/AnimalCard.js`
+> ##### `/src/components/animal/AnimalList.js`
+
+```jsx
+import React, { useState, useContext, useEffect } from "react"
+import { AnimalContext } from "./AnimalProvider"
+import { Animal } from "./Animal"
+import "./Animals.css"
+
+export const AnimalList = ({ history }) => {
+    const { getAnimals, animals } = useContext(AnimalContext)
+
+    // Initialization effect hook -> Go get animal data
+    useEffect(()=>{
+        getAnimals()
+    }, [])
+
+    return (
+        <>
+            <h1>Animals</h1>
+
+            <button onClick={() => history.push("/animals/create")}>
+                Make Reservation
+            </button>
+            <div className="animals">
+                {
+                    animals.map(animal => {
+                        return <Animal key={animal.id} animal={animal} />
+                    })
+                }
+            </div>
+        </>
+    )
+}
+```
+
+> ##### `/src/components/animal/Animal.js`
 
 ```jsx
 import React from "react"
