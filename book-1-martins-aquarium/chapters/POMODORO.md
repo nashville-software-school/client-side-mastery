@@ -14,13 +14,13 @@ The Pomodoro Technique is a time management technique developed by [Francesco Ci
 
 The basic technique is as follows:
 
-1. Divide a larger task into smaller tasks.
-1. Decide upon a small task to work on.
+1. Divide a larger task into smaller tasks
+1. Decide upon a small task to work on
 1. Set a timer for **25 minutes**.  
-   > **NOTE:** The timer should notify you _(e.g. buzz, beep, slap you in the face, etc...)_ when the 25 minutes has elapsed.
-1. Work on the task until the timer ends.
-1. When the timer ends, take a **2 - 5 minute** break.
-1. After the break, start over with _step 2_.
+   > **NOTE:** The timer should notify you _(e.g. buzz, beep, slap you in the face, etc...)_ when the 25 minutes has elapsed
+1. Work on the task until the timer ends
+1. When the timer ends, take a **2 - 5 minute** break
+1. After the break, start over with _step 2_
 
 Each _25 minute + 5 minute_ intervale is called a _"Pomodoro"_.
 
