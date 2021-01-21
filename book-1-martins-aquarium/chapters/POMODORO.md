@@ -22,17 +22,17 @@ The basic technique is as follows:
 1. When the timer ends, take a **2 - 5 minute** break
 1. After the break, start over with _step 2_
 
-Each _25 minute + 5 minute_ intervale is called a _"Pomodoro"_.
+Each _25 minute + 5 minute_ interval is called a _"Pomodoro"_.
 
 ## How does Pomodoro Help?
 
-By dividing your time into "working" and "breaking" blocks, the Pomodoro Technique helps you direct your attention.
+By dividing your time into _working_ and _breaking_ blocks, the Pomodoro Technique helps you direct your attention.
 
-During the 25 minute "working" phase, _**you are only focused on the task at hand**_. It's perfectly fine to block out the rest of the world. You don't have to think about mowing the yard or washing the dishes. You don't have to think about current events or what's happening on Twitter. You don't have to think about asking for help. You are free to work or to struggle or to stare at your code with the hope that it will magically start working.
+During the 25 minute _working_ phase, _**you are only focused on the task at hand**_. It's perfectly fine to block out the rest of the world. You don't have to think about mowing the yard or washing the dishes. You don't have to think about current events or what's happening on Twitter. You don't have to think about asking for help. You are free to work or to struggle or to stare at your code with the hope that it will magically start working.
 
-When the timer goes off and your "break" time begins, things change. This "break" time when you focus on things _**other than** working on the task at hand_. During your "break" time you should:
+When the timer goes off and your _break_ time begins, things change. This _break_ time when you focus on things _**other than** working on the task at hand_. During your _break_ time you should:
 
-1. Reflect upon the last "working" period.
+1. Reflect upon the last _working_ period.
     * What did you accomplish?
     * Are you being effective? Or, do you need to change your approach?
     * _**Are you stuck? Do you need help?**_
@@ -43,7 +43,7 @@ If, during your reflection, you decide you need help, you should ask for help.
 
 ## Pomodoro FAQ
 
-#### What if I finish a task before the "working" period ends?
+#### What if I finish a task before the _working_ period ends?
 
 You're finished that's great. Stop the timer and take your break right away. Do not pick up a new task within the same working period.
 
@@ -54,7 +54,7 @@ The Pomodoro Technique doesn't really tell you how to prioritize your work. You'
 * What is my overall goal?
 * What tasks are necessary to complete my goal?
 * Which tasks are dependent on other tasks?
-* How _"fresh"_ am I feeling? Should I tackle a challenging task or do I need an easier one for the next working period?
+* How _fresh_ am I feeling? Should I tackle a challenging task or do I need an easier one for the next working period?
 * What is the most valuable thing for me to be doing right now?
 * Was the last task I was working on the task I really _should_ have been working on?
 
