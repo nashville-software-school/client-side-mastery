@@ -31,3 +31,4 @@
 * Supplemental Chapter - [Muscle Memory: Factory Functions](./chapters/FACTORY_FUNCTIONS.md)
 * Supplemental Chapter - [Scope in JavaScript](./chapters/JS_SCOPE.md)
 * Supplemental Chapter - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
+* Supplemental Chapter - [Pomodoro Technique](./chapters/POMODORO.md)
