@@ -77,7 +77,10 @@ However before you decide to change the time intervals you should spend some tim
 
 The Pomodoro Technique is relatively simple, but there is more to it than is outlined in this document. If you want to dig deeper you should check out the following resources.
 
-* https://en.wikipedia.org/wiki/Pomodoro_Technique#See_also
-* https://www.forbes.com/sites/bryancollinseurope/2020/03/03/the-pomodoro-technique/?sh=181c92893985
-* https://francescocirillo.com/
+* **Wikipedia**
+  https://en.wikipedia.org/wiki/Pomodoro_Technique#See_also
+* **The Pomodoro Technique Explained** (Forbes article)
+  https://www.forbes.com/sites/bryancollinseurope/2020/03/03/the-pomodoro-technique
+* **Francesco Cirillo's Website** (mostly promotions for his books, etc)
+   https://francescocirillo.com/
 
