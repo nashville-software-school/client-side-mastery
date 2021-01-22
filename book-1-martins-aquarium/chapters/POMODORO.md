@@ -32,12 +32,13 @@ During the 25 minute _working_ phase, _**you are only focused on the task at han
 
 When the timer goes off and your _break_ time begins, things change. This _break_ time when you focus on things _**other than** working on the task at hand_. During your _break_ time you should:
 
-1. Reflect upon the last _working_ period.
+1. Get away from your computer, move around a little, get some coffee... In short, _actually take a break_
+1. Check email, slack and/or social media
+1. Reflect upon the last _working_ period
     * What did you accomplish?
     * Are you being effective? Or, do you need to change your approach?
     * _**Are you stuck? Do you need help?**_
-1. Check email, slack and/or social media.
-1. Stand up, walk around a little. In short, _actually take a break_.
+1. Decide upon the next task to work on - _**keeping in mind your next task might be asking for help**_
 
 If, during your reflection, you decide you need help, you should ask for help.
 
