@@ -6,7 +6,7 @@
 |--|--|--|
 | 1 | [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md) |  |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |
 | 2 | [Criminal API](./chapters/GLASSDALE_CRIMINAL_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch</sub> |  |  |  |
-| 3 | [Dynamic Nav Bar](./chapters/GLASSDALE_CRIMINAL_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch</sub> |  |  |  |
+| 3 | [Dynamic Nav Bar](./chapters/GLASSDALE_NAV.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch</sub> |  |  |  |
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |  |
 | 6 | [Case Notes API - Making Entries](./chapters/GLASSDALE_NOTES_API.md) <br/> <sub style="font-size:0.85rem;">#fetch #POST events #user-input</sub> | [Entry API](./chapters/DAILY_JOURNAL_FETCHING.md),  [Journal Form Component](./chapters/DAILY_JOURNAL_FORM_COMPONENT.md), [Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md) |
 | 7 | [Fundamental Workshop](./chapters/EVENTS_WORKSHOP.md) |  |
