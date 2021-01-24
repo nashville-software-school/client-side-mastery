@@ -1,5 +1,7 @@
 # Dynamic Navigation Bar
 
+
+
 ## Single Page Applications
 Up until now, when you've built web pages with multiple pages, you've made multiple HTML files and linked them together using `a` tags. This works just fine, but there's another more efficient way to get the same result: a Single Page Application or SPA. That means that you only have _one_ HTML file that is essentially empty, and you use JavaScript to swap out content on the page.
 
@@ -64,6 +66,22 @@ Your job is to make a clickable navigation bar on your Glassdale site. Let's sta
 #### index.html
 ```html
 <!--Nav Bar Component -->
+    <nav>
+      <ul>
+        <li>
+          <a id="criminals-nav-link" href="#">Criminals</a>
+        </li>
+        <li>
+          <a id="officers-nav-link" href="#">Officers</a>
+        </li>
+        <li>
+          <a id="facilitiesnav-link" href="#">Facilities</a>
+        </li>
+        <li>
+          <a id="notes-nav-link" href="#">Notes</a>
+        </li>
+      </ul>
+    </nav>
 ```
 
 Now, in your `CriminalList` component, add an event listener that will listen for a click on the appropriate navigation link. When the link is clicked, the event listener should execute the function that prints all the criminals to the DOM.
@@ -71,14 +89,13 @@ Now, in your `CriminalList` component, add an event listener that will listen fo
 #### CriminalList.js
 ```js
 document.querySelector("your selector goes here").addEventListener("click", () => {
-    // clear the contents of the page
     // invoke the function that prints the criminals
 })
 ```
 To test your code, _remove_ the line of code in `main.js` that invokes the `CriminalList` function. Now it should only run when you click the correct link in the nav bar.
 
 ### Officers and Locations
-Add working nav links for Officers and Locations.
+Add working nav links for Officers and Locations. Ignore the Notes link for now, we'll get to those later.
 
 
 

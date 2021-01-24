@@ -2,54 +2,10 @@
 
 In the last chapter, you build a dropdown menu of crimes. Right now the dropdown menu doesn't work, but that's about to change!
 
-## Let's Talk About Event Listeners
 
-When a user performs any kind of gesture (click, key press, mouse over, etc.), the JavaScript layer will listen for that event and then perform some appropriate logic.
+## Let's talk about Event Delegation
 
-Let's imagine we want to add a "dark mode" to our website. When the user clicks on a button, the background color of our page should turn from white to dark gray and the text should change to white. For this example, we're assuming that the button we want to click on is already hard-coded into our HTML document, like this:
-
-##### index.html
-```html
-<button id="dark-mode">Dark Mode</button>
-```
-Next, we need to grab a reference to that button in our JavaScript so we can manipulate it:
-#### event.js
-```js
-const darkModeButton = document.querySelector("#dark-mode")
-```
-So far, so good. Now let's add an _event listener_ to the button so that JavaScript will know when a user clicks on it.
-```js
-darkModeButton.addEventListener("click", function(){
-    console.log("You clicked the dark mode button")
-  // our logic for activating dark mode goes here-- this code only runs AFTER the button is clicked
-})
-```
-See where we had a string of "click" up there? That's because we're specifically looking for a click event. We could also change that to `dblclick` if we wanted to listen for a double click, `keyup` if we wanted to listen for a keypress (in an input field), etc. But for now we can just stick with our click.
-
-Let's write the logic that we want to happen after the button is clicked:
-
-```js
-darkModeButton.addEventListener("click", function(){
-  // Select the entire body tag
-  const bodyElement = document.querySelector("body)
-
-  // Add a class
-  bodyElement.classList.add("dark-background")
-})
-```
-Right now, this code will add a class of `"dark-background"` to the entire body tag. To change how our website actually looks, we'd have to add some CSS.
-
-##### events.css
-```css
-.dark-background{
-  background-color: #2b362e;
-  color: #fafcfb;
-}
-```
-
-## Event Delegation
-
-The event listener example we just saw works great as long as the dark mode button is hard coded into our HTML. But what if we want to put an event listener on an element that is build dynamically with JavaScript?
+When we've built event listeners before, we targed elements that were hard coded into the HTML. But what if we want to put an event listener on an element that is build dynamically with JavaScript?
 
 If we use the example code above and try to select our convictions dropdown, we'll get an error message.
 
@@ -83,7 +39,7 @@ eventHub.addEventListener("change", (eventObject) => {
 Okay, we've gotten our event listener to work. What next?
 
 
-## Let's Talk About Filter
+## Let's Talk About Filtering
 
 The `filter()` method on an array creates a brand new array with a subset of items that exist in the original array. Only items in the original array that pass the test can make it into the new, happy, much better array. Here's an example.
 
