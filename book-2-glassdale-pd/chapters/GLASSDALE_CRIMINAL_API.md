@@ -105,7 +105,7 @@ Here's the pattern for a fetch call.
 
 * Reference: [How to Use the JavaScript Fetch API to Get Data](https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data)
 
-## Assignment
+## Assignment: Printing Criminals
 
 Your first assignment is to pull all of the data from the API (see above) and display all criminals in a grid format. Start with the following details for each criminal.
 
@@ -148,3 +148,7 @@ Your first assignment is to pull all of the data from the API (see above) and di
     }
 
     ```
+
+    ## More Practice: Printing Officers and Locations
+    1. Use the [Glassdale API](https://criminals.glassdale.us/officers) to fetch and print officers to the DOM underneath the list of criminals. Follow the same pattern that we used to print criminals.
+    1. Use the [Glassdale API](https://criminals.glassdale.us/facilities) to fetch and print locations to the DOM underneath officers.

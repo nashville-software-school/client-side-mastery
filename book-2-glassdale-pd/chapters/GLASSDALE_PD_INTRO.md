@@ -50,36 +50,35 @@ In this book, you will be using your _fancy coding skills_ to review all of the 
     1. `~/workspace/glassdale/scripts/officers`
     1. `~/workspace/glassdale/styles`
 1. Create your `scripts/main.js`, and `styles/main.css` files.
-1. Make sure that `json-server` was installed correctly by typing it into your terminal. If you get feedback that your system doesn't recognize the `json-server` command, speak to an instructor immediately.
+1. Run the command `npm i -g json-server` to install a tool we'll use later. If you get any error messages, come see an instructor.
 1. Make an `index.html` file in `~/workspace/glassdale` directory. You are provided some boilerplate HTML below to place in that file.
 1. Start your web server and verify that you get that HTML in Chrome.
 
 #### Boilerplate HTML
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
     <title>Glassdale PD</title>
-    <link rel="stylesheet" href="./styles/main.css">
 </head>
-
 <body>
 
-    <main class="container">
-        <header>
-            <div class="filters">
-                <div class="filter filters__crime"></div>
-                <div class="filter filters__officer"></div>
-            </div>
-        </header>
-        <article class="criminalsContainer"></article>
-    </main>
 
-    <script type="module" src="./scripts/main.js"></script>
+    <section class="criminals">
+        <h2>Criminals</h2>
+        <div class="convictions-select-container"></div>
+        <div class="criminal-list flex-container">
+
+        </div>
+    </section>
+
+
+
+    <script type="module" src="scripts/main.js"></script>
 </body>
-
 </html>
 ```
