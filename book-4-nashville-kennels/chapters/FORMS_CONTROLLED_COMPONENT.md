@@ -36,7 +36,10 @@ import { AnimalContext } from "./AnimalProvider"
 
 export const AnimalList = () => {
     const { animals, getAnimals } = useContext(AnimalContext)
-    ...
+    const { locations, getLocations } = useContext(LocationContext)
+    const { customers, getCustomers } = useContext(CustomerContext)
+    
+    // The useHistory hook let's us tell React which route we want to visit. We will use it to tell React to render the animal form component.
     const history = useHistory()
 
     ...
@@ -150,8 +153,8 @@ export const AnimalForm = () => {
     const handleClickSaveAnimal = (event) => {
       event.preventDefault() //Prevents the browser from submitting the form
 
-      const locationId = parseInt(animal.locationId)
-      const customerId = parseInt(animal.customerId)
+      const locationId = animal.locationId
+      const customerId = animal.customerId
 
       if (locationId === 0 || customerId === 0) {
         window.alert("Please select a location and a customer")

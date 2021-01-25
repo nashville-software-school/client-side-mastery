@@ -99,3 +99,4 @@ Then display the name property of each one.
 You may have noticed something weird in this chapter about the `locations` state. Mainly, it isn't really needed. Why? Think back to when you created the **AnimalProvider** component. In `getAnimals` you use `_expand=location`. Do you remember what that does? Why does it make it unnecessary to use the **LocationContext** in this component? 
 
 Which approach seems 'better' to you? Why? Could we also remove the need for the **OwnerContext**? How? If you want to talk this out with an instructor, grab one and hash it out! Or, group up with some classmates and think outloud with them. We would love to hear what you come up with.
+`
