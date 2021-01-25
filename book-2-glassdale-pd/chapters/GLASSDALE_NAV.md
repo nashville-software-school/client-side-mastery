@@ -45,7 +45,7 @@ darkModeButton.addEventListener("click", function(){
   const bodyElement = document.querySelector("body)
 
   // Add a class
-  bodyElement.classList.add("dark-background")
+  bodyElement.classList.toggle("dark-background")
 })
 ```
 Right now, this code will add a class of `"dark-background"` to the entire body tag. To change how our website actually looks, we have to add some CSS.
