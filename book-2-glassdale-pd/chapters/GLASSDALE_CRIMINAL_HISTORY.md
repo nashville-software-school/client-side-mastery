@@ -1,5 +1,13 @@
 # Who Likely Done It?
 
+## Before this chapter...
+
+- `fetch()`
+- Arrays
+- Iteration
+- HTML SELECT tag
+
+
 ## Introduction
 
 > A few days have passed since you got your initial list of criminals showing up and Maggie seemed very pleased with that start. You have been reviewing the case file and taking some notes, but this morning, Maggie wants to talk about how to move forward.

@@ -2,6 +2,12 @@
 
 In this chapter, you are going to implement the idea of the Event Hub from the last chapter and get your components talking to each other with messages.
 
+## Before this chapter...
+
+- Arrays
+- Iteration
+- Events
+
 ## Let's Talk About Filter
 
 The `filter()` method on an array creates a brand new array with a subset of items that exist in the original array. Only items in the original array that pass the test can make it into the new, happy, much better array. Here's an example.
