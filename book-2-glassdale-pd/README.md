@@ -24,10 +24,10 @@ Supplementary chapters are for people who want extra practice beyond what is cov
 
 
 Glassdale PD
+* [Printing to the DOM- Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md)
 * [Likely Suspects Select Menu](./chapters/GLASSDALE_CRIMINAL_HISTORY.md)
 * [Likely Suspects Event Listener](./chapters/GLASSDALE_EVENT_HUB.md)
 * [Filtering- Arresting Officers](./chapters/GLASSDALE_ARRESTING_OFFICERS.md)
-* [Printing to the DOM- Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md)
 * [Conditional Rendering - Known Associates](./chapters/GLASSDALE_ALIBI.md)
 * [Many to Many Relationships - Facility List](./chapters/GLASSDALE_FACILITY_LIST.md)
 * [Editing Case Note Files](./chapters/GLASSDALE_EDIT_NOTES.md)
