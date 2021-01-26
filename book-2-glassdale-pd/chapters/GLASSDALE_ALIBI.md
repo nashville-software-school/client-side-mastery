@@ -43,7 +43,6 @@ If any of the alibis for some of your suspects are noteworthy, then make sure yo
 
 1. Which components do you need to create for this feature?
 1. Where is the data coming from in the API? Do you need a new provider?
-1. Which component should dispatch a custom event when the user clicks on the alibi button?
-1. Which component should react to that custom event?
-1. Does data need to be send along with the event?
+1. Which component should listen for the click event on the Alibis button?
+1. What should happen when the button is clicked?
 1. Which DOM element would contain the list of alibis? Do you need a new one, or can they go in an existing one?
