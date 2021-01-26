@@ -137,7 +137,7 @@ This is how you access the number 3 inside the component. Now, no matter which a
 
 Within ApplicationViews, add the route for animal details within the **AnimalProvider** component. You will need to support a route like the following.
 
-http://localhost:3000/animals/7
+http://localhost:3000/animals/detail/7
 
 > ##### `/src/components/ApplicationViews.js`
 
