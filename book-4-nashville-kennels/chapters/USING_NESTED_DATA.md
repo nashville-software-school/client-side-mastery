@@ -52,7 +52,7 @@ The server (API) did the work for you!!
 
 Change the AnimalCard to display animal names as hyperlinks. When you click on one animal name, an animal detail component will render.
 
-> ##### `/src/components/animal/Animal.js`
+> ##### `/src/components/animal/AnimalCard.js`
 
 ```jsx
 import React from "react"
