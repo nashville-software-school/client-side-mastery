@@ -1,5 +1,11 @@
 # Your Own Notes Database
 
+## Before this chapter...
+
+- JSON
+- `fetch()`
+- Custom events
+
 In this chapter, you are going to use a tool called [json-server](https://github.com/typicode/json-server) to run your own, local API in which you can manage notes about the case you are working on.
 
 ## Setup
