@@ -167,7 +167,7 @@ When you click the name of a location, you should be taken to a detail view that
 Your starting API call will look similar to this:
 
 ```js
-http://localhost:8088/locations?_embed=employees_embed=animals
+http://localhost:8088/locations?_embed=employees&_embed=animals
 
 ```
 
