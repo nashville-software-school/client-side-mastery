@@ -6,17 +6,7 @@ The learning objective for this chapter is to apply your knowledge of event list
 
 ![animation of saving new entries and rendering them](./images/QBpNpy7FDL.gif)
 
-## State Change
 
-Since you will be implementing functionality in the chapter to create new journal entries in your API, you need to implement a function whose responsibility is to broadcast to the application that the state of the journal entries has changed.
-
-It's state has changed because a new item was added to the array. Add the following function to your journal data provider module.
-
-```js
-const dispatchStateChangeEvent = () => {
-    eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
-}
-```
 
 ## Using POST Method to Create Resources
 
@@ -26,15 +16,13 @@ Now you must use `fetch` to create your journal entry in the API. The default me
 1. In the function, use the `fetch()` function to perform a POST request.
     ```js
     // Use `fetch` with the POST method to add your entry to your API
-    fetch("fill this in with the URL to your API posts resource", {
+    return fetch("fill this in with the URL to your API posts resource", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(newJournalEntry)
     })
-        .then(which_function_goes_here?)  // <-- Get all journal entries
-        .then(which_function_goes_here?)  // <-- Broadcast the state change event
     ```
 
 ## Saving New Journal Entry Process
@@ -45,10 +33,8 @@ Now you must use `fetch` to create your journal entry in the API. The default me
 1. Use the `.value` property on the input field elements to get the text that you typed/chose.
 1. Build a new object representation of a journal entry. Make sure the keys are consistent with the existing objects in your API.
 1. Invoke the save function that you created in your provider component above.
+1. Then call the function that reprents the list of journal entries
 
-## Entry List Reacts to State Change
-
-Now refactor your entry list component to listen for the state change event you dispatched in the data provider module. In the event listener get the new state and render the HTML representations again.
 
 ## Challenges
 
