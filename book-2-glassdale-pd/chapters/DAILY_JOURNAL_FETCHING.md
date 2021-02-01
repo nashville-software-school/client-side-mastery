@@ -6,19 +6,6 @@ Your learning objective in this chapter is to set up JSON Server to store the da
 
 The [json-server](https://github.com/typicode/json-server) library was written to allow developers to quickly build an API to use as persistant storage while developing applications. You are going to expose your journal entries via an API, request that API over HTTP, and then populate your DOM when the data comes back in a response.
 
-### Installation
-
-Install `json-server` by typing in the following command in your terminal. It doesn't matter where you are in your directory structure when you type this in since the package is installed globally - meaning it can be executed anywhere.
-
-```sh
-npm install -g json-server
-```
-
-If you get an error when you try to run that, you may need to install it with administrative rights with `sudo`.
-
-```sh
-sudo npm install -g json-server
-```
 
 ### Journal Entries as JSON
 
