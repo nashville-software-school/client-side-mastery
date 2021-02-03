@@ -26,6 +26,8 @@ Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation f
 
 ## Spectacle
 
+_NOTE: If your Mac has an M1 ARM processor, install [Rectangle](#rectangle) instead._
+
 This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
 
 [Download and install Spectacle](https://www.spectacleapp.com/) and after it is installed, click on the link labeled _**keyboard shortcuts**_ on the web site to try it out.
@@ -34,12 +36,26 @@ This application will allow you to use certain combinations of keys on your keyb
 
 Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed.
 
+#### Troubleshooting for instructors (don't try this yourself)
+
+After installing Homebrew, you may get the following warning:
+
+```
+/opt/homebrew/bin is not in your PATH
+```
+
+This may be fixed with this command:
+
+```
+export PATH=/opt/homebrew/bin:$PATH
+```
+
 ## Visual Studio Code
 
 Visual Studio Code is the editor we will all be working on to start the course. To install it, run the following command
 
 ```sh
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 ```
 
 ## Command Line Launcher
@@ -49,7 +65,7 @@ Set up Visual Studio Code to be [launched from the command line](https://code.vi
 
 #### Troubleshooting for instructors (don't try this yourself)
 
-If the `code` command still doesn't work, adding this to `.zshrc` to update the path.
+If the `code` command still doesn't work, try adding this to `.zshrc` to update the path:
 
 `export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"`
 
@@ -165,3 +181,23 @@ Watch a short video for [creating an SSH key in the terminal](https://youtu.be/z
 Now watch the video for [adding your SSH key to your Github account](https://youtu.be/8hlmIObpMd4).
 
 Now watch the video for [adding your SSH key to your Github account](https://youtu.be/8hlmIObpMd4).
+
+
+
+
+# Installations for Mac ARM Computers
+
+## Rectangle <a name="rectangle"></a>
+Rectangle is an open-source window management app based on Spectacle. Spectacle is no longer being supported and can’t run natively on ARM.
+
+This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
+
+Install from the command line: 
+
+`brew install --cask rectangle`
+
+OR 
+
+[Download and install Rectangle](https://rectangleapp.com/)
+
+For keyboard shortcuts and more information on how to use the app, you can view the [Rectangle Documentation](https://github.com/rxhanson/Rectangle)
