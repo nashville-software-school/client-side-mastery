@@ -1,4 +1,4 @@
-# Custom Events Workshop
+# Fundamental Workshop
 
 Your instructional team will set up a Foundation Workshop day where you can practice designing and building a couple small applications that accept user input, modify API state, syncronize application state, and re-render a list of items. The team will pick the topics, but it will be along the lines of the following themes.
 
