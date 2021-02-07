@@ -6,10 +6,10 @@
 |--|--|--|--|--|
 | 1 | [Giffygram Introduction](./chapters/GG_INTRO.md)  <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |
 | 2 | [Giffygram Application State](./chapters/GG_STATE_STORE.md) <br/> <sub style="font-size:0.85rem;">#state #store #objects #arrays</sub> |  |  |  |
-| 3 | [Giffygram User State](./chapters/GG_USER_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #components #functions #export</sub> |  |  |  |
 | 4 | [Giffygram Post State](./chapters/GG_POST_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #data-relationships</sub> |  |  |  |
-| 5 | [Users Liking Posts](./chapters/GG_LIKES_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #data-relationships</sub> |  |  | [Game Data Design](./chapters/TF_GAME_DATA.md) |
 | 6 | [Showing all Posts](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#for-of #interpolation</sub> |  |  |  |
+| 3 | [Giffygram User State](./chapters/GG_USER_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #components #functions #export</sub> |  |  |  |
+| 5 | [Users Liking Posts](./chapters/GG_LIKES_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #data-relationships</sub> |  |  | [Game Data Design](./chapters/TF_GAME_DATA.md) |
 | 7 | [Creating Post List Component](./chapters/GG_POST_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-reponsibility</sub> |  |  |  |
 | 8 | [Posts by User](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #component-state</sub> |  |  |  |
 | 9 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods #component-state</sub> |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
