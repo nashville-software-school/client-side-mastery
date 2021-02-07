@@ -24,12 +24,14 @@ A key is used on an object to refer to values about the object. For example, you
 
 ```js
 const megan = {
+    id: 1,
     age: 31,
     firstName: "Megan",
     lastName: "Debity"
 }
 
 const jack = {
+    id: 2,
     age: 28,
     firstName: "Jack",
     lastName: "Parsons"
@@ -40,6 +42,7 @@ You could also be selling phones and want to represent each phone as an object.
 
 ```js
 const iPhone = {
+    id: 1,
     maker: "Apple",
     operatingSystem: "iOS",
     price: 900,
@@ -47,6 +50,7 @@ const iPhone = {
 }
 
 const galaxy = {
+    id: 2,
     maker: "Samsung",
     operatingSystem: "Android",
     price: 600,
@@ -55,4 +59,14 @@ const galaxy = {
 ```
 
 All of the keys and values are contained within the opening and closing curly braces `{}`. Each key/value pair is separated by a comma _(except after the last one)_.
+
+## Unique Identifier
+
+You may be wondering why all of the objects above have that weird `id` property on them. The reason is that nearly all data storage systems that you will use as a professional will have the requirement that every single time you create a new thing to be stored, it must have a unique, integer identifier.
+
+Therefore, the first thing you create will have an `id` value of 1. The second thing you create will have an `id` value of 2. The unique identifier continues to get incremented by one every time you create something.
+
+Because of this, you are going to add an `id` property to every single object you create from now one.
+
+Eventually, you won't even need to do it. It will be handled for you. You just need to get used to the fact that everything will have that property.
 

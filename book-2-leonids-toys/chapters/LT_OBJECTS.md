@@ -30,6 +30,7 @@ For reference, here's the phone objects that were examples in the last chapter.
 
 ```js
 const iPhone = {
+    id: 1,
     maker: "Apple",
     operatingSystem: "iOS",
     price: 900,
@@ -37,6 +38,7 @@ const iPhone = {
 }
 
 const galaxy = {
+    id: 2,
     maker: "Samsung",
     operatingSystem: "Android",
     price: 600,

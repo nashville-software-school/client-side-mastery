@@ -27,12 +27,14 @@ Now you are going to put both of those objects into an array, rather than being 
 ```js
 const phones = [
     {
+        id: 1,
         maker: "Apple",
         operatingSystem: "iOS",
         price: 900,
         weight: 1.2
     },
     {
+        id: 2,
         maker: "Samsung",
         operatingSystem: "Android",
         price: 600,
