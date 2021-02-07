@@ -15,6 +15,8 @@
 | 6 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> | [HTML Layout and Form](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |  |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Hello, World_**](https://github.com/nashville-software-school/hello-world) |  |  |  |
 | 7 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD.md) |  |  |
+| 8 | [Data Types](./chapters/DATA_TYPES.md) <br/> <sub style="font-size:0.85rem;">#data</sub> | |  |
+| 8 | [Data Structures](./chapters/DATA_STRUCTURES.md) <br/> <sub style="font-size:0.85rem;">#data</sub> | |  |
 | 8 | [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md) <br/> <sub style="font-size:0.85rem;">#components #objects</sub> |  | [Harvest Plan](./chapters/MF_INSTALL_PLAN.md) | [Doris' Company List](./chapters/DS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#arrays #foreach</sub> |
 | 9 | [Using the Fish Data Provider](./chapters/EXPORTING_FISH.md) <br/> <sub style="font-size:0.85rem;">#components #import #export</sub> | [Journal Entry Objects](./chapters/DAILY_JOURNAL_OBJECT_DOM.md) | [Creating Seeds](./chapters/MF_SEED_MODULES.md) |  |
 | 10 | [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#components #dom</sub> |  | [Tilling the Field](./chapters/MF_FIELD.md) | [Listing New York Companies](./chapters/DS_FILTER.md) <br/> <sub style="font-size:0.85rem;">#arrays #filter</sub> |
