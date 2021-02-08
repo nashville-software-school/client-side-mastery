@@ -15,6 +15,7 @@ If you want to see **just the price** of the iPhone, and nothing else, here's ho
 
 ```js
 const iPhone = {
+    name: "iPhone",
     maker: "Apple",
     operatingSystem: "iOS",
     price: 900,
@@ -33,12 +34,16 @@ You want to see the price of all phones that are stored in an array, like the on
 ```js
 const phones = [
     {
+        id: 1,
+        name: "iPhone",
         maker: "Apple, Inc.",
         operatingSystem: "iOS",
         price: 900,
         weight: 1.2
     },
     {
+        id: 2,
+        name: "Galaxy",
         maker: "Samsung",
         operatingSystem: "Android",
         price: 600,

@@ -13,6 +13,7 @@ Make sure that each object you create has an `id` property value that is 1 great
 const phones = [
     {
         id: 1,
+        name: "iPhone",
         maker: "Apple, Inc.",
         operatingSystem: "iOS",
         price: 900,
@@ -20,6 +21,7 @@ const phones = [
     },
     {
         id: 2,
+        name: "Galaxy",
         maker: "Samsung",
         operatingSystem: "Android",
         price: 600,
@@ -30,6 +32,7 @@ const phones = [
 // Define a new phone
 const pixel = {
     id: 3,
+    name: "Pixel",
     maker: "Google",
     operatingSystem: "Android",
     price: 750,

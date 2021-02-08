@@ -43,6 +43,7 @@ You could also be selling phones and want to represent each phone as an object.
 ```js
 const iPhone = {
     id: 1,
+    name: "iPhone",
     maker: "Apple",
     operatingSystem: "iOS",
     price: 900,
@@ -51,6 +52,7 @@ const iPhone = {
 
 const galaxy = {
     id: 2,
+    name: "Galaxy",
     maker: "Samsung",
     operatingSystem: "Android",
     price: 600,

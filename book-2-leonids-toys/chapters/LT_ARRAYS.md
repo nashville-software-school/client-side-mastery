@@ -28,6 +28,7 @@ Now you are going to put both of those objects into an array, rather than being 
 const phones = [
     {
         id: 1,
+        name: "iPhone",
         maker: "Apple",
         operatingSystem: "iOS",
         price: 900,
@@ -35,6 +36,7 @@ const phones = [
     },
     {
         id: 2,
+        name: "Galaxy",
         maker: "Samsung",
         operatingSystem: "Android",
         price: 600,
