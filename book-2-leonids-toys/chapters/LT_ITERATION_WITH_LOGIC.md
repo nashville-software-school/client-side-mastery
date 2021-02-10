@@ -16,7 +16,7 @@ Your phone store just got notified by all of the major  manufacturers that a new
 
 Rather than going and modifying every phone in your inventory _(yeah, I know you only have 3 phones right now, but let's just imagine that you have 529)_, you decide to just display the increased weight when you print the catalog.
 
-Since your output is done in a loop, and logic done in a loops is run for every item in the loop, you can right the following code.
+Since your output is done in a loop, and logic done in a loops is run for every item in the loop, you can write the following code.
 
 ```js
 // Step through the array of phones
@@ -37,7 +37,7 @@ It's just an issue with how floats work with JavaScript. You can dig into that l
 
 ## Practice: Increasing Leonid's Prices
 
-Using the strategy above, modify for current `for..of` loop that displays the toy catalog and increase the price of each toy before it is printed for the terminal-based catalog.
+Using the strategy above, modify the current `for..of` loop that displays the toy catalog and increase the price of each toy before it is printed for the terminal-based catalog.
 
 He wants the price of every toy to be inceased by 5%.
 
