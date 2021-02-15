@@ -49,10 +49,11 @@ export const LocationList = () => {
 
 ### Breaking it Down
 
-In the above component, you will notice a new hook being imported from React - the Context hook. This hook allows you to use data structures and functions that a parent provider component exposes. In the previous chapter, your **`LocationProvider`** component exposed the following two elements.
+In the above component, you will notice a new hook being imported from React - the Context hook. This hook allows you to use data structures and functions that a parent provider component exposes. In the previous chapter, your **`LocationProvider`** component exposed the following three elements.
 
 * The `locations` array
 * The `addLocations` function
+* The `getLocations` function
 
 To start, you need to import the context object that you created in the provider component so that the Context hook can access the objects that it exposes.
 
@@ -60,10 +61,10 @@ To start, you need to import the context object that you created in the provider
 import { LocationContext } from "./LocationProvider"
 ```
 
-Right now, all you need is the array of locations, so that's all you will explicitly use.
+Right now, all you need is the array of locations and the function that fetches them, so that's all you will explicitly use.
 
 ```js
-const { locations } = useContext(LocationContext)
+const { locations, getLocations } = useContext(LocationContext)
 ```
 
 
