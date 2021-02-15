@@ -11,13 +11,44 @@ Thinking of applications and web page as a collection of independent components 
 * Etsy
 * Pinterest
 
-All of these applications are written by teams of software developers who define the individual components that are used throughout their application. They then write each component seperately and then compose them in interesting ways and make them work together.
+All of these applications are written by teams of software developers who define the individual components that are used throughout their application. They then write each component separately and then compose them in interesting ways and make them work together.
+
+## Vocabulary To Know
+* HTML semantic elements
+* HTML block and inline elements
+* CSS
+* Flexbox
+
+## What are Semantic Elements?
+A semantic element clearly describes its meaning to both the browser and the developer.
+
+* Examples of **non-semantic** elements: `<div>` and `<span>` - Tells nothing about its content.
+* Examples of **semantic** elements: `<form>`, `<h1>`, and `<article>` - Clearly defines its content.
+* [W3 Schools Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
 
 ## Visual Review of Semantic Elements
 
 What is a component and how do HTML elements apply to the concept? Look at the image below to see an overview of semantic HTML elements and how they are intended to be used together.
 
 ![semantic tags](./images/html-semantic-tags.png)
+
+## Block and Inline Elements
+Every HTML element has a default display value, depending on what type of element it is. There are two display values: **block** and **inline**.
+
+Block Element
+* A block-level element always starts on a new line.
+* A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+* A block level element has a top and a bottom margin, whereas an inline element does not.
+* Examples: `<h1>`, `<header>`, `<p>`
+* [MDN Block Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+
+Inline Element
+* An inline element does not start on a new line.
+* An inline element only takes up as much width as necessary.
+* Examples: `<img>`, `<span>`, `<strong>`
+* [MDN Inline Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
+
+**The default display for all elements can be changed through styling.**
 
 ## CSS Naming Conventions
 
