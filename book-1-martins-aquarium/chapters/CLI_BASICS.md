@@ -58,7 +58,7 @@ Then `cd ..` to go up one directory level. Create another subdirectory named `sc
 
 During your career, you will be using powerful and extensible code editors like Visual Studio, IntelliJ, Webstorm, Eclipse, and many others to create your code. However, there are times that you want to put just a a couple lines of code, or a comment, in a file and you don't want to fire up your powerful editor just to do that.
 
-Read the will-written answer to a [question on the Stack Exchange website](https://unix.stackexchange.com/questions/77277/how-to-append-multiple-lines-to-a-file) and see if you can figure out how to get the following CSS code into the `main.css` file without using Visual Studio Code, but the `echo` command instead.
+Read the well-written answer to a [question on the Stack Exchange website](https://unix.stackexchange.com/questions/77277/how-to-append-multiple-lines-to-a-file) and see if you can figure out how to get the following CSS code into the `main.css` file without using Visual Studio Code, but the `echo` command instead.
 
 ```css
 #fishtank {}
