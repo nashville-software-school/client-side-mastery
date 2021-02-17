@@ -14,7 +14,7 @@ The `find()` method on arrays is perfect this.
 
 The method does exactly what it's name suggests. It iterates an array and as soon as it finds one item that passes the condition that you provide, it returns that item to you.
 
-> **`CandyProvider.js`**
+> **`CandyData.js`**
 
 ```js
 const candies = [

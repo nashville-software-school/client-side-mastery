@@ -24,11 +24,11 @@ To organize your files even more, you could create three sub-directories in each
 
 ```sh
 mkdir scripts/morocco/cities
-touch scripts/morocco/cities/CityDataProvider.js
+touch scripts/morocco/cities/CityData.js
 
 mkdir scripts/morocco/landmarks
-touch scripts/morocco/landmarks/LandmarkDataProvider.js
+touch scripts/morocco/landmarks/LandmarkData.js
 
 mkdir scripts/morocco/celebrities
-touch scripts/morocco/celebrities/CelebritiesDataProvider.js
+touch scripts/morocco/celebrities/CelebritiesData.js
 ```

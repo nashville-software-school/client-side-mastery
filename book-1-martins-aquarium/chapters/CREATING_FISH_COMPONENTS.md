@@ -2,6 +2,11 @@
 
 Now that you have a module whose responsibility is to maintain the state of your application, now you need to convert that raw data into HTML representations and render them in the browser. In this chapter you will automate the creation of the HTML list of fish from the objects in your fish collection, so that you never have to copy/paste the HTML directly when a fish dies, or a fish is added.
 
+## Vocabulary To Learn
+* function defines a parameter
+* invoked a function with an argument
+
+
 ## Remove Hard-Coded HTML
 
 Open `index.html` and delete the `<section class="fishList">` element and all of the children fish elements.
@@ -46,13 +51,13 @@ export const Fish = (fish) => {
  *  FishList which renders individual fish objects as HTML
  */
 
-// TODO: Import `useFish` from the data provider module
+// TODO: Import `getFish` from the data module
 
 export const FishList = () => {
 
     // Get a reference to the `<article class="content">` element
     const contentElement = document.querySelector("insert selector here")
-    const fishes = useFish()
+    const fishes = getFish()
 
     // Add to the existing HTML in the content element
     contentElement.innerHTML += `
@@ -94,13 +99,13 @@ Now you can write a `for..of` loop to generate all of the individual fish HTML r
 /**
  *   FishList which renders individual fish objects as HTML
  */
-import { useFish } from "./FishDataProvider.js"
+import { getFish } from "./FishData.js"
 import { Fish } from "./Fish.js"
 
 export const FishList = () => {
 
     const contentElement = document.querySelector("fill this in")
-    const fishes = useFish()
+    const fishes = getFish()
 
     // Generate all of the HTML for all of the fish
     let fishHTMLRepresentations = ""
@@ -132,7 +137,7 @@ You may have understood each step as you did it, or you may not have.
 
 You may have understood how all the pieces connect, or you may not have.
 
-With our years of experience introducing beginners to these abstract concepts, we know that somewhere between 90% to 100% of your entire cohort simply is not capable of understanding the big picture here. You can make sense of each tree, but you can't understand how the forest works as a single ecosystem that is made up of individual trees.
+With our years of experience introducing beginners to these abstract concepts, we know that somewhere between 90% to 100% of your cohort does not understanding the big picture here. You can make sense of each tree, but you can't understand how the forest works as a single ecosystem that is made up of individual trees.
 
 There are several abstract concepts at play here, and your brain's neural network has not been tuned to understand these complex connections yet. That doesn't mean your mind **can't** do it.
 
@@ -196,20 +201,20 @@ This will have the side effect of changing how you import the modules, since the
 
 ## Practice: Automate Martin's Tips
 
-Create a data provider, a tip list component, and a tip component to automate the rendering of Martin's fish care tips.
+Create a data module, a tip list component, and a tip component to automate the rendering of Martin's fish care tips.
 
 Suggested files to create:
 
-* `scripts/tips/TipDataProvider.js`
+* `scripts/tips/TipData.js`
 * `scripts/tips/TipList.js`
 * `scripts/tips/Tip.js`
 
 ## Practice: Automate Martin's Locations
 
-Create a data provider, a location list component, and a location component to automate the rendering of Martin's locations for the location page.
+Create a data module, a location list component, and a location component to automate the rendering of Martin's locations for the location page.
 
 Suggested files to create:
 
-* `scripts/locations/LocationDataProvider.js`
+* `scripts/locations/LocationData.js`
 * `scripts/locations/LocationList.js`
 * `scripts/locations/Location.js`

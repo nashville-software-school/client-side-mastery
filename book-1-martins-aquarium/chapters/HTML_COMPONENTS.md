@@ -13,7 +13,7 @@ Thinking of applications and web page as a collection of independent components 
 
 All of these applications are written by teams of software developers who define the individual components that are used throughout their application. They then write each component separately and then compose them in interesting ways and make them work together.
 
-## Vocabulary To Know
+## Vocabulary To Learn
 * HTML semantic elements
 * HTML block and inline elements
 * CSS

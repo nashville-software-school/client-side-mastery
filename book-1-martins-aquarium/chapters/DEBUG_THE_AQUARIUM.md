@@ -2,7 +2,7 @@
 
 Introduce some errors with invalid key names, take out the `return` keyword from HTML component function.
 
-Walk them through how to
+Walk through how to
 
 1. Set breakpoints
 1. Step over

@@ -58,9 +58,9 @@ Use `index.html` to build a web page that lists fish, quotes, harvesting locatio
 
 The more time you spend in the design stage, the less code you need to write.
 
-## Developer Vocabulary
+## Vocabulary To Learn
 
-> **Vocabulary:** Imagine a chair. Now imagine that you have to write a poem or other paper about the chair you have in your mind. How would you describe it? It could be a tall, white chair. It could be uncomfortable. You could say when you purchased it. When you describe something, you often list its properties. A property of something is just a specific feature of that thing. In the short description above, here are the properties of the chair you were imagining.
+> **Properties:** Imagine a chair. Now imagine that you have to write a poem or other paper about the chair you have in your mind. How would you describe it? It could be a tall, white chair. It could be uncomfortable. You could say when you purchased it. When you describe something, you often list its properties. A property of something is just a specific feature of that thing. In the short description above, here are the properties of the chair you were imagining.
 >   1. Height
 >   1. Color
 >   1. Comfort level

@@ -22,6 +22,11 @@
 
 Luckily, there is a way to automate this entire process, so that software developers don't have to manually write the same HTML, and the same JavaScript over, and over, and over again when new data is created.
 
+## Vocabulary To Learn
+* Object
+* Property
+* Object key and value
+
 ## Object Representation of Things
 
 The first step in the process is defining an object in code that represent each fish. That's the main purpose of an object - representing real-world things in code.
