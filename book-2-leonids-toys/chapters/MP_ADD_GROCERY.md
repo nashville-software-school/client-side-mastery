@@ -8,3 +8,5 @@ You realize that the list might get very long, and you don't want to keep track 
 Write a function named `addToShoppingList` that will add a new grocery item to your array. The function should add an `id` property to the grocery object that you provide as an argument when the function is invoked.
 
 Also add a `dateCreated` property to the object whose value will be the current date and time.
+
+Use your function to add 5 new items to your shopping list with a variety of prices ranging from $4 to $16.
