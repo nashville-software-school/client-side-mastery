@@ -2,6 +2,13 @@
 
 Data structures are also types in a software language, and therefore can be referred to as _structural types_, that are more complex than their more primitive cousins that you learned about in the previous chapter. There are two common data structures that you will be using in the course.
 
+## Learning Objectives
+
+* You should be able to remember the two data structures you will be working with in JavaScipt.
+* You should be able to explain the purpose of each data structure.
+* You should be able to understand that each individual resource in a data system requires a unique identifier.
+* You should be able to identify which property on an object is the unique idenifier.
+
 ## Arrays
 
 Arrays are used to store a list, or collection, of things. Just like when you go to the grocery store and you write down a list of things you need to buy. You could represent your list of grocery items in an array.

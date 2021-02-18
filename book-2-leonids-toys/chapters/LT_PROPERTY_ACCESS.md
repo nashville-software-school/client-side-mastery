@@ -1,5 +1,14 @@
 # Display Toy Properties
 
+## Learning Objectives
+
+* You should be able to demonstrate how to display a properties's value on an object.
+* You should be able to explain the purpose of a `for..of` loop in JavaScript.
+* You should be able to identify the variable that represents the array in a `for..of` loop.
+* You should be able to identify the variable that represents each individual item in a `for..of` loop.
+
+## Accessing Properties
+
 To access a property of an object, you use a dot (`.`). You start with the variable name whose value is the object, type a dot, then type the name of the property you want to see. Let's use our phones as an example again.
 
 ```js

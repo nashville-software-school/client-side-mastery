@@ -5,6 +5,11 @@
 >
 > Leonid has hired you to write some code that will help him keep track of his toy inventory. He knows nothing about code or software, so you need to learn the basics so that he can start to automate his business practices.
 
+## Learning Objectives
+
+* You should be able to remember the basic data types you will be working with in JavaScript.
+* You should be able to describe the data type of different properties of real-world things that you represent in code.
+
 ## Describing Toys as Data
 
 As a software developer, you will always be thinking about data - the type of your data, the structure of your data, the format of your data, and how to display your data to humans in a Web browser. In the beginning of the course, here are the basic data types you will be working with.

@@ -2,6 +2,11 @@
 
 In this chapter, you will be using the object data structure that you learned about in Chapter 2 to represent some toys in code.
 
+## Learning Objectives
+
+* You should be able to demonstrate that you can create objects with the correct syntax.
+* You should be able to explain that variables are labels that refer to values, not the value itself.
+
 ## Setup
 
 Run these commands to have a file in which you can write your code.

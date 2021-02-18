@@ -2,6 +2,12 @@
 
 In this chapter, you will build an array filled with objects. Each item in the array will be one of your toys.
 
+## Learning Objectives
+
+* You should be able to define an array that contains multiple objects.
+* You should be able to explain that objects defined directly in an array do not need to be assigned to variables.
+* You should be able to demonstrate that you can create an array of objects using the correct syntax.
+
 ## Objects in Arrays
 
 In the previous chapters, you created multiple objects and assigned each one to its own variable to be used later.
