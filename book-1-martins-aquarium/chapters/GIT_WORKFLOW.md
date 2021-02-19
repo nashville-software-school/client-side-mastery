@@ -61,3 +61,13 @@ Everyone will create a fish for the aquarium website.
 ![](./images/gitmerge-main.jpg)
 ![](./images/gitreview-pr.jpg)
 ![](./images/gitcodemerged-main.jpg)
+
+
+## NSS Git / GitHub Rules of Engagement
+1. Always follow the one-way road
+1. No "broken code" on `main` branch
+1. No console.logs or debugger statements on `main` branch
+1. Once a branch is merged, it is dead. No more coding on dead branch. Create a new branch for a new feature.
+1. No changes made on GitHub. Everything is done local.
+1. Use meaningful branch names.
+1. Make meaningful commit messages.
