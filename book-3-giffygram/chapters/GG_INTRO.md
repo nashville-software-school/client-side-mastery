@@ -19,4 +19,4 @@ You will be guided through how to create all of the components for this applicat
 
 Here's the MVP that you will be building for Giffygram.
 
-![animation of Giffygram MVP](./images/giffygram-basic.gif)
+![animation of Giffygram MVP](./images/giffygram.gif)
