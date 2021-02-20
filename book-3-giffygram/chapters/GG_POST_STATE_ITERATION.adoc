@@ -1,6 +1,6 @@
-# Express Yourself
+= Express Yourself
 
-## Learning Objectives
+== Learning Objectives
 
 * You should be able to remember that the HTML that a person sees in the browser is an expression of the state of your raw data.
 * You should be able to define what a JavaScript module is.
@@ -10,17 +10,19 @@
 * You should be able to
 * You should be able to
 
-## Data as HTML
+== Data as HTML
 
 A phrase you will see as you explore the World Wide Web as a software developer is...
 
-> "Your job as a web application developer is to express data as HTML."
+[quote]
+"Your job as a web application developer is to express data as HTML."
 
 It may seem like an odd way to say that, but what it means is that your code's sole purpose is to take raw data and make it look pretty in a Web browser.
 
 For example, your code turns this data 👇🏽
 
-```json
+[source,javascript]
+-----------------
 posts = [
     {
         "id": 2,
@@ -38,7 +40,7 @@ likes: [
         postId: 2
     }
 ]
-```
+-----------------
 
 Into this in the Web browser 👇🏽
 
