@@ -1,71 +1,14 @@
 # Express Yourself
 
-## Free CSS
+## Learning Objectives
 
-Before you start with JavaScript coding, here's some free CSS to make your application look good.
-
-> #### `giffygram/src/styles/main.css`
-
-```css
-@import 'navigation.css';
-@import 'feed.css';
-@import 'post.css';
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
-/*Typography
---------------------------------------------------------------*/
-
-body, button, input, select, textarea {
-    color: #404040;
-    font-family: "Comfortaa", Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 0;
-    margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Patua One", serif;
-    letter-spacing: 2px;
-}
-
-.actionIcon {
-    height: 1.2em;
-    margin: 0.5em 0.5em;
-    cursor: pointer;
-}
-
-.highlight {
-    border-color: purple;
-}
-
-.fakeLink {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-    background: none!important;
-    border: none;
-    cursor: pointer;
-}
-
-.fakeLink:hover {
-    font-weight: bold;
-}
-
-.loginForm {
-    margin: 0 25%;
-}
-```
-
-> #### `giffygram/src/styles/feed.css`
-
-```css
-.giffygram__feed {
-    padding: 7rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-```
+* You should be able to remember that the HTML that a person sees in the browser is an expression of the state of your raw data.
+* You should be able to define what a JavaScript module is.
+* You should be able to describe how functions get exported and imported into different modules.
+* You should be able to
+* You should be able to
+* You should be able to
+* You should be able to
 
 ## Data as HTML
 
@@ -130,19 +73,33 @@ Every application needs an HTML file so that your data can be displayed beautifu
 </html>
 ```
 
-Your code has to start somewhere. For this application, it is going to start in a file called `main.js`. Note the `<script>` tag in the HTML file above. That is how you will run your JavaScript code that will convert your raw data to be beautifully expressed as HTML.
+> **Definition:** If you have multiple files of JavaScript code, and they export and import code from each other, they are called modules.
+
+Your code has to start somewhere. For this application, it is going to start in a file called `main.js`. This file is the top-level [_module_ of code](https://javascript.info/modules-intro#what-is-a-module), and it will import code from other modules.
+
+
+Note the `<script>` tag in the HTML file above. That is how you will run your JavaScript code that will convert your raw data to be beautifully expressed as HTML.
 
 > #### giffygram/src/scripts/main.js
 
 ```js
+// Can you explain what is being imported?
 import { GiffyGram } from "./GiffyGram.js"
 
+// What HTML element is being in the following variable?
 const applicationElement = document.querySelector(".giffygram")
 
-export const renderApp = () => {
+/*
+    This function performs one, specific task.
+
+    1. Can you explain what that task is?
+    2. Are you defining the function here or invoking it?
+*/
+const renderApp = () => {
     applicationElement.innerHTML = GiffyGram()
 }
 
+// Are you defining the function here or invoking it?
 renderApp()
 ```
 
@@ -151,13 +108,19 @@ The other file you will need is the **`GiffyGram`** component, whose Sole Repons
 > #### giffygram/src/scripts/GiffyGram.js
 
 ```js
+// Can you explain what is being imported here?
 import { getPosts } from "./store/index.js"
 
+// This function is being exported. What module is importing it?
 export const GiffyGram = () => {
+    // getPosts() is not defined in this module. How are you able to invoke it?
     const allPosts = getPosts()
     let htmlStringOfAllPosts = ""
 
+    // Which variable below has a value of an array?
     for (const postObject of allPosts) {
+
+        // What is the scope of this variable?
         const htmlRepresentationOfThisPost = `
             <section class="post">
                 <header>
@@ -166,9 +129,16 @@ export const GiffyGram = () => {
                 <img class="post__image" src="${postObject.imageURL}" />
             </section>
         `
+
+        // What is the difference between = and += operators?
         htmlStringOfAllPosts += htmlRepresentationOfThisPost
     }
 
+    /*
+        This is the return statement for the GiffyGram function.
+
+        What data type does the function return?
+    */
     return htmlStringOfAllPosts
 }
 ```

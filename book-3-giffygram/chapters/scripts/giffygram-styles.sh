@@ -158,3 +158,69 @@ echo '.miniMode {
 }
 ' > post.css
 
+echo '.navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    border-bottom: 1px solid lightblue;
+    padding: 0.5em 0 0.5em 1em;
+    margin-bottom: 2em;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    margin: auto;
+}
+
+.navigation__item {
+    vertical-align: baseline;
+}
+
+.navigation__name {
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+}
+
+.navigation__icon > img {
+    height: 2rem;
+}
+
+
+.navigation__message {
+    margin-left: auto;
+    margin-right: 4em;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.navigation__message > img {
+    height: 2rem;
+}
+
+.notification__count{
+    background-color:goldenrod;
+    font-size: small;
+    position: absolute;
+    padding:2px;
+    top: 5px;
+    left: 3rem;
+    min-width: 1.25rem;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.navigation__messageItem {
+    flex: 1;
+}
+
+.navigation__logout {
+    margin-right: 2em;
+}
+
+#directMessageIcon {
+    cursor: pointer;
+}
+' > navigation.css
