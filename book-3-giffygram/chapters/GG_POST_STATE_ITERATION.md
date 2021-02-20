@@ -1,5 +1,74 @@
 # Express Yourself
 
+## Free CSS
+
+Before you start with JavaScript coding, here's some free CSS to make your application look good.
+
+> #### `giffygram/src/styles/main.css`
+
+```css
+@import 'navigation.css';
+@import 'feed.css';
+@import 'post.css';
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+/*Typography
+--------------------------------------------------------------*/
+
+body, button, input, select, textarea {
+    color: #404040;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Patua One", serif;
+    letter-spacing: 2px;
+}
+
+.actionIcon {
+    height: 1.2em;
+    margin: 0.5em 0.5em;
+    cursor: pointer;
+}
+
+.highlight {
+    border-color: purple;
+}
+
+.fakeLink {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+    background: none!important;
+    border: none;
+    cursor: pointer;
+}
+
+.fakeLink:hover {
+    font-weight: bold;
+}
+
+.loginForm {
+    margin: 0 25%;
+}
+```
+
+> #### `giffygram/src/styles/feed.css`
+
+```css
+.giffygram__feed {
+    padding: 7rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+```
+
+## Data as HTML
+
 A phrase you will see as you explore the World Wide Web as a software developer is...
 
 > "Your job as a web application developer is to express data as HTML."

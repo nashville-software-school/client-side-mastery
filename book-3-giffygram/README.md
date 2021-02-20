@@ -7,8 +7,9 @@
 | 1 | [Giffygram Introduction](./chapters/GG_INTRO.md)  <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |
 | 2 | [Giffygram ERD](./chapters/GG_ERD.md) <br/> <sub style="font-size:0.85rem;">#ERD #data-relationships</sub> |  |  |  |
 | 3 | [Giffygram Application State](./chapters/GG_STATE_STORE.md) <br/> <sub style="font-size:0.85rem;">#state #objects #arrays</sub> |  |  |  |
+| 4 | [Giffygram CSS](./chapters/GG_STYLES.md) <br/> <sub style="font-size:0.85rem;">#components #export #import #html-representation</sub> |  |  |  |
 | 4 | [Giffygram and Listing Posts](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#components #export #import #html-representation</sub> |  |  |  |
-| 5 | [Navigation Component](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  |  |
+| 5 | [Navigation Component](./chapters/GG_NAVBAR.md) <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  |  |
 | 6 | [Creating Post &amp; List Component](./chapters/GG_POST_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-reponsibility</sub> |  |  |  |
 | 7 | [Post Count by Year](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #component-state</sub> |  |  |  |
 | 8 | [Posts by User](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #filtering #component-state</sub> |  |  |  |
