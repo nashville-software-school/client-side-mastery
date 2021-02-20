@@ -5,26 +5,24 @@
 | #  | 🌠 <br/> Giffygram <br/> <sub>(_Guided Tour_)</sub> | 📔 <br/> Daily Journal <br/> <sub>(_Component Application_)</sub> | 🎢 <br/> Car Builder <sub> <br/> (_Component State_)</sub> | 🏏 🍺 <br/>Truncheons &amp; Flagons <br/> <sub>(_Group Component Application_)</sub>|
 |--|--|--|--|--|
 | 1 | [Giffygram Introduction](./chapters/GG_INTRO.md)  <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  | [Application Requirements & Layout](./chapters/TF_STRUCTURE_LAYOUT.md) |
-| 6 | [Giffygram ERD](./chapters/GG_ERD.md) <br/> <sub style="font-size:0.85rem;">#ERD #data-relationships</sub> |  |  |  |
-| 2 | [Giffygram Application State](./chapters/GG_STATE_STORE.md) <br/> <sub style="font-size:0.85rem;">#state #objects #arrays</sub> |  |  |  |
-| 3 | [Giffygram User State](./chapters/GG_USER_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #objects #arrays</sub> |  |  |  |
-| 4 | [Giffygram Post State](./chapters/GG_POST_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #objects #arrays #data-relationships</sub> |  |  |  |
-| 5 | [Giffygram and Listing Posts](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#components #modules #functions #export</sub> |  |  |  |
-| 7 | [Navigation Component](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  |  |
-| 8 | [Creating Post &amp; List Component](./chapters/GG_POST_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-reponsibility</sub> |  |  |  |
-| 9 | [Post Count by Year](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #component-state</sub> |  |  |  |
-| 10 | [Posts by User](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #filtering #component-state</sub> |  |  |  |
-| 11 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods #component-state</sub> |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
-| 12 | [Login Form](./chapters/GG_LOGIN_FORM.md) <br/> <sub style="font-size:0.85rem;">#components #forms</sub> |  |  |  |
-| 13 | [User Authentication](./chapters/GG_AUTH.md) <br/> <sub style="font-size:0.85rem;">#local-storage #events</sub> |  |  |  |
-| 14 | [Creating Posts](./chapters/GG_POST_CREATION.md) <br/> <sub style="font-size:0.85rem;">#events #forms #state</sub> |  |  |  |
-| 15 | [Display User Name in Post](./chapters/GG_JOIN_USER.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |  |
-| 16 | [Revisit ERD for Liking Posts](./chapters/ERD.md) <br/> <sub style="font-size:0.85rem;">#ERD #data-relationships</sub> |  |  |  |
-| 17 | [Users Liking Posts](./chapters/GG_LIKES_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #data-relationships</sub> |  |  | [Game Data Design](./chapters/TF_GAME_DATA.md) |
+| 2 | [Giffygram ERD](./chapters/GG_ERD.md) <br/> <sub style="font-size:0.85rem;">#ERD #data-relationships</sub> |  |  |  |
+| 3 | [Giffygram Application State](./chapters/GG_STATE_STORE.md) <br/> <sub style="font-size:0.85rem;">#state #objects #arrays</sub> |  |  |  |
+| 4 | [Giffygram and Listing Posts](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#components #export #import #html-representation</sub> |  |  |  |
+| 5 | [Navigation Component](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  |  |
+| 6 | [Creating Post &amp; List Component](./chapters/GG_POST_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-reponsibility</sub> |  |  |  |
+| 7 | [Post Count by Year](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #component-state</sub> |  |  |  |
+| 8 | [Posts by User](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #filtering #component-state</sub> |  |  |  |
+| 9 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods #component-state</sub> |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
+| 10 | [Login Form](./chapters/GG_LOGIN_FORM.md) <br/> <sub style="font-size:0.85rem;">#components #forms</sub> |  |  |  |
+| 11 | [User Authentication](./chapters/GG_AUTH.md) <br/> <sub style="font-size:0.85rem;">#local-storage #events</sub> |  |  |  |
+| 12 | [Creating Posts](./chapters/GG_POST_CREATION.md) <br/> <sub style="font-size:0.85rem;">#events #forms #state</sub> |  |  |  |
+| 13 | [Display User Name in Post](./chapters/GG_JOIN_USER.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |  |
+| 14 | [Revisit ERD for Liking Posts](./chapters/ERD.md) <br/> <sub style="font-size:0.85rem;">#ERD #data-relationships</sub> |  |  |  |
+| 15 | [Users Liking Posts](./chapters/GG_LIKES_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #data-relationships</sub> |  |  | [Game Data Design](./chapters/TF_GAME_DATA.md) |
+| 16 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
+| 17 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
 | 18 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
 | 19 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
-| 20 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
-| 21 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |  |  |  |
 | 👨‍👨‍👦‍👦 | **_Holiday Road_** | **_Core Skills_** | **_Retrospective_** | **_Self-Assessment_** |
 
 ## Supplementary Chapters

@@ -22,12 +22,11 @@ The data store module that you are coding in this chapter will be maintaining al
 * All of the user objects
 * All of the post objects
 * All of the likes of posts that users make
-* All of the followers for each user
 * All of the messages that users send to each other
 
 It is the Single Responsbility of the data store module to maintain the application state.
 
-All of the other components will be either rendering state as HTML, or telling the data store to modify the state in response to a user filling out a form, or clicking a delete icon, etc.
+All of the other components will be either rendering _(i.e. displaying)_ state as HTML, or telling the data store to modify the state in response to a user filling out a form, or clicking a delete icon, etc.
 
 ## Creating the Application State
 
@@ -36,7 +35,7 @@ All of the other components will be either rendering state as HTML, or telling t
     ```js
     const applicationState = { }
     ```
-1. Create a users array in the application state object. Then put a single object representation of a user in the array.
+1. Create a users array in the application state object. Then put a single object representation of a user in the array. Note that the properties on this object exactly match the properties that you defined in your ERD.
     ```js
     const applicationState = {
         users: [
@@ -45,6 +44,7 @@ All of the other components will be either rendering state as HTML, or telling t
                 name: "Ray Medrano",
                 email: "ray@medrano.com",
                 password: "ray"
+                dateJoined: "2021/01/02"
             }
         ]
     }
@@ -64,12 +64,12 @@ All of the other components will be either rendering state as HTML, or telling t
         ],
         posts: [
             {
-                id: 1,
-                userId: 1,
-                title: "My first post",
-                imageURL: "https://media.giphy.com/media/3oz8xyUoD2HlTIcdTW/giphy.gif",
-                description: "Jianbing butcher post-ironic brunch marfa, listicle quinoa kickstarter vinyl poke cornhole snackwave yr flexitarian.",
-                timestamp: 1608080619498
+                "id": 1,
+                "userId": 2,
+                "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+                "imageURL": "https://media.giphy.com/media/YqGeOQ0u6hB5u/giphy-downsized.gif",
+                "timestamp": 1580005022812,
+                "title": "Self-enabling directional array"
             }
         ]
     }
@@ -79,11 +79,17 @@ All of the other components will be either rendering state as HTML, or telling t
 
 ## Provide Access to Users State
 
-It is very important to not allow other modules to have _direct_ access to the application state. You want to prevent inadvertant, or even malicious, attempts to corrupt the data, or delete the data. To have that control over access to the state, you are going to write functions that other modules can import and invoke.
+Now you need to write some simple functions that will allow other code to access this data, or state.
 
 ### Making Copies
 
-In JavaScript, there is a very concise, but abstract, syntax for creating a copy of an array. If another module wants to work with all of the user objects, you are going to copy the users array and give that copy to the module. Write the following function at the bottom of your data store module.
+JavaScript has a weird, but powerful mechanism called the _**spread operator**_. It is three dots in a row `...` follow by a variable whose value is an array. You are going to use that to make a copy of your data before it is sent to other parts of the application.
+
+> TODO: Insert video about spread operator here
+
+The reason for making copies for the rest of the application to use is so that other code cannot change the data directly.
+
+This will make more sense later. Just remember that making copies of your data === safer.
 
 > #### giffygram/src/scripts/store/index.js
 
@@ -100,8 +106,6 @@ export const getAllUsers = () => {
     return usersCopy
 }
 ```
-
-The `[...originalArrayVariable]` syntax is called a spread operation, and creates a new array, while simultaneously copying all of the items from the original array in to the new one. It's the three dots `...` that are the magic.
 
 The `export` keyword makes the function usable by other modules. If you do not put the `export` keyword before declaring the function, then this module is the only one that can invoke it.
 
