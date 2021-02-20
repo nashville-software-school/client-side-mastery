@@ -15,13 +15,13 @@
 A phrase you will see as you explore the World Wide Web as a software developer is...
 
 [quote]
-"Your job as a web application developer is to express data as HTML."
+Your job as a web application developer is to express data as HTML.
 
 It may seem like an odd way to say that, but what it means is that your code's sole purpose is to take raw data and make it look pretty in a Web browser.
 
-For example, your code turns this data 👇🏽
+For example, your code turns this data
 
-[source,javascript]
+[source,json]
 -----------------
 posts = [
     {
@@ -42,9 +42,10 @@ likes: [
 ]
 -----------------
 
-Into this in the Web browser 👇🏽
+Into this HTML representation in the Web browser
 
-![](./images/data-as-html.png)
+image::./images/data-as-html.png[]
+
 
 The data has been beautifully expressed as HTML so that a person can understand it and interact with it.
 
@@ -55,7 +56,8 @@ Every application needs an HTML file so that your data can be displayed beautifu
 
 > #### giffygram/src/index.html
 
-```html
+[source,html]
+-------------
 <!doctype html>
 <html lang="en">
 
@@ -73,20 +75,23 @@ Every application needs an HTML file so that your data can be displayed beautifu
 </body>
 
 </html>
-```
+-------------
 
-> **Definition:** If you have multiple files of JavaScript code, and they export and import code from each other, they are called modules.
+
+TIP: If you have multiple files of JavaScript code, and they export and import code from each other, they are called modules.
 
 Your code has to start somewhere. For this application, it is going to start in a file called `main.js`. This file is the top-level [_module_ of code](https://javascript.info/modules-intro#what-is-a-module), and it will import code from other modules.
 
 
 Note the `<script>` tag in the HTML file above. That is how you will run your JavaScript code that will convert your raw data to be beautifully expressed as HTML.
 
-> #### giffygram/src/scripts/main.js
+==== 
 
-```js
+.giffygram/src/scripts/main.js
+[source,javascript]
+----
 // Can you explain what is being imported?
-import { GiffyGram } from "./GiffyGram.js"
+import { GiffyGram } from "./GiffyGram.js" <1>
 
 // What HTML element is being in the following variable?
 const applicationElement = document.querySelector(".giffygram")
@@ -103,15 +108,18 @@ const renderApp = () => {
 
 // Are you defining the function here or invoking it?
 renderApp()
-```
+----
 
-The other file you will need is the **`GiffyGram`** component, whose Sole Reponsbility is to display the posts - at least for now. You are starting off with the simple stuff.
+====
+
+The other file you will need is the *`GiffyGram`* component, whose Sole Reponsbility is to display the posts - at least for now. You are starting off with the simple stuff.
 
 There are concept checking questions sprinkled throughout the file. You should ponder these yourself, discuss them with your teammates, or discuss with instructors.
 
-> #### giffygram/src/scripts/GiffyGram.js
+==== giffygram/src/scripts/GiffyGram.js
 
-```js
+[source, javascript]
+----
 // Can you explain what is being imported here?
 import { getPosts } from "./store/index.js"
 
@@ -145,18 +153,14 @@ export const GiffyGram = () => {
     */
     return htmlStringOfAllPosts
 }
-```
+----
 
 Then start your Web server with the `serve` command in the terminal. Make sure you are in the `giffygram/src` directory when you do it.
-
-![](./images/starting-serve.gif)
 
 Now go to Chrome and paste with `Ctrl+V` on Windows or `Cmd+V` on Mac. Then hit enter and you should see a single post for Giffygram appear in the browser.
 
 
-![](./images/first-giffygram-post.gif)
-
-## Displaying More Properties as HTML
+== Displaying More Properties as HTML
 
 In the next couple chapters, you will see more comprehensive code for displaying the properties of a Post as HTML, but you are encouraged to give it a shot first.
 
