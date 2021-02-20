@@ -5,10 +5,9 @@
 * You should be able to remember that the HTML that a person sees in the browser is an expression of the state of your raw data.
 * You should be able to define what a JavaScript module is.
 * You should be able to describe how functions get exported and imported into different modules.
-* You should be able to
-* You should be able to
-* You should be able to
-* You should be able to
+* You should be able to explain what the [document.querySelector()](https://www.youtube.com/watch?v=3oOKAJTD2F8) method does.
+* You should be able to describe how to change the browser contents with [innerHTML](https://www.youtube.com/watch?v=1UsllDMhvN4).
+* You should be able to differentiate between assignment with a single `=` and appending with `+=`.
 
 ## Data as HTML
 
@@ -18,17 +17,17 @@ A phrase you will see as you explore the World Wide Web as a software developer 
 
 It may seem like an odd way to say that, but what it means is that your code's sole purpose is to take raw data and make it look pretty in a Web browser.
 
-For example, your code turns this data 👇🏽
+For example, your code turns this raw data 👇🏽
 
 ```json
 posts = [
     {
-        "id": 2,
-        "imageURL": "https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif",
-        "userId": 6,
-        "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-        "timestamp": 1561695022812,
-        "title": "Enhanced global utilisation"
+        id: 2,
+        imageURL: "https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif",
+        userId: 6,
+        description: "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+        timestamp: 1561695022812,
+        title: "Enhanced global utilisation"
     }
 ],
 likes: [
@@ -40,9 +39,10 @@ likes: [
 ]
 ```
 
-Into this in the Web browser 👇🏽
+Into this HTML representation of it in the Web browser 👇🏽
 
-![](./images/data-as-html.png)
+<img src="https://github.com/nashville-software-school/client-side-mastery/raw/srb-split-glassdale/book-3-giffygram/chapters/images/data-as-html.png" height="500" />
+
 
 The data has been beautifully expressed as HTML so that a person can understand it and interact with it.
 
@@ -51,7 +51,7 @@ The data has been beautifully expressed as HTML so that a person can understand 
 
 Every application needs an HTML file so that your data can be displayed beautifully. That file will be `index.html`.
 
-> #### giffygram/src/index.html
+> #### `giffygram/src/index.html`
 
 ```html
 <!doctype html>
@@ -80,7 +80,7 @@ Your code has to start somewhere. For this application, it is going to start in 
 
 Note the `<script>` tag in the HTML file above. That is how you will run your JavaScript code that will convert your raw data to be beautifully expressed as HTML.
 
-> #### giffygram/src/scripts/main.js
+> #### `giffygram/src/scripts/main.js`
 
 ```js
 // Can you explain what is being imported?
@@ -107,7 +107,7 @@ The other file you will need is the **`GiffyGram`** component, whose Sole Repons
 
 There are concept checking questions sprinkled throughout the file. You should ponder these yourself, discuss them with your teammates, or discuss with instructors.
 
-> #### giffygram/src/scripts/GiffyGram.js
+> #### `giffygram/src/scripts/GiffyGram.js`
 
 ```js
 // Can you explain what is being imported here?

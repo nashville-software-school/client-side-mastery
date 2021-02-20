@@ -43,35 +43,23 @@
     ```js
     let htmlStringOfAllPosts = ""
     ```
-    with this
+    with this string interpolation code
     ```js
     let htmlStringOfAllPosts = `${NavBar()}`
     ```
 1. Refresh your browser.
 
-
 You just imported a function from another module, invoked it, and interpolated its return value into a string.
 
+The more explicit version of the code would look like this.
+
+```js
+const navBarHTML = NavBar()
+let htmlStringOfAllPosts = navBarHTML
+```
 
 ## You Can Try...
 
 You'll be shown how to do it in a future chapter, but see if you can make a footer component for your application in a `nav/Footer.js` file. For now, just display your name and the current year in it.
 
-Use the following CSS to make sure the component shows up at the bottom of the screen.
-
-```css
-.footer {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-    border-bottom: 1px solid lightblue;
-    padding: 0.5em 0 0.5em 1em;
-    margin-bottom: 2em;
-    position: fixed;
-    z-index: 11;
-    bottom: 0;
-    width: 100%;
-    background-color: whitesmoke;
-    margin: auto;
-}
-```
+Look in the `styles/footer.css` file to see a style that you can apply to your footer element.
