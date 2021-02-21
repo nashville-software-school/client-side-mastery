@@ -13,7 +13,7 @@
 
 A phrase you will see as you explore the World Wide Web as a software developer is...
 
-> "Your job as a web application developer is to express data as HTML."
+> &#x275d; Your job as a web application developer is to express data as HTML. &#x275e;
 
 It may seem like an odd way to say that, but what it means is that your code's sole purpose is to take raw data and make it look pretty in a Web browser.
 
@@ -73,7 +73,10 @@ Every application needs an HTML file so that your data can be displayed beautifu
 </html>
 ```
 
-> **Definition:** If you have multiple files of JavaScript code, and they export and import code from each other, they are called modules.
+
+| | |
+|:---:|:---|
+| <h1>&#x270e;</h1> |  <sub>If you have multiple files of JavaScript code, and they export and import code from each other, they are called modules</sub> |
 
 Your code has to start somewhere. For this application, it is going to start in a file called `main.js`. This file is the top-level [_module_ of code](https://javascript.info/modules-intro#what-is-a-module), and it will import code from other modules.
 
