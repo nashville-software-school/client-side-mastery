@@ -19,7 +19,7 @@ It may seem like an odd way to say that, but what it means is that your code's s
 
 For example, your code turns this raw data 👇🏽
 
-```json
+```js
 posts = [
     {
         id: 2,
@@ -76,7 +76,7 @@ Every application needs an HTML file so that your data can be displayed beautifu
 
 | | |
 |:---:|:---|
-| <h1>&#x270e;</h1> |  <sub>If you have multiple files of JavaScript code, and they export and import code from each other, they are called modules</sub> |
+| <h1>&#x270e;</h1> |  If you have multiple files of JavaScript code, and they export and import code from each other, they are called modules |
 
 Your code has to start somewhere. For this application, it is going to start in a file called `main.js`. This file is the top-level [_module_ of code](https://javascript.info/modules-intro#what-is-a-module), and it will import code from other modules.
 
