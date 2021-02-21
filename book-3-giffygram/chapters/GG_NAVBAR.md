@@ -3,6 +3,12 @@
 
 ## Learning Objectives
 
+* You should be able to demonstrate how to import a function from one module to another.
+* You should be able to explain what data type a function returns.
+* You should be able to identify where a string is injected
+* You should be able to
+* You should be able to
+* You should be able to
 
 ## Setup
 
@@ -13,20 +19,19 @@
     ```
 
 1. Right-click the image below and save it in the `nav` directory.
-    ![](./images/pb.png)
+
+    <img src="./images/pb.png" height="100px">
+
 1. Copy and paste the following code into the `NavBar.js` file.
     ```js
     export const NavBar = () => {
         return `
             <nav class="navigation">
                 <div class="navigation__item navigation__icon">
-                    <img src="./images/pb.png" alt="Giffygram icon" />
+                    <img src="./pb.png" alt="Giffygram icon" />
                 </div>
                 <div class="navigation__item navigation__name">
                     Giffygram
-                </div>
-                <div class="navigation__item navigation__message">
-                    <img id="directMessageIcon" src="/images/fountain-pen.svg" alt="Direct message" />
                 </div>
                 <div class="navigation__item navigation__logout">
                     <button id="logout" class="fakeLink">Logout</button>
@@ -41,11 +46,11 @@
 1. Import the `NavBar.js` file
 1. Change the following line of code...
     ```js
-    let htmlStringOfAllPosts = ""
+    let giffyGramHTML = ""
     ```
     with this string interpolation code
     ```js
-    let htmlStringOfAllPosts = `${NavBar()}`
+    let giffyGramHTML = NavBar()
     ```
 1. Refresh your browser.
 
@@ -60,6 +65,10 @@ let htmlStringOfAllPosts = navBarHTML
 
 ## You Can Try...
 
-You'll be shown how to do it in a future chapter, but see if you can make a footer component for your application in a `nav/Footer.js` file. For now, just display your name and the current year in it.
+You'll be shown how to do it in a future chapter, but see if you can make a footer component for your application.
+
+Write a function in a `nav/Footer.js` file. That function should return a string filled with HTML elements. For now, just display your name and the current year in it.
+
+Import that function into the **`Giffygram`** module and append its return value to the `giffyGramHTML` variable before it is returned.
 
 Look in the `styles/footer.css` file to see a style that you can apply to your footer element.

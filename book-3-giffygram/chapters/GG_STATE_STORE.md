@@ -64,18 +64,18 @@ All of the other components will be either rendering _(i.e. displaying)_ state a
         ],
         posts: [
             {
-                "id": 1,
-                "userId": 2,
-                "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-                "imageURL": "https://media.giphy.com/media/YqGeOQ0u6hB5u/giphy-downsized.gif",
-                "timestamp": 1580005022812,
-                "title": "Self-enabling directional array"
+                id: 1,
+                userId: 2,
+                description: "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+                imageURL: "https://media.giphy.com/media/YqGeOQ0u6hB5u/giphy-downsized.gif",
+                timestamp: 1580005022812,
+                title: "Self-enabling directional array"
             }
         ]
     }
     ```
 
-    > **Key Term**: The `userId` property on the post object is a **foreign key**. It matches the primary key of `1` that identifies Ray. In relational data systems, it is how you conect two related things together. In this example, it's your way of saying "The post object #1 belongs to Ray."
+> **Key Term**: The `userId` property on the post object is a **foreign key**. It matches the primary key of `1` that identifies Ray. In relational data systems, it is how you conect two related things together. In this example, it's your way of saying "The post object #1 belongs to Ray."
 
 ## Provide Access to Users State
 
@@ -91,7 +91,7 @@ The reason for making copies for the rest of the application to use is so that o
 
 This will make more sense later. Just remember that making copies of your data === safer.
 
-> #### giffygram/src/scripts/store/index.js
+> #### `giffygram/src/scripts/store/index.js`
 
 ```js
 /*

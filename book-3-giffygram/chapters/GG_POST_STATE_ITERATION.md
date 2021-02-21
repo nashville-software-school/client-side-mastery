@@ -117,7 +117,7 @@ import { getPosts } from "./store/index.js"
 export const GiffyGram = () => {
     // getPosts() is not defined in this module. How are you able to invoke it?
     const allPosts = getPosts()
-    let htmlStringOfAllPosts = ""
+    let giffyGramHTML = ""
 
     // Which variable below has a value of an array?
     for (const postObject of allPosts) {
@@ -133,7 +133,7 @@ export const GiffyGram = () => {
         `
 
         // What is the difference between = and += operators?
-        htmlStringOfAllPosts += htmlRepresentationOfThisPost
+        giffyGramHTML += htmlRepresentationOfThisPost
     }
 
     /*
@@ -141,7 +141,7 @@ export const GiffyGram = () => {
 
         What data type does the function return?
     */
-    return htmlStringOfAllPosts
+    return giffyGramHTML
 }
 ```
 
