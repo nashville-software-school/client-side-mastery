@@ -10,6 +10,15 @@ Beginners struggle with sublety because they want concrete rules to follow.
 
 However, by following this principle, you will end up with having a code base that is easier to maintain, easier to extend, and easier to change. You will work on your understanding of this principle throughout the course.
 
+## Learning Objectives
+
+* You should be able to remember the general definition of the Single Responsbility Principle.
+* You should be able to remember the definition of the term _"code refactor"_.
+* You should be able to explain the Single Responsbility of all modules and functions you have written so far.
+* You should be able to understand that invoking a function inside a string template injects the return value of that function into the string.
+
+## Single Responsbility Components
+
 Take a look at your **`Giffygram`** component code.
 
 ```js
