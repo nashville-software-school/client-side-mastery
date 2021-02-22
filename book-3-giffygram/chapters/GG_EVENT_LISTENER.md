@@ -145,4 +145,4 @@ export const Footer = () => {
 
 Here is a short video walkthrough of the change event listener mechanism.
 
-[![](./images/giffygram-change-event-listener.png)](https://vimeo.com/515515179)
+[<img src="./images/giffygram-change-event-listener.png" width="700px" />](https://vimeo.com/515515179)
