@@ -11,7 +11,10 @@
 | 5 | [Giffygram and Listing Posts](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#components #export #import #html-representation</sub> |  |  |  |
 | 6 | [Navigation Component](./chapters/GG_NAVBAR.md) <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  |  |
 | 7 | [Creating Post List Component](./chapters/GG_POST_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-reponsibility</sub> |  |  |  |
-| 9 | [Post Count by Year](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #component-state</sub> |  |  |  |
+| 9 | [Creating the Footer Component](./chapters/GG_FOOTER.md) <br/> <sub style="font-size:0.85rem;">#events #click #keyup #change</sub> |  |  |  |
+| 9 | [Reacting to User Interaction](./chapters/GG_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #click #keyup #change</sub> |  |  |  |
+| 9 | [Component State](./chapters/GG_COMPONENT_STATE.md) <br/> <sub style="font-size:0.85rem;">#component-state</sub> |  |  |  |
+| 9 | [Post Count by Year](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#iteration #custom-event</sub> |  |  |  |
 | 10 | [Posts by User](./chapters/GG_USER_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #filtering #component-state</sub> |  |  |  |
 | 11 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods #component-state</sub> |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
 | 10 | [Login Form](./chapters/GG_LOGIN_FORM.md) <br/> <sub style="font-size:0.85rem;">#components #forms</sub> |  |  |  |

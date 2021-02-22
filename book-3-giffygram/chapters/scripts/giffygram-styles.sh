@@ -173,6 +173,10 @@ echo '.navigation {
     margin: auto;
 }
 
+.navigation__search {
+    margin-left: 3rem;
+}
+
 .navigation__item {
     vertical-align: baseline;
 }

@@ -22,6 +22,10 @@
 
     <img src="./images/pb.png" height="100px">
 
+1. Right-click the image below and save it in the `nav` directory.
+
+    <img src="./images/fountain-pen.svg" height="100px">
+
 1. Copy and paste the following code into the `NavBar.js` file.
     ```js
     export const NavBar = () => {
@@ -32,6 +36,12 @@
                 </div>
                 <div class="navigation__item navigation__name">
                     Giffygram
+                </div>
+                <div class="navigation__item navigation__search">
+                    <input type="text" id="postSearch" placeholder="Search posts..." />
+                </div>
+                <div class="navigation__item navigation__message">
+                    <img id="directMessageIcon" src="./fountain-pen.svg" alt="Direct message" />
                 </div>
                 <div class="navigation__item navigation__logout">
                     <button id="logout" class="fakeLink">Logout</button>
