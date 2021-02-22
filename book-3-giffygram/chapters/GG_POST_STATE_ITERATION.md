@@ -73,7 +73,6 @@ Every application needs an HTML file so that your data can be displayed beautifu
 </html>
 ```
 
-
 | | |
 |:---:|:---|
 | <h1>&#x270e;</h1> |  _If you have multiple files of JavaScript code, and they export and import code from each other, they are called modules._ |
@@ -86,6 +85,11 @@ Note the `<script>` tag in the HTML file above. That is how you will run your Ja
 > #### `giffygram/src/scripts/main.js`
 
 ```js
+/**
+ * Main logic module for what should happen on initial page load for Giffygram
+ */
+
+
 // Can you explain what is being imported?
 import { GiffyGram } from "./GiffyGram.js"
 

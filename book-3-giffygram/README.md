@@ -12,7 +12,7 @@
 | 6 | [Navigation Component](./chapters/GG_NAVBAR.md) <br/> <sub style="font-size:0.85rem;">#components</sub> |  |  |  |
 | 7 | [Creating Post List Component](./chapters/GG_POST_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-reponsibility</sub> |  |  |  |
 | 9 | [Post Count by Year](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #component-state</sub> |  |  |  |
-| 10 | [Posts by User](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #filtering #component-state</sub> |  |  |  |
+| 10 | [Posts by User](./chapters/GG_USER_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #filtering #component-state</sub> |  |  |  |
 | 11 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods #component-state</sub> |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
 | 10 | [Login Form](./chapters/GG_LOGIN_FORM.md) <br/> <sub style="font-size:0.85rem;">#components #forms</sub> |  |  |  |
 | 11 | [User Authentication](./chapters/GG_AUTH.md) <br/> <sub style="font-size:0.85rem;">#local-storage #events</sub> |  |  |  |

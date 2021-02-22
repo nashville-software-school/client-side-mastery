@@ -61,7 +61,10 @@ Since its Single Reponsiblity is no longer the generation of the HTML, but rathe
 
 Time for your first code refactor.
 
-> **Definition:** Code refactoring is the process of restructuring existing computer code
+| | |
+|:---:|:---|
+| <h1>&#x270e;</h1> |  _Code refactoring is the process of restructuring existing computer code._ |
+
 
 Follow these steps to see if you can do the refactor yourself. If you have a hard time with the instructions, you can talk to your teammates or a member of the instruction team.
 
@@ -73,7 +76,10 @@ Follow these steps to see if you can do the refactor yourself. If you have a har
 
 Give it a shot, but don't get to the point of frustration. You are still new at this. If you've tried to write the code for 20-30 minutes, but feel stuck, you can [copy the implemented code](./PostList.js) and then try to understand what each line of code it doing.
 
-> **Note:** If you augmented your existing code to display more information about the post beyond the title and image, you'll need to make sure you add that if you copy the code provided by the course.
+
+| | |
+|:---:|:---|
+| <h1>&#x2757;</h1> |  _If you augmented your existing code to display more information about the post beyond the title and image, you'll need to make sure you add that if you copy the code provided by the course.._ |
 
 ## Refactor Giffygram
 
