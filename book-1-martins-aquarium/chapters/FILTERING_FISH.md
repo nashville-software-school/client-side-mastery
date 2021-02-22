@@ -1,6 +1,5 @@
-# Big Fish, Little Fish
+# Big Fish, Little Fish - Filtering Source Data into Smaller Arrays
 
-## Filtering Source Data into Smaller Arrays
 
 ### Why Are You Learning This?
 
@@ -11,6 +10,12 @@ Filtering is a very common process that applications provide for their users. Th
 * Filter by color
 * Filter by size
 * etc...
+
+## Vocabulary to Learn
+* Array Loop: `for of`
+* Array iteration methods
+* Conditional statement
+
 
 ### Filtering with a for..of Loop
 
@@ -98,7 +103,7 @@ for (const number of numbers) {
 
 ## Goal
 
-You need to build three functions in your fish data provider. One to return an array of fish that are multiples of 3 in length, one for multiples of 5, and one for all others.
+You need to build three functions in your fish data module. One to return an array of fish that are multiples of 3 in length, one for multiples of 5, and one for all others.
 
 Some starter code is provided below. Use the example code blocks above to have each function filter out the appropriate fish.
 

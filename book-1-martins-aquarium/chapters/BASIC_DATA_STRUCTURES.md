@@ -26,6 +26,7 @@ Luckily, there is a way to automate this entire process, so that software develo
 * Object
 * Property
 * Object key and value
+* Declaring variables: `let` and `const`
 
 ## Object Representation of Things
 
@@ -75,7 +76,7 @@ Create a new JavaScript module in your application named `FishData.js`. In that 
 ```js
 /*
  *  To get you started, here's some properties of Bart.
- *  You need to add more properties to complete his
+ *  You need to add more properties to complete this
  *  representation as an object. Then add all the other
  *  fish to the collection.
  */

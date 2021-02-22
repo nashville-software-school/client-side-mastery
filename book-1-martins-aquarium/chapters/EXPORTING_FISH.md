@@ -12,7 +12,7 @@ Some common module responsibilities are:
 * Array Method: `slice()`
 * JavaScript module
 * JavaScript import
-* JavaScript `for of` loop
+* Array iteration (`for of` loop)
 
 
 
@@ -37,7 +37,7 @@ export const getFish = () => {
 }
 ```
 
-Next, you import that function into the main module. Then you can invoke the function and store the fish collection in a variable that is scoped to the main module. Then just log each fish object to the developer console.
+Next, you import that function into the main module. Then you can invoke the function and store the fish collection in a variable that is scoped to the main module. Then log each fish object to the developer console.
 
 > **Note:** The imported function is wrapped in curly braces. This is needed for anything that is exported from a module that isn't the `default` export.
 
