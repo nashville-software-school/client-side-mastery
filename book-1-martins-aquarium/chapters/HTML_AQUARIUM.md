@@ -1,6 +1,6 @@
 # Project: Fish in my Aquarium
 
-Let's build a couple HTML pages whose user will be an avid rare fish collector who maintains a sophisticated tank in his home. His name is Martin. Martin meets you at a local coffee and explains what he needs to have on his web site.
+Over the next week, we will build a web page for Martin who is an avid rare fish collector and maintains a sophisticated tank in his home. Martin meets you at a local coffee shop and explains what he needs to have on his web site.
 
 > "So nice to meet you finally after all of those emails. Please, grab a chair," says Martin. He uses his leather loafer to gently nudge a chair slightly away from the table. He subtly waves his hand towards the chair in invitation.
 >
@@ -80,4 +80,4 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Time to Build
 
-Your instruction team will lead the class through the construction of the this site. You may follow along, or you can just close your computer and watch what gets built and offer your suggestions.
+Your instruction team will lead the class through the construction of Martin's Aquarium. You may follow along, or you can just close your computer and watch what gets built and offer your suggestions.
