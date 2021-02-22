@@ -69,7 +69,7 @@ const applicationElement = document.querySelector(".giffygram")
 
 Now it is time to listen for your first browser generated event. When the user clicks on the logout button in the top-right corner, you are going to display a message that it was clicked.
 
-![](./images/giffygram-logout-click.gif)
+<img src="./images/giffygram-logout-click.gif" width="700px" />
 
 Add the following code, refresh your browser, and click the logout button.
 
