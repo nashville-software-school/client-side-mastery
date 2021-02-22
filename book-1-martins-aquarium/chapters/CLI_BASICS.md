@@ -21,7 +21,6 @@ Becoming comfortable with your terminal will make you a master of the computer.
 1. [Bash Basics Part 1 of 8 | Access and Navigation](https://youtu.be/eH8Z9zeywq0?t=885)
 1. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
 1. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
-1. Go through the CodeAcademy [command line course](https://www.codecademy.com/learn/learn-the-command-line).
 1. [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
 
 ## Practice: Aquarium Directory &amp; Files
@@ -58,7 +57,7 @@ Then `cd ..` to go up one directory level. Create another subdirectory named `sc
 
 During your career, you will be using powerful and extensible code editors like Visual Studio, IntelliJ, Webstorm, Eclipse, and many others to create your code. However, there are times that you want to put just a a couple lines of code, or a comment, in a file and you don't want to fire up your powerful editor just to do that.
 
-Read the will-written answer to a [question on the Stack Exchange website](https://unix.stackexchange.com/questions/77277/how-to-append-multiple-lines-to-a-file) and see if you can figure out how to get the following CSS code into the `main.css` file without using Visual Studio Code, but the `echo` command instead.
+Read the well-written answer to a [question on the Stack Exchange website](https://unix.stackexchange.com/questions/77277/how-to-append-multiple-lines-to-a-file) and see if you can figure out how to get the following CSS code into the `main.css` file without using Visual Studio Code, but the `echo` command instead.
 
 ```css
 #fishtank {}
