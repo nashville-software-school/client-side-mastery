@@ -6,12 +6,7 @@ In this chapter you will explore how a component doesn't just copy application s
 
 * You should be able to differentiate between application state and component state.
 * You should be able to identify where component state is defined in the component module.
-* You should be able to
-* You should be able to
-* You should be able to
-* You should be able to
-* You should be able to
-* You should be able to
+* You should be able to explain how state variables are expressed as HTML.
 
 ## Layers of State
 
