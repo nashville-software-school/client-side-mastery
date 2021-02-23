@@ -25,13 +25,13 @@ Then create 4 employee objects. Assign 2 employees to each location. Here's a sa
 
 ## Refactoring
 
-Now create the following components for animals, employees, and customers.
+Now create the following components for locations, animals, employees, and customers.
 
 * Data provider
 * List
 * Individual item
 
-Then refactor the **`Kennel`** component to render each list component. Remember to wrap each list component in its corresponding data provider component.
+Then refactor the **`ApplicationViews`** component to render each list component. Remember to wrap each list component in its corresponding data provider component.
 
 ```jsx
 <h2>Animals</h2>
@@ -39,5 +39,3 @@ Then refactor the **`Kennel`** component to render each list component. Remember
     <AnimalList />
 </AnimalProvider>
 ```
-
-> **Note:** For now, just display the foreign key value for each animal and employee. You will learn how to join data from multiple resources in later chapters.
