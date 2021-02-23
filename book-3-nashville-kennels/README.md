@@ -1,4 +1,4 @@
-# Book 4 - Nashville Kennels
+# Book 3 - Nashville Kennels
 
 ## Chapters
 
