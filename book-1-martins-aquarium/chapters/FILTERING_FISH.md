@@ -12,7 +12,7 @@ Filtering is a very common process that applications provide for their users. Th
 * etc...
 
 ## Vocabulary to Learn
-* Array Loop: `for of`
+* Array Loop: `for...of`
 * Array iteration methods
 * Conditional statement
 
@@ -62,7 +62,7 @@ for (const sock of socks) {
 >
 > His usual neat appearance is gone. His hair is disheveled, and looks oily, you notice. His clothes are wrinkled and he is wearing boots covered in caked mud.
 >
-> He spots you and huuriedly comes to the table and sits down. In a breathless voice, he makes his request.
+> He spots you and hurriedly comes to the table and sits down. In a breathless voice, he makes his request.
 >
 > "I've made the most amazing discovery. It's going to turn the world of fish harvesting and care on its head." He runs his hand through his slick hair and says in a lowered voice, "I just returned from a trip to the Caribbean where I took a day trip inland to see the ruins of the city of Tikal."
 >
@@ -108,25 +108,28 @@ You need to build three functions in your fish data module. One to return an arr
 Some starter code is provided below. Use the example code blocks above to have each function filter out the appropriate fish.
 
 ```js
-export const mostHolyFish = () => {
+export const getMostHolyFish = () => {
     // 3, 6, 9, 12, etc... fish
-    const holyFish = []
+    const holyFishArray = []
 
     for () {
 
     }
 
-    return holyFish
+    return holyFishArray
 }
 
-export const soldierFish = () => {
+export const getSoldierFish = () => {
     // 5, 10, 15, 20, 25, etc... fish
-    return soldiers
+    return soldiersArray
 }
 
-export const nonHolyFish = () => {
+export const getUnworthy = () => {
     // Any fish not a multiple of 3 or 5
-    return regularFish
+    return unworthyArray
 }
 ```
+
+## Refactor the FishList
+The FishList will need to invoke the three functions responsible for sorting and returning the fish arrays. Be sure to import each FishData function. You will then need to display each list in the order specified by Martin.
 

@@ -27,6 +27,7 @@ Luckily, there is a way to automate this entire process, so that software develo
 * Property
 * Object key and value
 * Declaring variables: `let` and `const`
+* Array
 
 ## Object Representation of Things
 

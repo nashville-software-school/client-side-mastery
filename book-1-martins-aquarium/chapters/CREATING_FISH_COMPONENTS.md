@@ -5,21 +5,29 @@ Now that you have a module whose responsibility is to maintain the state of your
 ## Vocabulary To Learn
 * A function defines a parameter
 * Invoke a function with an argument
+* ES6 Arrow Function
 * Template literals(template string)
+* querySelector
+* JavaScript Operators `(+=)`, https://www.w3schools.com/js/js_operators.asp
+
+## Function Basics
+First, take time to read over: https://javascript.info/function-basics
 
 
-## Remove Hard-Coded HTML
+## Remove Any Hard-Coded Fish HTML
 
-Open `index.html` and delete the `<section class="fishList">` element and all of the children fish elements.
+> We will be starting this project with an HTML page that contains a header, nav, and couple of fish. 
+
+Open `index.html` and delete the element containing the fish items and all of the children fish elements.
 
 ## Defining the Components
 
-There are two components to this process.
+There are two components in this process.
 
 1. Individual fish. This will create an HTML representation of each fish to be rendered in the list container.
 1. List of fish. This will create an HTML container element and have instructions for rendering the individual fish component for each fish in the collection.
 
-Since each of these components have a different responsibility, then each one must be created in its own module.
+Since each of these components have a different responsibility, each one must be created in its own module.
 
 ### Single Fish Component
 
@@ -29,17 +37,17 @@ Since each of these components have a different responsibility, then each one mu
 /**
  *  Fish which renders individual fish objects as HTML
  */
-export const Fish = (fish) => {
-    return `
-        <section class="fish card">
-            <div><img  class="fish__image image--card" src="${fish.image}" /></div>
-            <div class="fish__name">${fish.name}</div>
-            <div class="fish__species">${fish.species}</div>
-            <div class="fish__length">${fish.length}</div>
-            <div class="fish__location">${fish.location}</div>
-            <div class="fish__diet">${fish.food}</div>
-        </section>
-    `
+export const Fish = (fishObj) => {
+	return `<article class="fish-card">
+				<div><img class="fish-image" src="images/${fishObj.image}" /></div>
+				<h3 class="fish-name">${fishObj.name}</h3>
+				<ul>
+					<li class="fish-details">${fishObj.species}</li>
+					<li class="fish-details">Length: ${fishObj.length} inches</li>
+					<li class="fish-details">Found: ${fishObj.location}</li>
+					<li class="fish-details">Diet: ${fishObj.diet}</li>
+				</ul>
+        	</article>`
 }
 ```
 
@@ -49,7 +57,7 @@ export const Fish = (fish) => {
 
 ```js
 /**
- *  FishList which renders individual fish objects as HTML
+ *  FishList renders individual fish objects as HTML
  */
 
 // TODO: Import `getFish` from the data module
@@ -62,16 +70,16 @@ export const FishList = () => {
 
     // Add to the existing HTML in the content element
     contentElement.innerHTML += `
-        <article class="fishList">
+        <section class="fishList">
             All the fish go here!
-        </article>
+        </section>
     `
 }
 ```
 
 ## Rendering the List in Main Module
 
-Since we want the fish to be immediately rendered when the page loads, then that falls within the responsibility of the `main.js` module. Import the list component into main and invoke the component function.
+Since we want the fish to be immediately rendered when the page loads, that falls within the responsibility of the `main.js` module. Import the list component into main and invoke the component function.
 
 ```js
 // Import the FishList here
@@ -80,13 +88,13 @@ Since we want the fish to be immediately rendered when the page loads, then that
 FishList()
 ```
 
-Refresh your browser again and you should see the following message in the middle of the screen.
+Refresh your browser again and you should see something similar on the screen.
 
 ![fish container with default message](./images/fish-list-no-for-loop.png)
 
 Hooray!! Your fish list component got rendered to the browser. Next is to render all the fish.
 
-You need the `Fish` component function to do that. That function is in the `Fish.js` module, so you need to import it from there.
+You will need the `Fish` component function. That function is in the `Fish.js` module, so you will need to import it.
 
 > **`scripts/FishList.js`**
 
@@ -94,36 +102,40 @@ You need the `Fish` component function to do that. That function is in the `Fish
 import { Fish } from "./Fish.js"
 ```
 
-Now you can write a `for..of` loop to generate all of the individual fish HTML representations, and keep appending the HTML to a variable. After the loop is done, you have one, long string containing all the HTML.
+You will write a `for..of` loop to generate all of the individual fish HTML representations.
 
 ```js
 /**
  *   FishList which renders individual fish objects as HTML
  */
+
+ /** Define the steps that need to be taken
+ 1. Get the array of Fish
+ 2. Get a reference to the location on the DOM where you want to display the list of fish
+ 3. Declare a variable to hold on to generated fish HTML representations
+ 4. Loop over the array of fish and for each one, invoke the Fish component which returns HTML representation
+ 5. Finally set the dom equal to the variable containing the fish html representations
+ **/
+
+
 import { getFish } from "./FishData.js"
 import { Fish } from "./Fish.js"
 
 export const FishList = () => {
 
-    const contentElement = document.querySelector("fill this in")
+    // Get a reference to the location on the DOM you want to display the list of fish
+    const contentElement = document.querySelector(".fishList")
+    // Get the fish array
     const fishes = getFish()
-
-    // Generate all of the HTML for all of the fish
-    let fishHTMLRepresentations = ""
-    for (const fish of fishes) {
-        /*
-            Invoke the Fish component function
-            and pass the current fish object as an argument.
-            Each time, add the return value to the
-            fishHTMLRepresentations variable with `+=`
-        */
-    }
-
-    // Add a section, and all of the fish to the DOM
+    // Declare a variable to hold on to the fish HTML representation
+	let fishHTMLRepresentation = "";
+    // Loop over the array of fish
+	for (const oneThingFromTheSea of fishes) {
+		fishHTMLRepresentation += Fish(oneThingFromTheSea);
+	}
+    // Set the dom equal to the variable containing the fish html representations
     contentElement.innerHTML += `
-        <article class="fishList">
-            ${fishHTMLRepresentations}
-        </article>
+        ${fishHTMLRepresentation}
     `
 }
 ```
@@ -192,9 +204,10 @@ Then the parameter never gets assigned a value to reference. Therefore, it's und
 
 Now put the argument back in when you invoke the component function and it should all work again.
 
+
 ## Practice: Information Organization
 
-In the following exercises, you are going to building module and components for tips, and locations. You need to separate all of those modules into sub-directories so that you don't end up with dozens of JavaScript files all in one directory. It's confusing.
+In the following exercises, you are going to build modules and components for tips, and locations. You need to separate all of those modules into sub-directories so that you don't end up with dozens of JavaScript files all in one directory. It's confusing.
 
 In the `scripts` directory, create the `fish`, `tips`, and `locations` sub-directories and move all of your current files for automating fish into their `scripts/fish` directory.
 
@@ -219,3 +232,8 @@ Suggested files to create:
 * `scripts/locations/LocationData.js`
 * `scripts/locations/LocationList.js`
 * `scripts/locations/Location.js`
+
+## Extra Challenge: Navigation with EventListeners
+In the navigation, create links to display each of the different sections within the main content area of `index.html`. Get started by taking a look at: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+
+You will need to refactor your code and include some additional functions.
