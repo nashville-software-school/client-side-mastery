@@ -81,18 +81,6 @@ applicationElement.addEventListener("click", clickEvent => {
 })
 ```
 
-## Reacting to Another Click
-
-The following event listener will display a different message when the direct message icon _(i.e. the fountain pen in the navbar)_ is clicked.
-
-```js
-applicationElement.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "directMessageIcon") {
-        window.alert("The direct message image was clicked")
-    }
-})
-```
-
 ## Reacting to a Key Being Pressed
 
 The next event listener will react to the person typing in characters into the search input field.
@@ -146,3 +134,8 @@ export const Footer = () => {
 Here is a short video walkthrough of the change event listener mechanism.
 
 [<img src="./images/giffygram-change-event-listener.png" width="700px" />](https://vimeo.com/515515179)
+
+## Practice: Direct Message and Home
+
+1. Display an alert message of your choosing when the direct message icon _(i.e. the fountain pen in the navbar)_ is clicked. Remember that you are using event bubbling and that the event should be captured on the `<main>` element. That means you need to check what the `id` property of the event target is.
+1. The peanut butter jar icon in the nav bar is how the user will, eventually, be able to go back to the default state of the application. Think of it as "going home". When that icon is clicked, display an alert message of your choosing. There is current not an `id` attribute on that image, so you will need to add one.
