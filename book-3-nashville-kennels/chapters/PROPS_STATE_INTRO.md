@@ -7,7 +7,7 @@ Inside of components, make another file `PropsAndState.js`.
 Pass your name into a component and display it.
 
 > PropsAndState.js
-```
+```js
 import React, from "react"
 
 export const PropsAndState = ({ yourName }) => {
@@ -22,8 +22,8 @@ export const PropsAndState = ({ yourName }) => {
 Display this component from the *Kennel* component and pass in your name. Don't forget to import.
 
 > Kennel.js
-```
-//--------
+```js
+
  <PropsAndState yourName={"Brenda"} />
   <h2>Animals</h2>
   <article className="animals">
@@ -31,7 +31,7 @@ Display this component from the *Kennel* component and pass in your name. Don't 
     <AnimalCard />
     <AnimalCard />
   </article>
-//-------
+
 ```
 
 
@@ -48,7 +48,7 @@ Display this component from the *Kennel* component and pass in your name. Don't 
 Within the **StateAndProps** component, we will define state and a function to update state with the `useState` hook. We will also create a function `to handleClick`.
 
 > PropsAndState.js - updated
-```
+```js
 import React, { useState } from "react"
 
 export const PropsAndState = ({ yourName }) => {
