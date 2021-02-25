@@ -50,6 +50,7 @@ Add a new route in **`ApplicationViews`** for editing an animal. Consider what p
 > ##### `/src/components/ApplicationViews.js`
 ```jsx
 
+// Which provider should this be nested in?
 <Route path="/animals/edit/:animalId(\d+)">
     <AnimalForm />
 </Route>
@@ -102,11 +103,18 @@ export const AnimalForm = () => {
     const { customers, getCustomers } = useContext(CustomerContext)
 
     //for edit, hold on to state of animal in this view
-    const [animal, setAnimal] = useState({})
-    //wait for data before button is active
+    const [animal, setAnimal] = useState({
+      name: "",
+      breed: "",
+      customerId: 0,
+      locationId: 0
+    })
+
+    //wait for data before button is active. Look at the button to see how it's setting itself to disabled or not based on this state
     const [isLoading, setIsLoading] = useState(true);
 
-    const {animalId} = useParams();
+    // Now that the form can be used for editing as well as adding an animal, you need access to the animal id for fetching the animal you want to edit
+    const { animalId } = useParams();
 	  const history = useHistory();
 
     //when field changes, update state. This causes a re-render and updates the view.
@@ -117,7 +125,7 @@ export const AnimalForm = () => {
       const newAnimal = { ...animal }
       //animal is an object with properties.
       //set the property to the new value
-      newAnimal[event.target.name] = event.target.value
+      newAnimal[event.target.id] = event.target.value
       //update state
       setAnimal(newAnimal)
     }
@@ -128,11 +136,13 @@ export const AnimalForm = () => {
       } else {
         //disable the button - no extra clicks
         setIsLoading(true);
+        // This is how we check for whether the form is being used for editing or creating. If the URL that got us here has an id number in it, we know we want to update an existing record of an animal
         if (animalId){
           //PUT - update
           updateAnimal({
               id: animal.id,
               name: animal.name,
+              breed: animal.breed,
               locationId: parseInt(animal.locationId),
               customerId: parseInt(animal.customerId)
           })
@@ -141,6 +151,7 @@ export const AnimalForm = () => {
           //POST - add
           addAnimal({
               name: animal.name,
+              breed: animal.breed,
               locationId: parseInt(animal.locationId),
               customerId: parseInt(animal.customerId)
           })
@@ -152,7 +163,7 @@ export const AnimalForm = () => {
     // Get customers and locations. If animalId is in the URL, getAnimalById
     useEffect(() => {
       getCustomers().then(getLocations).then(() => {
-        if (animalId){
+        if (animalId) {
           getAnimalById(animalId)
           .then(animal => {
               setAnimal(animal)
@@ -164,25 +175,28 @@ export const AnimalForm = () => {
       })
     }, [])
 
-    //since state controlls this component, we no longer need
-    //useRef(null) or ref
-
     return (
       <form className="animalForm">
-        <h2 className="animalForm__title">New Animal</h2>
+        <h2 className="animalForm__title">{animalId ? "Edit Animal" : "Add Animal"}</h2>
         <fieldset>
           <div className="form-group">
             <label htmlFor="animalName">Animal name: </label>
-            <input type="text" id="animalName" name="name" required autoFocus className="form-control"
+            <input type="text" id="name" required autoFocus className="form-control"
             placeholder="Animal name"
             onChange={handleControlledInputChange}
-            defaultValue={animal.name}/>
+            value={animal.name}/>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+              <label htmlFor="breed">Animal breed:</label>
+              <input type="text" id="breed" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Animal breed" value={animal.breed}/>
           </div>
         </fieldset>
         <fieldset>
           <div className="form-group">
             <label htmlFor="location">Assign to location: </label>
-            <select value={animal.locationId} name="locationId" id="animalLocation" className="form-control" onChange={handleControlledInputChange}>
+            <select value={animal.locationId} id="locationId" className="form-control" onChange={handleControlledInputChange}>
               <option value="0">Select a location</option>
               {locations.map(l => (
                 <option key={l.id} value={l.id}>
@@ -195,7 +209,7 @@ export const AnimalForm = () => {
         <fieldset>
           <div className="form-group">
             <label htmlFor="customer">Customer: </label>
-            <select value={animal.customerId} name="customerId" id="customerAnimal" className="form-control" onChange={handleControlledInputChange}>
+            <select value={animal.customerId} id="customerId" className="form-control" onChange={handleControlledInputChange}>
               <option value="0">Select a customer</option>
               {customers.map(c => (
                 <option key={c.id} value={c.id}>
@@ -211,10 +225,11 @@ export const AnimalForm = () => {
             event.preventDefault() // Prevent browser from submitting the form and refreshing the page
             handleSaveAnimal()
           }}>
-        {animalId ? <>Save Animal</> : <>Add Animal</>}</button>
+        {animalId ? "Save Animal" : "Add Animal"}</button>
       </form>
     )
 }
+
 ```
 ## Practice Locations and Employees
 Allow user to edit Locations and Employees.

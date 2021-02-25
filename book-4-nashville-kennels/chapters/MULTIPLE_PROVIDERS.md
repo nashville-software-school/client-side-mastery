@@ -1,8 +1,6 @@
 # Joining Data in Multiple Resources
 
-Sometimes we need data from multiple resources. For example, to add a new animal with dropdown options for both the locations and the customer.
-
-In the next chapter we will create the AnimalForm component but first we need data from the location provider and customer provider. Update the **`ApplicationViews`** so the component has all the necessary providers as parent components.
+To expand our animal list to show the customer we need data from the location provider and customer provider. Update the **`ApplicationViews`** so the component has all the necessary providers as parent components.
 
 > ##### `src/components/ApplicationViews.js`
 
@@ -10,8 +8,8 @@ In the next chapter we will create the AnimalForm component but first we need da
 <AnimalProvider>
     <LocationProvider>
         <CustomerProvider>
-            <Route exact path="/animals/create">
-                <AnimalForm />
+            <Route exact path="/animals">
+                <AnimalList />
             </Route>
         </CustomerProvider>
     </LocationProvider>
@@ -27,12 +25,12 @@ The next step is to access the context from the two, new providers. Then you nee
 > ##### `src/components/animal/AnimalList.js`
 
 ```js
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import { LocationContext } from "../location/LocationProvider"
 import { CustomerContext } from "../customer/CustomerProvider"
-import { Animal } from "./Animal"
-import "./Animals.css"
+import { AnimalCard } from "./AnimalCard"
+import "./Animal.css"
 
 export const AnimalList = () => {
     const { animals, getAnimals } = useContext(AnimalContext)
@@ -64,7 +62,7 @@ Then you need to refactor your function that you are passing to the `.map()` met
 ```jsx
 animals.map(animal => {
     const owner = customers.find(c => c.id === animal.customerId)
-    const clinic = locations.find(l => l.id === animal.locationId)
+    const location = locations.find(l => l.id === animal.locationId)
 
     return <Animal key={animal.id}
                 location={clinic}
@@ -94,7 +92,11 @@ The last step is to extract the new `customer` and `animal` keys on the object p
 export const Animal = ({ animal, customer, location }) => (
 ```
 
-Then display the name property of each one.
-
-Now the **`AnimalForm`** component can access data from all of the data providers to produce dropdown options.
+Then display the name property of each one.  
 ![animal card showing name of customer and location](./images/animals-after-join.png)
+
+### _Expand_ your thinking
+You may have noticed something weird in this chapter about the `locations` state. Mainly, it isn't really needed. Why? Think back to when you created the **AnimalProvider** component. In `getAnimals` you use `_expand=location`. Do you remember what that does? Why does it make it unnecessary to use the **LocationContext** in this component? 
+
+Which approach seems 'better' to you? Why? Could we also remove the need for the **CustomerContext**? How? If you want to talk this out with an instructor, grab one and hash it out! Or, group up with some classmates and think outloud with them. We would love to hear what you come up with.
+`

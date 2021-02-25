@@ -72,11 +72,9 @@ export const Kennel = () => (
 )
 ```
 
-Some of this looks familiar, sort of. This is simply another way of building a JavaScript object (Kennel) that has a single property -- a method called render -- that returns an HTML representation of some (hard-coded) data. You've done all of that before.
+Some of this looks familiar, sort of. This is simply another way of using JavaScript to create an HTML representation of some (hard-coded) data. You've done that before.
 
 That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code. With JSX, we can better visualize the eventual rendered HTML structure.
-
-Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a factory function. It's just a function that returns an object.
 
 **What is `<>` and `</>`**
 Remember, within a function, the return can only return one thing. This is a `React.Fragment` and gives us the ability to wrap the content and return one item.
@@ -97,6 +95,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
+Note that even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a factory function. It's just a function that returns an object.
 
 ## Starting Your React Application
 
@@ -130,7 +130,9 @@ export const AnimalCard = () => (
 
 This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<AnimalCard />`. React interprets this as a component and will run the function that you imported from `AnimalCard.js` and then render the JSX that it defines.
 
-Update your **`Kennel`** component with the code provided below. Be sure to import the **`AnimalCard`**. Now when the **`Kennel`** component is rendered it will display 3 child **`AnimalCard`** components.
+Update your **`Kennel`** component with the code provided below. Be sure to import the **`AnimalCard`**. Now when the **`Kennel`** component is rendered it will display 3 child **`AnimalCard`** components. They will all have the same data in them for now. This is just to practice making components. You'll be making real, data-driven components soon.
+
+Notice that in React, we add classes to a component with `className` instead of `class`. Why? Remember, the code between the `< >` brackets looks like HTML, but it's actually JSX. Your instructors will clarify.
 
 > ##### `src/components/Kennel.js`
 
@@ -160,7 +162,6 @@ export const Kennel = () => (
 ```
 
 ## Kennel Styles
-In React, we add classes to a component with `className` instead of `class`.
 
 > ##### `src/components/Kennel.css`
 
@@ -232,7 +233,7 @@ The Nashville Kennel application needs to include locations, owners, and employe
 
 Remember the Single Responsibility Principle. You should have a component whose sole responsibility is to render the location, or customer, or employee information. Make sure you create a different sub-directory for each kind of resource.
 
-Yes, each one will display the identical information. This is just to practice making components. You'll be making real, data-driven components soon.
+Again, for now, don't worry about each one displaying the identical information. 
 
 * Show 2 locations
 * Show 4 customers

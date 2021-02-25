@@ -2,12 +2,16 @@
 
 LinkedIn has a feature that allows you to capture information about projects that you complete during your career.
 
-Follow the [instructions](https://www.linkedin.com/help/linkedin/answer/43524/adding-and-editing-projects-on-your-profile?lang=en) for adding your "Hello, World" group project to your profile. It should contain the following information.
+Add your "Hello, World" group project to your profile. It should contain the following information.
 
 * Name of project
 * The date you started the group project
 * The date you ended the group project
 * The description field should list the purpose of the project, the list of technologies you used, and a personal anecdote about what you learned during the project.
+
+### Resources
+* [Adding Projects to Your LinkedIn Profile](https://www.dummies.com/social-media/linkedin/adding-projects-linkedin-profile/)
+* [Adding a Project to your LinkedIn Profile - Tutorial](https://lisamariediasdesigns.com/adding-a-project-to-your-linkedin-profile/)
 
 #### Example Description
 
