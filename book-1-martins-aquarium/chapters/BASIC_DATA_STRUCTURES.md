@@ -24,10 +24,10 @@ Luckily, there is a way to automate this entire process, so that software develo
 
 ## Vocabulary To Learn
 * Object
-* Property
 * Object key and value
+* Property
 * Declaring variables: `let` and `const`
-* Array
+* Data Types: Array, String, Boolean
 
 ## Object Representation of Things
 

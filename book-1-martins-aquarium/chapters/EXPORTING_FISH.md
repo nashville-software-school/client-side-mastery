@@ -9,11 +9,10 @@ Some common module responsibilities are:
 1. Sorting objects in state by size, date harvested, etc.
 
 ## Vocabulary To Learn
-* Array Method: `slice()`
 * JavaScript module
-* JavaScript import
-* Array iteration (`for of` loop)
-
+* JavaScript import/export
+* Array iteration (`for...of`)
+* Function
 
 
 ## Logging the Fish
@@ -30,10 +29,7 @@ const fishCollection = //array of fish objects you already created
 
 // This is new code. Add this.
 export const getFish = () => {
-    //we don't want to alter the original state, so
-    //make a copy of it and then return it
-    const fishData = fishCollection.slice();
-    return fishData
+    return fishCollection
 }
 ```
 

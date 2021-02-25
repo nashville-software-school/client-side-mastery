@@ -18,6 +18,8 @@ First, take time to read over: https://javascript.info/function-basics
 
 > We will be starting this project with an HTML page that contains a header, nav, and couple of fish. 
 
+[A gist with starter HTML/CSS](https://gist.github.com/brendalong/db3684e349a87b2831a1285df7004401)
+
 Open `index.html` and delete the element containing the fish items and all of the children fish elements.
 
 ## Defining the Components
@@ -232,8 +234,3 @@ Suggested files to create:
 * `scripts/locations/LocationData.js`
 * `scripts/locations/LocationList.js`
 * `scripts/locations/Location.js`
-
-## Extra Challenge: Navigation with EventListeners
-In the navigation, create links to display each of the different sections within the main content area of `index.html`. Get started by taking a look at: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
-
-You will need to refactor your code and include some additional functions.
