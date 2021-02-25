@@ -26,7 +26,7 @@ Your instructor will walk you through the new things introduced here.
 ```js
 import React, { useState, useContext, useEffect } from "react"
 import { AnimalContext } from "../animal/AnimalProvider"
-import { Animal } from "../animal/Animal"
+import { AnimalCard } from "../animal/Animal"
 import { CustomerContext } from "../customer/CustomerProvider"
 import { LocationContext } from "../location/LocationProvider"
 import { Modal, ModalHeader, ModalBody } from "reactstrap"
@@ -75,11 +75,10 @@ export const SearchResults = ({ searchTerms }) => {
                     { selectedAnimal.animal.name }
                 </ModalHeader>
                 <ModalBody>
-                    <Animal key={selectedAnimal.animal.id} {...selectedAnimal} />
+                    <AnimalCard key={selectedAnimal.animal.id} {...selectedAnimal} />
                 </ModalBody>
             </Modal>
         </div>
     )
 }
 ```
-

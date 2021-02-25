@@ -64,7 +64,7 @@ animals.map(animal => {
     const owner = customers.find(c => c.id === animal.customerId)
     const location = locations.find(l => l.id === animal.locationId)
 
-    return <Animal key={animal.id}
+    return <AnimalCard key={animal.id}
                 location={clinic}
                 customer={owner}
                 animal={animal} />
@@ -84,12 +84,12 @@ Again, here's what is actually sent to the **`Animal`** component.
 
 ## Display Full Names
 
-The last step is to extract the new `customer` and `animal` keys on the object passed to the **`Animal`** component.
+The last step is to extract the new `customer` and `animal` keys on the object passed to the **`AnimalCard`** component.
 
-> ##### `src/components/animal/Animal.js`
+> ##### `src/components/animal/AnimalCard.js`
 
 ```jsx
-export const Animal = ({ animal, customer, location }) => (
+export const AnimalCard = ({ animal, customer, location }) => (
 ```
 
 Then display the name property of each one.  
