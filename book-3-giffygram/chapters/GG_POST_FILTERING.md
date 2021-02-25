@@ -1,26 +1,31 @@
-# Browser Events and the Footer Component
+# Filtering Posts
 
-You may have implemented a **`Footer`** component in a previous chapter as a personal challenge. If you did, it was fairly simplistic and you will make it more complex in this chapter. If you didn't make that component then this is all brand new to you!
+## Learning Objectives
 
-| | |
-|:---:|:---|
-| <h1>&#x270e;</h1> |  _A footer element is the name for a component that is at the bottom of a web page_ |
+* You should be able to identify where a function is defined.
+* You should be able to identify where a function is invoked.
+* You should be able to identify where a function parameter is defined.
+* You should be able to identify where a value is passed as an argument when a function is invoked.
+* You should be able to identify where application state is retrieved for use by the component.
+* You should be able to explain the execution steps of a `for..of` loop.
 
-## More Data
+## Filtering Posts
 
-Visit the [morePosts.js](./data/morePosts.js) file and copy pasta the array of users and posts into your `giffygram/src/store/index.js` file so that you have a bit more data to work with.
+Now for the final part of showing how many posts have been created since the year chosen from the select element in the footer.
 
-## Footer Component
-
-Here is the code you need for the **`Footer`** component. After you have the
+First, you need access to the posts state, so import the function that provides a copy of that application state. Make this the first line of code in your component module.
 
 > #### `giffygram/src/scripts/nav/Footer.js`
 
 ```js
 import { getPosts } from "../store/index.js"
+```
 
-const applicationElement = document.querySelector(".giffygram")
+Now you can write a function in this component module that will do the work of filtering all posts. Since you need to check the `timestamp` property of each posts, then you need to iterate that array with a `for..of` loop.
 
+In the loop, you will check if the `timestamp` property value of each post is greater than, or equal to, January 1st of the chosen year.
+
+```js
 /*
     Calculate the number of posts since a given year
 */
@@ -41,63 +46,104 @@ const postsSince = (year) => {
 /*
     Initial state of post count
 */
-let postCount = postsSince(2020)
+let yearChosenByUser = 2020
+let postSinceYearChosen = postsSince(yearChosenByUser)
+```
 
-/*
-    Update the post count when the user changes the year selection
-*/
+The next step is to make sure that the function is invoked every time a year is chosen. Remove the `window.alert()` method call and
+
+```js
 applicationElement.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "yearSelection") {
         const yearAsNumber = parseInt(changeEvent.target.value)
 
-        postCount = postsSince(yearAsNumber)
+        // Update the two component state variables
+        yearChosenByUser = yearAsNumber
+        postSinceYearChosen = postsSince(yearAsNumber)
+    }
+})
+```
+
+Now refresh your browser and choose a year. You will still notice that the HTML did not change. Even though you updated the value of the state variables, you still need to invoke the component function to re-generate the HTML.
+
+How does the **`Footer`** component function currently get invoked? You import it into the **`Giffygram`** component module and invoke it there.
+
+How does the **`Giffygram`** component function currently get invoked? You import it into the `main.js` module and invoke it in the `renderApp()` function.
+
+```js
+import { GiffyGram } from "./GiffyGram.js"
+
+const applicationElement = document.querySelector(".giffygram")
+
+const renderApp = () => {
+    applicationElement.innerHTML = GiffyGram()
+}
+
+renderApp()
+```
+
+Since `renderApp()` is the only way to force all of your HTML to be regenerated, you somehow have to invoke it when state changes.
+
+## Custom Events
+
+A custom event is an event that you, the developer, broadcasts. You get to choose when it is broadcast.
+
+When the user clicks something, the browser broadcasts a "click" event.
+
+When the user presses a key, the browser broadcasts a "keyup" event.
+
+You have no control over any of that. You just get to choose if you want something to happen when the event is broadcast.
+
+With a custom event, **you** get to choose exactly when it is broadcast, and **you** get to choose what should happen when it is.
+
+Update the change event listener in the footer with this code.
+
+```js
+applicationElement.addEventListener("change", changeEvent => {
+    if (changeEvent.target.id === "yearSelection") {
+        const yearAsNumber = parseInt(changeEvent.target.value)
+
+        // Update the two component state variables
+        yearChosenByUser = yearAsNumber
+        postSinceYearChosen = postsSince(yearAsNumber)
+
+        // Broadcast your own, custom event stating that some state changed
         applicationElement.dispatchEvent(new CustomEvent("stateChanged"))
     }
 })
-
-export const Footer = () => {
-
-    // HTML to be returned to GiffyGram component
-    return `
-        <footer class="footer">
-            <div class="footer__item">
-                Posts since <select id="yearSelection">
-                    <option>2020</option>
-                    <option>2019</option>
-                    <option>2018</option>
-                    <option>2017</option>
-                </select>
-                <span id="postCount">${postCount}</span>
-            </div>
-        </footer>
-    `
-}
 ```
 
-Next, import this new component function into the GiffyGram module and invoke it last in the order of components.
+The `main.js` module is that only other module that really cares that state changed. Therefore, it will listen for that event and invoke `renderApp()`. This will cause **all** of the HTML for your application to be rebuilt from the ground up using the current state.
 
-> #### `giffygram/src/scripts/GiffyGram.js`
+> #### `giffygram/src/scripts/main.js`
 
 ```js
-import { PostList } from "./feed/PostList.js"
-import { Footer } from "./nav/Footer.js"
-import { NavBar } from "./nav/NavBar.js"
+import { GiffyGram } from "./GiffyGram.js"
 
-export const GiffyGram = () => {
-    const giffyGramHTML = `
-        ${ NavBar() }
-        ${ PostList() }
-        ${ Footer() }
-    `
+const applicationElement = document.querySelector(".giffygram")
 
-    return giffyGramHTML
+/*
+    Listen to all the other components. When any of them
+    say that state has changed, render the application again.
+*/
+applicationElement.addEventListener("stateChanged", () => {
+    renderApp()
+})
+
+/*
+    Generate all of the application HTML and update the
+    content of the <main> element in the DOM
+*/
+const renderApp = () => {
+    applicationElement.innerHTML = GiffyGram()
 }
+
+renderApp()
 ```
 
-## Events
+## Video Walkthrough
 
-There are several new concepts being introduced with this code. You likely immediately noticed that the code is far more complex that what you did in the **`PostList`** component. The following video will explain what is going on.
-
+The following video will review the entire process from the last three chapters, and use the Chrome debugger to show the flow of logic as the user interacts with your application.
 
 [![](./images/giffygram-footer-video.png)](https://vimeo.com/515018310)
 
