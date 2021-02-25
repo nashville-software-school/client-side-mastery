@@ -4,9 +4,9 @@
 
 As a professional developer, you **will** be working on a team. Modern software development is a team sport, not an individual one. Teams members need the ability to write code independently, but then merge their individual code together when it's time to release a version of the software.
 
-Git is the tool to allow a developer to work on an independent branch of the code base, and then merge in the work of others.
+**Git** is the local tool on your computer that tracks the changes you make to files, allows a developer to work on an independent branch of the code base, and makes collaboration easier by allowing changes by multiple people to all be merged into one source.
 
-Github is a tool which allows you to easily share your code with other people, regardless of where they are located.
+**Github** is a code hosting platform for version control and collaboration, which allows you to easily share your code with other people, regardless of where they are located.
 
 ## Configure Git on Your Machine
 
@@ -34,17 +34,17 @@ First we'll configure git to use `main` as the default branch instead of `master
 git config --global init.defaultBranch main
 ```
 
-Next, we'll tell git who you are. You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
+Second, we'll tell git who you are. You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
 
 ![username and email](./images/git-username-email.png)
 
-First use the following command, but instead of typing `Your Github User Name`, enter your Github username for your account.
+Third, use the following command, but instead of typing `Your Github User Name`, enter your Github username for your account.
 
 ```sh
 git config --global user.name "Your Github User Name"
 ```
 
-Then use the following command, but instead of typing `email@example.com`, enter the email address you used when you created your Github account.
+Fourth, use the following command, but instead of typing `email@example.com`, enter the email address you used when you created your Github account.
 
 ```sh
 git config --global user.email "email@example.com"
@@ -65,7 +65,7 @@ git config --global pull.rebase false
     cd ~/workspace/martins-aquarium
     ```
 1. Type in the `git init` command
-1. You now have a git repository
+1. You now have an empty git repository - meaning nothing has been tracked yet.
 
 The magic is the `.git` directory that gets create when the `git init` command is executed. To see this directory you can use `ls -la`, which shows hidden files and directories. Operating systems will not show files and directories that begin with a period by default. They are considered hidden, or system assets.
 
@@ -74,7 +74,9 @@ The magic is the `.git` directory that gets create when the `git init` command i
 
 ### Workflow to Remember
 
-This is the process you will be following thousands of times while you are here at NSS. You tell git to track changes first, then you commit those changes, and then upload your changes to Github.
+This is the process you will be following thousands of times while you are here at NSS. First you tell git which files to track and then you commit them with a message and finally push the changes to gitHub. 
+
+Kinda like: "Hey git, add files A, B, and C to to this specific commit and this is why..."
 
 ```sh
 git add --all
@@ -126,23 +128,24 @@ The first thing you need to do is create a new repository on Github's platform t
 1. Choose "New repository".
 1. In the "Repository name" field, enter in `nss-aquarium`.
 1. Scroll down and click the green "Create Repository" button.
-1. Copy the repository's connection string.
+1. From the on-screen instructions, copy the repository's connection string.
     ![](./images/copy-github-connection-string.gif)
-1. Follow the second set of instructions.
+1. From the on-screen instructions, follow the second set of instructions.
     ![](./images/add-origin.png)
 
-Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your aquarium HTML, JavaScript and CSS files in it.
+Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository now has your aquarium HTML, JavaScript and CSS files in it.
 
 
 ## Practice: Backup Exercise
 
 * Create a Github repository for the Congressional Representative exercise, and push up that code.
 * Create a Github repository for the Coffee Houses exercise, and push up that code.
+* Create a Github repository for the Journal and push up the code.
 
-When you are done, you should have three new repositories in your Github account.
+When you are done, you should have new repositories in your Github account including:
 
 1. Aquarium
 1. Coffee Houses
 1. Congressional Representative
 
-> **Tip:** If you have any issues getting your code onto Github, see a member of your instructional team immediately so that you have a backup of your code. Pushing your code to Github is not optional. It's a required part of this program.
+> **Tip:** If you have any issues getting your code onto Github, see a member of your instructional team immediately so that you have a backup of your code. **Pushing your code to Github is not optional. It's a required part of this program.**

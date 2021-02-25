@@ -10,7 +10,7 @@ To achieve this task for Doris, you still need to iterate the original array of 
 
 The `map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing the new items in another array. Here's how you would do that for art supplies if you wanted an array that only contained the brands that you sell.
 
-> **`SuppliesProvider.js`**
+> **`SuppliesData.js`**
 
 ```js
 const supplies = [

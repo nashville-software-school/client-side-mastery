@@ -5,7 +5,7 @@ You have built your form for entering in journal entries, so now you need to def
 ### Setup
 1. Navigate into `scripts` sub-directory that you created when you setup your project directory.
 1. Use `touch` to create a new JavaScript module named `main.js`.
-1. Use `touch` to create a new JavaScript module named `JournalDataProvider.js`. This module will be responsible for managing the state of your application.
+1. Use `touch` to create a new JavaScript module named `JournalData.js`. This module will be responsible for managing the state of your application.
 1. Update your `index.html` file to have a `<script type="module" src="./scripts/main.js>` element that includes your main JavaScript module.
 
 ### Single Journal Entry
@@ -17,11 +17,11 @@ You defined form fields for the following bits of data to collect from a user of
 1. The long-form contents of the journal entry.
 1. The mood of the journal entry.
 
-In your `JournalDataProvider.js` module, place the following code at the top.
+In your `JournalData.js` module, place the following code at the top.
 
 ```js
 /*
- *   Journal data provider for Daily Journal application
+ *   Journal data for Daily Journal application
  *
  *      Holds the raw data about each entry and exports
  *      functions that other modules can use to filter
@@ -43,7 +43,7 @@ const journal = [
     You export a function that provides a version of the
     raw data in the format that you want
 */
-export const useJournalEntries = () => {
+export const getJournalEntries = () => {
     const sortedByDate = journal.sort(
         (currentEntry, nextEntry) =>
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)

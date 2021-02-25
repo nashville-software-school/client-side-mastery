@@ -22,6 +22,13 @@
 
 Luckily, there is a way to automate this entire process, so that software developers don't have to manually write the same HTML, and the same JavaScript over, and over, and over again when new data is created.
 
+## Vocabulary To Learn
+* Object
+* Object key and value
+* Property
+* Declaring variables: `let` and `const`
+* Data Types: Array, String, Boolean
+
 ## Object Representation of Things
 
 The first step in the process is defining an object in code that represent each fish. That's the main purpose of an object - representing real-world things in code.
@@ -63,14 +70,14 @@ const fries = {
 
 Your job is to define what a JavaScript object would look like. What keys should you create on each fish object? Each fish will have the same keys, but the state of each will be different - meaning the keys will have different values.
 
-Create a new JavaScript module in your application named `FishDataProvider.js`. In that module create objects to represent the state of Martin's fish that you had previously hard-coded in the HTML. You are going to place all of the objects in an array - a collection of fish.
+Create a new JavaScript module in your application named `FishData.js`. In that module create objects to represent the state of Martin's fish that you had previously hard-coded in the HTML. You are going to place all of the objects in an array - a collection of fish.
 
-> **`martins-aquarium/scripts/FishDataProvider.js`**
+> **`martins-aquarium/scripts/FishData.js`**
 
 ```js
 /*
  *  To get you started, here's some properties of Bart.
- *  You need to add more properties to complete his
+ *  You need to add more properties to complete this
  *  representation as an object. Then add all the other
  *  fish to the collection.
  */
