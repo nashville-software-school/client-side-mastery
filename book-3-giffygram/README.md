@@ -16,6 +16,7 @@
 | 10 | [Component State](./chapters/GG_COMPONENT_STATE.md) <br/> <sub style="font-size:0.85rem;">#component-state</sub> |  |  |  |
 | 11 | [Post Count by Year](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#iteration #custom-event</sub> |  |  |  |
 | 12 | [Posts by User](./chapters/GG_USER_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #filtering #component-state</sub> |  |  |  |
+| 12 | [Full Post Details](./chapters/GG_POST_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#interpolation #dates #ternary</sub> |  |  |  |
 | 13 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods #component-state</sub> |  |  | [Rendering Game Data](./chapters/TF_GAME_RENDER.md) |
 | 14 | [Login Form](./chapters/GG_LOGIN_FORM.md) <br/> <sub style="font-size:0.85rem;">#components #forms</sub> |  |  |  |
 | 15 | [User Authentication](./chapters/GG_AUTH.md) <br/> <sub style="font-size:0.85rem;">#local-storage #events</sub> |  |  |  |
