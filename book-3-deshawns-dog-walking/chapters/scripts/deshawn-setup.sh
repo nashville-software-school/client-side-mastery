@@ -23,7 +23,7 @@ echo '<!doctype html>
 </html>
 ' > index.html
 
-echo '@import 'detail.css';
+echo '@import "detail.css";
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
 /*Typography

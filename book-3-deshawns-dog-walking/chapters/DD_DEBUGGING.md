@@ -25,7 +25,6 @@ That script will create the `workspace/dog-walking` directory for you. Just `cd`
 
 Then run the `serve` command and open the URL in Chrome.
 
-
 ## Bugs to Fix
 
 This table shows you how many bugs there are in each module.
