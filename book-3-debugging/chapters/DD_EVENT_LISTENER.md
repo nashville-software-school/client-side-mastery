@@ -58,7 +58,9 @@ Open the `Walker.js` file in your developer tools.
 > All challenges are completely optional. It's up to you if you want to take the time to figure it out, or move on to the next chapter.
 
 
-Using the event listner code provided as an example, see if you can update the **`RegisteredPets`** module to capture when a user clicks on a pet. When the user does click a pet, display an alert that says who is currently walking it.
+Using the event listener code provided as an example, see if you can update the **`RegisteredPets`** module to capture when a user clicks on a pet. When the user does click a pet, display an alert that says who is currently walking it.
+
+<img src="./images/pet-walkers.gif" width="700px" />
 
 | | |
 |:---:|:---|
