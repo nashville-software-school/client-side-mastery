@@ -6,11 +6,11 @@ As a software developer, the developer tools in the browser are where you will s
 
 This video introduces you to understanding how to read an error in the developer tools and knowing where to go look into your code for the bug.
 
-[<img src="./images/debugging-video.png" width="500px">](https://vimeo.com/517578876)
+[<img src="./images/debugging-video.png" width="750px">](https://vimeo.com/517578876)
 
 ## Breakpoints and Inspecting Values
 
 In this video, you will see how to set breakpoints, evaluate the values of variables, and how to step through your code one line at a time.
 
-[<img src="./images/debugger-breakpoints.png" width="500px">](https://vimeo.com/517595236)
+[<img src="./images/debugger-breakpoints.png" width="750px">](https://vimeo.com/517595236)
 
