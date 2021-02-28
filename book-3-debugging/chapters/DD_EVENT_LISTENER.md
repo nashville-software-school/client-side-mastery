@@ -52,3 +52,20 @@ Open the `Walker.js` file in your developer tools.
 1. Use the step over icon to run each line of code and examine what the values of the variables are.
 
 ![](./images/debugging-event-listener.gif)
+
+## Optional Challenge
+
+> All challenges are completely optional. It's up to you if you want to take the time to figure it out, or move on to the next chapter.
+
+
+Using the event listner code provided as an example, see if you can update the **`RegisteredPets`** module to capture when a user clicks on a pet. When the user does click a pet, display an alert that says who is currently walking it.
+
+| | |
+|:---:|:---|
+| <h1>&#x1F4A1;</h1> |  _Make sure you import the walkers into the module._ |
+| <h1>&#x1F4A1;</h1> |  _You will need _another_ `for..of` loop inside a `for..of` loop. It's called a nested loop._ |
+| <h1>&#x1F4A1;</h1> |  _You can avoid the nested `for..of` loop by using the `.find()` [array method](https://javascript.info/array-methods#find-and-findindex)._ |
+
+Seriously, do not waste a significant amount of time on challenges. They are for fun. If you try getting this one to work for a while, but just get stumped, please visit an instructor.
+
+You can also take a peek at [most of the solution](./code/dogWalker.js).

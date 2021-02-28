@@ -5,6 +5,9 @@ DeShawn hired some consulting agency from overseas to build a simple application
 1. A list of cities where his service is provided.
 1. A list of dog walkers that are currently working for him.
 1. A list of pets that are currently being given walks by his employees.
+1. A full list of current assignments.
+
+Unfortunately, the overseas developer had an unfortunate noodle-related accident, and the only version that DeShawn has is filled with bugs. Your job is to fix the bugs.
 
 Here's what the output of the application should look like.
 
