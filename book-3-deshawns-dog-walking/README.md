@@ -13,5 +13,5 @@ In this book, you will develop the core skill of debugging JavaScript code in a 
 |--|--|--|
 | 1 | [Using the Debugger](./chapters/DEBUGGING_INTRO.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> |  |
 | 2 | [Finding and Squashing Bugs](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Broken Receipts](./chapters/BA_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> |
-| 3 | [Show Walking Rate](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#data #events</sub> | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) <br/> <sub style="font-size:0.85rem;">#data #events</sub> |
-| 4 |  | [Best Seller](./chapters/BA_PRODUCT_CLICK.md) <br/> <sub style="font-size:0.85rem;">#events</sub> |
+| 3 | [Show Walking Rate](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#data #events</sub> | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) <br/> <sub style="font-size:0.85rem;">#functions #events</sub> |
+| 4 |  | [Best Seller](./chapters/BA_PRODUCT_CLICK.md) <br/> <sub style="font-size:0.85rem;">#functions #events</sub> |

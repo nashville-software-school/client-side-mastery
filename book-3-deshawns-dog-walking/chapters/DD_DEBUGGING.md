@@ -13,6 +13,19 @@ Here's what the output of the application should look like.
 
 ![](./images/deshawn-final.png)
 
+## Setup
+
+Run the following command in your terminal.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-deshawns-dog-walking/chapters/scripts/deshawn-setup.sh)"
+```
+
+That script will create the `workspace/dog-walking` directory for you. Just `cd` to that directory and open it in Viual Studio Code.
+
+Then run the `serve` command and open the URL in Chrome.
+
+
 ## Bugs to Fix
 
 This table shows you how many bugs there are in each module.

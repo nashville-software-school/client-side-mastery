@@ -64,7 +64,7 @@ Using the event listener code provided as an example, see if you can update the 
 
 | | |
 |:---:|:---|
-| <h1>&#x1F4A1;</h1> |  _Make sure you import the walkers into the module._ |
+| <h1>&#x1F4A1;</h1> |  _Make sure you import the walkers state into the module._ |
 | <h1>&#x1F4A1;</h1> |  _You will need _another_ `for..of` loop inside a `for..of` loop. It's called a nested loop._ |
 | <h1>&#x1F4A1;</h1> |  _You can avoid the nested `for..of` loop by using the `.find()` [array method](https://javascript.info/array-methods#find-and-findindex)._ |
 
