@@ -1,30 +1,9 @@
-# Fixing Brewed Awakenings Receipts
+# Displaying Number of Products Sold
 
-Brewed Awakenings is a local coffee shop that wants a web site that shows which products they are selling, and which employee is selling them. Here's all of the information they want on their web site.
+Using code from the last project as an example, attempt adding a click event listener that presents an alert box showing how many products an employee has sold when their name is clicked.
 
-1. A list of employees.
-1. A list of products.
-1. A list of orders that shows which product was sold, and which employee sold it.
+![](./images/employee-sales.gif)
 
-Here's what the output of the application should look like.
+If you find yourself creeping up on 30 minutes of trying to get the code to work, it's time to go to a peer, or an instructor for assistance.
 
-![](./images/brewed-awakenings-final.png)
-
-## Setup
-
-Run the following command in your terminal.
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-deshawns-dog-walking/chapters/scripts/brewed-setup.sh)"
-```
-
-That script will create the `workspace/brewed-awakenings` directory for you. Just `cd` to that directory and open it in Viual Studio Code.
-
-Then run the `serve` command and open the URL in Chrome.
-
-| | |
-|:---:|:---|
-| <h1>&#x2757;</h1> |  _Use the debugging tools. Do not use any `console.log()` statements to fix this application._ |
-
-
-
+As always, you can peek at [most of the solution](./code/employeeSales.js).
