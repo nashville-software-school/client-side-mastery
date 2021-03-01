@@ -101,6 +101,7 @@ export const AnimalForm = () => {
 
     const [animal, setAnimal] = useState({
       name: "",
+      breed: "",
       locationId: 0,
       customerId: 0
     });
@@ -154,10 +155,16 @@ export const AnimalForm = () => {
                   <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Animal name" value={animal.name}/>
               </div>
           </fieldset>
+	  <fieldset>
+              <div className="form-group">
+                  <label htmlFor="name">Animal breed:</label>
+                  <input type="text" id="breed" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Animal breed" value={animal.breed}/>
+              </div>
+          </fieldset>
           <fieldset>
               <div className="form-group">
                   <label htmlFor="location">Assign to location: </label>
-                  <select defaultValue={animal.locationId} name="locationId" id="locationId" className="form-control" >
+                  <select value={animal.locationId} name="locationId" id="locationId" className="form-control" >
                       <option value="0">Select a location</option>
                       {locations.map(l => (
                           <option key={l.id} value={l.id}>
@@ -170,7 +177,7 @@ export const AnimalForm = () => {
           <fieldset>
               <div className="form-group">
                   <label htmlFor="customerId">Customer: </label>
-                  <select defaultValue={animal.customerId} name="customer" id="customerId" className="form-control" >
+                  <select value={animal.customerId} name="customer" id="customerId" className="form-control" >
                       <option value="0">Select a customer</option>
                       {customers.map(c => (
                           <option key={c.id} value={c.id}>
