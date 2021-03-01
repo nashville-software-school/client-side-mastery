@@ -11,7 +11,7 @@ In the next chapter we will create the AnimalForm component but first we need da
     <LocationProvider>
         <CustomerProvider>
             <Route exact path="/animals/create">
-                <AnimalForm />
+                <AnimalList />
             </Route>
         </CustomerProvider>
     </LocationProvider>
