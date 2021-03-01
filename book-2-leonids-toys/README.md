@@ -18,3 +18,8 @@ In this book, you will gain the knowlege and understanding of working with data 
 | 10 | [Adding Toys the Right Way](./chapters/LT_ADD_FUNCTION.md) <br/> <sub style="font-size:0.85rem;">#functions #properties #arrays</sub> | [Add Note Function](./chapters/DN_ADD_FUNCTION.md) | [Most Expensive Groceries](./chapters/MP_EXPENSIVE_ITEMS.md) |
 | 🎓 | [Self-Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
 
+## Supplementary Content
+
+* Supplemental Chapter - [Muscle Memory: Functions](./chapters/FUNCTION_PRACTICE.md)
+* Supplemental Chapter - [Muscle Memory: Factory Functions](./chapters/FACTORY_FUNCTIONS.md)
+* Supplemental Chapter - [Scope in JavaScript](./chapters/JS_SCOPE.md)
