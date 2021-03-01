@@ -62,7 +62,7 @@ Then you need to refactor your function that you are passing to the `.map()` met
 ```jsx
 animals.map(animal => {
     const owner = customers.find(c => c.id === animal.customerId)
-    const location = locations.find(l => l.id === animal.locationId)
+    const clinic = locations.find(l => l.id === animal.locationId)
 
     return <AnimalCard key={animal.id}
                 location={clinic}
