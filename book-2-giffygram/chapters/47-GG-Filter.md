@@ -150,7 +150,7 @@ The following video will review the entire process from the last three chapters,
 [![](./images/giffygram-footer-video.png)](https://vimeo.com/515018310)
 
 
-
+We will use an event to listen for changes in state and re-render our app. On the the next chapter.
 
 
 
