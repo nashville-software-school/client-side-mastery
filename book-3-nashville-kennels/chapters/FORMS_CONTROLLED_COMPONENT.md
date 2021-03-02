@@ -39,9 +39,7 @@ return (
         </button>
         <div className="animals">
         {
-			animals.map(animal => {
-				return <AnimalCard key={animal.id} animal={animal} />
-			})
+		Your map over all the animals goes here!
         }
         </div>
     </>
@@ -59,12 +57,11 @@ Create the new route that will respond when the button click changes the URL to 
 
 ```jsx
 <AnimalProvider>
-  <Route exact path="/animals">
-      <AnimalList />
-  </Route>
-
   <CustomerProvider>
     <LocationProvider>
+      <Route exact path="/animals">
+         <AnimalList />
+      </Route>
       <Route exact path="/animals/create">
         <AnimalForm />
       </Route>
