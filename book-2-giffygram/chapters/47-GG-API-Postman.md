@@ -35,6 +35,9 @@ Test out putting data into GiffyGram API
 ```
 In the Postman app, change the `Post` to `Get`. We should see objects with an id.
 
+Test out putting a post into GiffyGram API. Refer to your ERD for all of the properties. 
+
+
 ### Practice Journal API Calls
 * Through Postman, use `Post` to add additional entries to your Journal API
 * Through Postman, use `Get` to display all entries of your Journal API
