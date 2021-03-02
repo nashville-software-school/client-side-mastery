@@ -56,5 +56,8 @@ Table posts {
 
 ```
 
- ### Practice
+ ### Practice Messages Table
  Create a table for messages. What are the properties associated with a single message? How do you connect messages to users and recipients? Share your diagram with a member of the instruction team.
+
+ ### Practice Journal ERD
+ Create an ERD for your journal. One of the resources should be the journal entry. Define the properties. When creating the table, consider: what does one journal entry look like? Also, are there any other resources you should define? Once you have the ERD, share your diagram with a member of the instruction team.

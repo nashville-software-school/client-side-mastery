@@ -26,7 +26,9 @@ Here's the MVP that you will be building for Giffygram.
 Now it is time to set up the initial directories for your application code. With `mkdir` and `cd` create the following directory structure.
 
 ```sh
-~/workspace/giffygram/src/scripts
+mkdir -p ~/workspace/giffygram/src/scripts
 ```
 
 The `~` character represents your home directory. You can quickly go to your home directory by typing in `cd` and pressing enter.
+
+The `-p` flag will create nested directories, but only if they don't exist already.

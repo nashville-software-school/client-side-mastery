@@ -28,7 +28,7 @@ These arrays will store objects as you create them. Refer back to the ERD to det
 
 ### Start json-server
 
-Now that your JSON has been created, you can use json-server to start your own GiffyGram API.
+Now that your JSON has been created, you can use json-server to start your own GiffyGram API. This will run within the `api` directory.
 
 ```sh
 json-server -p 8088 -w giffygram.json
@@ -41,7 +41,7 @@ Remember, json-server is a tool that allows you to access your data via an HTTP 
 
 
 ## Practice: Journal
-Create an ERD for your journal entries. Using the ERD, create an API for storing your Journal data.
+After you have created the ERD for your journal, go ahead and set up json-server. Try adding a journal entry object to the entry resource.
 
 ## Practice: Martins Aquarium
-Create an ERD for Martin's Aquarium. You will have a minimum of 3 collections: fishes, tips, and locations. Include the properties needed for each. Once you have defined the ERD, create an API using JSON-Server. Share your ERD and API with a member of the instruction team.
+Once you have created an ERD for Martin's Aquarium, set up json-server. You should have a minimum of 3 resources: fishes, tips, and locations. Include the properties needed for each. Share your ERD and API with a member of the instruction team.
