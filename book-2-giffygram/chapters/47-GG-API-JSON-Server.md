@@ -23,7 +23,7 @@ Now open `giffygram.json` in Visual Studio Code, and place the following starter
 
 These arrays will store objects as you create them. Refer back to the ERD to determine the properties on each object. 
 
-[What is JSON?](https://www.w3schools.com/whatis/whatis_json.asp): JSON stands for JavaScript Object Notation
+[What is JSON?](https://www.w3schools.com/whatis/whatis_json.asp) JSON stands for JavaScript Object Notation
 
 
 ### Start json-server

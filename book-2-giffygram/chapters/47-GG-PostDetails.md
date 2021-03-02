@@ -1,16 +1,11 @@
-# Full Post HTML Representation
+# Posts Details as HTML Representation
 
-In this chapter, you are going
+In this chapter, you are going to display the details of a post in a meaningful way. 
 
 ## Learning Objectives
 You should be able to:
 * explain how to create a new date object in JavaScript
-* identify where a ternary statement is being used in a string template
-* explain the purpose of using a ternary statement in a string template
 * explain the benefit of appending the `id` property of objects into the string template.
-
-## Learning Resources
-
 
 
 ## Setup
@@ -81,7 +76,8 @@ For now, detect when the user clicks on a favorite icon or any post, and display
 ```js
 applicationElement.addEventListener("change", event => {
     if (event.target.id.startsWith("favoritePost")) {
-        const [, postId] = event.target.id.split("--")
+        const targetSplit = event.target.id.split("--")
+        const postId = targetSplit[1]
 
         window.alert(`User wants to favorite post ${postId}`)
     }
@@ -102,7 +98,7 @@ console.log(amounts)
 
 Watch the [How To Split a String In JavaScript](https://www.youtube.com/watch?v=u2ZocmM93yU) and [Split a String in JavaScript](https://www.youtube.com/watch?v=Upf6H4klZcw) videos for more ideas.
 
-### Deconstructing an Array
+### Destructuring an Array
 
 While `split()` creates an array, you can pull out the values from an array and assign each one to a variable.
 
@@ -136,3 +132,5 @@ const best = better.toLocaleDateString('en-US')
 
 console.log(best)   // "6/16/2019"
 ```
+
+

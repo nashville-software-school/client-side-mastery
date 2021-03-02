@@ -1,7 +1,7 @@
 
 * [Intro To GiffyGram](chapters/47-GG-Intro.md)
 * [GiffyGram ERD](chapters/47-GG-ERD.md)
-* [API JSON-SERVER](chapters/47-GG-API)
+* [API JSON-SERVER](chapters/47-GG-API-JSON-Server.md)
 * [Application Data](chapters/47-GG-Application-Data.md)
 * [GiffyGram CSS](chapters/47-GG-Styles.md)
 * [Connect HTML and JS](chapters/47-GG-Main.md)
@@ -10,18 +10,16 @@
 * [Reacting to User Actions: Event Listeners](chapters/47-GG-EventListeners.md)
 * [Component State](chapters/47-GG-ComponentState.md)
 * [App Change Custom Event](chapters/47-GG-AppChange-CustomEvent.md)
-* [User Filtering](chapters/47-GG-UserFiltering.md)
-* [Post Details](chapters/47-GG-PostDetails.md)
+* [User Filtering with Custom Event](chapters/47-GG-Filter-CustomEvent.md)
+* [Display Post Details](chapters/47-GG-PostDetails.md)
+* [Create New Post](chapters/47-GG-CreatePost.md)
 
 
-* Create Post
-* Get Post
-
-* Holiday Road
+* **Holiday Road**
 
 * Users with Login Form
-* Users with Register/Authentication
-
-* Review ERD - Add like post join table
+* Users with Register
+* [Get Single Post](chapters/47-GG-GetSinglePost.md)
+* Review ERD - Add `likePost` join table
 * JSON-Server fetch calls
 
