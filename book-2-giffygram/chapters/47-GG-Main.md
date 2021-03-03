@@ -56,7 +56,7 @@ Every application needs an HTML file so that your data can be displayed beautifu
 
 <head>
     <meta charset="utf-8">
-    <title>Nashville Software School</title>
+    <title>GiffyGram C47 Nashville Software School</title>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
@@ -108,3 +108,17 @@ Start your Web server with the `serve` command in the terminal. Make sure you ar
 ![](./images/starting-serve.gif)
 
 Now go to Chrome and paste with `Ctrl+V` on Windows or `Cmd+V` on Mac. Then hit enter and you should see a your message in the browser.
+
+#### Test Your Code
+With a main.js file in place, you should be able to test the code you wrote in the DataManager.js
+
+* Import each method to be used.
+* Invoke the method and display a `console.log` of the results.
+
+```js
+getUsers()
+.then(data => {
+    console.log("User Data", data)
+})
+
+```

@@ -35,9 +35,7 @@ All other components will be either rendering _(i.e. displaying)_ state as HTML,
 ```js
     export const getUsers = () => {
 
-        return fetch("http://localhost:8088/users", {
-            method: "GET",
-        })
+        return fetch("http://localhost:8088/users")
         .then(response => response.json())
         .then(parsedResponse => {
             // do something with response here
@@ -60,9 +58,7 @@ All other components will be either rendering _(i.e. displaying)_ state as HTML,
 ```js
     export const getPosts = () => {
 
-        return fetch("http://localhost:8088/posts", {
-            method: "GET",
-        })
+        return fetch("http://localhost:8088/posts")
         .then(response => response.json())
         .then(parsedResponse => {
             // do something with response here
@@ -79,3 +75,9 @@ The `export` keyword makes the function usable by other modules. If you do not p
 
 ## Practice: Journal Get Entries
 * Set up your journal to include a `DataManager.js` module.
+
+## Practice: Get a Joke
+* Fetch a random dad joke https://icanhazdadjoke.com/
+* Display the response on an HTML page.
+* Stretch Goal: Display the question with a button to display the answer.
+* Stretch Goal: Create a button to get a new joke.

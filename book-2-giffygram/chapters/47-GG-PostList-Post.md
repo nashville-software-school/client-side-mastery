@@ -31,7 +31,7 @@ Consider what we did in Martin's Aquarium to display the fish. We needed a FishL
   }
 ```
 
-The list will need access to the `getAllPosts` method from the store module. It will also need the `Post` you just created.
+The list will need access to the `getAllPosts` method from the `DataManager.js` module. It will also need the `Post.js` you just created.
 
 > #### `src/scripts/feed/PostList.js
 ```js
