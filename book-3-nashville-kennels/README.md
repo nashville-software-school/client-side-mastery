@@ -22,6 +22,6 @@
 | 😱 | Capstone time! |  |   |
 
 ## Supplementary Chapters
-
+* [Kennel Challenges](https://gist.github.com/jordan-castelloe/a7d9ec9318078da9bd870cac35ec0a0a)
 * [React Tips and Tricks](./chapters/REACT_TIPS.md)
 * [Deploy React and API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
