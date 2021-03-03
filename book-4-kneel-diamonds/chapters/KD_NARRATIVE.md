@@ -116,4 +116,9 @@ console.log(newRingOrder)
 
 ## Project Setup
 
-Now that you have a job and have a reference creating functions that return object representations of jewelry for Kneel Diamonds, you are going to create several more in the following chapters for producing different kinds of jewelry.
+Now that you have a job and have a reference creating functions that return object representations of jewelry for Kneel Diamonds, you are going to build out an application for producing different kinds of custom jewelry orders.
+
+Run the following command in your terminal.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-deshawns-dog-walking/chapters/scripts/deshawn

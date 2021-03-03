@@ -1,9 +1,9 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/kneel-diamonds/scripts
-mkdir -p $HOME/workspace/kneel-diamonds/styles
-cd $HOME/workspace/kneel-diamonds
+mkdir -p $HOME/workspace/kneel-diamonds-tour/scripts
+mkdir -p $HOME/workspace/kneel-diamonds-tour/styles
+cd $HOME/workspace/kneel-diamonds-tour
 
 echo '<!doctype html>
 <html lang="en">
@@ -23,7 +23,8 @@ echo '<!doctype html>
 </html>
 ' > index.html
 
-echo '@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+echo '@import "details.css";
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
 /*Typography
 --------------------------------------------------------------*/
@@ -42,40 +43,42 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0.25rem;
+}
+
+#orderButton {
+    margin: 1rem 0 2rem 2rem;
+    padding: 0.5rem;
+    background-color: rgb(227, 72, 72);
+    color: lightgoldenrodyellow;
+    font-size: 1rem;
+}
 ' > ./styles/main.css
 
-echo '.details {
-    display: fle;
-    justify-content: space-evenly;
-}
+echo '/* You need to create the rest of styles for the layout shown */
 
-.detail--column {
+.options {
     flex-basis: 24%;
     margin: 0 2rem;
-    border: 1px dotted goldenrod;
-}
-
-.assignments {
-    padding: 1rem 5rem;
+    border: 1px dashed dodgerblue;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
 ' > ./styles/details.css
 
-echo 'import { DiamondSizes } from "./DiamondSizes.js"
-import { MetalTypes } from "./MetalTypes.js"
-import { JewelryStyles } from "./JewelryStyles.js"
-import { CustomOrders } from "./CustomOrders.js"
+echo 'import { KneelDiamonds } from "./KneelDiamonds.js"
 
 const mainContainer = document.querySelector("#container")
 
-const applicationHTML = `
-<h1>Kneel Diamonds</h1>
+const renderAllHTML = () => {
+    mainContainer.innerHTML = KneelDiamonds()
+}
 
-<article class="customOrders">
-    <h2>Custom Jewelry Orders</h2>
-</article>
-`
-
-mainContainer.innerHTML = applicationHTML
+renderAllHTML()
 ' > ./scripts/main.js
 
 echo '/*
@@ -87,128 +90,183 @@ echo '/*
 */
 const database = {
     styles: [
-        { style: "Classic", price: 500 },
-        { style: "Modern", price: 710 },
-        { style: "Vintage", price: 965 }
+        { id: 1, style: "Classic", price: 500 },
+        { id: 2, style: "Modern", price: 710 },
+        { id: 3, style: "Vintage", price: 965 }
     ],
     sizes: [
-        { carets: 0.5, price: 405 },
-        { carets: 0.75, price: 782 },
-        { carets: 1, price: 1470 },
-        { carets: 1.5, price: 1997 },
-        { carets: 2, price: 3638 }
+        { id: 1, carets: 0.5, price: 405 },
+        { id: 2, carets: 0.75, price: 782 },
+        { id: 3, carets: 1, price: 1470 },
+        { id: 4, carets: 1.5, price: 1997 },
+        { id: 5, carets: 2, price: 3638 }
     ],
     metals: [
-        { metal: "Sterling Silver", price: 12.42 },
-        { metal: "14K Gold", price: 736.4 },
-        { metal: "24K Gold", price: 1258.9 },
-        { metal: "Platinum", price: 795.45 },
-        { metal: "Palladium", price: 1241.0 }
+        { id: 1, metal: "Sterling Silver", price: 12.42 },
+        { id: 2, metal: "14K Gold", price: 736.4 },
+        { id: 3, metal: "24K Gold", price: 1258.9 },
+        { id: 4, metal: "Platinum", price: 795.45 },
+        { id: 5, metal: "Palladium", price: 1241.0 }
+    ],
+    customOrders: [
+        {
+            id: 1,
+            metalId: 3,
+            sizeId: 2,
+            styleId: 3,
+            orderedOn: 1614659931693
+        }
     ]
 }
 
 export const getMetals = () => {
     return [...database.metals]
 }
-
-export const getSizes = () => {
-    return [...database.sizes]
-}
-
-export const getStyles = () => {
-    return [...database.styles]
-}
 ' > ./scripts/database.js
 
-echo 'import { getPets } from "./database.js"
+echo 'import { DiamondSizes } from "./DiamondSizes.js"
+import { JewelryStyles } from "./JewelryStyles.js"
+import { Metals } from "./Metals.js"
+import { Orders } from "./Orders.js"
 
-const pets = getPets()
-
-export const RegisteredPets = () => {
-    let petHTML = "<ul>"
-
-    for (const pet of pets) {
-        petHTML += `<li>${pet.name}</li>`
+document.addEventListener(
+    "click",
+    (event) => {
     }
+)
 
-    petHTML += "</ul>"
+export const KneelDiamonds = () => {
+    return `
+        <h1>Kneel Diamonds</h1>
 
-    return petHTML
+        <article class="choices">
+            <section class="choices__metals options">
+                <h2>Metals</h2>
+            </section>
+            <section class="choices__sizes options">
+                <h2>Sizes</h2>
+            </section>
+            <section class="choices__styles options">
+                <h2>Styles</h2>
+            </section>
+        </article>
+
+        <article>
+            <button id="orderButton">Create Custom Order</button>
+        </article>
+
+        <article class="customOrders">
+            <h2>Custom Jewelry Orders</h2>
+        </article>
+    `
 }
-' > ./scripts/RegisteredPets.js
+' > ./scripts/KneelDiamonds.js
 
-echo 'import { getWalker } from "./database.js"
+echo 'import { getOrders } from "./database.js"
 
-const walkers = getWalkers()
+const buildOrderListItem = (order) => {
+    return `<li>
+        Order #${order.id} was placed on ${order.orderedOn}
+    </li>`
+}
 
+export const Orders = () => {
+    /*
+        Can you explain why the state variable has to be inside
+        the component function for Orders, but not the others?
+    */
+    const orders = getOrders()
 
-export const Walkers = () => {
-    let walkerHTML = "<ul>"
+    let html = "<ul>"
 
-    for (const walker of walkers) {
-        walkerHTML += `<li>${walker.fullName}</li>`
+    const listItems = orders.map(buildOrderListItem)
+
+    html += listItems.join("")
+    html += "</ul>"
+
+    return html
+}
+' > ./scripts/Orders.js
+
+echo 'import { getMetals } from "./database.js"
+
+const metals = getMetals()
+
+document.addEventListener(
+    "change",
+    (event) => {
     }
+)
 
-    walkerHTML += "</ul>"
+export const Metals = () => {
+    let html = "<ul>"
 
+    const listItems = metals.map(metal => {
+        return `<li>
+            <input type="radio" name="metal" value="${metal.id}" /> ${metal.metal}
+        </li>`
+    })
+
+    html += listItems.join("")
+    html += "</ul>"
+
+    return html
 }
-' > ./scripts/Walkers.js
+' > ./scripts/Metals.js
 
-echo 'import { getWalkers } from "./database.js"
+echo 'import { getStyles } from "./database.js"
 
-const walkers = getWalker()
+const styles = getStyles()
 
-
-export const CityList = () => {
-    let citiesHTML = "<ol>"
-
-    for (const walker of walkers) {
-        citiesHTML += `<li>${currentWalker.city}</li>`
+document.addEventListener(
+    "change",
+    (event) => {
     }
+)
 
-    citiesHTML += "</ol>"
+export const JewelryStyles = () => {
+    let html = "<ul>"
 
-    return citiesHTML
+    const listItems = styles.map(style => {
+        return `<li>
+            <input type="radio" name="style" value="${style.id}" /> ${style.style}
+        </li>`
+    })
+
+    html += listItems.join("")
+    html += "</ul>"
+
+    return html
 }
-' > ./scripts/CityList.js
-
-echo 'import { getPets, getWalkers } from "./database.js"
-
-// Get copy of state for use in this module
-const pets = getPets()
-const walkers = getWalkers()
+' > ./scripts/JewelryStyles.js
 
 
-// Function whose responsibility is to find the walker assigned to a pet
-const findWalker = (pet, allWalker) => {
-    let petWalker = null
+echo 'import { getSizes } from "./database.js"
 
-    for (const walker of allWalkers) {
-        if (walker.id === pet.walkerId) {
-            petWalker = walker
+const metals = getSizes()
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "size") {
+            window.alert(``)
         }
     }
+)
 
-    return petWalker
+export const DiamondSizes = () => {
+    let html = "<ul>"
+
+    const listItems = metals.map(size => {
+        return `<li>
+            <input type="radio" name="size" value="${size.id}" /> ${size.carets}
+        </li>`
+    })
+
+    html += listItems.join("")
+    html += "</ul>"
+
+    return html
 }
-
-export const Assignments = () => {
-    let assignmentHTML = ""
-    assignmentHTML = "<ul>"
-
-    for (const currentPet of pets) {
-        const currentPetWalker = findPetWalker(currentPet, walkers)
-        assignmentHTML = `
-            <li>
-                ${currentPet.name} is being walked by
-                ${currentPetWalker.name} in ${currentPetWalker.city}
-            </li>
-        `
-    }
-
-    assignmentHTML += "</ul>"
-
-    return assignmentHTML
-}
-' > ./scripts/Assignments.js
+' > ./scripts/DiamondSizes.js
 
