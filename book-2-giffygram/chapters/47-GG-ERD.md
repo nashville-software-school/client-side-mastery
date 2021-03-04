@@ -6,58 +6,66 @@ In this chapter, you are going to build a visualization of the data and how reso
 
 ## Learning Objectives
 You should be able to:
-* state the purpose of an ERD
-* define what is a resource for an application
-* remember that an ERD shows properties and relationships
+* State the purpose of an ERD
+* Define what is a "resource" for an application
+* Remember that an ERD shows properties and relationships
 
 ## Application Resources
 
 An Entity Relationship Diagram (ERD) is a tool for software developers to visualize the resources for an application and how they relate.
 
-What is a resource? It is the kind of data your users will view,create, delete, or update in your application.
+What is a resource? It is the kind of data your users will view, create, delete, or update in your application.
 
 For Giffygram, here is the list of the main resources that need to be represented in your code.
 
 1. Users - People who use the application.
-1. Posts - People will create new posts with animation GIFs in them.
-1. Messages - People will send messages to other users of the application.
+1. Posts - Users will create new Posts with animation GIFs in them.
+1. Messages - Users will send Messages to other Users of the application.
 
-Additionally, a major feature of this application is that users should have the ability to like posts from other users, just as you see on the major social media platforms.
+Additionally, a major feature of this application is that Users should have the ability to like Posts from other Users, just as you see on the major social media platforms.
 
 To visualize these resources and relationships, you are going to be using a diagramming tool called [DBDiagram](https://dbdiagram.io/).
 
-
 ## ERD Table Definitions
 
-Each resource in an application gets a table. For GiffyGram, we will start with tables for users, posts, messages.
+Each resource in an application gets a table. For Giffygram, we will start with tables for Users, Posts, and Messages.
 
-When building the table, consider what does one "user" or "post" look like. What are the properties? Also, each entry will have a unique id.
+When building the table, consider what one "User" or "Post" looks like. What are the properties? Also, each entry will have a unique identifier, or "id".
 
-![user and post visual](./images/47-Resource.png)
+![User and Post visual](./images/47-Resource.png)
 
-Open DBDiagram and create a table for users and posts. You can past the following definitions into the left panel.
+Open DBDiagram and create a table for Users and a table for Posts. You can paste the following definitions into the left panel.
 
 ```ddl
-Table users {
+Table Users {
   id int [pk]
   name varchar
   email varchar
   dateJoined date
 }
 
-Table posts {
+Table Posts {
   id int [pk]
   title varchar
   description varchar
-  imageURL date
-  timestamp date
-  userId int [ref: > users.id]
+  imageURL varchar
+  timestamp timestamp
+  userId int
  }
+
+Ref: "Users"."id" < "Posts"."userId"
 
 ```
 
- ### Practice Messages Table
- Create a table for messages. What are the properties associated with a single message? How do you connect messages to users and recipients? Share your diagram with a member of the instruction team.
+ ### Practice: Messages Table
+ Create a table for Messages.
+ * What are the properties associated with a single Message?
+ * How do you connect Messages to Users and recipients?
+ * Share your diagram with a member of the instruction team.
 
- ### Practice Journal ERD
- Create an ERD for your journal. One of the resources should be the journal entry. Define the properties. When creating the table, consider: what does one journal entry look like? Also, are there any other resources you should define? Once you have the ERD, share your diagram with a member of the instruction team.
+ ### Practice: Create an ERD for your Daily Journal
+ Create an ERD for your Daily Journal. One of the resources should be the Journal Entries.
+ * What are the properties associated with a single Journal Entry?
+ * When creating the table, consider: what does one Journal Entry look like?
+ * Are there any other resources you should define?
+ * Once you have the ERD, share your diagram with a member of the instruction team.
