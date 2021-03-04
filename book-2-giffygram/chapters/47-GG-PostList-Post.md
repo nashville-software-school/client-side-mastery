@@ -72,7 +72,7 @@ const showPostList = () => {
 
 
 const startGiffyGram = () => {
-	showNavBar();
+	showPostList();
 }
 
 startGiffyGram();

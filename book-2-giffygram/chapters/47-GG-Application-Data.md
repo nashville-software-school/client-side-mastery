@@ -71,10 +71,25 @@ All other components will be either rendering _(i.e. displaying)_ state as HTML,
 
 ```
 
+
 > **Key Term**: The `userId` property on the post object is a **foreign key**. It matches the primary key of `1` of the user who created the post. In relational data systems, it is how you connect two related things together. In this example, it's your way of saying "This post object belongs to user #1."
 
-
 The `export` keyword makes the function usable by other modules. If you do not put the `export` keyword before declaring the function, then this module is the only one that can invoke it.
+
+## Add a Default User
+Since our data is dependant on a user and userId, let's add a default to our DataManager module. Once we build out the login functionality, we can replace this value.
+
+```js
+const loggedInUser = {
+	id: 1,
+	name: "Bryan",
+	email: "bryan@bn.com"
+}
+
+export const getLoggedInUser = () => {
+	return loggedInUser;
+}
+```
 
 ## Practice: Journal Get Entries
 * Set up your journal to include a `DataManager.js` module.

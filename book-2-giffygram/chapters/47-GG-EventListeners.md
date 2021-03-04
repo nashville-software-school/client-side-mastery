@@ -6,7 +6,7 @@ You should be able to:
 * explain the 2 arguments of `addEventListener`
 * discuss the target of an event
 * differentiate between the `id` property of an event target and the `value` property
-* explain that event listeners are added to HTML elements
+* explain how event listeners are added to HTML elements
 * understand _Event Bubbling_
 * describe how you are using event bubbling to capture an event on a different element than the true source of the event
 
@@ -21,7 +21,6 @@ In this chapter, you are going to write code that reacts to several things that 
 
 * Click on the logout button ("click")
 * Click on the direct message image ("click")
-* Type into the search field ("keyup")
 * Select a year in a drop down menu _(i.e. a `<select>` element)_ ("change")
 
 
@@ -37,7 +36,6 @@ Event bubbling is a web browser means that an event generated on a child is seen
 
 When you click on the `<p>` element in the code above, you can capture that click event on the `<p>` **or** on the parent `<div>`.
 
-Watch the resource video above for a longer explanation.
 
 ## Listening on the Only Known HTML Element
 
@@ -53,49 +51,36 @@ When working in with the Giffygram application, there is only one HTML element t
 
 The `<main>` element will always be there. Because it is guaranteed to always be available, you will use the power of event bubbling to capture ALL events, no matter where they originate, on that element.
 
-Open your **`NavBar`** module and add the following line of code at the top of the file. This gets a reference to the `<main>` element that is defined in your `index.html` document.
+Within `main.js` let's get a reference to the `<main>` element. And then add an eventListener for clicking on the logout button.
 
 ```js
-const applicationElement = document.querySelector(".giffygram")
+const applicationElement = document.querySelector(".giffygram");
+
+
 ```
 
 ## Reacting to a Click
 
 Now it is time to listen for your first browser generated event. When the user clicks on the logout button in the top-right corner, you are going to display a message that it was clicked.
 
-<img src="./images/giffygram-logout-click.gif" width="700px" />
 
 Add the following code, refresh your browser, and click the logout button.
 
 ```js
 applicationElement.addEventListener("click", event => {
-    if (event.target.id === "logout") {
-        console.log("The logout button was clicked")
-    }
+	if (event.target.id === "logout"){
+		console.log("You clicked on logout")
+	}
 })
 ```
 
 #### EventListeners are methods that accept 2 arguments. The first one is the type of event. The second one is a function - what to do when the event is heard.
 
 
-## Reacting to a Key Being Pressed
-
-The next event listener will react to the user typing in characters into the search input field.
-
-Note that the code is accessing the `.value` property of the event target - the input field - and then placing those characters into the message being displayed in the alert.
-
-```js
-applicationElement.addEventListener("keyup", event => {
-    if (event.target.id === "postSearch") {
-        const userInput = event.target.value
-        console.log(`${userInput} has been typed into the search field`)
-    }
-})
-```
 
 ## Selecting a Year
 
-Now it's time to add an event listener that will react to a user selecting a year from the select element in the footer component.
+Now it's time to add an event listener that will react to a user selecting a year from a select element.
 
 You will need to create a `Footer` component and include it in your `GiffyGram` component.
 

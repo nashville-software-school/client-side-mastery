@@ -51,28 +51,25 @@ You should be able to:
     ```
 ## Including a Component in Another One
 
-1. Open the `GiffyGram.js` file
+1. Open `main.js` file
 1. Import the `NavBar.js` file
 
-The return statement usually returns only one thing. Since the return of GiffyGram will now contain multiple components, we need to wrap the components within a `string template`.
-
-1. Change the following line of code...
-    ```js
-   export const GiffyGram = () => {
-    //if user
-    return `
-      ${NavBar()}
-      ${PostList()}
-    `
+Include a function that returns the NavBar.
+```js
+const showNavBar = () => {
+	navElement.innerHTML = NavBar();
 }
-    ```
-1. Refresh your browser.
+```
 
-You just imported a function from another module, invoked it, and interpolated its return value into a string.
+Within startGiffyGram function, invoke `showNavBar`
+```js
+    showNavBar();
+	showPostList();
+```
 
 
 ## Practice Footer
 
-Create a footer component for your application that contains copywrite information. Render it below the `PostList` component.
+Create a footer component for your application that contains copyright information. Render it below the `PostList` component.
 
 Look in the `styles/footer.css` file to see a style that you can apply to your footer element.
