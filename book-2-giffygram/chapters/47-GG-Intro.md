@@ -19,7 +19,7 @@ You will be guided through creating the components for this application, how to 
 
 Here's the MVP that you will be building for Giffygram.
 
-![animation of Giffygram MVP](./images/giffygram.gif)
+![Giffygram MVP](./images/giffygram.png)
 
 ## Setup for Giffygram in the Terminal
 
