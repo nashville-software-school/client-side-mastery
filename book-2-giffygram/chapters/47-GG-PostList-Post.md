@@ -62,9 +62,9 @@ Since `main.js` runs the show let's create and invoke functions that will
 // Can you explain what is being imported here?
 import { getPosts, getUsers } from "./data/DataManager.js"
 
-let postElement = document.querySelector(".postList");
 
 const showPostList = () => {
+  const postElement = document.querySelector(".postList");
 	getPosts().then((allPosts) => {
 		postElement.innerHTML = PostList(allPosts);
 	})
@@ -86,3 +86,6 @@ Start your Web server with the serve command in the terminal. Make sure you are 
 In the next couple chapters, you will see more comprehensive code for displaying the properties of a Post as HTML, but you are encouraged to give it a shot first.
 
 Open `src/scripts/feed/Post.js` and add more HTML structure, and interpolate the `description`, `timestamp`, and/or the `userId` property in it.
+
+## Practice Journal
+Try putting these steps together to display your journal entries in a list. You may need to refactor your code to follow the pattern.
