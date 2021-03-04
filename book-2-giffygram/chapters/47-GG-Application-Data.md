@@ -27,6 +27,9 @@ The data manager module will contain methods that:
 
 All other components will be either rendering _(i.e. displaying)_ state as HTML, or telling the data store to modify the state in response to a user filling out a form, or clicking a delete icon, etc.
 
+## 🚌 Road Trip
+[Check out this Jeopardy questions fetch](https://github.com/brendalong/fetch-me) demonstrating the time delay when requesting data.
+
 ## Create the Data Manager
 
 1. Create a `giffygram/src/scripts/data/DataManager.js` file.

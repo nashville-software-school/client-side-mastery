@@ -39,6 +39,9 @@ Once you run that, you will see a happy little guy displayed, along with the URL
 
 Remember, json-server is a tool that allows you to access your data via an HTTP request. That means you can throw `http://wwwlocalhost:8088/` into a browser tab URL bar, or use Postman, to `GET` your data. Of course, you can just peek at `giffygram.json` to see the data, as well. But where's the fun in that? 
 
+## Close JSON-Server
+It is a good idea to close the server when you stop work on a project (or for the day). Keyboard control: `control c`
+
 
 ## Practice: Journal
 After you have created the ERD for your journal, go ahead and set up json-server. Try adding a journal entry object to the entry resource.
