@@ -61,9 +61,15 @@ Every application needs an HTML file so that your data can be displayed beautifu
 </head>
 
 <body>
-
-    <main class="giffygram"></main>
-
+	
+    <main class="giffygram">
+		<nav></nav>
+		<section class="entryForm"></section>
+		<h3 class="center">My List</h3>
+		<section class="postList"></section>
+		<footer></footer>
+	</main>
+	
     <script type="module" src="./scripts/main.js"></script>
 </body>
 
@@ -87,7 +93,9 @@ Notice the `<script>` tag in the HTML file. This connects your HTML and javascri
  */
 
 //Get a reference to the location on the DOM where the app will display
-const applicationElement = document.querySelector(".giffygram")
+let postElement = document.querySelector(".postList");
+let navElement = document.querySelector("nav");
+let entryElement = document.querySelector(".entryForm")
 
 /*
     This function performs one, specific task.
@@ -95,17 +103,15 @@ const applicationElement = document.querySelector(".giffygram")
     1. Can you explain what that task is?
     2. Are you defining the function here or invoking it?
 */
-const renderApp = () => {
-    applicationElement.innerHTML = "Hello GiffyGram";
+const startGiffyGram = () => {
+	postElement.innerHTML = "Hello Cohort 47"
 }
-
 // Are you defining the function here or invoking it?
-renderApp()
+startGiffyGram();
 ```
 
 Start your Web server with the `serve` command in the terminal. Make sure you are in the `giffygram/src` directory when you do it.
 
-![](./images/starting-serve.gif)
 
 Now go to Chrome and paste with `Ctrl+V` on Windows or `Cmd+V` on Mac. Then hit enter and you should see a your message in the browser.
 
