@@ -124,11 +124,7 @@ export const getMetals = () => {
 }
 ' > ./scripts/database.js
 
-echo 'import { DiamondSizes } from "./DiamondSizes.js"
-import { JewelryStyles } from "./JewelryStyles.js"
-import { Metals } from "./Metals.js"
-import { Orders } from "./Orders.js"
-
+echo '
 document.addEventListener(
     "click",
     (event) => {
@@ -201,15 +197,14 @@ document.addEventListener(
 export const Metals = () => {
     let html = "<ul>"
 
-    const listItems = metals.map(metal => {
-        return `<li>
+    // This is how you have been converting objects to <li> elements
+    for (const metal of metals) {
+        html += `<li>
             <input type="radio" name="metal" value="${metal.id}" /> ${metal.metal}
         </li>`
-    })
+    }
 
-    html += listItems.join("")
     html += "</ul>"
-
     return html
 }
 ' > ./scripts/Metals.js
@@ -227,15 +222,14 @@ document.addEventListener(
 export const JewelryStyles = () => {
     let html = "<ul>"
 
-    const listItems = styles.map(style => {
-        return `<li>
-            <input type="radio" name="style" value="${style.id}" /> ${style.style}
-        </li>`
-    })
+    // Use .map() for converting objects to <li> elements
+    const listItemsArray =
 
+
+    // Join all of the strings in the array into a single string
     html += listItems.join("")
-    html += "</ul>"
 
+    html += "</ul>"
     return html
 }
 ' > ./scripts/JewelryStyles.js
@@ -257,6 +251,7 @@ document.addEventListener(
 export const DiamondSizes = () => {
     let html = "<ul>"
 
+    // Use .map() for converting objects to <li> elements
     const listItems = metals.map(size => {
         return `<li>
             <input type="radio" name="size" value="${size.id}" /> ${size.carets}

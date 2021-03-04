@@ -12,5 +12,5 @@
 | 6 | [Updating State from User Input](./chapters/KD_SETTING_STATE.md) <br/> <sub style="font-size:0.85rem;">#data #objects</sub> | [Saving Chosen Options](./chapters/CB_SETTING_STATE.md) |
 | 7 | [Automatically Display New Orders](./chapters/KD_STATECHANGED_EVENT.md) <br/> <sub style="font-size:0.85rem;">#events #custom</sub> | [Construction Queue](./chapters/CB_SHOWING_UPDATED_STATE.md) |
 | 8 | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Price Quotes](./chapters/CB_BUILD_COST.md) |
-| 9 | [Ordering Earrings](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | |
-| 10 | [Ordering Necklaces](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
+| 9 | [Ordering Earrings](./chapters/KD_EARRINGS.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | |
+| 10 | [Ordering Necklaces](./chapters/KD_NECKLACES.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |

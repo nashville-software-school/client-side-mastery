@@ -13,3 +13,5 @@ Once you have updated that code so that no more errors are happening, move on to
 Remember to use all of the resources at your disposal. the Web, your peers and your instructors.
 
 This is a good time to remind you that this isn't school. We don't want you to do this by yourself. Professional software developers use **every** possible resource to get things working and do their best to learn what they can as they do it.
+
+If you really, really, want to, you can [watch how to fix the initial errors](https://vimeo.com/519286816).
