@@ -1,4 +1,4 @@
-# Main Runs The Show
+# Connect HTML and JS
 
 ## Learning Objectives
 You should be able to:
@@ -91,11 +91,6 @@ Notice the `<script>` tag in the HTML file. This connects your HTML and javascri
 /**
  * Main logic module for what should happen on initial page load for Giffygram
  */
-
-//Get a reference to the location on the DOM where the app will display
-let postElement = document.querySelector(".postList");
-let navElement = document.querySelector("nav");
-let entryElement = document.querySelector(".entryForm")
 
 /*
     This function performs one, specific task.

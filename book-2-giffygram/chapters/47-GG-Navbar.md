@@ -57,6 +57,8 @@ You should be able to:
 Include a function that returns the NavBar.
 ```js
 const showNavBar = () => {
+    //Get a reference to the location on the DOM where the nav will display
+    const navElement = document.querySelector("nav");
 	navElement.innerHTML = NavBar();
 }
 ```
