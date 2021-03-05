@@ -19,14 +19,14 @@ You will be guided through creating the components for this application, how to 
 
 Here's the MVP that you will be building for Giffygram.
 
-![Giffygram MVP](./images/Giffygram.png)
+![Giffygram MVP](./images/giffygram.png)
 
 ## Setup for Giffygram in the Terminal
 
 Now it is time to set up the initial directories for your application code. With `mkdir` and `cd` create the following directory structure.
 
 ```sh
-mkdir -p ~/workspace/Giffygram/src/scripts
+mkdir -p ~/workspace/giffygram/src/scripts
 ```
 
 The `~` character represents your home directory. You can quickly go to your home directory by typing in `cd` and pressing enter.

@@ -29,7 +29,7 @@ To visualize these resources and relationships, you are going to be using a diag
 ## ERD Table Definitions
 
 Each resource in an application gets a table. For Giffygram, we will start with tables for Users, Posts, and Messages.
-
+   
 When building the table, consider what one "User" or "Post" looks like. What are the properties? Also, each entry will have a unique identifier, or "id".
 
 ![User and Post visual](./images/47-Resource.png)
@@ -37,14 +37,14 @@ When building the table, consider what one "User" or "Post" looks like. What are
 Open DBDiagram and create a table for Users and a table for Posts. You can paste the following definitions into the left panel.
 
 ```ddl
-Table Users {
+Table users {
   id int [pk]
   name varchar
   email varchar
   dateJoined date
 }
 
-Table Posts {
+Table posts {
   id int [pk]
   title varchar
   description varchar
@@ -53,7 +53,7 @@ Table Posts {
   userId int
  }
 
-Ref: "Users"."id" < "Posts"."userId"
+Ref: "users"."id" < "posts"."userId"
 
 ```
 
