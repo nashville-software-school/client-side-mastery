@@ -1,9 +1,9 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/kneel-diamonds-tour/scripts
-mkdir -p $HOME/workspace/kneel-diamonds-tour/styles
-cd $HOME/workspace/kneel-diamonds-tour
+mkdir -p $HOME/workspace/kneel-diamonds/scripts
+mkdir -p $HOME/workspace/kneel-diamonds/styles
+cd $HOME/workspace/kneel-diamonds
 
 echo '<!doctype html>
 <html lang="en">

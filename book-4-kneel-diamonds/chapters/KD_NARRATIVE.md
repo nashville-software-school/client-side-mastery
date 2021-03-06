@@ -14,7 +14,7 @@ Today, you used your new key card to enter in through the back door, walked thro
 >
 > She nods and quickly gets to business.
 >
-> "I need you to build a web page with Java on it that lists all of possible options that we offer to make custom jewelry. The user can choose any of the options, and a new code object should be created to represent their custom piece of jewelry. The customer can create as many jewelry items as she likes, and add them to a cart, and the Java code should be able to calculate the total cost."
+> "I need you to build a web page with Java on it that lists all of possible options that we offer to make custom jewelry. The user can choose any of the options, and a new code object should be created to represent their custom piece of jewelry. The customer can create as many jewelry items as she likes, add them to list of custom orders, and the Java code should be able to calculate the total cost."
 >
 > "You mean JavaScript, right?"
 >
@@ -40,7 +40,7 @@ const metals = [
 ]
 ```
 
-Gems are a bit tricky, you discovered, as you read the information in the binder. Intead of price following a straightforward formula per caret, it increased as the caret got larger. A one carat stone, on average, costs more than a half carat stone. Again, two carat stones will cost significantly more.
+Gems are a bit tricky, you discovered, as you read the information in the binder. Intead of price following a straightforward formula per caret, it increased as the caret got larger. A one carat stone costs more than double the cost of a half carat stone. Again, two carat stones will cost significantly more.
 
 ```js
 const diamonds = [
@@ -66,13 +66,22 @@ const ringStyles = [
 
 The following animation shows how the layout of the application, and how the user can select options and then click a button to generate a custom jewelry order. As soon as the order is generated, it should immediately appear in the DOM without refreshing the browser.
 
+Up to this point, you've only handled "click" events. In this application, you will handle "change" events as well.
+
 ![](./images/kneel-diamonds-working.gif)
 
 ## Project Setup
 
-Now that you have a job and have a reference creating functions that return object representations of jewelry for Kneel Diamonds, you are going to build out an application for producing different kinds of custom jewelry orders.
+Now that you have a paying job working for Kneel Diamonds, you are going to build out an application for producing different kinds of custom jewelry orders.
 
 Run the following command in your terminal.
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-deshawns-dog-walking/chapters/scripts/deshawn
+```
+
+It will create the following directory for your project and provider some boilerplate code. Once it is complete, move on to the next chapter.
+
+```sh
+~/workspace/kneel-diamonds
+```
