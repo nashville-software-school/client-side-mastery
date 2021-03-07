@@ -1,4 +1,4 @@
-# New Event Type - the Change
+# New Event Type: Change
 
 ## Learning Objectives
 
@@ -8,7 +8,6 @@
 * You should be able to recite the definition of _state_ as it pertains to web applications.
 * You should be able to identify the component whose responsiblity it is to change application state.
 * You should be able to understand that functions should be used to change application state.
-* You should be able to
 
 ## Tracking User Choices as State
 
@@ -92,4 +91,14 @@ document.addEventListener(
 )
 ```
 
-Use your debugging skills to see how this code works. Put a break
+Use your debugging skills to see how this code works.
+
+1. Put a breakpoint on the line of code with the `if` statement
+1. Click on one of the metals
+1. Inspect the value of `event.target`
+1. Inspect the value of `event.target.name`
+1. Inspect the value of `event.target.value`
+1. Then step into the `setMetal()` function and inspect that value of the parameter
+1. Inspect the value of `database.orderBuilder` after its state is updated
+
+![](./images/debugging-choosing-metals-event.gif)

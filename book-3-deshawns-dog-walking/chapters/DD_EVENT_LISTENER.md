@@ -1,4 +1,4 @@
-# Event Listener to Show Rates
+# Event Listener to Show Service Area
 
 Time for your first event listener. You are going to use your debugger to step through the code to see how it all works.
 
@@ -32,7 +32,7 @@ walkerHTML += `<li id="walker--${walker.id}">${walker.name}</li>`
 
 Refresh your browser to load the new code.
 
-Then click on some of the walkers. You should see the following happen.
+Then click on some of the walkers. You should see the name of the city the walker works in appear in an alert box.
 
 ![animation of clicking on a walker](./images/first-event-listener.gif)
 
