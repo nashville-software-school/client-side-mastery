@@ -1,6 +1,6 @@
 # Book 4 - Kneel Diamonds
 
-## Chapters
+## Core Chapters
 
 | # | 💎 💍 💎 💍 <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 🚙 🚗 <br/> Car Builder |
 |--|--|--|
@@ -13,3 +13,9 @@
 | 7 | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Price Quotes](./chapters/CB_BUILD_COST.md) |
 | 8 | [Ordering Earrings](./chapters/KD_EARRINGS.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | |
 | 9 | [Ordering Necklaces](./chapters/KD_NECKLACES.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
+
+## Pioneer Chapters
+
+| # | 💎 💍 💎 💍 <br/> Kneel Diamonds |  🚙 🚗 🚙 🚗 <br/> Car Builder |
+|--|--|--|
+| 1 | [User Option Choices as State](./chapters/KD_ADVANCED_STATE.md)</sub> | [User Info Form](./chapters/CB_ADVANCED_STATE.md) |
