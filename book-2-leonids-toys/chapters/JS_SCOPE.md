@@ -125,7 +125,7 @@ console.log(conjoinedWord)
 
 ```js
 {
-    const ModSquad = {
+    const modSquad = {
         "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"]
         "series": {
             "start": "1968",
@@ -135,12 +135,12 @@ console.log(conjoinedWord)
 
     const HTMLRepresentation = `<h1>The Mod Squad</h1>`
 
-    ModSquad.members.forEach(member => {
+    modSquad.members.forEach(member => {
         const HTMLRepresentation += `<div>${member}</div>`
     })
 }
 
-document.querySelector(".show-info").innerHTML = HTMLRepresentation
+console.log(HTMLRepresentation)
 ```
 
 ### Simon Says
@@ -150,10 +150,9 @@ There are two separate scoping issues in this code. Remember, `for` and `if` are
 ```js
 const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3]]
 
-for (let k = 0; k < locations.length; k++) {
-    const currentLocation = locations[k]
+for (const location of locations) {
 
-    if (currentLocation[0] > 2) {
+    if (location[0] > 2) {
         const invalidLocation = true
     }
 
@@ -161,13 +160,6 @@ for (let k = 0; k < locations.length; k++) {
         console.log("This location is invalid")
     }
 }
-
-/*
-    Since k is used as the loop counter, it will be the
-    total number of locations, not the invalid ones. You
-    need to fix this somehow.
-*/
-console.log(`There were ${k} invalid locations`)
 ```
 
 ## Advanced Challenge: Lambda Llama
