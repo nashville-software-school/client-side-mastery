@@ -68,9 +68,3 @@ export const Footer = () => {
     `
 }
 ```
-
-## Component State Video
-
-For a more comprehensive explanation, you should watch the following video.
-
-[<img src="./images/giffygram-component-state-video.png" width="600px" />](https://vimeo.com/515571465)

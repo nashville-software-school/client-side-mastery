@@ -10,9 +10,7 @@ Markdown | Less | Practice
 [Connect HTML and JS](chapters/47-GG-Main.md) | <sub style="font-size:0.85rem;">#import #export</sub> |
 [Lists and Cards](chapters/47-GG-PostList-Post.md) | | Journal entries in a list
 [NavBar](chapters/47-GG-Navbar.md) | | #Footer
-[User Actions: Event Listeners](chapters/47-GG-EventListeners.md) | |
-[Component State](chapters/47-GG-ComponentState.md) | |
-[App Change Custom Event](chapters/47-GG-AppChange-CustomEvent.md) | |
+[User Actions: Event Listeners](chapters/47-GG-EventListeners.md) | <sub style="font-size:0.85rem;">#click #change</sub> | Add eventListeners to navBar icons
 [User Filtering with Custom Event](chapters/47-GG-Filter-CustomEvent.md) | |
 [Display Post Details](chapters/47-GG-PostDetails.md) | |
 [Create New Post](chapters/47-GG-CreatePost.md) | |
