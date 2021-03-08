@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 You should be able to:
-* identify in your code where you are capturing user generated events in the browser
+* identify in your code where you are capturing user-generated events in the browser
 * explain the 2 arguments of `addEventListener`
 * discuss the target of an event
 * differentiate between the `id` property of an event target and the `value` property
@@ -26,7 +26,7 @@ In this chapter, you are going to write code that reacts to several things that 
 
 ## Event Bubbling
 
-Event bubbling is a web browser means that an event generated on a child is seen by the parent.
+Event bubbling in a web browser means that an event generated on a child is seen by the parent.
 
 ```html
 <div id="container">
@@ -62,7 +62,7 @@ const applicationElement = document.querySelector(".giffygram");
 
 ## Reacting to a Click
 
-Now we can listen for a browser generated event. When the user clicks on the logout button in the top-right corner, you are going to display a message that it was clicked.
+Now we can listen for a browser-generated event. When the user clicks on the logout button in the top-right corner, you are going to display a message that it was clicked.
 
 
 Add the following code, refresh your browser, and click the logout button.
