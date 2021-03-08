@@ -10,11 +10,12 @@ You should be able to:
 
 ## Setup
 
-1. Be in the `giffygram/src/scripts` directory and run these commands
+1. Be in the `giffygram/src` directory and run these commands
     ```sh
-    mkdir nav
-    touch NavBar.js
     mkdir images
+    mkdir scripts/nav
+    touch scripts/nav/NavBar.js
+  
     ```
 
 1. Right-click the image below and save it in `src/images` directory.

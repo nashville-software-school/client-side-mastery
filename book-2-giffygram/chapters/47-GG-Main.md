@@ -98,7 +98,10 @@ Notice the `<script>` tag in the HTML file. This connects your HTML and javascri
     1. Can you explain what that task is?
     2. Are you defining the function here or invoking it?
 */
+
+
 const startGiffyGram = () => {
+    const postElement = document.querySelector(".postList");
 	postElement.innerHTML = "Hello Cohort 47"
 }
 // Are you defining the function here or invoking it?

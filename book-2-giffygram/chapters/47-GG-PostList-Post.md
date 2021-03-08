@@ -61,7 +61,7 @@ Since `main.js` runs the show let's create and invoke functions that will
 ```js
 // Can you explain what is being imported here?
 import { getPosts, getUsers } from "./data/DataManager.js"
-
+import { PostList } from "./feed/PostList.js"
 
 const showPostList = () => {
 	//Get a reference to the location on the DOM where the list will display
