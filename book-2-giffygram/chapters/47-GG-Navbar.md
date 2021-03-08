@@ -31,7 +31,7 @@ You should be able to:
         return `
             <nav class="navigation">
                 <div class="navigation__item navigation__icon">
-                    <img src="./pb.png" alt="Giffygram icon" />
+                    <img src="./images/pb.png" alt="Giffygram icon" />
                 </div>
                 <div class="navigation__item navigation__name">
                     Giffygram
@@ -40,7 +40,7 @@ You should be able to:
                     <input type="text" id="postSearch" placeholder="Search posts..." />
                 </div>
                 <div class="navigation__item navigation__message">
-                    <img id="directMessageIcon" src="./fountain-pen.svg" alt="Direct message" />
+                    <img id="directMessageIcon" src="./images/fountain-pen.svg" alt="Direct message" />
                 </div>
                 <div class="navigation__item navigation__logout">
                     <button id="logout" class="fakeLink">Logout</button>
@@ -49,7 +49,7 @@ You should be able to:
         `
     }
     ```
-## Including a Component in Another One
+## Include Additional Components
 
 1. Open `main.js` file
 1. Import the `NavBar.js` file
@@ -65,8 +65,8 @@ const showNavBar = () => {
 
 Within startGiffyGram function, invoke `showNavBar`
 ```js
-    showNavBar();
-	showPostList();
+  showNavBar();
+  showPostList();
 ```
 
 

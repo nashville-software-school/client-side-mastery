@@ -37,19 +37,20 @@ Event bubbling is a web browser means that an event generated on a child is seen
 When you click on the `<p>` element in the code above, you can capture that click event on the `<p>` **or** on the parent `<div>`.
 
 
-## Listening on the Only Known HTML Element
-
-When working in with the Giffygram application, there is only one HTML element that is **guaranteed** to be available all the time. It is the one that is defined in the `index.html` document.
+## Listening on a main HTML Element
+When working in with the Giffygram application, there is  one HTML element that is **guaranteed** to be available all the time. It is the `<main>` element that is defined in the `index.html` document.
 
 ```html
 <body>
-    <main class="giffygram"></main>
+    <main class="giffygram">
+
+    </main>
 
     <script type="module" src="./scripts/main.js"></script>
 </body>
 ```
 
-The `<main>` element will always be there. Because it is guaranteed to always be available, you will use the power of event bubbling to capture ALL events, no matter where they originate, on that element.
+The `<main>` element will always be there. Since it is guaranteed to always be available, you can use the power of event bubbling to capture ALL events, no matter where they originate, on that element.
 
 Within `main.js` let's get a reference to the `<main>` element. And then add an eventListener for clicking on the logout button.
 
@@ -61,10 +62,12 @@ const applicationElement = document.querySelector(".giffygram");
 
 ## Reacting to a Click
 
-Now it is time to listen for your first browser generated event. When the user clicks on the logout button in the top-right corner, you are going to display a message that it was clicked.
+Now we can listen for a browser generated event. When the user clicks on the logout button in the top-right corner, you are going to display a message that it was clicked.
 
 
 Add the following code, refresh your browser, and click the logout button.
+
+> src/scripts/main.js
 
 ```js
 applicationElement.addEventListener("click", event => {
@@ -84,19 +87,10 @@ Now it's time to add an event listener that will react to a user selecting a yea
 
 You will need to create a `Footer` component and include it in your `GiffyGram` component.
 
+
 > #### `src/scripts/nav/Footer.js`
 
 ```js
-const applicationElement = document.querySelector(".giffygram")
-
-applicationElement.addEventListener("change", event => {
-    if (event.target.id === "yearSelection") {
-        const yearAsNumber = parseInt(event.target.value)
-
-        console.log(`User wants to see posts since ${yearAsNumber}`)
-    }
-})
-
 export const Footer = () => {
 
     // HTML to be returned to GiffyGram component
@@ -115,9 +109,22 @@ export const Footer = () => {
     `
 }
 ```
+Within `main.js`, follow the same pattern when you included the NavBar to display the Footer.
 
+Add an eventListener to listen for a change in the dropdown menu.
 
-## Practice: Direct Message and Home
+> src/scripts/main.js
+```js
+applicationElement.addEventListener("change", event => {
+  if (event.target.id === "yearSelection") {
+    const yearAsNumber = parseInt(event.target.value)
+
+    console.log(`User wants to see posts since ${yearAsNumber}`)
+  }
+})
+```
+
+## Practice: Click events on the direct message and home icons
 
 1. Display an alert message of your choosing when the direct message icon _(i.e. the fountain pen in the navbar)_ is clicked. Remember that you are using event bubbling and that the event should be captured on the `<main>` element. That means you need to check what the `id` property of the event target is.
 1. The peanut butter jar icon in the nav bar is how the user will, eventually, be able to go back to the default state of the application. Think of it as "going home". When that icon is clicked, display an alert message of your choosing. Currently there is not an `id` attribute on that image, so you will need to add one.

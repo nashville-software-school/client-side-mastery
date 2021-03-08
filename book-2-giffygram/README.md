@@ -1,20 +1,22 @@
 
-* [Intro To GiffyGram](chapters/47-GG-Intro.md)
-* [GiffyGram ERD](chapters/47-GG-ERD.md)
-* [API JSON-SERVER](chapters/47-GG-API-JSON-Server.md)
-* [API With Postman](chapters/47-GG-API-Postman.md)
+Markdown | Less | Practice
+--- | --- | ---
+[Intro To GiffyGram](chapters/47-GG-Intro.md) |  |
+[GiffyGram ERD](chapters/47-GG-ERD.md) | <sub style="font-size:0.85rem;">#dbdiagram</sub> | #Daily Journal ERD <br/>#Martin's Aquarium ERD
+[API JSON-SERVER](chapters/47-GG-API-JSON-Server.md) | <sub style="font-size:0.85rem;">#json-server</sub> | #Journal with json-server <br/> #Martin's with json-server
+[API With Postman](chapters/47-GG-API-Postman.md) | <sub style="font-size:0.85rem;">#Postman #get #post</sub> | Post and get journal entries
+[Application Data](chapters/47-GG-Application-Data.md) | <sub style="font-size:0.85rem;">#fetch</sub> | #Fetch journal entries <br />#Fetch A Joke <br /> #Fetch a NASA Photo
+[GiffyGram CSS](chapters/47-GG-Styles.md) | <sub style="font-size:0.85rem;">#free css</sub> |
+[Connect HTML and JS](chapters/47-GG-Main.md) | <sub style="font-size:0.85rem;">#import #export</sub> |
+[Lists and Cards](chapters/47-GG-PostList-Post.md) | | Journal entries in a list
+[NavBar](chapters/47-GG-Navbar.md) | | #Footer
+[User Actions: Event Listeners](chapters/47-GG-EventListeners.md) | |
+[Component State](chapters/47-GG-ComponentState.md) | |
+[App Change Custom Event](chapters/47-GG-AppChange-CustomEvent.md) | |
+[User Filtering with Custom Event](chapters/47-GG-Filter-CustomEvent.md) | |
+[Display Post Details](chapters/47-GG-PostDetails.md) | |
+[Create New Post](chapters/47-GG-CreatePost.md) | |
 
-* [Application Data](chapters/47-GG-Application-Data.md)
-* [GiffyGram CSS](chapters/47-GG-Styles.md)
-* [Connect HTML and JS](chapters/47-GG-Main.md)
-* [Lists and Cards](chapters/47-GG-PostList-Post.md)
-* [NavBar](chapters/47-GG-Navbar.md)
-* [Reacting to User Actions: Event Listeners](chapters/47-GG-EventListeners.md)
-* [Component State](chapters/47-GG-ComponentState.md)
-* [App Change Custom Event](chapters/47-GG-AppChange-CustomEvent.md)
-* [User Filtering with Custom Event](chapters/47-GG-Filter-CustomEvent.md)
-* [Display Post Details](chapters/47-GG-PostDetails.md)
-* [Create New Post](chapters/47-GG-CreatePost.md)
 
 
 * **Holiday Road**
