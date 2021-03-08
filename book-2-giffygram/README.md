@@ -1,5 +1,5 @@
 
-Markdown | Less | Practice
+Chapter | Concepts | Practice
 --- | --- | ---
 [Intro To GiffyGram](chapters/47-GG-Intro.md) |  |
 [GiffyGram ERD](chapters/47-GG-ERD.md) | <sub style="font-size:0.85rem;">#dbdiagram</sub> | #Daily Journal ERD <br/>#Martin's Aquarium ERD
@@ -11,7 +11,7 @@ Markdown | Less | Practice
 [Lists and Cards](chapters/47-GG-PostList-Post.md) | | Journal entries in a list
 [NavBar](chapters/47-GG-Navbar.md) | | #Footer
 [User Actions: Event Listeners](chapters/47-GG-EventListeners.md) | <sub style="font-size:0.85rem;">#click #change</sub> | Add eventListeners to navBar icons
-[String Methods](chapters/47-GG-StringMethods.md) | <sub style="font-size:0.85rem;">#split #toUpperCase #startsWith</sub> | Add eventListeners post entry items<br/>Add eventlistens to journal entry buttons
+[String Methods](chapters/47-GG-StringMethods.md) | <sub style="font-size:0.85rem;">#split #toUpperCase #startsWith</sub> | Add eventListeners post entry items<br/>Add eventListeners to journal entry buttons
 [User Filtering with Custom Event](chapters/47-GG-Filter-CustomEvent.md) | |
 [Display Post Details](chapters/47-GG-PostDetails.md) | |
 [Create New Post](chapters/47-GG-CreatePost.md) | |
