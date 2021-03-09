@@ -11,7 +11,7 @@ This application is to show kids with illnesses and the memories the would like 
 
 Below is an animation showing how the application should look when complete and how the event listeners should work.
 
-![](./images/debugging-events-assessment.gif)
+<img src="./images/debugging-events-assessment.gif" width="600px">
 
 ## Setup
 
