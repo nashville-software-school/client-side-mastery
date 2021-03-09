@@ -14,7 +14,7 @@ Chapter | Concepts | Practice
 [String Methods](chapters/47-GG-StringMethods.md) | <sub style="font-size:0.85rem;">#split #toUpperCase #startsWith</sub> | Add eventListeners post entry items<br/>Add eventListeners to journal entry buttons
 [Filter Data Event](chapters/47-GG-Filter-Event.md) | <sub style="font-size:0.85rem;">#filter() #Date.parse()</sub> |Filter Journal Entries
 [Create New Post](chapters/47-GG-CreatePost.md) | <sub style="font-size:0.85rem;">#fetch post #event.preventDefault() </sub> | #Use a form to add journal entries
-Markdown for Readme's| |
+[Markdown for Readme's](chapters/Project-Readme.md)| |#Create a Readme for your group project<br />#Create a readme for your Journal
 
 
 * **Holiday Road**
