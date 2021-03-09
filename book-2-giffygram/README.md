@@ -12,8 +12,7 @@ Chapter | Concepts | Practice
 [NavBar](chapters/47-GG-Navbar.md) | | #Footer
 [User Actions: Event Listeners](chapters/47-GG-EventListeners.md) | <sub style="font-size:0.85rem;">#click #change</sub> | Add eventListeners to navBar icons
 [String Methods](chapters/47-GG-StringMethods.md) | <sub style="font-size:0.85rem;">#split #toUpperCase #startsWith</sub> | Add eventListeners post entry items<br/>Add eventListeners to journal entry buttons
-[User Filtering with Custom Event](chapters/47-GG-Filter-CustomEvent.md) | |
-[Display Post Details](chapters/47-GG-PostDetails.md) | |
+[Filter Data Event](chapters/47-GG-Filter-Event.md) | <sub style="font-size:0.85rem;">#filter() #Date.parse()</sub> |Filter Journal Entries
 [Create New Post](chapters/47-GG-CreatePost.md) | |
 
 
