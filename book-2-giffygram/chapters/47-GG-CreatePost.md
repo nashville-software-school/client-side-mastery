@@ -9,14 +9,14 @@ export const PostEntry = () => {
         return `
         <div class="newPost">
             <div>
-                <input value="Learning JavaScript"
+                <input value=""
                        name="postTitle"
                        class="newPost__input"
                        type="text"
                        placeholder="Title" />
             </div>
             <div>
-                <input value="https://media.giphy.com/media/S9dN7OWFj8GoRhTIuL/giphy-downsized.gif"
+                <input value=""
                        name="postURL"
                        class="newPost__input"
                        type="text"
@@ -25,7 +25,7 @@ export const PostEntry = () => {
 
             <textarea name="postDescription"
                 class="newPost__input newPost__description"
-                placeholder="Story behind your gif...">Ethical chillwave jianbing ramps plaid subway tile.</textarea>
+                placeholder="Story behind your gif..."></textarea>
 
             <button id="newPost__submit">Save</button>
             <button id="newPost__cancel">Cancel</button>
@@ -33,69 +33,72 @@ export const PostEntry = () => {
         `
 }
 ```
+## Update Data Manager
+Create the `createPost` method. This method will accept an argument of datatype obj with a new post values.
 
-This component will need eventListeners for when the buttons are clicked. 
-
+> src/scripts/data/DataManager
 ```js
-document.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "newPost__cancel") {
-        //clear the input fields
-    }
-})
+export const createPost = postObj => {
+  return fetch("http://localhost:8088/posts", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(postObj)
 
-document.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "newPost__submit") {
-		//colllect the input values into an object to post to the DB
-
-        const title = document.querySelector("input[name='postTitle']").value
-        const url = document.querySelector("input[name='postURL']").value
-        const description = document.querySelector("textarea[name='postDescription']").value
-		//we have not created a user yet - so we will hard code `1` for now.
-        const postObject = {
-            title: title,
-            imageURL: url,
-            description: description,
-			userId: 1,
-            timestamp: Date.now()
-        }
-
-		// be sure to import from the store
-        createPost(postObject)
-    }
-})
-```
-
-
-## Post Data To API
-
->src/scripts/store/index.js
-
-```js
-export const createPost = post => {
-
-    return fetch("http://localhost:3000/posts", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(post)
-
-    })
-        .then(response => response.json())
-        .then(getPosts)
+  })
+      .then(response => response.json())
 }
 ```
 
-## Synching the API state with the App 
-Your database state has changed. And, thanks to the custom event, your application state has been updated to match that new API state. 
+## Add EventListeners
 
+We will need to add eventListeners to handle the cancel and submit buttons.
+> src/scripts/main.js
 ```js
-.then(dispatchStateChangeEvent) // tell any component listening that the notes state has been updated
+applicationElement.addEventListener("click", event => {
+  if (event.target.id === "newPost__cancel") {
+      //clear the input fields
+  }
+})
+
+applicationElement.addEventListener("click", event => {
+  event.preventDefault();
+  if (event.target.id === "newPost__submit") {
+  //collect the input values into an object to post to the DB
+    const title = document.querySelector("input[name='postTitle']").value
+    const url = document.querySelector("input[name='postURL']").value
+    const description = document.querySelector("textarea[name='postDescription']").value
+    //we have not created a user yet - for now, we will hard code `1`.
+    //we can add the current time as well
+    const postObject = {
+        title: title,
+        imageURL: url,
+        description: description,
+        userId: 1,
+        timestamp: Date.now()
+    }
+
+  // be sure to import from the DataManager
+      createPost(postObject)
+  }
+})
 ```
 
+Create and invoke `showPostEntry` to display the form.
+```js
+const showPostEntry = () => { 
+  //Get a reference to the location on the DOM where the nav will display
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = PostEntry();
+}
+```
 
-But, is anyone out there listeneing? Which component needs to know about this important update? Bet you can figure it out. 
+Using the form, create a new post. Check the database and confirm an item was added. A new post has been added, however the list does not reflect the additional content. How do you get the list to display the new post?
 
-Once you do, notice what happens when you add a new note when the note list isn't being shown already. Does the list now display? If so, how might you keep that from happening? 
+Work with your classmates to come up with a solution to show the updated list. Share your ideas with the instruction team.
 
-Discuss with your classmates and try a couple of different solutions to the problem. Which solution is most satisfying. Why? We'd love to hear what you come up with!
+## Practice Add Journal Entries with a form
+Using the form you created for your journal, create the functions needed to add new entries to the database.
+
+**Bonus** Consider the display order of the entries. What array method could you use to sort the entry display.
