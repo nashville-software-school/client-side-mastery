@@ -36,4 +36,6 @@ const sellPerryScope = () => {
         console.log("Enjoy your new Perry Scope")
     }
 }
+
+sellPerryScope()
 ```
