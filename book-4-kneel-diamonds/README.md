@@ -12,6 +12,7 @@
 | 6 | [Saving Chosen Style and Size](./chapters/KD_SETTING_OTHER_STATE.md) <br/> <sub style="font-size:0.85rem;">#data #objects</sub> | [Saving Chosen Options](./chapters/CB_SETTING_STATE.md) |
 | 7 | [Automatically Display New Orders](./chapters/KD_STATECHANGED_EVENT.md) <br/> <sub style="font-size:0.85rem;">#events #custom</sub> | [Construction Queue](./chapters/CB_SHOWING_UPDATED_STATE.md) |
 | 8 | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Price Quotes](./chapters/CB_BUILD_COST.md) |
+| 🎓 | [Self-assessment](./chapters/BOOK_4_ASSESSMENT.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> |  |
 
 ## Explorer Chapters
 
