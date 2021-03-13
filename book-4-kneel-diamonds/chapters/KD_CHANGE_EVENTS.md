@@ -25,6 +25,6 @@ document.addEventListener(
 )
 ```
 
-WHen you choose a metal, you should now see a message displayng the primary key of the chosen metal.
+When you choose a metal, you should now see a message displayng the primary key of the chosen metal.
 
 ![](./images/kneel-diamonds-display-chosen-metal.gif)

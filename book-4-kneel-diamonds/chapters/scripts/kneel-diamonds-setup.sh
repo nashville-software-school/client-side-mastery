@@ -114,7 +114,7 @@ const database = {
             metalId: 3,
             sizeId: 2,
             styleId: 3,
-            orderedOn: 1614659931693
+            timestamp: 1614659931693
         }
     ]
 }

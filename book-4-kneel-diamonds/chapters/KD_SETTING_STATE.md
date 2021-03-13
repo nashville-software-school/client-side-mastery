@@ -1,4 +1,4 @@
-# New Event Type: Change
+# Modifying State
 
 ## Learning Objectives
 

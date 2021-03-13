@@ -1,6 +1,6 @@
 # Kneel Diamonds Entity Relationship Diagram
 
-Looks in the `database.js` module and examine the data that will be used for this application. There are three main resources that the user will interact with and need to be represented in the ERD.
+Look in the `database.js` module and examine the data that will be used for this application. There are three main resources that the user will interact with and need to be represented in the ERD.
 
 1. Metals
 1. Sizes
@@ -10,3 +10,4 @@ There is a fourth entity that the user does not directly interact with, but it g
 
 Use dbdiagram.io to generate a visualization of this database. Work with your teammates, or talk to a member of the instruction team to work past any concepts that still confuse you.
 
+If you're truly stuck after talking to peers and instructors you can view [one possible visualization](https://vimeo.com/523171683).
