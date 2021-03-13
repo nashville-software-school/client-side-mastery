@@ -5,20 +5,8 @@ mkdir -p $HOME/workspace/flowers
 cd $HOME/workspace/flowers
 
 
-echo '// Do not change these default flowers
-const flowers = [
-    {
-        id: 1,
-        color: "White",
-        species: "Rose",
-        price: 0.90
-    },
-    {
-        id: 2,
-        color: "Red",
-        species: "Tulip",
-        price: 1.10
-    }
+echo 'const flowers = [
+
 ]
 
 const addFlower = (flowerObject) => {
@@ -64,7 +52,7 @@ module.exports = {
 }
 ' > flowers.js
 
-echo 'const { addFlower, findExpensiveFlowers } = require('./flowers.js')
+echo 'const { addFlower, findExpensiveFlowers } = require("./flowers.js")
 
 addFlower({
     color: "Orange",
