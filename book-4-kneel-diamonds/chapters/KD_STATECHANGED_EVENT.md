@@ -22,6 +22,9 @@ export const addCustomOrder = () => {
     // Add a new primary key to the object
     newOrder.id = [...database.customOrders].pop().id + 1
 
+    // Add a timestamp to the order
+    newOrder.timestamp = Date.now()
+
     // Add the new order object to custom orders state
     database.customOrders.push(newOrder)
 
