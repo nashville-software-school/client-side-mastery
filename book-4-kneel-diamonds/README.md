@@ -26,4 +26,5 @@
 
 | # | 💎 💍 💎 💍 <br/> Kneel Diamonds |  🚙 🚗 🚙 🚗 <br/> Car Builder |
 |--|--|--|
-| 1 | [User Option Choices as State](./chapters/KD_ADVANCED_STATE.md)</sub> | [User Info Form](./chapters/CB_ADVANCED_STATE.md) |
+| 1 | [User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) | [User Info Form](./chapters/CB_ADVANCED_STATE.md) |
+| 1 | [Data Access Layer](./chapters/KD_DAL.md) | [Data Access Layer](./chapters/CB_DAL.md) |
