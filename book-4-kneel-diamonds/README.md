@@ -6,7 +6,7 @@
 |--|--|--|
 | 1 | [Kneel Diamonds](./chapters/KD_NARRATIVE.md) |  |
 | 2 | [Debugging Practice](./chapters/KD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Cars 'R Us](./chapters/CB_SETUP.md) |
-| 3 | [Kneel Diamonds ERD](./chapters/KD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Cars 'R Us ERD](./chapters/CB_SETUP.md) |
+| 3 | [Kneel Diamonds ERD](./chapters/KD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Cars 'R Us ERD](./chapters/CB_ERD.md) |
 | 4 | [Displaying Jewelry Options](./chapters/KD_RADIO_BUTTONS.md) <br/> <sub style="font-size:0.85rem;">#array-methods #map</sub> | [Show Customizations](./chapters/CB_RADIO_BUTTONS.md) |
 | 5 | [Choosing Jewelry Options](./chapters/KD_CHANGE_EVENTS.md) <br/> <sub style="font-size:0.85rem;">#events #change</sub> | [Choosing Car Options](./chapters/CB_CHANGE_LISTENERS.md) |
 | 6 | [Saving Chosen Metal State](./chapters/KD_SETTING_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #setters</sub> |  |
@@ -19,12 +19,11 @@
 
 | # | 💎 💍 💎 💍 <br/> Kneel Diamonds |  🚙 🚗 🚙 🚗 <br/> Car Builder |
 |--|--|--|
-| 1 | [Ordering Earrings](./chapters/KD_EARRINGS.md) | |
-| 2 | [Ordering Necklaces](./chapters/KD_NECKLACES.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
+| 1 | [Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
 
 ## Pioneer Chapters
 
 | # | 💎 💍 💎 💍 <br/> Kneel Diamonds |  🚙 🚗 🚙 🚗 <br/> Car Builder |
 |--|--|--|
-| 1 | [User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) | [User Info Form](./chapters/CB_ADVANCED_STATE.md) |
-| 1 | [Data Access Layer](./chapters/KD_DAL.md) | [Data Access Layer](./chapters/CB_DAL.md) |
+| 1 | [User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) |  |
+| 1 | [Data Access Layer](./chapters/KD_DAL.md) |  |
