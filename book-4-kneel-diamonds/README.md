@@ -2,11 +2,11 @@
 
 ## Core Chapters
 
-| # | 💎 💍 💎 💍 <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 🚙 🚗 <br/> Car Builder |
+| # | 💎 💍  <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 <br/> Car Builder |
 |--|--|--|
 | 1 | [Kneel Diamonds](./chapters/KD_NARRATIVE.md) |  |
-| 2 | [Debugging Practice](./chapters/KD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Cars 'R Us](./chapters/CB_SETUP.md) |
-| 3 | [Kneel Diamonds ERD](./chapters/KD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Cars 'R Us ERD](./chapters/CB_ERD.md) |
+| 2 | [Debugging Practice](./chapters/KD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> |  |
+| 3 | [Kneel Diamonds ERD](./chapters/KD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Cars 'R Us](./chapters/CB_SETUP.md) |
 | 4 | [Displaying Jewelry Options](./chapters/KD_RADIO_BUTTONS.md) <br/> <sub style="font-size:0.85rem;">#array-methods #map</sub> | [Show Customizations](./chapters/CB_RADIO_BUTTONS.md) |
 | 5 | [Choosing Jewelry Options](./chapters/KD_CHANGE_EVENTS.md) <br/> <sub style="font-size:0.85rem;">#events #change</sub> | [Choosing Car Options](./chapters/CB_CHANGE_LISTENERS.md) |
 | 6 | [Saving Chosen Metal State](./chapters/KD_SETTING_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #setters</sub> |  |
