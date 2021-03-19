@@ -61,7 +61,7 @@ export const MoodFilter = () => {
 
 ## Add Event Listeners
 
-Each one of the radio buttons needs to have a click event listener attached to it. When any of them are clicked, then the only articles that should appear are the ones with the corresponding mood.
+Add an event listeners that captures when your radio button group changes, and then the only articles that should appear are the ones with the corresponding mood.
 
 ![journal entries filtered by mood when radio button is clicked](./images/E0uirNa8Af.gif)
 
@@ -82,5 +82,4 @@ eventHub.addEventListener("change", e => {
 
 Once you have successfully retrieved the value of selected mood, you need to filter all of the journal entries.
 
-1. The mood filter component needs to broadcast a message that a mood was chosen, and the event needs to specify which mood was chosen.
-1. The entry list should react to that event and display only entries that have the matching mood.
+Consider adding a state variable that tracks which entries should be displayed. The user can either view all entries, or a filtered list of entries.

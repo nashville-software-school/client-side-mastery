@@ -1,6 +1,6 @@
 # Daily Journal Semantic HTML and Layout
 
-Use your wireframe as a guide to create the HTML for your daily journal. 
+Use your wireframe as a guide to create the HTML for your daily journal.
 
 ## Project Directory and First Files
 
@@ -25,7 +25,7 @@ Refer to your wireframe and write semantic HTML for the page.
 * Get more specific with `<section>`, `<article>`, and `<form>`. (Don't worry about the details of the form - you will build that out below).
 * Get more specific with `<h2-h6>`, `<p>`, and `<a>`.
 * Continue this process until you block in the page with all of the details from your wireframe.
- 
+
 
 ## Build the Journal Form
 
@@ -57,14 +57,3 @@ Now use the `display: flex`, and `flex-direction: column` CSS properties to chan
 ![](./images/P5FPNsVInT.gif)
 
 **Once your project is pushed to GitHub, be sure to include your wireframe in the `README.md` file.**
-
-##
-## UI/UX Challenge
-** This is an optional challenge once you meet MVP.
-
-### Best Practices for Form Design
-Take a look at Luke Wroblewski's article on form design, the following sections will get you started. [webforms_lukew.pdf](webforms_lukew.pdf)
-1. Inputs: pp18-48 (lots of visual examples)
-2. Actions: pp49-56
-
-Refactor your Daily Journal to include best practices for form design.

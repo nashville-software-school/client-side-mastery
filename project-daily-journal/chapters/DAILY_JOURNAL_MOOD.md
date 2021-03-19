@@ -1,6 +1,6 @@
 # Related Data in Daily Journal
 
-> **Task**: Normalize API so that moods are their own collection, and the PK is stored as a FK in each item in the `entries` collection.
+> **Task**: Normalize your API so that moods are their own collection, and the primary key is stored as a foreign key in each item in the `entries` collection.
 
 Until now, you've been storing each entry's mood as a direct property of the entry.
 
@@ -76,7 +76,7 @@ This is a new data structure, so you must now refactor your JavaScript code that
 
 The last thing to refactor is the `<select>` element that holds all of the `<option>` elements for your moods. Right now, you likely have those hard-coded into your HTML form. You now need to query all of those moods from your API with a new `fetch()` method and then dynamically build a new `<option>` for each of the moods.
 
-This requires a **`MoodProvider`** component to get the mood state from the API with a `getMoods()` function and a `useMoods()` function.
+This requires you to get the mood state from the API.
 
 Then, in the form component, you need to use the `map()` array function to convert each object in the mood array to an `<option>` HTML element.
 
@@ -89,19 +89,3 @@ ${
     ).join("")
 }
 ```
-
-## Optional Challenge: Instructor
-
-> **Note**: Remember, challenges are optional and should only be attempted once you have completed the main exercise(s) and understand the concept(s).
-
-1. Add an `instructors` resource collection in your API.
-1. Add an object representing each of the three members of your instruction team.
-    ```json
-    {
-        "id": 1,
-        "first_name": "Greg",
-        "last_name": "Korte"
-    }
-    ```
-1. Refactor your entry form to include a `<select>` HTML component containing an `<option>` for each instructor.
-1. Refactor your method for saving an entry to include a foreign key on your entry object to the chosen intructor.
