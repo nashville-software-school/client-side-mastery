@@ -4,14 +4,14 @@ In these project chapters, you will learn about how to design and build a modula
 
 JavaScript allows you do define your own events that apply only to your application.
 
-| #  | 🚓 <br/> Glassdale Cold Case <br/> <sub>(_Guided tour_)</sub> | 🎢 <br/> State Fair <sub> <br/> (_Custom events_)</sub>
-|--|--|--|
-| 1 | [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md) | |
-| 2 | [Criminal API](./chapters/GLASSDALE_CRIMINAL_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch</sub> |  |
-| 3 | [Likely Suspects](./chapters/GLASSDALE_CRIMINAL_HISTORY.md) <br/> <sub style="font-size:0.85rem;">#array-map</sub> |  |
-| 4 | [Decoupling with Events](./chapters/GLASSDALE_DECOUPLING.md) <br/> <sub style="font-size:0.85rem;">#browser-events #custom-events</sub>|  |
-| 5 | [Likely Suspects with Event Hub](./chapters/GLASSDALE_EVENT_HUB.md) <br/> <sub style="font-size:0.85rem;">#browser-events #custom-events</sub>| [Going to the Fair](./chapters/SF_SETUP.md) |
-| 6 | [Arresting Officer](./chapters/GLASSDALE_ARRESTING_OFFICERS.md) <br/> <sub style="font-size:0.85rem;">#custom-events</sub> | [Ticket to Ride](./chapters/SF_RIDE_TICKET.md) |
-| 7 | [Case Notes API - Making Entries](./chapters/GLASSDALE_NOTES_API.md) <br/> <sub style="font-size:0.85rem;">#fetch #POST #custom-events #user-input</sub> | [Food Ticket](./chapters/SF_FOOD_TICKET.md) |
-| 8 | [What's Your Alibi?](./chapters/GLASSDALE_ALIBI.md) <br/> <sub style="font-size:0.85rem;">#custom-events</sub>| [Game Tickets](./chapters/SF_GAME_TICKET.md) |
-| 9 | [Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md) <br/> <sub style="font-size:0.85rem;">#custom-events #user-input #fetch #POST</sub> | [Sideshow Thrills](./chapters/SF_SIDESHOW_TICKET.md) |
+| #  | 🚓 <br/> Glassdale Cold Case |
+|--|--|
+| 1 | [Glassdale PD: Cold Case Cyber Police](./chapters/GLASSDALE_PD_INTRO.md) |
+| 2 | [Criminal API](./chapters/GLASSDALE_CRIMINAL_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch</sub> |
+| 3 | [Likely Suspects](./chapters/GLASSDALE_CRIMINAL_HISTORY.md) <br/> <sub style="font-size:0.85rem;">#array-map</sub> |
+| 4 | [Decoupling with Events](./chapters/GLASSDALE_DECOUPLING.md) <br/> <sub style="font-size:0.85rem;">#browser-events #custom-events</sub>|
+| 5 | [Likely Suspects with Event Hub](./chapters/GLASSDALE_EVENT_HUB.md) <br/> <sub style="font-size:0.85rem;">#browser-events #custom-events</sub>|
+| 6 | [Arresting Officer](./chapters/GLASSDALE_ARRESTING_OFFICERS.md) <br/> <sub style="font-size:0.85rem;">#custom-events</sub> |
+| 7 | [Case Notes API - Making Entries](./chapters/GLASSDALE_NOTES_API.md) <br/> <sub style="font-size:0.85rem;">#fetch #POST #custom-events #user-input</sub> |
+| 8 | [What's Your Alibi?](./chapters/GLASSDALE_ALIBI.md) <br/> <sub style="font-size:0.85rem;">#custom-events</sub>|
+| 9 | [Interviewing Witnesses](./chapters/GLASSDALE_WITNESSES.md) <br/> <sub style="font-size:0.85rem;">#custom-events #user-input #fetch #POST</sub> |
