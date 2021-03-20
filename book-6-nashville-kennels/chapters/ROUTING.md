@@ -43,6 +43,9 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/">NSS Kennels</Link>
             </li>
             <li className="navbar__item">
+                <Link className="navbar__link" to="/locations">Locations</Link>
+            </li>
+            <li className="navbar__item">
                 <Link className="navbar__link" to="/animals">Animals</Link>
             </li>
             <li className="navbar__item">
@@ -78,44 +81,60 @@ Notice the use of the `<Link/>` component. This comes from the React Router pack
 Now it's time to define the Routes for our application. In **`NavBar`**, you defined four **`<Link />`** components that will navigate to the routes of...
 
 * `/`
+* `/locations`
 * `/animals`
 * `/customers`
 * `/employees`
 
 In the **`ApplicationViews`** component, you will define how your application will respond when the URL matches each of those patterns. When a user clicks on one of the hyperlinks in the navigation bar, this code dictates which component should be rendered.
 
+**For this example, convert the static content of the `Kennel` component into a `Home` component.
+
+> ##### `src/components/Home.js`
+```jsx
+import React from "react";
+import { PropsAndState } from './PropsAndState'
+
+export const Home = () => (
+    <>
+        <h2>Nashville Kennels</h2>
+        <small>Loving care when you're not there.</small>
+
+        <address>
+            <div>Visit Us at the Nashville North Location</div>
+            <div>500 Puppy Way</div>
+        </address>
+        <PropsAndState yourName={"Brenda"} />
+    </>
+)
+```
+
 > ##### `src/components/ApplicationViews.js`
 
-```js
+```jsx
 import React from "react"
 import { Route } from "react-router-dom"
-import { LocationProvider } from "./location/LocationProvider"
-import { AnimalProvider } from "./animal/AnimalProvider"
-import { LocationList } from "./location/LocationList"
-import { AnimalList } from "./animal/AnimalList"
+import { Home } from "./Home"
+import { AnimalCard } from "./animal/AnimalCard"
 
-export const ApplicationViews = (props) => {
+export const ApplicationViews = () => {
     return (
         <>
-            <LocationProvider>
-                {/* Render the location list when http://localhost:3000/ */}
-                <Route exact path="/">
-                    <LocationList />
-                </Route>
-            </LocationProvider>
+            {/* Render the location list when http://localhost:3000/ */}
+            <Route exact path="/">
+                <Home />
+            </Route>
 
-            <AnimalProvider>
-                {/* Render the animal list when http://localhost:3000/animals */}
-                <Route path="/animals">
-                    <AnimalList />
-                </Route>
-            </AnimalProvider>
+            {/* Render the animal list when http://localhost:3000/animals */}
+            <Route path="/animals">
+                <AnimalCard />
+            </Route>
         </>
     )
 }
 ```
 
-`exact` is needed on the first route, otherwise it will also match the other two routes, and the **`LocationList`** will be the only component rendered, no matter what the URL is.
+`exact` is needed on the first route, otherwise it will also match the other routes, and the **`Home`** will render for every route.
 
 The `<Link/>` and the `<Route/>` JSX elements are complementary to each other. If you add a new **`Link`** element in your application with a new URL, then you must create a matching **`Route`** element.
 
@@ -130,7 +149,6 @@ As mentioned above, **`Kennel`** is a container component. It renders no HTML it
 
 ```js
 import React from "react"
-import { Route } from "react-router-dom"
 import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./ApplicationViews"
 import "./Kennel.css"
@@ -164,10 +182,8 @@ ReactDOM.render(
 )
 ```
 
-When all of this code is in place, your location list and animal list should display HTML representations of the data in your database.
-
-![locations and animals links in navbar](./images/react-initial-navbar.gif)
+With code in place, you should be able to navigate between multiple views and display different HTML representations.
 
 ## Practice: Customers and Employees
 
-Your job is to update **`ApplicationViews`** to make the _Customers_ and _Employees_ links display their matching resources when clicked. Ensure that you have each list component as a child of a provider component.
+Your job is to update **`ApplicationViews`** to make the _Locations_, _Customers_ and _Employees_ links display their matching resources when clicked.

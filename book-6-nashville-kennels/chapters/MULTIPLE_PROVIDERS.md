@@ -1,10 +1,8 @@
 # Joining Data in Multiple Resources
 
-Right now, the data being displayed for animals is not useful. For both the location, and the customer who owns the animal, all you are displaying is the primary key of those objects.
+Sometimes we need data from multiple resources. For example, to add a new animal with dropdown options for both the locations and the customer.
 
-![](./images/animals-before-join.png)
-
-You really want to display the name of the location, and the name of the customer. To do that, you need data from the animal provider, the location provider, and the customer provider. The first step to making it work is updating **`ApplicationViews`** so that the **`AnimalList`** component has all three providers as parent components.
+In the next chapter we will create the AnimalForm component but first we need data from the location provider and customer provider. Update the **`ApplicationViews`** so the component has all the necessary providers as parent components.
 
 > ##### `src/components/ApplicationViews.js`
 
@@ -12,8 +10,8 @@ You really want to display the name of the location, and the name of the custome
 <AnimalProvider>
     <LocationProvider>
         <CustomerProvider>
-            <Route exact path="/animals">
-                <AnimalList />
+            <Route exact path="/animals/create">
+                <AnimalForm />
             </Route>
         </CustomerProvider>
     </LocationProvider>
@@ -43,9 +41,9 @@ export const AnimalList = () => {
 
     useEffect(() => {
         console.log("AnimalList: Initial render before data")
-        getAnimals()
         getLocations()
-        getCustomers()
+        .then(getCustomers)
+        .then(getAnimals)
     }, [])
 
 
@@ -98,9 +96,5 @@ export const Animal = ({ animal, customer, location }) => (
 
 Then display the name property of each one.
 
-```jsx
-<div className="animal__location">Location: { location.name }</div>
-<div className="animal__owner">Customer: { customer.name }</div>
-```
-
+Now the **`AnimalForm`** component can access data from all of the data providers to produce dropdown options.
 ![animal card showing name of customer and location](./images/animals-after-join.png)

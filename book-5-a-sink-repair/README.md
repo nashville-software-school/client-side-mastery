@@ -8,7 +8,7 @@ In this book, you will be introduced to the basics of asynchronous programming a
 |--|--|--|--|
 | 1 | [Introduction to Fetch](./chapters/AS_FETCH_INTRO.md) <br/> <sub style="font-size:0.85rem;">#api #fetch</sub> |  |  |
 | 2 | [Permanent State vs Transient State](./chapters/AS_STATE_TYPES.md) <br/> <sub style="font-size:0.85rem;">#state</sub>  |  |  |
-| # |  |  |  |
+| # | [Permanent State vs Transient State](./chapters/AS_STATE_TYPES.md) <br/> <sub style="font-size:0.85rem;">#state</sub> |  |  |
 | # |  |  |  |
 | # |  |  |  |
 | # |  |  |  |
