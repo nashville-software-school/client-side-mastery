@@ -6,9 +6,9 @@ mkdir -p $HOME/workspace/sink-repair/src/scripts
 mkdir -p $HOME/workspace/sink-repair/src/styles
 cd $HOME/workspace/sink-repair/api
 
-echo `{
+echo '{
 
-}` > database.json
+}' > database.json
 
 cd $HOME/workspace/sink-repair/src
 
