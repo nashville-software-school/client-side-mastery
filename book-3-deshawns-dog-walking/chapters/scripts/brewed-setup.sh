@@ -23,8 +23,7 @@ echo '<!doctype html>
 </html>
 ' > index.html
 
-echo '/* TODO: MISSPELL FILE NAME */
-@import "details.css";
+echo '@import "detail.css";
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
 /*Typography
