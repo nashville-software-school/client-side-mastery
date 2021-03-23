@@ -11,7 +11,6 @@ Editing data is the most complex operation to perform in a web application becau
 1. Send a request to the API to update the correct resource.
 1. Render the updated HTML representation.
 
-![animation of editing a journal entry](./images/editing-entry.gif)
 
 ## Steps
 

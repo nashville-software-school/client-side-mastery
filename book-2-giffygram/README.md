@@ -13,24 +13,22 @@ Chapter | Concepts | Practice
 [User Actions: Event Listeners](chapters/47-GG-EventListeners.md) | <sub style="font-size:0.85rem;">#click #change</sub> | Add eventListeners to navBar icons
 [String Methods](chapters/47-GG-StringMethods.md) | <sub style="font-size:0.85rem;">#split #toUpperCase #startsWith</sub> | Add eventListeners post entry items<br/>Add eventListeners to journal entry buttons
 [Filter Data Event](chapters/47-GG-Filter-Event.md) | <sub style="font-size:0.85rem;">#filter() #Date.parse()</sub> |Filter Journal Entries
-[Create New Post](chapters/47-GG-CreatePost.md) | <sub style="font-size:0.85rem;">#fetch post #event.preventDefault() </sub> | #Use a form to add journal entries
+[Create New Post](chapters/47-GG-CreatePost.md) | <sub style="font-size:0.85rem;">#fetch POST #event.preventDefault() </sub> | #Use a form to add journal entries
 [Markdown for Readme's](chapters/Project-Readme.md)| |#Create a Readme for your group project<br />#Create a readme for your Journal
+🚌 **Holiday Road** | |
+[Delete A Post](chapters/47-GG-DeletePost.md) | <sub style="font-size:0.85rem;">#fetch DELETE</sub> | Update Journal with delete functionality
+[Edit A Post](chapters/47-GG-EditPost.md) | <sub style="font-size:0.85rem;">#fetch PUT #input hidden</sub> | Update Journal with edit functionality
 
-
-* **Holiday Road**
 
 * Users with Login Form
 * Users with Register
-* [Get Single Post](chapters/47-GG-GetSinglePost.md)
 * Review ERD - Add `likePost` join table
-* JSON-Server fetch calls
 
 
 ## Supplementary Chapters
 
 Supplementary chapters are for people who want to explore  beyond what is covered in the main course above. This is all completely optional and is not assessed by your instruction team, nor viewed as Core Learning Objectives.
 
-* Supplemental Chapter - [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
 * Supplemental Chapter - [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
 * Supplemental Chapter - [Randall's Used Cars: Object Methods](./chapters/JS_OBJECT_METHODS.md)
 * Supplemental Chapter - [Kneel Diamonds: Factory Functions](./chapters/JS_FACTORY_FUNCTION.md)

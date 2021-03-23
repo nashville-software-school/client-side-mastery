@@ -73,7 +73,7 @@ const allCars = [
 
 You want to produce the following report. It's not pretty, but it shows all the information that Randall needs.
 
-![](./images/carlot.png)
+
 
 Since you just need the values of each object, you can use the `Object.values()` method. Here is how you would start.
 
@@ -121,7 +121,7 @@ At this point, you proudly show Randall the results of your hard work, and as us
 
 Of course you can! It's time for you to list all of the properties  at the top of the page so that Randall knows the labels for all of the values on each of the objects.
 
-![car properties](./images/carlot-properties.png)
+
 
 In order to do that, you can use the `Object.keys()` method.
 
@@ -201,7 +201,7 @@ allCars.forEach(car => {
 
 Now your report meets all of Randall's basic requirements.
 
-![](./images/carlot-entries.png)
+
 
 
 > **Lightning Exercise 1:** Create an object to represent your favorite dinner item (e.g. meatloaf, spaghetti, fried fish, gumbo). Each object should have a `name` property, but you can add any other properties that you like, such as size, weight, ethnicity, vegetarian boolean.
@@ -216,7 +216,7 @@ Randall has come back with a new job for you. Each week, he wants to see a repor
 1. Display all keys and values for the car sold.
 1. Display the gross profit made on the sale.
 
-![](./images/weekly-sales.png)
+
 
 Here's your first data structure for the sales made last week. You will need to start off by iterating the array of sales with a `forEach()` method. Then iterate the entries of the `vehicle` property of each sale.
 
@@ -355,5 +355,3 @@ searchInput.addEventListener('', event => {
   }
 })
 ```
-
-![](./images/searching-objects.gif)
