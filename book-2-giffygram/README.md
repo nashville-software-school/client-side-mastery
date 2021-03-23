@@ -27,7 +27,7 @@ Chapter | Concepts | Practice
 
 ## Supplementary Chapters
 
-Supplementary chapters are for people who want to explore  beyond what is covered in the main course above. This is all completely optional and is not assessed by your instruction team, nor viewed as Core Learning Objectives.
+Supplementary chapters are for people who want to explore beyond what is covered in the main course above. This is all completely optional and is not assessed by your instruction team, nor viewed as Core Learning Objectives.
 
 * Supplemental Chapter - [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
 * Supplemental Chapter - [Randall's Used Cars: Object Methods](./chapters/JS_OBJECT_METHODS.md)

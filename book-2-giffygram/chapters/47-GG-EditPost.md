@@ -28,7 +28,7 @@ The second method will update a post in the database. We will use the database v
 
 ```js
 export const updatePost = postObj => {
-  return fetch("http://localhost:8088/posts/${postObj.id}", {
+  return fetch(`http://localhost:8088/posts/${postObj.id}`, {
       method: "PUT",
       headers: {
           "Content-Type": "application/json"
