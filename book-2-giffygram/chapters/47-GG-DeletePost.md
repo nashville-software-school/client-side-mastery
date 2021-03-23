@@ -4,6 +4,8 @@ One of the database verbs is `DELETE`. With json-server, we need to pass the id 
 
 Create the method that will delete an item from the database. Keep in mind, just like the `POST`, once the data is updated in the API we need to update the state of the data in our app. 
 
+**NOTE** Our posts has a userId. JSON-SERVER is looking to match that with the users resource in the database. If your post's userId is not found, errors will occur. Make sure the user for the post exists.
+
 > scripts/data/DataManager.js
 
 ```js
