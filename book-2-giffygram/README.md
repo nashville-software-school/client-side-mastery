@@ -20,8 +20,8 @@ Chapter | Concepts | Practice
 [Edit A Post](chapters/47-GG-EditPost.md) | <sub style="font-size:0.85rem;">#fetch PUT #input hidden</sub> | Update Journal with edit functionality
 
 
-* Users with Login Form
-* Users with Register
+* [Users with Login Form](chapters/47-GG-Login.md)
+* [Users with Register](chapters/47-GG-Register.md)
 * Review ERD - Add `likePost` join table
 
 

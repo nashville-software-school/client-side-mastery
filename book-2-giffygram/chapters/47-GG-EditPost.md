@@ -156,6 +156,8 @@ applicationElement.addEventListener("click", event => {
 
 Once a post has been updated, how can you display the `PostEntry` module again?
 
+### Practice - Journal Edit
+Add edit abilities to your journal entries. One of the challenges will be to have the option select display the current mood. There are a few ways you can accomplish this including: dynamically create option menu or setAttribute. 
 
 ### Bonus Challenge #1
 When a user clicks on the cancel button, have the edit form go away and replace it with the new post form.
