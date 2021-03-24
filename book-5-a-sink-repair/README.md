@@ -18,4 +18,4 @@ In this book, you will be introduced to the basics of asynchronous programming a
 
 | # | 🔧 💧 <br/> A-Sink Repairs <sub> <br/> (_Guided Tour_)</sub> | 💎 💍  <br/> Kneel Diamonds | 🚙 🚗 <br/> Car Builder |
 |--|--|--|--|
-| # | [Updating Service Requests](./chapters/AS_HTTP_PUT.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #PUT</sub> | [Customer Reviews](./chapters/KD_REVIEWS.md) | |
+| # | [Updating Service Requests](./chapters/AS_HTTP_PUT.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #PUT</sub> | [Customer Reviews](./chapters/KD_REVIEWS.md) | [Service Requests](./chapters/CB_SERVICE_FORM.md) |
