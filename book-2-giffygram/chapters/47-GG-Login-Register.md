@@ -273,7 +273,7 @@ export const registerUser = (userObj) => {
   })
 }
 ```
-## Get User With Posts
+## Get Posts with User Information
 Now that we have multiple users, we want to know the author of a post. Refactor the `getPosts` method and use the `json-server` feature to expand on the user.
 
 > scripts/data/DataManager.js
@@ -308,7 +308,7 @@ applicationElement.addEventListener("click", event => {
 ## Practice - author name
 Now that you have user information tied to each post, add an element to the `Post` displaying the author's name.
 
-# Practice - author can edit
+## Practice - author can edit
 Using your mad javascript skills, only allow authors to edit their own posts. Refactor the `Post` to only display the edit and delete buttons if the post belongs to the logged in user. You will use a conditional statement.
 
 ## Practice - json-server filter
