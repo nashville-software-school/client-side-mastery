@@ -18,7 +18,7 @@ Chapter | Concepts | Practice
 🚌 **Holiday Road** | |
 [Delete A Post](chapters/47-GG-DeletePost.md) | <sub style="font-size:0.85rem;">#fetch DELETE</sub> | Update Journal with delete functionality
 [Edit A Post](chapters/47-GG-EditPost.md) | <sub style="font-size:0.85rem;">#fetch PUT #input hidden</sub> | Update Journal with edit functionality
-[Users with Login and Register](chapters/47-GG-Login-Register.md) | <sub style="font-size:0.85rem;">#sessionStorage #json-server filters</sub> | Update Journal with login and register
+[Users with Login and Register](chapters/47-GG-Login-Register.md) | <sub style="font-size:0.85rem;">#sessionStorage #json-server filters</sub> | #add author name<br/>#author can edit<br/>#json-server filter<br/>#Update Journal with login and register
 
 
 * Review ERD - Add `likePost` join table
