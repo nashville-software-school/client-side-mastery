@@ -2,7 +2,7 @@
 
 ## Why Are You Learning This?
 
-As a professional developer, you **will** be working on a team. Modern software development is a team sport, not an individual one. Teams members need the ability to write code independently, but then merge their individual code together when it's time to release a version of the software.
+As a professional developer, you **will** be working on a team. Modern software development is a team sport, not an individual one. Team members need the ability to write code independently, but then merge their individual code together when it's time to release a version of the software.
 
 Git is the tool to allow a developer to work on an independent branch of the code base, and then merge in the work of others.
 
@@ -36,7 +36,7 @@ git config --global user.email "email@example.com"
 1. Type in the `git init` command
 1. You now have a git repository
 
-The magic is the `.git` directory that gets create when the `git init` command is executed. To see this directory you can use `ls -la`, which shows hidden files and directories. Operating systems will not show files and directories that begin with a period by default. They are considered hidden, or system assets.
+The magic is the `.git` directory that gets created when the `git init` command is executed. To see this directory you can use `ls -la`, which shows hidden files and directories. Operating systems will not show files and directories that begin with a period by default. They are considered hidden, or system assets.
 
 
 ## Making Your First Commit
