@@ -59,7 +59,7 @@ Instead of immediately invoking `startGiffyGram`, we will want to check `session
 const checkForUser = () => {
   if (sessionStorage.getItem("user")){
     //this is expecting an object. Need to fix
-	  setLoggedInUser(sessionStorage.getItem("user"));
+	  setLoggedInUser(JSON.parse(sessionStorage.getItem("user")));
     startGiffyGram();
   }else {
     //show login/register
@@ -147,7 +147,7 @@ We can now finish the conditional in the `checkForUser` function and write a fun
 ```js
 const checkForUser = () => {
   	if (sessionStorage.getItem("user")){
-		setLoggedInUser(sessionStorage.getItem("user"));
+		  setLoggedInUser(JSON.parse(sessionStorage.getItem("user")));
     	startGiffyGram();
   	}else {
    		showLoginRegister();
@@ -189,7 +189,7 @@ applicationElement.addEventListener("click", event => {
     loginUser(userObject)
     .then(dbUserObj => {
       if(dbUserObj){
-        sessionStorage.setItem("user", dbUserObj.id);
+        sessionStorage.setItem("user", JSON.stringify(dbUserObj));
         startGiffyGram();
       }else {
         //got a false value - no user
@@ -245,11 +245,12 @@ applicationElement.addEventListener("click", event => {
     }
     registerUser(userObject)
     .then(dbUserObj => {
-      sessionStorage.setItem("user", dbUserObj.id);
+      sessionStorage.setItem("user", JSON.stringify(dbUserObj));
       startGiffyGram();
     })
   }
 })
+
 ```
 
 In the `DataManager` we need to create a function that `POST` a new user to the users table. This returns an object with the user's information including the `id`.
