@@ -309,10 +309,10 @@ applicationElement.addEventListener("click", event => {
 Now that you have user information tied to each post, add an element to the `Post` displaying the author's name.
 
 # Practice - author can edit
-Authors should only be able to edit their own posts. Refactor the `Post` to only display the edit and delete buttons if the post belongs to the logged in user. You will use a conditional statement.
+Using your mad javascript skills, only allow authors to edit their own posts. Refactor the `Post` to only display the edit and delete buttons if the post belongs to the logged in user. You will use a conditional statement.
 
 ## Practice - json-server filter
-Add an button to view only the logged in user's posts. Add a method to the DataManager to retrieve only the logged in user's posts. Refer to the [documentation for json-server](https://www.npmjs.com/package/json-server).
+As a code ninja, add a button to view only the logged in user's posts. Add a method to the DataManager to retrieve only the logged in user's posts. Refer to the [documentation for json-server](https://www.npmjs.com/package/json-server).
 
 ## Practice 
 Your friends have asked if they can use your journal app. Include login and register functionality. You may also need to refactor the database calls to include a userId and only show posts related to the logged in user. Edits can only be made to the posts related to the user.
