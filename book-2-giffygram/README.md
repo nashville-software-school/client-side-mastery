@@ -34,4 +34,4 @@ Supplementary chapters are for people who want to explore beyond what is covered
 ## Related, Non-Essential Content
 
 * Topic of Interest - [Generator Functions](./chapters/JS_GENERATOR_FUNCTION.md)
-* Topic of Interest - [CSS Variables](./chapters/CSS_VARIABLES.md)
+* Topic of Interest - [CSS Variables](./chapters/CSS_VARIABLES.md)                                                          

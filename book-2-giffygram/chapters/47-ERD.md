@@ -111,8 +111,57 @@ First we need to add a table to the DB for `userLikes`. Each entry in this table
     }
 ]
 ```
-We can query this table and request all items with a specific postID to find out the number of likes. Remember, json-server will return an array. 
 
+## Like Button
+Add a `Like` button to the `Post`. With the button, we will need to keep track of the post `id`.
+
+> scripts/feed/Post.js
+
+```js
+<button id="like__${postObject.id}">Like</button>
+```
+
+
+## Like EventListener
+Add an eventListener that will collect the postId and userId into an object and then `Post` it to the userLikes table.
+
+> scripts/main.js
+```js
+applicationElement.addEventListener("click", event => {
+	event.preventDefault();
+	if (event.target.id.startsWith("like")) {
+	  const likeObject = {
+		 postId: parseInt(event.target.id.split("__")[1]),
+		 userId: getLoggedInUser().id
+	  }
+	  postLike(likeObject)
+		.then(response => {
+		  showPostList();
+		})
+	}
+  })
+```
+
+Once the data has been updated, we will need to invoke `getPosts` to update the state of our Posts and render an updated content.
+
+> scripts/data/DataManager.js
+
+```js
+export const postLike = likeObject => {
+	return fetch(`http://localhost:8088/userLikes/`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(likeObject)
+	})
+		.then(response => response.json())
+		.then(getPosts)
+}
+```
+
+## Get Likes
+We can query this table and request all items with a specific postID to find out the number of likes. Remember, json-server will return an array. 
 > scripts/data/DataManager.js
 ```js
 export const getLikes = (postId) => {
