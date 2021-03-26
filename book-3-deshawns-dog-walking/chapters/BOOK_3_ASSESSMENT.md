@@ -21,8 +21,11 @@ Run the following command in your terminal.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-deshawns-dog-walking/chapters/scripts/assessment.sh)"
 ```
 
-The script will place some boilerplate code in the following directory. Once complete, open in VS Code and start fixing bugs. You will need to either write some new code, or make changes to existing code to make it all work.
+The script will place some boilerplate code in the following directory.
 
 ```sh
 workspace/assessments/debugging-events
 ```
+
+Then open that directory in VS Code and start fixing bugs. You will need to either write some new code, or make changes to existing code to make it all work.
+

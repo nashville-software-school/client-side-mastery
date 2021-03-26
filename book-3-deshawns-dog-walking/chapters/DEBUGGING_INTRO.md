@@ -14,3 +14,8 @@ In this video, you will see how to set breakpoints, evaluate the values of varia
 
 [<img src="./images/debugger-breakpoints.png" width="750px">](https://vimeo.com/517595236)
 
+## Chrome Dev Tools Walkthrough Demo
+
+Now that you've seen a few quick walkthroughs of how to use the Developer Tools to debug your code, your next job is to try it out.
+
+Visit the [Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript/#reproduce) site and follow the 7 step demo on using the Developer Tools to find and fix issues in JavaScript.
