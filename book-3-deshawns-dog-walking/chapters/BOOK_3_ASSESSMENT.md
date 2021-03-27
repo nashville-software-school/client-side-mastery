@@ -8,6 +8,10 @@ This application is to show kids with illnesses and the memories the would like 
 
 1. When the kid name is clicked, it should display their wish.
 1. When the celebrity name is clicked, it should display their sport.
+1. The pairings list should should contain the pairing in the following format.
+    ```html
+    {child name} will be making memories with {celebrity name}, a {celebrity sport} star, by {child wish}
+    ```
 
 Below is an animation showing how the application should look when complete and how the event listeners should work.
 
@@ -15,17 +19,13 @@ Below is an animation showing how the application should look when complete and 
 
 ## Setup
 
-Run the following command in your terminal.
+Your instruction team will provide a link for you to create your assessment repository. Once your repo is created, clone it to your machine.
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-deshawns-dog-walking/chapters/scripts/assessment.sh)"
-```
+1. Make sure you are in your `workspace` directory
+1. `git clone {github repo SSH string}`
+1. `cd` into the directory it creates
+1. `code .` to open the project code
+1. Use the `serve` command to start the web server
+1. Open the URL provided in Chrome
 
-The script will place some boilerplate code in the following directory.
-
-```sh
-workspace/assessments/debugging-events
-```
-
-Then open that directory in VS Code and start fixing bugs. You will need to either write some new code, or make changes to existing code to make it all work.
-
+Make sure your Developer Tools are open at all times while working on this project. Use the messages provided in the Console to determine what code needs to be fixed or implemented, and use breakpoints in the Sources tab to step through your code as you debug.
