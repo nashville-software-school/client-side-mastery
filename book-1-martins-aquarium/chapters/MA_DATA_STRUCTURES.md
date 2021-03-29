@@ -63,9 +63,9 @@ const fries = {
 
 Your job is to define what a JavaScript object would look like. What keys should you create on each fish object? Each fish will have the same keys, but the state of each will be different - meaning the keys will have different values.
 
-Create a new JavaScript module in your application named `FishDataProvider.js`. In that module create objects to represent the state of Martin's fish that you had previously hard-coded in the HTML. You are going to place all of the objects in an array - a collection of fish.
+Create a new JavaScript module in your application named `database.js`. In that module, create objects to represent the state of Martin's fish that you had previously hard-coded in the HTML. You are going to place all of the objects in an array - a collection of fish.
 
-> **`martins-aquarium/scripts/FishDataProvider.js`**
+> **`workspace/martins-aquarium/scripts/database.js`**
 
 ```js
 /*
@@ -74,13 +74,25 @@ Create a new JavaScript module in your application named `FishDataProvider.js`. 
  *  representation as an object. Then add all the other
  *  fish to the collection.
  */
-const fishCollection = [
-    {
-        name: "Bart",
-        food: "crustaceans"
-    }
-]
+const database = {
+    fish: [
+        {
+            name: "Bart",
+            food: "crustaceans",
+            size: 3
+        }
+    ]
+}
 ```
 
 > **Tip:** Some confusion and some bugs at this point are natural. You will likely forget some punctuation like commas and curly braces. If you want to discuss your ideas or bugs with the instruction team, you should visit one of them.
+
+## Concept Checking Questions
+
+1. What is the data type of the `database` variable?
+1. What is the data type of the `fish` property?
+1. What is the data type of the `name` property?
+1. What is the data type of the `size` property?
+1. What data types will the fish array contain?
+
 
