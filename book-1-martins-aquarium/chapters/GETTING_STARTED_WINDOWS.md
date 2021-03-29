@@ -18,10 +18,6 @@ Github is the primary site that software developers throughout the world use to 
 
 Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
 
-## devdocs.io
-
-Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NSS.
-
 ## Google Chrome
 
 [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
