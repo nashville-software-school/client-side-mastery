@@ -15,7 +15,7 @@ Here's what the output of the application should look like.
 Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-deshawns-dog-walking/chapters/scripts/brewed-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-48/book-3-deshawns-dog-walking/chapters/scripts/brewed-setup.sh)"
 ```
 
 That script will create the `workspace/brewed-awakenings` directory for you. Just `cd` to that directory and open it in Viual Studio Code.

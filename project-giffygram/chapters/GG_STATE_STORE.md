@@ -6,7 +6,7 @@ In this chapter, you are going to build a module in your application that is cal
 
 ## Learning Objectives
 
-* You should be able to explain what the Single Responsibility of the data store module is.
+* You should be able to explain what the single responsibility of the data store module is.
 * You should be able to identify which property on a resource is the primary key.
 * You should be able to explain the purpose of a primary key.
 * You should be able to identify a foreign key on a resource that is related to a resource in another collection.
@@ -15,7 +15,7 @@ In this chapter, you are going to build a module in your application that is cal
 
 ## Application State
 
-You were introduced to the term **_state_** in the first book. You will be deepening your understanding of the concept, and you ability to correctly apply it in this book.
+You were introduced to the term **_state_** in previous books. You will be deepening your understanding of the concept, and you ability to correctly apply it in this book.
 
 The data store module that you are coding in this chapter will be maintaining all of the state needed for your application.
 
@@ -30,38 +30,22 @@ All of the other components will be either rendering _(i.e. displaying)_ state a
 
 ## Creating the Application State
 
-1. Create a `giffygram/src/scripts/store/index.js` file.
+1. Create a `giffygram/src/scripts/database.js` file.
 1. Place the following code to create an object representation of the store.
     ```js
-    const applicationState = { }
+    const database = { }
     ```
-1. Create a users array in the application state object. Then put a single object representation of a user in the array. Note that the properties on this object exactly match the properties that you defined in your ERD.
-    ```js
-    const applicationState = {
-        users: [
-            {
-                id: 1,
-                name: "Ray Medrano",
-                email: "ray@medrano.com",
-                password: "ray"
-                dateJoined: "2021/01/02"
-            }
-        ]
-    }
-    ```
+1. Create a users array in the application state object. Then put a single object representation of a user in the array. The object should have the following properties.
+    * id _(number)_
+    * email _(string)_
+    * password _(string)_
+    * name _(string)_
+    * dateJoined _(epoch timestamp)_
 
     > **Key term**: The `id` property on an object in a data store is the **primary key** of the object. It is the only guaranteed unique value of each object.
 1. Create a posts array in the application state object. Then put a single object representation of a post in the array.
     ```js
-    const applicationState = {
-        users: [
-            {
-                id: 1,
-                name: "Ray Medrano",
-                email: "ray@medrano.com",
-                password: "ray"
-            }
-        ],
+    const database = {
         posts: [
             {
                 id: 1,

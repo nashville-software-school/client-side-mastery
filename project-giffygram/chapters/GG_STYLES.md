@@ -5,7 +5,7 @@ Before you start with JavaScript coding, here's some free CSS to make your appli
 Run the following command in the terminal. It does not matter which directory you are currently in when you run it.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-giffygram/chapters/scripts/giffygram-styles.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-48/book-3-giffygram/chapters/scripts/giffygram-styles.sh)"
 ```
 
 The script creates the `giffygram/src/styles` directory and creates the following files in it.

@@ -41,7 +41,7 @@ likes: [
 
 Into this HTML representation of it in the Web browser 👇🏽
 
-<img src="https://github.com/nashville-software-school/client-side-mastery/raw/srb-split-glassdale/book-3-giffygram/chapters/images/data-as-html.png" height="500" />
+<img src="https://github.com/nashville-software-school/client-side-mastery/raw/cohort-48/book-3-giffygram/chapters/images/data-as-html.png" height="500" />
 
 
 The data has been beautifully expressed as HTML so that a person can understand it and interact with it.

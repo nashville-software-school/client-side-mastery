@@ -77,7 +77,7 @@ Now that you have a paying job working for Kneel Diamonds, you are going to buil
 Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/srb-split-glassdale/book-3-deshawns-dog-walking/chapters/scripts/deshawn
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-48/book-3-deshawns-dog-walking/chapters/scripts/deshawn
 ```
 
 It will create the following directory for your project and provider some boilerplate code. Once it is complete, move on to the next chapter.
