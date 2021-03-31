@@ -49,7 +49,7 @@ Set up Visual Studio Code to be [launched from the command line](https://code.vi
 
 #### Troubleshooting for instructors (don't try this yourself)
 
-If the `code` command still doesn't work, adding this to `.zshrc` to update the path.
+If the `code` command still doesn't work, try adding this to `.zshrc` to update the path.
 
 `export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"`
 
@@ -82,14 +82,14 @@ Now that you have Node installed, you can install some open source software that
 
 ```sh
 sudo npm i -g serve json-server
-```
+
 serve -v
 ```
 
 If you see the message `command not found`, type in `sudo npm i -g serve` again.
 
 Make sure that `json-server` was installed successfully by typing in your terminal:
-```
+```sh
 json-server -v
 ```
 
@@ -107,7 +107,7 @@ xcode-select --install
 
 ## Git
 
-Git is how you and your teammates will work on a shard codebase during your time at NSS. Type in the following command to install.
+Git is how you and your teammates will work on a shared codebase during your time at NSS. Type in the following commands to install.
 
 ```sh
 brew install git
@@ -151,14 +151,14 @@ This will allow you to view hidden files in the Finder app.
 
 ## SSH Key
 
-SSH is a technology that allows you to create a very secure connection between your computer, and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files
+SSH is a technology that allows you to create a very secure connection between your computer and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files:
 
 1. A public key file that you share with other people and computers. It is usually named `id_rsa.pub`.
 1. A private key file that you never, ever, ever, ever, ever share with anyone. It is usually named `id_rsa`.
 
 ### Creating Your SSH Key
 
-Watch a short video for [creating an SSH key in the terminal](https://youtu.be/znRMcNG9_qQ) so that you an work with Github.
+Watch a short video for [creating an SSH key in the terminal](https://youtu.be/znRMcNG9_qQ) so that you can work with Github.
 
 ### Add SSH Key to Github Account
 
