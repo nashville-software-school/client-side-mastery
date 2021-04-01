@@ -11,28 +11,28 @@ Chapter | Concepts | Practice
 [Navigation Bar with Routing](./chapters/REACT_ROUTING.md) |<sub style="font-size:0.85rem;">#react-router-dom</sub> |NavBar with Locations, Customers and Employees
 
 
-1. [Loading Data from an API](./chapters/REACT_LOADING_DATA.md)
-1. [React: State and Props](./chapters/COMPONENT_STATE_PROPS.md)
-1. [React: Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md)
-1. [React: Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md)
-1. [React: Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md)
-1. [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
-1. [React: Create Animal With A Form](./chapters/REACT_FORMS.md)
-1. [React: Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
-1. [React: Edit](./chapters/REACT_EDIT.md)
+* [Loading Data from an API](./chapters/REACT_LOADING_DATA.md)
+* [React: State and Props](./chapters/COMPONENT_STATE_PROPS.md)
+* [React: Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md)
+* [React: Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md)
+* [React: Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md)
+* [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md)
+* [React: Create Animal With A Form](./chapters/REACT_FORMS.md)
+* [React: Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
+* [React: Edit](./chapters/REACT_EDIT.md)
 
 **All of the above should be complete before proceeding.**
 
-1. [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEEFFECT_DEPS.md)
-1. [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
-1. [React: Lifting state and passing props with Login](./chapters/REACT_LIFT_STATE_PASS_PROPS.md)
-1. [React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md)
-1. [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
+* [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEEFFECT_DEPS.md)
+* [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
+* [React: Lifting state and passing props with Login](./chapters/REACT_LIFT_STATE_PASS_PROPS.md)
+* [React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md)
+* [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
 
 **More Good Stuff**
 
-1. [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
-1. [Tips and Shortcuts](./chapters/REACT_TIPS.md)
+* [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
+* [Tips and Shortcuts](./chapters/REACT_TIPS.md)
 
 > ## Sprint 4: Reactive Nutshell
 
