@@ -12,7 +12,7 @@ Pass your name into a component and display it.
 
 > PropsAndState.js
 ```jsx
-import React, from "react"
+import React from "react"
 
 export const PropsAndState = ({ yourName }) => {
 
@@ -60,7 +60,7 @@ export const PropsAndState = ({ yourName }) => {
 
   const handleClick = () => {
     //good practice:
-    //make a copy of state, modifiy it, and then setState to the copy
+    //make a copy of state, modify it, and then setState to the copy
     const newCountClicks = ++countClicks
     setCountClicks(newCountClicks)
   }

@@ -95,7 +95,7 @@ Notice that in React, we add classes to a component with `className` instead of 
 ```jsx
 import React from "react"
 import { AnimalCard } from "./animal/AnimalCard"
-import "./animal/Animal.css"
+import "./Kennel.css"
 
 export const Kennel = () => (
     <>

@@ -3,7 +3,7 @@
 Before you start building your React application, you need a database to persist the data for it. Please follow these steps to get it set up.
 
 ```sh
-cd ~/workspace
+cd ~/workspace/kennels
 mkdir kennel-api
 cd kennel-api
 touch database.json
