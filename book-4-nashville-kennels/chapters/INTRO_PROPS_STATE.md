@@ -49,7 +49,7 @@ Display this component from the *Kennel* component and pass in your name. Don't 
 
 #### Goal: Display how many times a button has been clicked.
 
-Within the **StateAndProps** component, we will define state and a function to update state with the `useState` hook. We will also create a function to `handleClick`.
+Within the **PropsAndState** component, we will define state and a function to update state with the `useState` hook. We will also create a function to `handleClick`.
 
 > PropsAndState.js - updated
 ```jsx
