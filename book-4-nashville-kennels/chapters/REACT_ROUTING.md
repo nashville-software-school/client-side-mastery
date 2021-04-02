@@ -16,6 +16,7 @@ touch src/components/ApplicationViews.js
 mkdir src/components/nav
 touch src/components/nav/NavBar.js
 touch src/components/nav/NavBar.css
+touch src/Home.js
 ```
 
 ## Making Your Components

@@ -43,6 +43,7 @@ To display our `Kennel` component, we need to modify the `index.js` file. This f
 import React from "react"
 import ReactDOM from "react-dom"
 import { Kennel } from "./components/Kennel"
+import "./index.css"
 
 ReactDOM.render(
   <React.StrictMode>
