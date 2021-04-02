@@ -277,3 +277,8 @@ Once you've got all these pieces in place, click on the _Admit Animal_ button, f
 
 1. Create forms for employees, owners, and locations.
 1. Update **`EmployeeManager`**, **`OwnerManager`**, and **`LocationManager`** with methods to POST new objects to the API.
+
+## Practice: Add Dropdowns for Owners and Locations
+Animals can be tied to a location and an owner. How could you create a dropdown to display and choose a location? an Owner?
+
+Remember, this would be a call to the outside world. Hint: `useEffect`. You will also need to store the data in state.
