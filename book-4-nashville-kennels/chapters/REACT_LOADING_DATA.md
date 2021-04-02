@@ -33,7 +33,7 @@ As we have done before, let's create a module for database calls.
     ```jsx
     import React from 'react';
 
-    const AnimalList = () => {
+    export const AnimalList = () => {
         return (
             <div className="container-cards">
             We'll put some animals here eventually...
@@ -41,7 +41,6 @@ As we have done before, let's create a module for database calls.
         );
     };
 
-    export default AnimalList
     ```
 
 1. Update the `ApplicationViews` component so that the route now refers to the `AnimalList` instead of the `AnimalCard`. Don't forget to import the `AnimalList` component
