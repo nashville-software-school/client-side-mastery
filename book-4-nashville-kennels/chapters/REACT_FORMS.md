@@ -6,9 +6,7 @@ In this chapter, you are going to learn how to use use a form to express the sta
 
 ## Route for Showing Animal Form
 
-Below is a new route that renders a form for boarding a new animal. You need to update the route for `/animals` to include the `...props` argument and pass it to the child component. This sets up the ability to use the helpful `history.push()` mechanism in the components themselves to change the URL in the browser.
-
-First, update your routes in ApplicationViews with a new route for the form and add `{...props}` to the route `/animals` (**AnimalList**). The spread operator on the props gives access to the router properties, especially `history.push`
+First, update your routes in ApplicationViews with a new route for the form.
 
 Remember, you'll also have to `import` the new AnimalForm component once it's created
 
@@ -18,22 +16,21 @@ import AnimalForm from './animal/AnimalForm'
 
 ```jsx
 // Our shiny new route.
-<Route path="/animals/new" render={(props) => {
-  return <AnimalForm {...props} />
-}} />
+<Route path="/animals/create">
+  <AnimalForm />
+</Route>
 ```
 
+Update the **`AnimalsList`** to `useHistory`. Be sure to import it from `react-router-dom`.
 ```jsx
-//updated route: `/animals`
-<Route exact path="/animals" render={(props) => {
-  return <AnimalList {...props} />
-}} />
+const history = useHistory();
+
 ```
 
 
 ## Add a button for Admitting a New Animal
 
-Update **`<AnimalList>`** with a button that uses the `props.history.push()` to change the URL of the browser. This will only work if you updated your routes correctly to provide access to the router `props` object, and you add a props parameter to the AnimalList component function.
+Update **`<AnimalList>`** with a button that uses the `history.push()` to change the URL of the browser.
 
 **NOTE** You will need to wrap the return in a React.Fragment. Remember, only one element can be returned.
 
@@ -44,7 +41,7 @@ Update **`<AnimalList>`** with a button that uses the `props.history.push()` to 
 <section className="section-content">
   <button type="button"
       className="btn"
-      onClick={() => {props.history.push("/animals/new")}}>
+      onClick={() => {history.push("/animals/create")}}>
       Admit Animal
   </button>
 </section>
@@ -58,14 +55,14 @@ Update **`<AnimalList>`** with a button that uses the `props.history.push()` to 
 Refactor your **`AnimalManager`** module with a `post` method that implements a `fetch()` for adding a new animal object to your API.
 
 ```js
-post(newAnimal) {
+export const addAnimal = (newAnimal) => {
     return fetch(`${remoteURL}/animals`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(newAnimal)
-    }).then(data => data.json())
+    }).then(response => response.json())
 }
 ```
 
@@ -76,19 +73,14 @@ Now it's time to make the **`<AnimalForm>`** component.
 
 **Note** we are going to include a method `handleFieldChange()` that will update state every time the user types a character into any field. This is made possible by having **each input field's `id` property named exactly as each state property**.
 
-Our component's inputs will render based on what is in state. Ultimately, we will collect what is in state and pass it to the `AnimalManager.post` method. This allows the UI and state to stay in sync.
-
-State will contain both animal data as well as an isLoading flag.
-
-```
-const [animal, setAnimal] = useState({ name: "", breed: "" });
-const [isLoading, setIsLoading] = useState(false);
-```
+Our component's inputs will render based on what is in state. Ultimately, we will collect what is in state and pass it to the `post` method. This allows the UI and state to stay in sync.
 
 The input fields will have corresponding id's:
 
 1. `<input id="name" ... />`
-2. `<input id="breed" ... />`
+1. `<input id="breed" ... />`
+1. `<select id="locationId" ... />`
+1. `<select id="customerId" ... />`
 
 We will also incorporate `isLoading` (Dynamic Routing Part 2) so a user cannot select the button multiple times.
 
@@ -96,72 +88,118 @@ We will also incorporate `isLoading` (Dynamic Routing Part 2) so a user cannot s
 
 ```js
 import React, { useState } from 'react';
-import AnimalManager from '../../modules/AnimalManager';
+import { addAnimal } from '../../modules/AnimalManager';
 import './AnimalForm.css'
 
-const AnimalForm = props => {
-  const [animal, setAnimal] = useState({ name: "", breed: "" });
-  const [isLoading, setIsLoading] = useState(false);
+export const AnimalForm = props => {
+  // State will contain both animal data as well as an isLoading flag.
+  // Define the initial state of the form inputs with useState()
 
-  const handleFieldChange = evt => {
-    const stateToChange = { ...animal };
-    stateToChange[evt.target.id] = evt.target.value;
-    setAnimal(stateToChange);
-  };
+    const [animal, setAnimal] = useState({
+      name: "",
+      breed: "",
+      locationId: 0,
+      customerId: 0
+    });
 
-  /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
-  */
-  const constructNewAnimal = evt => {
-    evt.preventDefault();
-    if (animal.name === "" || animal.breed === "") {
-      window.alert("Please input an animal name and breed");
-    } else {
-      setIsLoading(true);
-      // Create the animal and redirect user to animal list
-      AnimalManager.post(animal)
-        .then(() => props.history.push("/animals"));
+    const [isLoading, setIsLoading] = useState(false);
+
+    // you will need the the `getAll` in the LocationsManager and CustomersManager to complete this section
+    const [locations, setLocations] = useState([]);
+    const [customers, setCustomers] = useState([]);
+
+    //when a field changes, update state. The return will re-render and display based on the values in state
+    // NOTE! What's happening in this function can be very difficult to grasp. Read it over many times and ask a lot questions about it.
+    //Controlled component
+    const handleControlledInputChange = (event) => {
+      /* When changing a state object or array,
+      always create a copy, make changes, and then set state.*/
+      const newAnimal = { ...animal }
+      let selectedVal = event.target.value
+      // forms always provide values as strings. But we want to save the ids as numbers.
+      if (event.target.id.includes("Id")) {
+        selectedVal = parseInt(selectedVal)
+      }
+      /* Animal is an object with properties.
+      Set the property to the new value
+      using object bracket notation. */
+      newAnimal[event.target.id] = selectedVal
+      // update state
+      setAnimal(newAnimal)
     }
-  };
 
-  return (
-    <>
-      <form>
-        <fieldset>
-          <div className="formgrid">
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="name"
-              placeholder="Animal name"
-            />
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="breed"
-              placeholder="Breed"
-            />
-            <label htmlFor="breed">Breed</label>
-          </div>
-          <div className="alignRight">
-            <button
-              type="button"
-              disabled={isLoading}
-              onClick={constructNewAnimal}
-            >Submit</button>
-          </div>
-        </fieldset>
+    useEffect() => {
+      //load locations and customers data
+    }
+
+
+    const handleClickSaveAnimal = (event) => {
+      event.preventDefault() //Prevents the browser from submitting the form
+
+      const locationId = animal.locationId
+      const customerId = animal.customerId
+
+      if (locationId === 0 || customerId === 0) {
+        window.alert("Please select a location and a customer")
+      } else {
+        //invoke addAnimal passing animal as an argument.
+        //once complete, change the url and display the animal list
+        addAnimal(animal)
+        .then(() => history.push("/animals"))
+      }
+    }
+
+  return return (
+      <form className="animalForm">
+          <h2 className="animalForm__title">New Animal</h2>
+          <fieldset>
+              <div className="form-group">
+                  <label htmlFor="name">Animal name:</label>
+                  <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Animal name" value={animal.name}/>
+              </div>
+          </fieldset>
+          <fieldset>
+              <div className="form-group">
+                  <label htmlFor="breed">Animal breed:</label>
+                  <input type="text" id="breed" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Animal breed" value={animal.breed}/>
+              </div>
+          </fieldset>
+          <fieldset>
+              <div className="form-group">
+                  <label htmlFor="location">Assign to location: </label>
+                  <select value={animal.locationId} name="locationId" id="locationId" onChange={handleControlledInputChange} className="form-control" >
+                      <option value="0">Select a location</option>
+                      {locations.map(l => (
+                          <option key={l.id} value={l.id}>
+                              {l.name}
+                          </option>
+                      ))}
+                  </select>
+              </div>
+          </fieldset>
+          <fieldset>
+              <div className="form-group">
+                  <label htmlFor="customerId">Customer: </label>
+                  <select value={animal.customerId} name="customer" id="customerId" onChange={handleControlledInputChange} className="form-control" >
+                      <option value="0">Select a customer</option>
+                      {customers.map(c => (
+                          <option key={c.id} value={c.id}>
+                              {c.name}
+                          </option>
+                      ))}
+                  </select>
+              </div>
+          </fieldset>
+          <button className="btn btn-primary"
+            onClick={handleClickSaveAnimal}>
+            Save Animal
+          </button>
       </form>
-    </>
-  );
+    )
 };
 
-export default AnimalForm
 ```
 
-**NOTE** `<>` is a shortcut for React.Fragment. Be sure to close it at the bottom `</>`
 
 > components/animal/AnimalForm.css
 
@@ -238,4 +276,4 @@ Once you've got all these pieces in place, click on the _Admit Animal_ button, f
 ## Practice: Adding Employees, Owners, and Locations
 
 1. Create forms for employees, owners, and locations.
-1. Update **`EmployeeManager`**, **`OwnerManager`**, and **LocationManager** with methods to POST new objects to the API.
+1. Update **`EmployeeManager`**, **`OwnerManager`**, and **`LocationManager`** with methods to POST new objects to the API.

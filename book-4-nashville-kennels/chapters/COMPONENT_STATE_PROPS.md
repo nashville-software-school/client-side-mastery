@@ -66,7 +66,7 @@ Because **`<AnimalCard />`** is included in the render method of **`<AnimalList 
 Modify the **`<AnimalCard />`** render method to display the props using dot notation.
 
 ```js
-const AnimalCard = props => {
+const AnimalCard = ({ animal }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -74,9 +74,9 @@ const AnimalCard = props => {
           <img src={require('./dog.svg')} alt="My Dog" />
         </picture>
         <h3>Name: <span className="card-petname">
-          {props.animal.name}
+          {animal.name}
         </span></h3>
-        <p>Breed: {props.animal.breed}</p>
+        <p>Breed: {animal.breed}</p>
       </div>
     </div>
   );
@@ -142,10 +142,6 @@ touch components/animal/Animal.css
 ```
 
 Note: you will import this CSS file directly into the AnimalCard component. Good practice would be to only import CSS that applies to the JSX elements of this component.
-
-## Passing State to a Child Component
-
-![](./images/state-propagation-visual.png)
 
 ## Expressing State as HTML
 

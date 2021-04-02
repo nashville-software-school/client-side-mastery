@@ -9,7 +9,7 @@ It's time to add one of the CRUD methods to your application. You're going to st
 First add the `delete` function to your `AnimalManager` module.
 
 ```js
-delete(id) {
+export const delete = (id) => {
   return fetch(`${remoteURL}/animals/${id}`, {
     method: "DELETE"
   }).then(result => result.json())
@@ -27,19 +27,19 @@ Before we include the delete functionality in a component, consider following:
 
 1. Click the discharge button
 1. Invoke a `handleDelete` function which will invoke the AnimalManager delete function, be sure to pass the id.
-1. Once an item is deleted, we should invoke the AnimalManager `getAll()` method.
+1. Once an item is deleted, we should invoke the AnimalManager `getAllAnimals()` method.
 1. With new data, invoke `setAnimals()` and set **animals** equal to the new data.
 1. The component re-renders to display the new `animal` data.
 1. **`<AnimalList>`** render maps over the data and displays cards for each animal.
 
 **The component where state lives is the only place state can change. Children components cannot change state.**
 
-Add the following function to your **`<AnimalList>`** component.
+Add the following function to your **`<AnimalList>`** component and remember to import the methods from AnimalManager.
 
 ```js
 const deleteAnimal = id => {
-  AnimalManager.delete(id)
-    .then(() => AnimalManager.getAll().then(setAnimals));
+    delete(id)
+    .then(() => getAllAnimals().then(setAnimals));
 };
 ```
 
@@ -71,8 +71,8 @@ const AnimalList = () => {
 
 **`AnimalCard`** component receives two props:
 
-1. The `props.deleteAnimal` function reference
-1. The `props.animal` object
+1. The `deleteAnimal` function reference
+1. The `animal` object
 
 
 You pass the function reference to the child component because that's where it will be invoked. Just like a primitive value, such as a string or an integer, you can pass function references from a parent component to a child component. The child component can then specify when that functionality should be invoked, even though it was defined on its parent.
@@ -87,7 +87,7 @@ Add the button to the **`<AnimalCard />`** HTML for the veterinarian to select a
 import React from 'react';
 import "./Animal.css";
 
-const AnimalCard = props => {
+const AnimalCard = ({ animal, deleteAnimal }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -95,10 +95,10 @@ const AnimalCard = props => {
           <img src={require('./dog.svg')} alt="My Dog" />
         </picture>
         <h3>Name: <span className="card-petname">
-          {props.animal.name}
+          {animal.name}
         </span></h3>
-        <p>Breed: {props.animal.breed}</p>
-        <button type="button" onClick={() => props.deleteAnimal(props.animal.id)}>Discharge</button>
+        <p>Breed: {animal.breed}</p>
+        <button type="button" onClick={() => deleteAnimal(animal.id)}>Discharge</button>
       </div>
     </div>
   );
@@ -109,9 +109,9 @@ export default AnimalCard
 
 ---
 
-## Practice: Fire Employees
+## Practice: Terminate Employees
 
-Add the same functionality to the **`EmployeeList`** component so that employees can be fired!
+Add the same functionality to the **`EmployeeList`** component so that employees can be terminated.
 
 ## Practice: Remove Owners
 

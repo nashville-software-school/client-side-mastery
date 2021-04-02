@@ -14,13 +14,9 @@ Then copy the following JSON into the `database.json` file.
 ```json
 {
     "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 1,
-            "locationId": 2
-        }
+        { "id": 1, "name": "Doodles", "breed": "Poodle"},
+        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
+        { "id": 3, "name": "Esme", "breed": "Pitbull" }
     ],
     "customers": [
         {
@@ -48,7 +44,7 @@ Then copy the following JSON into the `database.json` file.
 Every time you want to work on your Nashville Kennels application, you'll need to ensure that the API is running.
 
 ```sh
-json-server -p 8088 -w database.json
+json-server -p 5002 -w database.json
 ```
 
-Go ahead and create a few more pets and customers within each's collections.
+Add some example data for employees, locations and owners to kennel-api/database.json.

@@ -66,14 +66,17 @@ Other components, _in the future_, may need the ability to make their own API ca
 ```js
 const remoteURL = "http://localhost:5002"
 
-export default {
-  get(id) {
-    return fetch(`${remoteURL}/animals/${id}`).then(result => result.json())
-  },
-  getAll() {
-    return fetch(`${remoteURL}/animals`).then(result => result.json())
+  export const getAnimalById = (id) {
+    //be sure your animals have good data and related to a location and customer
+   return fetch(`${remoteURL}/animals/${id}?_expand=location&_expand=customer`)
+    .then(res => res.json())
   }
-}
+
+  export const getAllAnimals = () => {
+    return fetch(`${remoteURL}/animals`)
+    .then(result => result.json())
+  }
+
 ```
 
 Our `AnimalCard` does a great job of rendering a single animal, but our database has more than one animal. That's where the `AnimalList` component will come in. By the time we're done, it will initiate the AnimalManager `getAll()` call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
@@ -82,7 +85,7 @@ When the data is returned, we can hold on to it by placing it in the component's
 
 ## Fetching Data from a Component
 
-Because interacting with an external API in a React application is a common need for most apps, the creators of React have given us a tool for just that purpose.
+Since interacting with an external API in a React application is a common need for most apps, the creators of React have given us a tool for just that purpose.
 
 ### useEffect()
 
@@ -103,11 +106,11 @@ Consider the following component:
 
 ```jsx
 import React, { useEffect } from 'react';
-import AnimalManager from '../../modules/AnimalManager';
+import { getAllAnimals, getAnimalById } from '../../modules/AnimalManager';
 
 const AnimalList = () => {
   const getAnimals = () => {
-    return AnimalManager.getAll().then(animalsFromAPI => {
+    return getAllAnimals.then(animalsFromAPI => {
       // We'll do something more interesting with this data soon.
       console.log(animalsFromAPI);
     });
@@ -190,7 +193,7 @@ Let's incorporate state into the `AnimalList` component.
 import React, { useState, useEffect } from 'react';
 //import the components we will need
 import AnimalCard from './AnimalCard';
-import AnimalManager from '../../modules/AnimalManager';
+import { getAllAnimals, getAnimalById } from '../../modules/AnimalManager';
 
 const AnimalList = () => {
   // The initial state is an empty array
@@ -199,7 +202,7 @@ const AnimalList = () => {
   const getAnimals = () => {
     // After the data comes back from the API, we
     //  use the setAnimals function to update state
-    return AnimalManager.getAll().then(animalsFromAPI => {
+    return getAllAnimals.then(animalsFromAPI => {
       setAnimals(animalsFromAPI)
     });
   };

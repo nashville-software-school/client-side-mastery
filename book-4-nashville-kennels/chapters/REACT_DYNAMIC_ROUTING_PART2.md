@@ -1,25 +1,4 @@
-# React Router with History
-
-So far we have been using `exact` and `path` of react-router routes. In order to change the URL and redirect, we need to incorporate `history`.
-
-In order for **`<AnimalDetail>`** to have access to the router history, we need to pass those props to the component. We do this with the spread operator. Refactor the route to include `{...props}`. Take a look at your Chrome React tools before and after the change.
-
-```js
-<Route
-  path="/animals/:animalId(\d+)"
-  render={props => {
-    // Pass the animalId to the AnimalDetailComponent
-    return (
-      <AnimalDetail
-        animalId={parseInt(props.match.params.animalId)}
-        {...props}
-      />
-    );
-  }}
-/>
-```
-
-With the spread operator all of the properties (props) are copied onto the component's props.
+# React Router And History
 
 ## Dynamically Changing the User's View
 
@@ -54,43 +33,43 @@ Refactor the **`<AnimalDetail>`** to include `isLoading`. Notice that our button
 
 ```jsx
 import React, { useState, useEffect } from "react";
-import AnimalManager from "../../modules/AnimalManager";
+import { getAnimalById } from "../../modules/AnimalManager";
 import "./AnimalDetail.css";
 
-const AnimalDetail = props => {
+export const AnimalDetail = () => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
   const [isLoading, setIsLoading] = useState(true);
 
+  const {animalId} = useParams();
+  const history = useHistory();
+
   useEffect(() => {
-    //get(id) from AnimalManager and hang on to the data; put it into state
-    AnimalManager.get(props.animalId).then(animal => {
-      setAnimal({
-        name: animal.name,
-        breed: animal.breed
+    //getAnimalById(id) from AnimalManager and hang on to the data; put it into state
+    console.log("useEffect", animalId)
+    getAnimalById(animalId)
+      .then(animal => {
+        setAnimal({
+          name: animal.name,
+          breed: animal.breed
+        });
+        setIsLoading(false);
       });
-      setIsLoading(false);
-    });
-  }, [props.animalId]);
+  }, [animalId]);
 
   return (
-    <div className="card">
-      <div className="card-content">
-        <picture>
-          <img src={require("./dog.svg")} alt="My Dog" />
-        </picture>
-        <h3>
-          Name: <span style={{ color: "darkslategrey" }}>{animal.name}</span>
-        </h3>
-        <p>Breed: {animal.breed}</p>
-        <button type="button" disabled={isLoading} onClick={handleDelete}>
+    <section className="animal">
+      <h3 className="animal__name">{animal.name}</h3>
+      <div className="animal__breed">{animal.breed}</div>
+      {/* What's up with the question mark???? See below.*/}
+      <div className="animal__location">Location: {animal.location?.name}</div>
+      <div className="animal__owner">Customer: {animal.customer?.name}</div>
+      <button type="button" disabled={isLoading} onClick={handleDelete}>
           Discharge
         </button>
-      </div>
-    </div>
+    </section>
   );
 };
 
-export default AnimalDetail;
 ```
 
 We should probably also update the CSS to visually indicate that the button is disabled.
@@ -125,7 +104,7 @@ Add the handleDelete function to **`AnimalDetail`** component.
 const handleDelete = () => {
   //invoke the delete function in AnimalManger and re-direct to the animal list.
   setIsLoading(true);
-  AnimalManager.delete(props.animalId).then(() =>
+  delete(animalId).then(() =>
     props.history.push("/animals")
   );
 };

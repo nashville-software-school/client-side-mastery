@@ -8,6 +8,8 @@ In React, you will use something called a Router to handle the rendering of diff
 
 Make sure you are in your project's root directory. First, we need to install `react-router-dom`. Then we will create an additional file to handle the routing and create a navbar.
 
+Documentation for [react-router-dom](https://reactrouter.com/web/guides/quick-start)
+
 ```sh
 npm i --save react-router-dom
 touch src/components/ApplicationViews.js
@@ -36,7 +38,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
 
-export const NavBar = (props) => {
+export const NavBar = () => {
     return (
         <ul className="navbar">
             <li className="navbar__item active">

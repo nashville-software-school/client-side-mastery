@@ -36,42 +36,46 @@ Just like loading the animals into the **`<AnimalList>`**, load one animal's det
 
 ```jsx
 import React, { useState, useEffect } from 'react';
-import AnimalManager from '../../modules/AnimalManager';
-import './AnimalDetail.css'
+import { getAnimalById } from '../../modules/AnimalManager';
+import './AnimalDetail.css';
+import { useParams, useHistory } from "react-router-dom"
 
-const AnimalDetail = props => {
+export const AnimalDetail = () => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
 
+  const {animalId} = useParams();
+  const history = useHistory();
+
   useEffect(() => {
-    //get(id) from AnimalManager and hang on to the data; put it into state
-    AnimalManager.get(props.animalId)
+    //getAnimalById(id) from AnimalManager and hang on to the data; put it into state
+    console.log("useEffect", animalId)
+    getAnimalById(animalId)
       .then(animal => {
         setAnimal({
           name: animal.name,
           breed: animal.breed
         });
       });
-  }, [props.animalId]);
+  }, [animalId]);
 
   return (
-    <div className="card">
-      <div className="card-content">
-        <picture>
-          <img src={require('./dog.svg')} alt="My Dog" />
-        </picture>
-        <h3>Name: <span style={{ color: 'darkslategrey' }}>{animal.name}</span></h3>
-        <p>Breed: {animal.breed}</p>
-      </div>
-    </div>
+    <section className="animal">
+      <h3 className="animal__name">{animal.name}</h3>
+      <div className="animal__breed">{animal.breed}</div>
+      {/* What's up with the question mark???? See below.*/}
+      <div className="animal__location">Location: {animal.location?.name}</div>
+      <div className="animal__owner">Customer: {animal.customer?.name}</div>
+    </section>
   );
 }
 
-export default AnimalDetail;
+
 ```
+Immediate properties of an empty object will not break if you try to reference that property but it doesn't actually exist, however nested properties of an empty object will. Use the [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator to prevent nested values from breaking the code. Try replacing "name" with "foo" in the code above ( since location and customer don't have a "foo" property ). Try it with and without the ?. One will cause an error and the other won't.
 
 ## Dynamic Route and Route Parameters
 
-Now that you have a component responsible for rendering a single animal based on `props.animalId`, you need to configure your application to render the component when the URL matches a certain pattern. Currently, you have a route set up to show all animals when the URL matches:
+Now that you have a component responsible for rendering a single animal based on `animalId`, you need to configure your application to render the component when the URL matches a certain pattern. Currently, you have a route set up to show all animals when the URL matches:
 
 ```html
 <!-- show all animals -->
@@ -94,13 +98,13 @@ In this example, the value of `1` is captured by React Router and stored in an `
 
 ```jsx
 {/* Make sure you add the `exact` attribute here */}
-<Route exact path="/animals" render={(props) => {
-  return <AnimalList />
-}} />
-<Route path="/animals/:animalId(\d+)" render={(props) => {
-  // Pass the animalId to the AnimalDetailComponent
-  return <AnimalDetail animalId={parseInt(props.match.params.animalId)}/>
-}} />
+<Route exact path="/animals">
+  <AnimalList />
+</Route>
+
+<Route path="/animals/:animalId(\d+)">
+  <AnimalDetail />
+</Route>
 
 {/*
   This is a new route to handle a URL with the following pattern:
@@ -126,7 +130,7 @@ You should be able to view a single animal's details by navigating to the new ro
 Modify the **`<AnimalCard>`** component by adding a `Details` button that returns a react-router-dom `<Link>` element.
 
 ```jsx
-<Link to={`/animals/${props.animal.id}`}>
+<Link to={`/animals/${animal.id}`}>
   <button>Details</button>
 </Link>
 ```
@@ -138,6 +142,22 @@ import { Link } from "react-router-dom";
 ```
 
 Once the browser reloads, click on the _Details_ hyperlink in the first card. It will change the URL in the browser to `http://localhost:3000/animals/1`, and the detail component for the animal will render.
+
+### Dynamic Route
+You put :animalId(\d+) at the end of the URL to serve as a variable to hold the actual value that will be in the URL. For example, if the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in that variable named `animalId`. The variable can then be accessed and used inside **`AnimalDetail`**.
+
+Look back at the code you put in the detail component.
+
+See the `const {animalId} = useParams();`
+
+This is how you access the number 3 inside the component. Now, no matter which animal detail the user wants to view by clicking on any animal's detail link in the list of animals, this one path with match any and all of them, whether there are two animals or two million. It's part of the routing package (react-router-dom) you installed. Don't worry, that one's tricky. We'll help you remember it.
+
+ApplicationViews includes the route for animal details. You will now support a route like the following.
+
+http://localhost:3000/animals/detail/7
+
+
+
 
 ## Practice: Show The Details
 
