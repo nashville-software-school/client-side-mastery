@@ -10,13 +10,14 @@ In this book, you will be learning the concepts and tools of React. React is a c
 4 | [Kennel API](./chapters/KENNEL_API.md) | <sub style="font-size:0.85rem;">#json-server</sub>| Setup Data
 5 | [Navigation Bar with Routing](./chapters/REACT_ROUTING.md) | <sub style="font-size:0.85rem;">#react-router-dom</sub> |NavBar with Locations, Customers and Employees
 6 | [Loading Data from an API](./chapters/REACT_LOADING_DATA.md)| <sub style="font-size:0.85rem;">#load data</sub> | Load data for Locations, Customers, and Employees
-7 | [React: State and Props](./chapters/COMPONENT_STATE_PROPS.md)| <sub style="font-size:0.85rem;">#state #props</sub> | Display data of Locations, Customers, and Employees
-8 | [React: Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md) | <sub style="font-size:0.85rem;">#props #delete</sub> | Include delete functionality to Locations, Customers, and Employees
-9 | [React: Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md) | <sub style="font-size:0.85rem;">#route param #useHistory</sub> | Add a Location Details Route and Component
-10 | [React: Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | Close a Location
-11 | [React: Using Modules - API Calls & Helpers](./chapters/MODULES.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | 
+7 | [State and Props](./chapters/COMPONENT_STATE_PROPS.md)| <sub style="font-size:0.85rem;">#state #props</sub> | Display data of Locations, Customers, and Employees
+8 | [Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md) | <sub style="font-size:0.85rem;">#props #delete</sub> | Include delete functionality to Locations, Customers, and Employees
+9 | [Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md) | <sub style="font-size:0.85rem;">#route param #useHistory</sub> | Add a Location Details Route and Component
+10 | [Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | Close a Location
+11 | [Using Modules - API Calls & Helpers](./chapters/MODULES.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | 
 
 
+##
 
 * [React: Create Animal With A Form](./chapters/REACT_FORMS.md) 
 * [React: Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)

@@ -39,7 +39,7 @@ Change the return of the **`AnimalList`** component:
 > AnimalList.js
 
 ```jsx
-const AnimalList = () => {
+export const AnimalList = () => {
 
   const [animals, setAnimals] = useState([]);
 
@@ -66,7 +66,7 @@ Because **`<AnimalCard />`** is included in the render method of **`<AnimalList 
 Modify the **`<AnimalCard />`** render method to display the props using dot notation.
 
 ```js
-const AnimalCard = ({ animal }) => {
+export const AnimalCard = ({ animal }) => {
   return (
     <div className="card">
       <div className="card-content">

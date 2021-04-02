@@ -53,7 +53,7 @@ Now we can pass the `deleteAnimal` function to a child component giving the chil
 Change the return in **`<AnimalList />`**
 
 ```jsx
-const AnimalList = () => {
+export const AnimalList = () => {
 
   // ...code omitted for brevity...
 
@@ -87,7 +87,7 @@ Add the button to the **`<AnimalCard />`** HTML for the veterinarian to select a
 import React from 'react';
 import "./Animal.css";
 
-const AnimalCard = ({ animal, deleteAnimal }) => {
+export const AnimalCard = ({ animal, deleteAnimal }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -104,7 +104,6 @@ const AnimalCard = ({ animal, deleteAnimal }) => {
   );
 }
 
-export default AnimalCard
 ```
 
 ---

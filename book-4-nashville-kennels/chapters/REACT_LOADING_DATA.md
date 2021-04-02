@@ -108,7 +108,7 @@ Consider the following component:
 import React, { useEffect } from 'react';
 import { getAllAnimals, getAnimalById } from '../../modules/AnimalManager';
 
-const AnimalList = () => {
+export const AnimalList = () => {
   const getAnimals = () => {
     return getAllAnimals.then(animalsFromAPI => {
       // We'll do something more interesting with this data soon.
@@ -127,7 +127,6 @@ const AnimalList = () => {
   );
 };
 
-export default AnimalList
 ```
 
 The function argument to `useEffect` tells React to call the `getAnimals()` function (that will fetch data from our API). The empty array argument tells React to call the function on the **_first render_** of the component.
@@ -192,10 +191,10 @@ Let's incorporate state into the `AnimalList` component.
 ```jsx
 import React, { useState, useEffect } from 'react';
 //import the components we will need
-import AnimalCard from './AnimalCard';
+import { AnimalCard } from './AnimalCard';
 import { getAllAnimals, getAnimalById } from '../../modules/AnimalManager';
 
-const AnimalList = () => {
+export const AnimalList = () => {
   // The initial state is an empty array
   const [animals, setAnimals] = useState([]);
 
@@ -219,7 +218,7 @@ const AnimalList = () => {
     </div>
   );
 };
-export default AnimalList
+
 ```
 
 `useState` should be called at the top of the component's definition and then it is automatically included in the construction of the component. Once the data is returned from the AnimalManager, we invoke the `setAnimals()` function to save the animals in the component's state. After `setAnimals()` executes, the component re-renders and displays the animals.
