@@ -104,7 +104,11 @@ code
 
 If the `code` command is still not found...
 
+<<<<<<< HEAD
 Try creating a bash function by following these steps:
+=======
+If the `code` command still doesn't work, try adding this to `.zshrc` to update the path.
+>>>>>>> cohort-48
 
 1. ##### _Remove the exported PATH from the bottom of the `.zshrc` file, and save._ (<kwd>⌘S</kwd>)
 
@@ -141,6 +145,7 @@ Now that you have Node installed, you can install some open source software that
 #### _Run the following command in the terminal to install `serve` and `json-server`:_
 ```sh
 sudo npm i -g serve json-server
+<<<<<<< HEAD
 ```
 
 #### _To confirm `serve` was installed successfully, run the following in the terminal:_
@@ -155,6 +160,15 @@ sudo npm i -g serve
 ```
 
 #### _To confirm `json-server` was installed successfully, run the following in the terminal:_
+=======
+
+serve -v
+```
+
+If you see the message `command not found`, type in `sudo npm i -g serve` again.
+
+Make sure that `json-server` was installed successfully by typing in your terminal:
+>>>>>>> cohort-48
 ```sh
 json-server -v
 ```
@@ -177,9 +191,13 @@ xcode-select --install
 
 ## Git
 
+<<<<<<< HEAD
 Git is how you and your teammates will work on a shard codebase during your time at NSS.
 
 #### _Run the following commands in the terminal:_
+=======
+Git is how you and your teammates will work on a shared codebase during your time at NSS. Type in the following commands to install.
+>>>>>>> cohort-48
 
 ```sh
 brew install git
@@ -238,14 +256,20 @@ Open your Finder application again. Now you should be able to see all the files 
 
 ## SSH Key
 
-SSH is a technology that allows you to create a very secure connection between your computer, and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files
+SSH is a technology that allows you to create a very secure connection between your computer and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files:
 
 1. A public key file that you share with other people and computers. It is usually named `id_rsa.pub`.
 1. A private key file that you never, ever, ever, ever, ever share with anyone. It is usually named `id_rsa`.
 
 ### Creating Your SSH Key
 
+<<<<<<< HEAD
 Watch a short video for [creating an SSH key in the terminal](https://youtu.be/znRMcNG9_qQ) so that you an work with GitHub.
+=======
+Watch a short video for [creating an SSH key in the terminal](https://youtu.be/znRMcNG9_qQ) so that you can work with Github.
+
+### Add SSH Key to Github Account
+>>>>>>> cohort-48
 
 ### Add SSH Key to GitHub Account
 

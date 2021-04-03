@@ -12,6 +12,7 @@ Thinking of applications and web page as a collection of independent components 
 * Pinterest
 
 All of these applications are written by teams of software developers who define the individual components that are used throughout their application. They then write each component separately and then compose them in interesting ways and make them work together.
+<<<<<<< HEAD
 
 ## Vocabulary To Know
 * HTML semantic elements
@@ -25,6 +26,8 @@ A semantic element clearly describes its meaning to both the browser and the dev
 * Examples of **non-semantic** elements: `<div>` and `<span>` - Tells nothing about its content.
 * Examples of **semantic** elements: `<form>`, `<h1>`, and `<article>` - Clearly defines its content.
 * [W3 Schools Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
+=======
+>>>>>>> cohort-48
 
 ## Visual Review of Semantic Elements
 
@@ -80,7 +83,7 @@ If you were creating an HTML component that represents you, here's an example of
                 Juggling
             </div>
             <div class="interest">
-                Triathalons
+                Triathlons
             </div>
         </section>
 
@@ -106,11 +109,11 @@ Now you can style any HTML component with a class of `interest` and they will al
 
 ## Grid Layout with Flexbox
 
-Flexbox is a tool that you can use in CSS to take the structure of your HTML and apply interesting layouts for it. One of the most common layout type is a grid, and it's straightforward to do with Flex.
+Flexbox is a tool that you can use in CSS to take the structure of your HTML and apply interesting layouts for it. One of the most common layout types is a grid, and it's straightforward to do with Flexbox.
 
 Unfortunately, these Flexbox properties are hard to remember, so you should come back to this chapter and review them whenever you need to use Flexbox to make a grid layout.
 
-You want those three interest to be all in the same row instead of each one being an entire row all by itself. The first thing you need to do is apply a style to the component in which all of those interests are contained. In your case, it's the `<section class="bio__interests">` component.
+You want those three interests to be all in the same row instead of each one being an entire row all by itself. The first thing you need to do is apply a style to the component in which all of those interests are contained. In your case, it's the `<section class="bio__interests">` component.
 
 ```css
 .bio__interests {
@@ -144,7 +147,7 @@ Add some more interests for Sally.
 
 ![](./images/sally-too-many-columns.png)
 
-The default behavior is to put **all** child components into a single row, so you eventually run out of room if there are too many. You need to tell the browser that you want it to figure out how many can fit in a row, and when there's no more room, to create a new row.
+The default behavior is to put **all** child components into a single row, so you eventually run out of room if there are too many. You need to tell the browser that you want it to figure out how many can fit in a row and to create a new row when there's no more room.
 
 ```css
 .bio__interests {

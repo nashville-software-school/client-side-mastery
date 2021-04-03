@@ -2,6 +2,7 @@
 
 ## Chapters
 
+<<<<<<< HEAD
 | # | 🐠 <br/> Martin's Aquarium <br/><sub>(_Guided tour_)</sub> | 📔 <br/> Daily Journal <br/><sub>(_Component application_)</sub> | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🚜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modern&nbsp;Farm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br/><sub>(_Fundamentals with <br/>automated tests_)</sub> | 📝 <br/> Dotard &amp; Simbleton<br/><sub>(_Array methods_)</sub> |
 |--|--|---|---|---|
 | 🍎 | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) | | | |
@@ -24,10 +25,32 @@
 | 14 | [Git Workflow Terminal Shortcuts](./chapters/GIT_CLI_SHORTCUTS.md) <br/> <sub style="font-size:0.85rem;">#terminal #github</sub> |  |  |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](./chapters/AUTO_WORLD.md) |  |  |  |
 | 15 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) |  | [Optional Challenges](./chapters/MF_CHALLENGES.md) |  |
+=======
+| # | 🐠 <br/> Martin's Aquarium |
+|--|--|
+| 🍎 | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) |
+| 💻 | [Python Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |
+| 💻 | [C# Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_C_SHARP.md) |
+| 1 | [Terminal Basics](./chapters/CLI_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
+| 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |
+| 3 | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md) <br/> <sub style="font-size:0.85rem;">#html</sub> |
+| 4 | [Track Aquarium Changes](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
+| 5 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
+| 👨‍👨‍👦‍👦 | **Group Project** |
+>>>>>>> cohort-48
 
-## Supplementary Content
 
-* Supplemental Chapter - [Muscle Memory: Functions](./chapters/FUNCTION_PRACTICE.md)
-* Supplemental Chapter - [Muscle Memory: Factory Functions](./chapters/FACTORY_FUNCTIONS.md)
-* Supplemental Chapter - [Scope in JavaScript](./chapters/JS_SCOPE.md)
-* Supplemental Chapter - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
+## Explorer Chapters
+
+| # | 🐠 <br/> Martin's Aquarium |
+|--|--|
+| 1 | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
+| 1 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
+
+## Pioneer Chapters
+
+| # | 🐠 <br/> Martin's Aquarium |
+|--|--|
+| 1 | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
+| 1 | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
+| 1 | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |

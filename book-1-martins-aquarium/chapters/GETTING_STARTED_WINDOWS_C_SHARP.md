@@ -86,14 +86,22 @@ Watch the video on how to [set up global Git configuration](https://youtu.be/66E
 
 ## SSH Key
 
+<<<<<<< HEAD
 SSH is a technology that allows you to create a very secure connection between your computer, and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files:
+=======
+SSH is a technology that allows you to create a very secure connection between your computer and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files:
+>>>>>>> cohort-48
 
 1. A public key file that you share with other people and computers. It is usually named `id_rsa.pub`.
 1. A private key file that you never, ever, ever, ever, ever share with anyone. It is usually named `id_rsa`.
 
 ## Creating Your SSH Key
 
+<<<<<<< HEAD
 Watch a short video for [creating an SSH key in the terminal](https://youtu.be/znRMcNG9_qQ) so that you an work with GitHub.
+=======
+Watch a short video for [creating an SSH key in the terminal](https://youtu.be/znRMcNG9_qQ) so that you can work with Github.
+>>>>>>> cohort-48
 
 ## Add SSH Key to GitHub Account
 
