@@ -1,27 +1,17 @@
-# Book 2 - Giffygram
+# Giffygram: Social Animation Platform
 
-## Chapters
+Perhaps you've used other social media platforms that allow users to share beautiful pictures with each other. An opportunity that you've discovered is that none of these platforms specialize in Gif animation images. You went to some angel investors and convinced them that you have a solid business plan and that people around the world have been craving an app for sharing only gifs.
 
-| #  | 🌠 <br/> Giffygram <br/>  |
-|--|--|
-| 1 | [Giffygram Introduction](./chapters/GG_INTRO.md)  <br/> <sub style="font-size:0.85rem;">#components</sub> |
-| 2 | [Giffygram ERD](./chapters/GG_ERD.md) <br/> <sub style="font-size:0.85rem;">#ERD #data-relationships</sub> |
-| 3 | [Giffygram Application State](./chapters/GG_STATE_STORE.md) <br/> <sub style="font-size:0.85rem;">#state #objects #arrays</sub> |
-| 4 | [Giffygram CSS](./chapters/GG_STYLES.md) <br/> <sub style="font-size:0.85rem;">#css</sub> |
-| 5 | [Giffygram and Listing Posts](./chapters/GG_POST_STATE_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#components #export #import #html-representation</sub> |
-| 6 | [Navigation Component](./chapters/GG_NAVBAR.md) <br/> <sub style="font-size:0.85rem;">#components</sub> |
-| 7 | [Creating Post List Component](./chapters/GG_POST_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-reponsibility</sub> |
-| 8 | [Creating the Footer Component](./chapters/GG_FOOTER.md) <br/> <sub style="font-size:0.85rem;">#events #click #keyup #change</sub> |
-| 9 | [Reacting to User Interaction](./chapters/GG_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #click #keyup #change</sub> |
-| 10 | [Component State](./chapters/GG_COMPONENT_STATE.md) <br/> <sub style="font-size:0.85rem;">#component-state</sub> |
-| 11 | [Post Count by Year](./chapters/GG_POST_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#iteration #custom-event</sub> |
-| 12 | [Posts by User](./chapters/GG_USER_FILTERING.md) <br/> <sub style="font-size:0.85rem;">#events #iteration #filtering #component-state</sub> |
-| 13 | [Full Post Details](./chapters/GG_POST_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#dates #deconstruction</sub> |
-| 14 | [Showing Recent Posts](./chapters/GG_RECENT_POSTS.md) <br/> <sub style="font-size:0.85rem;">#events #filtering #array-methods #component-state</sub> |
-| 15 | [Login Form](./chapters/GG_LOGIN_FORM.md) <br/> <sub style="font-size:0.85rem;">#components #forms</sub> |
-| 16 | [User Authentication](./chapters/GG_AUTH.md) <br/> <sub style="font-size:0.85rem;">#local-storage #events</sub> |
-| 17 | [Creating Posts](./chapters/GG_POST_CREATION.md) <br/> <sub style="font-size:0.85rem;">#events #forms #state</sub> |
-| 18 | [Display User Name in Post](./chapters/GG_JOIN_USER.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |
-| 19 | [Revisit ERD for Liking Posts](./chapters/ERD.md) <br/> <sub style="font-size:0.85rem;">#ERD #data-relationships</sub> |
-| 20 | [Users Liking Posts](./chapters/GG_LIKES_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #data-relationships</sub> |
-| 21 | [Giffygram API](./chapters/GG_API.md) <br/> <sub style="font-size:0.85rem;">#api #json #fetch #HTTP-methods</sub> |
+A team of developers began coding, but unfortunately had to abandon the project while still incomplete. Your job is to get the application working as intended.
+
+## Start with the Data
+
+Before you write **ANY** code for an application, you need to understand the types of data _(i.e. resources)_ you are working with, the properties of each resource, and how the resources are related to each other. All of the code that you will write is dependent upon the decisions you make about your data. Once you have started building the application, the more progress you make, the more expensive it is - in both time and money - to make changes to the structure of your data.
+
+Visit the [deployed Giffygram API](http://giffyapi.nss.team/) to see the resources that are being provided by the API. Before you dig into the implementation of the application, you need to define an Entity Relationship Diagram (ERD).
+
+Once your team feels that you have a correct ERD, it needs to be reviewed by an instructor. You cannot start coding until your ERD is approved.
+
+## Application Preview
+
+Once your ERD is approved, your instruction team will give you steps for starting your coding journey. If you would like to see how the application is intended to work, please visit the [deployed Giffygram application](http://giffygram.nss.team/) and have a look around.
