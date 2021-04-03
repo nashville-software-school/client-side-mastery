@@ -6,7 +6,7 @@ Inside of components, make another file `PropsAndState.js`.
 ## Props
 Pass your name into a component and display it.
 
-> PropsAndState.js
+> components/PropsAndState.js
 ```
 import React, from "react"
 
