@@ -78,7 +78,7 @@ fetchRequests()
 ```
 
 
-## Displaying Requests
+## Core Skills: Critical and Creative Thinking
 
 Here is some starter code. You need to define the function for the `map()` method to convert the service request objects into HTML representations. Since it is wrapped with a `<ul>` element, make each one an `<li>` element showing only the description of the request to start.
 
@@ -99,3 +99,7 @@ export const Requests = () => {
     return html
 }
 ```
+
+## Core Skill: Collaboration
+
+Work with your peers to get this built out. If you still aren't able to get the requests to list after ~20-30 minutes of attempts, contact an instructor to walk through it.

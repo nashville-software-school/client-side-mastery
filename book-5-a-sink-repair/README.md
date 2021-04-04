@@ -8,8 +8,8 @@ In this book, you will be introduced to the basics of asynchronous programming a
 |--|--|--|--|
 | # | [Introduction to Fetch](./chapters/AS_FETCH_INTRO.md) <br/> <sub style="font-size:0.85rem;">#api #fetch</sub> |  |  |
 | # | [A Sink Repair Service](./chapters/AS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#context</sub> |  |  |
-| # | [Permanent State vs Transient State](./chapters/AS_STATE_TYPES.md) <br/> <sub style="font-size:0.85rem;">#state</sub>  | [Designing State](./chapters/KD_API_STATE.md) | [Designing State](./chapters/CB_API_STATE.md) |
-| # | [Listing Past Requests](./chapters/AS_FETCH_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET</sub> | [Engraving Request](./chapters/KD_USER_INPUT.md) | [Custom Paint Color](./chapters/CB_USER_INPUT.md) |
+| # | [Permanent State vs Transient State](./chapters/AS_STATE_TYPES.md) <br/> <sub style="font-size:0.85rem;">#state</sub>  | [Designing Jewelry State](./chapters/KD_API_STATE.md) | [Designing Car State](./chapters/CB_API_STATE.md) |
+| # | [Listing Past Requests](./chapters/AS_FETCH_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET</sub> | |  |
 | # | [Requesting Service](./chapters/AS_USER_INPUT.md) <br/> <sub style="font-size:0.85rem;">#input #form-fields</sub> | [Engraving Request](./chapters/KD_USER_INPUT.md) | [Custom Paint Color](./chapters/CB_USER_INPUT.md) |
 | # | [Submitting Service Request](./chapters/AS_HTTP_POST.md) <br/> <sub style="font-size:0.85rem;">#POST #fetch #JSON</sub> | [Delivery Instructions](./chapters/KD_COMPLETE_ORDER.md) | [Delivery Instructions](./chapters/CB_DELIVERY.md) |
 | # | [Listing Service Requests](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #GET</sub> | [Displaying Jewelry Orders](./chapters/KD_GETTING_NEW_STATE.md) | [Manufacturing Queue](./chapters/CB_GETTING_NEW_STATE.md) |
