@@ -16,6 +16,7 @@ Transient state only exists while the user is interacting with the application. 
 Examples of this are:
 
 1. Options a user has chosen in the user interface.
+1. Text the user has entered into form fields.
 1. Which view the user is currently on.
 
 This kind of state is still tracked, but only in the application code, and is not saved to the database.
