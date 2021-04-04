@@ -6,19 +6,40 @@ Feel free to go back and watch video in chapter 1 or a refresher on fetch.
 
 ## HTTP POST Request with Fetch
 
-Place the following variable and function in your `dataAccess.js` module.
+Place the following function in your `dataAccess.js` module. The POST method on any HTTP request means _"Hey API!! I want you to create something new!"_
 
 ```js
 const API = "http://localhost:8088"
 
-export const sendRequest = () => {
-    return fetch(`${API}/requests`)
+export const sendRequest = (userServiceRequest) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userServiceRequest)
+    }
+
+
+    return fetch(`${API}/requests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
 
         })
 }
 ```
+
+## HTTP Request Methods
+
+Here are the four main methods used on HTTP requests.
+
+| Method | Description |
+|--|--|
+| **GET**  | Please give me this resource.  |
+| **POST**  | Please create something new.  |
+| **PUT**  | Please modify an existing resource.  |
+| **DELETE**  | Please delete an existing.  |
+
 
 ## Listen for the Click
 

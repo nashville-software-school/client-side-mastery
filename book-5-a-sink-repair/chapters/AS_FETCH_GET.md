@@ -18,6 +18,8 @@ Put the following object in the requests array in your `database.json` file.
 }
 ```
 
+Feel free to add more if you want.
+
 ## Application State
 
 You will need to store that external data in your application state when you fetch it. Create a property names `requests` in your application state object. Its inital value must be an empty array.
