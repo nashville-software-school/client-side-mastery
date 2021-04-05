@@ -208,7 +208,7 @@ export const AnimalList = () => {
   const getAnimals = () => {
     // After the data comes back from the API, we
     //  use the setAnimals function to update state
-    return getAllAnimals.then(animalsFromAPI => {
+    return getAllAnimals().then(animalsFromAPI => {
       setAnimals(animalsFromAPI)
     });
   };
