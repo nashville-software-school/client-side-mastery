@@ -15,13 +15,12 @@ In this book, you will be learning the concepts and tools of React. React is a c
 9 | [Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md) | <sub style="font-size:0.85rem;">#route param #useHistory</sub> | Add a Location Details Route and Component
 10 | [Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | Close a Location
 11 | [Using Modules - API Calls & Helpers](./chapters/MODULES.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | 
-
+12 | [Create Animal With A Form](./chapters/REACT_FORMS.md) | <sub style="font-size:0.85rem;">#useEffect #controlled Input </sub> | Create new Locations, Employees, and Customers.
 
 ##
 
-* [React: Create Animal With A Form](./chapters/REACT_FORMS.md) 
-* [React: Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
-* [React: Edit](./chapters/REACT_EDIT.md)
+* [Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
+* [Edit](./chapters/REACT_EDIT.md)
 
 **All of the above should be complete before proceeding.**
 
@@ -29,18 +28,14 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
 * [React: Lifting state and passing props with Login](./chapters/REACT_LIFT_STATE_PASS_PROPS.md)
 * [React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md)
-* [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
 
+> Sprint 3: Reactive Nutshell
+> LinkedIn Projects update with Reactive Nutshell
 **More Good Stuff**
 
 * [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
 * [Tips and Shortcuts](./chapters/REACT_TIPS.md)
 
-> ## Sprint 4: Reactive Nutshell
-
-> ### LinkedIn Projects update with Reactive Nutshell
-
-Supplemental Chapters
 
 
 Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
@@ -48,6 +43,13 @@ Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 > ## **Begin Client Side Capstone Development**
 
 > ### Soft Demo Day Before Break
+
+
+
+> ### LinkedIn Projects update with Reactive Nutshell
+
+Supplemental Chapters
+* [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
 * [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
 * [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
 * Supplement - [Deploy React and API to Heroku](./chapters/JSON_SERVER_HEROKU.md)

@@ -38,7 +38,7 @@ Add the following function to your **`<AnimalList>`** component and remember to 
 
 ```js
 const handleDeleteAnimal = id => {
-    delete(id)
+    deleteAnimal(id)
     .then(() => getAllAnimals().then(setAnimals));
 };
 ```
