@@ -3,7 +3,7 @@
 This is a big chapter. Ask questions!
 
 ### Vocabulary to Learn
-* `useEffect` 
+* `useEffect`
 * `useState`
 
 At this point, you have a static application. Now it's time to implement realistic data. You will request it from your JSON API database.
@@ -28,31 +28,35 @@ As we have done before, let's create a module for database calls.
 1. Create a `src/modules` directory
 1. In that directory, create a file named `AnimalManager.js`
 1. Create a new component in a file named `src/components/animal/AnimalList.js` _**NOTE:** This file is being created in a folder called `animal`_.
-1. For now the animal list should look like this:
+1. For now the `AnimalList` should look like this:
 
-    ```jsx
-    import React from 'react';
+> src/animals/AnimalList.js
 
-    export const AnimalList = () => {
-        return (
-            <div className="container-cards">
-            We'll put some animals here eventually...
-            </div>
-        );
-    };
+```jsx
+import React from 'react';
 
-    ```
+export const AnimalList = () => {
+    return (
+        <div className="container-cards">
+        We'll put some animals here eventually...
+        </div>
+    );
+};
 
-1. Update the `ApplicationViews` component so that the route now refers to the `AnimalList` instead of the `AnimalCard`. Don't forget to import the `AnimalList` component
+```
 
-    ```jsx
-      
-    <Route exact path="/animals">
-        <AnimalList />
-    </Route>
+1. Update the `ApplicationViews` component so that the `<Route>` now refers to the `AnimalList` instead of the `AnimalCard`. Don't forget to import the `AnimalList` component
 
-        }} />
-    ```
+> src/ApplicationViews.js
+
+```jsx
+
+<Route exact path="/animals">
+    <AnimalList />
+</Route>
+
+
+```
 
 ## Single Responsibility Principle
 
@@ -65,7 +69,7 @@ Other components, _in the future_, may need the ability to make their own API ca
 ```js
 const remoteURL = "http://localhost:5002"
 
-  export const getAnimalById = (id) {
+  export const getAnimalById = (id) => {
     //be sure your animals have good data and related to a location and customer
    return fetch(`${remoteURL}/animals/${id}?_expand=location&_expand=customer`)
     .then(res => res.json())
@@ -78,7 +82,7 @@ const remoteURL = "http://localhost:5002"
 
 ```
 
-Our `AnimalCard` does a great job of rendering a single animal, but our database has more than one animal. That's where the `AnimalList` component will come in. By the time we're done, it will initiate the AnimalManager `getAll()` call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
+Our `AnimalCard` does a great job of rendering a single animal, but our database has more than one animal. That's where the `AnimalList` component will come in. By the time we're done, it will initiate the AnimalManager `getAllAnimals()` call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
 
 When the data is returned, we can hold on to it by placing it in the component's `state`. _More on `state` later._
 
@@ -109,7 +113,7 @@ import { getAllAnimals, getAnimalById } from '../../modules/AnimalManager';
 
 export const AnimalList = () => {
   const getAnimals = () => {
-    return getAllAnimals.then(animalsFromAPI => {
+    return getAllAnimals().then(animalsFromAPI => {
       // We'll do something more interesting with this data soon.
       console.log(animalsFromAPI);
     });
@@ -187,6 +191,8 @@ We can call `setAnimals` when we need to change the value of the animals stored 
 
 Let's incorporate state into the `AnimalList` component.
 
+> src/animals/AnimalList.js
+
 ```jsx
 import React, { useState, useEffect } from 'react';
 //import the components we will need
@@ -210,7 +216,7 @@ export const AnimalList = () => {
     getAnimals();
   }, []);
 
-  // Finally we use map() to "loop over" the animals array to show a list of animal cards
+  // Finally we use .map() to "loop over" the animals array to show a list of animal cards
   return (
     <div className="container-cards">
       {animals.map(animal => <AnimalCard />)}
