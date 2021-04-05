@@ -30,7 +30,7 @@ As we have done before, let's create a module for database calls.
 1. Create a new component in a file named `src/components/animal/AnimalList.js` _**NOTE:** This file is being created in a folder called `animal`_.
 1. For now the `AnimalList` should look like this:
 
-> src/animals/AnimalList.js
+> src/components/animals/AnimalList.js
 
 ```jsx
 import React from 'react';
@@ -47,7 +47,7 @@ export const AnimalList = () => {
 
 1. Update the `ApplicationViews` component so that the `<Route>` now refers to the `AnimalList` instead of the `AnimalCard`. Don't forget to import the `AnimalList` component
 
-> src/ApplicationViews.js
+> src/components/ApplicationViews.js
 
 ```jsx
 
@@ -191,7 +191,7 @@ We can call `setAnimals` when we need to change the value of the animals stored 
 
 Let's incorporate state into the `AnimalList` component.
 
-> src/animals/AnimalList.js
+> src/components/animals/AnimalList.js
 
 ```jsx
 import React, { useState, useEffect } from 'react';
@@ -242,7 +242,7 @@ Take another look at the `AnimalList` component, you'll notice we are importing 
 
 ## Practice - NSS Kennels API
 
-1. Add some example data for employees, locations and owners to `api/kennel.json`.
+1. Add some example data for employees, locations and owners to `kennel-api/database.json`.
 1. Create modules to query the database for employees, locations, and owners from your API.
 1. Create list components to handle calling the database modules.
 1. Display a static *designed* card for each section. We will get to displaying the correct data next.
