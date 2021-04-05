@@ -30,7 +30,7 @@ As we have done before, let's create a module for database calls.
 1. Create a new component in a file named `src/components/animal/AnimalList.js` _**NOTE:** This file is being created in a folder called `animal`_.
 1. For now the `AnimalList` should look like this:
 
-> src/components/animals/AnimalList.js
+> src/components/animal/AnimalList.js
 
 ```jsx
 import React from 'react';
@@ -45,7 +45,7 @@ export const AnimalList = () => {
 
 ```
 
-1. Update the `ApplicationViews` component so that the `<Route>` now refers to the `AnimalList` instead of the `AnimalCard`. Don't forget to import the `AnimalList` component
+5. Update the `ApplicationViews` component so that the `<Route>` now refers to the `AnimalList` instead of the `AnimalCard`. Don't forget to import the `AnimalList` component
 
 > src/components/ApplicationViews.js
 
@@ -69,15 +69,15 @@ Other components, _in the future_, may need the ability to make their own API ca
 ```js
 const remoteURL = "http://localhost:5002"
 
-  export const getAnimalById = (id) => {
+  export const getAnimalById = (animalId) => {
     //be sure your animals have good data and related to a location and customer
-   return fetch(`${remoteURL}/animals/${id}?_expand=location&_expand=customer`)
+   return fetch(`${remoteURL}/animals/${animalId}?_expand=location&_expand=customer`)
     .then(res => res.json())
   }
 
   export const getAllAnimals = () => {
     return fetch(`${remoteURL}/animals`)
-    .then(result => result.json())
+    .then(res => res.json())
   }
 
 ```
@@ -106,6 +106,8 @@ The `useEffect` hook accepts two parameters: a function and an array.
 The function parameter is where you place the code that interacts with an external resource. The array parameter is used to control when the function parameter is executed.
 
 Consider the following component:
+
+> src/components/animal/AnimalList.js
 
 ```jsx
 import React, { useEffect } from 'react';
@@ -191,7 +193,7 @@ We can call `setAnimals` when we need to change the value of the animals stored 
 
 Let's incorporate state into the `AnimalList` component.
 
-> src/components/animals/AnimalList.js
+> src/components/animal/AnimalList.js
 
 ```jsx
 import React, { useState, useEffect } from 'react';
