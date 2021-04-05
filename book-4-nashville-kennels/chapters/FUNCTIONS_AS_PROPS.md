@@ -9,14 +9,14 @@ It's time to add one of the CRUD methods to your application. You're going to st
 First add the `delete` function to your `AnimalManager` module.
 
 ```js
-export const delete = (id) => {
+export const deleteAnimal = (id) => {
   return fetch(`${remoteURL}/animals/${id}`, {
     method: "DELETE"
   }).then(result => result.json())
 }
 ```
 
-We can now invoke `delete()` from anywhere.
+We can now invoke `deleteAnimal()` from anywhere.
 
 Before we include the delete functionality in a component, consider following:
 
@@ -26,7 +26,7 @@ Before we include the delete functionality in a component, consider following:
 ### Flow of events
 
 1. Click the discharge button
-1. Invoke a `handleDelete` function which will invoke the AnimalManager delete function, be sure to pass the id.
+1. Invoke a `handleDeleteAnimal` function which will invoke the AnimalManager `deleteAnimal` function, be sure to pass the id.
 1. Once an item is deleted, we should invoke the AnimalManager `getAllAnimals()` method.
 1. With new data, invoke `setAnimals()` and set **animals** equal to the new data.
 1. The component re-renders to display the new `animal` data.
@@ -37,7 +37,7 @@ Before we include the delete functionality in a component, consider following:
 Add the following function to your **`<AnimalList>`** component and remember to import the methods from AnimalManager.
 
 ```js
-const deleteAnimal = id => {
+const handleDeleteAnimal = id => {
     delete(id)
     .then(() => getAllAnimals().then(setAnimals));
 };
@@ -48,7 +48,7 @@ Remember that every time you invoke the `setAnimals()` method, it changes the st
 
 ## Pass the Delete Function to AnimalCard Component
 
-Now we can pass the `deleteAnimal` function to a child component giving the child component the ability to invoke the function found on the parent.
+Now we can pass the `handleDeleteAnimal` function to a child component giving the child component the ability to invoke the function found on the parent.
 
 Change the return in **`<AnimalList />`**
 
@@ -63,7 +63,7 @@ export const AnimalList = () => {
         <AnimalCard
           key={animal.id}
           animal={animal}
-          deleteAnimal={deleteAnimal} />)}
+          handleDeleteAnimal={handleDeleteAnimal} />)}
     </div>
   );
 };
@@ -71,7 +71,7 @@ export const AnimalList = () => {
 
 **`AnimalCard`** component receives two props:
 
-1. The `deleteAnimal` function reference
+1. The `handleDeleteAnimal` function reference
 1. The `animal` object
 
 
@@ -87,7 +87,7 @@ Add the button to the **`<AnimalCard />`** HTML for the veterinarian to select a
 import React from 'react';
 import "./Animal.css";
 
-export const AnimalCard = ({ animal, deleteAnimal }) => {
+export const AnimalCard = ({ animal, handleDeleteAnimal }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -98,7 +98,7 @@ export const AnimalCard = ({ animal, deleteAnimal }) => {
           {animal.name}
         </span></h3>
         <p>Breed: {animal.breed}</p>
-        <button type="button" onClick={() => deleteAnimal(animal.id)}>Discharge</button>
+        <button type="button" onClick={() => handleDeleteAnimal(animal.id)}>Discharge</button>
       </div>
     </div>
   );
