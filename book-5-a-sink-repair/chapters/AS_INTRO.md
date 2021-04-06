@@ -6,11 +6,14 @@ Spark flew.
 
 Now they have decided to start a family business and started a sink repair and plumbing service.
 
-They have hired you to create a web application that will let people submit service requests that they can view quickly what needs to be done. They want people to register an account with their full name and email address. A person can come back at any time and enter their name and email on a login page to use the application.
+They have hired you to create a web application that will let people submit service requests that they can view quickly what needs to be done.
 
-They want a person to enter in a description of the job, the address where the work needs to be done, their spending limit for the job, and a date the work should be completed by.
+They want a form where a person can enter in a description of the job, the address where the work needs to be done, their spending limit for the job, and a date the work should be completed by.
 
-Once they are done with a job, they want that service request to be marked as complete. They also want to track who worked on the service request _(Maude or Merle)_.
+Once they are done with a job, they want a way to...
+
+1. Track who worked on the service request. It could be only one of them that worked on the job, or they could both work on it if it's a large job.
+1. Once Maude and/or Merle are recorded to have finished the job, they want the UI to reflect that the job is complete.
 
 If they don't have time to work on a particular request, they want the ability to delete it from the list.
 

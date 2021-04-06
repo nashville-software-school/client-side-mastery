@@ -6,19 +6,29 @@ Feel free to go back to chapter 1 and review the video about using `fetch()`.
 
 ## Manually Create a Request
 
-Put the following object in the requests array in your `database.json` file.
+Put the following object in the "requests" array in your `database.json` file.
 
 ```json
 {
     "id": 1,
     "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
     "address": "34445 Bianka Ports",
-    "budget": 400.00,
-    "neededBy": "Fri Aug 27 2021 13:13:47 GMT-0500 (Central Daylight Time)"
+    "budget": 400,
+    "neededBy": "2021-08-27"
 }
 ```
 
 Feel free to add more if you want.
+
+Then open a new terminal and navigate to the `sink-repair/api` directory. Once there run the following command.
+
+```sh
+json-server database.json -p 8088 -w
+```
+
+You should see the following output. If you don't, see an instructor.
+
+![](./images/sink-repair-starting-json-server.gif)
 
 ## Application State
 
@@ -51,38 +61,52 @@ Define and export a function named `getRequests` that returns a copy of the requ
 
 You need to fetch the data from the API and store it in application state before you can convert the data structures to HTML representations. The syntax here is very confusing for a beginner, and your instruction team will explain the logic when they do a live coding review.
 
+> #### `sink-repair/src/scripts/main.js`
+
 ```js
 import { fetchRequests } from "./dataAccess.js"
-import { Requests } from "./Requests.js"
-import { ServiceForm } from "./ServiceForm.js"
+import { SinkRepair } from "./SinkRepair.js"
 
 
 const mainContainer = document.querySelector("#container")
 
-fetchRequests()
-    .then(
+const render = () => {
+    fetchRequests().then(
         () => {
-            const applicationHTML = `
-                <h1>Maude and Merle's Sink Repair</h1>
-                <section class="serviceForm">
-                    ${ServiceForm()}
-                </section>
-
-                <section class="serviceRequests">
-                    <h2>Service Requests</h2>
-                    ${Requests()}
-                </section>
-            `
-
-            mainContainer.innerHTML = applicationHTML
+            mainContainer.innerHTML = SinkRepair()
         }
     )
+}
+
+render()
 ```
 
 
 ## Core Skills: Critical and Creative Thinking
 
 Here is some starter code. You need to define the function for the `map()` method to convert the service request objects into HTML representations. Since it is wrapped with a `<ul>` element, make each one an `<li>` element showing only the description of the request to start.
+
+> #### `sink-repair/src/scripts/SinkRepair.js`
+
+```js
+import { Requests } from "./Requests.js"
+
+
+export const SinkRepair = () => {
+    return `
+        <h1>Maude and Merle's Sink Repair</h1>
+        <section class="serviceForm">
+        </section>
+
+        <section class="serviceRequests">
+            <h2>Service Requests</h2>
+            ${Requests()}
+        </section>
+    `
+}
+```
+
+> #### `sink-repair/src/scripts/Requests.js`
 
 ```js
 import { getRequests } from "./dataAccess.js"

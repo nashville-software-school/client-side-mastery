@@ -34,27 +34,25 @@ export const ServiceForm = () => {
 
 Then import the HTML into the main module and interpolate it in the site structure.
 
-> #### `workspace/sink-repair/src/scripts/main.js`
+> #### `sink-repair/src/scripts/SinkRepair.js`
 
 ```js
 import { ServiceForm } from "./ServiceForm.js"
+import { Requests } from "./Requests.js"
 
+export const SinkRepair = () => {
+    return `
+        <h1>Maude and Merle's Sink Repair</h1>
+        <section class="serviceForm">
+            ${ServiceForm()}
+        </section>
 
-const mainContainer = document.querySelector("#container")
-
-const applicationHTML = `
-    <h1>Maude and Merle's Sink Repair</h1>
-    <section class="serviceForm">
-        ${ServiceForm()}
-    </section>
-
-    <section class="serviceRequests">
-        <h2>Service Requests</h2>
-
-    </section>
-`
-
-mainContainer.innerHTML = applicationHTML
+        <section class="serviceRequests">
+            <h2>Service Requests</h2>
+            ${Requests()}
+        </section>
+    `
+}
 ```
 
 ## Layout CSS
