@@ -9,7 +9,7 @@ If you push something on to the browser _history stack_, it will change the view
 For example, the following code will change the URL in your browser to `http://localhost:3000/animals`, which triggers the routing package to find the matching **`<Route>`** definition in **`ApplicationViews`**. That route returns **`<AnimalList>`**, so we see a list of animals.
 
 ```js
-props.history.push("/animals");
+history.push("/animals");
 ```
 
 You are going to invoke `push()` after an animal has been deleted and then redirect to the animal list.
