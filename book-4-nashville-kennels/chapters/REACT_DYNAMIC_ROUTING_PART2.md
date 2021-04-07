@@ -105,7 +105,7 @@ const handleDelete = () => {
   //invoke the delete function in AnimalManger and re-direct to the animal list.
   setIsLoading(true);
   deleteAnimal(animalId).then(() =>
-    props.history.push("/animals")
+    history.push("/animals")
   );
 };
 ```
