@@ -104,7 +104,7 @@ Add the handleDelete function to **`AnimalDetail`** component.
 const handleDelete = () => {
   //invoke the delete function in AnimalManger and re-direct to the animal list.
   setIsLoading(true);
-  delete(animalId).then(() =>
+  deleteAnimal(animalId).then(() =>
     props.history.push("/animals")
   );
 };
