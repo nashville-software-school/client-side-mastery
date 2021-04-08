@@ -14,7 +14,8 @@ Here is the flow of the AnimalEditForm component:
 1. The function passed to `useEffect()` calls API to get the animal based on the animalId in the URL.
 1. Data loads and `setAnimal()` is invoked with new data (also set `isLoading` to false)
 1. The component is rendered to the DOM, displaying animal details and ready for edits.
-1. Make changes. As changes are made, state is updated. Select `save`.
+1. Make changes. As changes are made, state is updated. 
+1. Select `save`.
 1. The `updateExistingAnimal` method will call `setIsLoading(true)` - this ensures the user cannot repeatedly click button while API is being updated.
 1. Invoke `AnimalManger.update()` to change the API data.
 1. Once the API has updated, change the view to display all the animals.
@@ -26,9 +27,12 @@ import React, { useState, useEffect } from "react"
 import AnimalManager from "../../modules/AnimalManager"
 import "./AnimalForm.css"
 
-const AnimalEditForm = props => {
+export const AnimalEditForm = () => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
   const [isLoading, setIsLoading] = useState(false);
+
+  const {animalId} = useParams();
+  const history = useHistory();
 
   const handleFieldChange = evt => {
     const stateToChange = { ...animal };
@@ -47,12 +51,13 @@ const AnimalEditForm = props => {
       breed: animal.breed
     };
 
-    AnimalManager.update(editedAnimal)
-      .then(() => props.history.push("/animals"))
+  AnimalManager.update(editedAnimal)
+    .then(() => history.push("/animals")
+    )
   }
 
   useEffect(() => {
-    AnimalManager.get(props.match.params.animalId)
+    AnimalManager.getAnimalById(animalId)
       .then(animal => {
         setAnimal(animal);
         setIsLoading(false);
@@ -97,7 +102,6 @@ const AnimalEditForm = props => {
   );
 }
 
-export default AnimalEditForm
 ```
 
 ## Route for Showing Animal Edit Form
@@ -105,25 +109,25 @@ export default AnimalEditForm
 Next, define a new route in **`<ApplicationViews>`** for editing a single animal. Be sure to import the **`<AnimalEditForm>`** component.
 
 ```jsx
-<Route path="/animals/:animalId(\d+)/edit" render={props => {
-  if (isAuthenticated()) {
-    return <AnimalEditForm {...props} />
-  } else {
-    return <Redirect to="/login" />
+<Route path="/animals/:animalId(\d+)/edit">
+    if (isAuthenticated()) {
+      return <AnimalEditForm />
+    } else {
+      return <Redirect to="/login" />
   }
-}} />
+</Route>
 ```
 
 You will also need to add `exact` to the route for `AnimalDetail`
 
 ```jsx
-<Route exact path="/animals/:animalId(\d+)" render={props => {
+<Route exact path="/animals/:animalId(\d+)">
   if (isAuthenticated()) {
-    return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
+    return <AnimalDetail />
   } else {
     return <Redirect to="/login" />
   }
-}} />
+</Route>
 ```
 
 At this point you should be able to see the edit animal form with a URL like this: `http://localhost:3000/animals/2/edit`
@@ -136,7 +140,7 @@ In the **`<AnimalCard>`** component, you will add a new button: `Edit`. When the
 
 ```jsx
 <button type="button"
-  onClick={() => props.history.push(`/animals/${props.animal.id}/edit`)}>
+  onClick={() => history.push(`/animals/${animal.id}/edit`)}>
   Edit
 </button>
 ```
@@ -145,31 +149,14 @@ In the **`<AnimalCard>`** component, you will add a new button: `Edit`. When the
 
 At this point, view an AnimalCard. You should see the `Edit` button. Test it out.
 
-Oh no, **Error**. `TypeError: Cannot read property 'push' of undefined`. What is that? The router props need to be passed through the **`<AnimalList>`** to the **`<AnimalCard>`**  component. We can do that with `{...props}`. The spread operator copies own enumerable properties from a provided object onto a new object.
+Oh no, **Error**. `TypeError: Cannot read property 'push' of undefined`. What is that? We need to import and `useHistory` from `react-router-dom` into the AnimalCard.
 
-> components/animal/AnimalList.js
-Add `{...props}` to the AnimalCard.
+> AnimalCard.js
 
-```jsx
-<AnimalCard
-  key={animal.id}
-  animal={animal}
-  deleteAnimal={deleteAnimal}
-  {...props}
-/>
+```js
+const history = useHistory();
 ```
 
-You'll also need to make sure you are passing `{...props}` to the `<AnimalList>` component from the `<Route>` in `<ApplicationViews>`.
-
-```jsx
-<Route exact path="/animals" render={props => {
-  if (isAuthenticated()) {
-    return <AnimalList {...props} />
-  } else {
-    return <Redirect to="/login" />
-  }
-}} />
-```
 
 Test again. You should be able to navigate to the animal edit view.
 
@@ -194,6 +181,11 @@ update(editedAnimal) {
 ```
 
 ![animation showing animal edit working](./images/p13zLpAnWm.gif)
+
+## Practice: Add Drop the dropdowns for Location and Customer
+1. Refer back to the `AnimalForm` and include dropdowns for Location and 
+Customer. You will need to include fetch calls for the list data and `useEffect`.
+1. Make sure your data will support each of these requests. Double check your properties on each object and that they relate to good data.
 
 ## Practice: Edit Employees, Locations, and Owners
 

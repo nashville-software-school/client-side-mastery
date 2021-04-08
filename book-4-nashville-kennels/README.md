@@ -17,7 +17,9 @@ In this book, you will be learning the concepts and tools of React. React is a c
 11 | [Using Modules - API Calls & Helpers](./chapters/MODULES.md) |  | 
 12 | [Create Animal With A Form](./chapters/REACT_FORMS.md) | <sub style="font-size:0.85rem;">#useEffect #controlled Input </sub> | Create new Locations, Employees, and Customers
 13 | [Conditional Routing - Simple Login](./chapters/AUTHENTICATION.md) | | Show content based on conditions
-14 | [Edit Animal Details](./chapters/REACT_EDIT.md) | | 
+14 | [Edit Animal Details](./chapters/REACT_EDIT.md) | | Dropdown menus and edit Locations, Employees, and Customers
+
+
 ##
 
 
@@ -41,11 +43,8 @@ Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 > ## **Begin Client Side Capstone Development**
 
-> ### Soft Demo Day Before Break
 
-
-
-> ### LinkedIn Projects update with Reactive Nutshell
+> ### LinkedIn Projects: update with Reactive Nutshell
 
 Supplemental Chapters
 * [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
