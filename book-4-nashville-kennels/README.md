@@ -14,13 +14,12 @@ In this book, you will be learning the concepts and tools of React. React is a c
 8 | [Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md) | <sub style="font-size:0.85rem;">#props #delete</sub> | Include delete functionality to Locations, Customers, and Employees
 9 | [Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md) | <sub style="font-size:0.85rem;">#route param #useHistory</sub> | Add a Location Details Route and Component
 10 | [Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | Close a Location
-11 | [Using Modules - API Calls & Helpers](./chapters/MODULES.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | 
-12 | [Create Animal With A Form](./chapters/REACT_FORMS.md) | <sub style="font-size:0.85rem;">#useEffect #controlled Input </sub> | Create new Locations, Employees, and Customers.
-
+11 | [Using Modules - API Calls & Helpers](./chapters/MODULES.md) |  | 
+12 | [Create Animal With A Form](./chapters/REACT_FORMS.md) | <sub style="font-size:0.85rem;">#useEffect #controlled Input </sub> | Create new Locations, Employees, and Customers
+13 | [Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md) | | Show content based on conditions
+14 | [Edit Animal Details](./chapters/REACT_EDIT.md) | | 
 ##
 
-* [Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md)
-* [Edit](./chapters/REACT_EDIT.md)
 
 **All of the above should be complete before proceeding.**
 
@@ -31,11 +30,11 @@ In this book, you will be learning the concepts and tools of React. React is a c
 
 > Sprint 3: Reactive Nutshell
 > LinkedIn Projects update with Reactive Nutshell
+
 **More Good Stuff**
 
 * [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
-* [Tips and Shortcuts](./chapters/REACT_TIPS.md)
-
+* [Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
 
 
 Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
@@ -50,14 +49,14 @@ Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 Supplemental Chapters
 * [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
-* [React: Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+
 * [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
-* Supplement - [Deploy React and API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
-* Supplement - [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
-* Supplement - [Higher Order Components in React](./chapters/REACT_HOC.md)
-* Supplement - [React Context API](./chapters/REACT_CONTEXT_API.md)
-* Supplement - [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
-* Supplement - [Deploy to AWS S3](./chapters/AWS_S3.md)
-* Supplement - [Deploy to AWS EC2](./chapters/AWS_EC2.md)
+* [Deploy React and API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
+* [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
+* [Higher Order Components in React](./chapters/REACT_HOC.md)
+* [React Context API](./chapters/REACT_CONTEXT_API.md)
+* [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
+* [Deploy to AWS S3](./chapters/AWS_S3.md)
+* [Deploy to AWS EC2](./chapters/AWS_EC2.md)
 
 After completing this book, you will be considered apprentice developers, and will be ready to move on to the final three months of the course. Those final months are your apprenticeship, where you will be trained on how to work on a professional software development team.

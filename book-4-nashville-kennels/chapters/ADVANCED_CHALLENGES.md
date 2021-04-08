@@ -66,7 +66,7 @@ When the customer presses the ENTER key, all three collections in your API need 
 1. Add a `path="/search"` route in your app that renders **`SearchResults`**.
 1. Use the [`_like` operator](https://github.com/typicode/json-server#operators) available with json-server.
 1. You'll need to use chained `fetch` calls to each of the collections in your API and build up an object of found items.
-1. After all calls are successful, you'll need to use the `props.history.push()` method to show a **`SearchResults`** component.
+1. After all calls are successful, you'll need to use the `history.push()` method to show a **`SearchResults`** component.
 
 
 ## Challenge: Animal Owners
