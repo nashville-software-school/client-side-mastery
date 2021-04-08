@@ -7,7 +7,7 @@ echo 'import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
-export const Register = (props) => {
+export const Register = ({setAuthUser}) => {
     const firstName = useRef()
     const lastName = useRef()
     const email = useRef()
@@ -40,7 +40,7 @@ export const Register = (props) => {
                         .then(res => res.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
-                                sessionStorage.setItem("kennel_customer", createdUser.id)
+                                setAuthUser(createdUser)
                                 history.push("/")
                             }
                         })
@@ -89,7 +89,7 @@ import { useHistory } from "react-router-dom"
 import "./Login.css"
 
 
-export const Login = props => {
+export const Login = ({setAuthUser}) => {
     const email = useRef()
     const existDialog = useRef()
     const history = useHistory()
@@ -106,7 +106,7 @@ export const Login = props => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    sessionStorage.setItem("kennel_customer", exists.id)
+                    setAuthUser(exists)
                     history.push("/")
                 } else {
                     existDialog.current.showModal()

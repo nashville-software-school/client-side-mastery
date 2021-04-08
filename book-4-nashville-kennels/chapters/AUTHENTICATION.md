@@ -24,30 +24,35 @@ Here's the process this code follows.
 
 What determines if a user has authenticated? It's the `kennel_customer` key that you set in session storage. If the key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
 
-Refactor `ApplicationViews` by adding a function to check if there is an item in session storage named kennel_customer.
+Refactor `ApplicationViews` to include a state value for `isAuthenticated` as well as a function that sets session storage.
 
 
 > ApplicationViews.js
 ```js
-const isAuthenticated = () => sessionStorage.getItem("kennel_customer") !== null;
+const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
+
+const setAuthUser = (user) => {
+	sessionStorage.setItem("kennel_customer", JSON.stringify(user))
+	setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+}
 ```
-Next add the conditional logic on each route. Be sure to include the routes for login and register. You will need to import those components too.
+Next add the conditional logic checking the value of `isAuthenticated`. If there is not a user in session storage, `Redirect` to the login. Be sure to import `Redirect` from react-router-dom. 
+
+> `Redirect` - The new location will override the current location in the history stack
+
+Since the state of `isAuthenticated` lives in ApplicationViews, we need to pass the function that updates state to the `Login` and `Register` components.
 
 ```js
 <Route exact path="/animals">
-	if(isAuthenticated()) {
-		<AnimalList />
-	}else {
-		<Redirect to="/login"/>
-	}
+	{isAuthenticated ? <AnimalList /> : <Redirect to="/login" />}
 </Route>
 
 <Route path="/login">
-	<Login />
+	<Login setAuthUser={setAuthUser}/>
 </Route>
 
 <Route path="/register">
-	<Register />
+	<Register setAuthUser={setAuthUser}/>
 </Route>
 ```
 

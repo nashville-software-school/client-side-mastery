@@ -14,14 +14,17 @@ Make a new component directory named `auth` and add a file named `Login.js`.
 
 ```jsx
 import React, { useState } from "react"
+import { useHistory } from "react-router"
 
-const Login = props => {
+export const Login = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
+  const history = useHistory();
+
   // Update state whenever an input field is edited
-  const handleFieldChange = (evt) => {
+  const handleFieldChange = (event) => {
     const stateToChange = { ...credentials };
-    stateToChange[evt.target.id] = evt.target.value;
+    stateToChange[event.target.id] = event.target.value;
     setCredentials(stateToChange);
   };
 
@@ -62,7 +65,6 @@ const Login = props => {
   );
 };
 
-export default Login;
 ```
 
 ### Route to Show Login
