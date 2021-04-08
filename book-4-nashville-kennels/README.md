@@ -16,7 +16,7 @@ In this book, you will be learning the concepts and tools of React. React is a c
 10 | [Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | Close a Location
 11 | [Using Modules - API Calls & Helpers](./chapters/MODULES.md) |  | 
 12 | [Create Animal With A Form](./chapters/REACT_FORMS.md) | <sub style="font-size:0.85rem;">#useEffect #controlled Input </sub> | Create new Locations, Employees, and Customers
-13 | [Conditional Routing - Simple Login](./chapters/REACT_CONDITIONAL_RENDERING.md) | | Show content based on conditions
+13 | [Conditional Routing - Simple Login](./chapters/AUTHENTICATION.md) | | Show content based on conditions
 14 | [Edit Animal Details](./chapters/REACT_EDIT.md) | | 
 ##
 
