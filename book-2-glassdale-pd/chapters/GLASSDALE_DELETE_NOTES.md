@@ -6,7 +6,7 @@ As you keep notes during your investigation, you will eventually find that some 
 
 In your note HTML representation, add the following button.
 
-> #### `glassdale/scripts/notes/NoteList.js`
+> #### `glassdale/scripts/notes/Note.js`
 
 ```js
 <button id="deleteNote--${noteObject.id}">Delete</button>
@@ -25,6 +25,7 @@ const deleteNote = noteId => {
         method: "DELETE"
     })
         .then(getNotes)
+        .then(dispatchStateChangeEvent)
 }
 ```
 
@@ -32,7 +33,7 @@ const deleteNote = noteId => {
 
 In your note list component, add a new event listener to the event hub that captures any delete button click.
 
-> #### `glassdale/scripts/notes/NoteList.js`
+> #### `glassdale/scripts/notes/Note.js`
 
 ```js
 const eventHub = document.querySelector(".container")
@@ -43,17 +44,8 @@ eventHub.addEventListener("click", clickEvent => {
 
         /*
             Invoke the function that performs the delete operation.
-
-            Once the operation is complete you should THEN invoke
-            useNotes() and render the note list again.
         */
-       deleteNote(id).then(
-           () => {
-               const updatedNotes = useNotes()
-               const criminals = useCriminals()
-               render(updatedNotes, criminals)
-           }
-       )
+       deleteNote(id)
     }
 })
 ```

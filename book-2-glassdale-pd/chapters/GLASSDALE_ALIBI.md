@@ -1,5 +1,12 @@
 # Checking Alibis
 
+## Before this chapter...
+
+- `fetch()`
+- Arrays & array methods (`.find()`, `.map()`, etc.)
+- Iteration
+- Custom events
+
 > Now that you have the application able to find likely suspects, and you can start keeping notes as you investigate, you realize the next step would be to review statements from key people in the investigation.
 >
 > You see, with pleasure, each criminal invesitgation in the past kept a record of interviews with each criminal's known associates at the time of the crime.

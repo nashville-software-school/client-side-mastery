@@ -88,7 +88,9 @@ Now it's time to define the Routes for our application. In **`NavBar`**, you def
 
 In the **`ApplicationViews`** component, you will define how your application will respond when the URL matches each of those patterns. When a user clicks on one of the hyperlinks in the navigation bar, this code dictates which component should be rendered.
 
-**For this example, convert the static content of the `Kennel` component into a `Home` component.
+### Home Component
+
+Use this code for your homepage that will be displayed when navigating to the route of `/`.
 
 > ##### `src/components/Home.js`
 ```jsx
@@ -115,7 +117,8 @@ export const Home = () => (
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
-import { AnimalCard } from "./animal/AnimalCard"
+import { AnimalList } from "./animal/AnimalList"
+import { AnimalProvider } from "./animal/AnimalProvider"
 
 export const ApplicationViews = () => {
     return (
@@ -127,7 +130,9 @@ export const ApplicationViews = () => {
 
             {/* Render the animal list when http://localhost:3000/animals */}
             <Route path="/animals">
-                <AnimalCard />
+                <AnimalProvider>
+                    <AnimalList />
+                </AnimalProvider>
             </Route>
         </>
     )

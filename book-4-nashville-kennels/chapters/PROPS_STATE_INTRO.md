@@ -1,13 +1,13 @@
 # React Props and State
 
-Inside of components, make another file `PropsAndState.js`.
+Inside of the `components` directory, make another file `PropsAndState.js`.
 
 
 ## Props
 Pass your name into a component and display it.
 
 > PropsAndState.js
-```
+```jsx
 import React, from "react"
 
 export const PropsAndState = ({ yourName }) => {
@@ -22,9 +22,9 @@ export const PropsAndState = ({ yourName }) => {
 Display this component from the *Kennel* component and pass in your name. Don't forget to import.
 
 > Kennel.js
-```
+```jsx
 //--------
- <PropsAndState yourName={"Brenda"} />
+ <PropsAndState yourName="Brenda" />
   <h2>Animals</h2>
   <article className="animals">
     <AnimalCard />
@@ -45,10 +45,10 @@ Display this component from the *Kennel* component and pass in your name. Don't 
 
 #### Goal: Display how many times a button has been clicked.
 
-Within the **StateAndProps** component, we will define state and a function to update state with the `useState` hook. We will also create a function `to handleClick`.
+Within the **StateAndProps** component, we will define state and a function to update state with the `useState` hook. We will also create a function to `handleClick`.
 
 > PropsAndState.js - updated
-```
+```jsx
 import React, { useState } from "react"
 
 export const PropsAndState = ({ yourName }) => {
@@ -70,7 +70,3 @@ export const PropsAndState = ({ yourName }) => {
   )
 }
 ```
-
-
-
-

@@ -1,5 +1,10 @@
 # A Discussion about Loose Coupling
 
+## Before this chapter...
+
+- JS Events
+- `event.target`
+
 The concept of _coupling_ in complex software is an important factor. Coupling is defined most generally as how many components know about the existence of each other and how restrictive the interactions are.
 
 The higher that number, the higher your overall coupling is in an application. You want that number to be as low as possible.
