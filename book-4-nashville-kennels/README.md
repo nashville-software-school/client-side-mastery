@@ -16,37 +16,29 @@ In this book, you will be learning the concepts and tools of React. React is a c
 10 | [Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | Close a Location
 11 | [Using Modules - API Calls & Helpers](./chapters/MODULES.md) |  | 
 12 | [Create Animal With A Form](./chapters/REACT_FORMS.md) | <sub style="font-size:0.85rem;">#useEffect #controlled Input </sub> | Create new Locations, Employees, and Customers
-13 | [Conditional Routing - Simple Login](./chapters/AUTHENTICATION.md) | | Show content based on conditions
+13 | [Simple Authentication & Conditional Routing](./chapters/AUTHENTICATION.md) | | Show content based on conditions
 14 | [Edit Animal Details](./chapters/REACT_EDIT.md) | | Dropdown menus and edit Locations, Employees, and Customers
-
-
+15 | [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEEFFECT_DEPS.md) |<sub style="font-size:0.85rem;">#dependency array </sub> |
+16 |[React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md) | |
+17 | Sprint 3: Reactive Nutshell | |
+18 | Update LinkedIn Projects with Reactive Nutshell | | 
 ##
 
 
-**All of the above should be complete before proceeding.**
-
-* [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEEFFECT_DEPS.md)
-* [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
-* [React: Lifting state and passing props with Login](./chapters/REACT_LIFT_STATE_PASS_PROPS.md)
-* [React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md)
-
-> Sprint 3: Reactive Nutshell
-> LinkedIn Projects update with Reactive Nutshell
-
 **More Good Stuff**
-
+* [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
 * [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
 * [Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
+* Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
 
 
-Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
+| -+-  | ---------------- | ---------------- | ----------------
+--- | --- | --- | ---
+| -+-  ||Capstone Time | |
+| -+-  | ---------------- | ---------------- | ----------------
 
-> ## **Begin Client Side Capstone Development**
 
-
-> ### LinkedIn Projects: update with Reactive Nutshell
-
-Supplemental Chapters
+#### Supplemental Chapters
 * [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
 
 * [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)

@@ -84,16 +84,17 @@ We need to add a button to the **`<EmployeeCard>`** for details using `history.p
 
 ```jsx
 <button type="button"
-        onClick={() => { props.history.push(`/employees/${props.employee.id}/details`) }}>Details</button>
+        onClick={() => { history.push(`/employees/${employee.id}/details`) }}>Details</button>
 ```
 
-We also need to add a route to **`<ApplicationViews>`** to handle displaying details of a single employee. This route will return a new component: **`<EmployeeWithAnimals>`** which we will build next. Notice that we are passing `{...props}` to enable access to react-router-dom properties.
+We also need to add a route to **`<ApplicationViews>`** to handle displaying details of a single employee. This route will return a new component: **`<EmployeeWithAnimals>`** which we will build next.
 
 > ApplicationViews.js
 
 ```js
-<Route path="/employees/:employeeId(\d+)/details" render={(props) => {
-    return <EmployeeWithAnimals {...props} />
+<Route path="/employees/:employeeId(\d+)/details">
+  <EmployeeWithAnimals />
+</Route>/>
 }} />
 
 ```
@@ -110,13 +111,15 @@ import React, { useState, useEffect } from 'react'
 import EmployeeManager from '../../modules/EmployeeManager'
 import AnimalCard from '../animal/AnimalCard'
 
-const EmployeeWithAnimals = props => {
+export const EmployeeWithAnimals = () => {
   const [employee, setEmployee] = useState({});
   const [animals, setAnimals] = useState([]);
 
+  const {employeeId} = useParams();
+
   useEffect(() => {
     //got here now make call to get employee with animal
-    EmployeeManager.getWithAnimals(props.match.params.employeeId)
+    EmployeeManager.getWithAnimals(employeeId)
       .then(APIResult => {
         setEmployee(APIResult);
         setAnimals(APIResult.animals);
@@ -130,14 +133,12 @@ const EmployeeWithAnimals = props => {
         <AnimalCard
           key={animal.id}
           animal={animal}
-          {...props}
         />
       )}
     </div>
   );
 };
 
-export default EmployeeWithAnimals;
 ```
 
 Test it out. Each employee should display a list of animals. However, we are not done.
@@ -184,7 +185,7 @@ If you haven't already done so, be sure to add the link to employees in the **`<
 
 ## Practice - Handle the delete
 
-If we discharge an animal from the `EmployeeWithAnimals` component, we will receive an error `props.deleteAnimal is not a function`.
+If we discharge an animal from the `EmployeeWithAnimals` component, we will receive an error `deleteAnimal is not a function`.
 
 There are a few of ways to handle this situation.
 

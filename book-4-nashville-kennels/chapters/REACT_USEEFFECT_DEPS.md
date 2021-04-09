@@ -45,24 +45,21 @@ In the `src/components/animal/` folder, create the following files:
 
 ```js
 import React, { useState, useEffect } from "react";
-import AnimalManager from "../../modules/AnimalManager";
+import { getAnimalById } from "../../modules/AnimalManager";
 import "./AnimalSpotlight.css";
 
-const AnimalSpotlight = props => {
-  const [animal, setAnimal] = useState({ name: "", breed: "" });
+export const AnimalSpotlight = ({animalId}) => {
+  const [animal, setAnimal] = useState({});
 
   useEffect(() => {
-    AnimalManager.get(props.animalId).then(animal => {
-      setAnimal({
-        name: animal.name,
-        breed: animal.breed
-      });
+    getAnimalById(animalId).then(animal => {
+      setAnimal(animal);
     });
   }, []);
 
   return (
     <div className="animal-spotlight">
-      <img src={require('./dog.svg')} alt="My Dog" />
+      {/* <img src={require('./dog.svg')} alt="My Dog" /> */}
       <div>
         <h3>{animal.name}</h3>
         <p>{animal.breed}</p>
@@ -71,7 +68,6 @@ const AnimalSpotlight = props => {
   );
 };
 
-export default AnimalSpotlight;
 ```
 
 Notice the `<AnimalSpotlight>` component expects an `animalId` prop. We use this prop to get a single animal from the API.
@@ -83,14 +79,15 @@ Next, let's update the `<Home>` component.
 
 ```jsx
 import React, { useState, useEffect } from "react";
-import AnimalSpotlight from "../animal/AnimalSpotlight";
-import AnimalManager from "../../modules/AnimalManager";
+import { AnimalSpotlight } from "../components/animal/AnimalSpotlight"
+import { getRandomId } from "../modules/AnimalManager"
+import { PropsAndState } from "./PropsAndState";
 
-const Home = () => {
+export const Home = () => {
   const [spotlightId, setSpotlightId] = useState(0);
 
   const refreshSpotlightAnimal = () => {
-    AnimalManager.getRandomId().then(setSpotlightId);
+    getRandomId().then(setSpotlightId);
   };
 
   useEffect(() => {
@@ -113,7 +110,6 @@ const Home = () => {
   );
 };
 
-export default Home;
 ```
 
 As you can see the `<Home>` component uses the new `<AnimalSpotlight>` component. It also refers to a new method on `AnimalManager` called `getRandomId()`.
@@ -121,8 +117,8 @@ As you can see the `<Home>` component uses the new `<AnimalSpotlight>` component
 > src/modules/AnimalManager.js
 
 ```js
-// Add this method to the AnimalManager object
-getRandomId() {
+// Add this method to the AnimalManager
+export const getRandomId = () => {
   return fetch(`${remoteURL}/animals`)
     .then(result => result.json())
     .then(animals => {
@@ -144,14 +140,11 @@ Also, note that clicking the "reload" button has no affect on the `<AnimalSpotli
 To fix this issue, we must tell React to watch the `animalId` prop. We do that by including it in the `useEffect()` array argument.
 
 ```js
-useEffect(() => {
-  AnimalManager.get(props.animalId).then(animal => {
-    setAnimal({
-      name: animal.name,
-      breed: animal.breed
+ useEffect(() => {
+    getAnimalById(animalId).then(animal => {
+      setAnimal(animal);
     });
-  });
-}, [props.animalId]);
+  }, [animalId]);
 ```
 
 Now try the app again and notice that it works as expected. When the `animalId` prop changes, the `useEffect()` runs again to retrieve a new animal.

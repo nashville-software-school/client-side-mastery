@@ -7,25 +7,44 @@
 
 ## Refactor Kennel
 
-Since the state of user is held in **`<Kennel>`**, we need to write a function that will clear the user and update state. We will then pass `clearUser()` to the **`<NavBar>`** component.
+Where does the state of the user live? What components need access to the state? With the inclusion of a logout button on the navbar, `NavBar` and `ApplicationViews` will need access to state. 
+
+Refactor the **`<Kennel>`** to `useState`. We will also write a function that will clear the user and update state. We will then pass `clearUser()` to the **`<NavBar>`** component.
 
 >Kennel.js
 
 ```jsx
-const clearUser = () => {
-  sessionStorage.clear();
-  setHasUser(isAuthenticated());
+//refactor 
+import { NavBar } from "./nav/NavBar"
+import { ApplicationViews } from "./ApplicationViews"
+import "./Kennel.css"
+
+export const Kennel = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
+
+    const setAuthUser = (user) => {
+        sessionStorage.setItem("kennel_customer", JSON.stringify(user))
+        setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+    }
+
+    const clearUser = () => {
+        sessionStorage.clear();
+        setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+      }
+
+    return (
+        <>
+            <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated}/>
+            <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated}/>
+        </>
+    )
 }
 
-
-//------------------
-//pass `clearUser()` as props to the **`<NavBar>`** component
-<NavBar hasUser={hasUser} clearUser={clearUser} />
 ```
 
 ### Props of NavBar Component
 
-* hasUser (variable from state of Kennel)
+* isAuthenticated (variable from state of Kennel)
 * clearUser (function from Kennel)
 
 ## Refactor NavBar Component
@@ -41,56 +60,49 @@ We will also need to display the login/logout based on the user status. You can 
 ```jsx
 import React from "react";
 import { withRouter } from 'react-router-dom';
-import { Link } from "react-router-dom";
-import "./NavBar.css";
+import { Link, useHistory } from "react-router-dom";
+import "./NavBar.css"
 
-const NavBar = props => {
-  const handleLogout = () => {
-    props.clearUser();
-    props.history.push('/');
-  }
+const NavBar = ({ clearUser, isAuthenticated }) => {
+    const history = useHistory()
 
-  return (
-    <header>
-      <h1 className="site-title">
-        Student Kennels
-        <br />
-        <small>Loving care when you're not there.</small>
-      </h1>
-      <nav>
-        <ul className="container">
-          <li>
-            <Link className="nav-link" to="/"> Home </Link>
-          </li>
-          {props.hasUser
-            ? <li>
-                <Link className="nav-link" to="/animals"> Animals </Link>
-              </li>
-            : null}
-          <li>
-            <Link className="nav-link" to="/locations"> Locations </Link>
-          </li>
-          {props.hasUser
-            ? <li>
-                <Link className="nav-link" to="/employees"> Employees </Link>
-              </li>
-            : null}
-          {props.hasUser
-            ? <li>
-                <Link className="nav-link" to="/owners"> Owners </Link>
-              </li>
-            : null}
-          {props.hasUser
-            ? <li>
-                <span className="nav-link" onClick={handleLogout}> Logout </span>
-              </li>
-            : <li>
-                <Link className="nav-link" to="/login">Login</Link>
-              </li>}
+    const handleLogout = () => {
+        clearUser();
+        history.push('/');
+    }
+
+    return (
+        <ul className="navbar">
+            <li className="navbar__item">
+                <Link className="navbar__link" to="/"> Home </Link>
+            </li>
+            {isAuthenticated
+                ? <li className="navbar__item">
+                    <Link className="navbar__link" to="/animals"> Animals </Link>
+                </li>
+                : null}
+            <li className="navbar__item">
+                <Link className="navbar__link" to="/locations"> Locations </Link>
+            </li>
+            {isAuthenticated
+                ? <li className="navbar__item">
+                    <Link className="navbar__link" to="/employees"> Employees </Link>
+                </li>
+                : null}
+            {isAuthenticated
+                ? <li className="navbar__item">
+                    <Link className="navbar__link" to="/owners"> Owners </Link>
+                </li>
+                : null}
+            {isAuthenticated
+                ? <li className="navbar__item">
+                    <span className="navbar__link" onClick={handleLogout}> Logout </span>
+                </li>
+                : <li className="navbar__item">
+                    <Link className="navbar__link" to="/login">Login</Link>
+                </li>}
         </ul>
-      </nav>
-    </header>
-  );
+    );
 };
 
 export default withRouter(NavBar);
