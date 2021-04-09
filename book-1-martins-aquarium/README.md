@@ -20,12 +20,12 @@
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
 | 1 | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
-| 1 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
+| 2 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
 
 ## Pioneer Chapters
 
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
 | 1 | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
-| 1 | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
-| 1 | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
+| 2 | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
+| 3 | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
