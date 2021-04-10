@@ -12,11 +12,11 @@ In this book, you will be introduced to the basics of asynchronous programming a
 | 4 | [Listing Past Requests](./chapters/AS_FETCH_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET</sub> | |  |
 | 5 | [Requesting Service](./chapters/AS_USER_INPUT.md) <br/> <sub style="font-size:0.85rem;">#input #form-fields</sub> |  | [Engraving Request](./chapters/KD_USER_INPUT.md) |
 | 6 | [Submitting Service Request](./chapters/AS_HTTP_POST.md) <br/> <sub style="font-size:0.85rem;">#POST #fetch #JSON</sub> | [Reserving Buttons](./chapters/BC_RESERVATION_POST.md) | [Delivery Instructions](./chapters/KD_COMPLETE_ORDER.md) |
-| # | [Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> | [Buttons' Schedule](./chapters/BC_SCHEDULE_LIST.md) | [Displaying Jewelry Orders](./chapters/KD_GETTING_NEW_STATE.md) |
-| # | [Denying Service Requests](./chapters/AS_HTTP_DELETE.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #DELETE</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) | [Final Sale](./chapters/KD_DELETE_ORDER.md) |
+| 7 | [Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> | [Buttons' Schedule](./chapters/BC_SCHEDULE_LIST.md) | [Displaying Jewelry Orders](./chapters/KD_GETTING_NEW_STATE.md) |
+| 8 | [Denying Service Requests](./chapters/AS_HTTP_DELETE.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #DELETE</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) | [Final Sale](./chapters/KD_DELETE_ORDER.md) |
 
 ## Explorer Chapters
 
 | # | 🔧 💧 <br/> A-Sink Repairs <sub> <br/> (_Guided Tour_)</sub> | 💎 💍  <br/> Kneel Diamonds | 🚙 🚗 <br/> Car Builder |
 |--|--|--|--|
-| # | [Updating Service Requests](./chapters/AS_HTTP_PUT.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #PUT</sub> | [Customer Reviews](./chapters/KD_REVIEWS.md) | [Service Requests](./chapters/CB_SERVICE_FORM.md) |
+| 1 | [Updating Service Requests](./chapters/AS_HTTP_PUT.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #PUT</sub> | [Customer Reviews](./chapters/KD_REVIEWS.md) | [Service Requests](./chapters/CB_SERVICE_FORM.md) |
