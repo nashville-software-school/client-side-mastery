@@ -6,16 +6,13 @@
 
 When you use the DELETE method on an HTTP request, you must identify a single resource.
 
-
-| | |
-|:---:|:---|
-| <h1>&#x2757;</h1> |  _You can't delete an entire collection with a single HTTP request. Else the Universe will implode on you!!_ |
-
-
+|                   |                                                                                                             |
+| :---------------: | :---------------------------------------------------------------------------------------------------------- |
+| <h1>&#x2757;</h1> | _You can't delete an entire collection with a single HTTP request. Else the Universe will implode on you!!_ |
 
 Therefore, the function whose responsiblity it is to initiate the fetch request for DELETE must have the primary key sent to it as an argument.
 
-> #### `sink-repair/src/scripts/dataAccess.js`
+> **`sink-repair/src/scripts/dataAccess.js`**
 
 ```js
 export const deleteRequest = (id) => {
@@ -32,7 +29,7 @@ export const deleteRequest = (id) => {
 
 Now that you have a function that can send a DELETE request to the API, you can add a button for the user to click and initiate that process. Add the button element right next to the text of each request.
 
-> #### `sink-repair/src/scripts/Requests.js`
+> **`sink-repair/src/scripts/Requests.js`**
 
 ```js
 return `
@@ -50,7 +47,7 @@ return `
 
 Now add an event listener to the main container. When the user clicks on any of the delete buttons, invoke the `deleteRequest()` function you just made above. Make sure you pass the `id` of the service request to the `deleteRequest()` function as an argument.
 
-> #### `sink-repair/src/scripts/Requests.js`
+> **`sink-repair/src/scripts/Requests.js`**
 
 ```js
 const mainContainer = document.querySelector("#container")
