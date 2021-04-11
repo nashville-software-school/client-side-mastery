@@ -23,7 +23,6 @@ Note that the value of each option in the select element has the primary key of 
 </select>`
 ```
 
-
 ## Creating New State for Completion
 
 Add the following event listener to your requests module.
@@ -53,3 +52,10 @@ mainContainer.addEventListener(
     }
 )
 ```
+
+## Saving Completion State
+
+Create two functions in your `dataAccess` module.
+
+* `saveCompletion()` - This will perform the POST request to save the completion object to the API
+* `fetchCompletions()` - This will retrieve all completion objects from the API
