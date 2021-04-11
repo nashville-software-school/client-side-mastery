@@ -12,8 +12,8 @@ They want a form where a person can enter in a description of the job, the addre
 
 Once they are done with a job, they want a way to...
 
-1. Track who worked on the service request. It could be only one of them that worked on the job, or they could both work on it if it's a large job.
-1. Once Maude and/or Merle are recorded to have finished the job, they want the UI to reflect that the job is complete.
+1. Track who worked on the service request.
+2. Once Maude and/or Merle are recorded to have finished the job, they want the UI to reflect that the job is complete.
 
 If they don't have time to work on a particular request, they want the ability to delete it from the list.
 
