@@ -16,9 +16,9 @@ In this book, you will be introduced to the basics of asynchronous programming a
 | 8 | [Denying Service Requests](./chapters/AS_HTTP_DELETE.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #DELETE</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) |
 | 🎓 | [Self-assessment](./chapters/BOOK_5_ASSESSMENT.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> |  |
 
-
 ## Explorer Chapters
 
 | # | 🔧 💧 <br/> A-Sink Repairs <sub> <br/> (_Guided Tour_)</sub> | 🤡 <br/> Buttons the Clown |
 |--|--|--|
-| 1 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md) | [Customer Reviews](./chapters/KD_REVIEWS.md) |
+| 1 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md) | [The Party is Over](./chapters/KD_PERFORMANCE_COMPLETE.md) |
+| 2 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) | [The Party is Over](./chapters/KD_PERFORMANCE_COMPLETE.md) |
