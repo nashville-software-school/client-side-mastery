@@ -21,4 +21,4 @@ In this book, you will be introduced to the basics of asynchronous programming a
 | # | 🔧 💧 <br/> A-Sink Repairs <sub> <br/> (_Guided Tour_)</sub> | 🤡 <br/> Buttons the Clown |
 |--|--|--|
 | 1 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md) | [The Party is Over](./chapters/KD_PERFORMANCE_COMPLETE.md) |
-| 2 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) | [The Party is Over](./chapters/KD_PERFORMANCE_COMPLETE.md) |
+| 2 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) |  |
