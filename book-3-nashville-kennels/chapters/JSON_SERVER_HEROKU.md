@@ -93,7 +93,7 @@ You can straight up copy pasta this into a `package.json` file in your API repo.
 
 ## Example server.js
 
-Here's a sample `server.js` file that you can put in your API repo.  Replace `yak.json` below with the same of your JSON file.
+Here's a sample `server.js` file that you can put in your API repo.  Replace `yak.json` below with the name of your JSON file.
 
 ```js
 const jsonServer = require('json-server');
