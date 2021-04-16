@@ -2,7 +2,7 @@
 
 Maude &amp; Merle Baumgardner were married in 1994 after a brief courtship. They are both licensed plumbers and met while working a job together on a major office building.
 
-Spark flew.
+Sparks flew.
 
 Now they have decided to start a family business and started a sink repair and plumbing service.
 

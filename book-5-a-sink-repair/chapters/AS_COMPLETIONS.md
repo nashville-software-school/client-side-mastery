@@ -8,7 +8,7 @@ When Maude or Merle have completed a job, they would like to choose their name f
 
 You can place this `<select>` element wherever is easiest to start. Don't worry about the exact placement, just make sure that it is displayed for each service request.
 
-Note that the value of each option in the select element has the primary key of the service request AND the primary key of the plumber delimited with 2 dashes. This is needed because you need to have both the request and the chosen plumber to mark a job complete.
+Note that the value of each option in the select element has the primary key of the service request AND the primary key of the plumber delimited with 2 dashes. This is because you need to have both the request and the chosen plumber to mark a job complete.
 
 ```js
 <select class="plumbers" id="plumbers">

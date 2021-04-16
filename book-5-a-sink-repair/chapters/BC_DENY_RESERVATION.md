@@ -1,6 +1,6 @@
 # Denied!
 
-Sometime Button and Lollipop have conflicting reservations, or are just unavailable during a requested time. Add a `<button>` next to each reservation with the word "Deny" as the text of the button. Make sure the `id` attribute of each button contains the primary key of the request.
+Sometimes Buttons and Lollipop have conflicting reservations, or are just unavailable during a requested time. Add a `<button>` next to each reservation with the word "Deny" as the text of the button. Make sure the `id` attribute of each button contains the primary key of the request.
 
 Then add a click event listener that reacts to the delete button being clicked. Extract the primary key from the `event.target.id` using the `.split("--")` technique along with array destructuring.
 

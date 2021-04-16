@@ -63,7 +63,7 @@ Time to practice your CSS. Your goal is to make the form look like this.
 
 * Do not put the CSS in `main.css`. Create another module whose responsibility is to style the request form.
 * Use `flex-direction: column` on the wrapper `<div>` elements.
-* Copy the button CSS from a previous project and choose a baackground color and font color of you choice.
+* Copy the button CSS from a previous project and choose a background color and font color of your choice.
 * Make the font size of the labels slightly larger than the default size.
 
 ![](./images/initial-request-form.png)

@@ -32,7 +32,7 @@ You should see the following output. If you don't, see an instructor.
 
 ## Application State
 
-You will need to store that external data in your application state when you fetch it. Create a property names `requests` in your application state object. Its inital value must be an empty array.
+You will need to store that external data in your application state when you fetch it. Create a property named `requests` in your application state object. Its initial value must be an empty array.
 
 ## HTTP GET Request with Fetch
 
@@ -84,7 +84,7 @@ render()
 
 ## Core Skills: Critical and Creative Thinking
 
-Here is some starter code. You need to define the function for the `map()` method to convert the service request objects into HTML representations. Since it is wrapped with a `<ul>` element, make each one an `<li>` element showing only the description of the request to start.
+Here is some starter code.
 
 > #### `sink-repair/src/scripts/SinkRepair.js`
 
@@ -106,7 +106,14 @@ export const SinkRepair = () => {
 }
 ```
 
+In the following code, you will need to define the function that will be passed to the `map()` method.
+
+The function you write will convert each service request object into HTML representations. Since it is wrapped with a `<ul>` element, make each one an `<li>` element showing only the description of the request to start.
+
+For example, if you write a function named `convertRequestToListElement`, then you would update the code below to `requests.map(convertRequestToListElement)`.
+
 > #### `sink-repair/src/scripts/Requests.js`
+
 
 ```js
 import { getRequests } from "./dataAccess.js"
