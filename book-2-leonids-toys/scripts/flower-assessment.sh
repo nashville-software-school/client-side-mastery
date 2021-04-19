@@ -1,9 +1,9 @@
 #!/bin/bash
 set -u
 
-WORKSPACE="$HOME/workspace"
-mkdir -p "$WORKSPACE/flowers"
-cd "$WORKSPACE/flowers"
+NSS_WORKSPACE="$HOME/workspace"
+mkdir -p "$NSS_WORKSPACE/flowers"
+cd "$NSS_WORKSPACE/flowers"
 
 
 echo 'const flowers = [

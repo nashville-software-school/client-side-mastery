@@ -1,12 +1,12 @@
 #!/bin/bash
 set -u
 
-# set WORKSPACE in your environment to change the location of your workspace
-WORKSPACE="$HOME/workspace"
+# set NSS_WORKSPACE in your environment to change the location of your workspace
+NSS_WORKSPACE="$HOME/workspace"
 
-mkdir -p "$WORKSPACE/kneel-diamonds/scripts"
-mkdir -p "$WORKSPACE/kneel-diamonds/styles"
-cd "$WORKSPACE/kneel-diamonds"
+mkdir -p "$NSS_WORKSPACE/kneel-diamonds/scripts"
+mkdir -p "$NSS_WORKSPACE/kneel-diamonds/styles"
+cd "$NSS_WORKSPACE/kneel-diamonds"
 
 echo '<!doctype html>
 <html lang="en">

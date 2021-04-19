@@ -1,14 +1,14 @@
 #!/bin/bash
 set -u
 
-WORKSPACE="$HOME/workspace"
-mkdir -p "$WORKSPACE/statefair"
-mkdir -p "$WORKSPACE/statefair/scripts/rides"
-mkdir -p "$WORKSPACE/statefair/scripts/food"
-mkdir -p "$WORKSPACE/statefair/scripts/games"
-mkdir -p "$WORKSPACE/statefair/scripts/sideshows"
-mkdir -p "$WORKSPACE/statefair/styles"
-cd "$WORKSPACE/statefair"
+NSS_WORKSPACE="$HOME/workspace"
+mkdir -p "$NSS_WORKSPACE/statefair"
+mkdir -p "$NSS_WORKSPACE/statefair/scripts/rides"
+mkdir -p "$NSS_WORKSPACE/statefair/scripts/food"
+mkdir -p "$NSS_WORKSPACE/statefair/scripts/games"
+mkdir -p "$NSS_WORKSPACE/statefair/scripts/sideshows"
+mkdir -p "$NSS_WORKSPACE/statefair/styles"
+cd "$NSS_WORKSPACE/statefair"
 
 
 echo '<!doctype html>

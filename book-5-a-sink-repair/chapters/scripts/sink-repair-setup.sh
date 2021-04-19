@@ -1,11 +1,11 @@
 #!/bin/bash
 set -u
 
-WORKSPACE="$HOME/workspace"
-mkdir -p "$WORKSPACE/sink-repair/api"
-mkdir -p "$WORKSPACE/sink-repair/src/scripts"
-mkdir -p "$WORKSPACE/sink-repair/src/styles"
-cd "$WORKSPACE/sink-repair/api"
+NSS_WORKSPACE="$HOME/workspace"
+mkdir -p "$NSS_WORKSPACE/sink-repair/api"
+mkdir -p "$NSS_WORKSPACE/sink-repair/src/scripts"
+mkdir -p "$NSS_WORKSPACE/sink-repair/src/styles"
+cd "$NSS_WORKSPACE/sink-repair/api"
 
 echo '{
     "plumbers": [],
@@ -21,7 +21,7 @@ echo '{
     ]
 }' > database.json
 
-cd "$WORKSPACE/sink-repair/src"
+cd "$NSS_WORKSPACE/sink-repair/src"
 
 echo '<!doctype html>
 <html lang="en">

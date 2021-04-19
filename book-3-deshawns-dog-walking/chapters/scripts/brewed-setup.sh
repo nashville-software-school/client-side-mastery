@@ -1,10 +1,10 @@
 #!/bin/bash
 set -u
 
-WORKSPACE="$HOME/workspace"
-mkdir -p "$WORKSPACE/brewed-awakenings/scripts"
-mkdir -p "$WORKSPACE/brewed-awakenings/styles"
-cd "$WORKSPACE/brewed-awakenings"
+NSS_WORKSPACE="$HOME/workspace"
+mkdir -p "$NSS_WORKSPACE/brewed-awakenings/scripts"
+mkdir -p "$NSS_WORKSPACE/brewed-awakenings/styles"
+cd "$NSS_WORKSPACE/brewed-awakenings"
 
 echo '<!doctype html>
 <html lang="en">

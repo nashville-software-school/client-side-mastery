@@ -1,10 +1,10 @@
 #!/bin/bash
 set -u
 
-WORKSPACE="$HOME/workspace"
-mkdir -p "$WORKSPACE/assessments/debugging-events/scripts"
-mkdir -p "$WORKSPACE/assessments/debugging-events/styles"
-cd "$WORKSPACE/assessments/debugging-events"
+NSS_WORKSPACE="$HOME/workspace"
+mkdir -p "$NSS_WORKSPACE/assessments/debugging-events/scripts"
+mkdir -p "$NSS_WORKSPACE/assessments/debugging-events/styles"
+cd "$NSS_WORKSPACE/assessments/debugging-events"
 
 echo '<!doctype html>
 <html lang="en">
