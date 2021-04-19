@@ -14,6 +14,19 @@ Your job is to deconstruct the deployed version of the application. Given your k
 4. What state is transient? Is there any state being tracked, but not permanently in the API?
 5. What event listeners are used in this application? Which components have event listeners?
 6. What fetch calls are used in this application to modify state? What method (GET, POST, DELETE) is used on each?
+7. What bugs/incomplete features still need to be fixed or implemented?
 
 Once your team feels that you have adequately deconstructed Giffygram, schedule a review with an instructor and present your findings.
 
+## Accounts
+
+You can use the following credentials to log in as different users.
+
+| Email | Password |
+|--|--|
+| daniella@agnoletti.com | daniella |
+| ray@medrano.com | ray |
+| meg@ducharme.com | meg |
+| mark@ellis.com | mark |
+| kimmy@bird.com | kimmy |
+| emily@lemmon.com | emily |
