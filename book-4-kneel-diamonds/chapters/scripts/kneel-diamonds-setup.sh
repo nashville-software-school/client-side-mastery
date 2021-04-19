@@ -1,8 +1,8 @@
 #!/bin/bash
 set -u
 
-# set NSS_WORKSPACE in your environment to change the location of your workspace
-NSS_WORKSPACE="$HOME/workspace"
+# ${VAR=default} syntax uses whatever is on the right of the equals sign if the variable is unset *without triggering an error caused by `set -u`*
+echo Using workspace: ${NSS_WORKSPACE="$HOME/workspace"}
 
 mkdir -p "$NSS_WORKSPACE/kneel-diamonds/scripts"
 mkdir -p "$NSS_WORKSPACE/kneel-diamonds/styles"
