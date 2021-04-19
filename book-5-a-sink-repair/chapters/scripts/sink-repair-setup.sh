@@ -73,7 +73,7 @@ export const SinkRepair = () => {
     </section>
     `
 }
-'
+' > ./scripts/SinkRepair.js
 
 echo 'import { SinkRepair } from "./SinkRepair.js"
 
