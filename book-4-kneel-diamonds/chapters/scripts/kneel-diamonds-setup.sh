@@ -1,9 +1,12 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/kneel-diamonds/scripts
-mkdir -p $HOME/workspace/kneel-diamonds/styles
-cd $HOME/workspace/kneel-diamonds
+# set WORKSPACE in your environment to change the location of your workspace
+WORKSPACE="$HOME/workspace"
+
+mkdir -p "$WORKSPACE/kneel-diamonds/scripts"
+mkdir -p "$WORKSPACE/kneel-diamonds/styles"
+cd "$WORKSPACE/kneel-diamonds"
 
 echo '<!doctype html>
 <html lang="en">

@@ -1,9 +1,10 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/dog-walking/scripts
-mkdir -p $HOME/workspace/dog-walking/styles
-cd $HOME/workspace/dog-walking
+WORKSPACE="$HOME/workspace"
+mkdir -p "$WORKSPACE/dog-walking/scripts"
+mkdir -p "$WORKSPACE/dog-walking/styles"
+cd "$WORKSPACE/dog-walking"
 
 echo '<!doctype html>
 <html lang="en">

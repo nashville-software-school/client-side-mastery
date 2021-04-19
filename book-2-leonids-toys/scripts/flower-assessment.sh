@@ -1,8 +1,9 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/flowers
-cd $HOME/workspace/flowers
+WORKSPACE="$HOME/workspace"
+mkdir -p "$WORKSPACE/flowers"
+cd "$WORKSPACE/flowers"
 
 
 echo 'const flowers = [

@@ -1,8 +1,9 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/giffygram/src/styles
-cd $HOME/workspace/giffygram/src/styles
+WORKSPACE="$HOME/workspace"
+mkdir -p "$WORKSPACE/giffygram/src/styles"
+cd "$WORKSPACE/giffygram/src/styles"
 
 echo '@import "navigation.css";
 @import "footer.css";

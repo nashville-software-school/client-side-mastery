@@ -1,11 +1,12 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/modern-farm/src/scripts/seeds
-mkdir -p $HOME/workspace/modern-farm/src/styles
-mkdir -p $HOME/workspace/modern-farm/test
+WORKSPACE="$HOME/workspace"
+mkdir -p "$WORKSPACE/modern-farm/src/scripts/seeds"
+mkdir -p "$WORKSPACE/modern-farm/src/styles"
+mkdir -p "$WORKSPACE/modern-farm/test"
 
-cd $HOME/workspace/modern-farm
+cd "$WORKSPACE/modern-farm"
 git init
 
 echo '{
@@ -53,7 +54,7 @@ echo '{
 }
 ' > package.json
 
-cd $HOME/workspace/modern-farm/test
+cd "$WORKSPACE/modern-farm/test"
 
 echo 'import { createPlan } from "../src/scripts/plan.js"
 import { plantSeeds } from "../src/scripts/tractor.js";
@@ -188,7 +189,7 @@ describe("Harvesting the grown plants", () => {
 })
 ' > farm.test.js
 
-cd $HOME/workspace/modern-farm/src
+cd "$WORKSPACE/modern-farm/src"
 
 echo '<!doctype html>
 <html lang="en">
