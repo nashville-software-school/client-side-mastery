@@ -6,12 +6,14 @@ This is an application that students can build throughout the client side course
 |--|--|
 | 1 | [Wireframes](./chapters/DAILY_JOURNAL_WIREFRAME.md) |
 | 2 | [HTML Layout and Form](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |
-| 3 | [Entry API](./chapters/DAILY_JOURNAL_FETCHING.md) |
-| 4 | [Journal Form Component](./chapters/DAILY_JOURNAL_FORM_COMPONENT.md) |
-| 5 |  [Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md) |
-| 6 | [Recording your Mood](./chapters/DAILY_JOURNAL_MOOD.md) |
-| 7 | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) |
-| 8 | [Filtering by Mood](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) |
+| 3 | [Journal Entry Objects](./chapters/DAILY_JOURNAL_OBJECT_DOM.md) |
+| 4 | [Rendering Collections of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md) |
+| 5 | [Journal Form Component](./chapters/DAILY_JOURNAL_FORM_COMPONENT.md) |
+| 6 | [Entry API](./chapters/DAILY_JOURNAL_FETCHING.md) |
+| 7 | [Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md) |
+| 8 | [Recording your Mood](./chapters/DAILY_JOURNAL_MOOD.md) |
+| 9 | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) |
+| 10 | [Filtering by Mood](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md) |
 
 ## Explorer Chapters
 
