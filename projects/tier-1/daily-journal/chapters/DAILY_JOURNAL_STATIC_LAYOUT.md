@@ -33,13 +33,20 @@ You are going to use the `form` component, the `fieldset`, `label`, `input`, `te
 
 The first step is to create a date field.
 
-![date field creation](./images/MArcqtbyj6.gif)
+```html
+<main id="container">
+    <form class="entryForm">
+        <fieldset>
+            <label for="entryDate">Date</label>
+            <input type="date" name="entryDate" class="entryForm__date">
+        </fieldset>
+    </form>
+</main>
+```
 
 Then create an `<h2>` element above the form containing the text _Daily Journal_.
 
-Save your file. Go to the terminal. Type in `serve`. Then go to Chrome and open your dev tools to ensure you aren't viewing a cached version of the site. Refresh the browser if you need to.
-
-You should see something like this.
+Save your file. Go to the terminal. Type in `serve`. You should see something like this.
 
 ![date field in action](./images/Qy2gJq5gv8.gif)
 
@@ -56,4 +63,10 @@ Now use the `display: flex`, and `flex-direction: column` CSS properties to chan
 
 ![](./images/P5FPNsVInT.gif)
 
-**Once your project is pushed to GitHub, be sure to include your wireframe in the `README.md` file.**
+## List Element
+
+After your form HTML, but before the closing `</main>` tag, add the following article element. You will be using this element in later chapters to display your journal entries.
+
+```html
+<article id="entries"></article>
+```
