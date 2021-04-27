@@ -8,7 +8,7 @@ Create the directories and files with the following commands. You can copy/pasta
 mkdir -p ~/workspace/dothard-simbleton/scripts
 mkdir -p ~/workspace/dothard-simbleton/styles
 cd ~/workspace/dothard-simbleton
-touch index.html scripts/main.js scripts/dtabase.js scripts/BusinessList.js scripts/Business.js styles/main.css
+touch index.html scripts/main.js scripts/database.js scripts/BusinessList.js scripts/Business.js styles/main.css
 ```
 
 ## Your First Day at Dothard & Simbleton
@@ -39,10 +39,15 @@ It's your first day on the job, and Doris sits with you at your desk and talks a
 
 Each file contains an array with 15 objects in it. Each object represents one active customer. It details the address, purchasing agent, and the total dollar amount of that company's last 5 orders.
 
+> **`dothard-simbleton/scripts/database.js`**
+
 ```js
 const businesses = [
   {
-    purchasingAgent: { nameLast: "Kirlin", nameFirst: "Kristy" },
+    purchasingAgent: {
+      nameLast: "Kirlin",
+      nameFirst: "Kristy",
+    },
     phoneWork: "089.129.2290 x9400",
     orders: [7826.96, 8323.11, 5756.28, 6308.42, 5622.28],
     companyName: "Care-media",
@@ -50,10 +55,13 @@ const businesses = [
     addressZipCode: "56839",
     addressStateCode: "WI",
     addressFullStreet: "8417 Franklin Court Tunnel",
-    addressCity: "Mouthcard"
+    addressCity: "Mouthcard",
   },
   {
-    purchasingAgent: { nameLast: "Steuber", nameFirst: "Kamron" },
+    purchasingAgent: {
+      nameLast: "Steuber",
+      nameFirst: "Kamron",
+    },
     phoneWork: "(833) 222-7579 x5874",
     orders: [6252.5, 9769.02, 9521.17, 7994.05, 7945.93],
     companyName: "Stanholding",
@@ -61,10 +69,13 @@ const businesses = [
     addressZipCode: "09705",
     addressStateCode: "NY",
     addressFullStreet: "2889 Fawn Court Garden",
-    addressCity: "Fellsmere"
+    addressCity: "Fellsmere",
   },
   {
-    purchasingAgent: { nameLast: "Gutkowski", nameFirst: "Kaylee" },
+    purchasingAgent: {
+      nameLast: "Gutkowski",
+      nameFirst: "Kaylee",
+    },
     phoneWork: "235.266.6278",
     orders: [7634.43, 9766.72, 9953.45, 6559.8, 5054.9],
     companyName: "Highnix",
@@ -72,10 +83,13 @@ const businesses = [
     addressZipCode: "49376",
     addressStateCode: "ME",
     addressFullStreet: "5734 Maple Avenue Throughway",
-    addressCity: "Little Genesee"
+    addressCity: "Little Genesee",
   },
   {
-    purchasingAgent: { nameLast: "Crona", nameFirst: "Lauren" },
+    purchasingAgent: {
+      nameLast: "Crona",
+      nameFirst: "Lauren",
+    },
     phoneWork: "1-449-987-3083 x23263",
     orders: [7384.52, 9252.72, 7272.65, 5251.84, 9680.08],
     companyName: "Conit",
@@ -83,10 +97,13 @@ const businesses = [
     addressZipCode: "53326",
     addressStateCode: "IL",
     addressFullStreet: "5755 Hillside Drive Crossroad",
-    addressCity: "Norval"
+    addressCity: "Norval",
   },
   {
-    purchasingAgent: { nameLast: "Krajcik", nameFirst: "Elvera" },
+    purchasingAgent: {
+      nameLast: "Krajcik",
+      nameFirst: "Elvera",
+    },
     phoneWork: "1-730-411-8580",
     orders: [6069.05, 8535.38, 5782.7, 7838.91, 7578.36],
     companyName: "Dong-tom",
@@ -94,10 +111,13 @@ const businesses = [
     addressZipCode: "67071",
     addressStateCode: "KS",
     addressFullStreet: "4826 Arch Street Lights",
-    addressCity: "Newburyport"
+    addressCity: "Newburyport",
   },
   {
-    purchasingAgent: { nameLast: "Kling", nameFirst: "Ellie" },
+    purchasingAgent: {
+      nameLast: "Kling",
+      nameFirst: "Ellie",
+    },
     phoneWork: "(868) 043-0950",
     orders: [6726.2, 8393.21, 8087.13, 6393.13, 8646.35],
     companyName: "Dan-dox",
@@ -105,10 +125,13 @@ const businesses = [
     addressZipCode: "98842",
     addressStateCode: "WV",
     addressFullStreet: "9767 Cedar Court Corner",
-    addressCity: "Prince George"
+    addressCity: "Prince George",
   },
   {
-    purchasingAgent: { nameLast: "Robel", nameFirst: "Otilia" },
+    purchasingAgent: {
+      nameLast: "Robel",
+      nameFirst: "Otilia",
+    },
     phoneWork: "(298) 305-1942 x53653",
     orders: [8676.05, 7430.69, 9379.81, 8074.29, 5998.75],
     companyName: "J-base",
@@ -116,10 +139,13 @@ const businesses = [
     addressZipCode: "72993",
     addressStateCode: "FL",
     addressFullStreet: "9954 Buckingham Drive Mountains",
-    addressCity: "Vesper"
+    addressCity: "Vesper",
   },
   {
-    purchasingAgent: { nameLast: "Gusikowski", nameFirst: "Karolann" },
+    purchasingAgent: {
+      nameLast: "Gusikowski",
+      nameFirst: "Karolann",
+    },
     phoneWork: "(743) 934-8981 x692",
     orders: [8650.08, 8042.69, 5555.72, 7467.86, 8851.43],
     companyName: "Span-fix",
@@ -127,10 +153,13 @@ const businesses = [
     addressZipCode: "59860",
     addressStateCode: "MT",
     addressFullStreet: "4151 Orange Street Extension",
-    addressCity: "Little Rock Air Force Base"
+    addressCity: "Little Rock Air Force Base",
   },
   {
-    purchasingAgent: { nameLast: "Hartmann", nameFirst: "Zena" },
+    purchasingAgent: {
+      nameLast: "Hartmann",
+      nameFirst: "Zena",
+    },
     phoneWork: "727.635.6610 x6483",
     orders: [9415.89, 8935.45, 7413.91, 6830.96, 9746.57],
     companyName: "Sanaplane",
@@ -138,10 +167,13 @@ const businesses = [
     addressZipCode: "85156",
     addressStateCode: "NY",
     addressFullStreet: "4765 Fairview Avenue Locks",
-    addressCity: "Dennisville"
+    addressCity: "Dennisville",
   },
   {
-    purchasingAgent: { nameLast: "Torphy", nameFirst: "Celia" },
+    purchasingAgent: {
+      nameLast: "Torphy",
+      nameFirst: "Celia",
+    },
     phoneWork: "(992) 079-1670 x71569",
     orders: [7431.21, 5911.85, 7954.86, 7141.52, 8416.79],
     companyName: "Ran-taxon",
@@ -149,20 +181,22 @@ const businesses = [
     addressZipCode: "96673",
     addressStateCode: "MD",
     addressFullStreet: "7157 Hudson Street Ford",
-    addressCity: "Watrous"
+    addressCity: "Watrous",
   }
-];
+]
 ```
 
-## forEach() Method
+## .forEach() Method
 
-So Doris just wants to see all of the business names on a web page. You remember that the `forEach()` method on an array iterates the array and you can write logic for what to do for each item in it. You just want to build some elements to put in the DOM to look like this.
+So Doris just wants to see all of the business names on a web page. You remember that the `.forEach()` method on an array iterates the array and you can write logic for what to do for each item in it.
 
-Since each object is identical in its structure (but not its state), you can write some automation logic with `forEach()`. Here's an example of using `forEach` to iterate an array of objects that represent art supplies.
+Since each object is identical in its structure (*but not its state*), you can write some automation logic with `.forEach()`.
 
-### Example Usage of `forEach()`
+Here's an example of using `.forEach()` to iterate an array of objects that represent art supplies.
 
-> **`database.js`**
+### Example Usage of `.forEach()`
+
+> **`just-for-show/scripts/exampleDatabase.js`**
 
 ```js
 const supplies = [
@@ -190,11 +224,12 @@ const supplies = [
 ]
 
 export const getSupplies = () => {
-    return [...supplies]
+    const copyOfData = [...supplies]
+    return copyOfData
 }
 ```
 
-> **`SupplyList.js`**
+> **`just-for-show/scripts/ExampleSupplyList.js`**
 
 ```js
 import { getSupplies } from "./database.js"
@@ -214,10 +249,10 @@ const SupplyList = () => {
 }
 ```
 
-> **`Supply.js`**
+> **`just-for-show/scripts/ExampleSupply.js`**
 
 ```js
-export const Supply = (supplyObject) => {
+export const Supply = ( supplyObject ) => {
     return `
         <section class="supply">
             <h2 class="supply__type">${supplyObject.type}</h2>
@@ -233,12 +268,12 @@ export const Supply = (supplyObject) => {
 
 You can watch some videos where other developers show you other examples of how to use the `.forEach()` method on an array.
 
-* [forEach Array Method | JavaScript Tutorial](https://www.youtube.com/watch?v=SXb5LN_opbA)
-* [JavaScript Array forEach in 90 Seconds](https://www.youtube.com/watch?v=qdSD5MiqQg0)
+* [.forEach() Array Method | JavaScript Tutorial](https://www.youtube.com/watch?v=SXb5LN_opbA)
+* [JavaScript Array .forEach() in 90 Seconds](https://www.youtube.com/watch?v=qdSD5MiqQg0)
 
 ## Task: Listing Purchasing Companies
 
-Your task is to use the `forEach()` array method to list all of the companies so that Doris can easily browse a list of her customers. Use the example code above as a starting point. The list of companies should look like the image below.
+Your task is to use the `.forEach()` array method to list all of the companies so that Doris can easily browse a list of her customers. Use the example code above as a starting point. The list of companies should look like the image below.
 
 1. The variable name whose value is the list of customers is different
 1. `supplyObject` is not an appropriate parameter name to store a single object representing a company.

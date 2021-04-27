@@ -6,11 +6,11 @@
 >
 > Doris smiles back and says, "Now that I have a list of businesses, I realize that I would also love to have a list of purchasing agents. All by themselves. On a web page like the business names."
 
-To achieve this task for Doris, you still need to iterate the original array of businesses, but all you need is the purchasing agent names. If you can extract those names and put them in their own array, then you can use `forEach()` to display them in the DOM.
+To achieve this task for Doris, you still need to iterate the original array of businesses, but all you need is the purchasing agent names. If you can extract those names and put them in their own array, then you can use `.forEach()` to display them in the DOM.
 
-The `map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing the new items in another array. Here's how you would do that for art supplies if you wanted an array that only contained the brands that you sell.
+The `.map()` method is perfect for that. The map method is used for transforming items in one array to a different structure, and storing the new items in another array. Here's how you would do that for art supplies if you wanted an array that only contained the brands that you sell.
 
-> **`database.js`**
+> **`just-for-show/scripts/exampleDatabase.js`**
 
 ```js
 const supplies = [
@@ -51,12 +51,14 @@ export const brandNames = () => {
 
 You can watch some videos where other developers show you other examples of how to use the `.map()` method on an array.
 
-* [map Array Method | JavaScript Tutorial](https://www.youtube.com/watch?v=P4RAFdZDn3M)
+* [.map() Array Method | JavaScript Tutorial](https://www.youtube.com/watch?v=P4RAFdZDn3M)
 * [JavaScript Array Map](https://www.youtube.com/watch?v=G3BS3sh3D8Q)
 
 ## Task: Listing Purchasing Agent Names
 
-Use `map()` to create an array of purchasing agents for companies that purchase from Dothard &amp; Simbleton. Then iterate the array and display each one in element in your HTML file that has a class of `agents`.
+Use `.map()` to create an array of purchasing agents for companies that purchase from Dothard &amp; Simbleton. Then iterate the array and display each one in element in your HTML file that has a class of `agents`.
+
+> **`dothard-simbleton/index.html`**
 
 ```html
 <article class="agents">
@@ -76,6 +78,6 @@ Instead of just returning the purchasing agent object, return a new object that 
 }
 ```
 
-#### Example output
+#### Example output:
 
 ![list of agents](./images/dotard-simbleton-agent-list.png)

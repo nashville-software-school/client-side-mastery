@@ -10,11 +10,11 @@
 
 As you consider this request, you realize that you'll need to provide Doris an input text field so that she can type in the name of a company. You will then need to take that search string, iterate the companies, and as soon as you find a match, display all the properties.
 
-The `find()` method on arrays is perfect this.
+The `.find()` method on arrays is perfect this.
 
 The method does exactly what it's name suggests. It iterates an array and as soon as it finds one item that passes the condition that you provide, it returns that item to you.
 
-> **`database.js`**
+> **`just-for-show/scripts/exampleDatabase.js`**
 
 ```js
 const candies = [
@@ -32,68 +32,68 @@ const candies = [
     }
 ]
 
-// Function to find the FIRST candy that is less than the specified amount
+// Function to find the FIRST candy that costs less than the specified amount
 export const findCandyBelowPrice = (priceCriteria) => {
-    const matchingCandies = candies.find(candy => candy.price < priceCriteria)
+    const matchingCandy = candies.find(candy => candy.price < priceCriteria)
 
-    return matchingCandies
+    return matchingCandy
 }
 ```
 
-In order to implement Doris' request, you first must add an input field to your `index.html` file.
+In order to implement Doris' request, you first must add an input field to your `index.html` file. Then, place an `<article>` element in your HTML with the class of `foundCompanies`.
+
+> **`dothard-simbleton/index.html`**
 
 ```html
-<input type="text" placeholder="Enter business name" id="companySearch" />
+<input type="text" placeholder="Enter business name..." id="companySearch" />
+
+...
+
+<article class="foundCompanies">
+    <!-- Found companies go here --->
+</article>
+
 ```
 
-To know when Doris is ready to search, you decide to capture the key press event. This will allow her to simply press her return key and execute the search.
+To know when Doris is ready to _search_, you decide to capture the _keypress_ event.
+
+This will allow her to simply press the _"Enter"_ key to execute the search.
 
 ![searching businesses](./images/searching-companies.gif)
 
-> **`BusinessList.js`**
+
+> **`dothard-simbleton/scripts/BusinessList.js`**
 
 ```js
-// Place an article element in your HTML with the class below
 const companySearchResultArticle = document.querySelector(".foundCompanies")
 
 document
     .querySelector("#companySearch")
-    .addEventListener("keypress", keyPressEvent => {
-        if (keyPressEvent.charCode === 13) {
-            /*
-                When user presses enter, find the matching business.
-                You can use the `.includes()` method strings to
-                see if a smaller string is part of a larger string.
+        .addEventListener(
+            "keypress",
+            keyPressEvent => {
+                if (keyPressEvent.charCode === 13) {
+                    /*
+                        When the user presses 'Enter', find the matching business.
 
-                Example:
-                    business.companyName.includes(keyPressEvent.target.value)
-            */
+                        You can use the `.includes()` string method to
+                        see if a smaller string is part of a larger string.
 
-            const foundBusiness = // implement .find() method here
+                        Example: business.companyName.includes(keyPressEvent.target.value)
+                    */
 
-            companySearchResultArticle.innerHTML = `
-                <h2>
-                ${foundBusiness.companyName}
-                </h2>
-                <section>
-                ${foundBusiness.addressFullStreet}
+                    const foundBusiness = ???.find(???)/** implement .find() method here */
 
-                </section>
-                <section>
-                ${foundBusiness.addressCity},
-                ${foundBusiness.addressStateCode}
-                ${foundBusiness.addressZipCode}
-                </section>
-            `;
-        }
-    });
+                    companySearchResultArticle.innerHTML = Business(???);
+                }
+        });
 ```
 
 ## Videos With More Examples
 
-You can watch some videos where other developers show you other examples of how to use the `.map()` method on an array.
+You can watch some videos where other developers show you other examples of how to use the `.find()` method on an array.
 
-* [ES6 Tutorial - how to use javascript array FIND method](https://www.youtube.com/watch?v=PMRkx51LGSQ)
+* [ES6 Tutorial - How To Use JavaScript Array FIND Method](https://www.youtube.com/watch?v=PMRkx51LGSQ)
 * [8 Must Know JavaScript Array Methods](https://youtu.be/R8rmfD9Y5-c?t=174)
 
 ## Task: Finding Purchasing Agents by First Name
