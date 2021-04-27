@@ -125,6 +125,8 @@ export const getMetals = () => {
 ' > ./scripts/database.js
 
 echo '
+import { DiamondSizes } from "./DiamondSizes.js"
+
 document.addEventListener(
     "click",
     (event) => {
@@ -140,7 +142,7 @@ export const KneelDiamonds = () => {
                 <h2>Metals</h2>
             </section>
             <section class="choices__sizes options">
-                <h2>Sizes</h2>
+                <h2> ${ DiamondSizes() } </h2>
             </section>
             <section class="choices__styles options">
                 <h2>Styles</h2>
