@@ -82,13 +82,13 @@ You can watch some videos where other developers show you other examples of how 
 ...
 ```
 
-![list of new york businesses](./images/dotard-simbleton-newyork-list.png)
+![list of new york businesses](./images/dothard-simbleton-newyork-list.png)
 
 ## Task: Listing Manufacturing Companies
 
-Use `.filter()` to list only Dothard &amp; Simbleton companies that are in _Manufacturing_.
+- Use `.filter()` to list only Dothard &amp; Simbleton companies that are in _Manufacturing_.
 
-Display them in element in your HTML file that has a class of `businessList--manufacturing`.
+- Display them in element in your HTML file that has a class of `businessList--manufacturing`.
 
 > **`dothard-simbleton/index.html`**
 
@@ -101,3 +101,5 @@ Display them in element in your HTML file that has a class of `businessList--man
 
 ...
 ```
+
+![list of manufacturing businesses](./images/dothard-simbleton-manufacturing-list.png)

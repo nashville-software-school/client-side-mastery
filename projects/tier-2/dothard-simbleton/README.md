@@ -1,6 +1,6 @@
 # Dothard &amp; Simbleton
 
-![dothard and simbleton](./chapters/images/dotard-simbleton.jpg)
+![dothard and simbleton](./chapters/images/dothard-simbleton.jpg)
 
 Since one of your primary jobs as a software developer will be to filter, transform, organize, sort, and then display collections of data, you will need to know how to use some of the helpful methods that software development languages provide to perform those operations.
 

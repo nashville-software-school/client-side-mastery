@@ -280,4 +280,4 @@ Your task is to use the `.forEach()` array method to list all of the companies s
 1. The class names in the HTML string will be different.
 1. The properties will also need to change. Purchasing company objects have very different property names (_e.g. `addressFullStreet`_)
 
-![list of businesses](./images/dotard-simbleton-simple-list.png)
+![list of businesses](./images/dothard-simbleton-simple-list.png)

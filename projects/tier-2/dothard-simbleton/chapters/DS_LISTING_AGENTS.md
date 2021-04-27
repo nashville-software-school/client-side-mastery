@@ -80,4 +80,4 @@ Instead of just returning the purchasing agent object, return a new object that 
 
 #### Example output:
 
-![list of agents](./images/dotard-simbleton-agent-list.png)
+![list of agents](./images/dothard-simbleton-agent-list.png)
