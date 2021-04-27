@@ -1,38 +1,27 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/sink-repair/api
-mkdir -p $HOME/workspace/sink-repair/src/scripts
-mkdir -p $HOME/workspace/sink-repair/src/styles
-cd $HOME/workspace/sink-repair/api
+mkdir -p $HOME/workspace/pen-pal-society/api
+mkdir -p $HOME/workspace/pen-pal-society/src/scripts
+mkdir -p $HOME/workspace/pen-pal-society/src/styles
 
+cd $HOME/workspace/pen-pal-society/api
 echo '{
-    "plumbers": [],
-    "completions: [],
-    "requests": [
-        {
-            "id": 1,
-            "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
-            "address": "34445 Bianka Ports",
-            "budget": 400,
-            "neededBy": "2021-08-27"
-        }
-    ]
+
 }' > database.json
 
-cd $HOME/workspace/sink-repair/src
+cd $HOME/workspace/pen-pal-society/src
 
 echo '<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Maude and Merle'"'"'s Sink Repair</title>
+        <title>Pen Pal Society</title>
         <link rel="stylesheet" href="./styles/main.css">
     </head>
 
     <body>
 
-        <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
 ' > index.html
