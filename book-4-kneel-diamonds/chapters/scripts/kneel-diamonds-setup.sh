@@ -226,7 +226,7 @@ export const JewelryStyles = () => {
     let html = "<ul>"
 
     // Use .map() for converting objects to <li> elements
-    const listItemsArray =
+    const listItems =
 
 
     // Join all of the strings in the array into a single string

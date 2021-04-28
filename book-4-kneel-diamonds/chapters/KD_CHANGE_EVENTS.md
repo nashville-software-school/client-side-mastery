@@ -15,6 +15,8 @@ Now, you need to listen for when the user makes a choice in one of the option gr
 ```js
 import { getMetals } from "./database.js"
 
+const metals = getMetals()
+
 document.addEventListener(
     "change",
     (event) => {

@@ -29,14 +29,14 @@ Open the **`Metals.js`** module and the **`DiamondSizes.js`** module. You will s
 The diamond sizes are generated in a way that is both completely different, and exactly the same.
 
 ```js
-const listItems = sizes.map(
+const listItemsArray = sizes.map(
     (size) => {
         return `<li>
             <input type="radio" name="size" value="${size.id}" /> ${size.carets}
         </li>`
     }
 )
-html += listItems.join("")
+html += listItemsArray.join("")
 ```
 
 The `.map()` method also iterates the array, just like `for..of` does. Unlike a `for..of` loop, it invokes the function that you define.
