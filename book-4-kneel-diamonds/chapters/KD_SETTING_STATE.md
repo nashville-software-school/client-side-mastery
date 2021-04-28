@@ -87,7 +87,7 @@ Use your debugging skills to see how this code works.
 1. Inspect the value of `event.target`
 1. Inspect the value of `event.target.name`
 1. Inspect the value of `event.target.value`
-1. Then step into the `setMetal()` function and inspect that value of the parameter
+1. Then, _step into_ the `setMetal()` function and inspect that value of the _parameter_
 1. Inspect the value of `database.orderBuilder` after its state is updated
 
 ![](./images/debugging-choosing-metals-event.gif)
