@@ -16,7 +16,7 @@ Give it a shot, and if you need to, you can [peek at the solution](./images/knee
 
 ## Render Sizes and Styles
 
-Once you show metals, also render the components that show the options for diamond sizes and ring styles.
+Once you show metals, also render the components that show the options for diamond sizes and jewelry styles.
 
 ## The Map Array Method
 
@@ -24,12 +24,12 @@ Once you show metals, also render the components that show the options for diamo
 |:---:|:---|
 | <h1>&#x270e;</h1> |  _The **map()** array method is a conversion tool. It generates a new array with as many items as are in the original array, but in the new array, it puts items in the form that you specify._ |
 
-Open the **`Metals`** module and the **`DiamondSizes`** module. You will see that the list items for metals uses the `for..of` loop that you have seen in several previous projects for building all of the HTML representations of data.
+Open the **`Metals.js`** module and the **`DiamondSizes.js`** module. You will see that the list items for metals uses the `for..of` loop that you have seen in several previous projects for building all of the HTML representations of data.
 
 The diamond sizes are generated in a way that is both completely different, and exactly the same.
 
 ```js
-const listItems = metals.map(
+const listItems = sizes.map(
     (size) => {
         return `<li>
             <input type="radio" name="size" value="${size.id}" /> ${size.carets}
@@ -39,7 +39,7 @@ const listItems = metals.map(
 html += listItems.join("")
 ```
 
-The `map()` method also iterates the array, just like `for..of` does. Unlike a `for..of` loop, it invokes the function that you define.
+The `.map()` method also iterates the array, just like `for..of` does. Unlike a `for..of` loop, it invokes the function that you define.
 
 Wait, what function?
 
@@ -53,9 +53,9 @@ This function.
 }
 ```
 
-That function is the first, and only, argument that the `map()` method will accept. As it iterates the array, it will take the object at the current location and pass it as an argument to **your** function. Your function defines the `size` parameter.
+That function is the first, and only, argument that the `.map()` method will accept. As it iterates the array, it will take the object at the current location and pass it as an argument to **your** function. Your function defines the `size` parameter.
 
-So an object comes into your function, and a string gets returned. That string goes into a new array.
+So an _object_ comes into your function, and a _string_ gets returned. That string goes into a new _array_.
 
 ### Original Array
 
@@ -81,19 +81,19 @@ So an object comes into your function, and a string gets returned. That string g
 ]
 ```
 
-Here's a quick example. An array filled with numbers. What how changes to what the function returns affects the resulting array _(in blue at the end)_.
+Here's a quick example. An array filled with numbers. Observe how changes made to what the function returns affects the resulting array _(in blue at the end)_.
 
 ![](./images/array-map-example.gif)
 
 ## The Join() Array Method
 
-The `join()` array method, luckily, does exactly what its name infers - it joins things together.
+The `.join()` array method, luckily, does exactly what its name infers - it _joins_ things together.
 
-More specifically, it join **all** of the individual items in the array into a single thing... all squished together.
+More specifically, it join **all** of the individual items in the array into a single string... all squished together.
 
 ![](./images/array-join-method-demo.gif)
 
-If you join the strings in this array.
+If you join the strings in this array...
 
 ```js
 [
@@ -105,16 +105,16 @@ If you join the strings in this array.
 ]
 ```
 
-You end up with one long string filled with HTML.
+...you end up with one long string filled with HTML.
 
-```text
-'<li> <input type="radio" name="size" value="1" /> 0.5 </li>
+```html
+"<li> <input type="radio" name="size" value="1" /> 0.5 </li>
 <li> <input type="radio" name="size" value="2" /> 0.75 </li>
 <li> <input type="radio" name="size" value="3" /> 1 </li>
 <li> <input type="radio" name="size" value="4" /> 1.5 </li>
-<li> <input type="radio" name="size" value="5" /> 2 </li>'
+<li> <input type="radio" name="size" value="5" /> 2 </li>"
 ```
 
 ## Generate Jewelry Styles Options
 
-Now it's your turn. Use the `map()` array method in the **`JewelryStyles`** component function to generate one long string of HTML that contains the `<li>` elements for the options.
+Now it's your turn. Use the `.map()` array method in the **`JewelryStyles`** component function to generate one long string of HTML that contains the `<li>` elements for the options.
