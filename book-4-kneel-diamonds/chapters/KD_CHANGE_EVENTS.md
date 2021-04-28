@@ -13,7 +13,7 @@ Now, you need to listen for when the user makes a choice in one of the option gr
 > #### `kneel-diamonds/scripts/Metals.js`
 
 ```js
-import { getMetals, setMetal } from "./database.js"
+import { getMetals } from "./database.js"
 
 document.addEventListener(
     "change",
