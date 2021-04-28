@@ -1,8 +1,8 @@
 # Showing Custom Jewelry Options
 
-If you hadn't noticed yet, take a look in the `main.js` module. You'll notice that, unlike previous projects, it doesn't define the main HTML structure of your application. It is deferring that responsibility to the **`KneelDiamonds`** component.
+If you hadn't noticed yet, the `main.js` module looks a bit different than it has in previous projects. It doesn't define the main HTML structure of your application. It is deferring _that_ responsibility to the **`KneelDiamonds`** component.
 
-There is a function named `renderAllHTML()` that is then immediately invoked. This function is needed later in the growth of the application, because for Kneel Diamonds, you are going to react to the user choosing options.
+There is a function named `renderAllHTML()` that is definted in the `main.js` module, then immediately invoked. This function is needed later in the growth of the application, because for Kneel Diamonds, you are going to react to the user choosing options.
 
 When the user chooses options, the state of your data is going to change. When the state of your data changes, then all of the HTML must be regenerated to display that new state.
 
