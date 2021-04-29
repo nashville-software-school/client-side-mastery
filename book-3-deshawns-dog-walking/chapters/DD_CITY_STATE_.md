@@ -12,18 +12,19 @@ This means that the walker data struture should no longer have a `city` key, but
 
 ```js
 const database = {
-    cities: [{
+    cities: [
         {
             id: 1,
             name: "Chicago"
-        }
-    }],
-    walkers: [{
-        id: 1,
-        name: "Alphonse Meron",
-        email: "ameron0@mashable.com",
-        cityId: 1
-    }
+        }, ...
+    ],
+    walkers: [
+        {
+            id: 1,
+            name: "Alphonse Meron",
+            email: "ameron0@mashable.com",
+            cityId: 1
+        }, ...
 ```
 
 Your task is to move all of the current city names into a `cities` collection in your database, and have each walker object reference the correct one via a foreign key.
