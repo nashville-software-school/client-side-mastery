@@ -1,6 +1,6 @@
 # Defining Your Own Events
 
-In the last two chapters, you implemented code that updated the state of your database by storing options that a person chooses. It's temporary state, in that the user can keep making choices over and over again, and the state of the chosen metal, style, and size constantly change.
+In the last two chapters, you implemented code that updated the state of your database by storing options that a person chooses. It's temporary state, in that the user can keep making choices over and over again, and the state of the chosen metal, style, and size will constantly change.
 
 Now it's time to handle making a permanent change to state. You are going to implement the click hander for the purchase button.
 
