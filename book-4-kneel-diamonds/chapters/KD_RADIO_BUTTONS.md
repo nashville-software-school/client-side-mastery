@@ -2,7 +2,7 @@
 
 If you hadn't noticed yet, the `main.js` module looks a bit different than it has in previous projects. It doesn't define the main HTML structure of your application. It is deferring _that_ responsibility to the **`KneelDiamonds`** component.
 
-There is a function named `renderAllHTML()` that is definted in the `main.js` module, then immediately invoked. This function is needed later in the growth of the application, because for Kneel Diamonds, you are going to react to the user choosing options.
+There is a function named `renderAllHTML()` that is defined in the `main.js` module, then immediately invoked. This function is needed later in the growth of the application, because for Kneel Diamonds, you are going to react to the user choosing options.
 
 When the user chooses options, the state of your data is going to change. When the state of your data changes, then all of the HTML must be regenerated to display that new state.
 
@@ -24,7 +24,7 @@ Once you show metals, also render the components that show the options for diamo
 |:---:|:---|
 | <h1>&#x270e;</h1> |  _The **map()** array method is a conversion tool. It generates a new array with as many items as are in the original array, but in the new array, it puts items in the form that you specify._ |
 
-Open the **`Metals.js`** module and the **`DiamondSizes.js`** module. You will see that the list items for metals uses the `for..of` loop that you have seen in several previous projects for building all of the HTML representations of data.
+Open the **`Metals`** module and the **`DiamondSizes`** module. You will see that the list items for metals uses the `for..of` loop that you have seen in several previous projects for building all of the HTML representations of data.
 
 The diamond sizes are generated in a way that is both completely different, and exactly the same.
 
