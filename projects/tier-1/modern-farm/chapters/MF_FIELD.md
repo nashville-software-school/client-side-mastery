@@ -20,6 +20,6 @@ Run `npm run test` to start the automated testing task.
 Write some temporary test code in the main module to check if your functions do their job correctly.
 
 1. Create a seed object.
-1. Invoke `addPlant()` and specify the seed object as the parameter.
+1. Invoke `addPlant()` and specify the seed object as the argument.
 1. Invoke `usePlants()` and store its return value in a variable.
-1. Use `console.log()` to make sure your seed object got added to the array of plans in the field.
+1. Use `console.log()` to make sure your seed object got added to the array of plants in the field.
