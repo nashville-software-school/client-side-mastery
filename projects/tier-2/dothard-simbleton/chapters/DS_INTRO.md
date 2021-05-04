@@ -224,7 +224,7 @@ const supplies = [
 ]
 
 export const getSupplies = () => {
-    const copyOfData = [...supplies]
+    const copyOfData = supplies.map(item => ({...item}))
     return copyOfData
 }
 ```

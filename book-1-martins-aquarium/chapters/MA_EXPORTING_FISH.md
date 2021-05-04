@@ -14,14 +14,13 @@ The database module will maintain the state, but other modules need copies of th
 
 The function is exported so other modules can import it and use it.
 
-Don't worry about understanding the [...] syntax here.
-Just remember that it copies an array. Understanding comes with time and practice.
+Don't worry about understanding all of the syntax here. Just remember that it copies the objects in an array. Understanding comes with time and practice.
 
 > **`workspace/martins-aquarium/scripts/database.js`**
 
 ```js
 export const getFish = () => {
-    return [...database.fish]
+    return database.fish.map(fish => ({...fish}))
 }
 ```
 

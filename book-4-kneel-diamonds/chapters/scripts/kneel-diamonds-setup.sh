@@ -120,7 +120,7 @@ const database = {
 }
 
 export const getMetals = () => {
-    return [...database.metals]
+    return database.metals.map(metal => ({...metal}))
 }
 ' > ./scripts/database.js
 
