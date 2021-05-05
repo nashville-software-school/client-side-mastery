@@ -20,7 +20,8 @@
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
 | 1 | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
-| 2 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
+| 2 | [Provide Access to Fish](./chapters/MA_EXPORTING_FISH.md) |
+| 3 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
 
 ## Pioneer Chapters
 

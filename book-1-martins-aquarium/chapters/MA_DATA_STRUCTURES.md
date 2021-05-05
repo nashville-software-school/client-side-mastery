@@ -94,5 +94,3 @@ const database = {
 1. What is the data type of the `name` property?
 1. What is the data type of the `size` property?
 1. What data types will the fish array contain?
-
-
