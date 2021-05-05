@@ -219,15 +219,15 @@ const database = {
 }
 
 export const getProducts = () => {
-    return [...database.products]
+    return database.products.map(product => ({...product}))
 }
 
 export const getEmployees = () => {
-    return [...database.employees]
+    return database.employees.map(employee => ({...employee}))
 }
 
 export const getOrders = () => {
-    return [...database.orders]
+    return database.orders.map(order => ({...order}))
 }
 ' > ./scripts/database.js
 

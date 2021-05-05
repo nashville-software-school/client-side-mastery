@@ -84,7 +84,7 @@ This will make more sense later. Just remember that making copies of your data =
 */
 export const getAllUsers = () => {
     // Create a copy of users array
-    const usersCopy = [...applicationState.users]
+    const usersCopy = applicationState.users.map(user => ({...user}))
 
     // Make the copy the output of the function
     return usersCopy
