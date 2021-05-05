@@ -31,9 +31,6 @@ echo '<!doctype html>
     </head>
 
     <body>
-        <main id="container">
-
-        </main>
 
         <script type="module" src="./scripts/main.js"></script>
     </body>

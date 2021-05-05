@@ -33,11 +33,13 @@ Now that you have a new state key in your database, you need a way to store user
 1. Size
 1. Style
 
-Our new `orderBuilder` state object will store which one of those options was chosen. What uniquely identifies each object in a database?
+Our new `orderBuilder` state object will store which one of those options was chosen.
 
-That's right, the primary key, or `id` property.
+#### What uniquely identifies each object in a database?
 
-Also remember that no other modules are allowed to have direct access to the database. That's why you have exported functions that return copies of the current state. Other modules invoke those function to **get** state.
+> _That's right! The primary key, or `id` property._
+
+Also remember that no other modules are allowed to have direct access to the database. That's why you have exported functions that return _copies_ of the current state. Other modules invoke _those_ function to **get** state.
 
 Now you need to export functions whose responsibility is to **set** state.
 
@@ -85,7 +87,7 @@ Use your debugging skills to see how this code works.
 1. Inspect the value of `event.target`
 1. Inspect the value of `event.target.name`
 1. Inspect the value of `event.target.value`
-1. Then step into the `setMetal()` function and inspect that value of the parameter
+1. Then, _step into_ the `setMetal()` function and inspect that value of the _parameter_
 1. Inspect the value of `database.orderBuilder` after its state is updated
 
 ![](./images/debugging-choosing-metals-event.gif)
