@@ -125,6 +125,8 @@ export const getMetals = () => {
 ' > ./scripts/database.js
 
 echo '
+import { DiamondSizes } from "./DiamondSizes.js"
+
 document.addEventListener(
     "click",
     (event) => {
