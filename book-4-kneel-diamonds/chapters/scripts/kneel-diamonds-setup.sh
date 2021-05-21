@@ -71,6 +71,7 @@ echo '/* You need to create the rest of styles for the layout shown */
 ' > ./styles/details.css
 
 echo 'import { KneelDiamonds } from "./KneelDiamonds.js"
+import { DiamondSizes } from "./DiamondSizes.js"
 
 const mainContainer = document.querySelector("#container")
 
