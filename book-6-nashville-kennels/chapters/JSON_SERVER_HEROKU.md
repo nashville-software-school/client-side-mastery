@@ -24,20 +24,20 @@
 
 ### Local Setup
 
-> To deploy to Heroku, your API must be its own, separate directory and repository. The `api` directory you have in your project will not work.
+> To deploy to Heroku, your API must be its own, separate directory and repository. This is why your created a separate `kennel-api` directory and repository for Kennels.
 
-1. Create a *new* directory. We suggest it be a sibling of your application directory.
-1. `git init` in that directory
-1. Copy the example code below into a `package.json` file in your directory.
-1. Copy the example code below into a `server.js` file in your directory.
-1. Copy the JSON file you currently are using in your React application's `api` directory into this new directory.
+1. Navigate to the `kennel-api` directory.
+1. Create a new file named `package.json` in the directory.
+1. Create a new file named `server.js` in the directory.
+1. Copy the example code _(see below)_ into the `package.json` file in your directory.
+1. Copy the example code _(see below)_ into a `server.js` file in your directory.
 
 ### Deploy to Heroku
 
 1. Go to your [Heroku Dashboard](https://dashboard.heroku.com/apps)
 1. Click the **New** button and choose _Create new app_.
 1. Choose a unique name and click _Create app_.
-1. Be in your new API directory and run the following command. You will see the command under the **Create a new Git repository** section of the page you are reading in your browser.
+1. Be in your `kennel-api` directory and run the following command. You will see the command under the **Create a new Git repository** section of the page you are reading in your browser.
     ```sh
     heroku git:remote -a {your Heroku API app}
     ```
@@ -98,7 +98,7 @@ Here's a sample `server.js` file that you can put in your API repo.  Replace `ya
 ```js
 const jsonServer = require('json-server');
 const server = jsonServer.create();
-const router = jsonServer.router('yak.json');
+const router = jsonServer.router('database.json');
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3000;
 
