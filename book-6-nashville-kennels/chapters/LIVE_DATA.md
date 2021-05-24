@@ -33,9 +33,16 @@ Now create the following components for locations, animals, employees, and custo
 
 Then refactor the **`ApplicationViews`** component to render each list component. Remember to wrap each list component in its corresponding data provider component.
 
-```jsx
-<h2>Animals</h2>
+To get started...
+
+```html
 <AnimalProvider>
     <AnimalList />
 </AnimalProvider>
+
+<LocationProvider>
+    <LocationList />
+</LocationProvider>
+
+<!-- keep following the pattern -->
 ```

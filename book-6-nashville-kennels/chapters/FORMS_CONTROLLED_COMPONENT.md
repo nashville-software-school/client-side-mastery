@@ -4,72 +4,55 @@
 
 In this chapter, you are going to write a component whose responsibility is to create a new animal record with a customer and location.
 
-**You will need to have completed a `LocationProvider` and `CustomerProvider`** before this chapter.
-
-## New Concepts
-
-* Controlled component
-* Inline event handlers
-* `preventDefault()` for forms
-* `useHistory` from react-router-dom
-
-**Review:** Object Bracket Notation - [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
-
-React state will be the “single source of truth” for the form inputs. The component will render the form based on state and then control what happens in that form on subsequent user input.
-
 ## Process
-Refactor the AnimalList component to include an *Add Animal* button that will change the url and render a form component.
 
-### Add the *Add Animal* button to the list component with an inline event handler
+Refactor the AnimalList component to include an *Add Animal* button that will change the URL and render a form component. You will also be using a new hook function called `useHistory()`.
 
-In React, we add event listeners directly on a button's `onClick` attribute.
-
-`useHistory` is provided by react-router-dom. It contains a method, `push()` which we can use to change the URL. Be sure to import it at the top of the document.
+`useHistory()` is a hook function provided by `react-router-dom`. It allows you to immediately use a  `push()` method which you can use to change the URL. Be sure to import it at the top of the document.
 
 > ##### `src/components/animal/AnimalList.js`
 
 ```jsx
+// Add this import at the top
+import { useHistory } from 'react-router-dom'
+
+// Invoke the useHistory() hook function
 const history = useHistory()
 
 return (
     <>
-        <h2>Animals</h2>
-		<button onClick={() => {history.push("/animals/create")}}>
+      <h2>Animals</h2>
+      <button onClick={
+        () => history.push("/animals/create")
+      }>
             Add Animal
-        </button>
-        <div className="animals">
-        {
-			animals.map(animal => {
-				return <AnimalCard key={animal.id} animal={animal} />
-			})
-        }
-        </div>
+      </button>
+      <div className="animals">
+      {
+        animals.map(animal => {
+          return <AnimalCard key={animal.id} animal={animal} />
+        })
+      }
+      </div>
     </>
 )
 ```
-
 
 ### Create the Route
 
 Create the new route that will respond when the button click changes the URL to `/animals/create`.
 
-**Consider: What data providers do you need?**
-
 > ##### `src/components/ApplicationViews.js`
 
 ```jsx
 <AnimalProvider>
-  <Route exact path="/animals">
-      <AnimalList />
-  </Route>
+    <Route exact path="/animals">
+        <AnimalList />
+    </Route>
 
-  <CustomerProvider>
-    <LocationProvider>
-      <Route exact path="/animals/create">
-        <AnimalForm />
-      </Route>
-    </LocationProvider>
-  </CustomerProvider>
+    <Route exact path="/animals/create">
+      <AnimalForm />
+    </Route>
 </AnimalProvider>
 
 ```

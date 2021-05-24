@@ -1,77 +1,12 @@
-# Individual Items with Nested Data
+# Individual Animal Component
 
-In this chapter, you are going to use one of the features of `json-server` to get nested data back from the API.
+Currently, you display all of the animal information directly inside the `map()` method in the **`AnimalList`** component. The next step is to clean up the animal list to show minimal information, and let the user click on an animal name to show more details in a different view.
 
-You are going to do this with animals.
+## Showing Animal Name as Hyperlink
 
-## Getting the Nested Data
+The first step is to show only the animal's name in the list, and make it a hyperlink to the user can click on each name.
 
-Since the animal detail component is responsible for showing data, and related data about an individual animal, you need a method in your provider to get all of that information for a single animal.
-
-Add the following method to the animal provider. It allows any component to get a single animal, but with the location and customer objects embedded inside the response.
-
-> ##### `/src/components/animal/AnimalProvider.js`
-
-```js
-const getAnimalById = (id) => {
-    return fetch(`http://localhost:8088/animals/${id}?_expand=location&_expand=customer`)
-        .then(res => res.json())
-}
-```
-Be sure to include this method in the export of the provider
-```js
-<AnimalContext.Provider value={{
-    animals, addAnimal, getAnimals, getAnimalById
-    }}>
-        {props.children}
-</AnimalContext.Provider>
-```
-
-The response for an animal will include objects for the location and customer information.
-
-```json
-{
-  "id": 2,
-  "name": "Snickers",
-  "breed": "Beagle",
-  "locationId": 2,
-  "treatment": "React Hook useEffect has a missing dependency: 'setDefaults'. Either include it or",
-  "customerId": 4,
-  "location": {
-    "id": 2,
-    "name": "Nashville South",
-    "address": "209 Emory Drive"
-  },
-  "customer": {
-    "email": "steve@stevebrownlee.com",
-    "name": "Steve Brownlee",
-    "id": 4
-  }
-}
-```
-
-The server (API) did the work for you!!
-
-Add the new method to your return at the bottom of `AnimalProvider`.
-
-```js
-return (
-    <AnimalContext.Provider value={
-      {
-        animals, addAnimal, getAnimals, getAnimalById
-      }
-    }>
-      {props.children}
-    </AnimalContext.Provider>
-  )
-```
-
-## AnimalCard inside of AnimalList Refactor
-
-Change the AnimalCard to display animal names, as hyperlinks. When you click on one animal name, an animal detail component will render.
-
-
-> ##### `/src/components/animal/AnimalList.js`
+> #### `/src/components/animal/AnimalList.js`
 
 ```jsx
 import React, { useState, useContext, useEffect } from "react"
@@ -94,11 +29,13 @@ export const AnimalList = ({ history }) => {
             <button onClick={() => history.push("/animals/create")}>
                 Make Reservation
             </button>
+
             <div className="animals">
                 {
-                    animals.map(animal => {
-                        return <Animal key={animal.id} animal={animal} />
-                    })
+                    animals.map(animal => <Link to={`/animals/detail/${animal.id}`}>
+                          { animal.name }
+                        </Link>
+                    )
                 }
             </div>
         </>
@@ -106,67 +43,53 @@ export const AnimalList = ({ history }) => {
 }
 ```
 
-> ##### `/src/components/animal/Animal.js`
-
-```jsx
-import React from "react"
-import "./Animals.css"
-import { Link } from "react-router-dom"
-
-export const AnimalCard ({ animal }) => (
-    <section className="animal">
-        <h3 className="animal__name">
-          <Link to={`/animals/detail/${animal.id}`}>
-            { animal.name }
-          </Link>
-        </h3>
-        <div className="animal__breed">{ animal.breed }</div>
-    </section>
-)
-```
-
 ## New Animal Details Component
 
-Create a new component in the animal directory which will be responsible for showing all the details of an animal. Consider the flow of a React component. What will you need to store as state? Will you need `useEffect`?
+The next step is to create a new component in the animal directory which will be responsible for showing all the details of an animal.
 
-We will also include `useParams` from react-router-dom allowing the app to read a parameter from the URL.
+This component will also user the `useParams()` hook function from the `react-router-dom` library. It allows your code to read a route parameter from the URL.
 
-> ##### `/src/components/animal/AnimalDetail.js`
+> In the following URL, `5` is the route parameter
+>
+>   http://localhost:5000/animals/5
+
+Create the following module and add the code.
+
+> #### `/src/components/animal/AnimalDetail.js`
 
 ```jsx
 import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import "./Animal.css"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 export const AnimalDetail = () => {
-  const { getAnimalById } = useContext(AnimalContext)
+    const { animals } = useContext(AnimalContext)
+    const [ animal, setAnimal ] = useState({ location: {}, customer: {} })
 
-	const [animal, setAnimal] = useState({})
+    /*
+        Given the example URL above, this will store the value
+        of 5 in the animalId variable
+    */
+    const { animalId } = useParams();
 
-	const {animalId} = useParams();
-	const history = useHistory();
 
-  useEffect(() => {
-    console.log("useEffect", animalId)
-    getAnimalById(animalId)
-    .then((response) => {
-      setAnimal(response)
-    })
-    }, [])
+    useEffect(() => {
+        const thisAnimal = animals.find(a => a.id === animalId) || { location: {}, customer: {} }
 
-  return (
+        setAnimal(thisAnimal)
+    }, [animalId])
+
+    return (
     <section className="animal">
-      <h3 className="animal__name">{animal.name}</h3>
-      <div className="animal__breed">{animal.breed}</div>
-      {/* What's up with the question mark???? See below.*/}
-      <div className="animal__location">Location: {animal.location?.name}</div>
-      <div className="animal__owner">Customer: {animal.customer?.name}</div>
+        <h3 className="animal__name">{ animal.name }</h3>
+        <div className="animal__breed">{ animal.breed }</div>
+        <div className="animal__location">Location: { animal.location.name }</div>
+        <div className="animal__owner">Customer: { animal.customer.name }</div>
     </section>
-  )
+    )
 }
 ```
-Immediate properties of an empty object will not break, however nested properties of an empty object will. Use [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator to prevent nested values from breaking the code. Try with and without the `?.`
 
 ## Create a New Dynamic Route
 
@@ -182,7 +105,7 @@ It has `:animalId(\d+)` at the end of the URL. If the URL is http://localhost:30
 
 Look back at the code you put in the detail component.
 
-See the `const {animalId} = useParams();`
+See the `const { animalId } = useParams();`
 
 This is how you access the number 3 inside the component. It's part of the routing package (react-router-dom) you installed. Don't worry, that one's tricky. We'll help you remember it.
 

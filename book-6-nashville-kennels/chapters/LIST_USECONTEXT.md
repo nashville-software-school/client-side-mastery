@@ -22,22 +22,34 @@ export const AnimalList = () => {
   useEffect(() => {
     console.log("AnimalList: useEffect - getAnimals")
     getAnimals()
-
   }, [])
 
 
   return (
-    <div className="animals">
+    <section className="animals">
       {console.log("AnimalList: Render", animals)}
       {
         animals.map(animal => {
-          return <AnimalCard key={animal.id} animal={animal} />
+          return (
+            <div className="animal" id={`animal--${animal.id}`}>
+              <div className="animal__name">
+                Name: { animal.name }
+              </div>
+              <div className="animal__breed">
+                Breed: { animal.breed }
+              </div>
+            </div>
+          )
+
+          <AnimalCard  animal={animal} />
         })
       }
-    </div>
+    </section>
   )
 }
 ```
+
+Now go back to the browser and you should see a list of animals appear.
 
 ### Breaking it Down
 
