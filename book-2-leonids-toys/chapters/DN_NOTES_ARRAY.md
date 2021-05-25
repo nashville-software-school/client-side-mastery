@@ -43,7 +43,7 @@ const notes = [
 ]
 ```
 
-When you are done, use `console.log()` to display the data structure to the terminal. Then run the following command in the terminal to see if it works correctly and displays the array, or if you have a syntax error. If you do have an error, make sure you have all the commas that you need after you properties.
+When you are done, use `console.log()` to display the data structure to the terminal. Then run the following command in the terminal to see if it works correctly and displays the array, or if you have a syntax error. If you do have an error, make sure you have all the commas that you need after your properties.
 
 ```js
 node notes.js
