@@ -29,5 +29,5 @@ Common items are:
 
 You can create as many objects as you like. Make sure each one has a primary key and a **`price`** property. The rest of the properties are completely up to you.
 
-When you've added the objects to your array and use `console.log()` to output the array to the terminal. Run your code and make sure so errors are displayed.
+Once you have an array of grocery item objects, use `console.log()` to output the contents of the array to the terminal. Run your code and make sure no errors are displayed.
 
