@@ -154,22 +154,22 @@ const [animals, setAnimals] = useState([])
 Just like in your vanilla provider, you need some functions that perform state transitions in your database, and then ensure that the application state stays in sync.
 
 ```js
-    const getAnimals = () => {
-        return fetch("http://localhost:8088/animals?_expand=location")
-        .then(res => res.json())
-        .then(setAnimals)
-    }
+const getAnimals = () => {
+    return fetch("http://localhost:8088/animals?_expand=location")
+    .then(res => res.json())
+    .then(setAnimals)
+}
 
-    const addAnimal = animalObj => {
-        return fetch("http://localhost:8088/animals", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(animalObj)
-        })
-        .then(getAnimals)
-    }
+const addAnimal = animalObj => {
+    return fetch("http://localhost:8088/animals", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(animalObj)
+    })
+    .then(getAnimals)
+}
 ```
 
 ### Returning the Context for Usage

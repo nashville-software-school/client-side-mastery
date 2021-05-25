@@ -48,7 +48,11 @@ Then copy the following JSON into the `database.json` file.
 Every time you want to work on your Nashville Kennels application, you'll need to ensure that the API is running.
 
 ```sh
-json-server -p 8088 -w database.json
+json-server -p 8088 database.json
 ```
 
 Go ahead and create a few more pets and customers within each's collections.
+
+## Backup to Github
+
+Make sure you create a repository on your Github account for your API, and hook up the `kennel-api` directory. Yes, there's only one file being tracked in this repository, and that's ok.
