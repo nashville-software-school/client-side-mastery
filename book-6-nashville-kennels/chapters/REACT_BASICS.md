@@ -11,7 +11,13 @@ You've already learned the vast majority of what React does for you when buildin
 
 ## Installing React Developer Tools
 
-You can install the React Developer Tools via the [Chrome Store](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). These tools are another panel whinin the Chrome Developer panel, that will help with debugging and inspecting your React applications.
+You can install the React Developer Tools via the [Chrome Store](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).
+You will get two new tabs in your Chrome DevTools:
+
+* ⚛️ Components
+* ⚛️ Profiler
+
+These tools will help you debug and inspect your React applications.
 
 ## Getting Started with create-react-app
 
@@ -70,16 +76,17 @@ export const Kennel = () => (
 )
 ```
 
-Some of this looks familiar, sort of. This is simply another way of defining a component function that returns and HTML representation of a kennel.
+Some of this looks familiar... *sort of*. This is simply another way of defining a component function that returns an HTML representation of a kennel.
 
-That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code. With JSX, we can better visualize the eventual rendered HTML structure.
+That stuff that looks like HTML? *It's not*. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code. With JSX, we can better visualize the eventual rendered HTML structure.
 
-Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a [factory function](https://www.sitepoint.com/factory-functions-javascript/). It's just a function that returns an object.
+Even though we write `<Kennel>` in React code, which looks like an HTML element, you should consider each one of your components as a [factory function](https://www.sitepoint.com/factory-functions-javascript/), which is just a function that returns an object.
 
 **What is `<>` and `</>`?**
-Remember, within a function, the return can only return one thing. This is a `React.Fragment` and gives us the ability to wrap the content and return one item.
 
-To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
+Remember, *a function can only return one thing*. This is a `React.Fragment` which gives us the ability to wrap the content, and return one item.
+
+To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the **entry file**, or *the first JavaScript file that runs in our app*.
 
 > ##### `src/index.js`
 
@@ -98,7 +105,7 @@ ReactDOM.render(
 
 ## Starting Your React Application
 
-Make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory. Once there, in your terminal, type the following command.
+In your terminal, make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory, and type the following command.
 
 ```sh
 npm start
@@ -108,9 +115,9 @@ It will take about 30 seconds to run all of your code, and then the process will
 
 ### Child Component
 
-After the Nashville Kennels company information, we want to list all of the animals. I **could** hard code them inside the Kennel component, but as a good developer, I try to adhere to the _Single Responsibility Principle_ whenever I can.
+After the Nashville Kennels company information, we want to list all of the animals. We *could* hard code them inside the Kennel component, but as professional software developers, we will adhere to the **[Single Responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)**, and create a *separate component* for displaying an animal.
 
-Therefore, I'm going to create another component for displaying an animal. Consider how we have structured our previous projects and make a new file specific to the animal display. Copy pasta the following code into the following file.
+Consider how we have structured our previous projects, and make a new file specific to the animal display, then copy pasta the following code into the file.
 
 > ##### `src/components/animal/Animal.js`
 
@@ -126,7 +133,7 @@ export const Animal = () => (
 )
 ```
 
-This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<Animal />`. React interprets this as a component and will run the function that you imported from `Animal.js` and then render the JSX that it defines.
+This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom element `<Animal />`. React interprets this as a component, and will run the function that you imported from `Animal.js`, and then render the JSX that it defines.
 
 Update your **`Kennel`** component with the code provided below. Be sure to import the **`Animal`**. Now when the **`Kennel`** component is rendered it will display 3 child **`Animal`** components.
 
@@ -221,14 +228,18 @@ address {
 
 ## Practice
 
-The Nashville Kennel application needs to include locations, owners, and employees. Create static components for each (`Location.js`, `Customer.js,` and `Employee.js`) and corresponding CSS files.
+The Nashville Kennel application needs to include locations, owners, and employees.
 
-Remember the Single Responsibility Principle. You should have a component whose sole responsibility is to render the location, or customer, or employee information. Make sure you create a different sub-directory for each kind of resource.
+Create static components for each, and corresponding CSS files. Make sure you create different sub-directories for each kind of resource.
+
+Remember the Single Responsibility Principle. You should have a component whose sole responsibility is to render information about a location, another for a customer, and another for an employee.
+
+Update **`Kennel.js`** to show:
+
+* 2 locations
+* 4 customers
+* 3 employees
 
 Yes, each one will display the identical information. This is just to practice making components. You'll be making real, data-driven components soon.
-
-* Show 2 locations
-* Show 4 customers
-* Show 3 employees
 
 ![all components rendered in a grid](./images/hard-coded-components.png)
