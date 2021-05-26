@@ -23,3 +23,9 @@ In this book, you will be introduced to the basics of asynchronous programming a
 |--|--|--|
 | 1 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md) | [The Party is Over](./chapters/BC_PERFORMANCE_COMPLETE.md) |
 | 2 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) |  |
+
+## CloudOps Chapters
+| # | Cloud Deployment Providers |
+|--|--|
+| 💧 | [Deploy API: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) |
+| 💧 | [Deploy Project: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) |
