@@ -27,7 +27,7 @@ In this book, you will be introduced to the basics of asynchronous programming a
 ## CloudOps Chapters
 | # | Cloud Deployment Providers |
 |--|--|
-| 💧 | [AWS Deploy](./chapters/CLOUD_AWS.md) |
+| ☁️ | [AWS Deploy](./chapters/CLOUD_AWS.md) |
 | 💧 | [Quick Deploy API: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) |
 | 💧 | [Quick Deploy Project: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) |
 
