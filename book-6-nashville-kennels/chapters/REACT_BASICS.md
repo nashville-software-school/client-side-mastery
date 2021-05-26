@@ -11,7 +11,7 @@ You've already learned the vast majority of what React does for you when buildin
 
 ## Installing React Developer Tools
 
-You can install the React Developer Tools via the [Chrome Store](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). These tools are another panel the Chrome Developer panel that will help with debugging and inspecting your React applications.
+You can install the React Developer Tools via the [Chrome Store](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). These tools are another panel whinin the Chrome Developer panel, that will help with debugging and inspecting your React applications.
 
 ## Getting Started with create-react-app
 
@@ -32,13 +32,13 @@ Before we grow this application, let's create a meaningful directory structure.
 3. `touch` `Kennel.js` and `Kennel.css`.
 4. Within components, `mkdir` an `animal` directory
 5. `cd` into the `animal` directory.
-6. `touch AnimalCard.js Animal.css`
+6. `touch Animal.js Animal.css`
 
 ```
 - src
     - components
         - animal
-            - AnimalCard.js
+            - Animal.js
             - Animal.css
         - Kennel.js
         - Kennel.css
@@ -48,11 +48,9 @@ Before we grow this application, let's create a meaningful directory structure.
 
 ## Getting Started with Components
 
-Your instructor will walk through this code with you as you build up your initial React application.
-
 ### Single Component
 
-Here is a simple example of a React component. Please read through the following code snippets and ask questions prior to writing any code.
+Here is a simple example of a React component. ***Please read through the following code snippets and ask questions prior to writing any code.***
 
 > src/components/Kennel.js
 
@@ -72,13 +70,13 @@ export const Kennel = () => (
 )
 ```
 
-Some of this looks familiar, sort of. This is simply another way of building a JavaScript object (Kennel) that has a single property -- a method called render -- that returns an HTML representation of some (hard-coded) data. You've done all of that before.
+Some of this looks familiar, sort of. This is simply another way of defining a component function that returns and HTML representation of a kennel.
 
 That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code. With JSX, we can better visualize the eventual rendered HTML structure.
 
-Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a factory function. It's just a function that returns an object.
+Even though we write `<Kennel>` in React code, which looks like an HTML element, you can consider each one of your components as a [factory function](https://www.sitepoint.com/factory-functions-javascript/). It's just a function that returns an object.
 
-**What is `<>` and `</>`**
+**What is `<>` and `</>`?**
 Remember, within a function, the return can only return one thing. This is a `React.Fragment` and gives us the ability to wrap the content and return one item.
 
 To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
@@ -110,17 +108,17 @@ It will take about 30 seconds to run all of your code, and then the process will
 
 ### Child Component
 
-After the company information, we want to list all of the animals. I **could** hard code them inside the kennel component, but as a good developer, I try to adhere to the _Single Responsibility Principle_ whenever I can.
+After the Nashville Kennels company information, we want to list all of the animals. I **could** hard code them inside the Kennel component, but as a good developer, I try to adhere to the _Single Responsibility Principle_ whenever I can.
 
 Therefore, I'm going to create another component for displaying an animal. Consider how we have structured our previous projects and make a new file specific to the animal display. Copy pasta the following code into the following file.
 
-> ##### `src/components/animal/AnimalCard.js`
+> ##### `src/components/animal/Animal.js`
 
 ```jsx
 import React from "react"
 import "./Animal.css"
 
-export const AnimalCard = () => (
+export const Animal = () => (
     <section className="animal">
         <h3 className="animal__name">Doodles</h3>
         <div className="animal__breed">Breed: Poodle</div>
@@ -128,16 +126,16 @@ export const AnimalCard = () => (
 )
 ```
 
-This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<AnimalCard />`. React interprets this as a component and will run the function that you imported from `AnimalCard.js` and then render the JSX that it defines.
+This component can be included as a child of the **`Kennel`** component. Look at the code below and notice the custom HTML element `<Animal />`. React interprets this as a component and will run the function that you imported from `Animal.js` and then render the JSX that it defines.
 
-Update your **`Kennel`** component with the code provided below. Be sure to import the **`AnimalCard`**. Now when the **`Kennel`** component is rendered it will display 3 child **`AnimalCard`** components.
+Update your **`Kennel`** component with the code provided below. Be sure to import the **`Animal`**. Now when the **`Kennel`** component is rendered it will display 3 child **`Animal`** components.
 
 > ##### `src/components/Kennel.js`
 
 ```jsx
 import React from "react"
-import { AnimalCard } from "./animal/AnimalCard"
-import "./animal/Animal.css"
+import { Animal } from "./animal/Animal"
+import "./Kennel.css"
 
 export const Kennel = () => (
     <>
@@ -151,9 +149,9 @@ export const Kennel = () => (
 
         <h2>Animals</h2>
         <article className="animals">
-            <AnimalCard />
-            <AnimalCard />
-            <AnimalCard />
+            <Animal />
+            <Animal />
+            <Animal />
         </article>
     </>
 )
@@ -223,7 +221,7 @@ address {
 
 ## Practice
 
-The Nashville Kennel application needs to include locations, owners, and employees. Create static card components for each (`Location.js`, `Customer.js` and `Employee.js`) and a corresponding CSS file.
+The Nashville Kennel application needs to include locations, owners, and employees. Create static components for each (`Location.js`, `Customer.js,` and `Employee.js`) and corresponding CSS files.
 
 Remember the Single Responsibility Principle. You should have a component whose sole responsibility is to render the location, or customer, or employee information. Make sure you create a different sub-directory for each kind of resource.
 
