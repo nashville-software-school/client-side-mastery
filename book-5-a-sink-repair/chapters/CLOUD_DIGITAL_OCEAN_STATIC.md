@@ -12,6 +12,7 @@ Your applicatons are considered to be static apps, so you won't be charged for t
 1. Choose your repository from the search field that appears.
 1. Click next.
 1. It will auto-detect that you're trying to deploy a **Static Site** and all of the defaults should be unchanged.
+    > Note: If you get a message that it could not find an app in your repo, type `/src` in the "Source directory" field and click "Find directory".
 1. Click next.
 1. Type in an app name like "sinks-steve" or anything else that works.
 1. Click next.
