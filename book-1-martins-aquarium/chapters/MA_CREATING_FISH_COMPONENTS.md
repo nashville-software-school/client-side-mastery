@@ -15,17 +15,17 @@ This module exports a function as well. This one returns a newly constructed str
 > **`workspace/martins-aquarium/scripts/FishList.js`**
 
 ```js
-// Import the function that returns a copy of the fish array
+// Import the object that contains the fish array
 import {} from ''
 
 export const FishList = () => {
-    // Invoke the function that you imported from the database module
-    const fishes = invokeTheRightFunctionHere()
+   
+    const fishes = <what you imported from database.js>
 
     // Start building a string filled with HTML syntax
     const htmlString = '<article class="fishList">'
 
-    // Create HTNL representations of each fish here
+    // Create HTML representations of each fish here
     for (const fish of fishes) {
 
         // Why is there a backtick used for this string?
