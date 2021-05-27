@@ -43,6 +43,12 @@ Your applicatons are considered to be static apps, so you won't be charged for t
         console.log('JSON Server is running')
     })
     ```
+1. Create a `.gitignore` file in your project and place the following contents in it.
+    ```text
+    node_modules
+    .DS_Store
+    ```
+1. Run the command `npm install` and wait for the process to complete.
 1. Create a Github repository and connect it to this new directory.
 1. Add, commit, and push your code to Github.
 
@@ -72,7 +78,7 @@ Now wait for a few minutes while your application is built and deployed. Once su
 Your new fetch calls will look like this, except your URL must be in there... not mine.
 
 ```js
-fetch("https://https://json-api-ys75q.ondigitalocean.app//animals")
+fetch("https://json-api-ys75q.ondigitalocean.app/animals")
     .then(r => r.json())
     .then(animals => {
         // Do what you need with the response
