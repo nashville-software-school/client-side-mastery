@@ -30,6 +30,3 @@ In this book, you will be introduced to the basics of asynchronous programming a
 | ☁️ | [AWS Deploy](./chapters/CLOUD_AWS.md) |
 | 💧 | [Quick Deploy API: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) |
 | 💧 | [Quick Deploy Project: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) |
-
-
-https://github.com/nashville-software-school/aws-deployment-instructions
