@@ -55,9 +55,9 @@ Your applicatons are considered to be static apps, so you won't be charged for t
 ## Deploy JSON Server
 
 1. In Digital Ocean, create an app.
-1. Connect Digital Ocean to your Github account if you haven't yet.
-1. In Digital Ocean, create an app.
 1. Click the Github icon.
+1. Connect Digital Ocean to your Github account if you haven't yet.
+1. Click the Github icon again.
 1. Choose your repository from the search field that appears.
 1. Click next.
 1. It will auto-detect that you're trying to deploy a **Web Service** and all of the defaults should be unchanged.
