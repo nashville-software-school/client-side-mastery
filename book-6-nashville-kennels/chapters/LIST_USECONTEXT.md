@@ -46,8 +46,6 @@ export const AnimalList = () => {
 }
 ```
 
-Now go back to the browser and you should see a list of animals appear.
-
 ### Breaking it Down
 
 In the above component, you will notice a two new hooks: `useContext` and `useEffect`.
