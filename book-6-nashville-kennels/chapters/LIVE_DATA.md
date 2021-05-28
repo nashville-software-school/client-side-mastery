@@ -31,7 +31,7 @@ Now create the following components for locations, animals, employees, and custo
 * List
 * Individual item
 
-Then refactor the **`ApplicationViews`** component to render each list component. Remember to wrap each list component in its corresponding data provider component.
+Then refactor the **`Kennels`** component to render each list component. Remember to wrap each list component in its corresponding data provider component.
 
 To get started...
 

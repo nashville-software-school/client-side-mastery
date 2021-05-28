@@ -1,6 +1,6 @@
 # Listing Animals from the Database
 
-Now it's time to get the animals data from the API and then refactor the **`AnimalCard`** component to display the live data instead of it being hard-coded.
+Now it's time to get the animals data from the API and build the JSX for representing each animal object as HTML.
 
 ## Animal List
 
@@ -11,7 +11,6 @@ First, you need to define the animal list component. Note that the `AnimalContex
 ```jsx
 import React, { useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import { AnimalCard } from "./AnimalCard"
 import "./Animal.css"
 
 export const AnimalList = () => {
@@ -40,8 +39,6 @@ export const AnimalList = () => {
               </div>
             </div>
           )
-
-          <AnimalCard  animal={animal} />
         })
       }
     </section>
@@ -81,43 +78,31 @@ useEffect(() => {
 Be careful setting state within the `useEffect`. State changes cause a re-render. Re-render can invoke `useEffect` (depending on the dependency array values). This would result in an infinate loop.
 
 
-Use the `.map()` array method to iterate the array of animals and generate HTML for each one by invoking the **`AnimalCard`** component function.
+Use the `.map()` array method to iterate the array of animals and generate HTML for each one.
 
 ```js
-{
-    animals.map(animal => <AnimalCard key={animal.id} animal={animal} />)
-}
-```
-
-Note that even though it looks like you are specifying an HTML component, you are actually invoking a function. Also, the `key` and `animal` arguments look like HTML attributes here, but they actually become properties on an object that gets passed as an argument.
-
-It is the equivalent of writing the following vanilla JS code.
-
-```js
-const properties = {
-    key: animal.id,
-    animal: animal
-}
-
-Animal(properties)
-```
-
-In React, that gets shortened to the following JSX.
-
-```jsx
-<AnimalCard key={animal.id} animal={animal} />
+animals.map(animal => {
+  return (
+    <div className="animal" id={`animal--${animal.id}`}>
+      <div className="animal__name">
+        Name: { animal.name }
+      </div>
+      <div className="animal__breed">
+        Breed: { animal.breed }
+      </div>
+    </div>
+  )
+})
 ```
 
 ## Wrap the AnimalList with Data
 
-Now you need to refactor the `AppicationViews` component to use live data. Replace the animals route with the following.
+Now you need to refactor the **`Kennels`** component to use live data. Replace the animals route with the following.
 
-> ##### `src/components/ApplicationViews.js`
+> ##### `src/components/Kennels.js`
 ```jsx
 <AnimalProvider>
-    <Route exact path="/animals">
-        <AnimalList />
-    </Route>
+    <AnimalList />
 </AnimalProvider>
 ```
 
@@ -128,24 +113,3 @@ import { AnimalList } from "./animal/AnimalList"
 ```
 
 Note that the <**AnimalList**> component is a child of the <**AnimalProvider**> component. It is crucial that you wrap components that need data with the provider component that exposes that data in JSX. You can wrap a component in as many providers as needed.
-
-
-## AnimalCard
-
-Refactor your **`AnimalCard`** component to use the data provided by the parent component of **`AnimalList`**.
-
-> ##### `src/components/animal/AnimalCard.js`
-
-```js
-import React from "react"
-import "./Animal.css"
-
-export const AnimalCard = ({ animal }) => (
-    <section className="animal">
-        <h3 className="animal__name">{animal.name}</h3>
-        <address className="location__address">{animal.location.name}</address>
-    </section>
-)
-```
-
-Once all three of the components are complete, you should see the HTML representations of the animals in your API database.

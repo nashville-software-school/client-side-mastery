@@ -81,54 +81,35 @@ Notice the use of the `<Link/>` component. This comes from the React Router pack
 Now it's time to define the Routes for our application. In **`NavBar`**, you defined four **`<Link />`** components that will navigate to the routes of...
 
 * `/`
-* `/locations`
 * `/animals`
 * `/customers`
 * `/employees`
 
 In the **`ApplicationViews`** component, you will define how your application will respond when the URL matches each of those patterns. When a user clicks on one of the hyperlinks in the navigation bar, this code dictates which component should be rendered.
 
-**For this example, convert the static content of the `Kennel` component into a `Home` component.
-
-> ##### `src/components/Home.js`
-```jsx
-import React from "react";
-import { PropsAndState } from './PropsAndState'
-
-export const Home = () => (
-    <>
-        <h2>Nashville Kennels</h2>
-        <small>Loving care when you're not there.</small>
-
-        <address>
-            <div>Visit Us at the Nashville North Location</div>
-            <div>500 Puppy Way</div>
-        </address>
-        <PropsAndState yourName={"Brenda"} />
-    </>
-)
-```
 
 > ##### `src/components/ApplicationViews.js`
 
 ```jsx
 import React from "react"
 import { Route } from "react-router-dom"
-import { Home } from "./Home"
-import { AnimalCard } from "./animal/AnimalCard"
 
 export const ApplicationViews = () => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
-            <Route exact path="/">
-                <Home />
-            </Route>
+            <LocationProvider>
+                <Route exact path="/">
+                    <LocationList />
+                </Route>
+            </LocationProvider>
 
             {/* Render the animal list when http://localhost:3000/animals */}
-            <Route path="/animals">
-                <AnimalCard />
-            </Route>
+            <AnimalProvider>
+                <Route path="/animals">
+                    <AnimalList />
+                </Route>
+            </AnimalProvider>
         </>
     )
 }
@@ -186,4 +167,4 @@ With code in place, you should be able to navigate between multiple views and di
 
 ## Practice: Customers and Employees
 
-Your job is to update **`ApplicationViews`** to make the _Locations_, _Customers_ and _Employees_ links display their matching resources when clicked.
+Your job is to update **`ApplicationViews`** to make the _Customers_ and _Employees_ links display their matching resources when clicked.
