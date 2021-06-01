@@ -26,7 +26,6 @@ export const AnimalList = () => {
 
   return (
     <section className="animals">
-      {console.log("AnimalList: Render", animals)}
       {
         animals.map(animal => {
           return (
@@ -46,19 +45,61 @@ export const AnimalList = () => {
 }
 ```
 
-### Breaking it Down
+## Breaking it Down
 
-In the above component, you will notice a two new hooks: `useContext` and `useEffect`.
+In the above component, you will notice a two new functions - special ones called "hooks" by the Facebook development team - `useContext()` and `useEffect()`.
 
-The `useContext` hook allows you to use data structures and functions that a parent provider component exposes.
+### useContext Hook
 
-To start, you need to import the context object you created in the provider component so that the Context hook can access the objects it exposes.
+The `useContext()` hook allows you to use data structures and functions that a parent provider component exposes.
+
+```jsx
+<Provider>  <-- Parent: Creates the data context
+    <Layout>  <-- Child: Can use the data in the context
+      <SideNav />  <-- Grandchild: Can use the data in the context
+      <Content />  <-- Grandchild: Can use the data in the context
+      <Footer />   <-- Grandchild: Can use the data in the context
+    </Layout>
+</Provider>
+```
+
+To start, you need to import the context object you created in the provider component so that the `useContext()` hook can access the objects it exposes.
 
 ```js
 import { AnimalContext } from "./AnimalProvider"
 ```
 
-The `useEffect` hook allows the component to reach out into the world for anything that cannot be handled during render. In this case, it is the API call for the animals.
+Take a look at what your context returns again. It has three key/value pairs on the object is exposes to its children.
+
+1. `animals` whose value will be an array of animal objects
+1. `getAnimal` whose value is a function
+1. `addAnimal` whose value is a function
+
+```js
+<AnimalContext.Provider value={{
+    animals, getAnimals, addAnimal
+}}>
+    {props.children}
+</AnimalContext.Provider>
+```
+
+You can then use the `useContext()` function in **any** descendant code - chid, grandchild, great-grandchild, etc. - to directly gain access to any of those keys.
+
+If a descendant only wanted to display animal state, it would extract the function to get the animals from the API, and also the state variable.
+
+```js
+const { getAnimals, animals } = useContext(AnimalContext)
+```
+
+If another descendant had a form and button to add a new animal, it would extract only the function to create the new state in the API.
+
+```js
+const { addAnimal } = useContext(AnimalContext)
+```
+
+### useEffect Hook
+
+The `useEffect()` hook allows the component to reach out into the world for anything that cannot be handled during render. In this case, it is the API call for the animals.
 
 
 ```js
@@ -104,7 +145,8 @@ Now you need to refactor the **`Kennels`** component to use live data. Replace t
 </AnimalProvider>
 ```
 
-Be sure to import at the top
+Be sure to import the required modules at the top of the file.
+
 ```js
 import { AnimalProvider } from "./animal/AnimalProvider"
 import { AnimalList } from "./animal/AnimalList"
