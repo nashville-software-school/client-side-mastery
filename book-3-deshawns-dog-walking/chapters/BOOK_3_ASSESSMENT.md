@@ -26,7 +26,7 @@ Your instruction team will provide a link for you to create your assessment repo
 1. `cd` into the directory it creates
 2. `npm install` to install the testing framework
 3. `code .` to open the project code
-4. Use the `serve` command to start the web server
+4. Use the `serve -p 8080` command to start the web server
 5. Open the URL provided in Chrome
 6. Run `npm test` when you're ready to assess your code
 
