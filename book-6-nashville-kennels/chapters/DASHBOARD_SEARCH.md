@@ -31,7 +31,7 @@ return (
       {props.children}
     </AnimalContext.Provider>
   )
-``` 
+```
 
 ## Create a Search Bar Component
 
@@ -71,7 +71,7 @@ Since the animal list needs to react when the user types something into the sear
 ```jsx
 import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import { AnimalCard } from "./AnimalCard"
+import { AnimalDetail } from "./AnimalDetail"
 import "./Animal.css"
 import { useHistory } from "react-router-dom"
 
@@ -110,7 +110,7 @@ export const AnimalList = () => {
       <div className="animals">
       {
         filteredAnimals.map(animal => {
-          return <AnimalCard key={animal.id} animal={animal} />
+          return <AnimalDetail key={animal.id} animal={animal} />
         })
       }
       </div>
