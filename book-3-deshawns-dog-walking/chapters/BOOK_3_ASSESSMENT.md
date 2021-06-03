@@ -24,9 +24,11 @@ Your instruction team will provide a link for you to create your assessment repo
 1. Make sure you are in your `workspace` directory
 1. `git clone {github repo SSH string}`
 1. `cd` into the directory it creates
-1. `code .` to open the project code
-1. Use the `serve` command to start the web server
-1. Open the URL provided in Chrome
+2. `npm install` to install the testing framework
+3. `code .` to open the project code
+4. Use the `serve` command to start the web server
+5. Open the URL provided in Chrome
+6. Run `npm test` when you're ready to assess your code
 
 Make sure your Developer Tools are open at all times while working on this project. Use the messages provided in the Console to determine what code needs to be fixed or implemented, and use breakpoints in the Sources tab to step through your code as you debug.
 
