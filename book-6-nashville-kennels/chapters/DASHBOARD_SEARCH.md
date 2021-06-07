@@ -25,7 +25,7 @@ Make sure to modify your return statement to include the new state variable and 
 return (
     <AnimalContext.Provider value={
       {
-      animals, addAnimal, getAnimals, getAnimalById, searchTerms, setTerms
+      animals, addAnimal, getAnimals, getAnimalById, searchTerms, setSearchTerms
       }
     }>
       {props.children}

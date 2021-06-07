@@ -37,7 +37,7 @@ Get a reference to the release function in your animal component.
 
 ```js
 // Update this line of code to include releaseAnimal
-const { getAnimalById, releaseAnimal } = useContext(AnimalContext)
+const { releaseAnimal } = useContext(AnimalContext)
 ```
 
 Add a button to your animal details component that will allow the user to release the animal from care. Then invoke the function when the button is clicked. Once the delete operation is complete, redirect the user back to the list of animals.
