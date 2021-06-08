@@ -4,7 +4,7 @@ Create a form for hiring employees. You must be able to choose a location when f
 
 * Name (string)
 * Location (foreign key)
-* Manager (boolean)
+* Manager (boolean) _(i.e. Is this employee a manager or not?)_
 * Full time (boolean)
 * Hourly rate (number)
 
