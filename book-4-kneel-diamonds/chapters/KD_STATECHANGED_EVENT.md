@@ -10,7 +10,7 @@ It will modify permanent state. When state changes for your application, you nee
 
 When the user clicks on the `Create Custom Order` button in the application, you need to store their choices permanently. This is where the `customOrder` state comes into play. You will be adding objects to that state array.
 
-Since that's a new task that the application needs to perform, you need a function. The function's sole reponsiblity will be to take the temporary choices currently being stored in the `orderBuilder` state object and make them permanent.
+Since that's a new task that the application needs to perform, you need a function. The function's sole reponsibility will be to take the temporary choices currently being stored in the `orderBuilder` state object and make them permanent.
 
 > #### `kneel-diamonds/scripts/database.js`
 
