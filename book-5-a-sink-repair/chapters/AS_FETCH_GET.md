@@ -6,7 +6,7 @@ Feel free to go back to chapter 1 and review the video about using `fetch()`.
 
 ## Manually Create a Request
 
-Put the following object in the "requests" array in your `database.json` file.
+The following object has been placed in the "requests" array in your `database.json` file.
 
 ```json
 {
