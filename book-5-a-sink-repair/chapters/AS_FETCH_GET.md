@@ -32,11 +32,11 @@ You should see the following output. If you don't, see an instructor.
 
 ## Application State
 
-You will need to store that external data in your application state when you fetch it. Create a property named `requests` in your application state object. Its initial value must be an empty array.
+You will need to store that external data in your application state when you fetch it. Create a property named `requests` in your application state object, which which you will find in the `dataAccess.js` module . Its initial value must be an empty array.
 
 ## HTTP GET Request with Fetch
 
-Place the following variable and function in your `dataAccess.js` module.
+Still in `dataAccess.js`, Place the following variable and function below the application state object.
 
 ```js
 const API = "http://localhost:8088"
@@ -55,7 +55,7 @@ export const fetchRequests = () => {
 
 ## Export Requests State
 
-Define and export a function named `getRequests` that returns a copy of the requests state. Go back to a previous project and look at the functions that return copies of arrays in the `database` module if you've forgotten the syntax.
+Now that you have defined a way to fetch the stored data from the database and set it to your application state, you'll need a function for providing a copy of the requests state -- something you have done multiple times in previous projects. Define and export a function named `getRequests` that does just that. If you need to, go back to a previous project and look at the functions that return copies of arrays in the `database` module to remind you of the syntax.
 
 ## Fetch State Before Displaying
 
@@ -64,7 +64,7 @@ You need to fetch the data from the API and store it in application state before
 > #### `sink-repair/src/scripts/main.js`
 
 ```js
-import { fetchRequests } from "./dataAccess.js"
+import { fetchRequests } from "./dataAccess.js" // make sure the requests data has been fetched and set into application state first thing
 import { SinkRepair } from "./SinkRepair.js"
 
 
@@ -119,7 +119,7 @@ For example, if you write a function named `convertRequestToListElement`, then y
 import { getRequests } from "./dataAccess.js"
 
 export const Requests = () => {
-    const requests = getRequests()
+    const requests = getRequests() // grab the local state of the requests data
 
     let html = `
         <ul>
