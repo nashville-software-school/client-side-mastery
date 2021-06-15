@@ -22,7 +22,7 @@ export const sendRequest = (userServiceRequest) => {
     return fetch(`${API}/requests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
-
+            // do something after the POST is finished. Stay tuned for what to put here!
         })
 }
 ```
@@ -44,6 +44,8 @@ Here are the four main methods used on HTTP requests.
 Add the following event listener to the **`ServiceForm`** module. Read each line of code, discuss with your teammates, and see if you can understand what everything is doing. Make sure you write down any questions you have about the code for the review with the instruction team.
 
 ```js
+import { sendRequest } from "./dataAccess.js"
+
 const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener("click", clickEvent => {
@@ -73,5 +75,3 @@ mainContainer.addEventListener("click", clickEvent => {
 Watch the following video for an overview of how to use your Developer Tools to see what data is being sent in the request, and the response, when working the GET and POST requests.
 
 [<img src="./images/fetch-dev-tools.png" width="700px">](https://vimeo.com/533754593)
-
-

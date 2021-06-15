@@ -32,7 +32,7 @@ export const ServiceForm = () => {
 }
 ```
 
-Then import the HTML into the main module and interpolate it in the site structure.
+Then import the HTML into the SinkRepair module and interpolate it in the site structure.
 
 > #### `sink-repair/src/scripts/SinkRepair.js`
 

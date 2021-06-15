@@ -9,9 +9,13 @@ Update your `sendRequest()` function's fetch call to dispatch the custom event a
 > #### `sink-repair/src/scripts/dataAccess.js`
 
 ```js
+    // Add this...
+    const mainContainer = document.querySelector("#container");
+
     return fetch(`${API}/requests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
+            // ...and this
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
         })
 ```
@@ -20,7 +24,7 @@ Update your `sendRequest()` function's fetch call to dispatch the custom event a
 
 Now your `main` module has to listen for the custom event and invoke the `render()` function to build all the HTML again.
 
-> #### `sink-repair/src/scripts/dataAccess.js`
+> #### `sink-repair/src/scripts/main.js`
 
 ```js
 mainContainer.addEventListener(
@@ -36,4 +40,3 @@ mainContainer.addEventListener(
 Now submit another service request with your form, and the service request should now be immediately rendered in the list without the need to refresh the browser. Have your Developer Tools > Network tab open and inspect both the POST request, and the subsequent GET request to see what happened.
 
 ![animation of submitting a service request](./images/sink-repair-post-then-fetch.gif)
-
