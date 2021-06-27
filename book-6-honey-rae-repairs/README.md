@@ -1,18 +1,19 @@
-# Book 6 - Nashville Kennels
+# Book 6 - Honey Rae's Repair Shop
 
 ## Chapters
 
-| #  | 🍯 💻 Honey Rae's Repairs | 🐕 🐈 Nashville Kennels | 🍭 🍬 Kandy Korner |
+| # | 🍯 💻 Honey Rae's Repairs | 🐕 🐈 Nashville Kennels | 🍭 🍬 Kandy Korner |
 |--|--|--|--|
-| 1 | [Basic React Vocabulary](./chapters/REACT_BASICS.md) | [Vocabulary Review](./chapters/REACT_BASICS_REVIEW.md) | [Store Locations](./chapters/KK_STORES.md) |
+| 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | [Vocabulary Review](./chapters/REACT_BASICS_REVIEW.md) | [Store Locations](./chapters/KK_STORES.md) |
 | 2 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | [Kennel API](./chapters/KENNEL_API.md)  | [Kandy Korner API](./chapters/KANDY_API.md) |
-| 3 | [Customer List](./chapters/HONEY_CUSTOMERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state</sub> | [Animal Data Provider](./chapters/DATA_PROVIDER.md) <br/> <sub style="font-size:0.85rem;">#context</sub> |  |
-| 4 | [Employee List](./chapters/HONEY_CUSTOMERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state</sub> | [Listing Animals](./chapters/LIST_USECONTEXT.md) <br/> <sub style="font-size:0.85rem;">#useContext #providers </sub>  | [Inventory](./chapters/KK_INVENTORY.md) |
-| 5 | [Service Order List](./chapters/HONEY_CUSTOMERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Listing Locations, Employees, and Customers](./chapters/LIVE_DATA.md) | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
+| 3 | [Display Customer State](./chapters/HONEY_CUSTOMERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state</sub> | |  |
+| 4 | [Customer List Component](./chapters/HONEY_CUSTOMERS.md) <br/> <sub style="font-size:0.85rem;">#components #composition</sub> | [Animal Data Provider](./chapters/DATA_PROVIDER.md) <br/> <sub style="font-size:0.85rem;">#context</sub> |  |
+| 5 | [Employee List](./chapters/HONEY_EMPLOYEES.md) <br/> <sub style="font-size:0.85rem;">#fetch #state</sub> | [Listing Animals](./chapters/LIST_USECONTEXT.md) <br/> <sub style="font-size:0.85rem;">#useContext #providers </sub>  | [Inventory](./chapters/KK_INVENTORY.md) |
+| 6 | [Service Order List](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Listing Locations, Employees, and Customers](./chapters/LIVE_DATA.md) | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 5**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 6**
 
-|#| Honey Rae's Repairs | Nashville Kennels | Kandy Korner |
+| # | 🍯 💻 Honey Rae's Repairs | 🐕 🐈 Nashville Kennels | 🍭 🍬 Kandy Korner |
 |--|--|--|--|
 | 6 | [Navigation Bar with Routing](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #navigation</sub> | [Navigating Kennel Project](./chapters/KENNEL_ROUTING.md) | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
 | 7 | |  [Multiple Resources](./chapters/MULTIPLE_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#json-server #_expand #_sort</sub> |  |
@@ -20,7 +21,7 @@
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 8**
 
-|#| Honey Rae's Repairs | Nashville Kennels | Kandy Korner |
+| # | 🍯 💻 Honey Rae's Repairs | 🐕 🐈 Nashville Kennels | 🍭 🍬 Kandy Korner |
 |--|--|--|--|
 | 9 | | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub>| [Rewards Program](./chapters/KK_CUSTOMERS.md) |
 | 10 | | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
