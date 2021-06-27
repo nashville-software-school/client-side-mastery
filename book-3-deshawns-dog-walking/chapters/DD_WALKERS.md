@@ -13,3 +13,9 @@ Using the event listener code provided as an example, see if you can update the 
 
 
 You can also take a peek at [most of the solution](./code/dogWalker.js).
+
+## Dev Tools Practice
+
+Use the Event Listeners panel to discover, and the Event Listener Breakpoints panel to debug, the events in your code. If you don't know what this means, then you skipped chapter 5 of the guided tour.
+
+Go read that chapter now and watch the accompanying video.
