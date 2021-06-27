@@ -14,7 +14,7 @@ In this book, you will develop the core skill of debugging JavaScript code in a 
 | 2 | [Finding and Squashing Bugs](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Broken Receipts](./chapters/BA_DEBUGGING.md) |
 | 3 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Coffee ERD](./chapters/BA_ERD.md) |
 | 4 | [Show Walker Service Area](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#data #functions #events</sub> | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) |
-| 5 |  | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) |
+| 5 | [Discover and Debug Event Listeners](./chapters/DD_EVENT_LISTENER_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> |  [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) |
 | 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | |
 
 ## Explorer Chapters
