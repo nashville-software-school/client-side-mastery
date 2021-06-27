@@ -60,6 +60,8 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Developer Vocabulary
 
+<img src="./images/chair.png" align="right" width="500px" />
+
 > **Vocabulary:** Imagine a chair. Now imagine that you have to write a poem or other paper about the chair you have in your mind. How would you describe it? It could be a tall, white chair. It could be uncomfortable. You could say when you purchased it. When you describe something, you often list its properties. A property of something is just a specific feature of that thing. In the short description above, here are the properties of the chair you were imagining.
 >   1. Height
 >   1. Color
@@ -68,8 +70,8 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Discussion Points
 
-1. What are the components?
-1. What do you think the layout of the site should be?
+1. What are the visual components that make up the user interface _(e.g. fish list)_?
+1. What do you think the layout of the site should be? Draw it on [Miro](https://miro.com), [Sketchboard](https://sketchboard.io/), or with [pen and paper](https://alessiobresciani.com/digital-marketing/use-pen-and-paper-wireframe-tools-to-create-incredible-user-experiences/).
 1. What are the properties of each fish that you will be representing in your HTML?
 1. What are the properties of the fish care tips that Martin wants on the side?
 1. What are the properties of the locations Martin has visited?
