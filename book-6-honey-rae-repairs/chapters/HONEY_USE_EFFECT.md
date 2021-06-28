@@ -1,71 +1,73 @@
-# Honey Rae's Customers
+# Reacting to State Changes with useEffect()
 
-As Honey Rae and her team's reputation grows, the number of people who come in for repairs starts to grow quickly. It quickly becomes too hard to track how many outstanding service orders they currently are working on, and the order in which they came in.
+Your initial introduction to the `useEffect()` hook was not very compelling, nor did it show you the true power of the function. This hook's main purpose is to observe one, or more, state variables, and then run code when that state changes.
 
-Honey Rae's team needs to have an application that tracks who is working on which service order, for which customer. They also need to track when the customers dropped off their electronics so they can be worked on in the right order.
+It's an event listener. It doesn't look like one, though, because React has encapsulated that code behind the scenes and has give you `useEffect()` to use.
 
-The first step is to display all of the customers that have been helped. This will not only help with the current need of tracking their work, but will also allow Honey Rae to do marketing in the future to let people know if new services are being offered.
+Remember when you used the following code when your state changed?
+
+```js
+document.dispatchEvent(
+    new CustomEvent("stateChanged")
+)
+```
+
+The main module then listened for that event and built all of the HTML again.
+
+```js
+document.addEventListener("stateChanged", event => {
+    console.log("State of data has changed. Regenerating HTML...")
+    renderAllHTML()
+})
+```
+
+The `useEffect()` function does **all of that for you now**, and does it more discreetly, with better performance, and targets only the specific HTML that would change instead of re-rendering the _entire_ application.
+
 
 ## Starter Code
 
-The following `index.js` module can be copy pasta directly and then closed. You won't need to make any changes to it.
+Completely replace the code in your **`CustomerList`** module with the following starter code.
 
-### Index Module
-
-> #### `src/index.js`
-
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { Repairs } from "./components/Repairs";
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Repairs />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-reportWebVitals();
-```
-
-### Customer List Module
-
-The customer list module needs to remain open in your editor. While watching the video, you will need to make the appropriate changes to the code to make it work.
-
-> #### `src/components/Repairs.js`
+> #### `src/components/customers/CustomerList.js`
 
 ```js
 import React, { useEffect, useState } from "react"
 
-export const Repairs = () => {
-    const [] = useState([])
+export const CustomerList = () => {
+    const [customers, setCustomers] = useState([])
 
     useEffect(
         () => {
-            fetch()
+            fetch("http://localhost:8088/customers")
                 .then(res => res.json())
-                .then(
-                    (customers) => { }
-                )
+                .then((data) => {
+                    setCustomers(data)
+                })
         },
         []
     )
 
-    return (
-        <h1>Honey Rae's Repair Shop</h1>
+    useEffect(
+        () => {
 
-        {
-            customers.map(
-                () => { }
-            )
-        }
+        },
+        [customers]
+    )
+
+    return (
+        <>
+            {
+                customers.map(
+                    (customerObject) => {
+                        return <p key={`customer--${customerObject.id}`}>{customerObject.name}</p>
+                    }
+                )
+            }
+        </>
     )
 }
 ```
 
-## Video: Customer State
+## Video: Total Customers State
 
-Watch the [Honey Rae's Repairs - Listing Customers State](https://vimeo.com/568152084) video to see how the `useState()` and `useEffect()` functions _(a.k.a. hooks)_ are used to set up and update application state to be rendered as HTML.
+Watch the [Honey Rae's Repairs - Total Customers State](https://vimeo.com/568226412) video to see how the `useState()` and `useEffect()` hooks are used to set up and watch application state.
