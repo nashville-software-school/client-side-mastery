@@ -1,29 +1,36 @@
 # Displaying Open Tech Repair Orders
 
+To finish out the process of displaying all of the state from the API, you are going to make a new component that will display information about the service tickets that your employees work on for customers. It will display the following information for each ticket.
 
-The first step is to display all of the customers that have been helped. This will not only help with the current need of tracking their work, but will also allow Honey Rae to do marketing in the future to let people know if new services are being offered.
+1. Description of the service ticket
+1. Name of the customer
+1. Name of the employee doing the repair
 
 ## Starter Code
 
-> #### `src/index.js`
+> #### `src/components/tickets/TicketList.js`
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { Repairs } from "./components/Repairs";
-import reportWebVitals from './reportWebVitals';
+import React, { useEffect, useState } from "react"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Repairs />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export const TicketList = () => {
+    const [] = useState([])
 
-reportWebVitals();
+    useEffect(
+        () => {
+
+        },
+        []
+    )
+
+    return (
+        <>
+
+        </>
+    )
+}
 ```
 
 ## Video: Active Service Tickets
 
-Watch the [Honey Rae's Repairs - Listing Customers State](https://vimeo.com/568152084) video to see how the `useState()` and `useEffect()` functions _(a.k.a. hooks)_ are used to set up and update application state to be rendered as HTML.
+Watch the [Honey Rae Repairs - Service Ticket List](https://vimeo.com/568512492) video to see how to use the `_expand` feature of JSON Server to embed related resources in the HTTP response. This reduced the chattiness of your application by getting all of the information you need in one HTTP request instead of three.
