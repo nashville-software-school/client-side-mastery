@@ -8,7 +8,7 @@ To finish out the process of displaying all of the state from the API, you are g
 
 ## Starter Code
 
-> #### `src/components/tickets/TicketList.js`
+> #### `src/components/serviceTickets/TicketList.js`
 
 ```js
 import React, { useEffect, useState } from "react"
