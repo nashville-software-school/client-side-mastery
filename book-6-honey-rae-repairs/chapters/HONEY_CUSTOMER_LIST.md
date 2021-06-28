@@ -24,8 +24,8 @@ Watch the [Honey Rae's Repairs - Customer List Component](https://vimeo.com/5682
 
 ## Employee List
 
-Your job is to create an employee list components and have the names of the employees listed below the names of the customers.
+Your next job is to create an employee list components and have the names of the employees listed below the names of the customers.
 
 ![list of customers and employees](./images/honey-rae-customers-and-employees.png)
 
-Try it yourself, or with your teammates to discuss your strategy and practice vocabulary. If you get stuck, you can watch a bonus video that shows you how to do it.
+Try it yourself, or with your teammates to discuss your strategy and practice vocabulary. If you get stuck, you can watch a [bonus video](https://vimeo.com/568227654) that shows you how to do it.
