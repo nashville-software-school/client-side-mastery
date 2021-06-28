@@ -7,7 +7,8 @@
 | 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | [Vocabulary Review](./chapters/REACT_BASICS_REVIEW.md) | [Store Locations](./chapters/KK_STORES.md) |
 | 2 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | [Kennel API](./chapters/KENNEL_API.md)  | [Kandy Korner API](./chapters/KANDY_API.md) |
 | 3 | [Display Customer State](./chapters/HONEY_CUSTOMERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state</sub> | |  |
-| 4 | [Customer List Component](./chapters/HONEY_CUSTOMERS.md) <br/> <sub style="font-size:0.85rem;">#components #composition</sub> | [Animal Data Provider](./chapters/DATA_PROVIDER.md) <br/> <sub style="font-size:0.85rem;">#context</sub> |  |
+| 4 | [Customer List Component](./chapters/HONEY_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#components #single-responsibility</sub> |  |  |
+| 5 | [React to Customer State](./chapters/HONEY_USE_EFFECT.md) <br/> <sub style="font-size:0.85rem;">#components #composition</sub> | [Animal Data Provider](./chapters/DATA_PROVIDER.md) <br/> <sub style="font-size:0.85rem;">#context</sub> |  |
 | 5 | [Employee List](./chapters/HONEY_EMPLOYEES.md) <br/> <sub style="font-size:0.85rem;">#fetch #state</sub> | [Listing Animals](./chapters/LIST_USECONTEXT.md) <br/> <sub style="font-size:0.85rem;">#useContext #providers </sub>  | [Inventory](./chapters/KK_INVENTORY.md) |
 | 6 | [Service Order List](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Listing Locations, Employees, and Customers](./chapters/LIVE_DATA.md) | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
 

@@ -31,9 +31,9 @@ ReactDOM.render(
 reportWebVitals();
 ```
 
-### Repairs Module
+### Customer List Module
 
-The **`Repairs.js`** module needs to remain open in your editor. While watching the video, you will need to make the appropriate changes to the code to make it work.
+The customer list module needs to remain open in your editor. While watching the video, you will need to make the appropriate changes to the code to make it work.
 
 > #### `src/components/Repairs.js`
 
