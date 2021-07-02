@@ -72,7 +72,7 @@ export const Kennel = () => (
 )
 ```
 
-Some of this looks familiar, sort of. This is simply another way of building a JavaScript object (Kennel) that has a single property -- a method called render -- that returns an HTML representation of some (hard-coded) data. You've done all of that before.
+Some of this looks familiar, sort of. This is simply another way of writing a component function that returns an HTML representation of some (hard-coded) data. You've done all of that before.
 
 That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org/docs/introducing-jsx.html), and it basically allows us to write JavaScript that looks like HTML in our code. With JSX, we can better visualize the eventual rendered HTML structure.
 
