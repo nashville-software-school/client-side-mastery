@@ -139,6 +139,7 @@ import React from "react"
 import { AnimalCard } from "./animal/AnimalCard"
 import "./animal/Animal.css"
 
+//Look carefully at the <article> tag. In React, we add classes to a component with `className` instead of `class`.
 export const Kennel = () => (
     <>
         <h2>Nashville Kennels</h2>
@@ -160,8 +161,6 @@ export const Kennel = () => (
 ```
 
 ## Kennel Styles
-In React, we add classes to a component with `className` instead of `class`.
-
 > ##### `src/components/Kennel.css`
 
 ```css
