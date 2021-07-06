@@ -8,7 +8,7 @@ Pass your name into a component and display it.
 
 > PropsAndState.js
 ```
-import React, from "react"
+import React from "react"
 
 export const PropsAndState = ({ yourName }) => {
 
@@ -25,12 +25,12 @@ Display this component from the *Kennel* component and pass in your name. Don't 
 ```
 //--------
  <PropsAndState yourName={"Brenda"} />
-  <h2>Animals</h2>
-  <article className="animals">
+ <h2>Animals</h2>
+ <article className="animals">
     <AnimalCard />
     <AnimalCard />
     <AnimalCard />
-  </article>
+ </article>
 //-------
 ```
 
