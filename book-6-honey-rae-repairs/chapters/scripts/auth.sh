@@ -8,11 +8,10 @@ import { useHistory } from "react-router-dom"
 import "./Login.css"
 
 export const Register = (props) => {
-    const firstName = useRef()
-    const lastName = useRef()
+    const customerName = useRef()
     const email = useRef()
-    const verifyPassword = useRef()
     const conflictDialog = useRef()
+
     const history = useHistory()
 
     const existingUserCheck = () => {
@@ -20,11 +19,8 @@ export const Register = (props) => {
             .then(res => res.json())
             .then(user => !!user.length)
     }
-
     const handleRegister = (e) => {
         e.preventDefault()
-
-
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
@@ -35,13 +31,13 @@ export const Register = (props) => {
                         },
                         body: JSON.stringify({
                             email: email.current.value,
-                            name: `${firstName.current.value} ${lastName.current.value}`
+                            name: customerName.current.value
                         })
                     })
                         .then(res => res.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
-                                localStorage.setItem("kennel_customer", createdUser.id)
+                                localStorage.setItem("honey_customer", createdUser.id)
                                 history.push("/")
                             }
                         })
@@ -50,12 +46,10 @@ export const Register = (props) => {
                     conflictDialog.current.showModal()
                 }
             })
-        
-    }
 
+    }
     return (
         <main style={{ textAlign: "center" }}>
-
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
@@ -64,19 +58,15 @@ export const Register = (props) => {
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h1>
                 <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
-                    <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
-                    <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
+                    <label htmlFor="customerName"> First Name </label>
+                    <input ref={customerName} type="text" name="customerName" className="form-control" placeholder="First name" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="inputEmail"> Email address </label>
                     <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign in </button>
+                    <button type="submit"> Register </button>
                 </fieldset>
             </form>
         </main>
@@ -89,10 +79,8 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
-
-export const Login = props => {
+export const Login = () => {
     const email = useRef()
-    const password = useRef()
     const existDialog = useRef()
     const history = useHistory()
 
@@ -104,11 +92,10 @@ export const Login = props => {
 
     const handleLogin = (e) => {
         e.preventDefault()
-
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("kennel_customer", exists.id)
+                    localStorage.setItem("holidayroad_customer", exists.id)
                     history.push("/")
                 } else {
                     existDialog.current.showModal()
@@ -125,7 +112,7 @@ export const Login = props => {
 
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nashville Kennels</h1>
+                    <h1>Holiday Road Travel Agency</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
@@ -167,8 +154,7 @@ fieldset {
     text-align: left;
 }
 
-.form--login > fieldset > input[type="email"],
-.form--login > fieldset > input[type="password"] {
+.form--login > fieldset > input[type="email"] {
     width: 25em;
 }
 
@@ -200,7 +186,6 @@ fieldset {
 
 .form--login {
     background-position-x: right;
-    background-image: url(logo.png);
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;
@@ -219,5 +204,3 @@ fieldset {
     min-height: 5rem;
 }
 ' > ./Login.css
-
-curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-4-nashville-kennels/chapters/images/logo.png > logo.png

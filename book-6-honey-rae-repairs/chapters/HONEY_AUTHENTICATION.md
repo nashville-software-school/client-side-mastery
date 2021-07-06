@@ -13,18 +13,18 @@ The best part about this chapter is that you don't need to understand **any of i
 
 Here's the process that this code follows.
 
-1. When the application first renders, it checks for a `kennel_customer` item in local storage.
+1. When the application first renders, it checks for a `honey_customer` item in local storage.
 1. If the item is there, the user is authenticated and the application renders.
 1. If the item is not there, render the Login form instead.
 1. When the user fills out the form and clicks the submit button, query the API to see if a user with the specified email already exists.
-1. If the user already exists, set the `kennel_customer` item in local storage, and display the Dashboard.
+1. If the user already exists, set the `honey_customer` item in local storage, and display the Dashboard.
 1. If the user does not exist, alert that fact to the user.
 
 ## Requiring User to Login
 
-What determines if a user has authenticated? It's the `kennel_customer` key that you set in local storage. If that key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
+What determines if a user has authenticated? It's the `honey_customer` key that you set in local storage. If that key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
 
-Open your **`Kennel`** component and place the following code in it. Replace what is currently there. This is exactly what your **`KandyKorner`** component will look like in that application. All you will change is the local storage key to something like "kandy_customer".
+Open your **`Repairs`** component and place the following code in it. Replace what is currently there. This is exactly what your **`KandyKorner`** component will look like in that application. All you will change is the local storage key to something like "kandy_customer".
 
 ```js
 import React from "react";
@@ -33,13 +33,13 @@ import { ApplicationViews } from "./ApplicationViews";
 import { NavBar } from "./nav/NavBar";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
-import "./Kennel.css";
+import "./Repairs.css";
 
-export const Kennel = () => (
+export const Repairs = () => (
   <>
     <Route
       render={() => {
-        if (localStorage.getItem("kennel_customer")) {
+        if (localStorage.getItem("honey_customer")) {
           return (
             <>
               <NavBar />
@@ -66,7 +66,7 @@ export const Kennel = () => (
 
 Now you can install the mock authentication components into your application.
 
-1. In the terminal, make sure you are in the `kennels` directory.
+1. In the terminal, make sure you are in the `honey-rae-repairs` directory.
 1. Run the following command in that directory.
 
     ```sh
@@ -78,12 +78,10 @@ Now you can install the mock authentication components into your application.
    1. `Login.css`
    1. `logo.png`
 
-**Check for react-router-dom useHistory()** You may need to import the `useHistory` into your Login and Register components and then invoke it.
-
 ## Register an Account
 
 Once you have made all these changes, you should be presented with the Register/Login view. Create an account by filling out the registration form. When you complete that, you will immediately see your main view.
 
-You will also now see a new entry in your local storage.
+You will also now see a new entry in your local storage named `honey_customer` with a numeric value.
 
-**NOTE ABOUT A "USER ALREADY EXISTS" ERROR:** If you're seeing this message the first time registering a user, try going into your database json file and adding an `email` to any objects in the `customers` array
+If you're unsure how to verify this, watch the quick [Chrome DevTools Tutorial 8:Application Tab, Local Storage and Cookies](https://youtu.be/XSfTz9SZjTM?t=76) video to review how to look in local storage.

@@ -127,7 +127,7 @@ export const Repairs = () => {
 }
 ```
 
-Now update your `index.js` by adding a root component of `<Router />` which gets imported from the React Router package. Within **`<Router>`**, place the `<Kennel />` child component. This tells React *"I will be placing Routes in my Kennel component."*
+Now update your `index.js` by adding a new parent  **`<BrowserRouter>`** component for Repairs. This tells React *"I will be placing Routes in my Repairs component."*
 
 > ##### `src/index.js`
 
@@ -135,13 +135,13 @@ Now update your `index.js` by adding a root component of `<Router />` which gets
 import React from "react"
 import ReactDOM from "react-dom"
 import { BrowserRouter } from "react-router-dom"
-import { Kennel } from "./components/Kennel.js"
+import { Repairs } from "./components/Repairs.js"
 import "./index.css"
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <Kennel />
+            <Repairs />
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById("root")
