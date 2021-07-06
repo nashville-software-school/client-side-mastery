@@ -24,7 +24,7 @@ Here's the process that this code follows.
 
 What determines if a user has authenticated? It's the `honey_customer` key that you set in local storage. If that key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
 
-Open your **`Repairs`** component and place the following code in it. Replace what is currently there. This is exactly what your **`KandyKorner`** component will look like in that application. All you will change is the local storage key to something like "kandy_customer".
+Open your **`Repairs`** component and place the following code in it.
 
 ```js
 import React from "react";
