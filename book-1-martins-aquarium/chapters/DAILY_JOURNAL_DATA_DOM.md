@@ -71,7 +71,4 @@ export const EntryListComponent = () => {
 
 ## Render the Entry List
 
-Now you need to import the list component into the main module and invoke it there. If you are still not clear on how to do this...
-
-1. Look at the answer key repository to see an example.
-1. If you still can't get it, see a member of your instruction team and we'll talk through it.
+Now you need to import the list component into the main module and invoke it there. If you are still not clear on how to do this, see a member of your instruction team and we'll talk through it.
