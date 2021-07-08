@@ -66,7 +66,7 @@ useEffect(() => {
 
  You can include dependencies in the array to cause the useEffect to run additional times.
 
-Be careful setting state within the `useEffect`. State changes cause a re-render. Re-render can invoke `useEffect` (depending on the dependency array values). This would result in an infinate loop.
+Be careful setting state within the `useEffect`. State changes cause a re-render. Re-render can invoke `useEffect` (depending on the dependency array values). This would result in an infinite loop.
 
 
 Use the `.map()` array method to iterate the array of animals and generate HTML for each one by invoking the **`AnimalCard`** component function.
