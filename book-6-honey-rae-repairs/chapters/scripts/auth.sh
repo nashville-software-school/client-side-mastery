@@ -3,19 +3,18 @@ set -u
 
 mkdir -p ./src/components/auth && cd $_
 
-echo 'import React, { useRef } from "react"
+echo 'import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
 export const Register = (props) => {
-    const customerName = useRef()
-    const email = useRef()
+    const [customer, setCustomer] = useState({})
     const conflictDialog = useRef()
 
     const history = useHistory()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/customers?email=${customer.email}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
@@ -29,10 +28,7 @@ export const Register = (props) => {
                         headers: {
                             "Content-Type": "application/json"
                         },
-                        body: JSON.stringify({
-                            email: email.current.value,
-                            name: customerName.current.value
-                        })
+                        body: JSON.stringify(customer)
                     })
                         .then(res => res.json())
                         .then(createdUser => {
@@ -46,8 +42,15 @@ export const Register = (props) => {
                     conflictDialog.current.showModal()
                 }
             })
-
     }
+
+    const updateCustomer = (evt) => {
+        const copy = {...customer}
+        copy[evt.target.id] = evt.target.value
+        setCustomer(copy)
+    }
+
+
     return (
         <main style={{ textAlign: "center" }}>
             <dialog className="dialog dialog--password" ref={conflictDialog}>
@@ -58,12 +61,18 @@ export const Register = (props) => {
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h1>
                 <fieldset>
-                    <label htmlFor="customerName"> First Name </label>
-                    <input ref={customerName} type="text" name="customerName" className="form-control" placeholder="First name" required autoFocus />
+                    <label htmlFor="name"> Full Name </label>
+                    <input onChange={updateCustomer}
+                           type="text" id="name" className="form-control"
+                           placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
-                    <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
+                    <label htmlFor="address"> Address </label>
+                    <input onChange={updateCustomer} type="text" id="address" className="form-control" placeholder="Street address" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="email"> Email address </label>
+                    <input onChange={updateCustomer} type="email" id="email" className="form-control" placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Register </button>
@@ -74,18 +83,18 @@ export const Register = (props) => {
 }
 ' > ./Register.js
 
-echo 'import React, { useRef } from "react"
+echo 'import React, { useRef, useState } from "react"
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
 export const Login = () => {
-    const email = useRef()
+    const [email, set] = useState("")
     const existDialog = useRef()
     const history = useHistory()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/customers?email=${email}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
@@ -95,7 +104,7 @@ export const Login = () => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("holidayroad_customer", exists.id)
+                    localStorage.setItem("honey_customer", exists.id)
                     history.push("/")
                 } else {
                     existDialog.current.showModal()
@@ -116,8 +125,8 @@ export const Login = () => {
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
-                        <input ref={email} type="email"
-                            id="email"
+                        <input type="email"
+                            onChange={evt => set(evt.target.value)}
                             className="form-control"
                             placeholder="Email address"
                             required autoFocus />

@@ -16,18 +16,63 @@ Then copy the following JSON into the `database.json` file.
     "customers": [
         {
             "id": 1,
-            "name": "Lynn Blanda",
-            "address": "64162 Lowe Branch"
+            "name": "Dion Stoade",
+            "address": "6866 4th Court",
+            "email": "dstoade0@cornell.edu"
         },
         {
             "id": 2,
-            "name": "Jody Schultz",
-            "address": "788 Bailey Point"
+            "name": "Windy Thorneloe",
+            "address": "59924 Beilfuss Center",
+            "email": "wthorneloe1@usa.gov"
         },
         {
             "id": 3,
-            "name": "Marco Fritsch",
-            "address": "410 Magali Trafficway"
+            "name": "Hillie Phillpotts",
+            "address": "21 Straubel Point",
+            "email": "hphillpotts2@rakuten.co.jp"
+        },
+        {
+            "id": 4,
+            "name": "Jobye Danielou",
+            "address": "7 Pleasure Terrace",
+            "email": "jdanielou3@apple.com"
+        },
+        {
+            "id": 5,
+            "name": "Gabbie Schult",
+            "address": "46273 Oak Trail",
+            "email": "gschult4@tinyurl.com"
+        },
+        {
+            "id": 6,
+            "name": "Vasily Youdell",
+            "address": "0993 Gulseth Avenue",
+            "email": "vyoudell5@globo.com"
+        },
+        {
+            "id": 7,
+            "name": "Debra Blackhurst",
+            "address": "57305 Crowley Alley",
+            "email": "dblackhurst6@last.fm"
+        },
+        {
+            "id": 8,
+            "name": "Helenelizabeth Passfield",
+            "address": "02 Reinke Plaza",
+            "email": "hpassfield7@netvibes.com"
+        },
+        {
+            "id": 9,
+            "name": "Franchot Slator",
+            "address": "4930 Oneill Drive",
+            "email": "fslator8@51.la"
+        },
+        {
+            "id": 10,
+            "name": "Renaud Erbe",
+            "address": "30 Westridge Pass",
+            "email": "rerbe9@psu.edu"
         }
     ],
     "employees": [
@@ -42,12 +87,22 @@ Then copy the following JSON into the `database.json` file.
             "specialty": "Printers"
         }
     ],
-    "services": [
+    "serviceTickets": [
         {
             "id": 1,
-            "customerId": 1,
-            "employeeId": 2,
+            "customerId": 4,
+            "employeeId": 1,
+            "description": "iPhone case cracked. Please replace.",
+            "emergency": false,
             "dateCompleted": "2021-05-26"
+        },
+        {
+            "id": 2,
+            "customerId": 7,
+            "employeeId": 4,
+            "description": "Cannot connect to any wifi.",
+            "emergency": true,
+            "dateCompleted": ""
         }
     ]
 }

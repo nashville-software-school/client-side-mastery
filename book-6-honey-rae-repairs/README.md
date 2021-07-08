@@ -16,11 +16,11 @@
 
 | # | 🍯 💻 Honey Rae's Repairs | 🐕 🐈 Nashville Kennels | 🍭 🍬 Kandy Korner |
 |--|--|--|--|
-| 6 | [Navigation Bar with Routing](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #navigation</sub> | [Navigating Kennel Project](./chapters/KENNEL_ROUTING.md) | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
-| 7 | [Registering Customers](./chapters/HONEY_AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> |  [Multiple Resources](./chapters/MULTIPLE_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#json-server #_expand #_sort</sub> |  |
-| 8 | [Create Repair Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#controlled-components #forms</sub> | [Adding Animals](./chapters/FORMS_CONTROLLED_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#controlled-components #forms</sub>  | [Employees](./chapters/KK_EMPLOYEES.md) |
+| 8 | [Navigation Bar with Routing](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #navigation</sub> | [Navigating Kennel Project](./chapters/KENNEL_ROUTING.md) | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
+| 9 | [Registering Customers](./chapters/HONEY_AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> | [Multiple Resources](./chapters/MULTIPLE_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#json-server #_expand #_sort</sub> |  |
+| 10 | [Create Repair Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#controlled-components #forms</sub> | [Adding Animals](./chapters/FORMS_CONTROLLED_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#controlled-components #forms</sub>  | [Employees](./chapters/KK_EMPLOYEES.md) |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 8**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 10**
 
 | # | 🍯 💻 Honey Rae's Repairs | 🐕 🐈 Nashville Kennels | 🍭 🍬 Kandy Korner |
 |--|--|--|--|
