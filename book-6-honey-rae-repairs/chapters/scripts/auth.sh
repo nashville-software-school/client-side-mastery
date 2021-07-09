@@ -59,7 +59,7 @@ export const Register = (props) => {
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register for Honey Rae Repairs</h1>
                 <fieldset>
                     <label htmlFor="name"> Full Name </label>
                     <input onChange={updateCustomer}
@@ -121,7 +121,7 @@ export const Login = () => {
 
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Holiday Road Travel Agency</h1>
+                    <h1>Honey Rae Repairs</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>

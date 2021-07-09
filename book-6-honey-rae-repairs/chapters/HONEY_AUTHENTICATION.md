@@ -9,16 +9,11 @@ In this chapter, you are going to enable two things:
 
 This is not going to be a real authentication system. Real authentication systems are vastly more secure, complex, and robust.
 
-The best part about this chapter is that you don't need to understand **any of it**. Follow the instructions, verify that registration and login works, or talk to your instructors if it doesn't so they can fix it.
+![animation of registration and login and logout](./images/honey-rae-auth.gif)
 
-Here's the process that this code follows.
+## Video Walkthrough
 
-1. When the application first renders, it checks for a `honey_customer` item in local storage.
-1. If the item is there, the user is authenticated and the application renders.
-1. If the item is not there, render the Login form instead.
-1. When the user fills out the form and clicks the submit button, query the API to see if a user with the specified email already exists.
-1. If the user already exists, set the `honey_customer` item in local storage, and display the Dashboard.
-1. If the user does not exist, alert that fact to the user.
+First, watch the [Honey Rae Repairs - Authentication](https://vimeo.com/572858414) video to watch how the code is implemented. Then you can read on and start using the code that is provided.
 
 ## Requiring User to Login
 
