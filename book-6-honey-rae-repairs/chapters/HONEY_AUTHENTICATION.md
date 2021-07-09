@@ -9,7 +9,7 @@ In this chapter, you are going to enable two things:
 
 This is not going to be a real authentication system. Real authentication systems are vastly more secure, complex, and robust.
 
-![animation of registration and login and logout](./images/honey-rae-auth.gif)
+<img src="./images/honey-rae-auth.gif" alt="animation of register, login, and logout" width="800px" />
 
 ## Video Walkthrough
 
