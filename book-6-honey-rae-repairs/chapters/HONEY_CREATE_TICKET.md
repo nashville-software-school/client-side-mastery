@@ -96,7 +96,10 @@ If you still can't make it work, reach out to your instruction team immediately.
 
 Write a component whose responsibility is to hire a new employee and assign to a location.
 
-### Create an Employee Form Component.
+<img src="./images/honey-rae-employee-form.gif" width="600px" alt="Animation of employee creation form" />
+
+### Create an Employee Form
+
 * Create a route in ApplicationViews for `/employee/create` that renders an EmployeeForm.
 * Add a button to the employee list labeled, "Hire Employee".
 * When the button is clicked, show the employee form by using `history.push()` to change the route.
