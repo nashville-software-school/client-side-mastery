@@ -103,3 +103,5 @@ Write a component whose responsibility is to hire a new employee and assign to a
 * The employee form should include an input for the person's name, their repair specialty, and a button at the end labeled "Finish Hiring".
 * When the "Finish Hiring" button is clicked on the form, create a new employee object and POST it to the API.
 * Once the employee is saved, re-route the user to the list of employees.
+
+Do your best on your own and with teammates to get the form working. If you get truly stuck, you can grab some [boilerplate code](./scripts/EmployeeForm.js) to get started.
