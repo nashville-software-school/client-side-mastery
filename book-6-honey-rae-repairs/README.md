@@ -25,7 +25,7 @@
 
 | # | 🍯 💻 Honey Rae's Repairs | 🐕 🐈 Nashville Kennels | 🍭 🍬 Kandy Korner |
 |--|--|--|--|
-| 9 | | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
+| 9 | [Route Params for Individual Tickets](./chapters/HONEY_ROUTE_PARAMS.md) | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
 | 10 | | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
 | 11 | | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Customer Report](./chapters/KK_REPORT.md) |
 | 12 | | [Edit Animal Information](./chapters/EDIT.md) <br/> <sub style="font-size:0.85rem;">#api #edit #forms</sub>  | [Been Caught Stealing](./chapters/KK_DELETE.md) |

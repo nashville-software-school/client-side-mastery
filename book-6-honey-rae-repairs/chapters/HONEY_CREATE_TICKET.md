@@ -6,50 +6,29 @@ In this chapter, you are going to write a component whose responsibility is to c
 
 ![](./images/honey-rae-new-ticket.gif)
 
+## Video Walkthrough
+
+Watch the video that shows you how to use a form in React to [create a new service ticket](https://vimeo.com/573652033) and then immediately show the user the new list of tickets.
+
 ## React to User Input
 
-1. Content about initial state object.
-1. Talk about how `onChange` creates copies, modifies copy, and then updates state.
-1. Talk about how crucial the `value` attribute is and that is reflects current state.
-1. Talk about `onClick` for initiating POST operation.
-1. Talk about redirecting the user once POST is complete.
+Below is some boilerplate code that you can start with in your **`TicketForm`** component. After watching the video, your job is to do the following tasks.
+
+1. Create the initial state for the service ticket with the `useState()` hook function.
+1. Implement the `onChange` event listener on each form field to update the state when the user interacts with the form.
+1. Write the logic in the `saveTicket()` function to perform the POST operation to save a new service ticket to permanent state in the API. Once the operation is complete, use the history mechanism to redirect the user to the list of service tickets.
+1. Implement the `onClick` event listener on the submit ticket button.
 
 > ##### `src/components/serviceTickets/TicketForm.js`
 
 ```jsx
-import React, { useContext, useEffect, useState } from "react"
-import { useHistory } from 'react-router-dom';
+import React, { useState } from "react"
 
 export const TicketForm = () => {
-    const [ticket, update] = useState({
-        description: "",
-        emergency: false
-    });
-
-    const history = useHistory();
+    const [ticket, update] = useState();
 
     const saveTicket = (event) => {
         event.preventDefault()
-
-        if (ticket.description === "") {
-            window.alert("Please enter a description for the ticket")
-        } else {
-            const fetchOptions = {
-                "method": "POST",
-                "headers": {
-                    "Content-Type": "application/json"
-                },
-                "body": JSON.stringify({
-                    description: ticket.description,
-                    emergency: ticket.emergency,
-                    customerId: parseInt(localStorage.getItem("honey_customer")),
-                    employeeId: 1
-                })
-            }
-            return fetch("http://localhost:8088/serviceTickets", fetchOptions)
-                .then(res => res.json())
-                .then(() => history.push("/tickets"))
-        }
     }
 
     return (
@@ -63,25 +42,14 @@ export const TicketForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="Brief description of problem"
-                        value={ticket.description}
-                        onChange={(evt) => {
-                            const copy = {...ticket}
-                            copy.description = evt.target.value
-                            update(copy)
-                        }} />
+                        onChange={} />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">Emergency:</label>
-                    <input
-                        type="checkbox"
-                        checked={ticket.emergency}
-                        onChange={(evt) => {
-                            const copy = {...ticket}
-                            copy.emergency = evt.target.checked
-                            update(copy)
-                        }} />
+                    <input type="checkbox"
+                        onChange={} />
                 </div>
             </fieldset>
             <button className="btn btn-primary" onClick={saveTicket}>
