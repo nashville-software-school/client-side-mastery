@@ -18,15 +18,15 @@
 |--|--|--|--|
 | 8 | [Navigation Bar with Routing](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #navigation</sub> | [Navigating Kennel Project](./chapters/KENNEL_ROUTING.md) | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
 | 9 | [Registering Customers](./chapters/HONEY_AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> | [Multiple Resources](./chapters/MULTIPLE_PROVIDERS.md) <br/> <sub style="font-size:0.85rem;">#json-server #_expand #_sort</sub> |  |
-| 10 | [Create Repair Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#controlled-components #forms</sub> | [Adding Animals](./chapters/FORMS_CONTROLLED_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#controlled-components #forms</sub>  | [Employees](./chapters/KK_EMPLOYEES.md) |
+| 10 | [Create Repair Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms</sub> | [Adding Animals](./chapters/FORMS_CONTROLLED_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#controlled-components #forms</sub>  | [Employees](./chapters/KK_EMPLOYEES.md) |
 | 11 | [Conditional JSX](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#jsx #ternary</sub> | | |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 10**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 11**
 
 | # | 🍯 💻 Honey Rae's Repairs | 🐕 🐈 Nashville Kennels | 🍭 🍬 Kandy Korner |
 |--|--|--|--|
-| 9 | [Route Params for Individual Tickets](./chapters/HONEY_ROUTE_PARAMS.md) | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
-| 10 | | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
+| 12 | [Route Params for Individual Tickets](./chapters/HONEY_ROUTE_PARAMS.md)  <br/> <sub style="font-size:0.85rem;">#routing #parameters</sub> | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
+| 13 | [Assigning Tickets](./chapters/HONEY_EDIT.md)  <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
 | 11 | | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  | [Customer Report](./chapters/KK_REPORT.md) |
 | 12 | | [Edit Animal Information](./chapters/EDIT.md) <br/> <sub style="font-size:0.85rem;">#api #edit #forms</sub>  | [Been Caught Stealing](./chapters/KK_DELETE.md) |
 
