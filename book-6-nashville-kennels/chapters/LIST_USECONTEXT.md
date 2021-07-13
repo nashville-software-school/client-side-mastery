@@ -22,13 +22,13 @@ export const AnimalList = () => {
   useEffect(() => {
     console.log("AnimalList: useEffect - getAnimals")
     getAnimals()
-
   }, [])
 
 
   return (
     <div className="animals">
       {console.log("AnimalList: Render", animals)}
+      <h2>Animals</h2>
       {
         animals.map(animal => {
           return <AnimalCard key={animal.id} animal={animal} />

@@ -12,9 +12,9 @@ Since the provider components handle all interactions with the database, you nee
 ```js
 const releaseAnimal = animalId => {
     return fetch(`http://localhost:8088/animals/${animalId}`, {
-        method: "DELETE"
+      method: "DELETE"
     })
-        .then(getAnimals)
+      .then(getAnimals)
 }
 ```
 
@@ -45,6 +45,9 @@ Add a button to your animal details component that will allow the user to releas
 > ##### `/src/components/animal/AnimalDetails.js`
 
 ```js
+// ...
+// add useHistory to the import from the router library
+import { useParams, useHistory } from "react-router-dom"
 const history = useHistory()
 
 const handleRelease = () => {

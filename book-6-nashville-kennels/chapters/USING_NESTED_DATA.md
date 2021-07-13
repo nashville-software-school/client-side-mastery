@@ -15,7 +15,7 @@ Add the following method to the animal provider. It allows any component to get 
 ```js
 const getAnimalById = (id) => {
     return fetch(`http://localhost:8088/animals/${id}?_expand=location&_expand=customer`)
-        .then(res => res.json())
+    .then(res => res.json()) // note we don't set anything on state here. Why?
 }
 ```
 Be sure to include this method in the export of the provider
@@ -52,35 +52,37 @@ The response for an animal will include objects for the location and customer in
 
 The server (API) did the work for you!!
 
-Add the new method to your return at the bottom of `AnimalProvider`.
+In fact, while we are at it, let's go ahead and refactor the GET for all animals to have it do the same nesting of the related data for us. 
 
 ```js
-return (
-    <AnimalContext.Provider value={
-      {
-        animals, addAnimal, getAnimals, getAnimalById
-      }
-    }>
-      {props.children}
-    </AnimalContext.Provider>
-  )
+// adding an _expand for each animal's customer, like we just did for getting a single animal
+const getAnimals = () => {
+    return fetch("http://localhost:8088/animals?_expand=location&_expand=customer")
+    .then(res => res.json())
+    .then(setAnimals)
+  }
 ```
+Does this mean what you did back in the Multiple Resources chapter was wrong or useless? Not at all. It's a vital skill to be able to use JavaScript for extracting related data from different collections like that. But, since json-server gives us a way to make such comprehensive queries with `_expand`, why not make our lives easier?  
+
+Just remember that in other situations ( like in the server side portion of NSS, or on the job ) you might not have a library like json-server. For that reason, knowing how to do the job with vanilla JS is key.
 
 ## AnimalCard inside of AnimalList Refactor
 
-Change the AnimalCard to display animal names, as hyperlinks. When you click on one animal name, an animal detail component will render.
-
+Now that we've refactored our animal get methods, we can change AnimalList to its more streamlined look from the first couple of chapters. 
 
 > ##### `/src/components/animal/AnimalList.js`
 
 ```jsx
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext, useEffect } from "react"
+import { useHistory } from 'react-router-dom';
 import { AnimalContext } from "./AnimalProvider"
-import { Animal } from "./Animal"
-import "./Animals.css"
+import { AnimalCard } from "./AnimalCard"
+import "./Animal.css"
 
-export const AnimalList = ({ history }) => {
+export const AnimalList = () => {
+
     const { getAnimals, animals } = useContext(AnimalContext)
+    const history = useHistory()
 
     // Initialization effect hook -> Go get animal data
     useEffect(()=>{
@@ -88,32 +90,35 @@ export const AnimalList = ({ history }) => {
     }, [])
 
     return (
-        <>
-            <h1>Animals</h1>
+      <>
+        <h1>Animals</h1>
 
-            <button onClick={() => history.push("/animals/create")}>
-                Make Reservation
-            </button>
-            <div className="animals">
-                {
-                    animals.map(animal => {
-                        return <Animal key={animal.id} animal={animal} />
-                    })
-                }
-            </div>
-        </>
+        <button onClick={() => history.push("/animals/create")}>
+          Add Animal
+        </button>
+        <div className="animals">
+          {
+            animals.map(animal => {
+              return <AnimalCard key={animal.id} animal={animal} />
+            })
+          }
+        </div>
+      </>
     )
 }
 ```
+Change the AnimalCard to display animal names as hyperlinks. When you click on one animal name, an animal detail component will render.
+
+Also refactor it to work with a single animal object instead of an animal, location, and customer. Now that we will have a detail view for an animal, we can wait to display the location and owner info there.
 
 > ##### `/src/components/animal/Animal.js`
 
 ```jsx
 import React from "react"
-import "./Animals.css"
+import "./Animal.css"
 import { Link } from "react-router-dom"
 
-export const AnimalCard ({ animal }) => (
+export const AnimalCard = ({ animal }) => (
     <section className="animal">
         <h3 className="animal__name">
           <Link to={`/animals/detail/${animal.id}`}>
@@ -137,7 +142,7 @@ We will also include `useParams` from react-router-dom allowing the app to read 
 import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import "./Animal.css"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 export const AnimalDetail = () => {
   const { getAnimalById } = useContext(AnimalContext)
@@ -145,7 +150,6 @@ export const AnimalDetail = () => {
 	const [animal, setAnimal] = useState({})
 
 	const {animalId} = useParams();
-	const history = useHistory();
 
   useEffect(() => {
     console.log("useEffect", animalId)
@@ -153,7 +157,7 @@ export const AnimalDetail = () => {
     .then((response) => {
       setAnimal(response)
     })
-    }, [])
+  }, [])
 
   return (
     <section className="animal">
@@ -200,6 +204,8 @@ http://localhost:3000/animals/7
 	</Route>
 </AnimalProvider>
 ```
+Hey, why isn't this wrapped in the customer and location providers, too? When you arrive at an answer to that, it will raise additional questions about why the other components ( AnimalList and AnimalCard ) _are_ nested in those providers. Do they need to be? Didn't we specifically set them up that way in earlier chapters? If so, why are we now questioning how we wrote the code earlier? Life's full of tough questions, innit?
+As mentioned before, these questions get to the core of understanding how routing, nested components and data flow work in React. Don't hand wave this stuff. Ask anyone you can find to talk it out with you!
 
 ## Try it Out
 
@@ -212,9 +218,9 @@ Now when you click on an animal's name in the list view, you should see your new
 Refactor your employee components. Start with a list of employee names that when clicked, displays the full details about an employee.
 
 ## Practice: Locations
-Refactor your location components. Start with your location list and display the location name, the number of employees, and the number of animals currently being treated for each location.
+Refactor your location components. Start with your location list and display the location name, the number of employees, and the number of animals currently being boarded for each location.
 
-When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being treated, and the names of all employees working there. You can use the json-server feature: `_embed`.
+When you click the name of a location, you should be taken to a detail view that lists the names of all animals currently being boarded, and the names of all employees working there. You can use the json-server feature: `_embed`.
 
 Your starting API call will look similar to this:
 

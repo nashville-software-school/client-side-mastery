@@ -8,7 +8,7 @@ In this chapter, you are going to allow users to update an animal's name, locati
 
 > **React Documentation:** In HTML, form elements such as `<input>`, `<textarea>`, and `<select>` typically maintain their own state and update it based on user input. We then use something like `querySelector()` to get the values.
 
-> In React, mutable state is typically kept in the state property of components, and only updated with `setState()`.
+> In React, mutable state is typically kept in the state property of components, and only updated with the function that `useState()` gives us, ie `setFoo()` in `const [foo, setFoo] = useState()`
 
 Since we start with data from the API, our `render` displays values based on current state (or props). We need to always keep the current value of an input in the component's state. This allows for mutable state.
 
@@ -90,11 +90,11 @@ Replace the current contents of the **`AnimalForm`** component with the followin
 
 ```js
 import React, { useContext, useEffect, useState } from "react"
+import { useHistory, useParams } from 'react-router-dom';
 import { LocationContext } from "../location/LocationProvider"
 import { AnimalContext } from "../animal/AnimalProvider"
 import { CustomerContext } from "../customer/CustomerProvider"
 import "./Animal.css"
-import { useHistory, useParams } from 'react-router-dom';
 
 export const AnimalForm = () => {
     const { addAnimal, getAnimalById, updateAnimal } = useContext(AnimalContext)
@@ -128,7 +128,7 @@ export const AnimalForm = () => {
       } else {
         //disable the button - no extra clicks
         setIsLoading(true);
-        if (animalId){
+        if (animalId) {
           //PUT - update
           updateAnimal({
               id: animal.id,
@@ -137,7 +137,7 @@ export const AnimalForm = () => {
               customerId: parseInt(animal.customerId)
           })
           .then(() => history.push(`/animals/detail/${animal.id}`))
-        }else {
+        } else {
           //POST - add
           addAnimal({
               name: animal.name,
@@ -163,9 +163,6 @@ export const AnimalForm = () => {
         }
       })
     }, [])
-
-    //since state controlls this component, we no longer need
-    //useRef(null) or ref
 
     return (
       <form className="animalForm">
@@ -211,7 +208,7 @@ export const AnimalForm = () => {
             event.preventDefault() // Prevent browser from submitting the form and refreshing the page
             handleSaveAnimal()
           }}>
-        {animalId ? <>Save Animal</> : <>Add Animal</>}</button>
+        {animalId ? Save Animal : Add Animal }</button>
       </form>
     )
 }
