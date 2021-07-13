@@ -29,25 +29,22 @@ In React, we add event listeners directly on a button's `onClick` attribute.
 > ##### `src/components/animal/AnimalList.js`
 
 ```jsx
+// add this after all the other imports and variable declarations
 const history = useHistory()
 
+// Add the button above the list of animals ( BTW, the "..." means this is where some code lives but no need to type it all out here again)
 return (
     <>
-        <h2>Animals</h2>
-		<button onClick={() => {history.push("/animals/create")}}>
-            Add Animal
-        </button>
-        <div className="animals">
-        {
-			animals.map(animal => {
-				return <AnimalCard key={animal.id} animal={animal} />
-			})
-        }
-        </div>
+      <h2>Animals</h2>
+      <button onClick={() => {history.push("/animals/create")}}>
+          Add Animal
+      </button>
+      <div className="animals">
+        ...
+      </div>
     </>
 )
 ```
-
 
 ### Create the Route
 
@@ -59,12 +56,12 @@ Create the new route that will respond when the button click changes the URL to 
 
 ```jsx
 <AnimalProvider>
-  <Route exact path="/animals">
-      <AnimalList />
-  </Route>
-
   <CustomerProvider>
     <LocationProvider>
+      <Route exact path="/animals">
+        <AnimalList />
+      </Route>
+
       <Route exact path="/animals/create">
         <AnimalForm />
       </Route>
@@ -73,6 +70,7 @@ Create the new route that will respond when the button click changes the URL to 
 </AnimalProvider>
 
 ```
+If this nesting providers stuff doesn't make sense, don't just paste it and accept it. Ask about it.
 
 ### Create the Form Component
 
