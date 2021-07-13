@@ -27,7 +27,6 @@ export const addAnimal = animalObj => {
         },
         body: JSON.stringify(animalObj)
     })
-    .then(res => res.json())
     .then(getAnimals)
 }
 ```
@@ -59,7 +58,7 @@ export const AnimalProvider = (props) => {
         .then(setAnimals)
     }
 
-    const addAnimal = animalObj => {
+    const addAnimal = (animalObj) => {
         return fetch("http://localhost:8088/animals", {
             method: "POST",
             headers: {

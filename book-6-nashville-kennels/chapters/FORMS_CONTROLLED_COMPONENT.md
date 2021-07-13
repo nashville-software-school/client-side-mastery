@@ -202,19 +202,19 @@ export const AnimalForm = () => {
 
 ### Provider Function to Save Animal
 
-Now it is time for you to save your animal. First, create a function in your provider to perform the fetch operation. Make sure to add it to the value attribute of your `AnimalConext.Provider`.
+Now it is time for you to save your animal. If you remember, you already added a function for an animal POST request to `AnimalConext.Provider` in an earlier chapter. Here it is again to remind you. It sends an animal object to the db to be saved, then calls `getAnimals()` to update the application state with the new array of animals.
 
 ```js
-const addAnimal = animal => {
-    return fetch("http://localhost:8088/animals", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(animal)
-    })
-    .then(response => response.json())
-}
+    const addAnimal = (animalObj) => {
+        return fetch("http://localhost:8088/animals", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(animalObj)
+        })
+        .then(getAnimals)
+    }
 ```
 
 ### Show All Animals on Save
