@@ -209,7 +209,7 @@ As mentioned before, these questions get to the core of understanding how routin
 
 ## Try it Out
 
-Now when you click on an animal's name in the list view, you should see your new animal detail view.
+Now when you click on an animal's name in the list view, you should see your new animal detail view. Note that this image shows buttons that we will be adding in the next chapters. Stay tuned!
 
 ![image of animal detail view](./images/animal-details.gif)
 
