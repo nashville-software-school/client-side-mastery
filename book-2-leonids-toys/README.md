@@ -25,3 +25,8 @@ In this book, you will gain the knowlege and understanding of working with data 
 | 1 | [Muscle Memory: Functions](./chapters/FUNCTION_PRACTICE.md) | [Discontinued Toys](./chapters/LT_REMOVE_ARRAY_ITEM.md) |
 | 2 | [Scope in JavaScript](./chapters/JS_SCOPE.md) | [The Perry Scope](./chapters/LT_SCOPE.md) |
 
+## Pioneer Chapters
+
+| # | 🚀 <br/> Advanced Data Types | 🚂 <br/> Leonid's Toys |
+|--|--|--|
+| 1 | [Maps](./chapters/JAVASCRIPT_MAPS.md) | N/A |
