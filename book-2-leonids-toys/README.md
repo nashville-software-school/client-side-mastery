@@ -27,6 +27,7 @@ In this book, you will gain the knowlege and understanding of working with data 
 
 ## Pioneer Chapters
 
-| # | 🚀 <br/> Advanced Data Types | 🚂 <br/> Leonid's Toys |
-|--|--|--|
-| 1 | [Maps](./chapters/JAVASCRIPT_MAPS.md) | N/A |
+| # | 🚀 <br/> Advanced Data Stuctures &amp; Types |
+|--|--|
+| 1 | [Data Structure: Map](./chapters/JAVASCRIPT_MAPS.md) |
+| 2 | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |

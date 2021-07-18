@@ -95,3 +95,15 @@ Modify Leonid's Toys code to remove the price property of each toy, since that w
 Create a Map to store the prices for each toy. The key in the Map should be the toy object, and the value for each entry should be the price.
 
 Then see if you can output, using `console.log()` the name and price of each toy. You will need to read the [documentation for iterating the key/value pairs](http://xahlee.info/js/js_iterate_map.html) in the Map.
+
+> **Hint**: Modify the function that adds a new toy to your inventory to accept a second parameter... the price. Then, after adding the toy to your inventory, also add the appropriate key/value pair to your Map.
+>
+
+##### Example
+```js
+const addPhoneToInventory = (phoneObject, price) => {
+
+}
+
+addPhoneToInventory(pixel, 499.99)
+```
