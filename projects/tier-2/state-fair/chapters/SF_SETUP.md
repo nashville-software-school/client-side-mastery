@@ -5,7 +5,7 @@
 Open a new terminal window, copy pasta the following command into the terminal and hit enter to run it. It will create a basic file structure for you and create some starter code in the `~/workspace/statefair` directory.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-48/projects/tier-2/state-fair/chapters/scripts/statefair-install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-50/projects/tier-2/state-fair/chapters/scripts/statefair-install.sh)"
 ```
 
 Then run the following command in your terminal to change directory to the project directory.

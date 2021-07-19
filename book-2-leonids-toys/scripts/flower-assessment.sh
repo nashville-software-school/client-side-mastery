@@ -88,14 +88,15 @@ Price #2 is 0.40
 Price #3 is 1.05
 `)
 
-if (expensiveFlowers.length !== 2) {
+if (expensiveFlowers.length !== 2 || Array.isArray(expensiveFlowers[0])) {
     console.log(`
 *************************
 ****   TEST FAILED   ****
 *************************
 
 The test code expected that two flowers should be
-in the expensiveFlowers array, but instead saw ${expensiveFlowers.length}.
+in the expensiveFlowers array, and that each item
+in the array is an object.
 
 Make sure that you have an \`if\` condition that
 is checking the price property of each flower, and

@@ -77,7 +77,7 @@ Now that you have a paying job working for Kneel Diamonds, you are going to buil
 Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-48/book-4-kneel-diamonds/chapters/scripts/kneel-diamonds-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-50/book-4-kneel-diamonds/chapters/scripts/kneel-diamonds-setup.sh)"
 ```
 
 It will create the following directory for your project and provider some boilerplate code. Once it is complete, move on to the next chapter.
