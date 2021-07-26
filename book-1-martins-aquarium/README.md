@@ -10,9 +10,9 @@
 | 1 | [Terminal Basics](./chapters/CLI_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |  |  | |
 | 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Wireframes](./chapters/DAILY_JOURNAL_WIREFRAME.md) |  |  |
 | 3 | [Fish in my Aquarium](./chapters/HTML_AQUARIUM.md) <br/> <sub style="font-size:0.85rem;">#html</sub> |  |  |  |
-| 4 | [Track Code Changes](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |  |  |  |
+| 4 | [Version Control and Tracking Changes to Code](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |  |  |  |
 | 5 | [Quick Project Creation with Bash Function](./chapters/BASH_HELPERS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |  |  |  |
-| 6 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> | [HTML Layout and Form](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |  |  |
+| 6 | [Github Workflow with Teams](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> | [HTML Layout and Form](./chapters/DAILY_JOURNAL_STATIC_LAYOUT.md) |  |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Hello, World_**](https://github.com/nashville-software-school/hello-world) |  |  |  |
 | 7 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD.md) |  |  |
 | 8 | [Representing Fish in Code](./chapters/BASIC_DATA_STRUCTURES.md) <br/> <sub style="font-size:0.85rem;">#components #objects</sub> |  | [Harvest Plan](./chapters/MF_INSTALL_PLAN.md) | [Doris' Company List](./chapters/DS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#arrays #foreach</sub> |
