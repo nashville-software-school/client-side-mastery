@@ -56,6 +56,6 @@ Once you have an ERD created, but are unsure if you got it right, feel free to r
 
 ## Database
 
-Once your ERD is complete, then go to the `database` module and start setting up your data structures for each resource. Also set up the `get*()` and `set*()` function you think you need.
+Once your ERD is complete, then go to the `database` module and start setting up your data structures for each resource. Also set up the `get*()`functions for each collection of customizations so that other modules can import the data and convert it to HTML.
 
 You might forget some of them now, and that's fine. You'll discover what you missed when you start to build out the functionality.
