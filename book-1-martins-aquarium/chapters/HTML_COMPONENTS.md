@@ -2,16 +2,7 @@
 
 ## Why Are You Learning This?
 
-Thinking of applications and web page as a collection of independent components is the foundation of modern web applications that you use all the time.
-
-* Snapchat
-* Instagram
-* Twitter
-* Facebook
-* Etsy
-* Pinterest
-
-All of these applications are written by teams of software developers who define the individual components that are used throughout their application. They then write each component separately and then compose them in interesting ways and make them work together.
+Thinking of applications and web pages as a collection of independent components is the foundation of modern web applications. Consider Snapchat, Instagram, Twitter, Facebook, Etsy, or Pinterest. All of these applications are written by teams of software developers who define individual components that are used throughout the application. They then write each component separately and then compose them in interesting ways to make them work together.
 
 ## Vocabulary To Learn
 * HTML semantic elements
@@ -202,6 +193,9 @@ The final touch is to center align the text in each of the interest boxes.
 1. [CSS Tricks - BEM](https://css-tricks.com/bem-101/)
 1. [Introduction to BEM - A front-end methodology](https://www.youtube.com/watch?v=IO-4Z32O--c)
 
+## Practice: Flexbox Froggie
+[Flexbox Froggie](http://flexboxfroggy.com/) - online game with 24 challenges.
+
 ## Practice: Coffee Houses of Nashville
 
 > The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
@@ -232,8 +226,7 @@ From that HTML, use Flexbox to achieve this layout. You don't need to add the bo
 ![flexbox layout](./images/flexbox.png)
 
 
-## Practice: Flexbox Froggie
-[Flexbox Froggie](http://flexboxfroggy.com/) - online game with 24 challenges.
+
 
 ## Practice: Congressional Representative
 
