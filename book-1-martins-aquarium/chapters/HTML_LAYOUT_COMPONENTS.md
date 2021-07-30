@@ -174,9 +174,6 @@ Flex Properties
 * flex-basis: What is the size of the item before growing and shrinking happens?
 
 
-
-
-
 ## Additional References
 
 1. [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
@@ -188,29 +185,37 @@ Flex Properties
 [Flexbox Froggie](http://flexboxfroggy.com/) - online game with 24 challenges.
 
 ## Practice: Coffee Houses of Nashville
+1. Use the terminal to create a directory (within workspace) for coffee-houses.
+1. Use the terminal to create an `index.html`.
+1. Use the terminal to create a styles directory with a `main.css` file.
+1. Use the terminal to open your project in VS Code and begin the exercise.
 
 #### Part 1
 > The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
 
 ```html
-<header class="pageHeader">Coffee Houses of Nashville</header>
+<header class="pageHeader">
+	<h1>Coffee Houses of Nashville</h1>
+</header>
 
-<section class="list">
-  <article class="shop">The Jam</article>
-  <article class="shop">The Well</article>
-  <article class="shop">Red Bicycle</article>
-  <article class="shop">Crema</article>
-  <article class="shop">Frothy Monkey</article>
-  <article class="shop">8th &amp; Roast</article>
-  <article class="shop">Bongo Java</article>
-  <article class="shop">Flatrock</article>
-  <article class="shop">Fido</article>
-  <article class="shop">Steadfast Coffee</article>
-  <article class="shop">Dose Coffee</article>
-  <article class="shop">Sam &amp; Zoes</article>
-  <article class="shop">Slow Hand Coffee</article>
-  <article class="shop">The Horn</article>
-</section>
+<main>
+	<section class="list">
+		<article class="shop">The Jam</article>
+		<article class="shop">The Well</article>
+		<article class="shop">Red Bicycle</article>
+		<article class="shop">Crema</article>
+		<article class="shop">Frothy Monkey</article>
+		<article class="shop">8th &amp; Roast</article>
+		<article class="shop">Bongo Java</article>
+		<article class="shop">Flatrock</article>
+		<article class="shop">Fido</article>
+		<article class="shop">Steadfast Coffee</article>
+		<article class="shop">Dose Coffee</article>
+		<article class="shop">Sam &amp; Zoes</article>
+		<article class="shop">Slow Hand Coffee</article>
+		<article class="shop">The Horn</article>
+	</section>
+</main>
 ```
 
 Use the above HTML and Flexbox to achieve the following layout. You don't need to add the border to each coffee house component, but you can if you like. It's been added in this example to highlight the alignment and spacing you're shooting for.
@@ -234,6 +239,13 @@ You're going to create an HTML component to represent a political candidate. Spe
 
 [GovTrack - Congressional District Map](https://www.govtrack.us/congress/members/map)
 
+##### Setup
+1. Use the terminal to create a directory (within workspace) for congressional-representative.
+1. Use the terminal to create an `index.html`.
+1. Use the terminal to create a styles directory with a `main.css` file.
+1. Use the terminal to open your project in VS Code and begin the exercise.
+
+##### Exercise
 1. Read through the requirements and sketch out a wireframe for the page.
 1. In your HTML, create an `main` element that will serve as your main representative component.
 1. In this component, create a sub-component for basic information using the `section` element. Within this section create elements for the representative's image, name, district info, and political affiliation.
