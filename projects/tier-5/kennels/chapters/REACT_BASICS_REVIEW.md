@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started with Kennels
 
 ```sh
 cd ~/workspace
@@ -33,16 +33,6 @@ Before we grow this application, let's create a meaningful directory structure.
   index.js
 
 ```
-
-## Components
-
-Components are the visual elements that make up your application.
-
-* Navigation bar
-* List of resources
-* Data entry form
-* Footer
-* Search
 
 ## Starter Code
 

@@ -7,4 +7,3 @@ Create a data provider component, list component, and individual item component 
 1. An unordered list of all flowers that the retailer sells to consumers. Show color, species, and the price that flower. Make sure you add the markup percentage to the price.
 1. An unordered list of distributor business names that the retailer purchases flowers from.
 1. An unordered list of nursery business names that the retailer's distributor purchases flowers from.
-

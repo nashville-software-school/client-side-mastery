@@ -1,7 +1,5 @@
 # Shopping Cart View
 
-> **Note:** This is an advanced challenge. You should only work on this once you have completed, and understand, all of the exercises and concepts in this book.
-
 Time to provide a shopping cart view for wedding planners as they purchase flowers.
 
 ## Cart View

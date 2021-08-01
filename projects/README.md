@@ -29,3 +29,10 @@ Tier 4 projects must be worked on as a team. They are broad in scope, require co
 
 1. [Truncheons & Flagons](./tier-4/truncheons/) - This project involves implementing an ancient tavern game so that modern enthusiasts can enjoy a blast from the past.
 1. [Giffygram](./tier-4/giffygram/) - This project has your entire team examining an already deployed application, and then testing your ability to deconstuct it. Deconstruction is an advanced skill that challenges your ability to think critically, and creatively when examining someone else's code.
+
+## Tier 5 - Front End Mastery
+
+Tier 5 projects are intended only for those students who have completed the core React course chapters and would like to explore other features of the React library.
+
+1. [Nashville Kennels](./tier-5/kennels/) - This project introduces you to the Context API. You will use context provider components and a new `useContext()` hook to get state from the provider components.
+1. [Thorns 'N Roses](./tier-5/thorns-roses/) - This project doesn't introduce any new concepts, but it will stretch your understanding of data relationships. There are many resources, and it is crucial that you design a correct ERD before you start, or it will end in disaster.

@@ -1,7 +1,5 @@
 # Flowers for Weddings
 
-> **Note:** This is a challenge exercise. If you have not completed Kennel or Kandy Korner, go back and finish those applications before you try this.
-
 The wedding business is booming. You decide to open up an online shop where wedding planners can come and purchase flowers from any of the retailers in your supply chain.
 
 1. Add a register/login mechanism that saves consumer information in a `customers` resource in your database. Each customer must provide their name, the name of their business, their email address, and a password.
