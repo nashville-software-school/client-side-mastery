@@ -1,5 +1,11 @@
 # Honey Rae's Customers
 
+## Video Walkthrough
+
+Watch the [Honey Rae's Repairs - Listing Customers State](https://vimeo.com/568152084) video to see how the `useState()` and `useEffect()` functions _(a.k.a. hooks)_ are used to set up and update application state to be rendered as HTML.
+
+## Documentation Walkthrough
+
 As Honey Rae and her team's reputation grows, the number of people who come in for repairs starts to grow quickly. It quickly becomes too hard to track how many outstanding service orders they currently are working on, and the order in which they came in.
 
 Honey Rae's team needs to have an application that tracks who is working on which service order, for which customer. They also need to track when the customers dropped off their electronics so they can be worked on in the right order.
@@ -65,7 +71,3 @@ export const Repairs = () => {
     )
 }
 ```
-
-## Video: Customer State
-
-Watch the [Honey Rae's Repairs - Listing Customers State](https://vimeo.com/568152084) video to see how the `useState()` and `useEffect()` functions _(a.k.a. hooks)_ are used to set up and update application state to be rendered as HTML.

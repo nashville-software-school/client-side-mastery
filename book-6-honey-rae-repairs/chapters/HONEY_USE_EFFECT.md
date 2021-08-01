@@ -1,5 +1,11 @@
 # Reacting to State Changes with useEffect()
 
+## Video Walkthrough
+
+Watch the [Honey Rae's Repairs - Total Customers State](https://vimeo.com/568226412) video to see how the `useState()` and `useEffect()` hooks are used to set up and watch application state.
+
+## Documentation Walkthrough
+
 Your initial introduction to the `useEffect()` hook was not very compelling, nor did it show you the true power of the function. This hook's main purpose is to observe one, or more, state variables, and then run code when that state changes.
 
 It's an event listener. It doesn't look like one, though, because React has encapsulated that code behind the scenes and has give you `useEffect()` to use.
@@ -67,7 +73,3 @@ export const CustomerList = () => {
     )
 }
 ```
-
-## Video: Total Customers State
-
-Watch the [Honey Rae's Repairs - Total Customers State](https://vimeo.com/568226412) video to see how the `useState()` and `useEffect()` hooks are used to set up and watch application state.

@@ -27,7 +27,7 @@
 |--|--|--|--|
 | 12 | [Route Params for Individual Tickets](./chapters/HONEY_ROUTE_PARAMS.md)  <br/> <sub style="font-size:0.85rem;">#routing #parameters</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) | [Registering Customers](./chapters/AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> |
 | 13 | [Assigning Tickets](./chapters/HONEY_EDIT.md)  <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Purchase History](./chapters/KK_PURCHASES.md) | [Viewing Individual Animals](./chapters/USING_NESTED_DATA.md) <br/> <sub style="font-size:0.85rem;">#routing #nested-data</sub> |
-| 14 | | | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  |
+| 14 | [Turning Down Work](./chapters/HONEY_DELETE.md)  <br/> <sub style="font-size:0.85rem;">#delete</sub> | | [Release Animals](./chapters/DELETE.md) <br/> <sub style="font-size:0.85rem;">#api #delete</sub>  |
 | 15 | | [Been Caught Stealing](./chapters/KK_DELETE.md) | [Edit Animal Information](./chapters/EDIT.md) <br/> <sub style="font-size:0.85rem;">#api #edit #forms</sub> |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 12**

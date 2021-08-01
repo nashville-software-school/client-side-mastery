@@ -1,5 +1,11 @@
 # Viewing Single Tickets
 
+## Video Walkthrough
+
+The content in this chapter is meant to augment the [Honey Rae Repairs - Dynamic Routing](https://vimeo.com/581824615) video which shows you the implementation of Link and Router components, along with the `useParams()` hook, to implement a single resouce view in React.
+
+## Documentation Walkthrough
+
 The first step is to view a single ticket after clicking on it in the list. To do this, you will use the `<Link>` component to make the descriptions into hyperlinks. Open the ticket list component and update the code to the following.
 
 ```jsx

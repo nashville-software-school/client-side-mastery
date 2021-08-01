@@ -1,5 +1,7 @@
 # Employee Specialties
 
+## Documentation Walkthrough
+
 In this chapter, you are going to be implementing a `useEffect()` hook that observes the `employees` state variable for changes. The logic for the hook will extract the specialty of each employee and then update the value of a state variable - `specialties` - with a comma-separated list of those words.
 
 ![list of employees with specialties string above](./images/employee-specialties.png)
