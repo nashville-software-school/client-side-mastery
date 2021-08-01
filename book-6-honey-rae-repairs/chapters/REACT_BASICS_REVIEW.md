@@ -1,12 +1,4 @@
-# Review React Basics
-
-## Review of React Developer Tools
-
-Watch the Intro to React Dev Tools video below to review their usage. Again, just like with VanillaJS, your use of the React dev tools is the only other way than using the debugger to gather evidence.
-
-[<img src="./images/react-dev-tools-video.png" />](https://www.youtube.com/watch?v=rb1GWqCJid4)
-
-## Getting Started with create-react-app
+# Getting Started
 
 ```sh
 cd ~/workspace

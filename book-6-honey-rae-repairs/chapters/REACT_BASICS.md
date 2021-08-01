@@ -19,7 +19,13 @@ You will get two new tabs in your Chrome DevTools:
 
 These tools will help you debug and inspect your React applications.
 
-## Getting Started with create-react-app
+## React Developer Tools
+
+Watch the Intro to React Dev Tools video below to review their usage. Again, just like with VanillaJS, your use of the React dev tools is the only other way than using the debugger to gather evidence.
+
+[<img src="./images/react-dev-tools-video.png" />](https://www.youtube.com/watch?v=rb1GWqCJid4)
+
+## Creating the Application
 
 ```sh
 cd ~/workspace
@@ -33,7 +39,7 @@ cd honey-rae-repairs/src
 rm App*
 ```
 
-### Getting Setup
+## Getting Organized
 
 Before we grow this application, let's create a meaningful directory structure.
 

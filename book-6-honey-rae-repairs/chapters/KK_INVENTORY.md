@@ -13,8 +13,8 @@ These objects should be in the `productTypes` resource array.
 
 ## Products
 
-Now create as many products as you want to sell at your locations. Each product should have a foreign key to which category it belongs to. It should also have a product name, and a price.
+Now create as many product objects in your API as you want to sell at your locations. Each product should have a foreign key to which category it belongs to. It should also have a product name, and a price.
 
-Then create a directory for your product components and create a module for your product provider component, your list component, and your individual product component.
-
-Then, after the list of locations in the UI, display all of your products. Make sure you display all properties, even the foreign key.
+1. Create a directory for your product components.
+1. Create a module for your product list component.
+1. Immediately below the list of locations in the UI, display all of your products. Make sure you display all properties, even the category foreign key.
