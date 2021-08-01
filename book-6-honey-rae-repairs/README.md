@@ -40,4 +40,9 @@
 | 2 | [Top Customers](./chapters/KK_CUSTOMER_PURCHASE_ORDERED.md) | |
 | 3 | [Aggregating Candy Orders](./chapters/KK_AGGREGATE.md) | |
 | 4 | [Line Item Totals](./chapters/KK_SUBTOTALS.md) | |
-| 5 | [Product Search](./chapters/KK_SEARCH.md) | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) |
+
+## Pioneer Chapters
+
+| # | 🍭 🍬 Kandy Korner | 🐕 🐈 Nashville Kennels |
+|--|--|--|
+| 1 | [Product Search](./chapters/KK_SEARCH.md) | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) |
