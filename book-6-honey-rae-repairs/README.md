@@ -40,7 +40,7 @@ For example, here's what the first few days should look like for you.
 | 14 | [Assigning Tickets](./chapters/HONEY_EDIT.md)  <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
 | 15 | [Turning Down Work](./chapters/HONEY_DELETE.md)  <br/> <sub style="font-size:0.85rem;">#delete</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 12**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 15**
 
 ## Explorer Chapters
 
