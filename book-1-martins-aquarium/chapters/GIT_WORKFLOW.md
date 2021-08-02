@@ -4,12 +4,12 @@ Your instruction team will show you the Github workflow. They will demonstrate h
 
 The checklist below is for you. You will use it during the practice exercise, and you will use it for your first few group projects until you learn it by heart.
 
-## Vocabulary To Know
+## Vocabulary To Learn
 * GitHub vs. Git
 * VCS (version control software)
 * Clone vs. Fork
 * Branch
-* Git actions: init, checkout, status, add, commit, push, pull, merge
+* Git actions: init, checkout, status, add, commit, push, pull, merge, fetch
 * GitHub PR
 
 ## Group Project Github Workflow
@@ -55,14 +55,6 @@ Everyone will create a fish for the aquarium website.
     ```
 1. Repeat steps 4-9
 
-## Visual Workflow of Github
-
-![](./images/gitworkflow-main.jpg)
-![](./images/gitmerge-main.jpg)
-![](./images/gitreview-pr.jpg)
-![](./images/gitcodemerged-main.jpg)
-
-
 ## NSS Git / GitHub Rules of Engagement
 1. Always follow the one-way road
 1. No "broken code" on `main` branch
@@ -71,3 +63,14 @@ Everyone will create a fish for the aquarium website.
 1. No changes made on GitHub. Everything is done local.
 1. Use meaningful branch names.
 1. Make meaningful commit messages.
+
+
+## Visual Workflow of Github
+
+![](./images/gitworkflow-main.jpg)
+![](./images/gitmerge-main.jpg)
+![](./images/gitreview-pr.jpg)
+![](./images/gitcodemerged-main.jpg)
+
+
+

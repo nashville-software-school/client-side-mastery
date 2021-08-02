@@ -26,7 +26,7 @@ git version 2.29.2
 
 Any version greater than `2.27` is sufficient. If you have a lesser version, you will need to upgrade. Let your instructor know and they will help you.
 
-### Configuring Git
+### Configure Git
 > **Note** We don't expect you to understand the following steps but we do need them all complete.
 
 First configure git to use `main` as the default branch name.
@@ -58,7 +58,7 @@ git config --global pull.rebase false
 ```
 
 
-## Creating a Git Repository
+## Create a Git Repository
 
 1. With terminal, navigate to your coffee-houses project directory
     ```sh
@@ -69,8 +69,18 @@ git config --global pull.rebase false
 
 The magic is the `.git` directory that gets created when the `git init` command is executed. To see this directory you can use `ls -la`, which shows hidden files and directories. Operating systems will not show files and directories that begin with a period by default. They are considered hidden, or system assets.
 
+> **Special Note** Most often you will want to ignore certain files within a directory and not track them with git. This can be accomplished by creating a .gitignore file and listing the items that should not be tracked. For example, anyone working with a Mac or collaborating with Mac users should ignore a file called `.DS_Store`.
 
-## Making Your First Commit
+> 👉 **Mac Users** Make a global .gitignore file and let git know that you want to use this file for all of your repositories
+
+```sh
+echo .DS_Store >> ~/.gitignore_global
+
+git config --global core.excludesfile ~/.gitignore_global
+```
+
+
+## Make Your First Commit
 
 ### Workflow to Remember
 
@@ -119,7 +129,7 @@ Now create a Github repository where you will upload your code.
 
 Github is a _software as a service_ (SAAS) that allows you to back-up your repository to the cloud and share it with other software developers. Note that it is not the same thing as git, which is an application you are running locally on your machine. Github and git are made to talk to each other, but they are separate entities.
 
-## Pushing to Github
+## Push to Github
 
 When you are ready to share your code with your teammates, or the general public, you can push your repository to Github. Think of Github as an external drive you plug into your laptop to use as back-up. Instead of it backing-up the entire hard drive, you will back things up, one project at a time, only when you want to.
 
