@@ -1,6 +1,8 @@
 # Cars 'R Us
 
-For this application, you are going to allow customers to design their own car detailing package and place an order for a new car with those options.
+For this application, you are going to allow customers to design their own car detailing package and place an order for a new car with those options. In the Guided Tour, you generated radio buttons to allow customers to choose their option for each kind of resources, but in this project, you will be using `<select>` elements to create the dropdown controls.
+
+![animation of user interface](./images/car-builder-overview.gif)
 
 ## Setup
 
