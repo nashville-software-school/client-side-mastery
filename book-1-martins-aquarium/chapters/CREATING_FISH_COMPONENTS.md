@@ -1,6 +1,6 @@
-# Automate Martin's Website
+# Automated HTML Representations of Fish
 
-Now that you have a module whose responsibility is to maintain the state of your application, now you need to convert that raw data into HTML representations and render them in the browser. In this chapter you will automate the creation of the HTML list of fish from the objects in your fish collection, so that you never have to copy/paste the HTML directly when a fish dies, or a fish is added.
+Now that you have a module whose responsibility is to maintain the state of your application, now you need to convert the raw data into HTML representations and render it in the browser. In this chapter you will automate the creation of an HTML list of fish from the objects in the fish collection.
 
 ## Vocabulary To Learn
 * A function defines a parameter
@@ -29,7 +29,7 @@ There are two components in this process.
 1. Individual fish. This will create an HTML representation of each fish to be rendered in the list container.
 1. List of fish. This will create an HTML container element and have instructions for rendering the individual fish component for each fish in the collection.
 
-Since each of these components have a different responsibility, each one must be created in its own module.
+Since each of these components have a different responsibility, each one should be created in its own module.
 
 ### Single Fish Component
 
@@ -66,15 +66,13 @@ export const Fish = (fishObj) => {
 
 export const FishList = () => {
 
-    // Get a reference to the `<article class="content">` element
+    // Get a reference to the `<section class="fishList">` element
     const contentElement = document.querySelector("insert selector here")
     const fishes = getFish()
 
     // Add to the existing HTML in the content element
     contentElement.innerHTML += `
-        <section class="fishList">
-            All the fish go here!
-        </section>
+        All the fish go here!
     `
 }
 ```
@@ -227,10 +225,11 @@ Suggested files to create:
 
 ## Practice: Automate Martin's Locations
 
-Create a data module, a location list component, and a location component to automate the rendering of Martin's locations for the location page.
+Create a data module, a location list component, and a location component to automate the rendering of Martin's locations for the location page. Try a different way to iterate through the data. What about `forEach`?
 
 Suggested files to create:
 
 * `scripts/locations/LocationData.js`
 * `scripts/locations/LocationList.js`
 * `scripts/locations/Location.js`
+

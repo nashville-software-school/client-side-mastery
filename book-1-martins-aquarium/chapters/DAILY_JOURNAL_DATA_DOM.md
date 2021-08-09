@@ -1,4 +1,4 @@
-# Daily Journal
+# Daily Journal: Display List of Entries
 
 You have built your form for entering in journal entries, so now you need to define how the data that you will be collecting in the form should be stored. Your learning objective for this chapter is to build a function that returns an HTML representation of a journal entry data structure, and render it to the DOM.
 

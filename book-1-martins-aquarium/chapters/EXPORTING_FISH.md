@@ -13,6 +13,7 @@ Some common module responsibilities are:
 * JavaScript import/export
 * Array iteration (`for...of`)
 * Function
+* return
 
 
 ## Logging the Fish
@@ -33,7 +34,7 @@ export const getFish = () => {
 }
 ```
 
-Next, you import that function into the main module. Then you can invoke the function and store the fish collection in a variable that is scoped to the main module. Then log each fish object to the developer console.
+Next, you import that function into the main module. Then you can invoke the function and store the fish collection in a variable that is scoped to the main module. Then log each fish object to the developer console utilizing an array loop.
 
 > **Note:** The imported function is wrapped in curly braces. This is needed for anything that is exported from a module that isn't the `default` export.
 
@@ -48,14 +49,22 @@ for (const fish of allTheFish) {
     console.log(fish)
 }
 ```
-Now, you're ready to see if your fish print to the console. But, first you'll need to tell your browser to load and run your javascript. To do that, add a `<script>` tag to `index.html`, right above the closing `</body>` tag.
+Now, you're ready to see if the fish print to the console. First you'll need to tell the browser to load and run the javascript. To do that, add a `<script>` tag to `index.html`, right above the closing `</body>` tag.
 
 ```js
 <script type="module" src="scripts/main.js"></script>
 ``` 
 
-Designating `main.js` as `type="module"` allows you to utilize the import and export syntax. Note that `main.js` is the only file we need to load via a `<script>` tag. The import statements will cause a daisy-chain effect of sorts, causing any other imported modules to also be loaded and evaluated by the browser.
+Designating `main.js` as `type="module"` allows us to utilize the import and export syntax. Note that `main.js` is the only file we need to load via a `<script>` tag. The import statements will cause a daisy-chain effect, causing any other imported modules to also be loaded and evaluated by the browser.
+
+## Loops and Iteration
+There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times. The various loop mechanisms offer different ways to determine the start and end points of the loop.
+* [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
+## Array Methods
+Arrays are list-like objects. Array methods perform traversal and mutation operations. 
+* [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
 
 ## Next Steps
-
 Once you get this working, move on to the next chapter to learn how to make modules that are responsible for defining components - one for the list of fish, and one for the individual fish. Once done, you will have an automated machine for generating the HTML representations of the fish.
