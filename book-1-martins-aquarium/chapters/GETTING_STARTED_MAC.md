@@ -6,9 +6,9 @@ Get a nice journal and a comfortable pen, and start keeping a daily journal of w
 
 ## Hardware
 
-Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive RIGHT NOW and start backing up your entire hard drive.
+Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive _**RIGHT NOW**_ and start backing up your entire hard drive.
 
-**Seriously, right now!**
+**Seriously, _right now!_**
 
 ## Online Services
 
@@ -67,7 +67,9 @@ Set up Visual Studio Code to be [launched from the command line](https://code.vi
 
 If the `code` command still doesn't work, try adding this to `.zshrc` to update the path:
 
-`export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"`
+```sh
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+```
 
 and if that doesn't work, set up a bash function in `.zshrc`
 
@@ -96,26 +98,43 @@ Visit the [Node.js](https://www.nodejs.org) site and install the LTS release.
 
 Now that you have Node installed, you can install some open source software that you will need in the course.
 
+Type the following in your terminal, and then press <kbd>Enter</kbd>
+
 ```sh
 sudo npm i -g serve json-server
 ```
+
+Make sure that `serve` was installed successfully.
+Type the following in your terminal, and then press <kbd>Enter</kbd>
+
+```sh
 serve -v
 ```
 
-If you see the message `command not found`, type in `sudo npm i -g serve` again.
+If you see the message `command not found`, type the following in your terminal, and then press <kbd>Enter</kbd>
 
-Make sure that `json-server` was installed successfully by typing in your terminal:
+```sh
+sudo npm i -g serve
 ```
+
+Make sure that `json-server` was installed successfully.
+Type the following in your terminal, and then press <kbd>Enter</kbd>
+
+```sh
 json-server -v
 ```
 
-If you see the message `command not found`, type in `sudo npm i -g json-server` again.
+If you see the message `command not found`, type  the following in your terminal, and then press <kbd>Enter</kbd>
+
+```sh
+sudo npm i -g json-server
+```
 
 ## Xcode Command Line Tools
 
-Since you are going to be learning how to be a professional software developer, you will be using your computer terminal heavily. OSX users need to install some baseline tools to use more advanced things later in the course.
+Since you are going to be learning how to be a professional software developer, you will be using your computer terminal heavily. macOSX users need to install some baseline tools to use more advanced things later in the course.
 
-Type this command into your terminal, and then wait a while.
+Type this command into your terminal, press <kbd>Enter</kbd>, and then wait a while.
 
 ```sh
 xcode-select --install
@@ -142,18 +161,24 @@ Sometimes, a student has permission issues after installing and configuring Git.
 
 1. If you haven't install Homebrew from the previous step, please complete that first.
 1. Install zsh which is a powerful replacement for the standard bash terminal by typing the following command into the terminal
-    ```sh
-    brew install zsh zsh-completions
-    ```
+
+```sh
+brew install zsh zsh-completions
+```
+
 1. Install [Oh My Zsh](http://ohmyz.sh/) which is a framework for Z shell which makes the terminal a pleasure to work in. Use the following command.
-    ```sh
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    ```
+
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
 1. Run the following command in Terminal application.
-    ```sh
-    echo 'alias gs="git status"
-    alias hs="serve -l 8080"' >> ~/.zshrc
-    ```
+
+```sh
+echo 'alias gs="git status"
+alias hs="serve -l 8080"' >> ~/.zshrc
+```
+
 
 ## Show Hidden Files
 
@@ -180,11 +205,6 @@ Watch a short video for [creating an SSH key in the terminal](https://youtu.be/z
 
 Now watch the video for [adding your SSH key to your Github account](https://youtu.be/8hlmIObpMd4).
 
-Now watch the video for [adding your SSH key to your Github account](https://youtu.be/8hlmIObpMd4).
-
-
-
-
 # Installations for Mac ARM Computers
 
 ## Rectangle <a name="rectangle"></a>
@@ -192,11 +212,13 @@ Rectangle is an open-source window management app based on Spectacle. Spectacle 
 
 This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
 
-Install from the command line: 
+Install from the command line:
 
-`brew install --cask rectangle`
+```
+brew install --cask rectangle
+```
 
-OR 
+OR
 
 [Download and install Rectangle](https://rectangleapp.com/)
 

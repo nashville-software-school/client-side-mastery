@@ -5,7 +5,7 @@ The Daily Journal application will be your opportunity to take the concepts you 
 Ultimately the daily journal will display a list of posts with the ability to add, edit, and delete a post.
 
 ## Design and Layout
-Before coding, it is recommended to plan what you will build. Use an online tool (_we like [sketchboard.io](https://sketchboard.io/)_) or you can use the tried &amp; true pen with paper method to create a wireframe visual of your journal. Wireframes establish the basic structure of a page to determine where your components will appear once you are finished with the visual design stage of a project.
+Before coding, it is recommended to plan what you will build. Use an online tool like _[sketchboard.io](https://sketchboard.io/) or [figma](https://www.figma.com/)_ , or you can use the tried &amp; true pen with paper method to create a wireframe visual of your journal. Wireframes establish the basic structure of a page to determine where your components will appear once you are finished with the visual design stage of a project.
 
 The journal app will include the following components:
 
@@ -21,3 +21,6 @@ The journal app will include the following components:
 1. Individual entries. Each entry component will include a `Delete` button and `Edit` button.
 
 1. A footer area that includes your name with a link to GitHub and copyright.
+
+#
+Once you have created a wireframe, share it with the instruction team.

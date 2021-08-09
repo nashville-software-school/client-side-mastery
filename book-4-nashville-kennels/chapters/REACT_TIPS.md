@@ -1,35 +1,40 @@
-# React Tips and Tricks
+# REACT TIPS
 
-#### Debugging in JSX
+A few cool code snippets and shortcuts.
+
+"Destructure" props passed to a component
 
 ```jsx
-return(
-    <>
-        {
-            console.log(variable) && <h1>Hello World</h1>
-        }
-    </>
-)
+const ApplicationViews = ({hasUser, setUser}) => {
+
+// ....
+
+};
 ```
 
-#### Inline Styling
+React.Fragment Shortcut
+
+```jsx
+<>
+  <h1>Hello World</h1>
+  <p>This is a great idea</p>
+</>
+```
+
+Inline Style
 
 ```jsx
 <h3>Name: <span style={{color: 'darkslategrey'}}>Doodles</span></h3>
 
 ```
 
-#### Ternary Expressions
+Ternary Expressions
 
 ```jsx
   <div>
-      {
-          animal.owners.length < 2
-            ? <p>Animal can have one more owner</p>
-            : <p>Animal has enough owners</p>
+      {isLoading
+          ? <p>App is loading</p>
+          : <p>App is done loading</p>
       }
   </div>
 ```
-
-
-

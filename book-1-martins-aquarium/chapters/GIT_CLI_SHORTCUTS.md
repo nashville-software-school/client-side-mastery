@@ -1,4 +1,4 @@
-# Using Aliases and Functions to Accelerate your Git Workflow
+# Accelerate your Git Workflow with Aliases and Functions
 
 ## Pushing to Github
 
@@ -36,7 +36,7 @@ A nice, fast way to pull the master branch when a teammate has received an appro
 
 ## Test a Teammate's Branch
 
-Here's a bash function that will fetch all remote branches, checkout to the one you want to text, and make sure you are up to date.
+Here's a bash function that will fetch all remote branches, checkout to the one you want to test, and make sure you are up to date.
 
 ```sh
 # Short for (T)est (T)eammate's (B)ranch

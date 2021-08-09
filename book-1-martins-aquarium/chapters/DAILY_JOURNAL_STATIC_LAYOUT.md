@@ -15,7 +15,8 @@ Once those are created, make sure you are in your root directory and open Visual
 
 Open your `index.html`. Visual Studio Code provides many shortcuts and can write boilerplate code for you, which you then customize for your needs. Just type in the letters `html` and in the Intellisense context menu that appears, choose the "html:5" item to get some boilerplate HTML.
 
-Inside the `<head>` tag, create a new line, type in `link` and choose the "link:css" item and change the href to `main.css`
+* Inside the `<head>` tag, create a new line, type in `link` and choose the "link:css" item and change the href to `styles/main.css`
+* Within the `<head>`, don't forget to give your page a `<title>`
 
 ## HTML Layout
 
@@ -25,7 +26,7 @@ Refer to your wireframe and write semantic HTML for the page.
 * Get more specific with `<section>`, `<article>`, and `<form>`. (Don't worry about the details of the form - you will build that out below).
 * Get more specific with `<h2-h6>`, `<p>`, and `<a>`.
 * Continue this process until you block in the page with all of the details from your wireframe.
- 
+
 
 ## Build the Journal Form
 
@@ -56,7 +57,8 @@ Now use the `display: flex`, and `flex-direction: column` CSS properties to chan
 
 ![](./images/P5FPNsVInT.gif)
 
-**Once your project is pushed to GitHub, be sure to include your wireframe in the `README.md` file.**
+**Push your project to Github.**
+Update the `README.md` file to include your wireframe.
 
 ##
 ## UI/UX Challenge

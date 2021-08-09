@@ -1,6 +1,6 @@
-# Project: Fish in my Aquarium
+# Planning Martin's Aquarium
 
-Let's build a couple HTML pages whose user will be an avid rare fish collector who maintains a sophisticated tank in his home. His name is Martin. Martin meets you at a local coffee and explains what he needs to have on his web site.
+Over the next week, we will build a web page for Martin who is an avid rare fish collector and maintains a sophisticated tank in his home. Martin meets you at a local coffee shop and explains what he needs to have on his web site.
 
 > "So nice to meet you finally after all of those emails. Please, grab a chair," says Martin. He uses his leather loafer to gently nudge a chair slightly away from the table. He subtly waves his hand towards the chair in invitation.
 >
@@ -58,9 +58,9 @@ Use `index.html` to build a web page that lists fish, quotes, harvesting locatio
 
 The more time you spend in the design stage, the less code you need to write.
 
-## Developer Vocabulary
+## Vocabulary To Learn
 
-> **Vocabulary:** Imagine a chair. Now imagine that you have to write a poem or other paper about the chair you have in your mind. How would you describe it? It could be a tall, white chair. It could be uncomfortable. You could say when you purchased it. When you describe something, you often list its properties. A property of something is just a specific feature of that thing. In the short description above, here are the properties of the chair you were imagining.
+> **Properties:** Imagine a chair. Now imagine that you have to write a poem or other paper about the chair. How would you describe it? It could be a tall, white chair. It could be uncomfortable. You could say when it was purchased. When you describe something, you often list its properties. A property of something is just a specific feature of that thing. From the short description above, here are the properties of the chair you were imagining.
 >   1. Height
 >   1. Color
 >   1. Comfort level
@@ -80,4 +80,4 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Time to Build
 
-Your instruction team will lead the class through the construction of the this site. You may follow along, or you can just close your computer and watch what gets built and offer your suggestions.
+The instruction team will lead the class through the construction of Martin's Aquarium. You may follow along, or you can close your computer and watch what gets built and offer your suggestions.

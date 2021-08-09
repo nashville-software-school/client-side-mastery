@@ -23,7 +23,7 @@ Create the directories and files with the following commands. You can copy/pasta
 mkdir -p ~/workspace/dotard-simbleton/scripts
 mkdir -p ~/workspace/dotard-simbleton/styles
 cd ~/workspace/dotard-simbleton
-touch index.html scripts/main.js scripts/BusinessProvider.js scripts/BusinessList.js scripts/Business.js styles/main.css
+touch index.html scripts/main.js scripts/BusinessData.js scripts/BusinessList.js scripts/Business.js styles/main.css
 ```
 
 ## Your First Day at Dotard & Simbleton
@@ -177,7 +177,7 @@ Since each object is identical in its structure (but not its state), you can wri
 
 ### Example Usage of `forEach()`
 
-> **`SuppliesProvider.js`**
+> **`SuppliesData.js`**
 
 ```js
 const supplies = [
@@ -212,7 +212,7 @@ export const useSupplies = () => {
 > **`SupplyList.js`**
 
 ```js
-import { useSupplies } from "./SuppliesProvider.js"
+import { useSupplies } from "./SuppliesData.js"
 import { Supply } from "./Supply.js"
 
 const contentTarget = document.querySelector(".supplies")

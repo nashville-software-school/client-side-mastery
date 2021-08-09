@@ -1,4 +1,4 @@
-# Updating LinkedIn
+# Update LinkedIn
 
 LinkedIn has a feature that allows you to capture information about projects that you complete during your career.
 

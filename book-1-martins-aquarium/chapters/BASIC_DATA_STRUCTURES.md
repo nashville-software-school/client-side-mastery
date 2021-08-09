@@ -1,4 +1,4 @@
-# Automated Fish Making Machine
+# Data Structures and Fish
 
 > You wake up on a lazy Sunday morning, rub your eyes, and reach for your phone to read the morning news and check the weather forecast. After you enter in your passcode, a list of notifications is waiting for you - including one from Martin.
 >
@@ -22,6 +22,13 @@
 
 Luckily, there is a way to automate this entire process, so that software developers don't have to manually write the same HTML, and the same JavaScript over, and over, and over again when new data is created.
 
+## Vocabulary To Learn
+* Object
+* Object key and value
+* Property
+* Declaring variables: `let` and `const`
+* Data Types: Array, String, Boolean, Object, Number
+
 ## Object Representation of Things
 
 The first step in the process is defining an object in code that represent each fish. That's the main purpose of an object - representing real-world things in code.
@@ -32,6 +39,8 @@ Before you figure out how to represent a fish, let's look at how you might repre
 * Type of food (sandwich, fries, dessert, etc..)
 * Size
 * Temperature (is it hot or cold food)
+* Availability (sold out?)
+* Pieces per order
 
 Ok, given those common properties, how would you represent a hamburger as an object?
 
@@ -40,37 +49,41 @@ const hamburger = {
     name: "Whopper",
     type: "Sandwich",
     size: "Large",
-    temperature: "Hot"
+    temperature: "Hot",
+    available: true,
+    piecesPerOrder: 1
 }
 ```
 
-In this object, `name`, `type`, `size`, and `temperature` are the keys. `"Whopper"`, `"Sandwich"`, `"Large"`, and `"Hot"` are the value of those keys. Together, those values make up the **state of the hamburger object**.
+In this object, `name`, `type`, `size`, `temperature`, `available`, and `piecesPerOrder` are the keys. `"Whopper"`, `"Sandwich"`, `"Large"`,`"Hot"`, `true`, and `1` are the values of those keys. Together, those values make up the **state of the hamburger object**.
 
-How about some fried potatoes?
+How about some hot wings?
 
 ```js
-const fries = {
-    name: "French fries",
-    type: "Vegetable",
+const hotwings = {
+    name: "Hot Wings",
+    type: "Appetizer",
     size: "Medium",
-    temperature: "Hot"
+    temperature: "Hot",
+    available: false,
+    piecesPerOrder: 6
 }
 ```
 
- `"French fries"`, `"Vegetable"`, `"Medium"`, and `"Hot"` are the value of the keys. Together, those values make up the **state of the fries object**.
+ `"Hot Wings"`, `"Appetizer"`, `"Medium"`, `"Hot"`, `false` and `6` are the values of the keys. Together, those values make up the **state of the hotwings object**.
 
 ## Representing the Fish
 
-Your job is to define what a JavaScript object would look like. What keys should you create on each fish object? Each fish will have the same keys, but the state of each will be different - meaning the keys will have different values.
+Your job is to define what a JavaScript object for a fish would look like. What keys should you define? Each fish will have the same keys, but the state of each will be different - meaning the keys will have different values.
 
-Create a new JavaScript module in your application named `FishDataProvider.js`. In that module create objects to represent the state of Martin's fish that you had previously hard-coded in the HTML. You are going to place all of the objects in an array - a collection of fish.
+Create a new JavaScript module in your application named `FishData.js`. In that module create objects to represent the state of Martin's fish that you had previously hard-coded in the HTML. You are going to place all of the objects in an array - a collection of fish.
 
-> **`martins-aquarium/scripts/FishDataProvider.js`**
+> **`martins-aquarium/scripts/FishData.js`**
 
 ```js
 /*
  *  To get you started, here's some properties of Bart.
- *  You need to add more properties to complete his
+ *  You need to add more properties to complete this
  *  representation as an object. Then add all the other
  *  fish to the collection.
  */
@@ -82,5 +95,5 @@ const fishCollection = [
 ]
 ```
 
-> **Tip:** Some confusion and some bugs at this point are natural. You will likely forget some punctuation like commas and curly braces. If you want to discuss your ideas or bugs with the instruction team, you should visit one of them.
+> **Tip:** Confusion and bugs at this point are natural. You will likely forget some punctuation like commas and curly braces. If you want to discuss your ideas or bugs with the instruction team, you should visit one of them.
 

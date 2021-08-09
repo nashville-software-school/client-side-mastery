@@ -1,4 +1,4 @@
-# Daily Journal
+# Daily Journal: Display List of Entries
 
 You have built your form for entering in journal entries, so now you need to define how the data that you will be collecting in the form should be stored. Your learning objective for this chapter is to build a function that returns an HTML representation of a journal entry data structure, and render it to the DOM.
 
@@ -47,17 +47,17 @@ The list component, just like Martin's Aquarium, will take all of the individual
  *  Purpose:
  *    To render as many journal entry components as
  *    there are items in the collection exposed by the
- *    data provider component
+ *    data module component
  */
-import { useJournalEntries } from "./JournalDataProvider.js"
+import { getJournalEntries } from "./JournalData.js"
 import { JournalEntryComponent } from "./JournalEntry.js"
 
 // DOM reference to where all entries will be rendered
 const entryLog = document.querySelector("#entryLog")
 
 export const EntryListComponent = () => {
-    // Use the journal entry data from the data provider component
-    const entries = useJournalEntries()
+    // Use the journal entry data from the data module component
+    const entries = getJournalEntries()
 
     for (const entry of entries) {
         /*

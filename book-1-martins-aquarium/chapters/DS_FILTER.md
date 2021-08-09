@@ -16,7 +16,7 @@ The filter function creates a new array from the existing one, so you can invoke
 
 Here's an example of how you could filter an array of art supplies.
 
-> **`SuppliesProvider.js`**
+> **`SuppliesData.js`**
 
 ```js
 const supplies = [
