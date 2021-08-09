@@ -7,6 +7,11 @@ To display a group of options, the two most common controls used by designers an
     <input type="radio" value="1" name="resource"> First option
     <input type="radio" value="2" name="resource" checked> Second option
     ```
+
+    #### Example
+
+    <img src="./images/example-radio-inputs.gif" alt="animation of two radio inputs" width="200px">
+
 1. The dropdown menu using the `<select>` HTML element.
     ```html
     <select id="resource">
@@ -15,6 +20,10 @@ To display a group of options, the two most common controls used by designers an
         <option value="2">Second option</option>
     </select>
     ```
+
+    #### Example
+
+    <img src="./images/example-select-element.gif" alt="animation of two radio inputs" width="200px">
 
 ## Getting the Selected Option
 
