@@ -8,7 +8,7 @@ To display a group of options, the two most common controls used by designers an
     <input type="radio" value="2" name="resource" checked> Second option
     ```
 
-    <img src="./images/example-radio-inputs.gif" alt="animation of two radio inputs" width="200px">
+    <img src="./images/example-radio-input.gif" alt="animation of two radio inputs" width="200px">
 
 1. The dropdown menu using the `<select>` HTML element.
     ```html
