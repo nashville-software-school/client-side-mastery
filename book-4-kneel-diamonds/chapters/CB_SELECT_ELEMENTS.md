@@ -10,7 +10,7 @@ To display a group of options, the two most common controls used by designers an
 
     <img src="./images/example-radio-input.gif" alt="animation of two radio inputs" width="200px">
 
-1. The dropdown menu using the `<select>` HTML element.
+1. The dropdown menu using the `<select>` HTML element. Whichever option the user chooses will then be displayed in the select box.
     ```html
     <select id="resource">
         <option value="0">Prompt to select resource...</option>
