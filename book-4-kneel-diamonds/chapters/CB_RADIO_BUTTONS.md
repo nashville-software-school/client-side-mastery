@@ -1,7 +1,7 @@
 # Display Your Options
 
-1. Create a module that is responsible for displaying the overall HTML structure for your app. It will be the equivalent of the **`KneelDiamonds`** module.
-1. Create four modules in your `scripts` directory, each being responsible for display the four different option groups, just like you did in Kneel Diamonds.
+1. Create a module that is responsible for generating the overall HTML structure for your app. It will be the equivalent of the **`KneelDiamonds`** module.
+1. Create four modules in your `scripts` directory, each being responsible for displaying the four different option groups, just like you did in Kneel Diamonds.
     1. Wheels
     1. Technologies
     1. Paints

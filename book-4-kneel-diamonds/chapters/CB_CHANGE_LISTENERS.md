@@ -1,9 +1,7 @@
 # Showing Chosen Options
 
-1. In each of the modules that display an `<select>` element that has a child `<option>` as an HTML representation of each object in the corresponding array in the database module.
-
+1. In each of the modules, generate a `<select>` element that has child `<option>` elements as HTML representation of each object in the corresponding array in the database module.
 1. Add an event listener that reacts to the customer choosing one of the options.
-
 1. When an option is chosen, use `window.alert` to display a message that says which option the user chose.
 
 ## Pick Your Style
