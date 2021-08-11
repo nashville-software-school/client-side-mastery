@@ -12,12 +12,10 @@ Close your terminal and reopen, then check version.
 
 ### Windows Users
 
-Here are the commands to run in your terminal if you are on a Windows machine.
+Here is the command to run in your terminal if you are on a Windows machine. (An installation window should appear when this is run and then you must go through the steps.)
 
-```
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt install git
+```$
+git update-git-for-windows
 ```
 
 Close your terminal and reopen, then check version.
