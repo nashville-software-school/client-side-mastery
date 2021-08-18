@@ -27,7 +27,7 @@ Everyone will create a fish for the aquarium website.
 ```sh
     git status
 ```
-1. Add, commit, push branch
+5. Add, commit, push branch
     ```sh
     git add --all
     git commit -m "Added Herbert the goldfish"
@@ -53,7 +53,7 @@ Everyone will create a fish for the aquarium website.
     git merge main
     # Fix merge conflicts, if any
     ```
-1. Repeat steps 4-9
+1. Repeat steps 5-10
 
 ## NSS Git / GitHub Rules of Engagement
 1. Always follow the one-way road

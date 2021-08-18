@@ -1,4 +1,4 @@
-# Book 1 - Yellow Brick Road
+# Book 1
 
 ## Chapters
 

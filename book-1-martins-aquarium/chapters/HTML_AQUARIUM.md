@@ -54,7 +54,7 @@ Over the next week, we will build a web page for Martin who is an avid rare fish
 
 ## Goal
 
-Use `index.html` to build a web page that lists fish, quotes, harvesting locations, and fish/tank care tips on the right side of the page. You will accomplish it by first decomposing the site into smaller components, and using tools like https://sketchboard.io/ to wireframe the layout.
+Use `index.html` to build a web page that lists fish, quotes, harvesting locations, and fish/tank care tips on the right side of the page. You will accomplish it by first decomposing the site into smaller components, and using tools like [Sketchboard](https://sketchboard.io/), [Figma](https://Figma.com), or [AdobeXD](https://www.adobe.com/products/xd.html) to wireframe the layout.
 
 The more time you spend in the design stage, the less code you need to write.
 
