@@ -37,15 +37,12 @@
 1. [Listing Purchasing Agents](./chapters/DS_LISTING_AGENTS.md) `#map`
 1. [Finding Companies](./chapters/DS_FIND_COMPANY.md) `#find`
 
-
-
 ## Supplementary Content
 
 * Supplemental Chapter - [Muscle Memory: Functions](./chapters/FUNCTION_PRACTICE.md)
 * Supplemental Chapter - [Muscle Memory: Factory Functions](./chapters/FACTORY_FUNCTIONS.md)
 * Supplemental Chapter - [Scope in JavaScript](./chapters/JS_SCOPE.md)
 * Supplemental Chapter - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
-* Supplemental Chapter - [Pomodoro Technique](./chapters/POMODORO.md)
 
 ### Practice: Modern Farm
 1. [Harvest Plan](./chapters/MF_INSTALL_PLAN.md)
