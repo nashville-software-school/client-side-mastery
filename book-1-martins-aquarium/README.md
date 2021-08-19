@@ -24,12 +24,12 @@
 | 9 | [Data Structures and Fish](./chapters/BASIC_DATA_STRUCTURES.md) <br/> <sub style="font-size:0.85rem;">#data types #object</sub> |  |
 | 10 | [Using the Fish Data](./chapters/EXPORTING_FISH.md) <br/> <sub style="font-size:0.85rem;">#components #import #export #array iteration</sub> | [Journal Entry Objects](./chapters/DAILY_JOURNAL_OBJECT_DOM.md) |
 | 11 | [Automated HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#components #dom</sub> |  |
-| 12 | [Debugging With Developer Tools](./chapters/DEBUG_WITH_DEVTOOLS_.md)  <br/> <sub style="font-size:0.85rem;">#debugging</sub>|  |
+| 12 | [Debugging With Developer Tools](./chapters/DEBUG_WITH_DEVTOOLS.md)  <br/> <sub style="font-size:0.85rem;">#debugging</sub>|  |
 | 13 | [Filtering Data into Smaller Arrays](./chapters/FILTERING_FISH.md) <br/> <sub style="font-size:0.85rem;">#filtering #functions</sub> | [Display List of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md) |
 | 14 | [Accelerate your Git Workflow](./chapters/GIT_CLI_SHORTCUTS.md) <br/> <sub style="font-size:0.85rem;">#cli shortcuts #alias #terminal</sub> |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](./chapters/AUTO_WORLD.md) |  |
 | 15 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) |  |
-| 16 | Everything Is Awesome | |
+
 
 ## Practice: Array Methods with Dotard & Simbleton
 1. [Doris' Company List](./chapters/DS_INTRO.md) `#iteration` `#forEach`
@@ -47,7 +47,7 @@
 * Supplemental Chapter - [Publish Site with Github Pages](./chapters/GITHUB_PAGES.md)
 * Supplemental Chapter - [Pomodoro Technique](./chapters/POMODORO.md)
 
-### Practice Modern Farm
+### Practice: Modern Farm
 1. [Harvest Plan](./chapters/MF_INSTALL_PLAN.md)
 1. [Creating Seeds](./chapters/MF_SEED_MODULES.md)
 1. [Tilling the Field](./chapters/MF_FIELD.md)

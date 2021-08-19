@@ -1,6 +1,6 @@
 # Planning Martin's Aquarium
 
-Over the next week, we will build a web page for Martin who is an avid rare fish collector and maintains a sophisticated tank in his home. Martin meets you at a local coffee shop and explains what he needs to have on his web site.
+Over the next few days, we will build a web page for Martin who is an avid rare fish collector and maintains a sophisticated tank in his home. Martin meets you at a local coffee shop and explains what he needs to have on his web site.
 
 > "So nice to meet you finally after all of those emails. Please, grab a chair," says Martin. He uses his leather loafer to gently nudge a chair slightly away from the table. He subtly waves his hand towards the chair in invitation.
 >
