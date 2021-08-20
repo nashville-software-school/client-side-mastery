@@ -15,8 +15,10 @@
     heroku git:remote -a {your Heroku app}
     ```
 1. Then push your app to Heroku.
+
+   *<ins>Note</ins>: make sure you have commited your latest changes.
     ```sh
-    git push heroku master
+    git push heroku main
     ```
 1. Then sit and wait while the deployment happens. It can take a couple minutes. Just be patient.
 
@@ -43,7 +45,7 @@
     ```
 1. Then push your app to Heroku.
     ```sh
-    git push heroku master
+    git push heroku main
     ```
 1. Then sit and wait while the deployment happens. It can take a couple minutes. Just be patient.
 1. When it's done, you will see the deployed URL for your API. Copy that URL.
@@ -62,7 +64,7 @@ fetch("https://nss-kennel-api.herokuapp.com/animals")
     })
 ```
 
-Once that's done. Add, commit, and `git push heroku master`.
+Once that's done. Add, commit, and `git push heroku main`.
 
 ---
 
