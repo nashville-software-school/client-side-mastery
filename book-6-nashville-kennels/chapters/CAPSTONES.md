@@ -38,8 +38,7 @@ Your wireframe can be created by hand or through software.  Share a link, screen
 ## To think about
 
 - Don't dream too big.  Make sure you can complete the project in 3 weeks.
-- It does not need to be extremely innovative or deep.
+- Keep it simple. It does not need to be ground break.  Don't be afraid to do something that's already been done.
 - What problem are you solving/why do you want to make this?
-- How will you present this to potential employers. 
-
+- You will be presenting this to potential employers.  Keep the content professional and not controversial.
 
