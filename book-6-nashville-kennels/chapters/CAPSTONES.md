@@ -42,3 +42,14 @@ Your wireframe can be created by hand or through software.  Share a link, screen
 - What problem are you solving/why do you want to make this?
 - You will be presenting this to potential employers.  Keep the content professional and not controversial.
 
+## Timeline (Important Dates)
+
+**Sept 4, 2021** - By the end of class, your capstone proposal should be finalized.  You should be ready to code.
+
+**Sept 6, 2021** - No Class (Labor Day)
+
+**Sept 7-21, 2021** - Coding Capstones
+
+**Sept 25, 2021** - Soft Demos!  This is the demo to your cohort.
+
+**Oct 9, 2021** - DEMO DAY!  This is where you demo your capstones to E17!
