@@ -22,4 +22,4 @@
 | 13 | [Component State: Searching Animals](./chapters/DASHBOARD_SEARCH.md) <br/> <sub style="font-size:0.85rem;">#state #shared-state</sub> | [Product Search](./chapters/KK_SEARCH.md) |  |
 | 14 | [Deploy Application and API to Heroku](./chapters/JSON_SERVER_HEROKU.md) | Deploy Kandy Korner to Heroku |
 | 🌰 | Group Project: React Nutshell |  |
-| 😱 | Capstone time! |  |
+| 😱 | Capstone time! |[Guidelines](./chapters/CAPSTONES.md)  |
