@@ -44,12 +44,13 @@ For example, here's what the first few days should look like for you.
 
 ## Explorer Chapters
 
-| # | 🍭 🍬 Kandy Korner |
-|--|--|
-| 1 | [Customer Purchase Count](./chapters/KK_CUSTOMER_PURCHASE_COUNT.md) |
-| 2 | [Top Customers](./chapters/KK_CUSTOMER_PURCHASE_ORDERED.md) |
-| 3 | [Aggregating Candy Orders](./chapters/KK_AGGREGATE.md) |
-| 4 | [Line Item Totals](./chapters/KK_SUBTOTALS.md) |
+| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
+|--|--|--|
+| 1 | [API Manager](./chapters/HONEY_APIMANAGER.md) | [API Manager](./chapters/KK_APIMANAGER.md) |
+| 1 |  | [Customer Purchase Count](./chapters/KK_CUSTOMER_PURCHASE_COUNT.md) |
+| 2 |  | [Top Customers](./chapters/KK_CUSTOMER_PURCHASE_ORDERED.md) |
+| 3 |  | [Aggregating Candy Orders](./chapters/KK_AGGREGATE.md) |
+| 4 |  | [Line Item Totals](./chapters/KK_SUBTOTALS.md) |
 
 ## Pioneer Chapters
 

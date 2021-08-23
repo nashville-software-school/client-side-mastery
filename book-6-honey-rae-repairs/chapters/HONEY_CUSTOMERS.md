@@ -47,7 +47,7 @@ The **`Repairs.js`** module needs to remain open in your editor. While watching 
 import React, { useEffect, useState } from "react"
 
 export const Repairs = () => {
-    const [] = useState([])
+    const [customers, assignCustomers] = useState([])
 
     useEffect(
         () => {
