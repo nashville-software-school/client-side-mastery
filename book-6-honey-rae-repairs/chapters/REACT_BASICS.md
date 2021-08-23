@@ -102,25 +102,3 @@ yarn start
 
 It will take about 30 seconds to run all of your code, and then the process will automatically open a new tab in your browser and then render your HTML.
 
-
-
-## Animal Styles
-
-> ##### `src/components/animal/Animal.css`
-
-```css
-
-.animals {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.animal {
-    flex-basis: 28%;
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid goldenrod;
-}
-```
-
