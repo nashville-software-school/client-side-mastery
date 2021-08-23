@@ -97,7 +97,7 @@ p {
 In your terminal, make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory, and type the following command.
 
 ```sh
-yarn start
+npm start
 ```
 
 It will take about 30 seconds to run all of your code, and then the process will automatically open a new tab in your browser and then render your HTML.
