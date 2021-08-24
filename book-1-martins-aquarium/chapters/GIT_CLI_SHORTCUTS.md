@@ -20,15 +20,15 @@ The next time you need to push a local branch to Github, you can use this alias 
 
 ## Pulling from Github
 
-You also need to pull branches, including master, quite often. Consider creating two aliases for those operations.
+You also need to pull branches, including main, quite often. Consider creating two aliases for those operations.
 
 `alias glo="git pull origin "`
 
 That will let you pull any branch name with `glo teammate-branch`
 
-`alias glom="git pull origin master"`
+`alias glom="git pull origin main"`
 
-A nice, fast way to pull the master branch when a teammate has received an approved PR and merged their branch on Github.
+A nice, fast way to pull the main branch when a teammate has received an approved PR and merged their branch on Github.
 
 ## Test a Teammate's Branch
 

@@ -16,7 +16,7 @@ Inspired by [this post](https://medium.com/employbl/launch-a-website-with-a-cust
 Before getting started, we are assuming you have the following completed:
 1. Static personal website (see above criteria)
 1. Github repo created
-1. Domain purchased (www.namecheap.com is a common one but any will do. These directions will show with a domain purchased on namecheap) 
+1. Domain purchased (www.namecheap.com is a common one but any will do. These directions will show with a domain purchased on namecheap)
 
 ## CNAME
 Create a CNAME file (at the same level as my index.html)
@@ -32,16 +32,16 @@ Add, commit, and push those changes up to Github
 Go to settings in your personal site repo
 ![Settings](./images/click-settings.png)
 
-Scroll down to Github Pages and select “master branch” as the source for your Github pages
-![Select Master Branch](./images/select-master.png)
+Scroll down to Github Pages and select main branch” as the source for your Github pages
+![Select Main Branch](./images/select-master.png)
 
 Under “Custom Domain”, enter in your domain where Github pages should serve the Github pages
 ![Add Domain](./images/enter-domain.png)
 
 ## Configure DNS
-Log into your domain and navigate the DNS section 
+Log into your domain and navigate the DNS section
 
-For Namecheap, 
+For Namecheap,
 Login and go to your dashboard
 Click “manage” for the domain you need to configure
 ![Manage](./images/select-manage.png)
@@ -53,13 +53,13 @@ Click “Advanced DNS” near the top
 
 Under “Host Records”, you’ll be adding 3 new records:
 
-The Github settings are the same for everyone 
+The Github settings are the same for everyone
 1. Type: A Record
 1. Host: @
 1. Value: 192.30.252.153
 1. Value: 192.30.252.154
 
-Your CNAME entry: 
+Your CNAME entry:
 1. CNAME Record
 1. Type: www
 1. Value: [your-github-repo-name].github.io
@@ -69,7 +69,7 @@ Your CNAME entry:
 
 Voila! You should be deployed!
 
-Whenever you make changes to your personal site, as long as you merge those changes into master, they will be reflected on your domain (sometimes takes a minute, but not that long)
+Whenever you make changes to your personal site, as long as you merge those changes into main, they will be reflected on your domain (sometimes takes a minute, but not that long)
 
 
 

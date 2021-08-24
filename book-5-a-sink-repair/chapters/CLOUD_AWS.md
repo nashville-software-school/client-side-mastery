@@ -274,7 +274,7 @@ git commit -m "<your detailed commit message>"
 eb deploy --staged
 ```
 
-Elastic Beanstalk only updates from the `HEAD` commit of the `main` or `master` Git branch. Deploying with the `--staged`
+Elastic Beanstalk only updates from the `HEAD` commit of the `main` Git branch. Deploying with the `--staged`
 flag pulls all the changes you have staged for pushing to your `main` branch. This way you can confirm that your application
 works before committing the changes to the `main` branch.
 

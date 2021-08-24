@@ -48,7 +48,7 @@ This is the process you will be following thousands of times while you are here 
 ```sh
 git add --all
 git commit -m "Message about commit"
-git push origin master
+git push origin main
 ```
 
 ### Commit Aquarium
