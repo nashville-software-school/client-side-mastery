@@ -1,5 +1,12 @@
 # Editing Single Tickets
 
+
+## Video Walkthrough
+
+Watch the [Honey Rae Repairs - Editing]() video to see how to modify the ticket detail component so that each ticket can be assigned to specific employees.
+
+## Documentation Walkthrough
+
 Since a ticket is automatically assigned to the employee with a primary key of 1, you need a way to reassign the ticket. Surely, the first employee in the database won't be working on all the tickets.
 
 ## Editing a Single Ticket
@@ -10,24 +17,24 @@ Replace all of the code in your ticket detail component with the following code.
 
 ```jsx
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 
 export const Ticket = () => {
-    const [ticket, set] = useState({})  // State variable for current ticket object
+    const [ticket, assignTicket] = useState({})  // State variable for current ticket object
     const [employees, syncEmployees] = useState([])  // State variable for array of employees
     const { ticketId } = useParams()  // Variable storing the route parameter
+    const history = useHistory()
 
-    // Function to fetch a single ticket, with customer and employee embedded
-    const fetchTicket = () => {
-        return fetch(`http://localhost:8088/serviceTickets/${ticketId}?_expand=customer&_expand=employee`)
-            .then(res => res.json())
-            .then(set)
-    }
 
-    // Invoke fetchTicket() when the parameter value changes
+    // Fetch the individual ticket when the parameter value changes
     useEffect(
         () => {
-            fetchTicket()
+            return fetch(`http://localhost:8088/serviceTickets/${ticketId}?_expand=customer&_expand=employee`)
+                .then(response => response.json())
+                .then((data) => {
+                    assignTicket(data)
+                })
+
         },
         [ ticketId ]  // Above function runs when the value of ticketId change
     )
@@ -43,7 +50,7 @@ export const Ticket = () => {
     )
 
     // Function to invoke when an employee is chosen from <select> element
-    const updateTicket = (evt) => {
+    const assignEmployee = (evt) => {
 
         // Construct a new object to replace the existing one in the API
         const updatedTicket = {
@@ -51,7 +58,7 @@ export const Ticket = () => {
             employeeId: parseInt(evt.target.value),
             description: ticket.description,
             emergency: ticket.emergency,
-            dateCompleted: new Date().toLocaleDateString("en-US")
+            dateCompleted: ticket.dateCompleted
         }
 
         // Perform the PUT HTTP request to replace the resource
@@ -63,7 +70,7 @@ export const Ticket = () => {
             body: JSON.stringify(updatedTicket)
         })
             .then(() => {
-                fetchTicket()
+                history.push("/tickets")
             })
     }
 
