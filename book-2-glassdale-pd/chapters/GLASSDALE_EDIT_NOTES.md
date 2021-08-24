@@ -1,285 +1,125 @@
-# Editing Incorrect Notes
+# Editing Notes
 
-TO DO - REFACTOR THIS TO USE HIDDEN INPUTS INSTEAD OF IDS ON BUTTONS
 
 People make mistakes.
 
 Misspelled words. Incorrect sentences. Using the wrong name. Oour capacity for eror is unmached.
 
-So far, we've learned how to POST, GET, and DELETE data in our json-server database. In this chapter, we'll discuss how to edit our data with the PUT method.
-
-Imagine we're making an app to store lego creations. At this point, we can add new lego creations to our database and print them all to the DOM. We can also delete any lego creation we want. We have the following lego creation in our database:
-
-```json
-{
-  "id": "1",
-  "creator": "Emily Lemmon",
-  "shape": "Boat",
-  "creation": "Evil Ghost Pirate Ship"
-}
-```
-
-We represented this data with a DOM component that looks like this:
-
-```html
-<section id="lego-creation-1">
-  <h3>Evil Ghost Pirate Ship</h3>
-  <p>Boat</p>
-  <p>Emily Lemmon</p>
-  <button class="edit-btn" id="edit-1">Edit</button>
-  <button class="delete-btn" id="delete-1">Delete</button>
-</section>
-```
+So far, we've learned how to print, add, and delete our notes. Now we're going to learn how to modify our notes if we make a typo or if our information changes.
 
 In general, we can think of edit functionality as a four step process:
 
-1. The user clicks the edit button beside a single lego creation
-1. A form pops up
-1. The user enters some new information about that lego creation
-1. The user clicks "save" on the edit form, and the new lego information is saved to the database
+1. The user clicks the edit button beside a note
+2. A form pops up pre-populated with that note's information
+3. The user changes some of the information
+4. The user clicks "Save Changes" on the edit form, and the newly modified note information is saved to the database
 
 That means that we're going to be dealing with two distinct click events:
 
-1. _Click Event One_: The user clicks the edit button to show the edit form
-1. _Click Event Two_: The user clicks the save button on the edit form
+1. _Click Event One_: When the user wants to edit a note, they click a button to show the edit form
+2. _Click Event Two_: Once the user is _done_ editing a note, they click a button to save their changes
 
 Let's focus on one click event at a time.
 
-## What happens when a user clicks the edit button?
-
-When a user clicks the edit button, we need to show them an edit form so they can enter new information about their lego creation. We should auto-populate the fields of the edit form with the lego's current information. That way, if they decide not to change any of the fields, the old values will be saved.
-
-Just like with our delete button, we can't add our event listener to the edit button directly because it's generated dynamically with JavaScript. Instead, we add it to the closest hard-coded ancestor in our HTML file.
+## Edit Button
+First, let's add an edit button to our `Note` component. Just like with our delete button, we need to know which note we want to edit so we add the note's unique id to the button.
+```js
+<button id="edit--${noteObject.id}">Edit</button>
+```
+Next, add an event listener on that button.
 
 ```js
-document.querySelector("body").addEventListener("click", (eventObject) => {
-  // Check to see if the user clicked on something with a class of edit-btn
-  if (eventObject.target.classList.contains("edit-btn")) {
-    const legoId = eventObject.target.id.split("-")[1]; // "1"
-
-    // the rest of our logic will go right here
-  }
-});
+const eventHub = document.querySelector(".noteListContainer")
+eventHub.addEventListener("click", (eventObject) => {
+  // Note: the + symbol converts our id from a string to a number
+    const noteId = +eventObject.target.id.split("--")[1]
+    NoteEditForm(+noteId);
+})
 ```
+Right now this code will throw errors because we haven't built a `NoteEditForm` component yet. That's ok! Let's build one next.
 
-Once our event listener is working, we can use `event.target` to get our lego creation's id.
-We'll use that id to find the specific lego creation we want to edit.
+## Edit Form
+When we click the edit button, a form should pop up. But not just an empty form, like we used to add a new note. We want this form to come filled with all of the note's information.
+
+Go ahead and create a new file called `NoteEditForm.js`. Copy and paste the following code into it. We'll walk through what it does together.
 
 ```js
-const legoCreationToEditId = +e.target.id.split("-")[2];
+import {useNotes} from "./NoteDataProvider.js"
 
-// Then we have to get access all the lego creations
-const legos = useLegos();
+// We're going to print the edit form where the "add note" form usually goes. We could move it around on the page by changing our content target.
+const contentTarget = document.querySelector(".noteFormContainer")
 
-// Then we find the specific lego creation that we want to edit
-const legoToEdit = legos.find(
-  (singleLegoCreation) => singleLegoCreation.id === legoCreationToEditId
-);
+export const NoteEditForm = (noteId) => {
+    // Give this component access to our notes state
+    const allNotes = useNotes();
+
+    // Find the note that we clicked on by its unique id
+    const noteWeWantToEdit = allNotes.find(singleNote=> singleNote.id === noteId)
+
+    // We'll use the HTML value attribute to pre-populate our form fields with the note's info
+    contentTarget.innerHTML = `
+        <h2>Edit Note</h2>
+        <input type="date" id="note-date" value="${noteWeWantToEdit.date}" />
+        <input type="text" value="${noteWeWantToEdit.text}" id="note-text" />
+        <input type="text" value="${noteWeWantToEdit.suspect}" id="note-suspect" />
+        <button id="saveNoteChanges-${noteId}">Save Changes</button>
+    `
+}
 ```
+Be sure to import this new component into your `Note` component so that we can render it when we click on any note's "Edit" button.
 
-Once we have all the data for the single item we clicked on, we can pass it into a function that builds an edit form.
+> Test your work by trying to click on an edit button. You should see your "Add Note" form disappear. An edit form shoudl replace it, and you should see the form fields pre-populated with data from the note that you clicked on. If you don't get that result, this would be a good time to troubleshoot and/or ask an instructor.
 
-```js
-const LegoEditForm = (singleLego) =>
-  contentTarget.innerHTML = `<form>
-    <fieldset>
-      <legend>Register Your Lego Creation:</legend>
-      <label for="lego__creator">Creator:</label>
-      <input id="lego__creator--edit" name="lego__creator" type="text" value=${singleLego.creator} autofocus />
-      <label for="lego__creator">Shape:</label>
-      <input id="lego__shape--edit" name="lego__creator" type="text" value=${singleLego.shape} autofocus />
-      <label for="lego__creation">Creation:</label>
-      <input id="lego__creation--edit" name="lego__creator" type="text" value=${singleLego.creation} autofocus />
-    </fieldset>
-  </form>
-  <button class="save-edit-btn" id="save-edit-${singleLego.id}">Save</button>`;
-```
+## Saving Your Changes
+Once we've shown the user their edit form, the user can make all the changes they want. We don't need to do anything until they're done making changes and they click on the "Save Changes" button.
 
-At this point, our event listener might look like this:
-
-```js
-document.querySelector("body").addEventListener("click", (eventObject) => {
-  // If they click on the edit button of any lego, load the edit form
-  if (eventObject.target.id.includes("edit-lego")) {
-    // First we have to get the id of the lego we want to edit
-    const legoToEditId = +eventObject.target.id.split("-")[2];
-
-    // Then we have to get access to all the lego creations
-    const legos = useLegos();
-
-    // Then we find the specific lego creation that we want to edit!
-    const legoToEdit = lego.find(
-      (singleLegoCreation) => singleLegoCreation.id === legoToEditId
-    );
-
-    // And we pass it into the note form so that our form fields are pre-loaded with the right information
-    LegoEditForm(noteToEdit);
-  }
-});
-```
-
-When the user clicks the edit button, voila! An edit form pops up. All the fields are auto-populated with the lego creation's information. We can make any changes we want before we click the save button.
-
-## What happens when a user clicks the save button on an edit form?
-
-We need to do three things:
+Then we need to do three things:
 
 1. Get the values of all the form fields.
-1. Build a new object with those values
-1. PUT the new lego object to our json-server database.
+2. Build a new object with those values
+3. Send the modified information to our json-server database.
 
-Our event listener might look something like this:
+Add the following event listener to your `NoteEditForm` component.
 
 ```js
-document.querySelector("body").addEventListener("click", () => {
-  // Check to see if the user clicked on something with a class of save-edit-btn
-  if (event.target.classList.contains("save-edit-btn")) {
-    const legoId = event.target.id.split("-")[2]; // "1"
-    // build a new object with the data in the edit form
-    const editedLegoData = {
-      id: legoId,
-      creator: document.querySelector("#lego__creator--edit").value,
-      shape: document.querySelector("#lego__shape--edit").value,
-      creation: document.querySelector("#lego__creation--edit").value,
-    };
+eventHub.addEventListener("click", (event) => {
+    if(event.target.id.startsWith("saveNoteChanges")){
 
-    // We'll call our PUT method right here!
-  }
-});
+        // Make a new object representation of a note
+        const editedNote = {
+            id: // how can you get the note's id?
+            text: // get value of text from input
+            suspect: // get value of suspect from input,
+            date: // get value of date from input
+        }
+
+        // Send to json-server
+        updateNote(editedNote).then(NoteList)
+
+    }
+})
 ```
-
-Now we just need to send our newly edited lego data to our json-server database!
-
-Here's what a PUT method looks like:
+This will throw errors for a couple of reasons. First of all, you'll need to fill in the code to pull the values from the appropriate input fields in your edit form. Second of all, you'll need to add an `updateNote` function in your provider. This will use the `PUT` verb to modify an entry in the databaes based on its id.
 
 ```js
-const updateLego = (legoObject) => {
-  return fetch(`http://localhost:8088/tasks/${legoObject.id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(legoObject),
-  });
-};
-```
+export const updateNote = note => {
 
-Here's what our final event listner might look like:
+    return fetch(`http://localhost:8088/notes/${note.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(note)
+    })
 
-```js
-document.querySelector("body").addEventListener("click", () => {
-  // Check to see if the user clicked on something with a class of save-edit-btn
-  if (event.target.classList.contains("save-edit-btn")) {
-    const legoId = event.target.id.split("-")[2]; // "1"
-    // build a new object with the data in the edit form
-    const editedLegoData = {
-      id: legoId,
-      creator: document.querySelector("#lego__creator--edit").value,
-      shape: document.querySelector("#lego__shape--edit").value,
-      creation: document.querySelector("#lego__creation--edit").value,
-    };
-
-    updateLego(editedLegoData).then(() => {
-      // reprint the list of legos
-    });
-  }
-});
-```
-
-Once the PUT request is successfully completed, we need to reprint our list so that the newly edited lego creation shows up.
-
-## Practice: Editing Notes
-
-First, build your edit form component.
-
->**glassdale/notes/NoteEditForm.js**
-```js
-export const NoteEditForm = (noteToEditObject) => {
-  // Todo: add HTML markup here to print your edit form to the DOM
-  // Be sure to load the values from the noteToEditObject into the form fields so that they auto-populate
-  // Textarea elements behave a bit differently than inputs, so if you choose to use a textarea you may need to google or phone a friend for help
-  document.querySelector(".note-form-container").innerHTML = `
-        <h3>Update Your Note</h3>
-        <input placeholder="Your inputs go here"/>
-    `;
-};
-
-```
-**Test your work**: Once you've created your edit form component, try adding it to your render chain in `main.js` just to be sure it shows up correctly. You shouldn't see values in the form fields, because right now your edit button doesn't know which note you want to edit. _But_ you should see a form! You won't want to render your edit form in `main.js` forever, because ultimatley we want it to show up when they click the edit button. Let's do that part next.
-
-1. Add an edit button to each note. Which component should this be in?
-1. In your `NoteEditForm` component, write an event listener that will listen for a click on the edit button.
-1. The event listener should load the edit form.
-
-
->**glassdale/notes/NoteEditForm.js**
-```js
-
-document.querySelector("body").addEventListener("click", (eventObject) => {
-  // If they click on the edit button of any note, load the edit form
-  if (eventObject.target.id.startsWith("edit-note")) {
-    // First we have to get the id of the note we want to edit
-    const noteToEditId = +eventObject.target.id.split("-")[2];
-
-    // Then we have to get access to all the notes
-    const notes = useNotes();
-
-    // ---------- Your code goes here! --------------//
-
-    // Find the note we want to edit out of the notes collection
-
-    // Pass the note we want to edit into the function that builds the edit form
-  }
-});
-```
-
-**Test your work**: At this point, you should:
-1. See an edit button on your notes
-1. When you click on an edit button, you should see an edit form and
-1. You should see the form field pre-populated with data from the note you clicked on
-
-
-When you click the "Save" button in your edit form, nothing happens. Let's do that part next. First, let's add a function in `NoteDataProvider.js` that will update a note.
->**glassdale/notes/NoteDataProvider.js**
-```js
-export const updateNote = (note) => {
-  return fetch(`http://localhost:8088/notes/${note.id}`, {
-      method: "PUT",
-      headers: {
-          "Content-Type": "application/json"
-      },
-      body: JSON.stringify(note)
-  })
 }
 ```
 
-Now add an event listener on your save button. When the user clicks save, we need to figure out what they typed into the inputs and then send those to our json-server to update that note's information.
-
->**glassdale/notes/NoteEditForm.js**
-```js
-document.querySelector(".container").addEventListener("click", (eventObject) => {
-  // If they click on the edit button of any note, load the edit form
-  if (eventObject.target.id.startsWith("edit-note")) {
-    // You wrote your awesome code here!
-  } else if (eventObject.target.id === "update-note") {
-    // Phase two: we've edited and we're ready to save our changes!
-    // First we gather our changes from the input
-    const noteToUpdate = {
-      id: /* value of input*/,
-      dateOfIntervew:/* value of input */,
-      timestamp: Date.now(),
-      author: /* value of input */,
-      note: /* value of input */,
-    };
-
-    // Call the function in NoteDataProvider that updates a note
-    // Reload the list of all the notes
-
-  }
-});
-
-```
-
+## Discussion Questions
+Once you have this code working, go back through your code and try to answer the following questions. Come prepared to discuss your ideas with the group. If these questions feel confusing, find an instructor and talk them through.
+1. How does the edit form know which note it should use to pre-populate its input fields?
+2. How is editing a note similar to adding a note? How is it different?
+3. How is editing a note similar to deleting a note? How is it different?
 
 
 ## Challenge: Reusing One Form Component for Edit and Create
