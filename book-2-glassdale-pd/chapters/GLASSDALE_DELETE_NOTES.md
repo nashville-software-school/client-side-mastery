@@ -6,7 +6,7 @@ As you keep notes during your investigation, you will eventually find that some 
 
 In your note HTML representation, add the following button.
 
-> #### `glassdale/scripts/notes/NoteList.js`
+> #### `glassdale/scripts/notes/Note.js`
 
 ```js
 <button id="deleteNote--${noteObject.id}">Delete</button>
@@ -29,9 +29,9 @@ const deleteNote = noteId => {
 
 ## Handling Delete Button Click
 
-In your note list component, add a new event listener to the event hub that captures any delete button click.
+In your notecomponent, add a new event listener to the event hub that captures any delete button click.
 
-> #### `glassdale/scripts/notes/NoteList.js`
+> #### `glassdale/scripts/notes/Note.js`
 
 ```js
 const eventHub = document.querySelector(".container")
