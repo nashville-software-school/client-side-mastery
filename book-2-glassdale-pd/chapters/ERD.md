@@ -2,7 +2,7 @@
 
 In this chapter, you will be working with the dbdiagram.io site's diagramming tool, so visit that site and register an account. Then open their diagramming tool.
 
-## Videos to Watch Before Class
+## Videos to Watch Before Class!
 
 ### Databases and Normalization
 
