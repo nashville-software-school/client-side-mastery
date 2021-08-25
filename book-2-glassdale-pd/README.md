@@ -14,8 +14,7 @@
 | 9 | [Fundamental Workshop](./chapters/EVENTS_WORKSHOP.md) |  |
 | 10 | [Entity Relationship Diagram](./chapters/ERD.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |
 | 11 | [One to Many Relationships](./chapters/ONE_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |
-| 12 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) <br/> <sub style="font-size:0.85rem;">#user-input #fetch #POST</sub> | [Recording your Mood](./chapters/DAILY_JOURNAL_MOOD.md) <br/> _[Extra Practice: Filtering by Mood](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md)_ | [Employee Computer Report](./chapters/EMPLOYEES.md) </br> [Creating Departments](./chapters/DEPARTMENTS.md) </br> [Growing the Business](./chapters/LOCATIONS.md) |  |
-
+| 12 | [Notes on Criminals](./chapters/GLASSDALE_CRIMINAL_NOTES.md) <br/> <sub style="font-size:0.85rem;">#user-input #fetch #POST</sub> | [Recording your Mood](./chapters/DAILY_JOURNAL_MOOD.md) <br/> _[Extra Practice: Filtering by Mood](./chapters/DAILY_JOURNAL_FILTERING_MOOD.md)_ | [Employee Computer Report](./chapters/EMPLOYEES.md) </br> [Creating Departments](./chapters/DEPARTMENTS.md) </br> [Growing the Business](./chapters/LOCATIONS.md) |  | | |
 | 13 | [Many to Many Relationships](./chapters/MANY_MANY.md) | | |
 | 14 | [Multiple Facilities](./chapters/GLASSDALE_CRIMINAL_FACILITIES.md) </br> _[Extra Practice: Facility List](./chapters/GLASSDALE_FACILITY_LIST.md)_ |  [Tagging Journal Entries](./chapters/DAILY_JOURNAL_TAGS.md) | [Bigger Customers](./chapters/CUSTOMERS.md) </br>[Customer Report](./chapters/CUSTOMER_REPORT.md)|
 | 👨‍👨‍👦‍👦 | **_Group Project: Nutshell_** |  |  |  |
