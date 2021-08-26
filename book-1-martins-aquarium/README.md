@@ -27,9 +27,14 @@
 | 12 | [Debugging With Developer Tools](./chapters/DEBUG_WITH_DEVTOOLS.md)  <br/> <sub style="font-size:0.85rem;">#debugging</sub>|  |
 | 13 | [Filtering Data into Smaller Arrays](./chapters/FILTERING_FISH.md) <br/> <sub style="font-size:0.85rem;">#filtering #functions</sub> | [Display List of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md) |
 | 14 | [Accelerate your Git Workflow](./chapters/GIT_CLI_SHORTCUTS.md) <br/> <sub style="font-size:0.85rem;">#cli shortcuts #alias #terminal</sub> |  |
-| 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](./chapters/AUTO_WORLD.md) |  |
-| 15 | [Updating LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) |  |
+| 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](https://github.com/nss-day-cohort-51/automated-world) |  |
+| 15 | [Update LinkedIn](./chapters/LINKEDIN_HELLO_WORLD_DEUX.md) |  |
 
+| # | 🥗 | 📔 <br/> Daily Journal</br><sub>(_Practice_)</sub>  | 
+|--|--|---|
+| 16 | [Helper Functions](./chapters/HELPER_FUNCTIONS.md) <br/> <sub style="font-size:0.85rem;">#capitalize names #alternate colors</sub> |[Format Date](./chapters/DAILY_JOURNAL_FORMAT_DATE.md)  |
+| 17 | [Click Events](./chapters/CLICK_EVENTS.md) <br/> <sub style="font-size:0.85rem;">#addEventListener #click</sub> |  |
+| 🧱 | Everything Is Awesome |  |
 
 ## Practice: Array Methods with Dotard & Simbleton
 1. [Doris' Company List](./chapters/DS_INTRO.md) `#iteration` `#forEach`
