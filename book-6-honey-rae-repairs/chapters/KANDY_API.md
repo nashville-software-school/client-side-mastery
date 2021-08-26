@@ -1,12 +1,12 @@
 # Kandy Korner
 
-You are going to be building your own React application based off of what you have done with the code in Nashville Kennels.
+You are going to be building your own React application based off of what you have done with the code in Nashville Honey Rae's.
 
 1. Create another React project in `~/workspace/kandykorner` and `cd` into it.
 1. Initialize your app with `npx create-react-app .`
 1. Create a `src/components` directory.
 1. Create your application file and component in `components/KandyKorner.js`.
-1. Update `index.js` to render the **`<KandyKorner />`** component, just like you did in Kennels.
+1. Update `index.js` to render the **`<KandyKorner />`** component, just like you did in Honey Rae's.
 1. Make sure your Kandy Korner API is running
 
 
