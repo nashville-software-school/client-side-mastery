@@ -14,9 +14,9 @@ Your task is to change your code to follow that pattern with React.
             .then(res => res.json())
     }
     ```
-1. Import the `getAllCustomers()` function into Repairs module.
+1. Import the `getAllCustomers()` function into CustomerList module.
     ```js
-    import { getAllCustomers } from "./ApiManager"
+    import { getAllCustomers } from "../ApiManager"
     ```
 1. Update the `useEffect()` like so...
     ```js
