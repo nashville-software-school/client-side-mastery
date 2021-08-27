@@ -42,7 +42,7 @@ For every event, an object is automatically created and is passed as an argument
 
 The `event` object has two properties we can reference: `target` and `currentTarget`. There is also native functionality called 'bubbling'.
 
-We can put all of our "html cards" into a parent container. The parent will do the listening for events.
+We can put all of our "html cards" (elements) into a parent container. The parene will receive the eventListener. The parent will do all the listening. Clicking on items in the parent container will `bubble` the event up to the top - the parent.
 
 [Bubbling Slide Show](https://jamboard.google.com/d/1ACcVZd3--oIUwzzqHoKGWLeU4jAA2EDKh_RuyaRMc6Q/edit?usp=sharing)
 
@@ -61,3 +61,5 @@ We can put all of our "html cards" into a parent container. The parent will do t
 	console.log("what is splitId", splitId);
 	console.log("I want to learn more about id:", splitId[1])
 ```
+
+5. Use the unique `id` to target the initial state and thus reference or change only that item.

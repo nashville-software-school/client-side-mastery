@@ -62,7 +62,7 @@ import { cycleBackgroundColor } from './helpers.js';
 
 const contentElement = document.querySelector('main');
 
-const arrayOfFish = ["Gold Fish", "Tang", "Shark", "Whale", "Trout", "Minnow"];
+const arrayOfFish = ["gold Fish", "tang", "shark", "whale", "trout", "Minnow"];
 
 let htmlString = "";
 arrayOfFish.forEach(item => {
