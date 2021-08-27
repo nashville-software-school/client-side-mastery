@@ -3,7 +3,7 @@
 
 ## Video Walkthrough
 
-Watch the [Honey Rae Repairs - Editing]() video to see how to modify the ticket detail component so that each ticket can be assigned to specific employees.
+Watch the [Honey Rae Repairs - Editing](https://vimeo.com/581901812) video to see how to modify the ticket detail component so that each ticket can be assigned to specific employees.
 
 ## Documentation Walkthrough
 
