@@ -42,6 +42,24 @@ Your wireframe can be created by hand or through software.  Share a link, screen
 - What problem are you solving/why do you want to make this?
 - You will be presenting this to potential employers.  Keep the content professional and not controversial.
 
+## Getting Help
+Don't be afraid to ask for help.  When you are stuck, do these things in this order:
+- Reference your projects for a similar example
+- Do a Google Search - document what you searched/learned
+- Ask a teammate to look at your code
+- Ask an instructor
+
+## Help During Class Time 
+We will create a Slack thread to track the order of who we help.  When you need help and have done all of the above for finding the solution on your own add a message in the thread.
+- Give a breif context of your problem.
+- If your request is instructor specfic, tag the instructor you need in the tread.
+- Either continue to search for a solution or work on part of you capstone that is unrelated until we can get to you. If there are not many people ahead of you, it could be a great time to do a little styling.
+
+We will come find you or Slack you when it is your turn.  
+
+Once you are getting help, please delete your comment in the thread.  This way, the next available instructor will know who to grab.
+
+
 ## Timeline (Important Dates)
 
 **Sept 4, 2021** - By the end of class, your capstone proposal should be finalized.  You should be ready to code.
