@@ -1,8 +1,8 @@
-
+# Book 2
 Chapter | Concepts | Practice
 --- | --- | ---
 [Intro To GiffyGram](chapters/47-GG-Intro.md) |  |
-[GiffyGram ERD](chapters/47-GG-ERD.md) | <sub style="font-size:0.85rem;">#dbdiagram</sub> | #Daily Journal ERD <br/>#Martin's Aquarium ERD
+[GiffyGram ERD](chapters/47-GG-ERD.md) | <sub style="font-size:0.85rem;">#dbdiagram</sub> | <ul><li>[ ] Daily Journal ERD</li><li>[ ] Martin's Aquarium ERD</li></ul>
 [API JSON-SERVER](chapters/47-GG-API-JSON-Server.md) | <sub style="font-size:0.85rem;">#json-server</sub> | #Journal with json-server <br/> #Martin's with json-server
 [API With Postman](chapters/47-GG-API-Postman.md) | <sub style="font-size:0.85rem;">#Postman #get #post</sub> | Post and get journal entries
 [Application Data](chapters/47-GG-Application-Data.md) | <sub style="font-size:0.85rem;">#fetch</sub> | #Fetch journal entries <br />#Fetch A Joke <br /> #Fetch a NASA Photo
