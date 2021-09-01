@@ -71,7 +71,7 @@ Within startGiffyGram function, invoke `showNavBar`
 ```
 
 
-## Practice Footer
+## <h3 id="Giffy-Practice">Practice: Footer</h3>
 
 Create a footer component for your application that contains copyright information. Render it below the `PostList` component.
 

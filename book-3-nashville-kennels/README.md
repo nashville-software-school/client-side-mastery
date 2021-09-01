@@ -1,4 +1,4 @@
-# Book 4 - The Apprentice
+# Book 3 - The Apprentice
 
 In this book, you will be learning the concepts and tools of React. React is a component based UI library for the browser.
 

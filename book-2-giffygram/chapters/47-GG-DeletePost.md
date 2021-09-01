@@ -57,5 +57,5 @@ applicationElement.addEventListener("click", event => {
 })
 ```
 
-## Practice Journal
+## <h3 id="DJ-Practice">Practice Journal</h3>
 Add the ability to delete an entry from your journal.

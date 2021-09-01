@@ -1,41 +1,43 @@
 # Book 2
 
+## Chapters
 
-Chapter | Concepts | Practice
---- | --- | ---
-[Intro To GiffyGram](chapters/47-GG-Intro.md) |  |
-[GiffyGram ERD](chapters/47-GG-ERD.md) | <sub style="font-size:0.85rem;">#dbdiagram</sub> | <ul><li>[ ] Daily Journal ERD</li><li>[ ] Martin's Aquarium ERD</li></ul>
-[API JSON-SERVER](chapters/47-GG-API-JSON-Server.md) | <sub style="font-size:0.85rem;">#json-server</sub> | #Journal with json-server <br/> #Martin's with json-server
-[API With Postman](chapters/47-GG-API-Postman.md) | <sub style="font-size:0.85rem;">#Postman #get #post</sub> | Post and get journal entries
-[Application Data](chapters/47-GG-Application-Data.md) | <sub style="font-size:0.85rem;">#fetch</sub> | #Fetch journal entries <br />#Fetch A Joke <br /> #Fetch a NASA Photo
-[GiffyGram CSS](chapters/47-GG-Styles.md) | <sub style="font-size:0.85rem;">#free css</sub> |
-[Connect HTML and JS](chapters/47-GG-Main.md) | <sub style="font-size:0.85rem;">#import #export</sub> |
-[Lists and Cards](chapters/47-GG-PostList-Post.md) | | Journal entries in a list
-[NavBar](chapters/47-GG-Navbar.md) | | #Footer
-[User Actions: Event Listeners](chapters/47-GG-EventListeners.md) | <sub style="font-size:0.85rem;">#click #change</sub> | Add eventListeners to navBar icons
-[String Methods](chapters/47-GG-StringMethods.md) | <sub style="font-size:0.85rem;">#split #toUpperCase #startsWith</sub> | Add eventListeners post entry items<br/>Add eventListeners to journal entry buttons
-[Filter Data Event](chapters/47-GG-Filter-Event.md) | <sub style="font-size:0.85rem;">#filter() #Date.parse()</sub> |Filter Journal Entries
-[Create New Post](chapters/47-GG-CreatePost.md) | <sub style="font-size:0.85rem;">#fetch POST #event.preventDefault() </sub> | #Use a form to add journal entries
-[Markdown for Readme's](chapters/Project-Readme.md)| |#Create a Readme for your group project<br />#Create a readme for your Journal
-🚌 **Holiday Road** | |
+| # | Chapter | 📔 <br/> Practice/Daily Journal |
+| -- | -- |  --- |
+<h4>1</h4> | [Intro To GiffyGram](chapters/47-GG-Intro.md) |  |
+<h4>2</h4> |[GiffyGram ERD](chapters/47-GG-ERD.md) | <ul><li>[Daily Journal ERD](chapters/47-GG-ERD.md#DJ-ERD)</li><li>[Martin's Aquarium ERD](chapters/47-GG-ERD.md#MA-ERD)</li></ul>
+<h4>3</h4> |[API JSON-SERVER](chapters/47-GG-API-JSON-Server.md) | <ul><li>[Journal with json-server](chapters/47-GG-API-JSON-Server.md#DJ-Practice) <br/> <li>[Martin's with json-server](chapters/47-GG-API-JSON-Server.md#MA-Practice)</li></ul>
+<h4>4</h4> |[API With Postman](chapters/47-GG-API-Postman.md) | <ul><li> [Post and get journal entries](chapters/47-GG-API-Postman.md#DJ-Practice)</li></ul>
+<h4>5</h4> |[Application Data](chapters/47-GG-Application-Data.md) | <ul><li> [Fetch journal entries](chapters/47-GG-Application-Data.md#DJ-Practice)</li> <br /><li>[Fetch A Joke](chapters/47-GG-Application-Data.md#Joke-Practice)</li> <br /> <li>[Fetch a NASA Photo](chapters/47-GG-Application-Data.md#Nasa-Practice)</li></ul>
+<h4>6</h4> |[GiffyGram CSS](chapters/47-GG-Styles.md) | <h2>Free CSS!!!!</h2>
+<h4>7</h4> |[Connect HTML and JS](chapters/47-GG-Main.md) |
+<h4>8</h4> |[Lists and Cards](chapters/47-GG-PostList-Post.md) | <ul><li>[Journal entries in a list](chapters/47-GG-PostList-Post.md#DJ-Practice)</li></ul>
+<h4>9</h4> |[NavBar](chapters/47-GG-Navbar.md)  | <ul><li>[Footer](chapters/47-GG-Navbar.md#Giffy-Practice)</li></ul>
+<h4>10</h4> |[User Actions: Event Listeners](chapters/47-GG-EventListeners.md) | <ul><li>[Add eventListeners to navBar icons](chapters/47-GG-EventListeners.md#Giffy-Practice)</li></ul>
+<h4>11</h4> |[String Methods](chapters/47-GG-StringMethods.md) | <ul><li>[Add eventListeners post entry items](chapters/47-GG-StringMethods.md#Giffy-Practice)</li><br/><li>[Add eventListeners to journal entry buttons](chapters/47-GG-StringMethods.md#DJ-Practice)</li></ul>
+<h4>12</h4> |[Filter Data Event](chapters/47-GG-Filter-Event.md) | <ul><li>[Filter Journal Entries](chapters/47-GG-Filter-Event.md#DJ-Practice)</li></ul>
+<h4>13</h4> |[Create New Post](chapters/47-GG-CreatePost.md) | <ul><li>[Use a form to add journal entries](chapters/47-GG-CreatePost.md#DJ-Practrice)</li></ul>
+<h4>14</h4> |[Markdown for Readme's](chapters/Project-Readme.md) |<ul><li>Create a Readme for your group project</li><br /><li>Create a Readme for your Journal</li>
+<h4>*</h4> |🚌 **Holiday Road**  |
 
-## Practice
-* [Entity Relationship Diagram](./chapters/ERD.md)
-* [Employee Computer Report](./chapters/EMPLOYEES.md)
-* [Creating Departments](./chapters/DEPARTMENTS.md)
-* [Growing the Business](./chapters/LOCATIONS.md)
-* [Many to Many Relationships](./chapters/MANY_MANY.md)
-* [Bigger Customers](./chapters/CUSTOMERS.md)
-* [Customer Report](./chapters/CUSTOMER_REPORT.md)
+## ERD and JSON Practice: Business Analysis
+1. [Entity Relationship Diagram](./chapters/ERD.md) `#ERD`
+1. [Employee Computer Report](./chapters/EMPLOYEES.md) `#json`
+1. [Creating Departments](./chapters/DEPARTMENTS.md) `#foreign key`
+1. [Growing the Business](./chapters/LOCATIONS.md)
+1. [Many to Many Relationships](./chapters/MANY_MANY.md) `#Many-to-many`
+1. [Bigger Customers](./chapters/CUSTOMERS.md)
+1. [Customer Report](./chapters/CUSTOMER_REPORT.md)
 
 ##
-Chapter | Concepts | Practice
+
+| # | Chapter | 📔 <br/> Practice/Daily Journal
 --- | --- | ---
-Update LinkedIn | |
-[Delete A Post](chapters/47-GG-DeletePost.md) | <sub style="font-size:0.85rem;">#fetch DELETE</sub> | Update Journal with delete functionality
-[Edit A Post](chapters/47-GG-EditPost.md) | <sub style="font-size:0.85rem;">#fetch PUT #input hidden</sub> | Update Journal with edit functionality
-[Users with Login and Register](chapters/47-GG-Login-Register.md) | <sub style="font-size:0.85rem;">#sessionStorage #json-server filters</sub> | #add author name<br/>#author can edit<br/>#json-server filter<br/>#Update Journal with login and register
-[Like A Post](chapters/47-ERD.md) | <sub style="font-size:0.85rem;">#many to many relationships #join table |
+<h4>*</h4> |Update LinkedIn | |
+<h4>15</h4> |[Delete A Post](chapters/47-GG-DeletePost.md) | <ul><li> [Update Journal with delete functionality](chapters/47-GG-DeletePost.md#DJ-Practice)</li></ul>
+<h4>16</h4> |[Edit A Post](chapters/47-GG-EditPost.md) |  <ul><li> [Update Journal with edit functionality](chapters/47-GG-EditPost.md#DJ-Practice)</li></ul>
+<h4>17</h4> |[Users with Login and Register](chapters/47-GG-Login-Register.md) |  <ul><li> [Add author name](chapters/47-GG-Login-Register.md#Author-Practice)</li><br/><li>[Author can edit](chapters/47-GG-Login-Register.md#Edit-Practice)</li><br/><li>[Json-server filter](chapters/47-GG-Login-Register.md#JSON-Practice)</li><br/><li>[Update Journal with login and register](chapters/47-GG-Login-Register.md#DJ-Practice)</li></ul>
+<h4>18</h4> |[Like A Post](chapters/47-ERD.md) | 
 
 
 ## Supplementary Chapters

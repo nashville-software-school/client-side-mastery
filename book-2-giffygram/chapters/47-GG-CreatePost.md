@@ -98,7 +98,7 @@ Using the form, create a new post. Check the database and confirm an item was ad
 
 Work with your classmates to come up with a solution to show the updated list. Share your ideas with the instruction team.
 
-## Practice Add Journal Entries with a form
+## <h3 id="DJ-Practice">Practice Add Journal Entries with a form</h3>
 Using the form you created for your journal, create the functions needed to add new entries to the database.
 
 **Bonus** Consider the display order of the entries. What array method could you use to sort the entry display.

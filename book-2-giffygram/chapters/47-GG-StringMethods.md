@@ -44,10 +44,10 @@ applicationElement.addEventListener("click", (event) => {
 ```
 
 
-## Practice String Methods
+## <h3 id="Giffy-Practice">Practice String Methods</h3>
 [W3 Schools String Methods Tutorial](https://www.w3schools.com/js/js_string_methods.asp)
 
 At the bottom of the page is an opportunity to test yourself with exercises. Give a shot.
 
-## Practice: Journal Targeted EventListeners
+## <h3 id="DJ-Practice">Practice: Journal Targeted EventListeners</h3>
 Give each entry in your journal a unique identifier. Add a click eventListener that produces a message notifying you which entry item was selected. 

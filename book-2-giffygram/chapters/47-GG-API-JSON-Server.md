@@ -43,8 +43,8 @@ Remember, json-server is a tool that allows you to access your data via an HTTP 
 It is a good idea to close the server when you stop work on a project (or for the day). Keyboard control: `control c`
 
 
-## Practice: Journal
+## <h3 id="DJ-Practice">Practice: Journal</h3>
 After you have created the ERD for your journal, go ahead and set up json-server. Try adding a journal entry object to the entry resource.
 
-## Practice: Martins Aquarium
+## <h3 id="MA-Practice">Practice: Martins Aquarium</h3>
 Once you have created an ERD for Martin's Aquarium, set up json-server. You should have a minimum of 3 resources: fishes, tips, and locations. Include the properties needed for each. Share your ERD and API with a member of the instruction team.

@@ -88,5 +88,5 @@ In the next couple chapters, you will see more comprehensive code for displaying
 
 Open `src/scripts/feed/Post.js` and add more HTML structure, and interpolate the `description`, `timestamp`, and/or the `userId` property in it.
 
-## Practice Journal
+## <h3 id="DJ-Practice">Practice Journal</h3>
 Try putting these steps together to display your journal entries in a list. You may need to refactor your code to follow the pattern.

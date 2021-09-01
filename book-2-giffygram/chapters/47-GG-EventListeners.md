@@ -124,7 +124,7 @@ applicationElement.addEventListener("change", event => {
 })
 ```
 
-## Practice: Click events on the direct message and home icons
+## <h3 id="Giffy-Practice">Practice: Click events on the direct message and home icons</h3>
 
 1. Display an alert message of your choosing when the direct message icon _(i.e. the fountain pen in the navbar)_ is clicked. Remember that you are using event bubbling and that the event should be captured on the `<main>` element. That means you need to check what the `id` property of the event target is.
 1. The peanut butter jar icon in the nav bar is how the user will, eventually, be able to go back to the default state of the application. Think of it as "going home". When that icon is clicked, display an alert message of your choosing. Currently there is not an `id` attribute on that image, so you will need to add one.

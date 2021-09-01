@@ -69,7 +69,7 @@ There are many array methods designed to assist with manipulation of data. Some 
 
 Watch the [JS Destructuring in 100 Seconds](https://www.youtube.com/watch?v=UgEaJBz3bjY) and [Array Destructuring in Javascript](https://www.youtube.com/watch?v=fsybVOVcNg0) for destructering values.
 
-## Practice Filter Journal Entries
+## <h3 id="DJ-Practice">Practice Filter Journal Entries </h3>
 You journal has a couple of options for filtering the entries. You could filter by date or by mood. Create an option for the user to select how to filter and implement code to display the filtered list.
 
 ##

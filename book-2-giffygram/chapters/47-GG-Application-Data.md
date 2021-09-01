@@ -91,16 +91,16 @@ export const getLoggedInUser = () => {
 }
 ```
 
-## Practice: Journal Get Entries
+## <h3 id="DJ-Practice"> Practice: Journal Get Entries</h3>
 * Set up your journal to include a `DataManager.js` module.
 
-## Practice: Get a Joke
+## <h3 id="Joke-Practice">Practice: Get a Joke</h3>
 * Fetch a random dad joke https://icanhazdadjoke.com/
 * Display the response on an HTML page.
 * Stretch Goal: Display the question with a button to display the answer.
 * Stretch Goal: Create a button to get a new joke.
 
-## Practice: Picture of the Day
+## <h3 id="Nasa-Practice">Practice: Picture of the Day</h3>
 One of the most popular websites at NASA is the Astronomy Picture of the Day. Your task is to create a page that shares the image along with relevant information to the world. 
 
  🚀 For this practice, you can use the demo API key from NASA however it does have limits on number of requests. You may also sign up for your own API key.
