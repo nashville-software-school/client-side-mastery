@@ -1,4 +1,6 @@
 # Book 2
+
+
 Chapter | Concepts | Practice
 --- | --- | ---
 [Intro To GiffyGram](chapters/47-GG-Intro.md) |  |
@@ -16,6 +18,20 @@ Chapter | Concepts | Practice
 [Create New Post](chapters/47-GG-CreatePost.md) | <sub style="font-size:0.85rem;">#fetch POST #event.preventDefault() </sub> | #Use a form to add journal entries
 [Markdown for Readme's](chapters/Project-Readme.md)| |#Create a Readme for your group project<br />#Create a readme for your Journal
 🚌 **Holiday Road** | |
+
+## Practice
+* [Entity Relationship Diagram](./chapters/ERD.md)
+* [Employee Computer Report](./chapters/EMPLOYEES.md)
+* [Creating Departments](./chapters/DEPARTMENTS.md)
+* [Growing the Business](./chapters/LOCATIONS.md)
+* [Many to Many Relationships](./chapters/MANY_MANY.md)
+* [Bigger Customers](./chapters/CUSTOMERS.md)
+* [Customer Report](./chapters/CUSTOMER_REPORT.md)
+
+##
+Chapter | Concepts | Practice
+--- | --- | ---
+Update LinkedIn | |
 [Delete A Post](chapters/47-GG-DeletePost.md) | <sub style="font-size:0.85rem;">#fetch DELETE</sub> | Update Journal with delete functionality
 [Edit A Post](chapters/47-GG-EditPost.md) | <sub style="font-size:0.85rem;">#fetch PUT #input hidden</sub> | Update Journal with edit functionality
 [Users with Login and Register](chapters/47-GG-Login-Register.md) | <sub style="font-size:0.85rem;">#sessionStorage #json-server filters</sub> | #add author name<br/>#author can edit<br/>#json-server filter<br/>#Update Journal with login and register
