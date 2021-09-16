@@ -10,7 +10,7 @@
 | 👨‍👨‍👦‍👦 | **_Group Project: Holiday Road_** |  |  |  |
 | 6 | [Case Notes API - Making Entries](./chapters/GLASSDALE_NOTES_API.md) <br/> <sub style="font-size:0.85rem;">#fetch #POST events #user-input</sub> | [Entry API](./chapters/DAILY_JOURNAL_FETCHING.md) </br>  [Journal Form Component](./chapters/DAILY_JOURNAL_FORM_COMPONENT.md) </br> [Saving Entries](./chapters/DAILY_JOURNAL_SAVING_ENTRIES.md) |
 | 7 | [Deleting Case Note Files](./chapters/GLASSDALE_DELETE_NOTES.md) <br/> <sub style="font-size:0.85rem;">#fetch #DELETE #events</sub> | [Deleting Entries](./chapters/DAILY_JOURNAL_DELETING_ENTRIES.md) |   |
-| 8 | [Editing Case Note Files](./chapters/GLASSDALE_EDIT_NOTES.md) <br/> <sub style="font-size:0.85rem;">#fetch #PUT #events</sub> |  |   |
+| 8 | [Editing Case Note Files](./chapters/GLASSDALE_EDIT_NOTES.md) <br/> <sub style="font-size:0.85rem;">#fetch #PUT #events</sub> | [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md) |   |
 | 9 | [Fundamental Workshop](./chapters/EVENTS_WORKSHOP.md) |  |
 | 10 | [Entity Relationship Diagram](./chapters/ERD.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |
 | 11 | [One to Many Relationships](./chapters/ONE_MANY.md) <br/> <sub style="font-size:0.85rem;">#data-relationships</sub> |  |  |
@@ -32,8 +32,6 @@ Glassdale PD
 * [Conditional Rendering - Known Associates](./chapters/GLASSDALE_ALIBI.md)
 * [Editing Case Note Files](./chapters/GLASSDALE_EDIT_NOTES.md)
 
-Daily Journal
-* [Editing Daily Journal Entries](./chapters/DAILY_JOURNAL_EDITING_ENTRIES.md)
 
 Extra Practice
 * [Embedding Related Data with json-server](./chapters/JS_JSON_SERVER_RELATIONSHIPS.md)
