@@ -18,7 +18,7 @@ Here's what the output of the application should look like.
 Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-50/book-3-deshawns-dog-walking/chapters/scripts/deshawn-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-3-deshawns-dog-walking/chapters/scripts/deshawn-setup.sh)"
 ```
 
 That script will create the `workspace/dog-walking` directory for you. Just `cd` to that directory and open it in Viual Studio Code.
