@@ -25,11 +25,11 @@ Becoming comfortable with your terminal will make you a master of the computer.
 
 ## Practice: Aquarium Directory &amp; Files
 
-Before you start writing code for any application, you want to set up the directory structure, and create some initial files, on the file system first. During this first book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
+Before you start writing code for any application, you want to set up the directory structure and create some initial files on the file system first. During this first book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
 
 You can watch the [Martin's Aquarium Directories and Files](https://www.youtube.com/watch?v=ogHzpf4Kelk) video that will also show you the basic terminal commands to use for this.
 
-Since all of the work you will be doing at NSS will be contained in the `~/workspace` directory, you need to create an `martins-aquarium` subdirectory.
+Since all of the work you will be doing at NSS will be contained in the `~/workspace` directory, you need to create a `martins-aquarium` subdirectory.
 
 ```sh
 {home directory}
@@ -55,7 +55,7 @@ Then `cd ..` to go up one directory level. Create another subdirectory named `sc
 >
 > If your instruction team has moved on to a new chapter or topics, it is far more important to work on the current practice exercises for that new topic than spending more time on a previous challenge.
 
-During your career, you will be using powerful and extensible code editors like Visual Studio, IntelliJ, Webstorm, Eclipse, and many others to create your code. However, there are times that you want to put just a a couple lines of code, or a comment, in a file and you don't want to fire up your powerful editor just to do that.
+During your career, you will be using powerful and extensible code editors like Visual Studio, IntelliJ, Webstorm, Eclipse, and many others to create your code. However, there are times that you want to put just a couple lines of code or a comment in a file and you don't want to fire up your powerful editor just to do that.
 
 Read the well-written answer to a [question on the Stack Exchange website](https://unix.stackexchange.com/questions/77277/how-to-append-multiple-lines-to-a-file) and see if you can figure out how to get the following CSS code into the `main.css` file without using Visual Studio Code, but the `echo` command instead.
 
