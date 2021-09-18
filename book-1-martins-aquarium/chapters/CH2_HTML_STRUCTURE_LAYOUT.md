@@ -1,4 +1,4 @@
-# HTML Structure & Layout
+# Chapter 2: HTML Structure & Layout
 
 ## Why Are You Learning This?
 
