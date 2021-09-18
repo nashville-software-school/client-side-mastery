@@ -1,4 +1,4 @@
-# HTML Components
+# HTML Structure & Layout
 
 ## Why Are You Learning This?
 
