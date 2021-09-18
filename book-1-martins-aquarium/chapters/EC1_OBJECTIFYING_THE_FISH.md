@@ -1,4 +1,4 @@
-# Explorer Chapter 2: Provide Access to Fish
+# Explorer Chapter 1: Objectifying the Fish
 
 > You wake up on a lazy Sunday morning, rub your eyes, and reach for your phone to read the morning news and check the weather forecast. After you enter in your passcode, a list of notifications is waiting for you - including one from Martin.
 >
