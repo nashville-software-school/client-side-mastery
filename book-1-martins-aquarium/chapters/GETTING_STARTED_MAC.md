@@ -1,4 +1,4 @@
-# Getting Started
+# Installations For Mac - Getting Started
 
 ## Journal
 
