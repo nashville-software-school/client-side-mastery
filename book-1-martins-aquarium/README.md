@@ -9,7 +9,7 @@
 | 💻 | [C# Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_C_SHARP.md) |
 | 1 | [Terminal Basics](./chapters/CH1_TERMINAL_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
 | 2 | [HTML Components Structure &amp; Layout with Sally's Interests](./chapters/CH2_HTML_COMPONENTS_STRUCTURE_LAYOUT.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |
-| 3 | [Fish in my Aquarium](./chapters/CH3_FISH_IN_MY_AQUARIUM.md) <br/> <sub style="font-size:0.85rem;">#html</sub> |
+| 3 | [Fish in my Aquarium](./chapters/CH3_FISH_IN_MY_AQUARIUM.md) <br/> <sub style="font-size:0.85rem;">#html #design</sub> |
 | 4 | [Git & GitHub Basics: Track Aquarium Changes](./chapters/CH4_GIT_GITHUB_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
 | 5 | [Github Workflow for Team Aquarium](./chapters/CH5_GITHUB_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
 | 👨‍👨‍👦‍👦 | **Group Project** |
