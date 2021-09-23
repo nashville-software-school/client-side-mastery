@@ -1,4 +1,4 @@
-# Python Cohorts: Installation For Windows
+# Installation For Windows
 
 ## Journal
 
