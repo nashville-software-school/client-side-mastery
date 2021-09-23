@@ -4,8 +4,8 @@
 
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
-| 🍎 | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) |
-| 💻 | [Python Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_PYTHON.md) |
+| 🍎 | [Installations for Mac](./chapters/INSTALLATIONS_MAC.md) |
+| 💻 | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_PYTHON.md) |
 | 1 | [Terminal Basics](./chapters/CH1_TERMINAL_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
 | 2 | [HTML Components Structure &amp; Layout with Sally's Interests](./chapters/CH2_HTML_COMPONENTS_STRUCTURE_LAYOUT.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |
 | 3 | [Fish in my Aquarium](./chapters/CH3_FISH_IN_MY_AQUARIUM.md) <br/> <sub style="font-size:0.85rem;">#html #design</sub> |
