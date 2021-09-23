@@ -16,13 +16,16 @@ Becoming comfortable with your terminal will make you a master of the computer.
 1. `rm` - remove a single file
 1. `rm -rf` - remove a directory and all of its contents
 
+Feel free to print out a [cheat sheet](https://drive.google.com/file/d/1j5ZtphlOuRe5kihL3fc3fy27mfnXVPV4/view?usp=sharing) or keep on on your desktop for quick reference. 
+
 ## Videos to Watch
 
 1. [Bash Basics Part 1 of 8 | Access and Navigation](https://youtu.be/eH8Z9zeywq0?t=885)
-1. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
-1. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
-1. Go through the CodeAcademy [command line course](https://www.codecademy.com/learn/learn-the-command-line).
-1. [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
+    Quick intro to Bash (15 minutes)
+3. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
+    Take a deeper look at your terminal (1 hour 15 minutes)
+5. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
+    Fun tips & tricks for your terminal (7 minutes)
 
 ## Practice: Aquarium Directory &amp; Files
 
