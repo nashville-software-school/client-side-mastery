@@ -29,7 +29,7 @@ const deleteNote = noteId => {
 
 ## Handling Delete Button Click
 
-In your notecomponent, add a new event listener to the event hub that captures any delete button click.
+In your notecomponent, add a new event listener to the event hub that captures any delete button click. Check the 
 
 > #### `glassdale/scripts/notes/Note.js`
 
@@ -37,8 +37,8 @@ In your notecomponent, add a new event listener to the event hub that captures a
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("click", (eventObject) => {
-  if (e.target.id.startsWith("delete-note")) {
-    const idToDelete = eventObject.target.id.split("-")[2]
+  if (eventObject.target.id.startsWith("delete-note")) {
+    const idToDelete = eventObject.target.id.split("--")[1]
     // ---------- Write your code here -------------//
     // Call the deleteNote function and pass in the appropriate id
     // Then call NoteList to refresh the list of notes
@@ -46,3 +46,9 @@ eventHub.addEventListener("click", (eventObject) => {
 });
 
 ```
+
+## Discussion Questions
+
+Once you have delete working, go back through and try to answer these questions. Come prepared to discuss your ideas with the group. It's ok if you don't know the answers to these questions-- that's a good indication that you should find an instructor and chat with them about this chapter. 
+1. What is different between POST and DELETE fetch calls?
+2. How are the save and delete buttons utilized differently? Why?
