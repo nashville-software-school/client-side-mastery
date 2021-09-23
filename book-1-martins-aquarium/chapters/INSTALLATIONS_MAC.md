@@ -4,6 +4,8 @@
 
 Get a nice journal and a comfortable pen, and start keeping a daily journal of what you are learning every day. Writing your thoughts on a regular basis [increases your ability to remember it](https://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html). There are even studies that found writing is [beneficial for your health](https://www.apa.org/monitor/sep01/keepdiary.aspx).
 
+If you are not someone who doesn't do very well when writing with a pen and paper there are also note taking apps out there that would work nicely and are free for basic use. A nice one for mac users is [Bear Notes](https://bear.app/). There is also [Notion](https://www.notion.so/) and [Evernote](https://evernote.com/)
+
 ## Hardware
 
 Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive _**RIGHT NOW**_ and start backing up your entire hard drive.
@@ -29,19 +31,13 @@ GitHub is the primary site that software developers throughout the world use to 
 
 ## dbdiagram.io
 
-Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
+Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site. You will be using it in later chapters.
 
 ## devdocs.io
 
 Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NSS.
 
 # Installations
-
-## Rectangle
-
-This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
-
-[Download and install Rectangle](https://www.rectangleapp.com/) and after it is installed, open the application to try it out.
 
 <a id="homebrew"></a>
 
@@ -74,7 +70,9 @@ brew install --cask visual-studio-code
 
 ### Launch Visual Studio Code From Command Line
 
-[Follow these steps](https://code.visualstudio.com/docs/setup/mac) to set up Visual Studio Code to be launched from the command line.
+MAC: [Follow these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to set up Visual Studio Code to be launched from the command line.
+
+WINDOWS: Use the same as above even though it says it's for Mac.
 
 ### Troubleshooting: For Instructors
 #### _Don't try this yourself!_
