@@ -4,7 +4,7 @@
 
 Get a nice journal and a comfortable pen, and start keeping a daily journal of what you are learning every day. Writing your thoughts on a regular basis [increases your ability to remember it](https://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html). There are even studies that found writing is [beneficial for your health](https://www.apa.org/monitor/sep01/keepdiary.aspx).
 
-If you are not someone who doesn't do very well when writing with a pen and paper there are also note taking apps out there that would work nicely and are free for basic use. A nice one for mac users is [Bear Notes](https://bear.app/). There is also [Notion](https://www.notion.so/) and [Evernote](https://evernote.com/)
+If you are someone who doesn't do very well when writing with a pen and paper there are also note taking apps out there that would work nicely and are free for basic use. A nice one for mac users is [Bear Notes](https://bear.app/). There is also [Notion](https://www.notion.so/) and [Evernote](https://evernote.com/)
 
 ## Hardware
 
