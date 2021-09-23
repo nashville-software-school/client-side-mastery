@@ -72,8 +72,6 @@ brew install --cask visual-studio-code
 
 MAC: [Follow these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to set up Visual Studio Code to be launched from the command line.
 
-WINDOWS: Use the same as above even though it says it's for Mac.
-
 ### Troubleshooting: For Instructors
 #### _Don't try this yourself!_
 
