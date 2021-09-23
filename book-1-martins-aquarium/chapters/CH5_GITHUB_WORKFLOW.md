@@ -1,4 +1,4 @@
-# Chapter 5: The Github Workflow
+# Chapter 5: Github Workflow
 
 Your instruction team will show you the Github workflow interactively on their own aquarium repository. They will demonstrate how to work on an independent branch of code, push the code to Github for a teammate to review, and then get the code merged into the main branch - almost always called the `main` branch.
 
