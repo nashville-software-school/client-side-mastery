@@ -16,13 +16,6 @@ Becoming comfortable with your terminal will make you a master of the computer.
 1. `rm` - remove a single file
 1. `rm -rf` - remove a directory and all of its contents
 
-## Videos to Watch
-
-1. [Bash Basics Part 1 of 8 | Access and Navigation](https://youtu.be/eH8Z9zeywq0?t=885)
-1. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
-1. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
-1. [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
-
 ## Practice: Aquarium Directory &amp; Files
 
 Before you start writing code for any application, you want to set up the directory structure and create some initial files on the file system first. During this first book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
@@ -84,3 +77,10 @@ Helpful searches to get you started:
 1. https://duckduckgo.com/?q=bash+display+calendar&ia=web
 1. https://duckduckgo.com/?q=bash+script+for+beginners&ia=web
 1. https://github.com/robbyrussell/oh-my-zsh
+
+## Videos to watch if you want to learn more
+
+1. [Bash Basics Part 1 of 8 | Access and Navigation](https://youtu.be/eH8Z9zeywq0?t=885)
+1. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
+1. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
+1. [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
