@@ -111,7 +111,7 @@ Watch the [WSL Ubuntu Starting Directory](https://youtu.be/1hk6bWD8_5I) video to
 You will install Node.js using the Windows Terminal. Open Windows Terminal, and in a **new Ubuntu Tab**, copy and paste the following lines:
 
 ```sh
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
