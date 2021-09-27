@@ -24,6 +24,8 @@ You can watch the [Martin's Aquarium Directories and Files](https://www.youtube.
 
 Since all of the work you will be doing at NSS will be contained in the `~/workspace` directory, you need to create a `martins-aquarium` subdirectory.
 
+> If you don't have a workspace directory yet, go to your terminal, type `cd` and press enter to get to your home directory. Then `mkdir workspace`. Then you can `cd workspace`.
+
 ```sh
 {home directory}
     +-- workspace
