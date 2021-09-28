@@ -82,4 +82,4 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Time to Build
 
-Your instruction team will lead the class through the construction of the this site. You may follow along, or you can just close your computer and watch what gets built and offer your suggestions.
+You and you teammates will construct of the site for Martin.
