@@ -82,4 +82,4 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Time to Build
 
-You and you teammates will construct of the site for Martin.
+You and you teammates will construct the site for Martin.
