@@ -1,4 +1,5 @@
-# Chapter 1: Terminal Basics
+# Chapter 1: Terminal Basics 
+#terminal
 
 Becoming comfortable with your terminal will make you a master of the computer.
 
