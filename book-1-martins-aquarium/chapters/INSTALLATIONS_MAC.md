@@ -39,6 +39,12 @@ Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation f
 
 # Installations
 
+## Rectangle (optional)
+
+This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
+
+[Download and install Rectangle](https://www.rectangleapp.com/) and after it is installed, open the application to try it out.
+
 <a id="homebrew"></a>
 
 ## Homebrew
@@ -70,7 +76,7 @@ brew install --cask visual-studio-code
 
 ### Launch Visual Studio Code From Command Line
 
-MAC: [Follow these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to set up Visual Studio Code to be launched from the command line.
+[Follow these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to set up Visual Studio Code to be launched from the command line.
 
 ### Troubleshooting: For Instructors
 #### _Don't try this yourself!_
