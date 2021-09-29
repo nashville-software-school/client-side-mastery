@@ -2,8 +2,16 @@
 
 > **NOTE:** Advanced challenges are only to be attempted once the practice exercises are complete and you feel you both (a) a solid grasp on the basic knowledge of the current topic, and (b) you have adequate time to devote to them. They are intended to be difficult to solve and you must spend time researching it before any instructor will offer guidance.
 
-Here is a fun deep dive video: [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
+Here is a fun deep dive video about scripting: [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
 
+Before you attempt this please make a copy of your `zsh` _(.zshrc)_ or `bash` _(.bashrc)_ file by running this command in your terminal for a zsh file:
+```
+cp .zshrc ~/Desktop 
+```
+And this for a bash file
+```
+cp .bashrc ~/Desktop 
+```
 The terminal can do everything that all of your other applications you have, or ever will have, can do. There's just not a visual interface for doing it. It's all just text.
 
 In this advanced challenge, you should research bash variables, bash aliases, and find out how to customize your `zsh` _(.zshrc)_ or `bash` _(.bashrc)_ intialization script to have a welcome message show up every time your launch a terminal session.
