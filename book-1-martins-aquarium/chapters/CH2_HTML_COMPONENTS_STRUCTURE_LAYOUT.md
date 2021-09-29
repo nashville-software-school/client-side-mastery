@@ -1,4 +1,5 @@
 # Chapter 2: HTML Components Structure & Layout
+#bem #html #flexbox
 
 ## Why Are You Learning This?
 
