@@ -16,7 +16,7 @@ Becoming comfortable with your terminal will make you a master of the computer.
 1. `rm` - remove a single file
 1. `rm -rf` - remove a directory and all of its contents
 
-Feel free to print out a [cheat sheet](https://drive.google.com/file/d/1j5ZtphlOuRe5kihL3fc3fy27mfnXVPV4/view?usp=sharing) or keep on on your desktop for quick reference. 
+Feel free to print out a [cheatsheet](./images/CLI-cheat-sheet.pdf) or keep on on your desktop for quick reference. 
 
 ## Videos to Watch
 
