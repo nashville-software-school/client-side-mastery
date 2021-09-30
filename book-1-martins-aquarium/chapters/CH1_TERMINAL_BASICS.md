@@ -1,4 +1,4 @@
-# Command Line Interface - The Terminal
+# Chapter 1: Terminal Basics
 
 Becoming comfortable with your terminal will make you a master of the computer.
 

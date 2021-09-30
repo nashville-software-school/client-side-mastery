@@ -1,4 +1,4 @@
-# Git and Github Basics
+# Chapter 4: Git and Github Basics
 
 ## Why Are You Learning This?
 

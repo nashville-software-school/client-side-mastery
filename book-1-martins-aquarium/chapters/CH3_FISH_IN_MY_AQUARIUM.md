@@ -1,4 +1,4 @@
-# Project: Fish in my Aquarium
+# Chapter 3: Fish in my Aquarium
 
 Let's build a couple HTML pages whose user will be an avid rare fish collector who maintains a sophisticated tank in his home. His name is Martin. Martin meets you at a local coffee shop and explains what he needs to have on his web site.
 
