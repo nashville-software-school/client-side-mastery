@@ -29,3 +29,4 @@
 | 1 | [Organizing Your Code](./chapters/PC1_ORGANIZING_YOUR_CODE.md) |
 | 2 | [Automate Tips](./chapters/PC2_AUTOMATE_TIPS.md) |
 | 3 | [Automate Martin's Locations](./chapters/PC3_AUTOMATE_MARTINS_LOCATIONS.md) |
+| 4 | [Advanced Shell Scripting](./chapters/PC4_ADVANCED_SHELL_SCRIPTING.md) |
