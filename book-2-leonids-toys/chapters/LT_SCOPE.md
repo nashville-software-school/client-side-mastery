@@ -8,7 +8,7 @@ Leonid sells one of the accessories that Perry uses during his spy operations. I
 
 The Perry Scope.
 
-Add the following code to your JavaScript module. It's only task is to sell the highly popular Perry Scope. Unfortunately, the original developer made a mistake in the scope of her variables. See if you can fix it.
+Add the following code to your JavaScript module. It's only task is to sell the highly popular Perry Scope. Unfortunately, the original developer made a mistake in naming a variable, and another mistake with the scope of her variables. See if you can fix it.
 
 ```js
 const currentInventory = [
