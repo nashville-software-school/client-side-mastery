@@ -1,4 +1,4 @@
-# Remove Item Function
+# Discontinued Toys
 
 ## Learning Ojectives
 
