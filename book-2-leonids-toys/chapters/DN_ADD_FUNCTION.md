@@ -1,4 +1,4 @@
-# Writing New Note with no Id
+# Add Note Function
 
 Write a function named `createNote` that will add a new note to the `notes` array. The function should add an `id` property to the note object that you provide as an argument when the function is invoked.
 

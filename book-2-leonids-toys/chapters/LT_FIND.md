@@ -1,4 +1,6 @@
-# Finding an Item in an Array
+# Helping Customers Find the Right Toy
+
+#data #iteration #if-else
 
 > Now that you have a basic catalog that Leonid can see in the terminal, he has a request. He wants to be able to find a single product by providing the unique `id` property. Your code should then display the details of the phone which has the specified `id` value.
 

@@ -1,4 +1,4 @@
-# Displaying Your Note Journal
+# Looking Back At Your Journey
 
 Your job is to display a list of your learning notes in the terminal. Remember to use string interpolation, dot notation to access object properties, and your `for..of` loop.
 

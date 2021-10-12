@@ -1,4 +1,6 @@
-# Display Toy Properties
+# Displaying Toy Properties
+
+#data #iteration #arrays
 
 ## Learning Objectives
 
