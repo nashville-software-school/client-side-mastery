@@ -1,4 +1,4 @@
-# Now That I Think About It...
+# Add Ingredient
 
 After you wrote the initial, high-priority list of items you need to buy at the supermarket, you realize that there are lower-priority ones, and then there downright "wants".
 
