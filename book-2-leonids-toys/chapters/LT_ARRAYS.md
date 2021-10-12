@@ -1,5 +1,7 @@
 # Toy Collection
 
+#data #arrays
+
 In this chapter, you will build an array filled with objects. Each item in the array will be one of your toys.
 
 ## Learning Objectives
