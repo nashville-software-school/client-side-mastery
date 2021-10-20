@@ -1,4 +1,4 @@
-# Representing Toy Objects
+# Chapter 3: Representing Toy Objects
 
 #data #objects
 
