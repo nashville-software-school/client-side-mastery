@@ -22,6 +22,7 @@
 | 1 | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
 | 2 | [Provide Access to Fish](./chapters/MA_EXPORTING_FISH.md) |
 | 3 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
+| 4 | [Super Flex Coffee House](./chapters/HTML_FLEXBOX.md) |
 
 ## Pioneer Chapters
 

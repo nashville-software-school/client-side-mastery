@@ -1,6 +1,6 @@
 # Data Structures
 
-Data structures are also types in a software language, and therefore can be referred to as _structural types_, that are more complex than their more primitive cousins that you learned about in the previous chapter. There are two common data structures that you will be using in the course.
+Data structures are also types in a software language, and therefore can be referred to as _structural types_, that are more complex than their more primitive cousins that you learned about in the previous chapter. There are two common data structures, arrays and objects, that you will be using in the course.
 
 ## Learning Objectives
 
@@ -44,6 +44,14 @@ const jack = {
     lastName: "Parsons"
 }
 ```
+In the above examples there are 4 key/value pairs in each object.  The keys are `id`, `age`, `firstName` and `lastname`.  For megan the key/value pairs are:
+
+`id = 1`
+`age = 28`
+`firstname = Megan`
+`lastname = Debity`
+
+Practice: What are the key/value parirs for Jack?
 
 You could also be selling phones and want to represent each phone as an object.
 
