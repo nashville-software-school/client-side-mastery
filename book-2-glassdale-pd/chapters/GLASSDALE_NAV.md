@@ -42,7 +42,7 @@ Let's write the logic that we want to happen after the button is clicked:
 ```js
 darkModeButton.addEventListener("click", function(){
   // Select the entire body tag
-  const bodyElement = document.querySelector("body)
+  const bodyElement = document.querySelector("body")
 
   // Add a class
   bodyElement.classList.toggle("dark-background")
