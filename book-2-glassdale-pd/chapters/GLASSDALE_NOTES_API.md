@@ -118,7 +118,6 @@ export const saveNote = note => {
         },
         body: JSON.stringify(note)
     })
-    .then(getNotes) // After we add a note, get them all again so our new note appears in our collection
 }
 ```
 
