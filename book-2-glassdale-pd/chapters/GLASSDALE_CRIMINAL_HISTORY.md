@@ -149,7 +149,7 @@ const render = convictionsCollection => {
 }
 ```
 
-## Optional Advanced Challenge: Map the Aquarium
+<!-- ## Optional Advanced Challenge: Map the Aquarium
 
 If you want to practice using the `map()` array method a handful of times to build up the mental muscle, you can go back to your Martin's Aquarium application and replace all of the `for..of` loops in the list components to use `map()` instead.
 
@@ -196,4 +196,4 @@ for (const entry of entries) {
 }
 ```
 
-To work correctly with `entries.map()`.
+To work correctly with `entries.map()`. -->
