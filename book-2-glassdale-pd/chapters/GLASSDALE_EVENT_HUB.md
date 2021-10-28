@@ -17,14 +17,14 @@ document.querySelector("#crimeSelect").addEventListener("change", (eventObject) 
 })
 
 ```
-We run into trouble when JavaScript tries to place an event listener on an element that doesn't exist yet when the page initially loads. To get around this, we can put the event listener on a parent element that _definitely_ exists when the page loads. Let's use the `<main>` element that we hard coded into our HTML in Chapter One.
+We run into trouble when JavaScript tries to place an event listener on an element that doesn't exist yet when the page initially loads. To get around this, we can put the event listener on a parent element that _definitely_ exists when the page loads. Let's use the `<body>` element that we hard coded into our HTML in Chapter One.
 
 > **`glassdale/scripts/convictions/ConvictionSelect.js`**
 ```js
 // This won't throw an error, but it will fire any time there's a change event anywhere in the main container
-const eventHub = document.querySelector("main")
+const eventHub = document.querySelector("body")
 eventHub.addEventListener("change", (eventObject) => {
-    console.log("You clicked somewhere in the main container")
+    console.log("You clicked somewhere in the body element")
 
     // To be more specific, we need to know specifically what we clicked on
     console.log("Here is the element you clicked on: ", eventObject.target)
@@ -104,7 +104,7 @@ console.log(legalPatrons)
 ```
 
 
-## Implement Event Hub and Get Your Components Talking and Listening
+## Filtering Criminals Based on Which Crime was Chosen
 
 Here's where we left the event listener in our conviction select component:
 
@@ -112,7 +112,7 @@ Here's where we left the event listener in our conviction select component:
 
 ```js
 
-const eventHub = document.querySelector("main")
+const eventHub = document.querySelector("body")
 
 eventHub.addEventListener("change", (eventObject) => {
 
@@ -145,11 +145,15 @@ export const CriminalList = (convictionFilter) => {
 
     // If we get input from the convictions filter, filter our criminals so that we only see ones with that conviction
     if(convictionFilter){
-
-      criminals = // write your filter here
+    
+      criminals = criminals.filter(singleCriminalInLoop => {
+      // write the condition here to filter for criminals whose crime matches the convictionFilter value
+      })
 
     }
 
+    // at this point, the value criminals will either be all of the criminals (if no convictionFilter was selected) or the criminals that match the crime selected 
+    // either way, we want to print them!
     criminals.forEach((singleCriminal) => {
       criminalListContainer.innerHTML += Criminal(singleCriminal);
     });
