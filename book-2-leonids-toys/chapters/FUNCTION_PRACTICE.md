@@ -1,4 +1,4 @@
-# Muscle Memory: Functions
+# Explorer Chapter 1: Muscle Memory: Functions
 
 Functions are discrete units of work. They should perform one task, and do it well. Sometimes a function needs some input from you to do its job. Functions are difficult to understand for most beginners. This chapter lets you practice writing and using functions to help your knowledge of the syntax and understanding their behavior.
 

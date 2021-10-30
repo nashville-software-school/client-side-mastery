@@ -1,4 +1,4 @@
-# Data Structures
+# Chapter 2: Data Structures
 
 #data #objects #arrays
 

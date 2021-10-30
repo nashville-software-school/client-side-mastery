@@ -1,4 +1,4 @@
-# Displaying the Toy Catalog
+# Chapter 7: Displaying the Toy Catalog
 
 #data #arrays #iteration
 

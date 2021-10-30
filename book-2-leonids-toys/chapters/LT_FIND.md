@@ -1,4 +1,4 @@
-# Helping Customers Find the Right Toy
+# Chapter 9: Helping Customers Find the Right Toy
 
 #data #iteration #if-else
 
