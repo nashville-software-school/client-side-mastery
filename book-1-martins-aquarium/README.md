@@ -13,6 +13,9 @@
 | 5 | [Github Workflow for Team Aquarium](./chapters/CH5_GITHUB_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
 | 👨‍👨‍👦‍👦 | **Group Project** |
 
+## Cheat Sheets
+
+| 1 | [Git and Github](./chapters/GIT_CHEAT_SHEET.md) |
 
 ## Explorer Chapters
 
