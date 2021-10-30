@@ -1,4 +1,4 @@
-# Filtering Your Grocery List
+# Most Expensive Groceries
 
 Now that you have a comprehensive grocery list, and are using your glorious function to add new items to it, it may be time to reevaluate some of the more expensive items on your list.
 

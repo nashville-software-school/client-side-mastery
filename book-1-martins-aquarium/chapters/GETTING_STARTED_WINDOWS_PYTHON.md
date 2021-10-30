@@ -1,4 +1,4 @@
-# Getting Started
+# Installation For Windows
 
 ## Journal
 
@@ -47,19 +47,6 @@ If the `code` command doesn't work, adding this to `.zshrc` to update the path.
 
 `export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"`
 
-and if that doesn't work, set up a bash function in `.zshrc`
-
-```sh
-code () {
-    if [[ $# = 0 ]]
-    then
-        open -a "Visual Studio Code"
-    else
-        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-        open -a "Visual Studio Code" --args "$F"
-    fi
-}
-```
 
 ## Enable the Windows Subsystem for Linux
 

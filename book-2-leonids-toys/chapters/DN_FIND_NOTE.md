@@ -1,4 +1,4 @@
-# Finding a Note
+# When Did I Learn That?
 
 In this chapter, you need to define a variable named `searchTerm`. It's value can be the value of any property value you like from your notes. For example, if one of your notes has a `feeling` property whose value is `"Compunctious"`, you're variable declaration would be the code below.
 

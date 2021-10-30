@@ -1,4 +1,6 @@
-# Inventory Purchase Function
+# Adding Toys the Right Way
+
+#functions #properties #arrays
 
 Time to revisit the unique identifier that you have been adding to every object. It's the `id` property on the object. It was mentioned in a previous chapter that you will eventually learn how to use database systems that will handle adding the `id` property to your data, and automatically increment the value by 1 each time a new resource is created.
 

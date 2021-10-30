@@ -1,4 +1,4 @@
-# Adding a New Note
+# Javascript Note About Today
 
 In this chapter you will practice using the `push()` method that is available on every array to add things a new notes to your array.
 

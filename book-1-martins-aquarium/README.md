@@ -4,14 +4,13 @@
 
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
-| 🍎 | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) |
-| 💻 | [Python Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |
-| 💻 | [C# Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_C_SHARP.md) |
-| 1 | [Terminal Basics](./chapters/CLI_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
-| 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |
-| 3 | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md) <br/> <sub style="font-size:0.85rem;">#html</sub> |
-| 4 | [Track Aquarium Changes](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
-| 5 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
+| 🍎 | [Installations for Mac](./chapters/INSTALLATIONS_MAC.md) |
+| 💻 | [Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_PYTHON.md) |
+| 1 | [Terminal Basics](./chapters/CH1_TERMINAL_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
+| 2 | [HTML Components Structure &amp; Layout with Sally's Interests](./chapters/CH2_HTML_COMPONENTS_STRUCTURE_LAYOUT.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |
+| 3 | [Fish in my Aquarium](./chapters/CH3_FISH_IN_MY_AQUARIUM.md) <br/> <sub style="font-size:0.85rem;">#html #design</sub> |
+| 4 | [Git & GitHub Basics: Track Aquarium Changes](./chapters/CH4_GIT_GITHUB_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
+| 5 | [Github Workflow for Team Aquarium](./chapters/CH5_GITHUB_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
 | 👨‍👨‍👦‍👦 | **Group Project** |
 
 
@@ -19,15 +18,22 @@
 
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
+<<<<<<< HEAD
 | 1 | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
 | 2 | [Provide Access to Fish](./chapters/MA_EXPORTING_FISH.md) |
 | 3 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
 | 4 | [Super Flex Coffee House](./chapters/HTML_FLEXBOX.md) |
+=======
+| 1 | [Objectifying the Fish](./chapters/EC1_OBJECTIFYING_THE_FISH.md) |
+| 2 | [Provide Access to Fish](./chapters/EC2_PROVIDE_ACCESS_TO_FISH.md) |
+| 3 | [Creating Fish Components](./chapters/EC3_CREATING_FISH_COMPONENTS.md) |
+>>>>>>> evening-cohort-17
 
 ## Pioneer Chapters
 
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
-| 1 | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
-| 2 | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
-| 3 | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
+| 1 | [Organizing Your Code](./chapters/PC1_ORGANIZING_YOUR_CODE.md) |
+| 2 | [Automate Tips](./chapters/PC2_AUTOMATE_TIPS.md) |
+| 3 | [Automate Martin's Locations](./chapters/PC3_AUTOMATE_MARTINS_LOCATIONS.md) |
+| 4 | [Advanced Shell Scripting](./chapters/PC4_ADVANCED_SHELL_SCRIPTING.md) |

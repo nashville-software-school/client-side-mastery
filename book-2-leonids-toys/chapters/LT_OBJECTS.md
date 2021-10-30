@@ -1,4 +1,6 @@
-# Toy Objects
+# Representing Toy Objects
+
+#data #objects
 
 In this chapter, you will be using the object data structure that you learned about in Chapter 2 to represent some toys in code.
 

@@ -1,5 +1,7 @@
 # Displaying the Toy Catalog
 
+#data #arrays #iteration
+
 ## String Interpolation
 
 A quick reminder about string interpolation if you saw it in the pre-work. Otherwise, this is an introduction to string interpolation.

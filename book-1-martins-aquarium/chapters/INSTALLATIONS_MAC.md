@@ -1,8 +1,10 @@
-# Getting Started
+# Installations For Mac
 
 ## Journal
 
 Get a nice journal and a comfortable pen, and start keeping a daily journal of what you are learning every day. Writing your thoughts on a regular basis [increases your ability to remember it](https://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html). There are even studies that found writing is [beneficial for your health](https://www.apa.org/monitor/sep01/keepdiary.aspx).
+
+If you are someone who doesn't do very well when writing with a pen and paper there are also note taking apps out there that would work nicely and are free for basic use. A nice one for mac users is [Bear Notes](https://bear.app/). There is also [Notion](https://www.notion.so/) and [Evernote](https://evernote.com/)
 
 ## Hardware
 
@@ -29,7 +31,7 @@ GitHub is the primary site that software developers throughout the world use to 
 
 ## dbdiagram.io
 
-Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
+Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site. You will be using it in later chapters.
 
 ## devdocs.io
 
@@ -37,7 +39,7 @@ Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation f
 
 # Installations
 
-## Rectangle
+## Rectangle (optional)
 
 This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
 
@@ -74,7 +76,7 @@ brew install --cask visual-studio-code
 
 ### Launch Visual Studio Code From Command Line
 
-[Follow these steps](https://code.visualstudio.com/docs/setup/mac) to set up Visual Studio Code to be launched from the command line.
+[Follow these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to set up Visual Studio Code to be launched from the command line.
 
 ### Troubleshooting: For Instructors
 #### _Don't try this yourself!_

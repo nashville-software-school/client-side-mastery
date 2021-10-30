@@ -1,4 +1,6 @@
-# Performing Logic in Loops
+# Raising Prices
+
+#data #arrays #iteration
 
 In the last chapter, you used string interpolation to output a more human-readable string based on the less human-readable JavaScript object properties. You used a `for..of` loop to step through an array and perform the same operation on every item in the array.
 

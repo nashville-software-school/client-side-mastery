@@ -1,4 +1,4 @@
-# Grocery Run
+# View The Shopping List
 
 You open your refrigerator on Saturday morning and are immediately forlorn when you stare at the largely empty shelves. You need to make a run to the supermarket.
 

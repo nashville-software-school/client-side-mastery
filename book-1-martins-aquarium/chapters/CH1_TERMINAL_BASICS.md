@@ -1,4 +1,5 @@
-# Command Line Interface - The Terminal
+# Chapter 1: Terminal Basics 
+#terminal
 
 Becoming comfortable with your terminal will make you a master of the computer.
 
@@ -16,13 +17,16 @@ Becoming comfortable with your terminal will make you a master of the computer.
 1. `rm` - remove a single file
 1. `rm -rf` - remove a directory and all of its contents
 
+Feel free to print out a [cheatsheet](./images/CLI-cheat-sheet.pdf) or keep on on your desktop for quick reference. 
+
 ## Videos to Watch
 
 1. [Bash Basics Part 1 of 8 | Access and Navigation](https://youtu.be/eH8Z9zeywq0?t=885)
-1. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
-1. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
-1. Go through the CodeAcademy [command line course](https://www.codecademy.com/learn/learn-the-command-line).
-1. [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
+    Quick intro to Bash (15 minutes)
+3. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
+    Take a deeper look at your terminal (1 hour 15 minutes)
+5. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
+    Fun tips & tricks for your terminal (7 minutes)
 
 ## Practice: Aquarium Directory &amp; Files
 
@@ -67,21 +71,3 @@ Read the will-written answer to a [question on the Stack Exchange website](https
 
 .fish__name {}
 ```
-
-## Advanced Challenge: Terminal Welcome Message
-
-> **NOTE:** Advanced challenges are only to be attempted once the practice exercises are complete and you feel you both (a) a solid grasp on the basic knowledge of the current topic, and (b) you have adequate time to devote to them. They are intended to be difficult to solve and you must spend time researching it before any instructor will offer guidance.
-
-The terminal can do everything that all of your other applications you have, or ever will have, can do. There's just not a visual interface for doing it. It's all just text.
-
-In this advanced challenge, you should research bash variables, bash aliases, and find out how to customize your `zsh` _(.zshrc)_ or `bash` _(.bashrc)_ intialization script to have a welcome message show up every time your launch a terminal session.
-
-![welcome message in the terminal](./images/terminal-welcome.gif)
-
-Helpful searches to get you started:
-
-1. https://duckduckgo.com/?q=bash+my+username&ia=web
-1. https://duckduckgo.com/?q=bash+current+day&ia=web
-1. https://duckduckgo.com/?q=bash+display+calendar&ia=web
-1. https://duckduckgo.com/?q=bash+script+for+beginners&ia=web
-1. https://github.com/robbyrussell/oh-my-zsh
