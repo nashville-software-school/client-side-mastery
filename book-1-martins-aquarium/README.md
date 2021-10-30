@@ -13,21 +13,17 @@
 | 5 | [Github Workflow for Team Aquarium](./chapters/CH5_GITHUB_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
 | 👨‍👨‍👦‍👦 | **Group Project** |
 
+## Cheat Sheets
+
+| 1 | [Git and Github](./chapters/GIT_CHEAT_SHEET.md) |
 
 ## Explorer Chapters
 
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
-<<<<<<< HEAD
-| 1 | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
-| 2 | [Provide Access to Fish](./chapters/MA_EXPORTING_FISH.md) |
-| 3 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
-| 4 | [Super Flex Coffee House](./chapters/HTML_FLEXBOX.md) |
-=======
 | 1 | [Objectifying the Fish](./chapters/EC1_OBJECTIFYING_THE_FISH.md) |
 | 2 | [Provide Access to Fish](./chapters/EC2_PROVIDE_ACCESS_TO_FISH.md) |
 | 3 | [Creating Fish Components](./chapters/EC3_CREATING_FISH_COMPONENTS.md) |
->>>>>>> evening-cohort-17
 
 ## Pioneer Chapters
 

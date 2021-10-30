@@ -1,12 +1,10 @@
 # Chapter 2: Data Structures
 
-<<<<<<< HEAD
 Data structures are also types in a software language, and therefore can be referred to as _structural types_, that are more complex than their more primitive cousins that you learned about in the previous chapter. There are two common data structures, arrays and objects, that you will be using in the course.
-=======
+
 #data #objects #arrays
 
 Data structures are also types in a software language, and therefore can be referred to as _structural types_, that are more complex than their more primitive cousins that you learned about in the previous chapter. There are two common data structures that you will be using in the course.
->>>>>>> evening-cohort-17
 
 ## Learning Objectives
 

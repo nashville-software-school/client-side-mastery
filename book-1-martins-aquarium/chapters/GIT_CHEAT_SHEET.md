@@ -1,4 +1,4 @@
-#Git and Github Cheat Sheet
+# Git and Github Cheat Sheet
 
 ### I want to start tracking my project in git (local machine only)
 
@@ -29,6 +29,13 @@
 1. `git push` -- if your branch is already on Github, this is all you need to do.
 1. `git push --set-upstream origin <branch name>` -- if your branch is not yet on Github
 
+### I want to get a repo from Github
+
+1. Open your workspace directory in your terminal
+1. Go to the repo you want in Github and find the 'Code' button dropdown and copy the ssh link
+1. In your terminal type `git clone <ssh link copied>`
+1. cd into the directory that was created in the clone.
+
 ## What information should you provide in a pull request?
 
 - what your changes are
@@ -36,6 +43,19 @@
 - any information a test will need to test the code.
 - any reference number/link to a task that will provide more information.
 
-## Gotchas
+## Gotchas and Notes
+
+- You can make as many commits on a branch as you want
+- You can push to Github as many times as you want
+- Start a new branch when your work is merged into the main branch
+- Avoid directory inception.  Remember that cloning a repo includes a directory.
+- To remove git tracking from a project:
+    - `ls -la` and find the `.git` directry you want to remove
+    - `rm -rf .git` to remove that directory.
+- Changes will follow you around until you commit them
+- Commit and push as you go.
+- Commiting and pushing does not mean you need to merge.
+
+
 
 
