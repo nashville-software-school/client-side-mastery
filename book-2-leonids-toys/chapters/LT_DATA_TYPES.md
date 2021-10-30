@@ -1,4 +1,4 @@
-# Data Types for Leonid's Toys
+# Chapter 1: Data Types for Leonid's Toys
 #data
 
 > Leonid Androvsky is a second-generation Lithuanian who took over the hand-made toy shoppe that his father, Antonin, started and managed for 42 years. What was once known as Antonin's Toy World got renamed by Leonid to Leonid's Bespoke Toy Shoppe to attract more modern parents.

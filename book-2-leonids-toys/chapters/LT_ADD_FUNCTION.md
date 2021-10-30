@@ -1,4 +1,4 @@
-# Adding Toys the Right Way
+# Chapter 10: Adding Toys the Right Way
 
 #functions #properties #arrays
 

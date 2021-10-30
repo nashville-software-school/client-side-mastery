@@ -1,4 +1,4 @@
-# Scope in JavaScript
+# Explorer Chapter 2: Scope in JavaScript
 
 When we use the word scope in programming, we are talking about some code's accessibility to **other** code. In JavaScript, this is driven by the curly braces. The curly braces build a virtual wall around the code which prevents any code that is outside the wall from seeing it.
 

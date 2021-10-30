@@ -1,4 +1,4 @@
-# Raising Prices
+# Chapter 8: Raising Prices
 
 #data #arrays #iteration
 

@@ -1,4 +1,4 @@
-# Displaying Toy Properties
+# Chapter 5: Displaying Toy Properties
 
 #data #iteration #arrays
 
