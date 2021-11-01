@@ -110,10 +110,20 @@ In the following code, you will need to define the function that will be passed 
 
 The function you write will convert each service request object into HTML representations. Since it is wrapped with a `<ul>` element, make each one an `<li>` element showing only the description of the request to start.
 
-For example, if you write a function named `convertRequestToListElement`, then you would update the code below to `requests.map(convertRequestToListElement)`.
+1. The function should define 1 parameter _(value will be each object in the array)_
+3. The description of the service request should be interpolated inside the `<li>` HTML representation.
+2. The function should return the HTML representation.
 
-> #### `sink-repair/src/scripts/Requests.js`
+For example, if you write a function named `convertRequestToListElement`, then you would update the code below to  the following...
 
+
+```
+requests.map(convertRequestToListElement).join("")
+```
+
+#### Starter Code
+
+> ##### `sink-repair/src/scripts/Requests.js`
 
 ```js
 import { getRequests } from "./dataAccess.js"
@@ -124,7 +134,7 @@ export const Requests = () => {
     let html = `
         <ul>
             ${
-                requests.map()
+                requests.map().join("")
             }
         </ul>
     `
