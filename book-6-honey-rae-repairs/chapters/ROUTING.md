@@ -13,7 +13,7 @@ Before implementing the code yourself with the instructions below, watch the [Ho
 Make sure you are in your project's root directory. First, we need to install `react-router-dom`. Then we will create an additional file to handle the routing and create a navbar.
 
 ```sh
-npm i --save react-router-dom
+npm i --save react-router-dom@5.3
 touch src/components/ApplicationViews.js
 mkdir src/components/nav
 touch src/components/nav/NavBar.js
