@@ -11,7 +11,7 @@ In this chapter, you are going to write a component whose responsibility is to c
 * Controlled component
 * Inline event handlers
 * `preventDefault()` for forms
-* `useHistory` from react-router-dom
+* `useNavigate` from react-router-dom
 
 **Review:** Object Bracket Notation - [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
@@ -24,17 +24,17 @@ Refactor the AnimalList component to include an *Add Animal* button that will ch
 
 In React, we add event listeners directly on a button's `onClick` attribute.
 
-`useHistory` is provided by react-router-dom. It contains a method, `push()` which we can use to change the URL. Be sure to import it at the top of the document.
+`useNavigate` is provided by react-router-dom. We can use to change the URL. Be sure to import it at the top of the document.
 
 > ##### `src/components/animal/AnimalList.js`
 
 ```jsx
-const history = useHistory()
+const navigate = useNavigate{)
 
 return (
     <>
         <h2>Animals</h2>
-		<button onClick={() => {history.push("/animals/create")}}>
+		<button onClick={() => {navigate("create")}}>
             Add Animal
         </button>
         <div className="animals">
@@ -57,17 +57,16 @@ Create the new route that will respond when the button click changes the URL to 
 
 ```jsx
 <AnimalProvider>
-  <CustomerProvider>
-    <LocationProvider>
-      <Route exact path="/animals">
-         <AnimalList />
-      </Route>
-      <Route exact path="/animals/create">
-        <AnimalForm />
-      </Route>
+   <LocationProvider>
+      <CustomerProvider>
+         <Routes>
+           <Route path="/" element={<Home />} />
+              <Route path="animals/*" element={<AnimalList />} />
+              <Route path="animals/create/*" element={<AnimalForm />} />
+           </Routes>
+       </CustomerProvider>
     </LocationProvider>
-  </CustomerProvider>
-</AnimalProvider>
+ </AnimalProvider>
 
 ```
 
@@ -83,7 +82,7 @@ import { LocationContext } from "../location/LocationProvider"
 import { AnimalContext } from "../animal/AnimalProvider"
 import { CustomerContext } from "../customer/CustomerProvider"
 import "./Animal.css"
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const AnimalForm = () => {
     const { addAnimal } = useContext(AnimalContext)
@@ -102,7 +101,7 @@ export const AnimalForm = () => {
       customerId: 0
     });
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     /*
     Reach out to the world and get customers state
@@ -138,7 +137,7 @@ export const AnimalForm = () => {
         //invoke addAnimal passing animal as an argument.
         //once complete, change the url and display the animal list
         addAnimal(animal)
-        .then(() => history.push("/animals"))
+        .then(() => navigate("/animals"))
       }
     }
 
