@@ -103,9 +103,10 @@ Now you need to refactor the `AppicationViews` component to use live data. Repla
 > ##### `src/components/ApplicationViews.js`
 ```jsx
 <AnimalProvider>
-    <Route exact path="/animals">
-        <AnimalList />
-    </Route>
+     <Routes>
+         <Route path="/" element={<Home />} />
+         <Route path="animals/*" element={<AnimalList />} />
+     </Routes>
 </AnimalProvider>
 ```
 
