@@ -10,9 +10,10 @@ In the next chapter we will create the AnimalForm component but first we need da
 <AnimalProvider>
     <LocationProvider>
         <CustomerProvider>
-            <Route exact path="/animals">
-                <AnimalList />
-            </Route>
+             <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="animals/*" element={<AnimalList />} />
+        </Routes>
         </CustomerProvider>
     </LocationProvider>
 </AnimalProvider>
