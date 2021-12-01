@@ -113,25 +113,21 @@ export const Home = () => (
 
 ```jsx
 import React from "react"
-import { Route } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import { Home } from "./Home"
 import { AnimalCard } from "./animal/AnimalCard"
 
 export const ApplicationViews = () => {
     return (
-        <>
+        <Routes>
             {/* Render the location list when http://localhost:3000/ */}
-            <Route exact path="/">
-                <Home />
-            </Route>
-
-            {/* Render the animal list when http://localhost:3000/animals */}
-            <Route path="/animals">
-                <AnimalCard />
-            </Route>
-        </>
+            <Route path="/" element={<Home />} />
+             {/* Render the animal list when http://localhost:3000/animals */}
+            <Route path="animals/*" element={<AnimalCard />} />
+        </Routes>
     )
 }
+
 ```
 
 `exact` is needed on the first route, otherwise it will also match the other routes, and the **`Home`** will render for every route.
