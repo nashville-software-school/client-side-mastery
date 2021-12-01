@@ -31,7 +31,7 @@ Now create the following components for locations, animals, employees, and custo
 * List
 * Individual item
 
-Then refactor the **`ApplicationViews`** component to render each list component. Remember to wrap <Routes> with current data provider. 
+Then refactor the **`ApplicationViews`** component to render each list component. Remember to wrap Routes with current data provider. 
 ```jsx
 
 <AnimalProvider>
