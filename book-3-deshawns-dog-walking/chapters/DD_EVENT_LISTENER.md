@@ -24,7 +24,23 @@ document.addEventListener(
 )
 ```
 
-Inside the `for..of` loop in the existing code, update the line of code to be the following code.
+Inside the `for..of` loop in the existing Walkers function
+
+```js
+export const Walkers = () => {
+  let walkerHTML = "<ul>";
+
+  for (const walker of walkers) {
+    walkerHTML += `<li id="walker--${walker.id}">${walker.name}</li>`;
+  }
+
+  walkerHTML += "</ul>";
+
+  return walkerHTML;
+};
+```
+
+update the code in the `for...of` loop, to be the following code.
 
 ```js
 walkerHTML += `<li id="walker--${walker.id}">${walker.name}</li>`
