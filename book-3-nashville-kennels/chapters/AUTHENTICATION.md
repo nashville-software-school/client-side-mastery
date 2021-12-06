@@ -27,37 +27,38 @@ What determines if a user has authenticated? It's the `kennel_customer` key that
 Open your **`Kennel`** component and place the following code in it. Replace what is currently there. This is exactly what your **`KandyKorner`** component will look like in that application. All you will change is the local storage key to something like "kandy_customer".
 
 ```js
-import React, {useState}  from "react"
-import { NavBar } from "./nav/NavBar"
-import { ApplicationViews } from "./ApplicationViews"
-import "./Kennel.css"
-import { Routes, Route, Navigate } from "react-router"
-import { Login } from "./auth/Login"
-import { Register } from "./auth/Register"
+import React, { useState } from "react";
+import { NavBar } from "./nav/NavBar";
+import { ApplicationViews } from "./ApplicationViews";
+import "./Kennel.css";
+import { Routes, Route, Navigate } from "react-router";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
 
-export const Kennel = () =>{
-const [loggedin, setLoggedin] = useState(false)
+export const Kennel = () => {
+  const [loggedin, setLoggedin] = useState(false);
 
-const changeState = (bool) => setLoggedin(bool)
+  const changeState = (bool) => setLoggedin(bool);
 
-
-    if (localStorage.getItem("kennel_customer")){
-      return (  <>
-         <NavBar />
-         <ApplicationViews />
-         </>
-      )
-      }
-      else {
-    return (<Routes>
-    <Route path="/"element={ <Navigate to="login" />} />
-    <Route path="/login"
-    element={<Login setLoggedin={changeState} />}/>
-    <Route path="/register"
-    element={ <Register setLoggedin={changeState}/>}/>
-    </Routes>
-    )
-    }
+  if (localStorage.getItem("kennel_customer")) {
+    return (
+      <>
+        <NavBar />
+        <ApplicationViews />
+      </>
+    );
+  } else {
+    return (
+      <Routes>
+        <Route path="/" element={<Navigate to="login" />} />
+        <Route path="/login" element={<Login setLoggedin={changeState} />} />
+        <Route
+          path="/register"
+          element={<Register setLoggedin={changeState} />}
+        />
+      </Routes>
+    );
+  }
 };
 ```
 
