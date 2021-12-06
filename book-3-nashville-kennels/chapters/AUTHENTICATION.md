@@ -220,7 +220,7 @@ export const Login = (props) => {
 
 
    ```
-    ##### `src/components/auth/Login.css`
+   ##### `src/components/auth/Login.css`
 
    ```
    .h1, h1 {
@@ -294,7 +294,7 @@ fieldset {
 
 
    ```
-   7. `logo.png`
+ 
 
 **Check for react-router-dom useHistory()** You may need to import the `useHistory` into your Login and Register components and then invoke it.
 
