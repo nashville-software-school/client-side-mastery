@@ -220,7 +220,7 @@ export const Login = (props) => {
 
 
    ```
-      ##### `src/components/auth/Login.css`
+    ##### `src/components/auth/Login.css`
 
    ```
    .h1, h1 {
