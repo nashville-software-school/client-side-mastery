@@ -66,7 +66,7 @@ Now you can add the mock authentication components into your application.
 1. In components create an auth folder
 
 1. Create the following files in the auth directory.
-   1. `Register.js`
+   1.##### `src/components/auth/Register.js`
    
 ```
 import React, { useRef } from "react"
@@ -150,7 +150,7 @@ export const Register = (props) => {
     )
 }
 ```
-   3. `Login.js`
+   1.##### `src/components/auth/Login.js`
 ```
    import React, { useRef } from "react"
 import { Link } from "react-router-dom";
@@ -220,7 +220,8 @@ export const Login = (props) => {
 
 
    ```
-   5. `Login.css`
+      1.##### `src/components/auth/Login.css`
+
    ```
    .h1, h1 {
     font-size: 2.5rem;
