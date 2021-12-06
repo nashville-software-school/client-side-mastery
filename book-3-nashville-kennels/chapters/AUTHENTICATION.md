@@ -52,10 +52,7 @@ export const Kennel = () => {
       <Routes>
         <Route path="/" element={<Navigate to="login" />} />
         <Route path="/login" element={<Login setLoggedin={changeState} />} />
-        <Route
-          path="/register"
-          element={<Register setLoggedin={changeState} />}
-        />
+        <Route path="/register" element={<Register setLoggedin={changeState} />} />
       </Routes>
     );
   }
