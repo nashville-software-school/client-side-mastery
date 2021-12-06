@@ -137,7 +137,7 @@ We will also include `useParams` from react-router-dom allowing the app to read 
 import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import "./Animal.css"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 export const AnimalDetail = () => {
   const { getAnimalById } = useContext(AnimalContext)
@@ -145,7 +145,7 @@ export const AnimalDetail = () => {
 	const [animal, setAnimal] = useState({})
 
 	const {animalId} = useParams();
-	const history = useHistory();
+	const navigate = useNavigate();
 
   useEffect(() => {
     console.log("useEffect", animalId)
