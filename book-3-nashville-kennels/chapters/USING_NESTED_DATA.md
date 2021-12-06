@@ -91,7 +91,7 @@ export const AnimalList = ({ history }) => {
         <>
             <h1>Animals</h1>
 
-            <button onClick={() => history.push("/animals/create")}>
+            <button onClick={() => navigate("/animals/create")}>
                 Make Reservation
             </button>
             <div className="animals">
