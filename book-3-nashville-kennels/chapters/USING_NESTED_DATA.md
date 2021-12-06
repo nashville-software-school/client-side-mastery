@@ -79,6 +79,8 @@ import { AnimalContext } from "./AnimalProvider"
 import { Animal } from "./Animal"
 import "./Animals.css"
 
+const navigate = useNavigate()
+
 export const AnimalList = ({ history }) => {
     const { getAnimals, animals } = useContext(AnimalContext)
 
