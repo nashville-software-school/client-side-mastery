@@ -296,7 +296,7 @@ fieldset {
    ```
  
 
-**Check for react-router-dom useHistory()** You may need to import the `useHistory` into your Login and Register components and then invoke it.
+**Check for react-router-dom useNavigate()** You may need to import the `useNavigate` into your Login and Register components and then invoke it.
 
 ## Register an Account
 
