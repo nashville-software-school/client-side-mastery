@@ -175,19 +175,18 @@ Immediate properties of an empty object will not break, however nested propertie
 A dynamic route component is one that matches a pattern. Notice the route that renders **`AnimalDetail`**. The `animalId` is a parameter passed on the URL.
 
 ```js
-<Route exact path="/animals/detail/:animalId(\d+)">
-    <AnimalDetail />
-</Route>
+<Route path="animals/create/detail/:animalId/*" element={<AnimalDetail />} />
+
 ```
 
-It has `:animalId(\d+)` at the end of the URL. If the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in a variable named `animalId`. The variable can then be used inside **`AnimalDetail`**.
+<!-- It has `:animalId(\d+)` at the end of the URL. If the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in a variable named `animalId`. The variable can then be used inside **`AnimalDetail`**. -->
 
-Look back at the code you put in the detail component.
+<!-- Look back at the code you put in the detail component.
 
 See the `const {animalId} = useParams();`
 
 This is how you access the number 3 inside the component. It's part of the routing package (react-router-dom) you installed. Don't worry, that one's tricky. We'll help you remember it.
-
+ -->
 
 Within ApplicationViews, add the route for animal details within the **AnimalProvider** component. You will need to support a route like the following.
 
