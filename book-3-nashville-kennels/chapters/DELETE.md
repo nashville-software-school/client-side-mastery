@@ -50,7 +50,7 @@ const history = useHistory()
 const handleRelease = () => {
     releaseAnimal(animal.id)
       .then(() => {
-        history.push("/animals")
+        navigate("/animals")
       })
   }
 
