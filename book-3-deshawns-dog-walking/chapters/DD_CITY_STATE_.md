@@ -1,4 +1,4 @@
-# New City State
+# Explorer Chpt 2: City State
 
 Your walker data structure currently has `city` as a key on each object with a value of a string. That's fine for such a small scale of dog walking employees. Over a span of years, though, DeShawn significantly expands the number of people in each city that walk dogs.
 
