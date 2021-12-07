@@ -1,4 +1,5 @@
-# Chpt. 4: Show Walker Service Area
+# Chpt 4: Show Walker Service Area
+#data #functions #events
 
 Time for your first event listener. You are going to use your debugger to step through the code to see how it all works.
 
