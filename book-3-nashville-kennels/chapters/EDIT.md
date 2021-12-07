@@ -49,10 +49,7 @@ Add a new route in **`ApplicationViews`** for editing an animal. Consider what p
 
 > ##### `/src/components/ApplicationViews.js`
 ```jsx
-
-<Route path="/animals/edit/:animalId(\d+)">
-    <AnimalForm />
-</Route>
+<Route path="animals/edit/:animalId/*" element={<AnimalForm />} />
 ```
 
 ### Edit Button
@@ -62,7 +59,7 @@ Create a new button in the **`AnimalDetails`** component that redirects the user
 > ##### `/src/components/animal/AnimalDetail.js`
 ```jsx
 <button onClick={() => {
-    history.push(`/animals/edit/${animal.id}`)
+    navigate(`/animals/edit/${animal.id}`)
 }}>Edit</button>
 ```
 
@@ -94,7 +91,7 @@ import { LocationContext } from "../location/LocationProvider"
 import { AnimalContext } from "../animal/AnimalProvider"
 import { CustomerContext } from "../customer/CustomerProvider"
 import "./Animal.css"
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export const AnimalForm = () => {
     const { addAnimal, getAnimalById, updateAnimal } = useContext(AnimalContext)
@@ -107,7 +104,7 @@ export const AnimalForm = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const {animalId} = useParams();
-	  const history = useHistory();
+	  const navigate = useNavigate();
 
     //when field changes, update state. This causes a re-render and updates the view.
     //Controlled component
@@ -144,7 +141,7 @@ export const AnimalForm = () => {
               locationId: parseInt(animal.locationId),
               customerId: parseInt(animal.customerId)
           })
-          .then(() => history.push("/animals"))
+          .then(() => navigate("/animals"))
         }
       }
     }
