@@ -1,4 +1,5 @@
-# Wait, It Doesn't Work
+# Chpt 2: Debugging Practice
+#debugging
 
 When you start your web server for the new project and load it in the browser, you will immediately notice that there are syntax errors.
 
