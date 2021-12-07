@@ -175,7 +175,7 @@ Immediate properties of an empty object will not break, however nested propertie
 A dynamic route component is one that matches a pattern. Notice the route that renders **`AnimalDetail`**. The `animalId` is a parameter passed on the URL.
 
 ```js
-<Route path="animals/create/detail/:animalId/*" element={<AnimalDetail />} />
+<Route path="animals/detail/:animalId/*" element={<AnimalDetail />} />
 
 ```
 
