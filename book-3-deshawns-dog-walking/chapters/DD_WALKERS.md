@@ -1,4 +1,4 @@
-# Who's Walking Whom
+# Explorer Chpt 1: Who's Walking Whom
 
 Using the event listener code provided as an example, see if you can update the **`RegisteredPets`** module to capture when a user clicks on a pet. When the user does click a pet, display an alert that says who is currently walking it.
 
