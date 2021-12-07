@@ -73,14 +73,14 @@ import React, { useContext, useEffect, useState } from "react"
 import { AnimalContext } from "./AnimalProvider"
 import { AnimalCard } from "./AnimalCard"
 import "./Animal.css"
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export const AnimalList = () => {
   const { animals, getAnimals, searchTerms } = useContext(AnimalContext)
 
   // Since you are no longer ALWAYS displaying all of the animals
   const [ filteredAnimals, setFiltered ] = useState([])
-  const history = useHistory()
+  const navigate = useNavigate()
 
   // Empty dependency array - useEffect only runs after first render
   useEffect(() => {
