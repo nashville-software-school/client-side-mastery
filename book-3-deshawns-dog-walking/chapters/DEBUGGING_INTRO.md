@@ -1,4 +1,5 @@
-# Using the Debugger
+# Chpt 1: Using the Debugger
+#debugging
 
 As a software developer, the developer tools in the browser are where you will spend about 75% of your time and focus. Being comfortable with the debugger and stepping through your code one line at a time to see what's happening is a crucial, core skill for a junior developer.
 
