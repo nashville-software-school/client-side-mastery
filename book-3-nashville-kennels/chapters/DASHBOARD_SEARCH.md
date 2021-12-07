@@ -140,14 +140,13 @@ What is the common ancestor of the animal search component and the animal list c
 
 ```jsx
 <AnimalProvider>
-  <Route exact path="/animals">
-    <AnimalSearch />
-    <AnimalList />
-  </Route>
+  <Routes>
+    <Route path="animals/*" element={<><AnimalSearch /><AnimalList /></>} />
+  </Routes>
 </AnimalProvider>
 ```
 
-It's **`Route`**!
+It's **`Routes`**!
 
 They are also children of **`AnimalProvider`**!
 
