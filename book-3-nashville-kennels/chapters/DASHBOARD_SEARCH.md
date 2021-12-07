@@ -128,11 +128,8 @@ Now, when the application URL is http://localhost:3000/animals, you will render 
 ```jsx
 import { AnimalSearch } from "./animal/AnimalSearch"
 
+<Route path="animals/*" element={<><AnimalSearch /><AnimalList /></>} />
 
-<Route exact path="/animals">
-    <AnimalSearch />
-    <AnimalList />
-</Route>
 ```
 
 ## Epilogue: How Can Sibling Components Communicate?
