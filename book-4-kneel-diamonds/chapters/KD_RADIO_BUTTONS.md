@@ -1,4 +1,5 @@
-# Showing Custom Jewelry Options
+# Chpt 4: Displaying Jewelry Options
+#array-methods #map
 
 If you hadn't noticed yet, the `main.js` module looks a bit different than it has in previous projects. It doesn't define the main HTML structure of your application. It is deferring _that_ responsibility to the **`KneelDiamonds`** component.
 
