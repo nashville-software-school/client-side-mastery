@@ -1,4 +1,4 @@
-# chpt 1: Fixing amd Squashing Bugs
+# chpt 2: Finding and Squashing Bugs
 #debugging
 
 DeShawn hired some consulting agency from overseas to build a simple application that displayed the following information.
