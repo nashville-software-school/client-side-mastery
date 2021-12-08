@@ -1,4 +1,4 @@
-# Showing Prices on Jewelry Orders
+# Chpt 9: Displaying Prices for Orders
 
 You are currently showing a simple message for each jewelry order. Natasha wants to see the cost of each order in the list because if there are two orders that need to be done at the same time, she can focus on the one(s) that generate the most revenue first.
 
