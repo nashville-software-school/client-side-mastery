@@ -1,4 +1,4 @@
-# Data Access Layer
+# Pioneer 2: Data Access Layer
 
 Currently, the `database.js` module has three main responsibilities.
 
