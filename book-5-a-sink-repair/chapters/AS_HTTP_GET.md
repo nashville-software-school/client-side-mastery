@@ -1,4 +1,4 @@
-# Display New State
+# Chpt 7: Updating Service Request List
 
 Remember that every time state changes, you have to generate new HTML representations of the state. Now that you have the ability to generate new state and store it permanently in your API, you need to implement the `stateChanged` custom action again.
 
