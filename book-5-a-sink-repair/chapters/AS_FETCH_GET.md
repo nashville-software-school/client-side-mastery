@@ -1,4 +1,5 @@
-# Getting Permanent State
+# Chpt 4: Listing Past Requests
+#fetch #GET
 
 Before you get to saving new requests, you should list any previous requests. You are going to use a `fetch()` to get all existing requests and then list them in the UI.
 
