@@ -1,4 +1,4 @@
-# Sorting Objects in an Array
+# Explorer 2: Sorting Service Requests
 
 Modify the `getRequests()` method in the data access module to return an array of service request objects that are sorted by their completion status.  Incomplete ones should be displayed first. As soon as a service request is completed, it should be marked with a different color and sorted to the bottom of the list.
 
