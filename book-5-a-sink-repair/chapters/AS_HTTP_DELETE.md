@@ -1,4 +1,4 @@
-# Removing Service Requests
+# Chpt 8: Denying Service Requests
 
 ![animation showing deletion of requests](./images/sink-repair-delete-request.gif)
 
