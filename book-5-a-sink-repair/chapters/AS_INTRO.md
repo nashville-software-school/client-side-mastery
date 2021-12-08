@@ -1,4 +1,4 @@
-# Chot 2: A Sink Repair Service
+# Chpt 2: A Sink Repair Service
 #context
 
 Maude &amp; Merle Baumgardner were married in 1994 after a brief courtship. They are both licensed plumbers and met while working a job together on a major office building.
