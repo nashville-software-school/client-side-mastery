@@ -1,4 +1,5 @@
-# Saving All State
+# Chpt 7: Saving Chosen Metal Style and Size
+#data #objects
 
 Using the code examples from the previous chapter that shows how to store the chosen metal as state in the database, update the code in the **`DiamondSizes`** and **`JewelryStyles`** components to do the same.
 
