@@ -45,7 +45,7 @@ Add a button to your animal details component that will allow the user to releas
 > ##### `/src/components/animal/AnimalDetails.js`
 
 ```js
-const history = useHistory()
+const navigate = useNavigate()
 
 const handleRelease = () => {
     releaseAnimal(animal.id)
