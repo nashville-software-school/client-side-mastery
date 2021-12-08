@@ -1,4 +1,4 @@
-# Choosing Vehicle Models
+# Explorer 1: Expanded Auto Offerings
 
 | | |
 |:---:|:---|
