@@ -1,4 +1,5 @@
-# Introduction to Fetch
+# Chpt 1: Introduction to Fetch
+#api #fetch
 
 The Fetch API in JavaScript is used by JavaScript developers to get the data for their application from somewhere else on the Internet. Up to this point, you've been managing the data directly in a module in your application.
 
