@@ -133,7 +133,7 @@ export const AnimalForm = () => {
               locationId: parseInt(animal.locationId),
               customerId: parseInt(animal.customerId)
           })
-          .then(() => history.push(`/animals/detail/${animal.id}`))
+          .then(() => navigate(`/animals/detail/${animal.id}`))
         }else {
           //POST - add
           addAnimal({
