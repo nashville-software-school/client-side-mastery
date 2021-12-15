@@ -8,7 +8,7 @@ cd $HOME/workspace/sink-repair/api
 
 echo '{
     "plumbers": [],
-    "completions: [],
+    "completions": [],
     "requests": [
         {
             "id": 1,
