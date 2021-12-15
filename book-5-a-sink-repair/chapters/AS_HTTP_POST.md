@@ -1,4 +1,5 @@
-# Saving Permanent State
+# Chpt 6: Submitting Service Request
+#POST #fetch #JSON
 
 As the person is typing into the form fields, they are changing the state of the application, but it is transient state because the person hasn't committed to the service request until the button is clicked. When the person clicks the button, your job is to take the transient state and convert it into permanent state by storing it in the `database.json` file by using a `fetch()` call.
 

@@ -1,4 +1,5 @@
-# A Sink Repair Service
+# Chpt 2: A Sink Repair Service
+#context
 
 Maude &amp; Merle Baumgardner were married in 1994 after a brief courtship. They are both licensed plumbers and met while working a job together on a major office building.
 
@@ -28,5 +29,6 @@ Once you feel you have a good ERD, review it with an instructor.
 Run the following command to get your basic directory structure set up. It will create a project directory for you at `~/workspace/sink-repair`.
 
 ```sh
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/evening-cohort-17/book-5-a-sink-repair/chapters/scripts/sink-repair-setup.sh)"
 ```

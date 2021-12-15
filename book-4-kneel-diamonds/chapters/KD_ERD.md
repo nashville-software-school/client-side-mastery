@@ -1,4 +1,5 @@
-# Kneel Diamonds Entity Relationship Diagram
+# Chpt 3: Kneel Diamonds Entity Relationship Diagram
+#data #ERD
 
 Look in the `database.js` module and examine the data that will be used for this application. There are three main resources that the user will interact with and need to be represented in the ERD.
 

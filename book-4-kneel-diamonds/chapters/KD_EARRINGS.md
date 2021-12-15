@@ -1,4 +1,4 @@
-# Custom Earring and Necklace Orders
+# Explorer 1: Orderring Earring and Necklaces
 
 | | |
 |:---:|:---|

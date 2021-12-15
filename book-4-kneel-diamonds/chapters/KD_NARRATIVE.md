@@ -1,4 +1,4 @@
-# Working for Kneel Diamonds
+# Chpt 1: Kneel Diamonds
 
 Kneel Diamonds is a jewelry store founded by James Kneel in 1937. It is currently owned and operated by his granddaughter Natasha Dimitrionov. It currently operates three physical locations around Nashville, TN and has 38 employees.
 

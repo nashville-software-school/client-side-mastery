@@ -1,4 +1,4 @@
-# New Event Type: Change
+# Chpt 5: Choosing Jewelry Options
 
 ## Learning Objectives
 
