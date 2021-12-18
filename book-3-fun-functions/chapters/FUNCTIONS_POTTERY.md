@@ -110,8 +110,3 @@ const finalFiring = (potteryObject, temperature) => {
 }
 ```
 </details>
-
-
-
-
-

@@ -16,12 +16,15 @@ Google Chrome is the most popular browser for web developers because of the powe
 
 Download [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html), and then [make it your default browser](https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en).
 
+### GitPod Chrome Extension
 
-# Online Services
+Visit the [Chrome Store page for Gitpod](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki?hl=en) and add the extension to Chrome. This is needed for self-assessments in the course.
+
+## Online Services
 
 <a id="github"></a>
 
-## GitHub
+### GitHub
 
 GitHub is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
 
@@ -31,19 +34,13 @@ GitHub is the primary site that software developers throughout the world use to 
 
 Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
 
-## devdocs.io
+## Installations
 
-Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NSS.
-
-# Installations
-
-## Rectangle
-
-_NOTE: If your Mac has an M1 ARM processor, install [Rectangle](#rectangle) instead._
-
-This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
+### Rectangle
 
 [Download and install Rectangle](https://www.rectangleapp.com/) and after it is installed, open the application to try it out.
+
+This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
 
 <a id="homebrew"></a>
 
@@ -164,16 +161,23 @@ sudo npm i -g serve json-server
 serve -v
 ```
 
+If you see no error message hit the `Ctrl+C` keyboard combination to stop the service from running.
+
 If you see the message `command not found` :
+
 #### _Run the following command in the terminal to install `serve`:_
+
 ```sh
 sudo npm i -g serve
 ```
 
 #### _To confirm `json-server` was installed successfully, run the following in the terminal:_
+
 ```sh
 json-server -v
 ```
+
+If you see no error message hit the `Ctrl+C` keyboard combination to stop the service from running.
 
 If you see the message `command not found` :
 #### _Run the following command in the terminal to install `json-server`:_

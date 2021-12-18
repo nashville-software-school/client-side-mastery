@@ -16,6 +16,11 @@ Google Chrome is the most popular browser for web developers because of the powe
 
 Download [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html), and then [make it your default browser](https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en).
 
+### GitPod Chrome Extension
+
+Visit the [Chrome Store page for Gitpod](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki?hl=en) and add the extension to Chrome. This is needed for self-assessments in the course.
+
+
 # Online Services
 
 <a id="github"></a>
