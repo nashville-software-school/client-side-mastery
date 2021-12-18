@@ -64,7 +64,7 @@ This is called **_invoking_** a function. You type in the name of the task, and 
 const buyGroceries = (arrayOfFoodToBuy) => {
 	// Code to buy groceries with money
 	for (const food of arrayOfFoodToBuy) {
-		console.log(I bought ${food})
+		console.log(`I bought ${food}`)
 	}
 }
 
@@ -74,6 +74,31 @@ buyGroceries(items)
 ```
 
 Once you have provided that instruction of invoking the function, the minion dutifully performs its task by following the instructions you provided inside the function.
+
+## Another Parameter Example
+
+Here is an example of a function with a parameter. A function can be invoked as many times as needed. If there is a parameter defined, then a value _(a.k.a argument)_ must be provided when the function runs.
+
+```js
+/*
+    Define a function with a parameter. This means the
+    function needs a value to be provided.
+*/
+const createFancyName = (name) => {
+    return `Her Majesty, ${name}.`
+}
+
+const athena = createFancyName("Athena Perez") // Argument value is "Athena Perez"
+// output: "Her Majesty, Athena Perez."
+
+
+const charisse = createFancyName("Charisse Ford") // Argument value is "Charisse Ford"
+// output: "Her Majesty, Charisse Ford."
+
+
+const jenna = createFancyName("Jenna Solis") // Argument value is "Jenna Solis"
+// output: "Her Majesty, Jenna Solis."
+```
 
 ## Practice: Filling the Tank
 

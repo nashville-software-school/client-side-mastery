@@ -4,7 +4,9 @@ When we use the word scope in programming, we are talking about some code's acce
 
 Yet the code inside the walls has a special power. It can see outside the walls and access, or modify, that code - as long as that code, itself, is not contained in an equal, or lower scope. More on that in a bit.
 
-To use the true power of [block scopes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block), you need to use the `let` and `const` keywords for declaring variables. If you use `var`, block scope no longer applies, because those variables declared with `var` get [hoisted and initialized](https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/). Always use `let` and `const` for variable declarations to avoid unintended side-effects of hoisting and initialization.
+To use the true power of [block scopes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block), you need to use the `let` and `const` keywords for declaring variables.
+
+If you use `var`, block scope no longer applies, because those variables declared with `var` get [hoisted and initialized](https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/). Always use `let` and `const` for variable declarations to avoid unintended side-effects of hoisting and initialization.
 
 ## Scopes You Know
 
@@ -86,12 +88,6 @@ const itContainedVowels = containsVowels(userWord)
 console.log(itContainedVowels) // true or false
 console.log(doesItHaveOne) // doesItHaveOne is undefined
 ```
-
-## Videos to Watch
-
-1. [JavaScript | The Scope Chain](https://www.youtube.com/watch?v=FCAOcYazy9c)
-1. [Javascript Tutorial | Scope & Closures | Ep20](https://www.youtube.com/watch?v=S3cBIww_6os)
-1. [Environment, Scope and Closures in JS / Intro to JavaScript ES6 programming, lesson 16](https://www.youtube.com/watch?v=LhSCEWHazAU)
 
 ## Scope Exercises
 
@@ -185,3 +181,11 @@ const llamaNamer = function () {
 nameMaker = llamaNamer()
 console.log(nameMaker())
 ```
+
+## Videos to Watch
+
+These are supplementary videos you can choose to watch to deepen your learning.
+
+1. [JavaScript | The Scope Chain](https://www.youtube.com/watch?v=FCAOcYazy9c)
+1. [Javascript Tutorial | Scope & Closures | Ep20](https://www.youtube.com/watch?v=S3cBIww_6os)
+1. [Environment, Scope and Closures in JS / Intro to JavaScript ES6 programming, lesson 16](https://www.youtube.com/watch?v=LhSCEWHazAU)

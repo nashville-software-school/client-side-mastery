@@ -19,14 +19,7 @@ In this book, you will gain the knowlege and understanding of working with data 
 
 ## Explorer Chapters
 
-| # | 🧠 <br/> New Concepts | 🚂 <br/> Leonid's Toys |
-|--|--|--|
-| 1 | [Muscle Memory: Functions](./chapters/FUNCTION_PRACTICE.md) | [Discontinued Toys](./chapters/LT_REMOVE_ARRAY_ITEM.md) |
-| 2 | [Scope in JavaScript](./chapters/JS_SCOPE.md) | [The Perry Scope](./chapters/LT_SCOPE.md) |
-
-## Pioneer Chapters
-
-| # | 🚀 <br/> Advanced Data Stuctures &amp; Types |
+| # | 🚀 <br/> Advanced Data Stuctures |
 |--|--|
 | 1 | [Data Structure: Map](./chapters/JAVASCRIPT_MAPS.md) |
 | 2 | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |
