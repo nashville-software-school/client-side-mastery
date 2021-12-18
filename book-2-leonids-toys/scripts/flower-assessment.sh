@@ -87,12 +87,16 @@ Automated Test: Adding three new flowers added to your array.
 Price #1 is 0.95
 Price #2 is 0.40
 Price #3 is 1.05
+`)
+
+console.log(getFlowers())
+
+console.log(`
+
 
 
 Automated Test: Verifying that there are only two expensive flowers.
 `)
-
-console.log(getFlowers())
 
 if (expensiveFlowers.length !== 2 || Array.isArray(expensiveFlowers[0])) {
     console.log(`
