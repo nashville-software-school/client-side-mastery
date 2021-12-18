@@ -5,21 +5,17 @@ mkdir -p $HOME/workspace/flowers
 cd $HOME/workspace/flowers
 
 
-echo 'const flowers = [
+echo '
+// Manually add two objects to the array below.
+
+const flowers = [
 
 ]
 
 const addFlower = (flowerObject) => {
     /*
-        This function should add an `id` property
-        to the object that was sent to the function.
-        The value of the `id` property should be 1
-        greater than the current maximum `id` in the
-        array.
-
-        Once the `id` property has been added to the,
-        object, the object should then be put into the
-        `flowers` array.
+        Write the correct code below to add the value of
+        `flowerObject` to the `flowers` array.
     */
 
 
@@ -55,18 +51,21 @@ module.exports = {
 echo 'const { addFlower, findExpensiveFlowers } = require("./flowers.js")
 
 addFlower({
+    id: 3,
     color: "Orange",
     species: "Tulip",
     price: 0.95
 })
 
 addFlower({
+    id: 4,
     color: "White",
     species: "Baby Breath",
     price: 0.40
 })
 
 addFlower({
+    id: 5,
     color: "Blue",
     species: "Orchid",
     price: 1.05
@@ -82,11 +81,16 @@ console.log(`
 
 
 
-Test: Three new flowers added to array.
+Automated Test: Adding three new flowers added to your array.
 Price #1 is 0.95
 Price #2 is 0.40
 Price #3 is 1.05
+
+
+Automated Test: Verifying that there are only two expensive flowers.
 `)
+
+console.log(flowers)
 
 if (expensiveFlowers.length !== 2 || Array.isArray(expensiveFlowers[0])) {
     console.log(`

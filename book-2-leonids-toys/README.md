@@ -14,8 +14,7 @@ In this book, you will gain the knowlege and understanding of working with data 
 | 6 | [New Toys](./chapters/LT_ARRAY_PUSH.md) <br/> <sub style="font-size:0.85rem;">#data #arrays</sub> | [JavaScript Note About Today](./chapters/DN_PUSH_OBJECT.md) |  |
 | 7 | [Toy Catalog](./chapters/LT_ARRAY_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#data #arrays #iteration</sub> | [Looking Back at Your Journey](./chapters/DN_NOTE_DISPLAY.md) | [Viewing the Shopping List](./chapters/MP_SHOPPING_LIST.md) |
 | 8 | [Raising Prices](./chapters/LT_ITERATION_WITH_LOGIC.md) <br/> <sub style="font-size:0.85rem;">#data #arrays #iteration</sub> | |
-| 9 | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [When Did I Learn That?](./chapters/DN_FIND_NOTE.md) | [Add Ingredient](./chapters/MP_ADD_GROCERY.md) |
-| 10 | [Adding Toys the Right Way](./chapters/LT_ADD_FUNCTION.md) <br/> <sub style="font-size:0.85rem;">#functions #properties #arrays</sub> | [Add Note Function](./chapters/DN_ADD_FUNCTION.md) | [Most Expensive Groceries](./chapters/MP_EXPENSIVE_ITEMS.md) |
+| 9 | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [When Did I Learn That?](./chapters/DN_FIND_NOTE.md) | [Most Expensive Groceries](./chapters/MP_EXPENSIVE_ITEMS.md) |
 | 🎓 | [Self-Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
 
 ## Explorer Chapters

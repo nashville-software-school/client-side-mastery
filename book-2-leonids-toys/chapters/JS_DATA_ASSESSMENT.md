@@ -33,6 +33,8 @@ In there, you will see the following boilerplate code.
 1. An `addFlower()` function already defined for you.
 1. A `findExpensiveFlowers()` function already defined for you.
 
+Please do not remove the functions, or rename the functions. They are there for testing purposes. You just need to implement the correct code inside them.
+
 ### Step 1: Add Initial Flowers
 
 Add two flower objects to the empty array. Each object should have the following properties.
@@ -48,9 +50,7 @@ The first flower should have an id of 2. It must represent a Red Tulip. It's pri
 
 ### Step 2: Automate Adding New Flowers
 
-Next, you need to write some code that will add a new flower object to the array. The `addFlower()` function accepts an object as input, and that input is stored in the `flowerObject` parameter.
-
-You job is to add an `id` property to the flower object and then use the `push()` array method to add it to the existing array of flowers. The `id` property you add should have a value of exactly 1 more than the `id` property of the last item in the array. If the last object currently in the array has an `id` value of 4, the new flower should have an `id` of 5.
+Write code inside the `addFlower()` function beneath the comment that will add the value of the `flowerObject` parameter to the array of flowers.
 
 ### Step 3: Finding a Flower
 
@@ -58,7 +58,7 @@ In the `findExpensiveFlowers()` function, you will see some existing code. Your 
 
 Each flower object in the array has a `price` property. If that property's value is 1.00 or greater, it should be added to the empty array that is in the `findExpensiveFlowers()` function.
 
-You should use the `push()` array method to add the matching flowers.
+You should use the `push()` method to add the matching flowers to `expensiveFlowers` array.
 
 ## Testing Your Code
 
@@ -67,7 +67,7 @@ When you believe you have code that works, go back to your terminal and type `no
 If your code works you should see the following output.
 
 ```sh
-Test: Three new flowers added to array.
+Automated Test: Adding three new flowers added to your array.
 Price #1 is 0.95
 Price #2 is 0.40
 Price #3 is 1.05

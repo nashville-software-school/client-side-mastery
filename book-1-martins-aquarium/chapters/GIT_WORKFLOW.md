@@ -16,7 +16,7 @@ The checklist below is for you. You will use it during the practice exercise, an
 1. Add your fish component to the HTML
 1. Add, commit, push branch
     ```sh
-    git add --all
+    git add index.html
     git commit -m "Added Herbert the goldfish"
     git push origin {your initials}-fish
     ```
