@@ -41,7 +41,7 @@ Then you need the code to perform the task.
 
 ```js
 const add = (firstNumber, secondNumber) => {
-	const sum = firstNumber + secondNumber
+    const sum = firstNumber + secondNumber
 }
 ```
 
@@ -49,9 +49,9 @@ Lastly, you need to provide the answer.
 
 ```js
 const add = (firstNumber, secondNumber) => {
-	const sum = firstNumber + secondNumber
+    const sum = firstNumber + secondNumber
 
-	return sum
+    return sum
 }
 ```
 
@@ -61,8 +61,8 @@ Then you can invoke the function however many times you need to add two numbers 
 
 ```js
 const add = (firstNumber, secondNumber) => {
-	const sum = firstNumber + secondNumber
-	return sum
+    const sum = firstNumber + secondNumber
+    return sum
 }
 
 let result = add(17, 9)
