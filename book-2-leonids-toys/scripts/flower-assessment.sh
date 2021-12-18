@@ -42,13 +42,15 @@ const findExpensiveFlowers = () => {
 
 
 
-// Do not touch this code
+// **********  Do not touch this code  **********
+const getFlowers = () => flowers
 module.exports = {
-    findExpensiveFlowers, addFlower
+    findExpensiveFlowers, addFlower, getFlowers
 }
+// **********  Do not touch this code  **********
 ' > flowers.js
 
-echo 'const { addFlower, findExpensiveFlowers } = require("./flowers.js")
+echo 'const { addFlower, findExpensiveFlowers, getFlowers } = require("./flowers.js")
 
 addFlower({
     id: 3,
@@ -90,7 +92,7 @@ Price #3 is 1.05
 Automated Test: Verifying that there are only two expensive flowers.
 `)
 
-console.log(flowers)
+console.log(getFlowers())
 
 if (expensiveFlowers.length !== 2 || Array.isArray(expensiveFlowers[0])) {
     console.log(`
