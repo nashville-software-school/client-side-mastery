@@ -54,7 +54,9 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 
 ## Goal
 
-Use `index.html` to build a web page that lists fish, quotes, harvesting locations, and fish/tank care tips on the right side of the page. You will accomplish it by first decomposing the site into smaller components, and using tools like https://sketchboard.io/ to wireframe the layout.
+Use `index.html` to build a web page that lists fish, quotes, harvesting locations, and fish/tank care tips on the right side of the page. You will accomplish it by first decomposing the site into smaller components. You will be using your wireframing tool that you signed up for in the previous chapter.
+
+If you want to start with [pencil and paper](https://alessiobresciani.com/digital-marketing/use-pen-and-paper-wireframe-tools-to-create-incredible-user-experiences/), that's also perfectly fine.
 
 The more time you spend in the design stage, the less code you need to write.
 
@@ -68,18 +70,23 @@ The more time you spend in the design stage, the less code you need to write.
 >   1. Comfort level
 >   1. Date of purchase
 
-## Discussion Points
+## Planning
+
+### Low Fidelity Wireframe
 
 1. What are the visual components that make up the user interface _(e.g. fish list)_?
-1. What do you think the layout of the site should be? Draw it on [Miro](https://miro.com), [Sketchboard](https://sketchboard.io/), or with [pen and paper](https://alessiobresciani.com/digital-marketing/use-pen-and-paper-wireframe-tools-to-create-incredible-user-experiences/).
+1. Construct a wireframe for the layout of the site.
+
+### Data Design
+
 1. What are the properties of each fish that you will be representing in your HTML?
 1. What are the properties of the fish care tips that Martin wants on the side?
 1. What are the properties of the locations Martin has visited?
-1. What should be the class names for each?
+
+### Style and Layout Design
+
+1. What should be the class names for component?
+    1. For example, `locations` for the container element for all locations, `locations__header` for the header, and `location` for each individual card.
 1. Which semantic tags should you use?
-1. How can we use Flexbox to build a better layout of fish and locations?
-1. Which CSS files should be created? Consider the [@import](https://www.w3schools.com/csSref/pr_import_rule.asp) keyword to modularize your styling.
-
-## Time to Build
-
-You and you teammates will construct the site for Martin.
+    1. You can be as creative as you like.
+    1. There are very few hard rules when it comes to semantic tags. Refer to the image in chapter 2 for guidance.

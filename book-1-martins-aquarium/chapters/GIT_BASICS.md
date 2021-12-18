@@ -1,107 +1,65 @@
-# Git and Github Basics
+# Git Basics
 
-## Why Are You Learning This?
+This visualization is going to be a key resource for you and your teams as you go through the course. It is highly recommended that keep coming back to this chapter and have this image open in a browser tab every time you work with git until you are comfortable with the process.
 
-As a professional developer, you **will** be working on a team. Modern software development is a team sport, not an individual one. Team members need the ability to write code independently, but then merge their individual code together when it's time to release a version of the software.
+![](./images/git-basic-workflow.png)
 
-Git is the tool to allow a developer to work on an independent branch of the code base, and then merge in the work of others.
+## Status
 
-Github is a tool which allows you to easily share your code with other people, regardless of where they are located.
+The `git status` command is your BFF when working with git. It will always tell you the current status of your code. There is no such thing and typing `git status` too many times.
 
-## Configure Git on Your Machine
+As a professional developer, I use `git status` nearly 100% of the time when I'm working through the process of changing and committing code to history.
 
-### Git Version
+## Staging a Commit
 
-Before we configure git, let's make sure your computer is up-to-date with a modern version. Run the following command.
+As you work on your files, git will immediately mark them as changed. Remember, the main purpose of git is to track changes to your code.
 
-```sh
-git --version
-```
-
-You should see something like the following:
-
-```sh
-git version 2.29.2
-```
-
-Any version greater than `2.27` is sufficient. If you have a lesser version, you will need to upgrade. If you need to upgrade git, click [here](./GIT_UPGRADE.md).
-
-### Configuring Git
-
-First we'll configure git to use `main` as the default branch instead of `master`.
-
-```sh
-git config --global init.defaultBranch main
-```
-
-Next, we'll tell git who you are. You'll need to set a name and email in your global git `config` file. This makes it easy to know who committed those changes!
-
-![username and email](./images/git-username-email.png)
-
-First use the following command, but instead of typing `Your Github User Name`, enter your Github username for your account.
-
-```sh
-git config --global user.name "Your Github User Name"
-```
-
-Then use the following command, but instead of typing `email@example.com`, enter the email address you used when you created your Github account.
-
-```sh
-git config --global user.email "email@example.com"
-```
-
-Finally, we will tell git which _merge strategy_ to use when we do a `git pull`.
-
-```sh
-git config --global pull.rebase false
-```
-
-> **NOTE:** We don't expect you to understand the above. Don't worry.
-
-## Creating a Git Repository for Aquarium
-
-1. Navigate to your project directory
-    ```sh
-    cd ~/workspace/martins-aquarium
-    ```
-1. Type in the `git init` command
-1. You now have a git repository
-
-The magic is the `.git` directory that gets created when the `git init` command is executed. To see this directory you can use `ls -la`, which shows hidden files and directories. Operating systems will not show files and directories that begin with a period by default. They are considered hidden, or system assets.
-
-
-## Making Your First Commit
-
-### Workflow to Remember
-
-This is the process you will be following thousands of times while you are here at NSS. You tell git to track changes first, then you commit those changes, and then upload your changes to Github.
-
-```sh
-git add --all
-git commit -m "Message about commit"
-git push origin main
-```
-
-### Commit Aquarium
-
-Time to make your first commit on your aquarium project. Make sure you are in `~/workspace/martins-aquarium` and then tell git that you want to track all of your files.
-
-```sh
-git add --all
-```
+#### Check the current status of your files.
 
 ```sh
 git status
 ```
 
-Then tell git that you are ready to commit all of your code to the historical records that it keeps about your project.
+When you feel that your code is working and ready to be saved as an official version in the history of the project, you first need to add the files to a staging area. It is your way to tell git, "out of the all the files I've changed, here are the ones that I want to officially commit to history."
+
+> Do not put curly braces around your file name.
+>
+> Do not put curly braces around your file name.
+
+To add files to the staging area, you use the `git add {filename}` command.
+
+If, for example, you have changed both the `index.html` file and the `styles/main.css` file, but you only want to commit the CSS file, you would use the following command.
+
+```sh
+git add styles/main.css
+```
+
+ If you want to stage the HTML file, you would use the following command.
+
+```sh
+git add index.html
+```
+
+#### Check the current status of your files.
+
+```sh
+git status
+```
+
+
+## Commit to History
+
+Once all of the files have been added to the staging area, it's time to officially commit them with the following command.
+
+The `-m` flag in the command is important so that you, as the author, can leave a descriptive message about the changes you just made.
 
 ```sh
 git commit -m "My first version of my aquarium code"
 ```
 
- > _Beginner Hint!_ If you accidentally type `git commit` and hit enter without the `-m` and the message, you'll be taken to a screen that will make you feel like Alice through the looking glass. If this happens, for now just come see an instructor and we'll get you back to reality safely.
+> _Beginner Hint!_ If you accidentally type `git commit` and hit enter without the `-m` and the message, you'll be taken to a screen that will make you feel like Alice through the looking glass. If this happens, for now just come see an instructor and we'll get you back to reality safely.
 
+#### Check the current status of your files.
 
 ```sh
 git status

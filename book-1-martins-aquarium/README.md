@@ -9,9 +9,12 @@
 | 💻 | [C# Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_C_SHARP.md) |
 | 1 | [Terminal Basics](./chapters/CLI_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
 | 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |
-| 3 | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md) <br/> <sub style="font-size:0.85rem;">#html</sub> |
-| 4 | [Track Aquarium Changes](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
-| 5 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
+| 3 | [Wireframes for User Interfaces](./chapters/MA_WIREFRAMES.md) <br/> <sub style="font-size:0.85rem;">#html #wireframes</sub> |
+| 4 | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md) <br/> <sub style="font-size:0.85rem;">#html #design #properties</sub> |
+| 5 | [Git Setup](./chapters/GIT_SETUP.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
+| 6 | [Git Workflow](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
+| 7 | [Github Setup](./chapters/GIT_REMOTE_BACKUP.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
+| 8 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
 | 👨‍👨‍👦‍👦 | **Group Project** |
 
 

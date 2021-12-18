@@ -165,12 +165,6 @@ The final touch is to center align the text in each of the interest boxes.
 ![](./images/sally-center-aligned-text.png)
 
 
-## Additional References
-1. [HTML Semantic Tag Cheatsheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
-1. [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-1. [CSS Tricks - BEM](https://css-tricks.com/bem-101/)
-1. [Introduction to BEM - A front-end methodology](https://www.youtube.com/watch?v=IO-4Z32O--c)
-
 ## Practice: Coffee Houses of Nashville
 
 > The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
@@ -249,3 +243,11 @@ Creating visual hierarchies.
 
 Background color/image - ensure the copy (text color) has good contrast and is legible. Use the Dev Tools to inspect your color choices. (see dev tool image above).
 
+## Additional References
+
+This is supplementary content. It is not required, but is for your additional learning if you wish.
+
+1. [HTML Semantic Tag Cheatsheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
+1. [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+1. [CSS Tricks - BEM](https://css-tricks.com/bem-101/)
+1. [Introduction to BEM - A front-end methodology](https://www.youtube.com/watch?v=IO-4Z32O--c)
