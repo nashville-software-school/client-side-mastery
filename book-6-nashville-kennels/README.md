@@ -2,7 +2,11 @@
 
 ## Chapters
 
-| #  | Nashville Kennels | Kandy Korner |
+🚧🚧🚧 NO! Get outta here! It ain't ready!! 🚧🚧🚧
+
+
+
+<!-- | #  | Nashville Kennels | Kandy Korner |
 |--|--|--|
 | 1 | [Basic React Vocabulary](./chapters/REACT_BASICS.md) | [Store Locations](./chapters/KK_STORES.md) |
 | 2 | [Kennel API](./chapters/KENNEL_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub>  | [Kandy Korner API](./chapters/KANDY_API.md) |
@@ -23,3 +27,4 @@
 | 14 | [Deploy Application and API to Heroku](./chapters/JSON_SERVER_HEROKU.md) | Deploy Kandy Korner to Heroku |
 | 🌰 | Group Project: React Nutshell |  |
 | 😱 | Capstone time! |[Guidelines](./chapters/CAPSTONES.md)  |
+ -->
