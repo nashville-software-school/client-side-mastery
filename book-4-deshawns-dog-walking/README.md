@@ -8,14 +8,16 @@ In this book, you will develop the core skill of debugging JavaScript code in a 
 
 ## Chapters
 
-| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | ☕️ 🧁 <br/> Brewed Awakenings |
-|--|--|--|
-| 1 | [Using the Debugger](./chapters/DEBUGGING_INTRO.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> |  |
-| 2 | [Finding and Squashing Bugs](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #breakpoints</sub> | [Broken Receipts](./chapters/BA_DEBUGGING.md) |
-| 3 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Coffee ERD](./chapters/BA_ERD.md) |
-| 4 | [Show Walker Service Area](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) |
-| 5 | [Discover and Debug Event Listeners](./chapters/DD_EVENT_LISTENER_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> |  [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) |
-| 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | |
+| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | ☕️ 🧁 <br/> Brewed Awakenings <br/><sub>(_Pattern Practice_)</sub> |  🍎 🚣🏽‍♀️ <br/> Cider Falls Park <br/><sub>(_Creation_)</sub>
+|--|--|--|--|
+| 1 | [Using the Debugger](./chapters/DEBUGGING_INTRO.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> |  | [Design: Wireframes](./chapters/CIDERFALLS_INTRO.md) |
+| 2 | [Finding and Squashing Bugs](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #breakpoints</sub> | [Broken Receipts](./chapters/BA_DEBUGGING.md) | [Design: ERD](./chapters/CIDERFALLS_DATA.md) |
+| 3 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Coffee ERD](./chapters/BA_ERD.md) | [Design: Algorithms](./chapters/CIDERFALLS_ALGORITHM.md) |
+| 4 | [Show Walker Service Area](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) | [You Are Here](./chapters/CIDERFALLS_RIVERS_AND_TRAILS.md) |
+| 5 | [Discover and Debug Event Listeners](./chapters/DD_EVENT_LISTENER_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) | [](./chapters/CIDERFALLS_.md) |
+| 6 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> |  |  |
+| 7 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> |  |  |
+| 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | | |
 
 ## Explorer Chapters
 
