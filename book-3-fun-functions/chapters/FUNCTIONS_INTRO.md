@@ -89,14 +89,17 @@ const createFancyName = (name) => {
 }
 
 const athena = createFancyName("Athena Perez") // Argument value is "Athena Perez"
+console.log(athena)
 // output: "Her Majesty, Athena Perez."
 
 
 const charisse = createFancyName("Charisse Ford") // Argument value is "Charisse Ford"
+console.log(charisse)
 // output: "Her Majesty, Charisse Ford."
 
 
 const jenna = createFancyName("Jenna Solis") // Argument value is "Jenna Solis"
+console.log(jenna)
 // output: "Her Majesty, Jenna Solis."
 ```
 
