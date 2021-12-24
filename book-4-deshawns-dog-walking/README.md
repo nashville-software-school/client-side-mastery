@@ -1,6 +1,10 @@
 # Book 3 - DeShawn's Dog Walking Service
 
-In this book, you will develop the core skill of debugging JavaScript code in a browser. You will also be introduced to handling click events when the user interacts with a web page.
+In this book, you will be introduced to three concepts.
+
+1. Debugging JavaScript code.
+1. Handling browser generated events.
+1. Data relationships and how to visualize them.
 
 | | |
 |:---:|:---|
@@ -15,13 +19,13 @@ In this book, you will develop the core skill of debugging JavaScript code in a 
 | 3 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Coffee ERD](./chapters/BA_ERD.md) | [Design: Algorithms](./chapters/CIDERFALLS_ALGORITHM.md) |
 | 4 | [Show Walker Service Area](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) | [You Are Here](./chapters/CIDERFALLS_RIVERS_AND_TRAILS.md) |
 | 5 | [Discover and Debug Event Listeners](./chapters/DD_EVENT_LISTENER_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) | [](./chapters/CIDERFALLS_.md) |
-| 6 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> |  |  |
-| 7 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> |  |  |
+| 6 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> |  | [Cider Falls Services](./chapters/CIDERFALLS_SERVICES.md) |
+| 7 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#many-to-many #data</sub> |  |  |
 | 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | | |
 
 ## Explorer Chapters
 
-| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking | ☕️ 🧁 <br/> Brewed Awakenings |
-|--|--|--|
-| 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | |
-| 2 | [City State](./chapters/DD_CITY_STATE_.md) |  |
+| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking | ☕️ 🧁 <br/> Brewed Awakenings | 🍎 🚣🏽‍♀️ <br/> Cider Falls Park |
+|--|--|--|--|
+| 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) | |
+| 2 | [City State](./chapters/DD_CITY_STATE_.md) | | |

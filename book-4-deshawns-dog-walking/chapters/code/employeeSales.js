@@ -1,4 +1,16 @@
 
+const employeeOrders = (employee) => {
+    const fulfilledOrders = 0
+
+    for (const order of orders) {
+        if (order.employeeId === employee.id) {
+            // Increment the number of fulfilled orders
+        }
+    }
+
+    // Return how many orders were fulfilled
+}
+
 document.addEventListener(
     "click",
     (clickEvent) => {
@@ -9,13 +21,7 @@ document.addEventListener(
             for (const employee of employees) {
                 if ( === parseInt(employeeId)) {
 
-                    const employeeOrders = orders.filter(  // <--- Go to YouTube and search "javascript array filter"
-                        (order) => {
-                            if (order.employeeId === employee.id) {
-                                return true
-                            }
-                        }
-                    )
+                    const orderCount = employeeOrders()
 
                     window.alert(` ${employee.name} sold ${} products `)
                 }
