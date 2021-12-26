@@ -1,6 +1,6 @@
 # Book 2 - Leonid's Bespoke Toy Shoppe
 
-In this book, you will gain the knowlege and understanding of working with data in the JavaScript language. You will apply that knowledge in two small projects and then take a self-assessment to gauge how much you have learned.
+In this book, you will gain the knowlege and understanding of working with data in the JavaScript language. You will apply that knowledge in two projects and then take a self-assessment to gauge how much you have learned.
 
 ## Chapters
 

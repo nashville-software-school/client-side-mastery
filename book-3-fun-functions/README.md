@@ -13,7 +13,7 @@ In this book, you will gain the knowlege and understanding of working with funct
 | 5 | [Design a Car Factory](./chapters/FUNCTIONS_CAR_FACTORY.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | [Grading Students](./chapters/FUNCTIONS_STUDENTS.md) |
 | 6 | [Design a Candy Factory](./chapters/FUNCTIONS_CANDY_FACTORY.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | |
 | 7 | [HTML Factory Functions](./chapters/FUNCTIONS_HOT_DOGS.md) <br/> <sub style="font-size:0.85rem;">#html #factory-function</sub> | [Get Rich and Famous by Throwing Pottery](./chapters/FUNCTIONS_POTTERY.md) |
-| 🎓 | [Self-Assessment](./chapters/JS_DATA_ASSESSMENT.md) | |
+| 🎓 | [Self-Assessment](./chapters/FUNCTIONS_ASSESSMENT.md) | |
 
 ## Explorer Chapters
 

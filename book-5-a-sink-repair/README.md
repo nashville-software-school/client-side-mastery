@@ -1,4 +1,4 @@
-# Book 5 - Sink Repair Service
+# Book 6 - Sink Repair Service
 
 In this book, you will be introduced to the basics of asynchronous programming and working with Web APIs.
 
