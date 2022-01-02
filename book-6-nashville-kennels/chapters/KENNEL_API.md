@@ -1,4 +1,4 @@
-# Nashville Kennels API
+# Ch 5: Nashville Kennels API
 
 Before you start building your React application, you need a database to persist the data for it. Please follow these steps to get it set up.
 
@@ -48,7 +48,7 @@ Then copy the following JSON into the `database.json` file.
 Every time you want to work on your Nashville Kennels application, you'll need to ensure that the API is running.
 
 ```sh
-json-server -p 8088 database.json
+json-server -p 8088 database.json -w
 ```
 
 Go ahead and create a few more pets and customers within each's collections.
@@ -56,3 +56,7 @@ Go ahead and create a few more pets and customers within each's collections.
 ## Backup to Github
 
 Make sure you create a repository on your Github account for your API, and hook up the `kennel-api` directory. Yes, there's only one file being tracked in this repository, and that's ok.
+
+[Return  to Book 6's Table of Contents](../README.md) 
+
+[Ch 6: Navigation Bar with Routing](./REACT_ROUTING.md)
