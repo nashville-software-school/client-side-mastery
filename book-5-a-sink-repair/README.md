@@ -15,7 +15,6 @@ In this book, you will be introduced to the basics of asynchronous programming a
 | 7 | [Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> | [Buttons' Schedule](./chapters/BC_SCHEDULE_LIST.md) |
 | 8 | [Denying Service Requests](./chapters/AS_HTTP_DELETE.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #DELETE</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) |
 | 🎓 | [Self-assessment](./chapters/BOOK_5_ASSESSMENT.md) |  |
-| 👩‍👩‍👧‍👧 | Vanilla JavaScript Group Project |  |
 
 ## Explorer Chapters
 
