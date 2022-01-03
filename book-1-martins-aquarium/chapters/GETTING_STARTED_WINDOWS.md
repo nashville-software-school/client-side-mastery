@@ -82,34 +82,40 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ## Ubuntu
 
-Once you've completed the above steps **and** restarted your computer, you will [install Ubuntu from the Microsoft Store](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot:overviewtab).
+Once you've completed the above steps **and** restarted your computer, you will [install Ubuntu from the Microsoft Store](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab).
 
 This is needed ***before*** you install the Windows Terminal Preview below.
 
-## Windows Terminal Preview
+## Windows Terminal
 
-Later in the instructions, we will ask you to type a command into your terminal. For Windows, this is the **Windows Terminal (Preview)** application using **Ubuntu**.
+Later in the instructions, we will ask you to type a command into your terminal. For Windows, this is the **Windows Terminal** application using **Ubuntu**.
 
-Visit the [Windows Terminal Preview](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n8g5rfz9xk3?cid=msft_web_chart&activetab=pivot:overviewtab) download page and open it in the Microsoft Store App. This will be your default terminal (using Ubuntu) which you will use to navigate your file system, and run development tools throughout the course.
+Visit the [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) download page and open it in the Microsoft Store App. This will be your default terminal (using Ubuntu) which you will use to navigate your file system, and run development tools throughout the course.
 
 Once Windows Terminal Preview is installed:
 
 1. Go to the `Start` menu (windows key)
-2. search for `Windows Terminal Preview`
-3. Open `Windows Terminal (Preview)`
-4. By default, this will open a new PowerShell terminal window. _Do **not** use the PowerShell terminal window._
-5. Click the down arrow <kbd>﹀</kbd> located at the top of the terminal window.
-6. Select **Ubuntu** to open a new **Ubuntu Tab**.
+1. search for `Windows Terminal`
+1. Open `Windows Terminal`
+1. By default, this will open a new PowerShell terminal window. _Do **not** use the PowerShell terminal window._
+1. Click the down arrow <kbd>﹀</kbd> located at the top of the terminal window.
+1. Select **Ubuntu** to open a new **Ubuntu Tab**.
 
     > _Ubuntu will begin to install and you'll be asked to wait for a minute or two for the installation to complete._
+    >
+    > **IMPORTANT:** It is very important that you remember both the username and password that you create in the next step. If you need to write them down to remember them, that's a great strategy.
 
-4. Once Ubuntu is done installing, you'll be prompted to create a new user (and its password).
+1. Once Ubuntu is done installing, you'll be prompted to create a new user (and its password).
+
 
 ## Ubuntu Starting Directory
 
 By default, when you start the Ubuntu shell in Windows Terminal, your starting directory is your Windows user directory. You need to change it so that it starts in your Linux user directory.
 
-Watch the [WSL Ubuntu Starting Directory](https://youtu.be/1hk6bWD8_5I) video to make that change.
+1. In the terminal type `cd` and press enter.
+1. Type `pwd` and press enter. The path that outputs is called the **home directory** for Ubuntu.
+
+Watch the [WSL Ubuntu Starting Directory](https://www.youtube.com/watch?v=n1YSFT5VK-Y) video to ensure that when you run Ubuntu, you start in the correct directory.
 
 ## Node
 
