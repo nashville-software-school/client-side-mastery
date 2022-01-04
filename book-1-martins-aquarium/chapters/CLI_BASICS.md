@@ -48,7 +48,7 @@ Create another sub-directory named `scripts` and create a file named `main.js` i
 
 ```sh
 mkdir scripts
-touch sripts/main.js
+touch scripts/main.js
 ```
 
 That's all you need to do in this chapter. Below are optional challenges you can try if you want to.
