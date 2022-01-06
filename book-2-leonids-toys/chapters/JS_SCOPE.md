@@ -92,7 +92,6 @@ console.log(doesItHaveOne) // doesItHaveOne is undefined
 1. [JavaScript | The Scope Chain](https://www.youtube.com/watch?v=FCAOcYazy9c)
 1. [Javascript Tutorial | Scope & Closures | Ep20](https://www.youtube.com/watch?v=S3cBIww_6os)
 1. [Environment, Scope and Closures in JS / Intro to JavaScript ES6 programming, lesson 16](https://www.youtube.com/watch?v=LhSCEWHazAU)
-1. [Keeping Track of "This" in JavaScript](https://www.youtube.com/watch?v=JduQUNn7L4w)
 
 ## Scope Exercises
 

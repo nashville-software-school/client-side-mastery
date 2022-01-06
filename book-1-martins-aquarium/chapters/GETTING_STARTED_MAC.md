@@ -107,7 +107,7 @@ open ~/.zshrc
 
 2. ##### _Copy the following code and paste it at the end of the file_
 ```sh
-export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 ```
 
 3. ##### _Save your changes_ (<kwd>⌘S</kwd>), _but keep the file open._

@@ -105,5 +105,13 @@ const addPhoneToInventory = (phoneObject, price) => {
 
 }
 
-addPhoneToInventory(pixel, 499.99)
+// Add the first toy in the array to the Map and set its price
+addPhoneToInventory(toys[0], 499.99)
 ```
+
+### Steps
+
+1. Delete the price property on the objects in your array
+2. Create a new Map()
+3. Complete the `addPhoneToInventory` function that will use the `.set()` method on the Map to store prices for toys.
+4. Invoke `addPhoneToInventory` as many times as you have toys in your array using square bracket notation to access each toy _(see above example)_.
