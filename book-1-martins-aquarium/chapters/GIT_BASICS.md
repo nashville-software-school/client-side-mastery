@@ -86,8 +86,12 @@ The first thing you need to do is create a new repository on Github's platform t
 1. Scroll down and click the green "Create Repository" button.
 1. Copy the repository's connection string.
     ![](./images/copy-github-connection-string.gif)
-1. Follow the second set of instructions.
-    ![](./images/add-origin.png)
+1. In your terminal, in the Martin's Aquarium directory, enter in the following commands.
+    ```sh
+    git remote add {paste what you copied above, but not these curly braces}
+    git branch -M main
+    git push -u origin main
+    ```
 
 Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your aquarium HTML, JavaScript and CSS files in it.
 
