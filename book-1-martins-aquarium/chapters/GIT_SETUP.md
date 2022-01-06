@@ -28,13 +28,11 @@ Any version greater than `2.27` is sufficient. If you have a lesser version, you
 
 ### Configuring Git
 
-Follow these instructions carefully. Do not skip any steps. It will be no sense what you're doing. Do it anyway.
-
-Make sure you are in the `martins-aquarium` project directory.
+Follow these instructions carefully. Do not skip any steps. It will make no sense for now, but that's ok. It's a necessary process.
 
 ## Basic Configuration Settings
 
-You don't need to understand these. Just run them.
+You don't need to understand these. Just run them. You can be in any directory for these commands.
 
 ```sh
 git config --global init.defaultBranch main
@@ -42,6 +40,8 @@ git config --global pull.rebase false
 ```
 
 ## Personal Configuration Settings
+
+You can be in any directory for these commands.
 
 First use the following command, but instead of typing `Mary Williams`, enter your name.
 
