@@ -84,7 +84,7 @@ The first thing you need to do is create a new repository on Github's platform t
 1. Choose "New repository".
 1. In the "Repository name" field, enter in `nss-aquarium`.
 1. Scroll down and click the green "Create Repository" button.
-1. Copy the repository's connection string.
+1. **Make sure the SSH button is selected**, and copy the repository's connection string.
     ![](./images/copy-github-connection-string.gif)
 1. In your terminal, in the Martin's Aquarium directory, enter in the following commands.
     ```sh
