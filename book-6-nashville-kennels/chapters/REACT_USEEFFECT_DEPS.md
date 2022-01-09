@@ -79,9 +79,8 @@ Next, let's update the `<Home>` component.
 
 ```jsx
 import React, { useState, useEffect } from "react";
-import { AnimalSpotlight } from "../components/animal/AnimalSpotlight"
-import { getRandomId } from "../modules/AnimalManager"
-import { PropsAndState } from "./PropsAndState";
+import { AnimalSpotlight } from "./components/animal/AnimalSpotlight"
+import { getRandomId } from "./modules/AnimalManager"
 
 export const Home = () => {
   const [spotlightId, setSpotlightId] = useState(0);
@@ -109,7 +108,6 @@ export const Home = () => {
     </>
   );
 };
-
 ```
 
 As you can see the `<Home>` component uses the new `<AnimalSpotlight>` component. It also refers to a new method on `AnimalManager` called `getRandomId()`.
@@ -139,6 +137,7 @@ Also, note that clicking the "reload" button has no affect on the `<AnimalSpotli
 
 To fix this issue, we must tell React to watch the `animalId` prop. We do that by including it in the `useEffect()` array argument.
 
+> AnimalSpotlight.js
 ```js
  useEffect(() => {
     getAnimalById(animalId).then(animal => {

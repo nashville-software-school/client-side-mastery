@@ -24,7 +24,8 @@ Here is the flow of the AnimalEditForm component:
 
 ```jsx
 import React, { useState, useEffect } from "react"
-import AnimalManager from "../../modules/AnimalManager"
+import {useNavigate, useParams} from "react-router-dom";
+import {getAnimalById, updateAnimal} from "../../modules/AnimalManager"
 import "./AnimalForm.css"
 
 export const AnimalEditForm = () => {
@@ -32,7 +33,7 @@ export const AnimalEditForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const {animalId} = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleFieldChange = evt => {
     const stateToChange = { ...animal };
@@ -46,18 +47,18 @@ export const AnimalEditForm = () => {
 
     // This is an edit, so we need the id
     const editedAnimal = {
-      id: props.match.params.animalId,
+      id: animalId,
       name: animal.name,
       breed: animal.breed
     };
 
-  AnimalManager.update(editedAnimal)
-    .then(() => history.push("/animals")
+  updateAnimal(editedAnimal)
+    .then(() => navigate("/animals")
     )
   }
 
   useEffect(() => {
-    AnimalManager.getAnimalById(animalId)
+    getAnimalById(animalId)
       .then(animal => {
         setAnimal(animal);
         setIsLoading(false);
@@ -101,7 +102,6 @@ export const AnimalEditForm = () => {
     </>
   );
 }
-
 ```
 
 ## Route for Showing Animal Edit Form
@@ -109,25 +109,21 @@ export const AnimalEditForm = () => {
 Next, define a new route in **`<ApplicationViews>`** for editing a single animal. Be sure to import the **`<AnimalEditForm>`** component.
 
 ```jsx
-<Route path="/animals/:animalId(\d+)/edit">
-    if (isAuthenticated()) {
-      return <AnimalEditForm />
-    } else {
-      return <Redirect to="/login" />
-  }
-</Route>
+<Route path="/animals/:animalId/edit" element={
+  <PrivateRoute>
+    <AnimalEditForm />
+  </PrivateRoute>
+} />
 ```
 
-You will also need to add `exact` to the route for `AnimalDetail`
+You will also need to add `exact` to the route for `AnimalDetail`.  This path should already exist, so edit the current one.
 
 ```jsx
-<Route exact path="/animals/:animalId(\d+)">
-  if (isAuthenticated()) {
-    return <AnimalDetail />
-  } else {
-    return <Redirect to="/login" />
-  }
-</Route>
+<Route exact path="/animals/:animalId" element={
+  <PrivateRoute>
+    <AnimalDetail />
+  </PrivateRoute>
+} />
 ```
 
 At this point you should be able to see the edit animal form with a URL like this: `http://localhost:3000/animals/2/edit`
@@ -139,26 +135,14 @@ At this point you should be able to see the edit animal form with a URL like thi
 In the **`<AnimalCard>`** component, you will add a new button: `Edit`. When the user clicks the button, the route should change to `/animals/:animalId/edit`.
 
 ```jsx
-<button type="button"
-  onClick={() => history.push(`/animals/${animal.id}/edit`)}>
-  Edit
-</button>
+<Link to={`/animals/${animal.id}/edit`}>
+  <button>Edit</button>
+</Link>
 ```
 
 ![edit animal button](./images/animals-with-edit-button.png)
 
 At this point, view an AnimalCard. You should see the `Edit` button. Test it out.
-
-Oh no, **Error**. `TypeError: Cannot read property 'push' of undefined`. What is that? We need to import and `useHistory` from `react-router-dom` into the AnimalCard.
-
-> AnimalCard.js
-
-```js
-const history = useHistory();
-```
-
-
-Test again. You should be able to navigate to the animal edit view.
 
 > **NOTE:** It _still_ won't fully work yet...but we're close...
 
@@ -169,7 +153,7 @@ Test again. You should be able to navigate to the animal edit view.
 Finally, define a method in your `AnimalManager` for the update fetch call. You will use PUT in the HTTP request. This method will take the updated animal as an object and save to the database.
 
 ```js
-update(editedAnimal) {
+export const updateAnimal = (editedAnimal) => {
   return fetch(`${remoteURL}/animals/${editedAnimal.id}`, {
     method: "PUT",
     headers: {
@@ -182,10 +166,6 @@ update(editedAnimal) {
 
 ![animation showing animal edit working](./images/p13zLpAnWm.gif)
 
-## Practice: Add Drop the dropdowns for Location and Customer
-1. Refer back to the `AnimalForm` and include dropdowns for Location and 
-Customer. You will need to include fetch calls for the list data and `useEffect`.
-1. Make sure your data will support each of these requests. Double check your properties on each object and that they relate to good data.
 
 ## Practice: Edit Employees, Locations, and Owners
 
@@ -194,6 +174,11 @@ Customer. You will need to include fetch calls for the list data and `useEffect`
 1. In the edit form components, fetch the data of the employee, location, or owner within a `useEffect()` and pre-fill the forms.
 1. Add the appropriate routes to `ApplicationViews` to render the edit form when the user clicks the edit button.
 1. Update **`<EmployeeManager>`**, **`<LocationManager>`** and **`<OwnerManager>`** with an `update` method to modify existing objects in the API.
+
+## Bonus Practice: Add Drop the dropdowns for Location and Customer
+1. Refer back to the `AnimalForm` and include dropdowns for Location and 
+Customer. You will need to include fetch calls for the list data and `useEffect`.
+1. Make sure your data will support each of these requests. Double check your properties on each object and that they relate to good data.
 
 [Return  to Book 6's Table of Contents](../README.md)
 
