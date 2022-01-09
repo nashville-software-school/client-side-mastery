@@ -65,33 +65,39 @@ Because **`<AnimalCard />`** is included in the render method of **`<AnimalList 
 
 Modify the **`<AnimalCard />`** render method to display the props using dot notation.
 
+The below AnimalCard contains a picture of a dog.  You may add this image to your code or use a different one.
+
+Place whichever dog image into `public/images`  If this directory does not exist, create it.
+
+[Dog Image (./images/dog.svg)](./images/dog.svg)
+
 ```js
 export const AnimalCard = ({ animal }) => {
-  return (
-    <div className="card">
-      <div className="card-content">
-        <picture>
-          <img src={require('./dog.svg')} alt="My Dog" />
-        </picture>
-        <h3>Name: <span className="card-petname">
-          {animal.name}
-        </span></h3>
-        <p>Breed: {animal.breed}</p>
+    return (
+      <div className="card">
+        <div className="card-content">
+          <picture>
+            <img src={'/images/dog.svg'} alt="My Dog" />
+          </picture>
+          <h3>Name: <span className="card-petname">
+            {animal.name}
+          </span></h3>
+          <p>Breed: {animal.breed}</p>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 ```
 
-Create a CSS file for Animal:
-
-```sh
-touch components/animal/Animal.css
-```
+Add CSS to the Animal:
 
 > components/animal/Animal.css
 
 ```css
+img {
+  width: 50px;
+}
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

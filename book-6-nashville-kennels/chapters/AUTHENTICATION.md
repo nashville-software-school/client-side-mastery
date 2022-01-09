@@ -20,45 +20,6 @@ Here's the process this code follows.
 1. If the user already exists, set the `kennel_customer` item in session storage, and display the Dashboard.
 1. If the user does not exist, alert that fact to the user.
 
-## Requiring User to Login
-
-What determines if a user has authenticated? It's the `kennel_customer` key that you set in session storage. If the key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
-
-Refactor `ApplicationViews` to include a state value for `isAuthenticated` as well as a function that sets session storage.
-
-
-> ApplicationViews.js
-```js
-const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
-
-const setAuthUser = (user) => {
-	sessionStorage.setItem("kennel_customer", JSON.stringify(user))
-	setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
-}
-```
-Next add the conditional logic checking the value of `isAuthenticated`. If there is not a user in session storage, `Redirect` to the login. Be sure to import `Redirect` from react-router-dom. 
-
-> `Redirect` - The new location will override the current location in the history stack
-
-Since the state of `isAuthenticated` lives in ApplicationViews, we need to pass the function that updates state to the `Login` and `Register` components.
-
-```js
-<Route exact path="/animals">
-	{isAuthenticated ? <AnimalList /> : <Redirect to="/login" />}
-</Route>
-
-<Route path="/login">
-	<Login setAuthUser={setAuthUser}/>
-</Route>
-
-<Route path="/register">
-	<Register setAuthUser={setAuthUser}/>
-</Route>
-```
-
-## Check your DATA
-Each customer will need an email property.
-
 ## Installing Authentication Components
 
 Now install the mock authentication components into your application.
@@ -67,7 +28,7 @@ Now install the mock authentication components into your application.
 1. Run the following command in that directory.
 
     ```sh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nss-day-cohort-47/client-side-mastery/master/book-4-nashville-kennels/chapters/scripts/auth.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/blob/evening-cohort-17/book-6-nashville-kennels/chapters/scripts/auth.sh"
     ```
 1. Go to Visual Studio Code and you will see a new `src/components/auth` directory with 4 new files in it.
    1. `Register.js`
@@ -75,7 +36,96 @@ Now install the mock authentication components into your application.
    1. `Login.css`
    1. `logo.png`
 
-**Check for react-router-dom useHistory()** You may need to import the `useHistory` into your Login and Register components and then invoke it.
+## Requiring User to Login
+
+What determines if a user has authenticated? It's the `kennel_customer` key that you set in session storage. If the key exists, the user is authenticated. If it does not exist, the user is not authenticated and should be presented with the login component.
+
+The entry point of our app is in `kennel.js`. At our entry point, we need to determine if the user is already authenticated, create a method to set the authentication (login) and a method to remove the authentication (logout).  Finally, we need to pass the appropriate props to `NavBar` and`ApplicationViews`.
+
+> kennel.js
+```js 
+import React, {useState} from "react"
+import { NavBar } from "./nav/NavBar"
+import { ApplicationViews } from "../ApplicationViews"
+import "./Kennel.css"
+
+export const Kennel = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
+
+    const setAuthUser = (user) => {
+        sessionStorage.setItem("kennel_customer", JSON.stringify(user))
+        setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+    }
+
+    const clearUser = () => {
+        sessionStorage.clear();
+        setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+      }
+    
+      return (
+        <>
+            <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated}/>
+            <ApplicationViews 
+                setAuthUser={setAuthUser}
+                isAuthenticated={isAuthenticated}
+                setIsAuthenticated={setIsAuthenticated}
+            />
+        </>
+    )
+}
+```
+
+Refactor `ApplicationViews` to pass in the state value of `isAuthenticated` and the method `setIsAuthenticated` as props.
+
+
+> ApplicationViews.js
+```js
+export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
+```
+
+
+Next add the conditional logic checking the value of `isAuthenticated`. If there is not a user in session storage, users should be redirected to the login. To get started with this, we are going to define two new functions for checking and setting the authentication.
+
+Add the follwing code to your `ApplicationViews.js`, just below the definition.
+
+```js
+const PrivateRoute = ({ children }) => {
+        return isAuthenticated ? children : <Navigate to="/login" />;
+    }
+  
+    const setAuthUser = (user) => {
+      sessionStorage.setItem("kennel_customer", JSON.stringify(user))
+      setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+    }
+```
+You will not be expected to fully understand the above code piece, only that it is necessary for authentication routes.  Briefly, `PrivateRoute` is redirecting users to `/login` if `isAuthenticated` is false and allowing users to the route if `isAuthenticated` is true.  
+
+The `?` syntax is a ternary (shortened sytax for an if statement).  The `setAuthUser` is where the user gets set in sessionStorage (in the browser) to be marked as authenticated whenever a new route is requested. 
+
+Continue to update `ApplicationViews.js` by adding routes for `/login` and `/register`.
+
+Remember these Routes need to be added between your `<Routes>` and `</Routes>` tags.
+
+> ApplicationViews.js
+```js
+ <Route exact path="/login" element={<Login setAuthUser={setAuthUser} />} />
+<Route exact path="/register" element={<Register />} />
+```
+
+Finally, you will need to define which routes are private.  You do this by wrapping `<PrivateRoute>` tags around the component you are rendering.  For example in ApplicationViews.js your `/animals route should now look like:
+
+```js
+<Route excat path="/animals" element={
+    <PrivateRoute>
+        <AnimalList />
+    </PrivateRoute>
+} />
+```
+## Check your DATA
+Each customer will need an email property.
+
+
+**Check for react-router-dom useNavigate()** You may need to import the `useNavigate` into your Login and Register components and then invoke it.
 
 ## Register an Account
 

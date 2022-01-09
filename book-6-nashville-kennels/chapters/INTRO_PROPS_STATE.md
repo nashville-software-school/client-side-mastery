@@ -28,7 +28,7 @@ Display this component from the *Kennel* component and pass in your name. Don't 
 > Kennel.js
 ```jsx
 //--------
- <PropsAndState yourName="Brenda" />
+ <PropsAndState yourName="Lynn" />
   <h2>Animals</h2>
   <article className="animals">
     <AnimalCard />

@@ -38,13 +38,13 @@ Just like loading the animals into the **`<AnimalList>`**, load one animal's det
 import React, { useState, useEffect } from 'react';
 import { getAnimalById } from '../../modules/AnimalManager';
 import './AnimalDetail.css';
-import { useParams, useHistory } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 export const AnimalDetail = () => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
 
   const {animalId} = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     //getAnimalById(id) from AnimalManager and hang on to the data; put it into state
@@ -98,13 +98,9 @@ In this example, the value of `1` is captured by React Router and stored in an `
 
 ```jsx
 {/* Make sure you add the `exact` attribute here */}
-<Route exact path="/animals">
-  <AnimalList />
-</Route>
+<Route exact path="/animals" element={<AnimalList />} />
+<Route path="/animals/:animalId" element={<AnimalDetail />} />
 
-<Route path="/animals/:animalId(\d+)">
-  <AnimalDetail />
-</Route>
 
 {/*
   This is a new route to handle a URL with the following pattern:

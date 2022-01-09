@@ -8,31 +8,29 @@ In this chapter, you are going to learn how to use use a form to express the sta
 
 First, update your routes in ApplicationViews with a new route for the form.
 
-Remember, you'll also have to `import` the new AnimalForm component once it's created
+Create the file `components/animals/AnimalForm.js`.  Remember, you'll also have to `import` the new AnimalForm component once it's created. 
 
 ```jsx
-import { AnimalForm } from './animal/AnimalForm'
+import { AnimalForm } from './components/animal/AnimalForm'
 ```
 
 ```jsx
 // Our shiny new route.
-<Route path="/animals/create">
-  <AnimalForm />
-</Route>
+<Route path="/animals/create" element={<AnimalForm />} />
 ```
 
-Update the **`AnimalsList`** to `useHistory`. Be sure to import it from `react-router-dom`.
+Update the **`AnimalsList`** to `useNavigate`. Be sure to import it from `react-router-dom`.
 ```jsx
-const history = useHistory();
+const navigate = useNavigate();
 
 ```
 
 
 ## Add a button for Admitting a New Animal
 
-Update **`<AnimalList>`** with a button that uses the `history.push()` to change the URL of the browser.
+Update **`<AnimalList>`** with a button that uses the `navigate()` to change the URL of the browser.
 
-**NOTE** You will need to wrap the return in a React.Fragment. Remember, only one element can be returned.
+**NOTE** You will need to wrap the return in a React.Fragment (<></>). Remember, only one element can be returned.
 
 > AnimalList.js
 
@@ -41,7 +39,7 @@ Update **`<AnimalList>`** with a button that uses the `history.push()` to change
 <section className="section-content">
   <button type="button"
       className="btn"
-      onClick={() => {history.push("/animals/create")}}>
+      onClick={() => {navigate("/animals/create")}}>
       Admit Animal
   </button>
 </section>
@@ -88,7 +86,7 @@ We will also incorporate `isLoading` (Dynamic Routing Part 2) so a user cannot s
 
 ```js
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { addAnimal } from '../../modules/AnimalManager';
 import './AnimalForm.css'
 
@@ -109,7 +107,7 @@ export const AnimalForm = () => {
 	const [locations, setLocations] = useState([]);
 	const [customers, setCustomers] = useState([]);
 
-	const history = useHistory();
+	const navigate = useNavigate();
 
 	//when a field changes, update state. The return will re-render and display based on the values in state
 	// NOTE! What's happening in this function can be very difficult to grasp. Read it over many times and ask a lot questions about it.
@@ -153,7 +151,7 @@ export const AnimalForm = () => {
 			//invoke addAnimal passing animal as an argument.
 			//once complete, change the url and display the animal list
 			addAnimal(animal)
-				.then(() => history.push("/animals"))
+				.then(() => navigate("/animals"))
 		}
 	}
 
@@ -274,6 +272,12 @@ fieldset .alignRight {
     text-align: right;
 }
 ```
+## Listing Locations and Customers
+At this point, if you run the code, you will notice that the customer and location dropdowns do not populate. You will get a window alert asking your to choose a location and customer if you try to add an animal.  
+
+Make sure you import `getAllLocations` and `getAllCustomers` from their Manager files.  Then fill in the `useEffect` hooks to get the data and set the state.  
+
+The form will not save an animal until this is complete. 
 
 ## Using the Form
 

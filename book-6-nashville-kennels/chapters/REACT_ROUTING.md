@@ -12,7 +12,7 @@ Documentation for [react-router-dom](https://reactrouter.com/web/guides/quick-st
 
 ```sh
 npm i --save react-router-dom
-touch src/components/ApplicationViews.js
+touch src/ApplicationViews.js
 mkdir src/components/nav
 touch src/components/nav/NavBar.js
 touch src/components/nav/NavBar.css
@@ -118,21 +118,21 @@ export const Home = () => (
 
 ```jsx
 import React from "react"
-import { Route } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import { Home } from "./Home"
+import { AnimalCard } from './components/animal/AnimalCard.js'
+
 
 export const ApplicationViews = () => {
     return (
         <>
-            {/* Render the location list when http://localhost:3000/ */}
-            <Route exact path="/">
-                <Home />
-            </Route>
+            <Routes>
+                {/* Render the location list when http://localhost:3000/ */}
+                <Route exact path="/" element={<Home />} />
 
-            {/* Render the animal list when http://localhost:3000/animals */}
-            <Route path="/animals">
-              <AnimalCard />
-            </Route>
+                {/* Render the animal list when http://localhost:3000/animals */}
+                <Route path="/animals" element={<AnimalCard />} />
+            </Routes>
         </>
     )
 }

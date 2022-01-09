@@ -9,10 +9,10 @@ If you push something on to the browser _history stack_, it will change the view
 For example, the following code will change the URL in your browser to `http://localhost:3000/animals`, which triggers the routing package to find the matching **`<Route>`** definition in **`ApplicationViews`**. That route returns **`<AnimalList>`**, so we see a list of animals.
 
 ```js
-history.push("/animals");
+navigate("/animals");
 ```
 
-You are going to invoke `push()` after an animal has been deleted and then redirect to the animal list.
+You are going to navigate back to the animals page after an animal has been deleted.
 
 ## Add an 'isLoading" to the component
 
@@ -33,6 +33,7 @@ Refactor the **`<AnimalDetail>`** to include `isLoading`. Notice that our button
 
 ```jsx
 import React, { useState, useEffect } from "react";
+import {useParams, useNavigate} from "react-router-dom"
 import { getAnimalById } from "../../modules/AnimalManager";
 import "./AnimalDetail.css";
 
@@ -41,7 +42,7 @@ export const AnimalDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const {animalId} = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     //getAnimalById(id) from AnimalManager and hang on to the data; put it into state
@@ -50,7 +51,9 @@ export const AnimalDetail = () => {
       .then(animal => {
         setAnimal({
           name: animal.name,
-          breed: animal.breed
+          breed: animal.breed,
+          location: animal.location,
+          customer: animal.customer
         });
         setIsLoading(false);
       });
@@ -105,7 +108,7 @@ const handleDelete = () => {
   //invoke the delete function in AnimalManger and re-direct to the animal list.
   setIsLoading(true);
   deleteAnimal(animalId).then(() =>
-    history.push("/animals")
+    navigate("/animals")
   );
 };
 ```

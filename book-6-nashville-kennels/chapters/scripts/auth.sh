@@ -4,19 +4,18 @@ set -u
 mkdir -p ./src/components/auth && cd $_
 
 echo 'import React, { useRef } from "react"
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
-export const Register = (props) => {
+export const Register = ({setAuthUser}) => {
     const firstName = useRef()
     const lastName = useRef()
     const email = useRef()
-    const verifyPassword = useRef()
     const conflictDialog = useRef()
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:5002/customers?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
@@ -28,7 +27,7 @@ export const Register = (props) => {
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
-                    fetch("http://localhost:8088/customers", {
+                    fetch("http://localhost:5002/customers", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
@@ -41,8 +40,8 @@ export const Register = (props) => {
                         .then(res => res.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
-                                localStorage.setItem("kennel_customer", createdUser.id)
-                                history.push("/")
+                                // setAuthUser(createdUser)
+                                navigate("/")
                             }
                         })
                 }
@@ -86,18 +85,17 @@ export const Register = (props) => {
 
 echo 'import React, { useRef } from "react"
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom"
+import { useNavigate} from "react-router-dom"
 import "./Login.css"
 
 
-export const Login = props => {
+export const Login = ({setAuthUser}) => {
     const email = useRef()
-    const password = useRef()
     const existDialog = useRef()
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:5002/customers?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
@@ -108,8 +106,8 @@ export const Login = props => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("kennel_customer", exists.id)
-                    history.push("/")
+                    setAuthUser(exists)
+                    navigate("/")
                 } else {
                     existDialog.current.showModal()
                 }
@@ -220,4 +218,4 @@ fieldset {
 }
 ' > ./Login.css
 
-curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-4-nashville-kennels/chapters/images/logo.png > logo.png
+curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/evening-cohort-17/book-6-nashville-kennels/chapters/images/logo.png > logo.png
