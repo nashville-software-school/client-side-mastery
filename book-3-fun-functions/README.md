@@ -28,4 +28,4 @@ In this book, you will gain the knowlege and understanding of working with funct
 | # | 🧠 <br/> Even More Fun with Functions |
 |--|--|
 | 1 | 🔬 🔭 🌡 [Factories and Generators](./chapters/FACTORY_GENERATOR.md) |
-| 2 | ƛ [Lambdas: The Anonymous Function](./chapters/FUNCTIONS_LAMBDA.md) |
+| 2 | ƛ [Object.create() Function](./chapters/OBJECT_CREATE.md) |
