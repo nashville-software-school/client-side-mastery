@@ -71,7 +71,7 @@ Otherwise, the automated tests for your code won't work correctly.
 
 ## Testing Your Code
 
-When you believe you have code that works, you should add, commit, and push your code. Then, go to the **Actions** tab on your Github repository and see if your code passes the tests.
+When you believe you have code that works, and you're merged your branch into `main`, go to the **Actions** tab on your Github repository and see if your code passes the tests.
 
 If your code works you should see a green checkmark. If your code did not pass the tests, you will see a red x.
 
