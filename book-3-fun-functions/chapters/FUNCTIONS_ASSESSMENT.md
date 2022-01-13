@@ -48,9 +48,11 @@ If the percentage of expenses to salary is less than 10, then the applicant obje
 
 If the percentage is greater than 10, the value of the `qualified` property on the `mortgage` object should be `false`. The value of the `amount` property on the `mortgage` object should be 0.
 
+The function should return the modified object.
+
 #### Step 5: Output Messages
 
-To see if all of your logic is correct, output a message like the samples below. These are the people who should qualify for mortgages.
+To see if all of your logic is correct, after you have invoked the qualification check function, output a message like the samples below. You should only display this message for people who qualified for a mortgage.
 
 ```txt
 James Runolfsdottir is qualified for a maximum mortage of $249,693.40 
