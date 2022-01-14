@@ -16,7 +16,7 @@ The journal app will include the following components:
 	1. Concepts covered. A short input field of type `text` where you enter in what concept(s) were covered and are driving the journal entry.
 	1. Journal entry. This is a `textarea` field where you can enter in as much text about what you learned, how you felt, and plans for the upcoming days.
 	1. Mood. This should be a `select` element with as many `option` child elements as you would like to describe your mood for the day. You can start with the simply happy, fine, and sad values, or pick your own scaling system.
-	1. A `button` element labeled `Record Journal Entry`, or any other text that you would like. This button will, when clicked, save the entry to a database. You will learn how to do this in Book 2.
+	1. A `button` element labeled `Record Journal Entry`, or any other text that you would like. This button will, when clicked, save the entry to a database. You will learn how to do this in Book 5.
 1. A list component for all journal entries. Each item in the list is a component whose responsibility is to display an HTML representation of a single journal entry. Draw a few boxes to indicate that it is a list.
 1. Individual entries. Each entry component will include a `Delete` button and `Edit` button.
 
