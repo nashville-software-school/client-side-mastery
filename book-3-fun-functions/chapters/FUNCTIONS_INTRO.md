@@ -103,6 +103,12 @@ console.log(jenna)
 // output: "Her Majesty, Jenna Solis."
 ```
 
+## Helpful Article
+
+Many students in the past have found the [JavaScript Functions: Explain Like I'm Five](https://dev.to/sumusiriwardana/javascript-functions-explain-like-i-m-five-5009) article a helpful resource to understand the basics. Read it now. Read it tomorrow. Keep coming back to this entire chapter over and over again to keep reinforcing your vocabulary and basic concepts.
+
+It's difficult to express how critically important it is for you to understand functions before you try any further concepts in this course like events, asynchronous code, modules, forms, and component-based applications. Functions are the foundation of all of those concepts.
+
 ## Practice: Filling the Tank
 
 You have some starter code provided. It's a blank function that defines the task of filling your car up with gas. You can see that the minion will let you know that it filled up the car with gas, but **you** need to tell it how much gas you want put into the tank.
