@@ -1,4 +1,4 @@
-# Ch 9: Passing Functionality as Props
+# Ch 10: Passing Functionality as Props
 
 It's time to add one of the CRUD methods to your application. You're going to start with DELETE. Specifically, you're going to start with discharging animals to remove them from the kennel. You are going to add a Discharge link to each animal card.
 
@@ -122,4 +122,4 @@ Add the same functionality to the **`LocationList`** for when a location closes 
 
 [Return  to Book 6's Table of Contents](../README.md) 
 
-[Ch 10: Dynamic Routing with Animal Details](./REACT_DYNAMIC_ROUTING.md)
+[Ch 11: Dynamic Routing with Animal Details](./REACT_DYNAMIC_ROUTING.md)

@@ -1,4 +1,4 @@
-# Ch 14: Edit an Animal
+# Ch 15: Edit an Animal
 
 In this chapter, you are going to learn how to edit an animal's information. We will use a form very similar to the form we used to add an animal except, this time the form will be pre-filled with the current information of the animal we want to edit.
 
@@ -182,4 +182,4 @@ Customer. You will need to include fetch calls for the list data and `useEffect`
 
 [Return  to Book 6's Table of Contents](../README.md)
 
-[Ch 15: React: Animal Spotlight and the useEffect Dependency Array](./REACT_USEEFFECT_DEPS.md)
+[Ch 16: React: Animal Spotlight and the useEffect Dependency Array](./REACT_USEEFFECT_DEPS.md)

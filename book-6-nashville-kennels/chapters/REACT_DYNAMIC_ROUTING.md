@@ -1,4 +1,4 @@
-# Ch 10: Dynamic Routing
+# Ch 11: Dynamic Routing
 
 In this chapter, you are going to render a _Details_ view for each of the animals. When the customer clicks on `details`, they will be taken to a view that represents the individual resource. This will also allow users to bookmark a specific animal.
 
@@ -161,4 +161,4 @@ We found that users want to bookmark specific locations. Add a `Details` button 
 
 [Return  to Book 6's Table of Contents](../README.md) 
 
-[Ch 11: Dynamic Routing Part 2 with Delete and isLoading](./REACT_DYNAMIC_ROUTING_PART2.md)
+[Ch 12: Dynamic Routing Part 2 with Delete and isLoading](./REACT_DYNAMIC_ROUTING_PART2.md)

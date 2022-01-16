@@ -1,4 +1,4 @@
-# Ch 16: React Logout Functionality on Navbar
+# Ch 17: React Logout Functionality on Navbar
 
 1. When a user logs in, we should remove the login link and display a logout link.
 1. When a user logs out, they should be directed to the home page.

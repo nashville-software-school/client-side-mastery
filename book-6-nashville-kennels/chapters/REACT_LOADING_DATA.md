@@ -1,4 +1,4 @@
-# Ch 7: Load Data from an API and initial State
+# Ch 8: Load Data from an API and initial State
 
 This is a big chapter. Ask questions!
 
@@ -259,4 +259,4 @@ Take another look at the `AnimalList` component, you'll notice we are importing 
 
 [Return  to Book 6's Table of Contents](../README.md) 
 
-[Ch 8: State and Props](./COMPONENT_STATE_PROPS.md)
+[Ch 9: State and Props](./COMPONENT_STATE_PROPS.md)

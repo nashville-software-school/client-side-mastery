@@ -1,4 +1,4 @@
-# Ch 12: Adding Animals with Forms in React
+# Ch 13: Adding Animals with Forms in React
 
 In this chapter, you are going to learn how to use use a form to express the state of a component, and then use a function to add the animal to the API and redirect to the full animal list.
 
@@ -297,4 +297,4 @@ Remember, this would be a call to the outside world. Hint: `useEffect`. You will
 
 [Return  to Book 6's Table of Contents](../README.md) 
 
-[Ch 13: Simple Authentication & Conditional Routing](./AUTHENTICATION.md)
+[Ch 14: Simple Authentication & Conditional Routing](./AUTHENTICATION.md)

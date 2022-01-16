@@ -1,4 +1,4 @@
-# Ch 6: Routing in React Applications
+# Ch 7: Routing in React Applications
 
 In a single page application, you are only rendering one DOM tree. You never request another HTML file but create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element on the page for users to select and see different views.
 
@@ -194,4 +194,4 @@ Your job is to update **`ApplicationViews`** to make the _Locations_, _Customers
 
 [Return  to Book 6's Table of Contents](../README.md)
 
-[Ch 7: Loading Data from an API](./REACT_LOADING_DATA.md)
+[Ch 8: Loading Data from an API](./REACT_LOADING_DATA.md)

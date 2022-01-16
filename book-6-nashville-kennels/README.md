@@ -9,17 +9,18 @@ In this book, you will be learning the concepts and tools of React. React is a c
 3 | [Functional Components](./chapters/REACT_FUNCTIONAL_COMPONENTS.md) | <sub style="font-size:0.85rem;">#JSX #React.Fragment</sub> | Create functional components for Location, Customer, and Employee
 4 | [Intro to props and state](./chapters/INTRO_PROPS_STATE.md) | <sub style="font-size:0.85rem;">#props #state</sub> |
 5 | [Kennel API](./chapters/KENNEL_API.md) | <sub style="font-size:0.85rem;">#json-server</sub>| Setup Data
-6 | [Navigation Bar with Routing](./chapters/REACT_ROUTING.md) | <sub style="font-size:0.85rem;">#react-router-dom</sub> |NavBar with Locations, Customers and Employees
-7 | [Loading Data from an API](./chapters/REACT_LOADING_DATA.md)| <sub style="font-size:0.85rem;">#load data</sub> | Load data for Locations, Customers, and Employees
-8 | [State and Props](./chapters/COMPONENT_STATE_PROPS.md)| <sub style="font-size:0.85rem;">#state #props</sub> | Display data of Locations, Customers, and Employees
-9 | [Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md) | <sub style="font-size:0.85rem;">#props #delete</sub> | Include delete functionality to Locations, Customers, and Employees
-10 | [Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md) | <sub style="font-size:0.85rem;">#route param #useHistory</sub> | Add a Location Details Route and Component
-11 | [Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | Close a Location
-12 | [Create Animal With A Form](./chapters/REACT_FORMS.md) | <sub style="font-size:0.85rem;">#useEffect #controlled Input </sub> | Create new Locations, Employees, and Customers
-13 | [Simple Authentication & Conditional Routing](./chapters/AUTHENTICATION.md) | | Show content based on conditions
-14 | [Edit Animal Details](./chapters/REACT_EDIT.md) | | Dropdown menus and edit Locations, Employees, and Customers
-15 | [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEEFFECT_DEPS.md) |<sub style="font-size:0.85rem;">#dependency array </sub> |
-16 |[React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md) | |
+6 | [JSON-Server](./chapters/MULTIPLE_PROVIDERS.md) | <sub style="font-size:0.85rem;">#json-server #_expand #_sort</sub>| Fetch URLs
+7 | [Navigation Bar with Routing](./chapters/REACT_ROUTING.md) | <sub style="font-size:0.85rem;">#react-router-dom</sub> |NavBar with Locations, Customers and Employees
+8 | [Loading Data from an API](./chapters/REACT_LOADING_DATA.md)| <sub style="font-size:0.85rem;">#load data</sub> | Load data for Locations, Customers, and Employees
+9 | [State and Props](./chapters/COMPONENT_STATE_PROPS.md)| <sub style="font-size:0.85rem;">#state #props</sub> | Display data of Locations, Customers, and Employees
+10 | [Delete Using Functionality as Props](./chapters/FUNCTIONS_AS_PROPS.md) | <sub style="font-size:0.85rem;">#props #delete</sub> | Include delete functionality to Locations, Customers, and Employees
+11 | [Dynamic Routing with Animal Details](./chapters/REACT_DYNAMIC_ROUTING.md) | <sub style="font-size:0.85rem;">#route param #useHistory</sub> | Add a Location Details Route and Component
+12 | [Dynamic Routing Part 2 with Delete and isLoading](./chapters/REACT_DYNAMIC_ROUTING_PART2.md) | <sub style="font-size:0.85rem;">#useHistory #isLoading </sub> | Close a Location
+13 | [Create Animal With A Form](./chapters/REACT_FORMS.md) | <sub style="font-size:0.85rem;">#useEffect #controlled Input </sub> | Create new Locations, Employees, and Customers
+14 | [Simple Authentication & Conditional Routing](./chapters/AUTHENTICATION.md) | | Show content based on conditions
+15 | [Edit Animal Details](./chapters/REACT_EDIT.md) | | Dropdown menus and edit Locations, Employees, and Customers
+16 | [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEEFFECT_DEPS.md) |<sub style="font-size:0.85rem;">#dependency array </sub> |
+17 |[React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md) | |
 18 | Group Project: | Nutshell 
 ##
 

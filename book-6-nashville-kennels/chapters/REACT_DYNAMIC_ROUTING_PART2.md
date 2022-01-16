@@ -1,4 +1,4 @@
-# Ch 11: React Router And History
+# Ch 12: React Router And History
 
 ## Dynamically Changing the User's View
 
@@ -119,4 +119,4 @@ Refactor the **`<LocationDetail>`** component to allow closing (deleting). You w
 
 [Return  to Book 6's Table of Contents](../README.md) 
 
-[Ch 12: Create Animal With A Form](./REACT_FORMS.md)
+[Ch 13: Create Animal With A Form](./REACT_FORMS.md)

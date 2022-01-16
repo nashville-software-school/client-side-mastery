@@ -1,4 +1,4 @@
-# Ch 8: React Component State and Props
+# Ch 9: React Component State and Props
 
 ### Vocabulary to learn
 * useState
@@ -171,4 +171,4 @@ Update your application so that each section (locations, employees, owners) disp
 
 [Return  to Book 6's Table of Contents](../README.md) 
 
-[Ch 9: Delete Using Functionality as Props](./FUNCTIONS_AS_PROPS.md)
+[Ch 10: Delete Using Functionality as Props](./FUNCTIONS_AS_PROPS.md)

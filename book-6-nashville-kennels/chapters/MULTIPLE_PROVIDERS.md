@@ -1,8 +1,6 @@
-# Joining Data from Multiple Resources
+# Ch 6: JSON-Server
 
-Sometimes we need data from multiple resources when making a GET requests to an API. Previously you saw how to include location data on the animal data in the response from the API using `_expand=location` as a query string parameter.
-
-Time to build on using `json-server` features to include more data... and sort it.
+Sometimes we need data from multiple resources when making a GET requests to an API. Time to build on using `json-server` features to include more data... and sort it.
 
 ## Related Resources and Sorting
 
@@ -22,7 +20,7 @@ const getAnimals = () => {
 }
 ```
 
-This will result in an array of objects that look like this. Both the customer and location related resources were embedded in the response from the API.
+This will result in an array of objects that looks like this. Both the customer and location related resources were embedded in the response from the API.
 
 ```json
 [
@@ -45,4 +43,15 @@ This will result in an array of objects that look like this. Both the customer a
     }
 ]
 ```
+Looking to trouble shoot your API call.  Try adding coping and pasting into your browser.  
+`http://localhost:8088/animals?_expand=customer&_expand=location&_sort=location.id`
+
+What do you see?  
+
+If you would like a single animal, add the `id` to the url.  It will look something like `http://localhost:8088/animals/4?_expand=customer&_expand=location&_sort=location.id` for the animal with and id of 4.
+
+
+[Return  to Book 6's Table of Contents](../README.md) 
+
+[Ch 7: Navigation Bar with Routing](./REACT_ROUTING.md)
 

@@ -1,4 +1,4 @@
-# Ch 13: Authentication and Conditional Rendering
+# Ch 14: Authentication and Conditional Rendering
 
 > **Instructor Note:** Authentication is not a learning objective of your time here at NSS. The code in this chapter is intended to be copied and used, but not understood for now. Your job is still to render UI components using related data.
 
@@ -166,4 +166,4 @@ In the NavBar, highlight the active section. For example, if you are viewing `An
 
 [Return  to Book 6's Table of Contents](../README.md)
 
-[Ch 14: Edit Animal Details](./REACT_EDIT.md)
+[Ch 15: Edit Animal Details](./REACT_EDIT.md)

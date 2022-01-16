@@ -59,4 +59,4 @@ Make sure you create a repository on your Github account for your API, and hook 
 
 [Return  to Book 6's Table of Contents](../README.md) 
 
-[Ch 6: Navigation Bar with Routing](./REACT_ROUTING.md)
+[Ch 6: Navigation Bar with Routing](./MULTIPLE_PROVIDERS.md)

@@ -1,4 +1,4 @@
-# Ch 15: Animal Spotlight and the useEffect Dependency Array
+# Ch 16: Animal Spotlight and the useEffect Dependency Array
 
 It's finally time to dig into the second argument to `useEffect`. You'll recall that this argument is an array. Up until now, we've mostly been passing an empty array, but there are times when you will need to use an array that contains some data.
 
@@ -167,4 +167,4 @@ This is a common approach to _conditional rendering_. The `<AnimalSpotlight>` wi
 
 [Return  to Book 6's Table of Contents](../README.md)
 
-[Ch 16: React: Logout on Navbar Functionality](./REACT_LOGOUT_NAVBAR.md)
+[Ch 17: React: Logout on Navbar Functionality](./REACT_LOGOUT_NAVBAR.md)
