@@ -98,7 +98,7 @@ Use this code for your homepage that will be displayed when navigating to the ro
 > ##### `src/components/Home.js`
 ```jsx
 import React from "react";
-import { PropsAndState } from './PropsAndState'
+import { PropsAndState } from './components/PropsAndState'
 
 export const Home = () => (
     <>
@@ -154,7 +154,7 @@ As mentioned above, **`Kennel`** is a container component. It renders no HTML it
 ```js
 import React from "react"
 import { NavBar } from "./nav/NavBar"
-import { ApplicationViews } from "./ApplicationViews"
+import { ApplicationViews } from "../ApplicationViews"
 import "./Kennel.css"
 
 export const Kennel = () => (

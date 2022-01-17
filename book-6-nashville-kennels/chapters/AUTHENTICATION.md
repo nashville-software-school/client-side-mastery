@@ -28,7 +28,7 @@ Now install the mock authentication components into your application.
 1. Run the following command in that directory.
 
     ```sh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/blob/evening-cohort-17/book-6-nashville-kennels/chapters/scripts/auth.sh"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/evening-cohort-17/book-6-nashville-kennels/chapters/scripts/auth.sh)"
     ```
 1. Go to Visual Studio Code and you will see a new `src/components/auth` directory with 4 new files in it.
    1. `Register.js`
@@ -121,11 +121,26 @@ Finally, you will need to define which routes are private.  You do this by wrapp
     </PrivateRoute>
 } />
 ```
+Update your import statements.  You'll need to add `Navigate` to your `react-router-dom` 
+imports.
+
+>ApplicationViews.js
+```js
+import { Route, Routes, Navigate } from "react-router-dom"
+```
+
+Add imports for Login and Register.
+
+> ApplicationViews.js
+```js
+import { Login } from './components/auth/Login'
+import { Register } from './components/auth/Register'
+```
+
+
 ## Check your DATA
 Each customer will need an email property.
 
-
-**Check for react-router-dom useNavigate()** You may need to import the `useNavigate` into your Login and Register components and then invoke it.
 
 ## Register an Account
 
@@ -139,30 +154,6 @@ You will also now see a new entry in your session storage.
 
 Ensure that customers can't access locations, owners, or employees unless they submit authentication.
 
-## Practice: Change the view once the user logs in
-
-Once a user logs in, redirect them to the `home` route. You will need to refactor the `login` route. With routes, consider when you will need to use `component` vs `render` and the use of `{...props}`.
-
-## Challenge: No Animal ID in API
-
-What if an animalId is no longer available in the API? Write a conditional to display something different if an animal(user, employee or location) is not available/valid.
-
-## Challenge: Active NavBar Route
-
-In the NavBar, highlight the active section. For example, if you are viewing `Animals`, change the `<NavBar>` Animals link to `lime` (you could also disable the ability to click). Since the `<NavBar` is not part of a route, you will need to `export default withRouter(NavBar)` in order to have access to the router location properties.
-
-> **NOTES:**
-
-> You'll need to import `withRouter` from `react-router-dom`.
-
-> You might want to check out the docs for [`<NavLink>`](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/NavLink.md)
-
-## Fun Challenge: Remember Me
-
-1. Add a checkbox beneath the login form labeled _Remember Me_.
-2. When the customer logs in and the checkbox is not checked, then save their information to session storage
-3. When the customer logs in and the checkbox is checked, then save their information to local storage
-4. **Tip** You will need to store the value of the checkbox in state.
 
 [Return  to Book 6's Table of Contents](../README.md)
 

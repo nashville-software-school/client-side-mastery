@@ -49,12 +49,7 @@ export const AnimalDetail = () => {
     console.log("useEffect", animalId)
     getAnimalById(animalId)
       .then(animal => {
-        setAnimal({
-          name: animal.name,
-          breed: animal.breed,
-          location: animal.location,
-          customer: animal.customer
-        });
+        setAnimal(animal);
         setIsLoading(false);
       });
   }, [animalId]);
@@ -112,6 +107,8 @@ const handleDelete = () => {
   );
 };
 ```
+
+Don't forget to import `deleteAnimal` from `AnimalManager`. 
 
 ## Practice: Close a location
 

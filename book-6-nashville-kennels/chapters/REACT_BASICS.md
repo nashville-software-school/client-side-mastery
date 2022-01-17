@@ -45,7 +45,11 @@ Before we grow this application, let's create a meaningful directory structure.
   index.js
 
 ```
-To check your directory structure in you command line you can type `find . | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"` from the src directory.  There is no need to worry if there are some extra files.  
+To check your directory structure in you command line you can type
+
+ `find . | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"` 
+ 
+ from the src directory.  There is no need to worry if there are some extra files.  
 
 
 ## Chapter finished

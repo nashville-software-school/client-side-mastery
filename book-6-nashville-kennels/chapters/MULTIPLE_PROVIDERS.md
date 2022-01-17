@@ -2,53 +2,27 @@
 
 Sometimes we need data from multiple resources when making a GET requests to an API. Time to build on using `json-server` features to include more data... and sort it.
 
-## Related Resources and Sorting
+## More functionality from JSON-Server 
 
-Time to update the fetch call for animals again. Up to this point, you have included the related location for the animal. Now you are going to include the related customer, **and** you are going to sort the animals by location.
+Up to now, we've used JavaScript to combine data from two different models and to sort the data we display.  In many systems, this is done on the server-side (back-end), making client-side (front-end) development easier.  Imaging getting the animals in the order you want to display them!    
+JSON-Server can do simple expanding and sorting for us.  
 
-This requires three query string parameters
+This requires three query string parameters.  A query string is defined in a url by adding a `?` at the end of the url followed by the query string. Typically, a query string contains a parameter, the `=` and then a value.  Here's some examples in JSON-server:
 
 1. `_expand=customer` - Include related customer
 1. `_expand=location` - Include related location
 1. `_sort=location.id` - Sort data by the employee id
 
-```js
-const getAnimals = () => {
-    return fetch("http://localhost:8088/animals?_expand=customer&_expand=location&_sort=location.id")
-        .then(res => res.json())
-        .then(setAnimals)
-}
-```
-
-This will result in an array of objects that looks like this. Both the customer and location related resources were embedded in the response from the API.
-
-```json
-[
-    {
-        "id": 1,
-        "name": "Doodles",
-        "breed": "German Shepherd",
-        "employeeId": 2,
-        "locationId": 1,
-        "customer": {
-            "id": 2,
-            "name": "Jordan Nelson",
-            "address": "84 Wallabee Ave"
-        },
-        "location": {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        }
-    }
-]
-```
 Looking to trouble shoot your API call.  Try adding coping and pasting into your browser.  
-`http://localhost:8088/animals?_expand=customer&_expand=location&_sort=location.id`
+`http://localhost:8088/animals?_expand=customer&_expand=location`
 
 What do you see?  
 
-If you would like a single animal, add the `id` to the url.  It will look something like `http://localhost:8088/animals/4?_expand=customer&_expand=location&_sort=location.id` for the animal with and id of 4.
+If you would like a single animal, add the `id` to the url.  It will look something like `http://localhost:8088/animals/2?_expand=customer&_expand=location` for the animal with and id of 2.
+
+We can also use `_sort` to but the animals in order of location or customer.  Try `http://localhost:8088/animals?_expand=customer&_expand=location&_sort=locationId` in your browser.  What do you notice about the location ids?  
+
+Try changing location to customer.  Now what do you see?
 
 
 [Return  to Book 6's Table of Contents](../README.md) 

@@ -24,6 +24,8 @@ In this book, you will be learning the concepts and tools of React. React is a c
 18 | Group Project: | Nutshell 
 ##
 
+**Challenges**
+* [Authentication](./chapters/CHALLENGES_AUTH.md)
 
 <!-- **More Good Stuff**
 * [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)

@@ -17,7 +17,7 @@ Refactor the **`<Kennel>`** to `useState`. We will also write a function that wi
 //refactor
 import React, {useState} from "react"
 import { NavBar } from "./nav/NavBar"
-import { ApplicationViews } from "./ApplicationViews"
+import { ApplicationViews } from "../ApplicationViews"
 import "./Kennel.css"
 
 export const Kennel = () => {
@@ -60,11 +60,11 @@ We will also need to display the login/logout based on the user status. You can 
 
 ```jsx
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css"
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
-    const history = useHistory()
+    const history = useNavigate()
 
     const handleLogout = () => {
         clearUser();

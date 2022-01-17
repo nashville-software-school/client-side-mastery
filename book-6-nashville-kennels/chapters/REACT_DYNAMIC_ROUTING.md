@@ -51,10 +51,7 @@ export const AnimalDetail = () => {
     console.log("useEffect", animalId)
     getAnimalById(animalId)
       .then(animal => {
-        setAnimal({
-          name: animal.name,
-          breed: animal.breed
-        });
+        setAnimal(animal);
       });
   }, [animalId]);
 
@@ -116,7 +113,7 @@ In this example, the value of `1` is captured by React Router and stored in an `
 Within **`<ApplicationViews>`**, import the **AnimalDetail** component.
 
 ```js
-import AnimalDetail from "./animal/AnimalDetail";
+import {AnimalDetail} from "./components/animal/AnimalDetail"
 ```
 
 You should be able to view a single animal's details by navigating to the new route.

@@ -8,6 +8,7 @@ It's time to add one of the CRUD methods to your application. You're going to st
 
 First add the `delete` function to your `AnimalManager` module.
 
+> /modules/AnimalManager.js
 ```js
 export const deleteAnimal = (id) => {
   return fetch(`${remoteURL}/animals/${id}`, {
@@ -36,6 +37,7 @@ Before we include the delete functionality in a component, consider following:
 
 Add the following function to your **`<AnimalList>`** component and remember to import the methods from AnimalManager.
 
+> components/animal/AnimalList.js
 ```js
 const handleDeleteAnimal = id => {
     deleteAnimal(id)

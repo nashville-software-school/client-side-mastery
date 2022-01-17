@@ -51,9 +51,7 @@ export const AnimalList = () => {
 
 ```jsx
 
-<Route exact path="/animals">
-    <AnimalList />
-</Route>
+<Route path="/animals" element={<AnimalList />} />
 
 
 ```
@@ -67,11 +65,11 @@ Other components, _in the future_, may need the ability to make their own API ca
 > src/modules/AnimalManager.js
 
 ```js
-const remoteURL = "http://localhost:5002"
+const remoteURL = "http://localhost:8088"
 
 export const getAnimalById = (animalId) => {
   //be sure your animals have good data and related to a location and customer
-  return fetch(`${remoteURL}/animals/${animalId}?_expand=location&_expand=customer`)
+  return fetch(`${remoteURL}/animals/${animalId}?_expand=locationId&_expand=customerId`)
   .then(res => res.json())
 }
 

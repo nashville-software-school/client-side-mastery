@@ -13,35 +13,47 @@ Then copy the following JSON into the `database.json` file.
 
 ```json
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 1,
-            "locationId": 2
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        }
-    ],
-    "employees": [],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+      {
+          "id": 1,
+          "name": "Doodles",
+          "breed": "Poodle",
+          "customerId": 1,
+          "locationId": 2
+      },
+      {
+          "id": 2,
+          "name": "Fido",
+          "breed": "Beagle",
+          "customerId": 2,
+          "locationId": 1
+      }
+  ],
+  "customers": [
+      {
+          "id": 1,
+          "name": "Sydney Noh",
+          "address": "976 Software School Rd."
+      },
+      {
+          "id": 2,
+          "name": "Trevor Guinn",
+          "address": "123 NSS Ln"
+      }
+  ],
+  "employees": [],
+  "locations": [
+      {
+          "id": 1,
+          "name": "Nashville North",
+          "address": "8422 Johnson Pike"
+      },
+      {
+          "id": 2,
+          "name": "Nashville South",
+          "address": "209 Emory Drive"
+      }
+  ]
 }
 ```
 
@@ -59,4 +71,4 @@ Make sure you create a repository on your Github account for your API, and hook 
 
 [Return  to Book 6's Table of Contents](../README.md) 
 
-[Ch 6: Navigation Bar with Routing](./MULTIPLE_PROVIDERS.md)
+[Ch 6: JSON-Server](./MULTIPLE_PROVIDERS.md)

@@ -20,6 +20,8 @@ Here is the flow of the AnimalEditForm component:
 1. Invoke `AnimalManger.update()` to change the API data.
 1. Once the API has updated, change the view to display all the animals.
 
+Create a file named `AnimalEditForm.js`` in components/animal`
+
 > components/animal/AnimalEditForm.js
 
 ```jsx
@@ -107,7 +109,7 @@ export const AnimalEditForm = () => {
 ## Route for Showing Animal Edit Form
 
 Next, define a new route in **`<ApplicationViews>`** for editing a single animal. Be sure to import the **`<AnimalEditForm>`** component.
-
+>ApplicationViews.js
 ```jsx
 <Route path="/animals/:animalId/edit" element={
   <PrivateRoute>
@@ -125,8 +127,11 @@ You will also need to add `exact` to the route for `AnimalDetail`.  This path sh
   </PrivateRoute>
 } />
 ```
+Finally import the `AnimalEditForm` into ApplicationViews.js
 
-At this point you should be able to see the edit animal form with a URL like this: `http://localhost:3000/animals/2/edit`
+```js
+import { AnimalEditForm } from './components/animal/AnimalEditForm'
+```
 
 > **NOTE:** It won't fully work yet.
 
