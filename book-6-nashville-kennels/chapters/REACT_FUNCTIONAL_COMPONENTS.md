@@ -35,7 +35,7 @@ That stuff that looks like HTML? It's not. It's called [JSX](https://reactjs.org
 **What is `<>` and `</>`**
 Remember, within a function, the return can only return **ONE** thing. This is a `React.Fragment` and gives us the ability to wrap the content and return one item.
 
-To display our `Kennel` component, we need to modify the `index.js` file. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
+To display our `Kennel` component, we need to modify the `index.js` file and replace it's code with the code below. This file, `index.js`, is the entry file or the first JavaScript file that runs in our app.
 
 > ##### `src/index.js`
 
