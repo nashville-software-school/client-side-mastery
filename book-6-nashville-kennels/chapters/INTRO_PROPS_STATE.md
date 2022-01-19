@@ -3,6 +3,7 @@
 ### Voacabulary to learn
 * React props
 * React state
+* useState hook
 
 Inside of the `components` directory, make another file `PropsAndState.js`.
 
