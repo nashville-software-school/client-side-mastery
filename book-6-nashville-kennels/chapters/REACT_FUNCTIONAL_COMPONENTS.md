@@ -186,7 +186,7 @@ address {
 
 ## Practice
 
-The Nashville Kennel application needs to include locations, owners, and employees. Create static card components for each (`Location.js`, `Customer.js` and `Employee.js`) and a corresponding CSS file.
+The Nashville Kennel application needs to include locations, owners, and employees. Create static card components for each (`LocationCard.js`, `CustomerCard.js` and `EmployeeCard.js`) and a corresponding CSS file.
 
 Remember the Single Responsibility Principle. You should have a component whose sole responsibility is to render the location, or customer, or employee information. Make sure you create a different sub-directory for each kind of resource.
 
