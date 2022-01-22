@@ -89,6 +89,8 @@ export const NavBar = () => {
 
 Notice the use of the `<Link/>` component. This comes from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
 
+![](./images/react-route-example-4.png)
+
 ### Defining the Routes of the Application
 
 Now it's time to define the Routes for our application. In **`NavBar`**, you defined four **`<Link />`** components that will navigate to the routes of...
