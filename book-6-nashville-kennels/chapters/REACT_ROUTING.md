@@ -2,8 +2,18 @@
 
 In a single page application, you are only rendering one DOM tree. You never request another HTML file but create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element on the page for users to select and see different views.
 
-In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app.
+In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app. See the examples below:
+  
+  
+![](./images/react-route-example-1.png)
+  
+  
+![](./images/react-route-example-2.png)
 
+  
+![](./images/react-route-example-3.png)
+
+  
 ## Setup
 
 Make sure you are in your project's root directory. First, we need to install `react-router-dom`. Then we will create an additional file to handle the routing and create a navbar.
