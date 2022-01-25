@@ -202,7 +202,7 @@ With code in place, you should be able to navigate between multiple views and di
 
 ## Practice: Locations, Customers and Employees
 
-Your job is to update **`ApplicationViews`** to make the _Locations_, _Customers_ and _Employees_ links display their matching resources when clicked. You will to display the respected component for each view.
+Your job is to update **`ApplicationViews`** to make the _Locations_, _Customers_ and _Employees_ links display their matching resources when clicked. You will need to display the respected component for each view.
 
 [Return  to Book 6's Table of Contents](../README.md)
 
