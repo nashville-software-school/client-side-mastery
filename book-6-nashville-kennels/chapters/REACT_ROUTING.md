@@ -158,7 +158,7 @@ The `<Link/>` and the `<Route/>` JSX elements are complementary to each other. I
 
 As mentioned above, **`Kennel`** is a container component. It renders no HTML itself. It simply *contains* other components that are responsible for the presentation and behavior of the application. In the case of our Kennel, it contains two different kinds of components.
 
-1. **`NavBar`**: This is a _Presentation Component_. It directly expresses HTML.
+1. **`NavBar`**: This is a _Presentation Component_. It directly returns HTML.
 2. **`ApplicationViews`**: This is a _Controller Component_. Its only responsibility is to control the behavior of the system and maps URLs to components.
 
 > ##### `src/components/Kennel.js`
