@@ -23,7 +23,7 @@ What do you see? It should show the database objects of all of your animals with
 
 If you would like a single animal, add the `id` to the url.  It will look something like `http://localhost:8088/animals/2?_expand=customer&_expand=location` for the animal with and id of 2.
 
-We can also use `_sort` to put the animals in order of location or customer.  Try `http://localhost:8088/animals?_expand=customer&_expand=location&_sort=locationId` in your browser.  What do you notice about the location ids?  
+We can also use `_sort` to list the animals in order of location or customer.  Try `http://localhost:8088/animals?_expand=customer&_expand=location&_sort=locationId` in your browser.  What do you notice about the location ids?  
 
 Try changing location to customer.  Now what do you see?
 
