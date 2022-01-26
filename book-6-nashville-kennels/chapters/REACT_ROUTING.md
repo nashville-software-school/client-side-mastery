@@ -2,8 +2,18 @@
 
 In a single page application, you are only rendering one DOM tree. You never request another HTML file but create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element on the page for users to select and see different views.
 
-In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app.
+In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app. See the examples below:
+  
+  
+![](./images/react-route-example-1.png)
+  
+  
+![](./images/react-route-example-2.png)
 
+  
+![](./images/react-route-example-3.png)
+
+  
 ## Setup
 
 Make sure you are in your project's root directory. First, we need to install `react-router-dom`. Then we will create an additional file to handle the routing and create a navbar.
@@ -79,6 +89,8 @@ export const NavBar = () => {
 
 Notice the use of the `<Link/>` component. This comes from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
 
+![](./images/react-route-example-4.png)
+
 ### Defining the Routes of the Application
 
 Now it's time to define the Routes for our application. In **`NavBar`**, you defined four **`<Link />`** components that will navigate to the routes of...
@@ -146,8 +158,8 @@ The `<Link/>` and the `<Route/>` JSX elements are complementary to each other. I
 
 As mentioned above, **`Kennel`** is a container component. It renders no HTML itself. It simply *contains* other components that are responsible for the presentation and behavior of the application. In the case of our Kennel, it contains two different kinds of components.
 
-1. **`NavBar`**: This is a _Presentation Component_. Directly expresses HTML.
-2. **`ApplicationViews`**: This is a _Controller Component_. Its only responsibility to to control the behavior of the system and maps URLs to components.
+1. **`NavBar`**: This is a _Presentation Component_. It directly returns HTML.
+2. **`ApplicationViews`**: This is a _Controller Component_. Its only responsibility is to control the behavior of the system and maps URLs to components.
 
 > ##### `src/components/Kennel.js`
 
@@ -190,7 +202,7 @@ With code in place, you should be able to navigate between multiple views and di
 
 ## Practice: Locations, Customers and Employees
 
-Your job is to update **`ApplicationViews`** to make the _Locations_, _Customers_ and _Employees_ links display their matching resources when clicked. You will to display the respected component for each view.
+Your job is to update **`ApplicationViews`** to make the _Locations_, _Customers_ and _Employees_ links display their matching resources when clicked. You will need to display the respected component for each view.
 
 [Return  to Book 6's Table of Contents](../README.md)
 
