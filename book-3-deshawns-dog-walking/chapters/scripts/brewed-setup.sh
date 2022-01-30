@@ -1,9 +1,9 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/brewed-awakenings/scripts
-mkdir -p $HOME/workspace/brewed-awakenings/styles
-cd $HOME/workspace/brewed-awakenings
+mkdir -p "$HOME/workspace/brewed-awakenings/scripts"
+mkdir -p "$HOME/workspace/brewed-awakenings/styles"
+cd "$HOME/workspace/brewed-awakenings"
 
 echo '<!doctype html>
 <html lang="en">
