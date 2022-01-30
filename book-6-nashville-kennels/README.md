@@ -25,7 +25,12 @@ In this book, you will be learning the concepts and tools of React. React is a c
 ##
 
 **Challenges**
-* [Authentication](./chapters/CHALLENGES_AUTH.md)
+
+ [Ch 4: Props & State](./chapters/CHALLENGES_CH4.md)
+ 
+ [Ch 6: JSON-Server](./chapters/CHALLENGES_CH6.md)
+
+ [Authentication](./chapters/CHALLENGES_AUTH.md)
 
 <!-- **More Good Stuff**
 * [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
