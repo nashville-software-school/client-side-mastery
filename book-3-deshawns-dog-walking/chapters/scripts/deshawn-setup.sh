@@ -1,9 +1,9 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/dog-walking/scripts
-mkdir -p $HOME/workspace/dog-walking/styles
-cd $HOME/workspace/dog-walking
+mkdir -p "$HOME/workspace/dog-walking/scripts"
+mkdir -p "$HOME/workspace/dog-walking/styles"
+cd "$HOME/workspace/dog-walking"
 
 echo '<!doctype html>
 <html lang="en">

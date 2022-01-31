@@ -1,9 +1,9 @@
 #!/bin/bash
 set -u
 
-mkdir -p $HOME/workspace/assessments/debugging-events/scripts
-mkdir -p $HOME/workspace/assessments/debugging-events/styles
-cd $HOME/workspace/assessments/debugging-events
+mkdir -p "$HOME/workspace/assessments/debugging-events/scripts"
+mkdir -p "$HOME/workspace/assessments/debugging-events/styles"
+cd "$HOME/workspace/assessments/debugging-events"
 
 echo '<!doctype html>
 <html lang="en">
