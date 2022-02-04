@@ -21,3 +21,9 @@ The IDs abcde and axcye are close, but they differ by two characters (the second
 What letters are common between the two correct box IDs?
 
 In the example above, this is found by removing the differing character from either ID, producing fgij.
+
+<details>
+    <summary>Correct answer</summary>
+
+Your algorithm is correct if it identifies `uwfmdjxyxlbgnrotcfpvswaqh`
+</details>
