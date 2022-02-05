@@ -8,7 +8,7 @@ In this chapter, you are going to learn how to use use a form to express the sta
 
 First, update your routes in ApplicationViews with a new route for the form.
 
-Create the files `components/animals/AnimalForm.js` and `components/animal/AnimalForm.css`.  Remember, you'll also have to `import` the new AnimalForm component once it's created. 
+Create the files `components/animal/AnimalForm.js` and `components/animal/AnimalForm.css`.  Remember, you'll also have to `import` the new AnimalForm component once it's created. 
 > ApplicationsViews.js
 ```jsx
 import { AnimalForm } from './components/animal/AnimalForm'
