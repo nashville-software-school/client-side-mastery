@@ -15,7 +15,7 @@ export const Register = ({setAuthUser}) => {
     const navigate = useNavigate()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:5002/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
@@ -27,7 +27,7 @@ export const Register = ({setAuthUser}) => {
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
-                    fetch("http://localhost:5002/customers", {
+                    fetch("http://localhost:8088/customers", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
