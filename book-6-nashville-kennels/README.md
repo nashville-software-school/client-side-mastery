@@ -25,36 +25,27 @@ In this book, you will be learning the concepts and tools of React. React is a c
 ##
 
 **Challenges**
+Note form your instructor: These challenges should be attempted only after the MVP of kennels is finished.  Kennels MVP includes completing all 17 chapters and building out all the functionality for animals, employees, locations and customers.
+
+Since you are finished with the app, you may do these in any order.  Use the chapter numbers as a reference.
 
  [Ch 4: Props & State](./chapters/CHALLENGES_CH4.md)
  
  [Ch 6: JSON-Server](./chapters/CHALLENGES_CH6.md)
+ 
+ [Ch 7: More Routes](./chapters/CHALLENGES_CH7.md)
+ 
+ [Chs 8 & 9: Random Cat Images](./chapters/CHALLENGES_CH8.md)
+ 
+ [Ch 10: Passing more to the AnimalCard Component](./chapters/CHALLENGES_CH10.md)
+ 
+ [Ch 11-12: Refactor/Reusable components](./chapters/CHALLENGES_CH11.md)
+ 
+ [Ch 14: Authentication](./chapters/CHALLENGES_AUTH.md)
 
- [Authentication](./chapters/CHALLENGES_AUTH.md)
-
-<!-- **More Good Stuff**
-* [React: Reusability with Employee and AnimalCard](./chapters/REACT_REUSABLE_COMPONENTS.md)
-* [Kick Up Your Kennel App with Challenges](./chapters/ADVANCED_CHALLENGES.md)
-* [Type Checking and Required Properties](./chapters/REACT_TYPE_CHECKING.md)
-* Appendix - [Other React Resources](./chapters/REACT_APPENDIX.md)
+ [Ch 15: Refactor/Reusable components in forms](./chapters/CHALLENGES_CH15.md)
+ 
+ [Example Dev User Stories](./chapters/CHALLENGES_DevUserStories.md)
 
 
-| -+-  | ---------------- | ---------------- | ----------------
---- | --- | --- | ---
-| -+-  ||Capstone Time | |
-| -+-  | ---------------- | ---------------- | ----------------
 
-
-#### Supplemental Chapters
-* [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
-
-* [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
-* [Deploy React and API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
-* [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
-* [Higher Order Components in React](./chapters/REACT_HOC.md)
-* [React Context API](./chapters/REACT_CONTEXT_API.md)
-* [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
-* [Deploy to AWS S3](./chapters/AWS_S3.md)
-* [Deploy to AWS EC2](./chapters/AWS_EC2.md)
-
-After completing this book, you will be considered apprentice developers, and will be ready to move on to the final three months of the course. Those final months are your apprenticeship, where you will be trained on how to work on a professional software development team. -->
