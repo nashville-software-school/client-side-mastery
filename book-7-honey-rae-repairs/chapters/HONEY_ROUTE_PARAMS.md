@@ -81,9 +81,3 @@ Look back at the code you put in the detail component.
 See the `const { ticketId } = useParams();`
 
 This is how you access the number 3 inside the component. It's part of the routing package (react-router-dom) you installed. Don't worry, that one's tricky. We'll help you remember it.
-
-## Practice: Employees
-
-Make each emplyee's name a hyperlink. When the name is clicked display that single employee's details.
-
-![animation of displaying single employee details](./images/honey-rae-employee-detail.gif)
