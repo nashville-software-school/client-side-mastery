@@ -25,7 +25,7 @@ In this book, you will be learning the concepts and tools of React. React is a c
 ##
 
 **Challenges**
-Note form your instructor: These challenges should be attempted only after the MVP of kennels is finished.  Kennels MVP includes completing all 17 chapters and building out all the functionality for animals, employees, locations and customers.
+Note from your instructor: These challenges should be attempted only after the MVP of kennels is finished.  Kennels MVP includes completing all 17 chapters and building out all the functionality for animals, employees, locations and customers.
 
 Since you are finished with the app, you may do these in any order.  Use the chapter numbers as a reference.
 
