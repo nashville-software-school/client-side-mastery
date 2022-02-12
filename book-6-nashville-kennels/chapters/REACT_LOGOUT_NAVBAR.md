@@ -36,7 +36,7 @@ export const Kennel = () => {
     return (
         <>
             <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated}/>
-            <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated}/>
+            <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
         </>
     )
 }
