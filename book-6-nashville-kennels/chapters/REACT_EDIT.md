@@ -160,7 +160,7 @@ Finally, define a method in your `AnimalManager` for the update fetch call. You 
 ```js
 export const updateAnimal = (editedAnimal) => {
   return fetch(`${remoteURL}/animals/${editedAnimal.id}`, {
-    method: "PUT",
+    method: "PATCH",
     headers: {
       "Content-Type": "application/json"
     },
