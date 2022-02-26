@@ -1,39 +1,3 @@
-# Getting Started
-
-## Journal
-
-Get a nice journal and a comfortable pen, and start keeping a daily journal of what you are learning every day. Writing your thoughts on a regular basis [increases your ability to remember it](https://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html). There are even studies that found writing is [beneficial for your health](https://www.apa.org/monitor/sep01/keepdiary.aspx).
-
-## Hardware
-
-Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive _**RIGHT NOW**_ and start backing up your entire hard drive.
-
-**Seriously, _right now!_**
-
-## Browser - Google Chrome
-
-Google Chrome is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
-
-Download [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html), and then [make it your default browser](https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en).
-
-### GitPod Chrome Extension
-
-Visit the [Chrome Store page for Gitpod](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki?hl=en) and add the extension to Chrome. This is needed for self-assessments in the course.
-
-## Online Services
-
-<a id="github"></a>
-
-### GitHub
-
-GitHub is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
-
-##### _NOTE: When creating your GitHub account, be mindful of the fact that potential employers will be viewing your profile when you apply for jobs, so keep it professional._
-
-## dbdiagram.io
-
-Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
-
 ## Installations
 
 ### Rectangle
@@ -48,8 +12,8 @@ This application will allow you to use certain combinations of keys on your keyb
 
 Visit the [Homebrew](http://brew.sh/) website and follow the single instruction there to get it installed.
 
-### Troubleshooting: For Instructors
-#### _Don't try this yourself!_
+<details>
+    <summary>This section is for instructors who may need to troubleshoot problems</summary>
 
 After installing Homebrew, you may get the following warning:
 
@@ -74,6 +38,7 @@ This may be fixed with this command:
 ```
 export PATH=/opt/homebrew/bin:$PATH
 ```
+</details>
 
 ## Visual Studio Code
 
@@ -89,8 +54,9 @@ brew install --cask visual-studio-code
 
 [Follow these steps](https://code.visualstudio.com/docs/setup/mac) to set up Visual Studio Code to be launched from the command line.
 
-### Troubleshooting: For Instructors
-#### _Don't try this yourself!_
+
+<details>
+    <summary>This section is for instructors who may need to troubleshoot problems</summary>
 
 If the `code` command doesn't work...
 
@@ -142,6 +108,8 @@ code () {
 ```sh
 code
 ```
+
+</details>
 
 ## Node
 
@@ -202,8 +170,7 @@ Git is how you and your teammates will work on a shard codebase during your time
 #### _Run the following commands in the terminal:_
 
 ```sh
-brew install git
-brew install tig
+brew install git tig
 ```
 
 ## Configuring Git
@@ -234,13 +201,6 @@ brew install zsh zsh-completions
 
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-##### _Run the following command in the terminal to create two aliases you will use later:_
-
-```sh
-echo 'alias gs="git status"
-alias hs="serve -l 8080"' >> ~/.zshrc
 ```
 
 ## Show Hidden Files

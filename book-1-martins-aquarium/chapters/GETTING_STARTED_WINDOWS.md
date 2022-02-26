@@ -1,70 +1,8 @@
-# Getting Started
-
-## Journal
-
-Get a nice journal and a comfortable pen, and start keeping a daily journal of what you are learning every day. Writing your thoughts on a regular basis [increases your ability to remember it](https://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html). There are even studies that found writing is [beneficial for your health](https://www.apa.org/monitor/sep01/keepdiary.aspx).
-
-## Hardware
-
-Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive _**RIGHT NOW**_ and start backing up your entire hard drive.
-
-**Seriously, _right now!_**
-
-## Browser - Google Chrome
-
-Google Chrome is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
-
-Download [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html), and then [make it your default browser](https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en).
-
-### GitPod Chrome Extension
-
-Visit the [Chrome Store page for Gitpod](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki?hl=en) and add the extension to Chrome. This is needed for self-assessments in the course.
-
-
-# Online Services
-
-<a id="github"></a>
-
-## Github
-
-Github is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
-
-##### _NOTE: When creating your GitHub account, be mindful of the fact that potential employers will be viewing your profile when you apply for jobs, so keep it professional._
-
-## dbdiagram.io
-
-Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
-
-## devdocs.io
-
-Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation for nearly everything you will be learning during your time here at NSS.
-
 # Installations
 
 ## Visual Studio Code
 
-Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the editor you will be using for the next 6 months.
-
-### Troubleshooting: For Instructors
-#### _Don't try this yourself!_
-
-If the `code` command doesn't work, adding this to `.zshrc` to update the path.
-
-`export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"`
-
-and if that doesn't work, set up a bash function in `.zshrc`
-
-```sh
-code () {
-    if [[ $# = 0 ]]
-    then
-        open -a "Visual Studio Code"
-    else
-        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-        open -a "Visual Studio Code" --args "$F"
-    fi
-}
-```
+Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the code editor you will be using for the next 3 months.
 
 ## Enable the Windows Subsystem for Linux
 

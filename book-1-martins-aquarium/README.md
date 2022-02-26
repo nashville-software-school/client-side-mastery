@@ -4,9 +4,10 @@
 
 | # | 🐠 <br/> Martin's Aquarium |
 |--|--|
-| 🍎 | [Installations for Mac](./chapters/GETTING_STARTED_MAC.md) |
-| 💻 | [Python Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS.md) |
-| 💻 | [C# Cohorts: Installations for Windows](./chapters/GETTING_STARTED_WINDOWS_C_SHARP.md) |
+| 👩🏾‍🏫 | [Installations for Everyone](./chapters/GETTING_STARTED.md) |
+| 🍎 | [Installations for Mac Users](./chapters/GETTING_STARTED_MAC.md) |
+| 💻 | [Python Cohorts: Installations for Windows Users](./chapters/GETTING_STARTED_WINDOWS.md) |
+| 💻 | [C# Cohorts: Installations for Windows Users](./chapters/GETTING_STARTED_WINDOWS_C_SHARP.md) |
 | 1 | [Algorithmic and Analytical Thinking](./chapters/THINKING.md) <br/> <sub style="font-size:0.85rem;">#mindset</sub> |
 | 2 | [Terminal Basics](./chapters/CLI_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
 | 3 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |
