@@ -19,40 +19,62 @@ Here's an example of how you could filter an array of art supplies.
 > **`just-for-show/scripts/exampleDatabase.js`**
 
 ```js
-const supplies = [
-    {
-        id: 1,
-        price: 12.99,
-        color: "Red",
-        brand: "Bloomfield",
-        type: "Paint"
-    },
-    {
-        id: 2,
-        price: 75.49,
-        color: "Brown",
-        brand: "Illinois Art",
-        type: "Easel"
-    },
-    {
-        id: 3,
-        price: 19.99,
-        color: "White",
-        brand: "Emerson",
-        type: "Oil Paint Canvas"
-    }
-]
+const database = {
+  supplies: [
+      {
+          id: 1,
+          price: 12.99,
+          color: "Red",
+          brand: "Bloomfield",
+          type: "Paint"
+      },
+      {
+          id: 2,
+          price: 75.49,
+          color: "Brown",
+          brand: "Illinois Art",
+          type: "Easel"
+      },
+      {
+          id: 3,
+          price: 19.99,
+          color: "White",
+          brand: "Emerson",
+          type: "Oil Paint Canvas"
+      }
+  ]
+}
 
-const lessThanFifty = (supplyObject) => {
-    if (supplyObject.price < 50.00) {
+/*
+    Responsibility:
+        Determine is a single supply costs less than $50
+
+    Parameters:
+        supply (object) - A single supply object representation
+
+    Returns:
+        (boolean) - True is item cost is less than $50, otherwise false
+*/
+const lessThanFifty = (supply) => {
+    if (supply.price < 50.00) {
         return true
     }
     return false
 }
 
-// Create a new array that contains supplies that cost less than $50
+/*
+    Responsibility:
+        Create and return a new array that contains
+        supplies that cost less than $50
+
+    Parameters:
+        None
+
+    Returns:
+        (array) - Array containing inexpensive supply objects
+*/
 export const inexpensiveSupplies = () => {
-    const filteredItems = supplies.filter( lessThanFifty )
+    const filteredItems = supplies.filter(lessThanFifty)
     return filteredItems
 }
 ```
@@ -66,40 +88,16 @@ You can watch some videos where other developers show you other examples of how 
 
 ## Task: Listing New York Companies
 
-- Use `.filter()` to list only Dothard &amp; Simbleton companies located in New York (NY).
+1. Create a new module named `NewYorkBusinesses.js`
+1. Build a function named the same inside it that uses `.filter()` to generate a list of companies located in New York (NY).
+1. Invoke the function in the correct place in `main.js` to view your results on the DOM.
 
-- Display them in an element in your HTML file that has a class of `businessList--newYork`.
-
-> **`dothard-simbleton/index.html`**
-
-```html
-...
-
-<article class="businessList--newYork">
-    <!-- New York businesses go here --->
-</article>
-
-...
-```
-
-![list of new york businesses](./images/dothard-simbleton-newyork-list.png)
+    ![list of new york businesses](./images/dothard-simbleton-newyork-list.png)
 
 ## Task: Listing Manufacturing Companies
 
-- Use `.filter()` to list only Dothard &amp; Simbleton companies that are in _Manufacturing_.
+1. Create a new module named `ManufacturingBusinesses.js`
+1. Build a function named the same inside it that uses `.filter()` to generate a list of companies in the industry of "Manufacturing".
+1. Invoke the function in the correct place in `main.js` to view your results on the DOM.
 
-- Display them in element in your HTML file that has a class of `businessList--manufacturing`.
-
-> **`dothard-simbleton/index.html`**
-
-```html
-...
-
-<article class="businessList--manufacturing">
-    <!-- Manufacturing businesses go here --->
-</article>
-
-...
-```
-
-![list of manufacturing businesses](./images/dothard-simbleton-manufacturing-list.png)
+    ![list of manufacturing businesses](./images/dothard-simbleton-manufacturing-list.png)

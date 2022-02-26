@@ -13,36 +13,34 @@ The `.map()` method is perfect for that. The map method is used for transforming
 > **`just-for-show/scripts/exampleDatabase.js`**
 
 ```js
-const supplies = [
-    {
-        id: 1,
-        price: 12.99,
-        color: "Red",
-        brand: "Bloomfield",
-        type: "Paint"
-    },
-    {
-        id: 2,
-        price: 75.49,
-        color: "Brown",
-        brand: "Illinois Art",
-        type: "Easel"
-    },
-    {
-        id: 3,
-        price: 19.99,
-        color: "White",
-        brand: "Emerson",
-        type: "Oil Paint Canvas"
-    }
-]
+const database = {
+  supplies: [
+      { id: 1, price: 12.99, color: "Red", brand: "Bloomfield", type: "Paint" },
+      { id: 2, price: 75.49, color: "Brown", brand: "Illinois Art", type: "Easel" },
+      { id: 3, price: 19.99, color: "White", brand: "Emerson", type: "Oil Paint Canvas" }
+  ]
+}
 
-// Create a new array that contains only brand name strings
+/*
+    Responsibility:
+        Generate an array that contains the brand of each supply
+
+    Parameters:
+        None
+
+    Returns:
+        (array) - Array containing only brand strings
+*/
 export const brandNames = () => {
-    const onlyBrands = supplies.map(supplyObject => {
-        return supplyObject.brand
-    })
+    // Generate a new array based on original array using .map()
+    const onlyBrands = database.supplies.map(
+        // Callback function to handle each supply object
+        (supply) => {
+            return supply.brand
+        }
+    )
 
+    // Return the new array of strings
     return onlyBrands
 }
 ```
@@ -56,28 +54,17 @@ You can watch some videos where other developers show you other examples of how 
 
 ## Task: Listing Purchasing Agent Names
 
-Use `.map()` to create an array of purchasing agents for companies that purchase from Dothard &amp; Simbleton. Then iterate the array and display each one in element in your HTML file that has a class of `agents`.
+1. Create a new module named `AgentList.js`
+1. Build a function named the same inside it that uses `.map()` to generate an HTML representation of each purchasing agent. Display the agent's name, company, and phone number.
+1. Then use the `.join("")` method to concatenate all of the individual strings into a single string.
+    ```js
+    const agentHTMLRepresentations = businesses.map(
+        // Your callback function goes here
+    )
+    const finalHTML = agentHTMLRepresentations.join("")
 
-> **`dothard-simbleton/index.html`**
+    return finalHTML
+    ```
+1. Invoke the function in the correct place in `main.js` to view your results on the DOM.
 
-```html
-<article class="agents">
-    <!-- Purchasing agents go here --->
-</article>
-```
-
-## Task: Listing Purchasing Agent Details
-
-Instead of just returning the purchasing agent object, return a new object that has the full name of the purchasing agent, the company name, and the phone number. The data structure is shown below. Use that new data structure to display the agent with their company and phone number
-
-```js
-{
-    "fullName": "Kaylee Gutkowski",
-    "company": "Highnix",
-    "phoneNumber": "235.266.6278"
-}
-```
-
-#### Example output:
-
-![list of agents](./images/dothard-simbleton-agent-list.png)
+    ![list of agents](./images/dothard-simbleton-agent-list.png)
