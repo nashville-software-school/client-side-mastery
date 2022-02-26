@@ -9,13 +9,15 @@ echo -e "\nWe are going to try to install as much software, and make as many"
 echo -e "configurations as we possibly can in an automated script. If this"
 echo -e "If this stops at any point, and you don't see a 'SUCCESS' message"
 echo -e "please notify an instructor for assistance.\n\n"
-read -p "Enter your email address: " emailAddress
+read -p "Enter your full name (not an alias): " studentName
+read -p "Enter email address you used for Github: " emailAddress
 
 
 # Set up workspace directory
 echo -e "\n\n Creating some directories that you will need..."
 mkdir -p $HOME/workspace
 mkdir -p $HOME/.ssh
+mkdir -p $HOME/.config
 mkdir -p $HOME/.npm-packages
 
 # Create SSH key
@@ -30,6 +32,10 @@ brew install -q --cask visual-studio-code
 
 echo -e "\n\n Installing git and terminal customization tools..."
 brew install -q git tig zsh zsh-completions
+
+# User settings for git
+git config --global user.name $studentName
+git config --global user.email $emailAddress
 
 # Install ohmyzsh
 echo -e "\n\n Installing more terminal customization tools..."
