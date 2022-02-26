@@ -1,8 +1,6 @@
-# Core JavaScript Review
+# The Hairy Potter
 
-## The Hairy Potter
-
-In this exercise, your task to build a workflow for making, and firing pottery, and then determining if it should be sold at a craft show. Then you will display the pottery to be sold in the DOM.
+In this project, your task to build a workflow for making, and firing pottery, and then determining if it should be sold at a craft show. Then you will display the pottery to be sold in the DOM.
 
 ## Setup
 
@@ -11,15 +9,18 @@ In this exercise, your task to build a workflow for making, and firing pottery, 
     ```sh
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-56/projects/tier-1/hairy-potter/scripts/hairy-potter-install.sh)"
     ```
-
-1. Create a Github repository for this project and run the recommended commands to connect your local repository with the Github repository.
-1. Run the following command in your terminal to change directory to the project directory.
+1. Navigate to the project directory
+    ```sh
+    cd ~/workspace/hairy-potter-project
+    ```
+1. Create a Github repository for this project and run the use the suggested `git remote add origin` command to connect your local repository with the Github repository. The setup script runs `git init` for you.
+1. Open the project for editing with the `code .` command.
+1. Run the following command in your terminal. This is the directory where all of your code will be written.
 
     ```sh
-    cd ~/workspace/hairy-potter-project/src
+    cd src
     ```
 
-1. Open the project for editing with the `code .` command.
 1. Run the `serve` command to start the web server.
 1. Open the URL provided by `serve` in your browser.
 1. Open another new terminal session _(yes, there will be two terminal sessions needed for this project)_ and make sure you are in the the `hairy-potter-project` directory and not in the `src` sub-directory.
@@ -28,7 +29,7 @@ In this exercise, your task to build a workflow for making, and firing pottery, 
     ```
 
 1. Run the `npm install` command to install all of the tools used for this project.
-1. Once the installations are complete, run the `npm run test` command (_see animation below_). You will see all of the tests for your code - which ones pass, and which ones fail. As soon as you make changes to your code, the tests will run automatically, so keep this terminal window open while you are working on this project. When you need to stop working on it, use the `Ctrl+C` keyboard shortcut to stop the tests from running.
+1. Once the installations are complete, run the `npm test` command (_see animation below_). You will see all of the tests for your code - which ones pass, and which ones fail. As soon as you make changes to your code, the tests will run automatically, so keep this terminal window open while you are working on this project. When you need to stop working on it, use the `Ctrl+C` keyboard shortcut to stop the tests from running.
 
     ![](./images/jest-initial.gif)
 
