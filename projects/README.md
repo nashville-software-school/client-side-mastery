@@ -7,7 +7,7 @@ After you complete the work in the Core Books of the course, you instructors wil
 Tier 1 projects are for students to start working on in the after they have done the core course projects for data types, functions, import/export, and working with the DOM.
 
 2. [Modern Farm](./tier-1/modern-farm/) - This project will deepen your JavaScript fundamental skills of functions, import/export, iteration and object properties. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
-1. [the Hairy Potter](./tier-1/hairy-potter/) - This project will deepen your JavaScript fundamental skills of functions, import/export, iteration and object properties. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
+1. [The Hairy Potter](./tier-1/hairy-potter/) - This project will deepen your JavaScript fundamental skills of functions, import/export, iteration and object properties. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
 
 ## Tier 2 - Advanced Beginner
 

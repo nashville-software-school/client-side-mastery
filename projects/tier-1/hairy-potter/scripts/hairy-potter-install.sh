@@ -2,6 +2,7 @@
 set -u
 
 mkdir -p $HOME/workspace/hairy-potter-project/src/scripts
+mkdir -p $HOME/workspace/hairy-potter-project/src/styles
 mkdir -p $HOME/workspace/hairy-potter-project/test
 
 cd $HOME/workspace/hairy-potter-project
