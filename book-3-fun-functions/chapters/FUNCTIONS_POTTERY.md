@@ -19,7 +19,7 @@ Define a function named `buyClay`. The function needs no parameters. It should r
 
 ### Throw a Bowl
 
-Define a function named `makePottery`. You need to give it the empty object that `buyClay` produced, so it needs a single parameter to capture that value and use it.
+Define a function named `makePottery`. You need to pass it the empty object that `buyClay` produced, so it needs a single parameter to capture that value and use it.
 
 The function should perform the task of adding a new property named `shape`, and its value should be "Bowl". The function should then return the object after the new property was added.
 

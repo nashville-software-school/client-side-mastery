@@ -15,17 +15,20 @@ In this book, you will gain the knowlege and understanding of working with funct
 | 7 | [HTML Factory Functions](./chapters/FUNCTIONS_HOT_DOGS.md) <br/> <sub style="font-size:0.85rem;">#html #factory-function</sub> | [Get Rich and Famous by Throwing Pottery](./chapters/FUNCTIONS_POTTERY.md) |  |
 | 🎓 | [Self-Assessment](./chapters/FUNCTIONS_ASSESSMENT.md) | |  |
 
+
 ## Explorer Chapters
 
-| # | 🧠 <br/> Advanced Concepts |
-|--|--|
-| 1 | 🔬 🔭 🌡 [Different Scopes](./chapters/JS_SCOPE.md) |
-| 2 | ƛ [Lambdas: The Anonymous Function](./chapters/FUNCTIONS_LAMBDA.md) |
-
+| # | 🐠 <br/> Martin's Aquarium |  🧠 <br/> Advanced Concepts |
+|--|--|--|
+| 1 | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) | 🔬 🔭 🌡 [Different Scopes](./chapters/JS_SCOPE.md) |
+| 2 | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) | ƛ [Lambdas: The Anonymous Function](./chapters/FUNCTIONS_LAMBDA.md) |
+| 3 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) | |
+| 4 | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) | |
 
 ## Pioneer Chapters
 
-| # | 🧠 <br/> Even More Fun with Functions |
-|--|--|
-| 1 | 🔬 🔭 🌡 [Factories and Generators](./chapters/FACTORY_GENERATOR.md) |
-| 2 | ƛ [Object.create() Function](./chapters/OBJECT_CREATE.md) |
+| # | 🐠 <br/> Martin's Aquarium | 🧠 <br/> Advanced Concepts |
+|--|--|--|
+| 1 | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) | 🔬 🔭 🌡 [Factories and Generators](./chapters/FACTORY_GENERATOR.md) |
+| 2 | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
+| 3 | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |

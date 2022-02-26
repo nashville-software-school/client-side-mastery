@@ -17,19 +17,3 @@
 | 8 | [Github Setup](./chapters/GIT_REMOTE_BACKUP.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
 | 9 | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub> |
 
-## Explorer Chapters
-
-| # | 🐠 <br/> Martin's Aquarium |
-|--|--|
-| 1 | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
-| 2 | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) |
-| 3 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
-| 4 | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
-
-## Pioneer Chapters
-
-| # | 🐠 <br/> Martin's Aquarium |
-|--|--|
-| 1 | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
-| 2 | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
-| 3 | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
