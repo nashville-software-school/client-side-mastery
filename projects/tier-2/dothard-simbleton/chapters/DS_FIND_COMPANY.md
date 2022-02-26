@@ -17,72 +17,78 @@ The method does exactly what it's name suggests. It iterates an array and as soo
 > **`just-for-show/scripts/exampleDatabase.js`**
 
 ```js
-const candies = [
-    {
-        name: "Lollipop",
-        price: 2.99
-    },
-    {
-        name: "Tootsie Roll",
-        price: 1.49
-    },
-    {
-        name: "Sugar Daddy",
-        price: 2.49
-    }
-]
+const database = {
+    candies: [
+        {
+            name: "Lollipop",
+            price: 2.99
+        },
+        {
+            name: "Tootsie Roll",
+            price: 1.49
+        },
+        {
+            name: "Sugar Daddy",
+            price: 2.49
+        }
+    ]
+}
 
-// Function to find the FIRST candy that costs less than the specified amount
+/*
+    Responsibility:
+        Find the FIRST candy that costs less than the
+        specified amount
+
+    Parameters:
+        (number) - The maximum price for finding candy
+
+    Returns:
+        (object) - The first matching candy object
+*/
 export const findCandyBelowPrice = (priceCriteria) => {
-    const matchingCandy = candies.find(candy => candy.price < priceCriteria)
+    const matchingCandy = database.candies.find(candy => candy.price < priceCriteria)
 
     return matchingCandy
 }
 ```
 
-In order to implement Doris' request, you first must add an input field to your `index.html` file. Then, place an `<article>` element in your HTML with the class of `foundCompanies`.
+## Finding Businesses
 
-> **`dothard-simbleton/index.html`**
-
-```html
-<input type="text" placeholder="Enter business name..." id="companySearch" />
-
-...
-
-<article class="foundCompanies">
-    <!-- Found companies go here --->
-</article>
-
-```
-
-To know when Doris is ready to _search_, you decide to capture the _keypress_ event.
-
-This will allow her to simply press the _"Enter"_ key to execute the search.
+To know when Doris is ready to _search_, you decide to capture the _keypress_ event. This will allow her to simply press the _"Enter"_ key to execute the search.
 
 ![searching businesses](./images/searching-companies.gif)
 
 
+Add the following code to the **BusinessList** module.
+
 > **`dothard-simbleton/scripts/BusinessList.js`**
 
 ```js
-const companySearchResultArticle = document.querySelector(".foundCompanies")
 
 document
     .querySelector("#companySearch")
         .addEventListener(
             "keypress",
-            keyPressEvent => {
+            (keyPressEvent) => {
+                const companySearchResultArticle = document.querySelector(".foundCompanies")
+
                 if (keyPressEvent.charCode === 13) {
                     /*
                         When the user presses 'Enter', find the matching business.
 
+
                         You can use the `.includes()` string method to
                         see if a smaller string is part of a larger string.
 
-                        Example: business.companyName.includes(keyPressEvent.target.value)
+                        Example:
+                            if (business.companyName.includes(keyPressEvent.target.value)) {
+
+                            }
                     */
 
-                    const foundBusiness = ???.find(???)/** implement .find() method here */
+                    const foundBusiness = businesses.find(
+                        // Your callback function goes here
+                    )
 
                     companySearchResultArticle.innerHTML = Business(???);
                 }

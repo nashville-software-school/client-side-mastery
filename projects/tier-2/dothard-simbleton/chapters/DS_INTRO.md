@@ -73,6 +73,10 @@ const contentTarget = document.querySelector("#content")
 
 const renderHTML = () => {
   contentTarget.innerHTML = `
+  <input type="text" placeholder="Enter business name..." id="companySearch" />
+
+  <article class="foundBusinesses"></article>
+
   <article class="businesses">
       <h2>All Businesses</h2>
       ${}
@@ -351,9 +355,8 @@ You can watch some videos where other developers show you other examples of how 
 
 Your task is to use the `.forEach()` array method to list all of the companies so that Doris can easily browse a list of her customers. Use the example code above as a starting point. The list of companies should look like the image below.
 
-1. The variable name whose value is the list of customers is different
-1. `supplyObject` is not an appropriate parameter name to store a single object representing a company.
-1. The class names in the HTML string will be different.
-1. The properties will also need to change. Purchasing company objects have very different property names (_e.g. `addressFullStreet`_)
+1. Create a new module named `BusinessList.js`
+1. Build a function named the same inside it that uses `.forEach()` to generate an HTML representation of each business _(see example image below for guidance on the structure)_.
+1. Invoke the function in the correct place in `main.js` to view your results on the DOM.
 
-![list of businesses](./images/dothard-simbleton-simple-list.png)
+    ![list of businesses](./images/dothard-simbleton-simple-list.png)
