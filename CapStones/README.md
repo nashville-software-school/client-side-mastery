@@ -19,7 +19,11 @@
 
     March 2-25: Complete your capstone project and instructor interview.
 
-    March 26th: Soft Demos (you demo to your classmates and instructors).
+    March 26th: Soft Demos (you demo to your classmates and instructors). Last day of Client-Side.
+
+    March 28-April 2: No Class.
+
+    April 4: 1st day of Python! 
 
     April 9th: Demo Day!
 
