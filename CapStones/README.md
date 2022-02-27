@@ -1,5 +1,28 @@
 # Capstone Information
 
+## Process
+
+- Step 1: Plan and Create your Proposal
+    - It's expected that you will have several back and forths with the instructors before you get final approval.  Ask questions early and often.  Planning is important!
+- Step 2: Get approval for your Proposal. 
+    - This will include you having a project board with at least 4 user stories.
+- Step 3: Complete your MVP 
+    - DO NOT WORK on Advanced Features until you finish your MVP!
+- Step 4: Interview with your instructor
+    - See detailed requirements below.  Your knowledge and vocabulary are more important than your code, but your code should still be clean!
+- Step 5 (not required): Work on Advanced Features
+    - These should still go through the same planning steps!
+
+## Important Dates:
+
+    March 1: Get instructions and start planning.
+
+    March 2-25: Complete your capstone project and instructor interview.
+
+    March 26th: Soft Demos (you demo to your classmates and instructors).
+
+    April 9th: Demo Day!
+
 ## Requirements
 
 ### Proposal/Planning
@@ -117,3 +140,4 @@ To impress potential employers, make sure you complete this additional checklist
 1. Use of padding/margins
 1. Consistency: views, cards, fonts, sizes, etc.
 1. If you use images in your application, they must be resized, if needed, for display in the UI and the correct ratio must be maintained.
+
