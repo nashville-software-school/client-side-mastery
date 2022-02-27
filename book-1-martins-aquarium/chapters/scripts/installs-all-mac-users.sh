@@ -111,3 +111,11 @@ npm i -g serve json-server
 # Get latest Xcode
 echo -e "\n\nMaking sure you have the latest Xcode compiler..."
 xcode-select --install
+
+echo -e "\n\n\n\n"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@                                                             @@"
+echo "@@                   S U C C E S S !!!                         @@"
+echo "@@                                                             @@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
