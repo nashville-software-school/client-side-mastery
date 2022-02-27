@@ -31,6 +31,8 @@ echo "yes" | ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
 eval `ssh-agent`
 ssh-add ~/.ssh/id_nss
 
+# Add SSH key to Github account
+echo -e "\n\nAdding your SSH key to your Github account..."
 PUBLIC_KEY=$(cat $HOME/.ssh/id_nss.pub)
 curl \
   -X POST \
