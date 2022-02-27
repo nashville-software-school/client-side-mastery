@@ -87,7 +87,6 @@ curl "https://nodejs.org/dist/latest/node-$NODE_VERSION.pkg" > "$HOME/Downloads/
 echo -e "\n\nInstalling a web server and a simple API server..."
 npm config set prefix $HOME/.npm-packages
 echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> ~/.zshrc
-echo -e "\n\nReloading your newly configured terminal..."
 source ~/.zshrc &>zsh-reload.log
 npm i -g serve json-server
 
