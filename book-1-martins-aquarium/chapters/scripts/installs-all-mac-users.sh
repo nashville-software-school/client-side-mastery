@@ -11,7 +11,6 @@ echo -e "please notify an instructor for assistance.\n\n"
 read -p "Enter your full name (not an alias): " studentName
 read -p "Enter email address you used for Github: " emailAddress
 
-
 # Set up workspace directory
 echo -e "\n\nCreating some directories that you will need..."
 mkdir -p $HOME/workspace
@@ -19,9 +18,19 @@ mkdir -p $HOME/.ssh
 mkdir -p $HOME/.config
 mkdir -p $HOME/.npm-packages
 
+# Install Homebrew
+echo -e "\n\n\n\n"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@                                                            @@"
+echo "@@   Installation Needed: Homebrew                            @@"
+echo "@@   This installation will require your computer password.   @@"
+echo "@@                                                            @@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Create SSH key
 echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
-ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
+echo "yes" | ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
 eval `ssh-agent`
 ssh-add ~/.ssh/id_nss
 
@@ -36,11 +45,13 @@ brew install -q git tig zsh zsh-completions
 current_shell=$(echo $SHELL)
 if [ $current_shell == "/bin/bash" ];
 then
-    echo "\n\n\n\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo "Change Needed: "
-    echo "Switching from bash to zsh as default shell for terminal."
-    echo "This might require you to enter your computer password."
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n"
+    echo -e "\n\n\n\n"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@                                                        @@"
+    echo "@@   Change Needed: Switch to zsh                         @@"
+    echo "@@   This change might require your computer password.    @@"
+    echo "@@                                                        @@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     chsh -s /bin/zsh
 else
     echo "Already using zsh as default shell"
@@ -60,10 +71,13 @@ defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder
 
 # Install Node
-echo -e "\n\n\n\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-echo "Installation Needed: Node.js"
-echo "This installation might require your computer password."
-echo -e "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n"
+echo -e "\n\n\n\n"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@                                                             @@"
+echo "@@   Installation Needed: Node.js                              @@"
+echo "@@   This installation might require your computer password.   @@"
+echo "@@                                                             @@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
 NODE_VERSION=$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')
 curl "https://nodejs.org/dist/latest/node-$NODE_VERSION.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"

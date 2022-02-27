@@ -15,18 +15,9 @@
 
 Invest 9 minutes of your time to watch the [Using Rectangle to Manage macOS Windows](https://www.youtube.com/watch?v=tFeDyqZG4z4) video now to learn how to use Rectangle. If you start using it **today**, then you will save yourself hours upon hours of headache and lost productivity as you learn to become a professional software developer.
 
-## Homebrew
-
-Visit the [Homebrew](http://brew.sh/) website and follow the single instruction there to get it installed.
-
 ## Launch Visual Studio Code From Command Line
 
 [Follow these steps](https://code.visualstudio.com/docs/setup/mac) to set up Visual Studio Code to be launched from the command line.
-
-## Node
-
-Visit the [Node.js](https://www.nodejs.org) site and install the **"LTS"** release.
-
 
 
 ## Add SSH Key to GitHub Account
