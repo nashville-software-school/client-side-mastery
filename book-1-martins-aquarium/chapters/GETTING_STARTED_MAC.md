@@ -19,11 +19,6 @@ Invest 9 minutes of your time to watch the [Using Rectangle to Manage macOS Wind
 
 [Follow these steps](https://code.visualstudio.com/docs/setup/mac) to set up Visual Studio Code to be launched from the command line.
 
-
-## Add SSH Key to GitHub Account
-
-Now watch the video for [adding your SSH key to your GitHub account](https://youtu.be/8hlmIObpMd4).
-
 ---
 
 ## Troubleshooting: For Instruction Team

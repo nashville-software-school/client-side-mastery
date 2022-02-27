@@ -8,8 +8,15 @@ echo -e "\nWe are going to try to install as much software, and make as many"
 echo -e "configurations as we possibly can in an automated script. If this"
 echo -e "If this stops at any point, and you don't see a 'SUCCESS' message"
 echo -e "please notify an instructor for assistance.\n\n"
-read -p "Enter your full name (not an alias): " studentName
-read -p "Enter email address you used for Github: " emailAddress
+echo "Enter your full name exactly as you entered it on Github settings:"
+read -p "> " studentName
+echo -e "\nEnter email address you used for Github:"
+read -p "> " emailAddress
+echo -e "\nEnter your Github account name:"
+read -p "> " githubUsername
+echo -e "\nEnter github password for user $githubuser:"
+read -s -p "> " githubPassword
+
 
 # Set up workspace directory
 echo -e "\n\nCreating some directories that you will need..."
@@ -17,6 +24,21 @@ mkdir -p $HOME/workspace
 mkdir -p $HOME/.ssh
 mkdir -p $HOME/.config
 mkdir -p $HOME/.npm-packages
+
+# Create SSH key
+echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
+echo "yes" | ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
+eval `ssh-agent`
+ssh-add ~/.ssh/id_nss
+
+PUBLIC_KEY=$(cat $HOME/.ssh/id_nss.pub)
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/vnd.github.v3+json" \
+  -u "$githubUsername:$githubPassword" \
+  https://api.github.com/user/keys \
+  -d "{\"key\":\"$PUBLIC_KEY\",\"title\":\"NSS Automated Key\"}"
 
 # Install Homebrew
 echo -e "\n\n\n\n"
@@ -27,12 +49,6 @@ echo "@@   This installation will require your computer password.   @@"
 echo "@@                                                            @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Create SSH key
-echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
-echo "yes" | ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
-eval `ssh-agent`
-ssh-add ~/.ssh/id_nss
 
 # Install required package from Brew
 echo -e "\n\nInstalling Visual Studio Code..."
@@ -89,7 +105,6 @@ npm config set prefix $HOME/.npm-packages
 echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> ~/.zshrc
 source ~/.zshrc &>zsh-reload.log
 npm i -g serve json-server
-
 
 # Get latest Xcode
 echo -e "\n\nMaking sure you have the latest Xcode compiler..."

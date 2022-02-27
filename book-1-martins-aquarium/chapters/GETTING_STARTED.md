@@ -10,7 +10,7 @@ Up until now, you didn't have the power to destroy your machine, but within the 
 
 **Seriously, _right now!_**
 
-## Browser - Google Chrome
+## Google Chrome
 
 Google Chrome is the most popular browser for web developers because of the powerful tools it provides to test code, manipulate documents, and measure performance.
 
@@ -28,15 +28,18 @@ Visit the [Chrome Store page for Gitpod](https://chrome.google.com/webstore/deta
 1. To the right of the “Allowed to send pop-ups and use redirects” heading, click the “Add” button.
 1. Paste `[*.]gitpod.io` in the Site field and click “Add”.
 
-## Online Services
+## GitHub
 
-<a id="github"></a>
+GitHub is the primary site that software developers throughout the world use to store their code, and share it with other developers. Create your account using a **professional** username. Make it as close to your actual name as you can.
 
-### GitHub
+After you make your account you need to make sure your full name is updated in your settings.
 
-GitHub is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
+1. Click on the profile icon at the top-right of Github.
+1. Choose "Settings".
+1. Enter your full name in the "Name" field.
+1. Scroll down and click "Update Profile".
 
-##### _NOTE: When creating your GitHub account, be mindful of the fact that potential employers will be viewing your profile when you apply for jobs, so keep it professional._
+Visit the [sign up page](https://github.com/join) to get started.
 
 ## dbdiagram.io
 
