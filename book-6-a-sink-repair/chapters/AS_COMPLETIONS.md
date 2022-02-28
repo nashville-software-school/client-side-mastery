@@ -97,3 +97,7 @@ Create two functions in your `dataAccess` module.
 
 * `saveCompletion()` - This will perform the POST request to save the completion object to the API
 * `fetchCompletions()` - This will retrieve all completion objects from the API
+
+## Update Main
+
+Now update your main module again to fetch the completions after requests and plumbers have been fetched.
