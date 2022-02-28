@@ -4,6 +4,44 @@ When Maude or Merle have completed a job, they would like to choose their name f
 
 <img src="./images/sink-repair-complete-service.gif" alt="animation showing two service requests marked as complete" width="800px"/>
 
+## Getting the Plumbers
+
+First, add the following function to your `dataAccess.js` module.
+
+```js
+export const fetchRequests = () => {
+    return fetch(`${API}/plumbers`)
+        .then(response => response.json())
+        .then(
+            (data) => {
+                applicationState.plumbers = data
+            }
+        )
+}
+```
+
+Then update your `main.js` to request both resources using the following syntax. Notice the new `.then()` method which, in turn, invokes the `fetchPlumbers` function.
+
+```js
+import { fetchRequests } from "./dataAccess.js"
+import { SinkRepair } from "./SinkRepair.js"
+
+
+const mainContainer = document.querySelector("#container")
+
+const render = () => {
+    fetchRequests()
+        .then(() => fetchPlumbers())
+        .then(
+            () => {
+                mainContainer.innerHTML = SinkRepair()
+            }
+        )
+}
+
+render()
+```
+
 ## Double State for Display Plumbers
 
 You can place this `<select>` element wherever is easiest to start. Don't worry about the exact placement, just make sure that it is displayed for each service request.
