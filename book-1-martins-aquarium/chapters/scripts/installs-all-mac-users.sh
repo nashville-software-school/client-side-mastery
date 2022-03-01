@@ -14,7 +14,7 @@ echo -e "\nEnter email address you used for Github:"
 read -p "> " emailAddress
 echo -e "\nEnter your Github account name:"
 read -p "> " githubUsername
-echo -e "\nEnter github password for user $githubuser:"
+echo -e "\nEnter personal access token for Github:"
 read -s -p "> " githubPassword
 
 
@@ -76,7 +76,7 @@ else
 fi
 
 # User settings for git
-git config --global user.name $studentName
+git config --global user.name "$studentName"
 git config --global user.email $emailAddress
 
 # Install ohmyzsh
@@ -97,9 +97,7 @@ echo "@@   This installation might require your computer password.   @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
-NODE_VERSION=$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')
-curl "https://nodejs.org/dist/latest/node-$NODE_VERSION.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
-
+brew install node
 
 # Install global dependencies
 echo -e "\n\nInstalling a web server and a simple API server..."
@@ -118,4 +116,3 @@ echo "@@                                                             @@"
 echo "@@                   S U C C E S S !!!                         @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-
