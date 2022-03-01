@@ -4,10 +4,6 @@ In a single page application, you are only rendering one DOM tree. You never req
 
 In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app.
 
-## Video Walkthrough
-
-Before implementing the code yourself with the instructions below, watch the [Honey Rae Repairs - Routing](https://vimeo.com/568650908) video to see the implementation and get some context around what is happening.
-
 ## Setup
 
 Make sure you are in your project's root directory. First, we need to install `react-router-dom`. Then we will create an additional file to handle the routing and create a navbar.
@@ -19,6 +15,10 @@ mkdir src/components/nav
 touch src/components/nav/NavBar.js
 touch src/components/nav/NavBar.css
 ```
+
+## Video Walkthrough
+
+Before implementing the code yourself with the instructions below, watch the [Honey Rae Repairs - Routing](https://vimeo.com/568650908) video to see the implementation and get some context around what is happening.
 
 ## Starter Component Code
 
