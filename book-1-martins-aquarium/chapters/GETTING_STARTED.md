@@ -41,6 +41,12 @@ After you make your account you need to make sure your full name is updated in y
 
 Visit the [sign up page](https://github.com/join) to get started.
 
+## Github Personal Access Token
+
+A personal access token is something you will need in the next chapter to install all of the developer tools required for your time at NSS.
+
+
+
 ## dbdiagram.io
 
 Sign up on [dbdiagram.io](https://dbdiagram.io) and bookmark the site.
