@@ -4,6 +4,8 @@
 https://venngage.com/blog/color-palette-generators/#best-color-palette-generators
 https://coolors.co/
 
+https://color.adobe.com/create/color-wheel
+
 ## Wireframing:
 
 - miro.com
