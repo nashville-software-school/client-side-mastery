@@ -4,11 +4,14 @@
 
 - Step 1: Plan and Create your Proposal
     - It's expected that you will have several back and forths with the instructors before you get final approval.  Ask questions early and often.  Planning is important!
+    - Your project should be something that you are excited about AND you would want to demo for potential employers.  
 - Step 2: Get approval for your Proposal. 
-    - This will include you having a project board with at least 4 user stories.
+    - This will include you having a project board with at least 4 user stories, an ERD and wireframes.  See Details below.
+    - WARNING: If you start coding before your proposal is approve, you risk needing to start over.
 - Step 3: Complete your MVP 
     - DO NOT WORK on Advanced Features until you finish your MVP!
-- Step 4: Interview with your instructor
+- Step 4: Interview with your instructor.
+    - A JI will do a code review and help you prep before the final interview.
     - See detailed requirements below.  Your knowledge and vocabulary are more important than your code, but your code should still be clean!
 - Step 5 (not required): Work on Advanced Features
     - These should still go through the same planning steps!
@@ -28,7 +31,7 @@
     April 9th: Demo Day!
 
 ## Requirements
-
+*Note: Where it indicates "server-side", it is not a requirement for this capstone.  It will be a requirement for the back-end capstone.
 ### Proposal/Planning
 
 1. Your proposal must clearly articulate the problem it is solving for your customers.
