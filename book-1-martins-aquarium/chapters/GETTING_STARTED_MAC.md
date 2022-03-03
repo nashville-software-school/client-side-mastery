@@ -8,7 +8,7 @@ In order to automate the installation of the tools you need _(which happens in t
 
     <img src="./images/github-token-access-settings.gif" alt="Access Github settings" width="600px" />
 
-1. In the menu options on the left, scroll to the last items labeled **Developer Settings**.
+1. In the menu options on the left, scroll to, and click, the last item labeled **Developer Settings**. Then click on **Personal access tokens**.
 
     <img src="./images/github-token-developer-settings.gif" alt="Access Github settings" width="300px" />
 
