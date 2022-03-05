@@ -20,10 +20,10 @@ In this book, you will gain the knowlege and understanding of working with funct
 
 These projects expand your knowledge of data, functions and modules. Each project has tests that run and verify that your code follows the requirements.
 
-| # | Project Name |
-|--|--|
-|1|[The Hairy Potter Project](../projects/tier-1/hairy-potter/)|
-|2|[The Modern Farm Project](../projects/tier-1/modern-farm/)|
+| # | Project Name | Description |
+|--|--|--|
+|1|[The Hairy Potter Project](../projects/tier-1/hairy-potter/)| This project has very specific requirements for how you should structure and organize your code. Attention to details is very important **before** you write your code. |
+|2|[The Modern Farm Project](../projects/tier-1/modern-farm/)| This project has very specific requirements for how you should structure and organize your code. Attention to details is very important **before** you write your code. |
 
 ## 🏕 Pioneer Chapters
 

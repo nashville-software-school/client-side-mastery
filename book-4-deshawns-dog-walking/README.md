@@ -31,3 +31,12 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 |--|--|--|--|
 | 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) | |
 | 2 | [City State](./chapters/DD_CITY_STATE_.md) | | |
+
+## 🔐 Projects Unlocked
+
+These projects build on the concepts in this book and prepare you for future books.
+
+| # | Project Name | Description |
+|--|--|--|
+|1|[Dothard &amp; Simbleton](../projects/tier-2/dothard-simbleton/)| This project introduces you to array methods, which are different ways to iterate arrays for specific purposes. |
+|2|[Daily Journal](../projects/tier-2/daily-journal/)| This project can be started now, but not finished now, as it is intended to be built upon as you grow your skills over the next few week. |
