@@ -55,10 +55,8 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | 4 |  | [Line Item Totals](./chapters/KK_SUBTOTALS.md) |
 | 5 | | [Product Search](./chapters/KK_SEARCH.md) |
 
-## 🏕 Pioneer Chapters
+## 🔐 Projects Unlocked
 
-Want the ultimate challenge? Using complex data relationships with React, build a project that manages state for flowers, nurseries, distributors, retailers, and customers buying flowers at the retailers.
-
-Requires a solid ERD to succeed.
-
-[🌹 🌸  Thorns &amp; Roses Project](../projects/tier-5/thorns-roses/)
+| # | Project&nbsp;Name | Description |
+|--|--|--|
+|1| [🌹&nbsp;Thorns&nbsp;&amp;&nbsp;Roses](../projects/tier-5/thorns-roses/) | Want the ultimate challenge? Using complex data relationships with React, build a project that manages state for flowers, nurseries, distributors, retailers, and customers buying flowers at the retailers. |

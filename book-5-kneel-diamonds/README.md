@@ -23,6 +23,13 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 |--|--|--|
 | 1 | [Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
 
+## 🔐 Projects Unlocked
+
+| # | Project&nbsp;Name | Description |
+|--|--|--|
+|1|[Honest&nbsp;Abe](../projects/tier-3/honest-abe/)| Honest Abe has three projects that increase in complexity. If you complete all three, you will have mastered ERDs, data relationships, and using array methods to nevigate them. |
+|2|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-3/honest-abe/)| This is a **group project** for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
+
 ## 🏕 Pioneer Chapters
 
 Pioneer chapters let you develop Deep Learning on the concepts that you practiced in this book.

@@ -23,7 +23,15 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 
 | # | 🔧 💧 <br/> A Sink Repairs | 🤡 <br/> Buttons the Clown |
 |--|--|--|
-| 2 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) | [Sorting Completed Parties](./chapters/BC_SORT_BY_COMPLETE.md) |
+| 1 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) | [Sorting Completed Parties](./chapters/BC_SORT_BY_COMPLETE.md) |
+
+## 🔐 Projects Unlocked
+
+If you have completed all Core and Explorer chapters, let your instruction team know that you are interested in doing this project with some teammates.
+
+| # | Project&nbsp;Name | Description |
+|--|--|--|
+|1|[Giffygram](../projects/tier-4/giffygram/)| You will deconstruct an existing project using your Dev Tools, and then rebuild it based on your technical specifications. |
 
 ## 🌤 CloudOps Chapters
 | # | Cloud Deployment Providers |
