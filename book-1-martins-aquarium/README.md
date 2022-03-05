@@ -1,5 +1,7 @@
 # Book 1 - Martin's Aquarium
 
+The main learning goal for this book is the use of `git` and Github for versioning your code as you develop applications.
+
 ## Chapters
 
 | # | 🐠 <br/> Martin's Aquarium |

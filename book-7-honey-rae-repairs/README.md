@@ -42,7 +42,9 @@ For example, here's what the first few days should look like for you.
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 15**
 
-## Explorer Chapters
+## 🧭 Explorer Chapters
+
+Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
 
 | # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
 |--|--|--|
@@ -53,7 +55,7 @@ For example, here's what the first few days should look like for you.
 | 4 |  | [Line Item Totals](./chapters/KK_SUBTOTALS.md) |
 | 5 | | [Product Search](./chapters/KK_SEARCH.md) |
 
-## Pioneer Chapters
+## 🏕 Pioneer Chapters
 
 Want the ultimate challenge? Using complex data relationships with React, build a project that manages state for flowers, nurseries, distributors, retailers, and customers buying flowers at the retailers.
 

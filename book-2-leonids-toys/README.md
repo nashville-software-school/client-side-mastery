@@ -17,9 +17,9 @@ In this book, you will gain the knowlege and understanding of working with data 
 | 9 | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [When Did I Learn That?](./chapters/DN_FIND_NOTE.md) | [Most Expensive Groceries](./chapters/MP_EXPENSIVE_ITEMS.md) |
 | 🎓 | [Self-Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
 
-## Explorer Chapters
+## 🧭 Explorer Chapters
 
-| # | 🚀 <br/> Advanced Data Stuctures |
+| # | 🚀  Advanced Data Stuctures |
 |--|--|
 | 1 | [Data Structure: Map](./chapters/JAVASCRIPT_MAPS.md) |
 | 2 | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |

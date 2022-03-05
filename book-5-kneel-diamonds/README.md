@@ -15,15 +15,19 @@
 | 9 | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Price Quotes](./chapters/CB_BUILD_COST.md) |
 | 🎓 | [Self-assessment](./chapters/BOOK_4_ASSESSMENT.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> |  |
 
-## Explorer Chapters
+## 🧭 Explorer Chapters
 
-| # | 💎 💍 💎 💍 <br/> Kneel Diamonds |  🚙 🚗 🚙 🚗 <br/> Car Builder |
+Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
+
+| # | 💎 💍  <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
 |--|--|--|
 | 1 | [Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
 
-## Pioneer Chapters
+## 🏕 Pioneer Chapters
 
-| # | 💎 💍 💎 💍 <br/> Kneel Diamonds |  🚙 🚗 🚙 🚗 <br/> Car Builder |
+Pioneer chapters let you develop Deep Learning on the concepts that you practiced in this book.
+
+| # | 💎 💍 <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
 |--|--|--|
 | 1 | [User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) |  |
 | 2 | [Data Access Layer](./chapters/KD_DAL.md) |  |

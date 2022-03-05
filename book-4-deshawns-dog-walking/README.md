@@ -23,7 +23,9 @@ In this book, you will be introduced to three concepts.
 | 7 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#many-to-many #data</sub> |  |  |
 | 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | | |
 
-## Explorer Chapters
+## 🧭 Explorer Chapters
+
+Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
 
 | # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking | ☕️ 🧁 <br/> Brewed Awakenings | 🍎 🚣🏽‍♀️ <br/> Cider Falls Park |
 |--|--|--|--|

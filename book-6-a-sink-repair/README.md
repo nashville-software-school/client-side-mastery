@@ -1,10 +1,10 @@
-# Book 6 - Sink Repair Service
+# Book 6 - A Sink Repair Service
 
 In this book, you will be introduced to the basics of asynchronous programming and working with Web APIs.
 
 ## Chapters
 
-| # | 🔧 💧 <br/> Sink Repairs <sub> <br/> (_Guided Tour_)</sub> | 🤡 <br/> Buttons the Clown |
+| # | 🔧 💧 <br/> A Sink Repair <sub> <br/> (_Guided Tour_)</sub> | 🤡 <br/> Buttons the Clown |
 |--|--|--|
 | 1 | [Introduction to Fetch](./chapters/AS_FETCH_INTRO.md) <br/> <sub style="font-size:0.85rem;">#api #fetch</sub> |  |
 | 2 | [A Sink Repair Service](./chapters/AS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#context</sub> | [Hire a Clown for Your Next Party](./chapters/BC_INTRO.md) |
@@ -17,15 +17,17 @@ In this book, you will be introduced to the basics of asynchronous programming a
 | 1 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md)<br/> <sub style="font-size:0.85rem;">#fetch #then-chaining | [The Party is Over](./chapters/BC_PERFORMANCE_COMPLETE.md) |
 | 🎓 | [Self-assessment](./chapters/BOOK_5_ASSESSMENT.md) |  |
 
-## Explorer Chapters
+## 🧭 Explorer Chapters
 
-| # | 🔧 💧 <br/> A-Sink Repairs <sub> <br/> (_Guided Tour_)</sub> | 🤡 <br/> Buttons the Clown |
+Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
+
+| # | 🔧 💧 <br/> A Sink Repairs | 🤡 <br/> Buttons the Clown |
 |--|--|--|
 | 2 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) | [Sorting Completed Parties](./chapters/BC_SORT_BY_COMPLETE.md) |
 
-## CloudOps Chapters
+## 🌤 CloudOps Chapters
 | # | Cloud Deployment Providers |
 |--|--|
-| ☁️ | [AWS Deploy](./chapters/CLOUD_AWS.md) |
-| 💧 | [Quick Deploy API: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) |
-| 💧 | [Quick Deploy Project: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) |
+| 1 | [AWS Deploy](./chapters/CLOUD_AWS.md) |
+| 2 | [Quick Deploy API: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) |
+| 3 | [Quick Deploy Project: Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) |
