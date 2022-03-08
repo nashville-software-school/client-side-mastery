@@ -50,7 +50,7 @@ export const Ticket = () => {
     )
 
     // Function to invoke when an employee is chosen from <select> element
-    const assignEmployee = (evt) => {
+    const updateTicket = (evt) => {
 
         // Construct a new object to replace the existing one in the API
         const updatedTicket = {
