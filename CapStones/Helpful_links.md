@@ -24,3 +24,7 @@ https://color.adobe.com/create/color-wheel
 ### Components
 
 - https://bradfrost.com/blog/post/atomic-web-design/#atoms
+
+### ReadMe
+
+- Giphy Capture: https://giphy.com/apps/giphycapture
