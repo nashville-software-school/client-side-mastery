@@ -112,6 +112,8 @@ addPhoneToInventory(toys[0], 499.99)
 ### Steps
 
 1. Delete the price property on the objects in your array
-2. Create a new Map()
+2. Create a `new Map()`
 3. Complete the `addPhoneToInventory` function that will use the `.set()` method on the Map to store prices for toys.
 4. Invoke `addPhoneToInventory` as many times as you have toys in your array using square bracket notation to access each toy _(see above example)_.
+
+> Hint: You will need to use [JSON.stringify()](https://www.educba.com/json-stringify-javascript/) for each object when you set is as a key in the Map.
