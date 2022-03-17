@@ -14,10 +14,13 @@ Here are the first requirements for this project.
     1. The author of the note
     1. The date the note was entered
     1. The category of the note
-1. A note can be assigned to one of the following categories.
-    1. Task
-    1. Observation
-    1. Reminder
+1. A note can be assigned any number of topics. For example...
+    1. "task"
+    1. "observation"
+    1. "code"
+    1. "learning"
+    1. "feelings"
+    1. etc...
 
 ### Beginning Algorithm Comments
 
@@ -36,7 +39,7 @@ Given those requirements, here is how each would be described by a professional 
         * text (string)
         * author (string)
         * date (string)
-        * category (string) : Value constraints ["Task", "Observation", "Reminder"]
+        * topics (array of strings)
 
     Either define the objects within the initial array or
     use the .push() method to add them after initialization.
@@ -63,4 +66,4 @@ code .
 
 ## Instructions
 
-Copy the algorithm provided above into your `main.js` and see if you can write the code for both operations.
+Copy the algorithm provided above into your `main.js` and see if you can write the code for both operations. Add a few notes to the array.
