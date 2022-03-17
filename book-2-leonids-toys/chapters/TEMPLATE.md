@@ -30,3 +30,14 @@ When you run the code, it should display the following.
 ```js
 // Provide example output
 ```
+
+## Hint
+
+Remember, use all the other resources at your disposal before looking at hints. Start thinking like a professional now and become an efficient learner, not a lazy one.
+
+<details>
+    <summary>Hint title</summary>
+
+```js
+```
+</details>

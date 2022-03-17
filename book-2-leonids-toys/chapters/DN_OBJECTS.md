@@ -30,7 +30,7 @@ Remember, use all the other resources at your disposal before looking at hints. 
 notes.push({
     id: 4,
     category: "Task",
-    text: "Review all my old code before asking for help or looking at hints."
+    text: "Review all my old code before asking for help or looking at hints.",
     author: "Samantha Maas",
     date: "2020-11-09"
 })
@@ -38,7 +38,7 @@ notes.push({
 notes.push({
     id: 5,
     category: "Observation",
-    text: "I have found that slowing down and thinking about the problem, and writing out the comments makes it vastly easier to write code."
+    text: "I have found that slowing down and thinking about the problem, and writing out the comments makes it vastly easier to write code.",
     author: "Gib Jeffries",
     date: "2021-01-18"
 })
@@ -46,11 +46,9 @@ notes.push({
 notes.push({
     id: 6,
     category: "Reminder",
-    text: "Need to have all my code backed up to Github by the end of the week."
+    text: "Need to have all my code backed up to Github by the end of the week.",
     author: "Rebecca Parker",
     date: "2021-02-25"
 })
 ```
 </details>
-
-
