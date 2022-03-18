@@ -27,8 +27,7 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 
 | # | Project&nbsp;Name | Description |
 |--|--|--|
-|1|[Honest&nbsp;Abe](../projects/tier-3/honest-abe/)| Honest Abe has three projects that increase in complexity. If you complete all three, you will have mastered ERDs, data relationships, and using array methods to nevigate them. |
-|2|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-3/honest-abe/)| This is a **group project** for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
+|1|[Exomine](https://github.com/nss-group-projects/exomine)| Exomine is a group project that uses all of the skills you have worked with to this point in the course. Your knowledge of data relationships and array methods will be grown tremendously and challenged. Can you face the challenge with some teammates? |
 
 ## 🏕 Pioneer Chapters
 

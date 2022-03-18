@@ -32,6 +32,9 @@ If you have completed all Core and Explorer chapters, let your instruction team 
 | # | Project&nbsp;Name | Description |
 |--|--|--|
 |1|[Giffygram](../projects/tier-4/giffygram/)| You will deconstruct an existing project using your Dev Tools, and then rebuild it based on your technical specifications. |
+|2|[Honest&nbsp;Abe](../projects/tier-3/honest-abe/)| Honest Abe has three projects that increase in complexity. If you complete all three, you will have mastered ERDs, data relationships, and using array methods to nevigate them. |
+|3|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-3/honest-abe/)| This is a **group project** for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
+
 
 ## 🌤 CloudOps Chapters
 | # | Cloud Deployment Providers |

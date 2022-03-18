@@ -54,31 +54,13 @@ touch scripts/main.js
 That's all you need to do in this chapter. Below are optional challenges you can try if you want to.
 
 
-## Challenge: Creating Content in a File
+## Optional Challenge: Terminal Welcome Message
 
-> **NOTE:** These are completely optional exercises that you can choose to do. All we ask is that you complete all of the regular practice exercises before attempting to take on a challenge.
->
-> If your instruction team has moved on to a new chapter or topics, it is far more important to work on the current practice exercises for that new topic than spending more time on a previous challenge.
-
-During your career, you will be using powerful and extensible code editors like Visual Studio, IntelliJ, Webstorm, Eclipse, and many others to create your code. However, there are times that you want to put just a couple lines of code or a comment in a file and you don't want to fire up your powerful editor just to do that.
-
-Read the well-written answer to a [question on the Stack Exchange website](https://unix.stackexchange.com/questions/77277/how-to-append-multiple-lines-to-a-file) and see if you can figure out how to get the following CSS code into the `main.css` file without using Visual Studio Code, but the `echo` command in the terminal.
-
-```css
-#fishtank {}
-
-.fish {}
-
-.fish__name {}
-```
-
-## Advanced Challenge: Terminal Welcome Message
-
-> **NOTE:** Advanced challenges are only to be attempted once the practice exercises are complete and you feel you both (a) a solid grasp on the basic knowledge of the current topic, and (b) you have adequate time to devote to them. They are intended to be difficult to solve and you must spend time researching it before any instructor will offer guidance.
+> **NOTE:** Challenges are only to be attempted once the practice exercises are complete and you feel you both (a) a solid grasp on the basic knowledge of the current topic, and (b) you have adequate time to devote to them. They are intended to be difficult to solve and you must spend time researching it before any instructor will offer guidance.
 
 The terminal can do everything that all of your other applications you have, or ever will have, can do. There's just not a visual interface for doing it. It's all just text.
 
-In this advanced challenge, you should research bash variables, bash aliases, and find out how to customize your `zsh` _(.zshrc)_ or `bash` _(.bashrc)_ initialization script to have a welcome message show up every time your launch a terminal session.
+In this challenge, you should research bash variables, bash aliases, and find out how to customize your `zsh` _(.zshrc)_ or `bash` _(.bashrc)_ initialization script to have a welcome message show up every time your launch a terminal session.
 
 ![welcome message in the terminal](./images/terminal-welcome.gif)
 

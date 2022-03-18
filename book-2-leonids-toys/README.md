@@ -24,3 +24,9 @@ In this book, you will gain the knowlege and understanding of working with data 
 |--|--|
 | 1 | [Data Structure: Map](./chapters/JAVASCRIPT_MAPS.md) |
 | 2 | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |
+
+## 🔐 Projects Unlocked
+
+| # | Project&nbsp;Name | Description |
+|--|--|--|
+|1|[Cyberia](./README.md)| Can you survive the ultimate data challenge in a world run by a computer virus. |
