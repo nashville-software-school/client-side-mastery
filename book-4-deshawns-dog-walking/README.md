@@ -2,7 +2,7 @@
 
 In this book, you will be introduced to three concepts.
 
-1. Debugging JavaScript code.
+1. Debugging JavaScript code in the browser.
 1. Handling browser generated events.
 1. Data relationships and how to visualize them.
 
@@ -27,10 +27,10 @@ In this book, you will be introduced to three concepts.
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
 
-| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking | ☕️ 🧁 <br/> Brewed Awakenings | 🍎 🚣🏽‍♀️ <br/> Cider Falls Park |
-|--|--|--|--|
-| 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) | |
-| 2 | [City State](./chapters/DD_CITY_STATE_.md) | | |
+| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking | ☕️ 🧁 <br/> Brewed Awakenings |
+|--|--|--|
+| 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) |
+| 2 | [City State](./chapters/DD_CITY_STATE_.md) | |
 
 ## 🔐 Projects Unlocked
 
@@ -40,3 +40,4 @@ These projects build on the concepts in this book and prepare you for future boo
 |--|--|--|
 |1|[Dothard&nbsp;&amp;&nbsp;Simbleton](../projects/tier-2/dothard-simbleton/)| This project introduces you to array methods, which are different ways to iterate arrays for specific purposes. |
 |2|[Daily&nbsp;Journal](../projects/tier-2/daily-journal/)| This project can be started now, but not finished now, as it is intended to be built upon as you grow your skills over the next few week. |
+

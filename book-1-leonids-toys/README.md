@@ -1,6 +1,6 @@
-# Book 2 - Leonid's Bespoke Toy Shoppe
+# Book 1 - Leonid's Bespoke Toy Shoppe
 
-In this book, you will gain the knowlege and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
+In this book, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
 
 ## Chapters
 
@@ -16,7 +16,6 @@ In this book, you will gain the knowlege and understanding of working with data 
 | 8 | [Building Strings with Iteration](./chapters/ARRAYS_STRINGS.md) <br/> <sub style="font-size:0.85rem;">#iteration #string-templates</sub> | [Raising Prices](./chapters/LT_ITERATION_WITH_LOGIC.md) <br/> <sub style="font-size:0.85rem;">#data #arrays #iteration</sub> | [HTML Note Articles](./chapters/DN_NOTE_ARTICLES.md) |
 | 9 | [Array and String Methods](./chapters/ARRAY_STRING_METHODS.md) <br/> <sub style="font-size:0.85rem;">#methods #arrays #strings</sub> | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [Note Topics Subsection](./chapters/DN_TOPICS_SECTION.md) |
 | 🎓 | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
-| 🎓 | [NSS Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
 
 ## 🧭 Explorer Chapters
 

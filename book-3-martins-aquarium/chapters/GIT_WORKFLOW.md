@@ -108,6 +108,6 @@ The checklist below is for you. You will use it during the practice exercise, an
     ```sh
     git merge main
     ```
-## Visual Workflow of Github
+## Visual of Github Workflow
 
 ![](./images/github-workflow.png)

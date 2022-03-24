@@ -1,4 +1,4 @@
-# Making Directories and Files in the Terminal
+# Setting Up Your Project
 
 ## Learning Objectives
 
