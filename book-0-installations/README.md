@@ -1,6 +1,6 @@
 # Preface - Installations and Accounts
 
-![Picture of TRS-80 computer](./chapters/images/trs-80.jpeg)
+<img src="./chapters/images/trs-80.jpeg" width="500px" />
 
 |  | Setting Up Your Machine |
 |--|--|
