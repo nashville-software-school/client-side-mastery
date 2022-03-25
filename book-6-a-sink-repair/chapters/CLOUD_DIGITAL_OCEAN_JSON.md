@@ -24,7 +24,7 @@ Your applicatons are considered to be static apps, so you won't be charged for t
         "author": "NSS Student",
         "license": "ISC",
         "dependencies": {
-            "json-server": "^0.14.2"
+            "json-server": "latest"
         }
     }
     ```
