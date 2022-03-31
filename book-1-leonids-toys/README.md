@@ -1,8 +1,20 @@
 # Book 1 - Leonid's Bespoke Toy Shoppe
 
-In this book, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
 
-## Chapters
+## Prelude: Developer Skills
+
+There's nothing more infuriating for an experienced developer, who is trying to help a beginner, than watching the person waste time by using their mouse to move windows, select applications, highlight text, and other basic operations.
+
+| # | 💀 🐭 💀 Using the Keyboard |
+|--|--|
+| 1 |[Core Keyboard Shortcuts](./chapters/KEYBOARD_CORE.md) <br/> <sub style="font-size:0.85rem;">#keyboard</sub> |
+| 2 |[Debugging Shortcuts](./chapters/KEYBOARD_DEBUG.md) <br/> <sub style="font-size:0.85rem;">#keyboard #debugging</sub> |
+
+
+
+## Core Chapters
+
+In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
 
 | # | 🏠 Foundations Review | 🧸 Leonid's Toys <br/><sub>(_Guided tour_)</sub> | 📔 Daily Notes |
 |--|--|--|--|
