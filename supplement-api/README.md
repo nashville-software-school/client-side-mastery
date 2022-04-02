@@ -1,12 +1,12 @@
-# Algorithmic Thinking
+# API Tools
 
 In this book, you can practice your algorithmic thinking - either on your own, or with a friend or team. As the problems get more complex, you will find that working on it with others becomes necessary.
 
 ## Chapters
 
-| # | 𝓧 · 𝓝 = 𝒇(𝓃) <br/> Problem Solving with Algorithms |
+| # | Working with APIs |
 |--|--|
-| 1 | [Sum of Multiples](./chapters/ALGORITHMS_MULTIPLES_SUM.md) |
+| 1 | [Clients](./chapters/API_CLIENTS.md) |
 | 2 | [Build a Staircase](./chapters/ALGORITHMS_STAIRCASE.md) |
 | 3 | [Tall Buildings](./chapters/ALGORITHMS_BUILDINGS.md) |
 | 4 | [Down on the Farm](./chapters/ALGORITHMS_ANIMAL_LEGS.md) |
