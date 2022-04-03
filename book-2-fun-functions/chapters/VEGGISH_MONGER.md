@@ -25,11 +25,4 @@ The exported function must be named `mongerInventory`.
 
 Open your `fishMonger.js` module and write some comments describing the operations, data structures, function, and parameters needed to fulfill the above requirements.
 
-Once you have the algorithm defined, commit it.
-
-```sh
-git add fishMonger.js
-git commit -m "Fishmonger algorithm defined"
-```
-
 Now implement the algorithm as best you can. After you write all of the code needed for the algorithm, you can run the tests to see if you've written it correctly.

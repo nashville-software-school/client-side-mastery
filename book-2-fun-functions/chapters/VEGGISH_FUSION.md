@@ -29,11 +29,4 @@ This module must import and invoke the function that is exported by the fish mon
 
 Open your `restaurant.js` module and write some comments describing the operations, data structures, function, and parameters needed to fulfill the above requirements.
 
-Once you have the algorithm defined, commit it.
-
-```sh
-git add restaurant.js
-git commit -m "Restaurant algorithm defined"
-```
-
 Now implement the algorithm as best you can. After you write all of the code needed for the algorithm, you can run the tests to see if you've written it correctly.

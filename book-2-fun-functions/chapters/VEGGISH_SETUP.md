@@ -19,14 +19,6 @@ cd fish-fusion
 touch main.js fishingBoat.js fishMonger.js restaurant.js
 ```
 
-Then initialize your Git repository and make your first commit.
-
-```sh
-git init
-git add main.js fishingBoat.js fishMonger.js restaurant.js
-git commit -m "Initial commit"
-```
-
 Then open the project directory in Visual Studio Code.
 
 ## Main Module
@@ -36,7 +28,10 @@ Add the following code to `main.js`
 ```js
 import { fishMenu } from "./restaurant.js"
 
-const menu = fishMenu()
+/* Uncomment this code block when you're ready to test your logic
 
+const menu = fishMenu()
 console.log(menu)
+
+*/
 ```

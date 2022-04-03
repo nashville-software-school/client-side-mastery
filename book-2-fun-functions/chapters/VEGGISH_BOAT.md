@@ -1,11 +1,5 @@
 ## The Fishing Boat
 
-Create a branch to design and implement the algorithm for the fishing boat.
-
-```sh
-git checkout -b fishing-boat
-```
-
 Time to set up the fishing boat. First, you need to think about your data structures.
 
 1. The boat will have many fish.
@@ -49,13 +43,6 @@ Use this data.
     }
     ```
 1. When should the function be invoked, and the fish array passed as an argument?
-
-Once you have the algorithm defined, commit it.
-
-```sh
-git add fishingBoat.js
-git commit -m "Fishing boat algorithm defined"
-```
 
 Now implement the algorithm as best you can. You won't know if you have the right algorithm until you build out other modules, but that's ok. Professional software developers know to start small with the knowledge that the algorithm is a living thing and will likely have to be adjusted as the project grows.
 
