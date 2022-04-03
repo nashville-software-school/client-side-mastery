@@ -55,7 +55,7 @@ Notice that the individual variables for each phone are gone. Now the **entire a
 
 You get the point.
 
-One thing you might do as a beginner is forget to put a comma between the two arrays. Look at the array above again and notice that there is a comma after the first closing curly brace, and before the second opening one.
+One thing you might do as a beginner is forget to put a comma between the two objects. Look at the array above again and notice that there is a comma after the first closing curly brace, and before the second opening one.
 
 ```js
 [
