@@ -25,6 +25,8 @@ mkdir -p $HOME/.ssh
 mkdir -p $HOME/.config
 mkdir -p $HOME/.npm-packages
 
+sudo apt-get -y install build-essential libnghttp2-dev libssl-dev
+
 # Create SSH key
 echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
 echo "yes" | ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
@@ -42,18 +44,9 @@ curl \
   https://api.github.com/user/keys \
   -d "{\"key\":\"$PUBLIC_KEY\",\"title\":\"NSS Automated Key\"}"
 
-# Install Homebrew
-echo -e "\n\n\n\n"
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-echo "@@                                                            @@"
-echo "@@   Installation Needed: Homebrew                            @@"
-echo "@@   This installation will require your computer password.   @@"
-echo "@@                                                            @@"
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 echo -e "\n\nInstalling git and terminal customization tools..."
-brew install -q git tig zsh zsh-completions
+sudo apt update
+sudo apt install git zsh
 
 # Check if zsh is default shell. Switch if not.
 current_shell=$(echo $SHELL)
@@ -88,7 +81,8 @@ echo "@@   This installation might require your computer password.   @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
-brew install node
+curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+sudo apt install -y nodejs npm
 
 # Install global dependencies
 echo -e "\n\nInstalling a web server and a simple API server..."

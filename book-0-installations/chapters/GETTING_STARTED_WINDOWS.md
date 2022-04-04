@@ -6,6 +6,7 @@ Visit the [Visual Studio Code](https://code.visualstudio.com/) website to downlo
 
 ## Enable the Windows Subsystem for Linux
 
+
 You'll need to install and enable the Windows Subsystem for Linux. You can follow the instructions below, or you can watch the [Enabling WSL in Powershell](https://youtu.be/Mzv6Pxppwoo) video to see how to enable the Linux subsystem.
 
 1. Go to the `Start` menu (windows key) and search for `PowerShell`.
@@ -89,3 +90,11 @@ In order to automate the installation of the tools you need _(which happens in t
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-56/book-0-installations/chapters/scripts/installs-wsl.sh)"
 ```
 
+
+
+
+## Troubleshooting for Instructors
+
+1. Open Powershell as admin
+1. Run `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
+1. Visit https://aka.ms/wsl2kernel to download the virtualization update
