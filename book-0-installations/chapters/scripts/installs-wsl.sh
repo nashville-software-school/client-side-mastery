@@ -14,7 +14,7 @@ echo -e "\nEnter email address you used for Github:"
 read -p "> " emailAddress
 echo -e "\nEnter your Github account name:"
 read -p "> " githubUsername
-echo -e "\nEnter personal access token for Github:"
+echo -e "\nPaste personal access token for Github (you won't see it because security):"
 read -s -p "> " githubPassword
 
 
@@ -25,13 +25,36 @@ mkdir -p $HOME/.ssh
 mkdir -p $HOME/.config
 mkdir -p $HOME/.npm-packages
 
-sudo apt-get -y install build-essential libnghttp2-dev libssl-dev
 
 # Create SSH key
 echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
 echo "yes" | ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
 eval `ssh-agent`
 ssh-add ~/.ssh/id_nss
+
+# Get latest updates
+echo -e "\n\nUpdating the Ubuntu operating system..."
+sudo apt-get update && sudo apt-get dist-upgrade -y
+sudo apt install -y curl file build-essential libssl-dev
+
+# Install Node
+echo -e "\n\n\n\n"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@                                                             @@"
+echo "@@   Installation Needed: Node.js                              @@"
+echo "@@   This installation might require your Ubuntu password.   @@"
+echo "@@                                                             @@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+sudo apt install -y nodejs npm
+
+# Install global dependencies
+echo -e "\n\nInstalling a web server and a simple API server..."
+npm config set prefix $HOME/.npm-packages
+echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> ~/.zshrc
+source ~/.zshrc &>zsh-reload.log
+npm i -g serve json-server
 
 # Add SSH key to Github account
 echo -e "\n\nAdding your SSH key to your Github account..."
@@ -45,8 +68,12 @@ curl \
   -d "{\"key\":\"$PUBLIC_KEY\",\"title\":\"NSS Automated Key\"}"
 
 echo -e "\n\nInstalling git and terminal customization tools..."
-sudo apt update
-sudo apt install git zsh
+sudo apt install -y zsh git fonts-powerline
+
+# User settings for git
+echo -e "\n\nConfigurating git settings..."
+git config --global user.name "$studentName"
+git config --global user.email $emailAddress
 
 # Check if zsh is default shell. Switch if not.
 current_shell=$(echo $SHELL)
@@ -56,7 +83,7 @@ then
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     echo "@@                                                        @@"
     echo "@@   Change Needed: Switch to zsh                         @@"
-    echo "@@   This change might require your computer password.    @@"
+    echo "@@   This change might require your Ubuntu password.    @@"
     echo "@@                                                        @@"
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     chsh -s /bin/zsh
@@ -64,32 +91,10 @@ else
     echo "Already using zsh as default shell"
 fi
 
-# User settings for git
-git config --global user.name "$studentName"
-git config --global user.email $emailAddress
-
 # Install ohmyzsh
 echo -e "\n\nInstalling more terminal customization tools..."
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install Node
-echo -e "\n\n\n\n"
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-echo "@@                                                             @@"
-echo "@@   Installation Needed: Node.js                              @@"
-echo "@@   This installation might require your computer password.   @@"
-echo "@@                                                             @@"
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-
-curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-sudo apt install -y nodejs npm
-
-# Install global dependencies
-echo -e "\n\nInstalling a web server and a simple API server..."
-npm config set prefix $HOME/.npm-packages
-echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> ~/.zshrc
-source ~/.zshrc &>zsh-reload.log
-npm i -g serve json-server
 
 echo -e "\n\n\n\n"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"

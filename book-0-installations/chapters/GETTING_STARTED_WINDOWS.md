@@ -4,67 +4,24 @@
 
 Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the code editor you will be using for the next 3 months.
 
-## Enable the Windows Subsystem for Linux
+## Install the Windows Subsystem for Linux
 
-
-You'll need to install and enable the Windows Subsystem for Linux. You can follow the instructions below, or you can watch the [Enabling WSL in Powershell](https://youtu.be/Mzv6Pxppwoo) video to see how to enable the Linux subsystem.
+This process will install a new operating system _inside_ your Windows operating system. I know it sounds intimidating, but it's not.
 
 1. Go to the `Start` menu (windows key) and search for `PowerShell`.
 1. Run PowerShell as an Administrator. To do this, find the PowerShell application, then right-click on it and choose "Open as administrator".
-1. Copy and paste this command into your PowerShell:
+1. Think of a username and password for this new operating system now. You will need it in the next step.
+1. Copy and paste this command into your PowerShell.
 
-```sh
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-```
+    ```sh
+    wsl --install -d ubuntu
+    ```
 
-1. Restart your computer when prompted to.
-
-## Ubuntu
-
-Once you've completed the above steps **and** restarted your computer, you will [install Ubuntu from the Microsoft Store](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab).
-
-This is needed ***before*** you install the Windows Terminal below.
-
-## Windows Terminal
-
-Later in the instructions, we will ask you to type a command into your terminal. For Windows, this is the **Windows Terminal** application using **Ubuntu**.
-
-Visit the [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) download page and open it in the Microsoft Store App. This will be your default terminal (using Ubuntu) which you will use to navigate your file system, and run development tools throughout the course.
-
-Once Windows Terminal is installed:
-
-1. Go to the `Start` menu (windows key)
-1. search for `Windows Terminal`
-1. Open `Windows Terminal`
-1. By default, this will open a new PowerShell terminal window. _Do **not** use the PowerShell terminal window._
-1. Click the down arrow <kbd>﹀</kbd> located at the top of the terminal window.
-1. Select **Ubuntu** to open a new **Ubuntu Tab**.
-
-    > _Ubuntu will begin to install and you'll be asked to wait for a minute or two for the installation to complete._
-    >
-    > **IMPORTANT:** It is very important that you remember both the username and password that you create in the next step. If you need to write them down to remember them, that's a great strategy.
-
-1. Once Ubuntu is done installing, you'll be prompted to create a new user (and its password).
+1. After the installation is done, a new window will come up and you will be prompted for your username and password. Your password won't appear as you type it. That's normal.
+1. Keep this window open for now.
 
 
-## Ubuntu Starting Directory
 
-By default, when you start the Ubuntu shell in Windows Terminal, your starting directory is your Windows user directory. You need to change it so that it starts in your Linux user directory.
-
-1. In the terminal type `cd` and press enter.
-1. Type `pwd` and press enter. The path that outputs is called the **home directory** for Ubuntu.
-
-Watch the [WSL Ubuntu Starting Directory](https://www.youtube.com/watch?v=n1YSFT5VK-Y) video to ensure that when you run Ubuntu, you start in the correct directory.
-
-## Required Linux (WSL) Commands
-
-Once you are done installing and configuring Ubuntu, open a new Ubuntu shell in Windows Terminal and run the following commands. If something doesn't work, or you see error messages, call an instructor immediately.
-
-```sh
-sudo apt-get install build-essential
-sudo apt-get install build-essential --fix-missing
-sudo apt-get update --fix-missing
-```
 
 ## Security Token for Installations
 
@@ -84,17 +41,77 @@ In order to automate the installation of the tools you need _(which happens in t
 
 ## Basic Installations (automated)
 
-1. Copy pasta the following command into the terminal and hit enter to run it. It will attempt to install some of the basic tools you need for NSS.
+1. Copy pasta the following command into the Ubuntu terminal from the last section and hit enter to run it. It will attempt to install some of the basic tools you need for NSS.
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-56/book-0-installations/chapters/scripts/installs-wsl.sh)"
 ```
 
+## Windows Terminal
 
+Visit the [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) download page and open it in the Microsoft Store App. This will be your default terminal (using Ubuntu) which you will use to navigate your file system, and run development tools throughout the course.
 
+Once Windows Terminal is installed:
+
+1. Go to the `Start` menu (windows key)
+1. search for `Windows Terminal`
+1. Open `Windows Terminal`
+1. By default, this will open a new PowerShell terminal window. _Do **not** use the PowerShell terminal window._
+1. Click the down arrow <kbd>﹀</kbd> located at the top of the terminal window.
+1. Select **Ubuntu** to open a new **Ubuntu Tab**.
+
+    > _Ubuntu will begin to install and you'll be asked to wait for a minute or two for the installation to complete._
+    >
+    > **IMPORTANT:** It is very important that you remember both the username and password that you create in the next step. If you need to write them down to remember them, that's a great strategy.
+
+1. Once Ubuntu is done installing, you'll be prompted to create a new user (and its password).
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 ## Troubleshooting for Instructors
 
+<details>
+<summary>
+Instructors: Expand for help
+</summary>
+If you run into problems during installation, someone on the instruction team will use the following info to help you. You can ignore this section.
+
+For reference, here's the [Microsoft Install WSL instructions](https://docs.microsoft.com/en-us/windows/wsl/install).
+
+### Enable Virtualization
+
+If someone gets the `Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.` message when installing Ubuntu, try the following steps.
+
 1. Open Powershell as admin
-1. Run `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
-1. Visit https://aka.ms/wsl2kernel to download the virtualization update
+1. Run the following commands.
+    ```sh
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+    ```
+1. Have student visit https://aka.ms/wsl2kernel to download and install the Linux kernel update package.
+1. Reboot the machine.
+1. Uninstall Ubuntu.
+1. Install again and see if it fixes it.
+</details>
