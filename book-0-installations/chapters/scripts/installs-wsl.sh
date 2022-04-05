@@ -42,12 +42,12 @@ echo -e "\n\n\n\n"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 echo "@@                                                             @@"
 echo "@@   Installation Needed: Node.js                              @@"
-echo "@@   This installation might require your Ubuntu password.   @@"
+echo "@@   This installation might require your Ubuntu password.     @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
 curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-sudo apt install -y nodejs npm
+sudo apt install -y nodejs
 
 # Install global dependencies
 echo -e "\n\nInstalling a web server and a simple API server..."
@@ -83,7 +83,7 @@ then
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     echo "@@                                                        @@"
     echo "@@   Change Needed: Switch to zsh                         @@"
-    echo "@@   This change might require your Ubuntu password.    @@"
+    echo "@@   This change might require your Ubuntu password.      @@"
     echo "@@                                                        @@"
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     chsh -s /bin/zsh
