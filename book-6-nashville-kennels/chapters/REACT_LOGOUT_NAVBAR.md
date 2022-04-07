@@ -64,11 +64,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css"
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     const handleLogout = () => {
         clearUser();
-        history('/');
+        navigate('/');
     }
 
     return (
