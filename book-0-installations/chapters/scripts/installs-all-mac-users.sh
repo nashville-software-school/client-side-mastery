@@ -52,6 +52,9 @@ echo "@@                                                            @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+export PATH="/usr/local/bin:$PATH"
+echo 'export PATH="/usr/local/bin:$PATH"' >> $HOME/.profile
+
 # Install required package from Brew
 echo -e "\n\nInstalling Visual Studio Code..."
 brew install -q --cask visual-studio-code

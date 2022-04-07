@@ -43,8 +43,8 @@ There is an array provided to you in the starter code for your tracked hours of 
 ```sh
 cd
 cd workspace
-mkdir fast-food
-cd fast-food
+mkdir moods
+cd moods
 touch main.js
 code .
 ```
@@ -70,6 +70,6 @@ node main.js
 When you run the code, it should display the following.
 
 ```sh
-I was grumpy on 14 days.
-I was happy on 22 days.
+I was grumpy on 6 days.
+I was happy on 11 days.
 ```
