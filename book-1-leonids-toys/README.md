@@ -34,9 +34,3 @@ In this book's core chapters, you will gain the knowledge and understanding of w
 |--|--|
 | 1 | [Data Structure: Map](./chapters/JAVASCRIPT_MAPS.md) |
 | 2 | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |
-
-## 🔐 Projects Unlocked
-
-| # | Project&nbsp;Name | Description |
-|--|--|--|
-|1|[Cyberia](./README.md)| Can you survive the ultimate data challenge in a world run by a computer virus. |
