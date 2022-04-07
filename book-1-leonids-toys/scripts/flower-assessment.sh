@@ -143,9 +143,9 @@ const orangeFlowers = () => {
             <section>Orange</section>
 
             <h2>USDA Zones</h2>
-            <section>9</section>
-            <section>10</section>
-            <section>11</section>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
         </article>
 */
 const flowersAsHTML = () => {
