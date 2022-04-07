@@ -35,12 +35,14 @@ Use this data.
 ## Algorithm Considerations
 
 1. Does the function need any input to do its job, or does it have access to all the information it needs without a parameter?
-1. Make sure you put the `export` keyword in front of the function definition so that other modules can import the function and invoke it.
+1. Make sure you export the function _(example syntax below)_ so that other modules can import the function and invoke it.
     ```js
     // Example... do not copy pasta this. Write your own.
-    export const functionVariable = (goodParameterName) => {
+    const functionVariable = (goodParameterName) => {
 
     }
+
+    module.exports = { functionVariable }
     ```
 1. When should the function be invoked, and the fish array passed as an argument?
 

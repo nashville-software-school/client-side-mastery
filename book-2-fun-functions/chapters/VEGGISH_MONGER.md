@@ -2,12 +2,12 @@
 
 ## Importing Functions
 
-Since the fish monger needs to see what the fresh catch of the day is, it will need to import the function that is defined in the fishing boat module.
+Since the fish monger needs to see what the fresh catch of the day is, it will need to import the function that is defined in the fishing boat module. You use the `require()` function to grab what another module exported.
 
 ##### Example
 
 ```js
-import { functionVariable } from "./fishingBoat.js"
+const { functionVariable } = require("./fishingBoat.js")
 ```
 
 ## Monger Inventory

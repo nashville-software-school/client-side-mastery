@@ -26,7 +26,7 @@ Then open the project directory in Visual Studio Code.
 Add the following code to `main.js`
 
 ```js
-import { fishMenu } from "./restaurant.js"
+const { fishMenu } = require("./restaurant.js")
 
 /* Uncomment this code block when you're ready to test your logic
 
