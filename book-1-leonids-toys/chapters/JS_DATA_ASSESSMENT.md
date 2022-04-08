@@ -42,7 +42,7 @@ In the first function named `inexpensiveFlowers`, you will write logic that popu
 
 ### Step 2: Zoned Flowers
 
-In the next function named `zoneFlowers`, you will write logic that populates the `filteredFlowers` array with only those flowers that grow in USDA zones 3 or 8.
+In the next function named `zoneFlowers`, you will write logic that populates the `filteredFlowers` array with only those flowers that grow in USDA zones 3 and 8.
 
 ### Step 3: Orange Flowers
 
