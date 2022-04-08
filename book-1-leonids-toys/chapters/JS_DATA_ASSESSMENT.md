@@ -13,7 +13,7 @@ That script creates a `~/workspace/flowers` directory, with two files in it.
 1. `main.js`
 1. `test.js`
 
-Now, open that directory in VS Code.
+Now, open that directory in VS Code. Paste the following commands into your terminal.
 
 ```sh
 cd ~/workspace/flowers
