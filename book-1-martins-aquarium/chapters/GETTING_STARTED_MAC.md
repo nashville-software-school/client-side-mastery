@@ -56,18 +56,6 @@ Visit the [Homebrew](http://brew.sh/) website and follow the single instruction 
 
 After installing Homebrew, you may get the following warning:
 
-`/opt/homebrew/bin is not in your PATH`
-
-This may be fixed with this command:
-
-```
-export PATH=/opt/homebrew/bin:$PATH
-```
-
-#### Troubleshooting for instructors (don't try this yourself)
-
-After installing Homebrew, you may get the following warning:
-
 ```
 /opt/homebrew/bin is not in your PATH
 ```
