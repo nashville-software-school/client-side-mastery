@@ -63,12 +63,6 @@ Mario Beahan I is qualified for a maximum mortage of $611,133.95 
 Becky Wiegand is qualified for a maximum mortage of $380,687.25 
 ```
 
-## Git/Github Workflow
-
-As you work on your assessment, please work on branches while developing. Once you have working code on a branch, **make sure you merge your branch back into the `main` branch**. Then create a new branch, if needed, to continue working on the code.
-
-Otherwise, the automated tests for your code won't work correctly.
-
 ## Testing Your Code
 
 When you believe you have code that works, and you're merged your branch into `main`, go to the **Actions** tab on your Github repository and see if your code passes the tests.
