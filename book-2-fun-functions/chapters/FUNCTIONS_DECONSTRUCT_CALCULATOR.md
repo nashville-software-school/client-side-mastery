@@ -140,3 +140,14 @@ You can expand the hints below if you are stuck and don't know what to do. Make 
         return squared
     }
 </details>
+
+<details>
+    <summary>Hint: Formula to get started</summary>
+
+1. Looking for number of animals, which we be represented by `x`.
+1. A quarter of the animals - `x` - have 4 legs. So `0.25x` is a quarter of the animals. They have 4 legs so multiply by 4.
+1. Three quarters of the animals - `x` - have 2 legs. So `0.75x` is 3/4 of the animals. They have 2 legs so multiply by 2.
+1. Both of those added together equals 60.
+
+(0.25x * 4) + (0.75x * 2) = 60
+</details>
