@@ -75,3 +75,7 @@ if (variable === true) {
 ```
 
 Recall:  To create a new array, you just need two square brackets. For example, here is how you can create an array with three rose strings in it.
+
+```js
+const roses = [ "rose", "rose", "rose" ]
+```
