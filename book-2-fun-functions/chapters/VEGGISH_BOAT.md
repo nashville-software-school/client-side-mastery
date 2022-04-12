@@ -15,7 +15,7 @@ Open your `fishingBoat.js` module and write some comments describing the data st
 Next, the fishing boat must have a function that the other modules can invoke in order to see today's catch.
 
 * This function must be named `boatInventory`.
-* The array of objects will be provided as an argument when the function is invoked _(see data below)_.
+* The array of fish objects will be the return value when the function is invoked _(see data below)_.
 
 Use this data.
 
