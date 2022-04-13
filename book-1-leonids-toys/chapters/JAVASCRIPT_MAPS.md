@@ -105,8 +105,8 @@ const addPhoneToInventory = (phoneObject, price) => {
 
 }
 
-// Add the first toy in the array to the Map and set its price
-addPhoneToInventory(toys[0], 499.99)
+// Add the first phone in the array to the Map and set its price
+addPhoneToInventory(phone[0], 499.99)
 ```
 
 ### Steps
