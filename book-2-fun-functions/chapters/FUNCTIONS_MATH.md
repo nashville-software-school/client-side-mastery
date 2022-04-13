@@ -37,4 +37,4 @@ After the functions are defined, invoke them in the correct order.
 2. Then invoke the multiplication function and provide the variable from the previous step as the argument. Store the result into a variable.
 3. Use `console.log()` to output the end result of the multiplication function.
 
-As an example, if you pass 4 and 14 to the first function, then the final output should be 56.
+As an example, if you pass 4 and 14 to the first function, then the final output should be 36.
