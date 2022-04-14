@@ -47,13 +47,13 @@ echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
 curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-sudo apt install -y nodejs
+sudo apt-get install -y nodejs
 
 # Install global dependencies
 echo -e "\n\nInstalling a web server and a simple API server..."
 npm config set prefix $HOME/.npm-packages
-echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> ~/.zshrc
-source ~/.zshrc &>zsh-reload.log
+echo 'export PATH="$HOME/.npm-packages/bin:$PATH"' >> $HOME/.profile
+source $HOME/.profile &>zsh-reload.log
 npm i -g serve json-server
 
 # Add SSH key to Github account
