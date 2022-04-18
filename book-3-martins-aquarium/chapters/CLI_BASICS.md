@@ -6,7 +6,7 @@
 * You should be able to create new files in the terminal with the `touch` command.
 * You should be able to navigate directories in the terminal with the `cd` command.
 
-Before you start writing code for any application, you want to set up the directory structure and create some initial files on the file system first. During this first book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
+Before you start writing code for any application, you want to set up the directory structure and create some initial files on the file system first. In this book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
 
 You can watch the [Martin's Aquarium Directories and Files](https://www.youtube.com/watch?v=ogHzpf4Kelk) video that will also show you the basic terminal commands to use for this.
 
@@ -25,7 +25,7 @@ While in your workspace directory, type `mkdir martins-aquarium` to make a new s
         +-- martins-aquarium
 ```
 
-Go ahead and `cd martins-aquarium` so that you are working in your project direcotry.
+Go ahead and `cd martins-aquarium` so that you are working in your project directory.
 
 Once the directory is created, you need to create the HTML file and the CSS file. The standard name for the initial HTML for any web site is `index.html`.
 
