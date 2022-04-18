@@ -170,27 +170,38 @@ The final touch is to center align the text in each of the interest boxes.
 > The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
 
 ```html
-<header class="pageHeader">Coffee Houses of Nashville</header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nashville Coffee Houses</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+	<header class="pageHeader">Coffee Houses of Nashville</header>
 
-<section class="list">
-  <article class="shop">The Jam</article>
-  <article class="shop">The Well</article>
-  <article class="shop">Red Bicycle</article>
-  <article class="shop">Crema</article>
-  <article class="shop">Frothy Monkey</article>
-  <article class="shop">8th &amp; Roast</article>
-  <article class="shop">Bongo Java</article>
-  <article class="shop">Flatrock</article>
-  <article class="shop">Fido</article>
-  <article class="shop">Steadfast Coffee</article>
-  <article class="shop">Dose Coffee</article>
-  <article class="shop">Sam &amp; Zoes</article>
-  <article class="shop">Slow Hand Coffee</article>
-  <article class="shop">The Horn</article>
-</section>
+    <section class="list">
+      <article class="shop">The Jam</article>
+      <article class="shop">The Well</article>
+      <article class="shop">Red Bicycle</article>
+      <article class="shop">Crema</article>
+      <article class="shop">Frothy Monkey</article>
+      <article class="shop">8th &amp; Roast</article>
+      <article class="shop">Bongo Java</article>
+      <article class="shop">Flatrock</article>
+      <article class="shop">Fido</article>
+      <article class="shop">Steadfast Coffee</article>
+      <article class="shop">Dose Coffee</article>
+      <article class="shop">Sam &amp; Zoes</article>
+      <article class="shop">Slow Hand Coffee</article>
+      <article class="shop">The Horn</article>
+    </section>
+  </body>
+</html>
 ```
 
-From that HTML, use Flexbox to achieve this layout. You don't need to add the border to each coffee house component, but you can if you like. It's been added in this example to highlight the alignment and spacing you're shooting for.
+From that HTML, use Flexbox to achieve this layout. You don't need to add the border to each coffee house component, but you can if you like. It's been added in this example to highlight the alignment and spacing you're shooting for. Add this html code to an `index.html` file. Add a folder called `styles` as a sibling to the html file. Inside the `styles` folder create a `main.css`. This is where you will add your styling.
+
+To see the changes you've made in Chrome: In the terminal with this this folder type in `serve`. This looks at the code you have in the `index.html` and shows it in the browser. While the `serve` command is running you can go to `http://localhost:3000` to see your new webpage. After you make changes to the css, you'll need to refresh the page to see those updates.
 
 ![flexbox layout](./images/flexbox.png)
 
