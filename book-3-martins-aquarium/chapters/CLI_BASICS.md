@@ -5,8 +5,6 @@
 * You should be able to create new directories in the terminal with the `mkdir` command.
 * You should be able to create new files in the terminal with the `touch` command.
 * You should be able to navigate directories in the terminal with the `cd` command.
-* You should be able to create new directories in the terminal with the `mkdir` command.
-* You should be able to create new directories in the terminal with the `mkdir` command.
 
 Before you start writing code for any application, you want to set up the directory structure and create some initial files on the file system first. During this first book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
 
