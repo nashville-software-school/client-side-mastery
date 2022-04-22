@@ -47,7 +47,7 @@ Another team did not spend time to plan and design their project. They produced 
 
 ## Professional Description
 
-Please read the "[User interface wireframe](https://megandrawing.netlify.app/user-interface-wireframe/)" article by Nicholas Morgan for a brief overview of how user experience (UX) professionals use low fidelity wireframes to effective guide development of a software application.
+Please read this "[Exploring Wireframes](https://mentormate.medium.com/exploring-wireframes-is-simple-better-6c6cb7c8d483)" article for a brief overview of how user experience (UX) professionals use low fidelity wireframes to effective guide development of a software application.
 
 ## Getting Started
 
