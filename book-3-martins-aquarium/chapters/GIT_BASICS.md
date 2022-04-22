@@ -88,7 +88,7 @@ The first thing you need to do is create a new repository on Github's platform t
     ![](./images/copy-github-connection-string.gif)
 1. In your terminal, in the Martin's Aquarium directory, enter in the following commands.
     ```sh
-    git remote add {paste what you copied above, but not these curly braces}
+    git remote add origin {paste what you copied above, but not these curly braces}
     git branch -M main
     git push -u origin main
     ```
