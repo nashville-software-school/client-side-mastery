@@ -30,7 +30,7 @@ echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
 echo "yes" | ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
 eval `ssh-agent`
 ssh-add ~/.ssh/id_nss
-echo "Host *\n\tAddKeysToAgent yes\n\tIdentityFile ~/.ssh/id_nss" >> ~/.ssh/config
+echo -e "Host *\n\tAddKeysToAgent yes\n\tIdentityFile ~/.ssh/id_nss" >> ~/.ssh/config
 
 # Add SSH key to Github account
 echo -e "\n\nAdding your SSH key to your Github account..."
