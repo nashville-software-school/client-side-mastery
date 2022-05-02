@@ -64,6 +64,7 @@ As you work on the self-assessment, you can see if it passes the automated tests
 
 1. Open a new terminal and don't close your current ones.
 1. `cd` to the self-assessment directory.
+1. Run the `npm install` command.
 1. Run the `npm test` command.
 1. You will see the tests run and get feedback on which ones are passing and which ones are failing.
 
