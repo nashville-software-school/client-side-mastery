@@ -66,11 +66,11 @@ Add the following code to the **BusinessList** module.
 ```js
 
 document
-    .querySelector("#companySearch")
+    .querySelector("#content")
         .addEventListener(
             "keypress",
             (keyPressEvent) => {
-                const companySearchResultArticle = document.querySelector(".foundCompanies")
+                const companySearchResultArticle = document.querySelector(".foundBusinesses")
 
                 if (keyPressEvent.charCode === 13) {
                     /*
@@ -90,7 +90,7 @@ document
                         // Your callback function goes here
                     )
 
-                    companySearchResultArticle.innerHTML = Business(???);
+                    companySearchResultArticle.innerHTML = `build an HTML representation of the found business here`
                 }
         });
 ```
