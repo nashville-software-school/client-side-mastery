@@ -2,7 +2,24 @@
 set -u
 
 rm App*
-mkdir -p ./src/components
+mkdir -p ./src/components/auth
+mkdir -p ./src/components/nav
+mkdir -p ./src/components/tickets
+mkdir -p ./src/components/views
+
+echo 'import { Repairs } from "./components/Repairs"
+import { createRoot } from "react-dom/client"
+import "./index.css"
+import { BrowserRouter } from "react-router-dom"
+
+const container = document.getElementById("root")
+const root = createRoot(container)
+root.render(
+    <BrowserRouter>
+        <Repairs />
+    </BrowserRouter>
+)
+' > ./src/index.js
 
 echo 'export const TicketList = () => {
     return <h2>List of Tickets</h2>

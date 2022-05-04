@@ -71,3 +71,12 @@ export const Repairs = () => {
     )
 }
 ```
+
+## React Developer Tools
+
+> This is not by mistake. We want to make sure everyone watches this video, but more importantly, starts using the React developer panel.
+
+Watch the Intro to React Dev Tools video below to review their usage. Again, just like with VanillaJS, your use of the React dev tools is the only other way than using the debugger to gather evidence.
+
+[<img src="./images/react-dev-tools-video.png" />](https://www.youtube.com/watch?v=rb1GWqCJid4)
+
