@@ -21,6 +21,7 @@ root.render(
 )
 ' > ./src/index.js
 
+
 echo 'export const TicketList = () => {
     return <h2>List of Tickets</h2>
 }
@@ -44,11 +45,11 @@ export const Authorized = ({ children }) => {
 ' > ./src/components/views/Authorized.js
 
 echo 'import { Route, Routes } from "react-router-dom"
-import { ApplicationViews } from "./ApplicationViews"
+import { Authorized } from "./views/Authorized"
+import { ApplicationViews } from "./views/ApplicationViews"
 import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
-import { Authorized } from "./Authorized"
 import "./Repairs.css"
 
 
@@ -98,6 +99,10 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-bottom: 1.5em;
 }
+
+.title--main {
+  margin-block-end: 0;
+}
 ' > ./src/components/Repairs.css
 
 echo 'import { Link, useNavigate } from "react-router-dom"
@@ -115,8 +120,8 @@ export const NavBar = () => {
                 localStorage.getItem("honey_user")
                     ? <li className="navbar__item navbar__logout">
                         <Link className="navbar__link" to="" onClick={() => {
-                            navigate("/", {replace: true})
                             localStorage.removeItem("honey_user")
+                            navigate("/", {replace: true})
                         }}>Logout</Link>
                     </li>
                     : ""
@@ -143,30 +148,11 @@ echo '.navbar {
 ' > ./src/components/nav/NavBar.css
 
 
-echo 'import { Route, Routes } from "react-router-dom"
-import { Authorized } from "./views/Authorized"
-import { ApplicationViews } from "./views/ApplicationViews"
-import { NavBar } from "./nav/NavBar"
-import { Login } from "./auth/Login"
-import { Register } from "./auth/Register"
-import "./Repairs.css"
-
-
-export const Repairs = () => {
-	return <Routes>
-		<Route path="/login" element={<Login />} />
-		<Route path="/register" element={<Register />} />
-
-		<Route path="*" element={
-			<Authorized>
-				<>
-					<NavBar />
-					<ApplicationViews />
-				</>
-			</Authorized>
-
-		} />
-	</Routes>
+echo 'export const ApplicationViews = () => {
+	return <>
+		<h1 className="title--main">Honey Rae Repairs</h1>
+		<div>Your one-stop shop for repairing your tech</div>
+	</>
 }
 ' > ./src/components/views/ApplicationViews.js
 

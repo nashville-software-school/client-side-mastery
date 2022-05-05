@@ -11,102 +11,152 @@ touch database.json
 
 Then copy the following JSON into the `database.json` file.
 
-```json
-{
-    "customers": [
-        {
+<details>
+    <summary>Expand to get your data</summary>
+
+    ```json
+    {
+        "users": [
+            {
             "id": 1,
-            "name": "Dion Stoade",
-            "address": "6866 4th Court",
-            "email": "dstoade0@cornell.edu"
-        },
-        {
+            "fullName": "Dion Stoade",
+            "email": "dstoade0@cornell.edu",
+            "isStaff": false
+            },
+            {
             "id": 2,
-            "name": "Windy Thorneloe",
-            "address": "59924 Beilfuss Center",
-            "email": "wthorneloe1@usa.gov"
-        },
-        {
+            "fullName": "Windy Thorneloe",
+            "email": "wthorneloe1@usa.gov",
+            "isStaff": false
+            },
+            {
             "id": 3,
-            "name": "Hillie Phillpotts",
-            "address": "21 Straubel Point",
-            "email": "hphillpotts2@rakuten.co.jp"
-        },
-        {
+            "fullName": "Hillie Phillpotts",
+            "email": "hphillpotts2@rakuten.co.jp",
+            "isStaff": false
+            },
+            {
             "id": 4,
-            "name": "Jobye Danielou",
-            "address": "7 Pleasure Terrace",
-            "email": "jdanielou3@apple.com"
-        },
-        {
+            "fullName": "Helenelizabeth Passfield",
+            "email": "hpassfield7@netvibes.com",
+            "isStaff": true
+            },
+            {
             "id": 5,
-            "name": "Gabbie Schult",
-            "address": "46273 Oak Trail",
-            "email": "gschult4@tinyurl.com"
-        },
-        {
+            "fullName": "Franchot Slator",
+            "email": "fslator8@51.la",
+            "isStaff": true
+            },
+            {
             "id": 6,
-            "name": "Vasily Youdell",
-            "address": "0993 Gulseth Avenue",
-            "email": "vyoudell5@globo.com"
-        },
-        {
-            "id": 7,
-            "name": "Debra Blackhurst",
-            "address": "57305 Crowley Alley",
-            "email": "dblackhurst6@last.fm"
-        },
-        {
-            "id": 8,
-            "name": "Helenelizabeth Passfield",
-            "address": "02 Reinke Plaza",
-            "email": "hpassfield7@netvibes.com"
-        },
-        {
-            "id": 9,
-            "name": "Franchot Slator",
-            "address": "4930 Oneill Drive",
-            "email": "fslator8@51.la"
-        },
-        {
-            "id": 10,
-            "name": "Renaud Erbe",
-            "address": "30 Westridge Pass",
-            "email": "rerbe9@psu.edu"
-        }
-    ],
-    "employees": [
-        {
+            "fullName": "Renaud Erbe",
+            "email": "rerbe9@psu.edu",
+            "isStaff": true
+            },
+            {
+            "email": "jeremy@bakker.com",
+            "fullName": "Jeremy Bakker",
+            "isStaff": true,
+            "id": 7
+            }
+        ],
+        "customers": [
+            {
             "id": 1,
-            "name": "Tom Schamberger",
-            "specialty": "iPhone"
-        },
-        {
+            "address": "2802 Zula Locks",
+            "phoneNumber": "852-837-9713",
+            "userId": 2
+            },
+            {
             "id": 2,
-            "name": "Rose Schmitt",
-            "specialty": "Printers"
-        }
-    ],
-    "serviceTickets": [
-        {
+            "address": "56849 Fadel Gateway",
+            "phoneNumber": "202-244-7090",
+            "userId": 1
+            },
+            {
+            "id": 3,
+            "address": "7346 Ritchie Road",
+            "phoneNumber": "(507) 720-1157",
+            "userId": 3
+            }
+        ],
+        "employees": [
+            {
             "id": 1,
-            "customerId": 4,
-            "employeeId": 1,
-            "description": "iPhone case cracked. Please replace.",
+            "specialty": "PC Repair",
+            "rate": 72.47,
+            "userId": 4
+            },
+            {
+            "id": 2,
+            "specialty": "Apple Repair",
+            "rate": 97.39,
+            "userId": 5
+            },
+            {
+            "id": 3,
+            "specialty": "Printer Repair",
+            "rate": 29.45,
+            "userId": 6
+            }
+        ],
+        "serviceTickets": [
+            {
+            "id": 1,
+            "customerId": 3,
+            "description": "Saepe ex sapiente deserunt et voluptas fugiat vero quasi. Ipsam est non ipsa. Occaecati rerum ipsa consequuntur. Ratione commodi unde sint non rerum. Sit quia et aut sunt.",
             "emergency": false,
-            "dateCompleted": "2021-05-26"
-        },
-        {
+            "dateCompleted": "Fri Apr 29 2022 14:02:20 GMT-0500 (Central Daylight Time)"
+            },
+            {
             "id": 2,
-            "customerId": 7,
-            "employeeId": 4,
-            "description": "Cannot connect to any wifi.",
+            "customerId": 3,
+            "description": "Vero est adipisci sed natus quasi consectetur occaecati. Modi maxime sunt officia cumque. Vel at culpa. Sint accusamus deserunt dolorem qui.",
             "emergency": true,
             "dateCompleted": ""
-        }
-    ]
-}
-```
+            },
+            {
+            "id": 3,
+            "customerId": 1,
+            "description": "Sunt pariatur et quidem hic voluptatem. Neque aliquam voluptas eos incidunt repellendus. Vero expedita non sit quaerat sit et eum. Quasi dolor voluptatem illum eum qui est expedita sequi accusamus.",
+            "emergency": false,
+            "dateCompleted": ""
+            },
+            {
+            "id": 4,
+            "customerId": 2,
+            "description": "A deleniti est sed vel. Dolores aliquid enim vero. Quia eligendi vel voluptas. Nihil nihil quasi ullam officia doloremque amet non. Officia atque quae.",
+            "emergency": false,
+            "dateCompleted": ""
+            },
+            {
+            "id": 5,
+            "customerId": 1,
+            "description": "Pariatur nihil animi eos doloremque laborum fugiat consequuntur iusto. Et tempore a enim.",
+            "emergency": true,
+            "dateCompleted": "Fri Apr 29 2022 21:24:29 GMT-0500 (Central Daylight Time)"
+            }
+        ],
+        "employeeTickets": [
+            {
+            "id": 1,
+            "employeeId": 3,
+            "serviceTicketId": 1
+            },
+            {
+            "id": 2,
+            "employeeId": 2,
+            "serviceTicketId": 5
+            },
+            {
+            "id": 3,
+            "employeeId": 1,
+            "serviceTicketId": 4
+            }
+        ]
+    }
+    ```
+</details>
 
 Every time you want to work on your application, you'll need to ensure that the API is running. Open a new terminal and start it.
 
