@@ -1,9 +1,9 @@
 #!/bin/bash
 set -u
 
-rm App*
-mkdir -p ./src/components/auth
+rm ./src/App*
 mkdir -p ./src/components/nav
+mkdir -p ./src/components/auth
 mkdir -p ./src/components/tickets
 mkdir -p ./src/components/views
 
@@ -41,7 +41,7 @@ export const Authorized = ({ children }) => {
             state={{ location }} />
     }
 }
-' > ./src/components/Authorized.js
+' > ./src/components/views/Authorized.js
 
 echo 'import { Route, Routes } from "react-router-dom"
 import { ApplicationViews } from "./ApplicationViews"
@@ -100,7 +100,6 @@ p {
 }
 ' > ./src/components/Repairs.css
 
-mkdir -p ./src/components/nav
 echo 'import { Link, useNavigate } from "react-router-dom"
 import "./NavBar.css"
 
@@ -169,9 +168,7 @@ export const Repairs = () => {
 		} />
 	</Routes>
 }
-' > ./src/components/ApplicationViews.js
-
-mkdir -p ./src/components/auth
+' > ./src/components/views/ApplicationViews.js
 
 echo 'import { useState } from "react"
 import { useNavigate } from "react-router-dom"
