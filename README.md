@@ -10,3 +10,4 @@ You must be ok with a serious amount of failing before succeeding.
 
 You must be ok with being uncomfortable.
 
+![tiered learning objectives](./learning-objectives.png)

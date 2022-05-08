@@ -1,6 +1,6 @@
 # Retailer View
 
-Create a data provider component, list component, and individual item component for displaying all the retailers in your database. Each retailer should display the following information.
+Create a API manager component, list component, and individual item component for displaying all the retailers in your database. Each retailer should display the following information.
 
 1. Business name
 1. Business address

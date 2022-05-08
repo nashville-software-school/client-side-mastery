@@ -1,19 +1,20 @@
-# Course Projects
+# Deep Learning Projects
 
 After you complete the work in the Core Books of the course, you instructors will provide guidance on which of these projects that you can choose to work on. There are four tiers of projects.
 
 ## Tier 1 - Beginner
 
-Tier 1 projects are for students to start working on in the first couple weeks of the course. These projects may start simple to reinforce the basics of what has been covered, but will also scale with you as you progress in skills.
+Tier 1 projects are for students to start working on in the after they have done the core course projects for data types, functions, import/export, and working with the DOM.
 
-1. [Daily Journal](./tier-1/daily-journal/) - This project will scale with your skills. You begin with basic wireframes and data design, and by the end of the project, you will have built a highly complex, modular web application.
-2. [Modern Farm](./tier-1/modern-farm/) - This project will focus almost exclusively on deepening your JavaScript fundamental skills. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
+2. [Modern Farm](./tier-1/modern-farm/) - This project will deepen your JavaScript fundamental skills of functions, import/export, iteration and object properties. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
+1. [The Hairy Potter](./tier-1/hairy-potter/) - This project will deepen your JavaScript fundamental skills of functions, import/export, iteration and object properties. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
 
 ## Tier 2 - Advanced Beginner
 
 Tier 2 projects are for students who have the basic vocabulary and skills in JavaScript and web development, and want to explore the concepts at a deeper level.
 
 1. [Dothard &amp; Simbleton](./tier-2/dothard-simbleton/) - This project will introduce you to the basics of using array methods to iterate arrays in order to find specific things, filter the array, or change each item in the array to another format.
+1. [Daily Journal](./tier-2/daily-journal/) - This project will scale with your skills. You begin with basic wireframes and data design, and by the end of the project, you will have built a highly complex, modular web application.
 1. [State Fair](./tier-2/state-fair/) - This project will have you exploring the basics of using custom events in a web application to allow for greater control over when the UI is updated when state changes.
 
 ## Tier 3 - Apprentice

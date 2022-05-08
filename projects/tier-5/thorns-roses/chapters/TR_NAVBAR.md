@@ -1,5 +1,15 @@
 # Views for Thorns and Roses
 
+## Setup
+
+You need the React Router package installed for this application. Run this command in the root directory of your project.
+
+```sh
+npm i --save react-router-dom@5.3
+```
+
+## Instructions
+
 In this chapter, you must create a **`NavBar`** component that has `<Link/>` components for the following views.
 
 1. Nurseries
