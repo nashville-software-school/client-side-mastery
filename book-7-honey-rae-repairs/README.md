@@ -16,11 +16,12 @@ For example, here's what the first few days should look like for you.
 |--|--|--|
 | 1 | [Getting Started with React](./chapters/REACT_BASICS.md) |  |
 | 2 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub>| [Kandy Korner API](./chapters/KANDY_API.md) |
-| 3 | [Define and Observe State](./chapters/HONEY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state</sub> | |
-| 4 | [Fetch and Update State](./chapters/HONEY_LIST_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state</sub> | [Store Locations](./chapters/KK_STORES.md) | |
-| 5 | [Total Customers Message](./chapters/HONEY_USE_EFFECT.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | |
-| 6 | [Employee Specialties](./chapters/HONEY_EMPLOYEES.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | [Inventory](./chapters/KK_INVENTORY.md) |
-| 7 | [Service Order List](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
+| 3 | [Employee: List All Tickets](./chapters/HONEY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state</sub> | |
+| 4 | [Customer: List My Tickets](./chapters/HONEY_LIST_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state</sub> | [Store Locations](./chapters/KK_STORES.md) | |
+| 5 | [Employee: Show Emergencies Only](./chapters/HONEY_USE_EFFECT.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | |
+| 6 | [Customer: Create Ticket](./chapters/HONEY_EMPLOYEES.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | [Inventory](./chapters/KK_INVENTORY.md) |
+| 7 | [Customer: Show Only Open Tickets](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
+| 8 | [Employee: Find Ticketsv](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 7**
 
