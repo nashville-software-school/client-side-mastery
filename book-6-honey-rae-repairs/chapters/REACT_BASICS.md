@@ -96,9 +96,8 @@ p {
 
 In your terminal, make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory, and type the following command.
 
+It will take about 30 seconds to run all of your code. Unfortunately, because of all the changes you just made, the application won't start correctly. For now, just move on to chapters 2 and 3 and will start working again.
+
 ```sh
 npm start
 ```
-
-It will take about 30 seconds to run all of your code, and then the process will automatically open a new tab in your browser and then render your HTML.
-
