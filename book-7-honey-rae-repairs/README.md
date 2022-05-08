@@ -16,21 +16,23 @@ For example, here's what the first few days should look like for you.
 |--|--|--|
 | 1 | [Getting Started with React](./chapters/REACT_BASICS.md) |  |
 | 2 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub>| [Kandy Korner API](./chapters/KANDY_API.md) |
-| 3 | [Employee: List All Tickets](./chapters/HONEY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state</sub> | |
-| 4 | [Customer: List My Tickets](./chapters/HONEY_LIST_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state</sub> | [Store Locations](./chapters/KK_STORES.md) | |
+| 3 | [Employee: List All Tickets Part 1](./chapters/HONEY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#routing #state</sub> | |
+| 3 | [Employee: List All Tickets Part 2](./chapters/HONEY_LIST_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch #state</sub> | |
+| 4 | [Customer: List My Tickets](./chapters/HONEY_LIST_MY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state</sub> | [Store Locations](./chapters/KK_STORES.md) | |
 | 5 | [Employee: Show Emergencies Only](./chapters/HONEY_USE_EFFECT.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | |
 | 6 | [Customer: Create Ticket](./chapters/HONEY_EMPLOYEES.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | [Inventory](./chapters/KK_INVENTORY.md) |
 | 7 | [Customer: Show Only Open Tickets](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
-| 8 | [Employee: Find Ticketsv](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
+| 8 | [Employee: Find Tickets](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 7**
 
 | # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
 |--|--|--|
-| 8 | [Navigation Bar with Routing](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #navigation</sub> | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
-| 9 | [Registering Customers](./chapters/HONEY_AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> | |
-| 10 | [Create Repair Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms</sub> | [Employees](./chapters/KK_EMPLOYEES.md) |
-| 11 | [Conditional JSX](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#jsx #ternary</sub> | [Customer List](./chapters/KK_REPORT.md) |
+| 8 | [Employee: Edit Profile](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#routing #navigation</sub> | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
+| 9 | [Customer: Edit Profile](./chapters/HONEY_AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#authentication</sub> | |
+| 10 | [Customer: Edit Ticket Details](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms</sub> | [Employees](./chapters/KK_EMPLOYEES.md) |
+| 11 | [Employee: Assign Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#jsx #ternary</sub> | [Customer List](./chapters/KK_REPORT.md) |
+| 11 | [Employee: Close Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#jsx #ternary</sub> |  |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 11**
 

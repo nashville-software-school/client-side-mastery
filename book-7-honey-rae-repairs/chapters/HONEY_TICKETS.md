@@ -1,4 +1,4 @@
-# Displaying Tickets
+# Tickets Route
 
 ## Component State
 
