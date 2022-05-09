@@ -7,7 +7,7 @@ In this project, your task to build a workflow for making, and firing pottery, a
 1. Open a new terminal window, copy pasta the following command into the terminal and hit enter to run it. It will create a basic file structure for you and create some starter code in the `~/workspace/hairy-potter-project` directory.
 
     ```sh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-56/projects/tier-1/hairy-potter/scripts/hairy-potter-install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/projects/tier-1/hairy-potter/scripts/hairy-potter-install.sh)"
     ```
 1. Navigate to the project directory
     ```sh
