@@ -1,45 +1,14 @@
-# Fetch API Data and Update State
+# Fetch Data &amp; Update State
 
-```js
-import { useEffect, useState } from "react"
-import "./Tickets.css"
+## Displaying All Tickets
 
-export const TicketList = () => {
-    const [tickets, setTickets] = useState([])
+This section shows you how to use the `useEffect()` hook to observe when intial state is all done and then request data from your local API. Once the response from the API is captured, you will update the state of your component to display all of the tickets.
 
-    useEffect(
-        () => {
-            fetch("http://localhost:8088/serviceTickets")
-                .then(response => response.json())
-                .then((ticketArray) => {
-                    setTickets(ticketArray)
-                })
-        },
-        []
-    )
+Watch the [Fetch Initial Ticket State](https://watch.screencastify.com/v/awd91iAYTNPfOeeTmJCn) video and then implement the code yourself.
 
-    useEffect(
-        () => {
-            console.log("The new state of tickets is", tickets)
-        },
-        [tickets]  // Observe changes to ticket state variable
-    )
+## Using CSS in React
 
-    return <>
-        <h2>List of Tickets</h2>
+This section shows you how to `import` CSS files into your component.
 
-        <article className="tickets">
-            {
-                tickets.map(
-                    (ticket) => {
-                        return <section className="ticket">
-                            <header>{ticket.description}</header>
-                            <footer>Emergency: {ticket.emergency ? "🧨" : "No"}</footer>
-                        </section>
-                    }
-                )
-            }
-        </article>
-    </>
-}
-```
+Watch the [Ticket Styling](https://watch.screencastify.com/v/C9ooO9RYkoIzzhj90kqx) video and then implement the code yourself.
+
