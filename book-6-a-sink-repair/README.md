@@ -14,7 +14,7 @@ In this book, you will be introduced to the basics of asynchronous programming a
 | 6 | [Submitting Service Request](./chapters/AS_HTTP_POST.md) <br/> <sub style="font-size:0.85rem;">#POST #fetch #JSON</sub> | [Reserving Buttons](./chapters/BC_RESERVATION_POST.md) |
 | 7 | [Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> | [Buttons' Schedule](./chapters/BC_SCHEDULE_LIST.md) |
 | 8 | [Denying Service Requests](./chapters/AS_HTTP_DELETE.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #DELETE</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) |
-| 1 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md)<br/> <sub style="font-size:0.85rem;">#fetch #then-chaining | [The Party is Over](./chapters/BC_PERFORMANCE_COMPLETE.md) |
+| 9 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md)<br/> <sub style="font-size:0.85rem;">#fetch #then-chaining | [The Party is Over](./chapters/BC_PERFORMANCE_COMPLETE.md) |
 | 🎓 | [Self-assessment](./chapters/BOOK_5_ASSESSMENT.md) |  |
 
 ## 🧭 Explorer Chapters
@@ -32,8 +32,9 @@ If you have completed all Core and Explorer chapters, let your instruction team 
 | # | Project&nbsp;Name | Description |
 |--|--|--|
 |1|[Giffygram](../projects/tier-4/giffygram/)| You will deconstruct an existing project using your Dev Tools, and then rebuild it based on your technical specifications. |
-|2|[Honest&nbsp;Abe](../projects/tier-3/honest-abe/)| Honest Abe has three projects that increase in complexity. If you complete all three, you will have mastered ERDs, data relationships, and using array methods to nevigate them. |
+|2|[Honest&nbsp;Abe](../projects/tier-3/honest-abe/)| Honest Abe has three projects that increase in complexity. If you completed all three, you will have mastered ERDs, data relationships, and using array methods to navigate them. |
 |3|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-4/truncheons/)| This is a **group project** for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
+|4|[Holiday Road](../projects/tier-4/holidayroad/)| This is a **group project** for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
 
 
 ## 🌤 CloudOps Chapters
