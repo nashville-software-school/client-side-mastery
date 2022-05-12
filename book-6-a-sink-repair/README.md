@@ -34,7 +34,7 @@ If you have completed all Core and Explorer chapters, let your instruction team 
 |1|[Giffygram](../projects/tier-4/giffygram/)| You will deconstruct an existing project using your Dev Tools, and then rebuild it based on your technical specifications. |
 |2|[Honest&nbsp;Abe](../projects/tier-3/honest-abe/)| Honest Abe has three projects that increase in complexity. If you completed all three, you will have mastered ERDs, data relationships, and using array methods to navigate them. |
 |3|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-4/truncheons/)| This is a **group project** for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
-|4|[Holiday Road](../projects/tier-4/holidayroad/)| This is a **group project** for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
+|4|[Holiday Road](../projects/tier-4/holidayroad/)| This is a **group project** that will have your team building a National Parks itinerary builder by working with multiple public APIs. You will also get to pick an unique persona to build your user experience. |
 
 
 ## 🌤 CloudOps Chapters
