@@ -22,7 +22,7 @@ Below is some boilerplate code that you can start with in your **`TicketForm`** 
 > ##### `src/components/serviceTickets/TicketForm.js`
 
 ```jsx
-import React, { useState } from "react"
+import { useState } from "react"
 
 export const TicketForm = () => {
     const [ticket, update] = useState();

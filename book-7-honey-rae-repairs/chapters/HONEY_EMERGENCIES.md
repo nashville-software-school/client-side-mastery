@@ -1,5 +1,7 @@
 # Show Emergency Tickets
 
+In this chapter, you will be creating, and observing, more state variables with `useState()` and `useEffect()` to allow employees toggle between seeing a filtered list of tickets that are emergencies, or all tickets.
+
 ## Emergency Button Implementation
 
 <img src="./images/honey-rae-emergencies.gif" width="600px" alt="Animation showing a button that filters tickets to emeergencies only when clicked" />
