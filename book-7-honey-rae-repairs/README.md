@@ -21,19 +21,27 @@ For example, here's what the first few days should look like for you.
 | 5 | [Customer: List My Tickets](./chapters/HONEY_LIST_MY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #users</sub> | [Store Locations](./chapters/KK_STORES.md) | |
 | 6 | [Employee: Show Emergencies Only](./chapters/HONEY_EMERGENCIES.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | [Inventory](./chapters/KK_INVENTORY.md) |
 | 7 | [Customer: Create Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #POST</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
-| 8 | [Customer: Show Only Open Tickets](./chapters/HONEY_OPEN_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
-| 9 | [Employee: Find Tickets](./chapters/HONEY_FIND_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
+| 8 | [Customer: Show Only Open Tickets](./chapters/HONEY_OPEN_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #useEffect</sub> |  |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 7**
 
 | # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
 |--|--|--|
-| 10 | [Employee: Edit Profile](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Employees](./chapters/KK_EMPLOYEES.md) |
-| 11 | [Customer: Edit Profile](./chapters/HONEY_AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Customer List](./chapters/KK_REPORT.md) |
-| 12 | [Customer: Edit Ticket Details](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
-| 13 | [Employee: Assign Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
-| 14 | [Employee: Close Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
-| 15 | [Customer: Delete Ticket](./chapters/HONEY_DELETE.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
+| 9 | [Employee: Find Tickets](./chapters/HONEY_FIND_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
+| 10 | [Different Views Per User Type](./chapters/HONEY_MULTI_VIEWS.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
+| 11 | [Employee: Employee Directory](./chapters/HONEY_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
+| 12 | [Employee: Customer List](./chapters/HONEY_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
+
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 7**
+
+| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
+|--|--|--|
+| 13 | [Employee: Edit Profile](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Employees](./chapters/KK_EMPLOYEES.md) |
+| 14 | [Customer: Edit Profile](./chapters/HONEY_AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Customer List](./chapters/KK_REPORT.md) |
+| 15 | [Customer: Edit Ticket Details](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
+| 16 | [Employee: Assign Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
+| 17 | [Employee: Close Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
+| 18 | [Customer: Delete Ticket](./chapters/HONEY_DELETE.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 11**
 
