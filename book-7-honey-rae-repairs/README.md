@@ -20,9 +20,9 @@ For example, here's what the first few days should look like for you.
 | 4 | [Employee: List All Tickets Part 2](./chapters/HONEY_LIST_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch #state</sub> | |
 | 5 | [Customer: List My Tickets](./chapters/HONEY_LIST_MY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #users</sub> | [Store Locations](./chapters/KK_STORES.md) | |
 | 6 | [Employee: Show Emergencies Only](./chapters/HONEY_EMERGENCIES.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | [Inventory](./chapters/KK_INVENTORY.md) |
-| 7 | [Customer: Create Ticket](./chapters/HONEY_EMPLOYEES.md) <br/> <sub style="font-size:0.85rem;">#forms #POST</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
-| 8 | [Customer: Show Only Open Tickets](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
-| 9 | [Employee: Find Tickets](./chapters/HONEY_SERVICE_ORDERS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
+| 7 | [Customer: Create Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #POST</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
+| 8 | [Customer: Show Only Open Tickets](./chapters/HONEY_OPEN_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
+| 9 | [Employee: Find Tickets](./chapters/HONEY_FIND_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#fetch #state #json-server #_expand</sub> | [You Gotta Keep 'em Separated](./chapters/KK_ROUTING.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 7**
 

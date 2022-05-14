@@ -8,7 +8,7 @@ In this chapter, you are going to write a component whose responsibility is to c
 
 ## Video Walkthrough
 
-Watch the video that shows you how to use a form in React to [create a new service ticket](https://vimeo.com/573652033) and then immediately show the user the new list of tickets.
+Watch the [create a new service ticket](https://watch.screencastify.com/v/g4Ta9Xf8QjV79CtwGbJ5) video that shows you how to implement a form for customer's to submit service tickets. Then follow the instructions below, and implement all of the code.
 
 ## Service Ticket Form
 
