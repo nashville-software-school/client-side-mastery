@@ -6,6 +6,8 @@ In this chapter, you will see how to build a new view so that any employee can s
 
 Watch the [Employee List](https://watch.screencastify.com/v/7erLnxgQhGELatVfVvhY) video and then implement the code yourself.
 
+<img src="./images/honey-rae-employee-list.gif" width="600px" alt="Animation showing how entering text into a search box filters tickets to ones whose description matches" />
+
 ## Employee Component With Props
 
 TODO
