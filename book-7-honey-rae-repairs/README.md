@@ -28,7 +28,7 @@ For example, here's what the first few days should look like for you.
 | # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
 |--|--|--|
 | 9 | [Employee: Find Tickets](./chapters/HONEY_FIND_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
-| 10 | [Different Views Per User Type](./chapters/HONEY_MULTI_VIEWS.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
+| 10 | [Different Views Per User Type](./chapters/HONEY_MULTI_VIEWS.md) <br/> <sub style="font-size:0.85rem;">#custom-routes</sub> |  |
 | 11 | [Employee: Employee Directory](./chapters/HONEY_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
 | 12 | [Employee: Customer List](./chapters/HONEY_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
 
