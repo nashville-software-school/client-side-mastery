@@ -23,7 +23,7 @@ For example, here's what the first few days should look like for you.
 | 7 | [Customer: Create Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #POST</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
 | 8 | [Customer: Show Only Open Tickets](./chapters/HONEY_OPEN_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #useEffect</sub> |  |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 7**
+**🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 8**
 
 | # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
 |--|--|--|
@@ -32,7 +32,7 @@ For example, here's what the first few days should look like for you.
 | 11 | [Employee: Employee Directory](./chapters/HONEY_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
 | 12 | [Employee: Customer List](./chapters/HONEY_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 7**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 12**
 
 | # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
 |--|--|--|
