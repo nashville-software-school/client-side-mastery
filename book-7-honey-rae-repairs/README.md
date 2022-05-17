@@ -36,9 +36,9 @@ For example, here's what the first few days should look like for you.
 
 | # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
 |--|--|--|
-| 13 | [Employee: Edit Profile](./chapters/ROUTING.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Employees](./chapters/KK_EMPLOYEES.md) |
-| 14 | [Customer: Edit Profile](./chapters/HONEY_AUTHENTICATION.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Customer List](./chapters/KK_REPORT.md) |
-| 15 | [Customer: Edit Ticket Details](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
+| 13 | [Employee: Edit Profile](./chapters/HONEY_EDIT_EMPLOYEE.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Employees](./chapters/KK_EMPLOYEES.md) |
+| 14 | [Customer: Edit Profile](./chapters/HONEY_EDIT_CUSTOMER.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Customer List](./chapters/KK_REPORT.md) |
+| 15 | [Customer: Edit Ticket Details](./chapters/HONEY_EDIT_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
 | 16 | [Employee: Assign Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
 | 17 | [Employee: Close Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
 | 18 | [Customer: Delete Ticket](./chapters/HONEY_DELETE.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
