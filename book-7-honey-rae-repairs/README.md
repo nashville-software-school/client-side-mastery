@@ -43,15 +43,7 @@ For example, here's what the first few days should look like for you.
 | 17 | [Employee: Close Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
 | 18 | [Customer: Delete Ticket](./chapters/HONEY_DELETE.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 11**
-
-| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
-|--|--|--|
-| 12 | [Route Params for Individual Tickets](./chapters/HONEY_ROUTE_PARAMS.md)  <br/> <sub style="font-size:0.85rem;">#routing #parameters</sub> |  |
-| 13 | [Employee Details](./chapters/HONEY_EMPLOYEE_DETAILS.md)  <br/> <sub style="font-size:0.85rem;">#routing #parameters</sub> | |
-| 14 | [Assigning Tickets](./chapters/HONEY_EDIT.md)  <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> |  |
-
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 15**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 18**
 
 ## 🧭 Explorer Chapters
 
