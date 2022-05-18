@@ -29,8 +29,8 @@ For example, here's what the first few days should look like for you.
 |--|--|--|
 | 9 | [Employee: Find Tickets](./chapters/HONEY_FIND_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
 | 10 | [Different Views Per User Type](./chapters/HONEY_MULTI_VIEWS.md) <br/> <sub style="font-size:0.85rem;">#custom-routes</sub> |  |
-| 11 | [Employee: Employee Directory](./chapters/HONEY_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
-| 12 | [Employee: Customer List](./chapters/HONEY_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#props</sub> |  |
+| 11 | [Employee: Employee Directory](./chapters/HONEY_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#props #route-parameters</sub> |  |
+| 12 | [Employee: Customer List](./chapters/HONEY_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#props #route-parameters</sub> |  |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 12**
 
@@ -38,10 +38,10 @@ For example, here's what the first few days should look like for you.
 |--|--|--|
 | 13 | [Employee: Edit Profile](./chapters/HONEY_EDIT_EMPLOYEE.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Employees](./chapters/KK_EMPLOYEES.md) |
 | 14 | [Customer: Edit Profile](./chapters/HONEY_EDIT_CUSTOMER.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Customer List](./chapters/KK_REPORT.md) |
-| 15 | [Customer: Edit Ticket Details](./chapters/HONEY_EDIT_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
-| 16 | [Employee: Assign Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
-| 17 | [Employee: Close Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
-| 18 | [Customer: Delete Ticket](./chapters/HONEY_DELETE.md) <br/> <sub style="font-size:0.85rem;">#route-params</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
+| 15 | [Customer: Edit Ticket Details](./chapters/HONEY_EDIT_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #edit #route-parameters</sub> | [Rewards Program](./chapters/KK_CUSTOMERS.md) |
+| 16 | [Employee: Assign Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;"># #route-parameters</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |
+| 17 | [Employee: Close Ticket](./chapters/HONEY_JSX_TERNARY.md) <br/> <sub style="font-size:0.85rem;"># #route-parameters</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
+| 18 | [Customer: Delete Ticket](./chapters/HONEY_DELETE.md) <br/> <sub style="font-size:0.85rem;"># #route-parameters</sub> | [Been Caught Stealing](./chapters/KK_DELETE.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 18**
 
