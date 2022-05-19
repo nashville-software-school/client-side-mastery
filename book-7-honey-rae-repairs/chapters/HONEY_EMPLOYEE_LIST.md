@@ -12,8 +12,13 @@ Watch the [Employee List](https://watch.screencastify.com/v/7erLnxgQhGELatVfVvhY
 
 In this section, you are going to practice sending component state from a parent to a child component. More practice using props in your React code.
 
-Watch the [Props for  Employee Component](https://watch.screencastify.com/v/5cPG7B1egafRuw3365N1) video and then implement the code yourself.
+Watch the [Props for Employee Component](https://watch.screencastify.com/v/5cPG7B1egafRuw3365N1) video and then implement the code yourself.
 
 ## Employee Details With Route Parameters
 
-TODO
+In this section, you are going to see how to use route parameters to render a detailed representation of an employee.
+
+* You will see the `useParams()` hook in React Router.
+* You will be introduced to the [optional chaining operator](https://javascript.info/optional-chaining) in JavaScript.
+
+Watch the [Employee Details](https://watch.screencastify.com/v/XH5sKQui4SR2xSN8rlmt) video and then implement the code yourself.
