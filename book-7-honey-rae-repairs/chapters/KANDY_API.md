@@ -1,14 +1,21 @@
 # Kandy Korner
 
-You are going to be building your own React application based off of what you have done with the code in Nashville Honey Rae's.
+You are going to be building your own React application based off of what you have done with the code in Honey Rae's.
 
-1. Create another React project in `~/workspace/kandykorner` and `cd` into it.
-1. Initialize your app with `npx create-react-app .`
-1. Create a `src/components` directory.
-1. Create your application file and component in `components/KandyKorner.js`.
-1. Update `index.js` to render the **`<KandyKorner />`** component, just like you did in Honey Rae's.
-1. Make sure your Kandy Korner API is running
+```sh
+cd ~/workspace
+npx create-react-app kandy-korner
+cd kandy-korner
+npm install --save react-router-dom
+```
 
+## Project Setup
+
+We are giving you some boilerplate code that you will then customize as you build out Kandy Korner. Run the following command in your terminal.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-7-honey-rae-repairs/chapters/scripts/kandy-setup.sh)"
+```
 
 # Kandy Korner Data
 
@@ -25,20 +32,12 @@ In your JSON file, create the following resources. Define the properties for eac
 
 | Resource | Description |
 | -- | -- |
-|**`locations`** | The physical location of your stores |
-|**`products`** | All of the different candies that you sell in your stores |
-|**`employees`** | Employees can only be assigned to work at a single store |
+|**`users`** | Where basic user information for all users is stored _(name and email)_ |
+|**`customers`** | The people who make candy purchases at your stores. Stores additional `loyaltyNumber` property which is a 5 digit number. Customers can make purchases from any store. |
+|**`employees`** | Stores additional `startDate` and `payRate` properties in addition to what's in the users table. Employees can only be assigned to work at a single store. |
+|**`locations`** | The physical location of your stores. Record the address and square footage of a location. |
+|**`products`** | All of the different candies that you sell in your stores. A single product can be sold in multiple stores, depending on demand. Store the name of the product, its type, and its price per unit. |
 |**`productTypes`** | All of your candies fall into categories _(e.g. hard candies, chocolates, gummies, etc...)_ |
-|**`customers`** | The people who make candy purchases at your stores |
-|**`purchases`** | When a customer purchases candy at a store, a record of the transaction should be created. |
+|**`purchases`** | When a customer purchases candy at a store, a record of the transaction should be created. A purchase should record the customer that purchased it, which product was purchased, and how many of that product was purchased _(e.g. a customer can buy 5 Snickers bars in a single purchase)_. |
 
 As always, if you want to run your ERD by someone on your instruction team for feedback, they are more than happy to do that with you.
-
-## Example Locations
-
-Here are some possible properties for a location.
-
-* Address (`varchar`)
-* Square footage (`number`)
-* Handicap accessible (`boolean`)
-

@@ -1,7 +1,6 @@
 # Kandy Korner Locations
 
-1. Create a couple of objects in your `database.json` file to represent some locations.
-1. Create a directory to hold all of your files for locations.
-1. Create a module for the location list component.
-1. In your location list module, utilize the `useEffect()` React hook to get the array of locations from your API. All of this will be nearly identical to Honey Rae's.
-1. Then render all locations in the browser.
+* Create a few of objects in your `database.json` file to represent some locations.
+* A list of locations can be seen by customers and employees.
+* Add a navbar item that both kinds of users can click on.
+* When clicked, display a list of locations. Display the address and the square footage. Use any layout and colors that you want.
