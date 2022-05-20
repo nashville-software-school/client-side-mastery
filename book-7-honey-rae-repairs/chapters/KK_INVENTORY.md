@@ -30,26 +30,3 @@ Now create as many product objects in your API as you want to sell at your locat
 **When** the employee clicks on a button labeled "Top Priced"
 
 **Then** only products that cost more than $2.00 per unit should be displayed
-
----
-**Given**
-
-**When**
-
-**Then**
-
----
-**Given**
-
-**When**
-
-**Then**
-
----
-**Given**
-
-**When**
-
-**Then**
-
----

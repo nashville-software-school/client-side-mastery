@@ -4,10 +4,10 @@ It is very important that you work on the concepts in this book in the segments 
 
 For example, here's what the first few days should look like for you.
 
-1. Watch videos and read documentation for Honey Rae Repairs up to chapter 7
-1. Read the features needed in Kandy Korner and implement the code for them up to chapter 7.
+1. Watch videos and read documentation for Honey Rae Repairs up to chapter 8
+1. Read the features needed in Kandy Korner and implement the code for them up to chapter 8
 1. Review your vocabulary and discuss your questions with peers and instructors.
-1. Move on to chapter 8 in Honey Rae Repairs.
+1. Move on to chapter 9 in Honey Rae Repairs.
 1. etc...
 
 ## Chapters
