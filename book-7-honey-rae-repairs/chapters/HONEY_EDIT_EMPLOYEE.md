@@ -67,3 +67,90 @@ export const EmployeeForm = () => {
     )
 }
 ```
+
+## Success Message
+
+In this next section, after you have completed the functionality, you can implement a slide in message for the employee once the data is saved.
+
+It's always nice to provide some feedback to the user of your application when things work, or don't work.
+
+### Style Rules
+
+Add the following styles to your `index.css` file.
+
+```css
+.feedback {
+  border: 1px dotted cadetblue;
+  padding: 1rem;
+  background-color: rgb(218, 230, 247);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  animation: 1s slideDown;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.error {
+  border: 1px dotted rgb(107, 21, 4);
+  padding: 1rem;
+  background-color: rgb(255, 229, 228);
+}
+
+@keyframes slideDown {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 20%;
+  }
+}
+```
+
+### Feedback Element JSX
+
+Add the following JSX **above** the profile form element. This is where your feedback message will be displayed, and have the correct CSS classes applied to it.
+
+```jsx
+<div className={`${feedback.includes("Error") ? "error" : "feedback"} ${feedback === "" ? "invisible" : "visible"}`}>
+    {feedback}
+</div>
+```
+
+### State and Observer
+
+Add the following state and observer code.
+
+```js
+const [feedback, setFeedback] = useState("")
+
+useEffect(() => {
+    if (feedback !== "") {
+        // Clear feedback to make entire element disappear after 3 seconds
+        setTimeout(() => setFeedback(""), 3000);
+    }
+}, [feedback])
+```
+
+### Set Success Message
+
+Lastly, chain the following Promise code to your PUT operation.
+
+```js
+.then(() => {
+    setFeedback("Employee profile successfully saved")
+})
+```
+
+Once implemented you should see the following animated message when you click save.
+
+<img src="./images/honey-rae-edit-success-message.gif" width="600px" alt="Animation showing an aminated, slide-in message that appears when the PUT operation is successful" />
