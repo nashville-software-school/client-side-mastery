@@ -4,7 +4,7 @@ In this chapter, you will be implementing several components that will allow an 
 
 ## Video Walkthrough
 
-
+Watch the [Edit Employee Profile](https://watch.screencastify.com/v/zQvaC71N4MmJTtwU95v0) video and then implement the code yourself with the boilerplate code below.
 
 ## Starter Code
 
@@ -48,7 +48,7 @@ export const EmployeeForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">Hourly rate:</label>
-                    <input type="text"
+                    <input type="number"
                         className="form-control"
                         value={profile.rate}
                         onChange={
