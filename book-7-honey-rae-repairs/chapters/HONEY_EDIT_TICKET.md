@@ -120,3 +120,6 @@ export const TicketEdit = () => {
 ```
 </details>
 
+## For the Truly Forlorn
+
+If you just can't figure it out and have worked with your peers, then you can get the [working code](./scripts/TicketEdit.js) and put it in your component.
