@@ -9,6 +9,10 @@ In this chapter, you will use the following strategies that you've seen before.
 1. HTTP requests with the `PUT` method to replace an existing resource in the API
 1. Using the `onChange()` event listener to update state when the user interact with an input field
 
+## Demo
+
+<img src="./images/honey-rae-edit-ticket.gif" width="600px" alt="Animation showing a ticket being edited" />
+
 ## TicketEdit Component
 
 Make the `src/components/tickets/TicketEdit.js` module and place the following code in it.
