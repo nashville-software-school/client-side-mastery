@@ -311,6 +311,13 @@ a specific property of the flower.
     success = false
 }
 
+if (success) {
+    console.log(`\x1b[92m
+        *********************************************
+        ****   INEXPENSIVE FLOWERS TEST PASSED   ****
+        *********************************************`)
+}
+
 
 
 const zones = zoneFlowers()
@@ -348,7 +355,12 @@ a specific property of the flower.
     success = false
 }
 
-
+if (success) {
+    console.log(`\x1b[92m
+        **************************************
+        ****   ZONE FLOWERS TEST PASSED   ****
+        **************************************`)
+}
 
 const orange = orangeFlowers()
 
@@ -391,6 +403,13 @@ a specific property of the flower.
 `)
 
     success = false
+}
+
+if (success) {
+    console.log(`\x1b[92m
+        ****************************************
+        ****   ORANGE FLOWERS TEST PASSED   ****
+        ****************************************`)
 }
 
 
@@ -444,5 +463,5 @@ self-assessment project.
 
 }
 
-' > test.js
 
+' > test.js
