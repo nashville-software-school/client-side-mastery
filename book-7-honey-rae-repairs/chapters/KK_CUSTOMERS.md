@@ -1,12 +1,15 @@
 # Kandy Korner Customers
 
-In this chapter, you are going to create a login form where customers can provide their authentication and personal information so that they can make purchases online.
+---
+**Given** an employee wants to see all customers
 
-Utilize the same components as you did in Honey Rae's to implement a login screen in Kandy Korner.
+**When** the employee clicks on a "Customers" navigation link
 
-* `src/components/auth/Login.js`
-* `src/components/auth/Register.js`
+**Then** all customers should be listed with the customer name and email
 
-Use `kandy_customer` as the local storage item for tracking authentication.
+---
+**Given** an employee is viewing all customers
 
-Then refactor **`KandyKorner`** to implement the login screen.
+**When** the employee clicks on the name of a customer
+
+**Then** a detail view should be displayed that shows the customer name, email, and loyalty number

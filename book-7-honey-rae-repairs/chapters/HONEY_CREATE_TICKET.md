@@ -8,27 +8,50 @@ In this chapter, you are going to write a component whose responsibility is to c
 
 ## Video Walkthrough
 
-Watch the video that shows you how to use a form in React to [create a new service ticket](https://vimeo.com/573652033) and then immediately show the user the new list of tickets.
+Watch the [create a new service ticket](https://watch.screencastify.com/v/g4Ta9Xf8QjV79CtwGbJ5) video that shows you how to implement a form for customer's to submit service tickets. Then follow the instructions below, and implement all of the code.
 
-## React to User Input
+## Service Ticket Form
 
 Below is some boilerplate code that you can start with in your **`TicketForm`** component. After watching the video, your job is to do the following tasks.
 
-1. Create the initial state for the service ticket with the `useState()` hook function.
-1. Implement the `onChange` event listener on each form field to update the state when the user interacts with the form.
-1. Write the logic in the `saveTicket()` function to perform the POST operation to save a new service ticket to permanent state in the API. Once the operation is complete, use the history mechanism to redirect the user to the list of service tickets.
-1. Implement the `onClick` event listener on the submit ticket button.
+1. Copy pasta the code into the specified module.
+1. Scroll down and implment the new ticket button.
+1. Scroll down and implment the required `<Route>`.
+1. Open `TicketForm` again and implement the following code.
+    1. Create the initial state for the service ticket with the `useState()` hook function.
+    1. Implement the `onChange` event listener on each form field to update the state when the user interacts with the form.
+    1. Write the logic in the `handleSaveButtonClick()` function to perform the POST operation to save a new service ticket to permanent state in the API. Once the operation is complete, redirect the customer to the list of their service tickets.
+    1. Implement the `onClick` event listener on the submit ticket button.
 
 > ##### `src/components/serviceTickets/TicketForm.js`
 
 ```jsx
-import React, { useState } from "react"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export const TicketForm = () => {
-    const [ticket, update] = useState();
+    /*
+        TODO: Add the correct default properties to the
+        initial state object
+    */
+    const [ticket, update] = useState({
 
-    const saveTicket = (event) => {
+    })
+    /*
+        TODO: Use the useNavigation() hook so you can redirect
+        the user to the ticket list
+    */
+
+    const localHoneyUser = localStorage.getItem("honey_user")
+    const honeyUserObject = JSON.parse(localHoneyUser)
+
+    const handleSaveButtonClick = (event) => {
         event.preventDefault()
+
+        // TODO: Create the object to be saved to the API
+
+
+        // TODO: Perform the fetch() to POST the object to the API
     }
 
     return (
@@ -42,6 +65,7 @@ export const TicketForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="Brief description of problem"
+                        value={ticket.description}
                         onChange={} />
                 </div>
             </fieldset>
@@ -49,10 +73,11 @@ export const TicketForm = () => {
                 <div className="form-group">
                     <label htmlFor="name">Emergency:</label>
                     <input type="checkbox"
+                        value={ticket.emergency}
                         onChange={} />
                 </div>
             </fieldset>
-            <button className="btn btn-primary" onClick={saveTicket}>
+            <button className="btn btn-primary">
                 Submit Ticket
             </button>
         </form>
@@ -62,49 +87,20 @@ export const TicketForm = () => {
 
 ## Button to Show the Form
 
-Add a button to the top of your ticket list that will change the browser URL in order to show the ticket form.
+Add a button to the top of your ticket list that will change the browser URL in order to show the ticket form. Make sure this button only displays when a customer is logged in.
 
 ```jsx
-<div>
-    <button onClick={() => history.push("/ticket/create")}>Create Ticket</button>
-</div>
-```
-
-Make sure you import `useHistory()` into the component to make this work. This is a hook provided by the React Router DOM library that you installed. It grants you the ability to programtically manipulate the browser URL instead of waiting for a user to click on a `<Link>` component.
-
-```js
-const history = useHistory()
+<button onClick={() => navigate("/ticket/create")}>Create Ticket</button>
 ```
 
 ## Create the Route
 
-Create the new route that will respond when the button click changes the URL to `/ticket/create`.
+Create the new route that will display the ticket form when the browser URL changes.
 
-> ##### `src/components/ApplicationViews.js`
+> ##### `src/components/views/ApplicationViews.js`
 
 ```jsx
-<Route path="/ticket/create">
-    <TicketForm />
-</Route>
+<Route path="ticket/create" element={ <TicketForm /> } />
 ```
 
 You should now be able to add new support tickets. If something doesn't work, check your code for spelling errors, and talk to your teammates.
-
-If you still can't make it work, reach out to your instruction team immediately.
-
-## Practice: Hire Employee
-
-Write a component whose responsibility is to hire a new employee and assign to a location.
-
-<img src="./images/honey-rae-employee-form.gif" width="600px" alt="Animation of employee creation form" />
-
-### Create an Employee Form
-
-* Create a route in ApplicationViews for `/employee/create` that renders an EmployeeForm.
-* Add a button to the employee list labeled, "Hire Employee".
-* When the button is clicked, show the employee form by using `history.push()` to change the route.
-* The employee form should include an input for the person's name, their repair specialty, and a button at the end labeled "Finish Hiring".
-* When the "Finish Hiring" button is clicked on the form, create a new employee object and POST it to the API.
-* Once the employee is saved, re-route the user to the list of employees.
-
-Do your best on your own and with teammates to get the form working. If you get truly stuck, you can grab some [boilerplate code](./scripts/EmployeeForm.js) to get started.

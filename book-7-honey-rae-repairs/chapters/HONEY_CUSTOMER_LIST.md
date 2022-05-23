@@ -1,33 +1,8 @@
-# Honey Rae's Customers Revisited
+# Customer List for Employees
 
-## Video Walkthrough
+For this chapter, you need to follow the same process as the last one so the **only employees** can view a list of all customers.
 
-Watch the [Honey Rae's Repairs - Customer List Component](https://vimeo.com/568224637) video to ensure that you follow the Single Responsibility Principle in your components.
-
-## Documentation Walkthrough
-
-Having all of the logic for displaying a list of customers inside the main **`Repairs`** component is not a good, long-term solution.
-
-Just like in previous projects, the initial component's responsibility is to define the overall structure of the application. It defers the construction of the HTML for displaying the data to other components.
-
-## Starter Code
-
-Put the following starter code in the **`CustomerList`** module that you created on project setup.
-
-> #### `src/components/customers/CustomerList.js`
-
-```js
-import React, { useEffect, useState } from "react"
-
-export const CustomerList = () => {
-
-}
-```
-
-## Employee List
-
-Your next job is to create an employee list components and have the names of the employees listed below the names of the customers.
-
-![list of customers and employees](./images/honey-rae-customers-and-employees.png)
-
-Try it yourself, or with your teammates to discuss your strategy and practice vocabulary. If you get stuck, you can watch a [bonus video](https://vimeo.com/568227654) that shows you how to do it.
+1. Create a navigation bar link titled "Customers".
+1. Create a **`Customer`** module that contains a component function that accepts a single customer object as a prop. It should display the customer name, address, and phone number.
+1. Create a **`CustomerList`** module that contains a component function that fetches all customers and iterates the array in the JSX to display the name of each customer by passing each object to the **`Customer`** component as a prop.
+1. Create a **`CustomerDetails`** component that should display the full name, email, phone number, and address of the customer when the customer's name is clicked in the list view.

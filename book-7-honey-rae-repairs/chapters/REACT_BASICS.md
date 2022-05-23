@@ -27,77 +27,70 @@ Watch the Intro to React Dev Tools video below to review their usage. Again, jus
 
 ## Creating the Application
 
+Run the following commands to do the basic software package installations
+
 ```sh
 cd ~/workspace
 npx create-react-app honey-rae-repairs
+cd honey-rae-repairs
+npm install --save react-router-dom
 ```
 
-Once installation is complete, run these commands
+## Project Setup
+
+We are giving you some boilerplate (starter) code that you will then customize as you build out the Honey Rae Repairs application with React. Run the following command in your terminal.
 
 ```sh
-cd honey-rae-repairs/src
-rm App*
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-7-honey-rae-repairs/chapters/scripts/react-setup.sh)"
 ```
 
-## Getting Organized
-
-Before we grow this application, let's create a meaningful directory structure.
-
-1. Inside your `src` directory, `mkdir` a `components` sub-directory.
-2. `cd` into the `components` directory.
-3. `touch` `Repairs.js` and `Repairs.css`.
-4. Within components, `mkdir` an `customers` directory
-5. `cd` into the `customers` directory.
-6. `touch CustomerList.js Customers.css`
+It will create the following directories and files for your project.
 
 ```
 - src
     - components
-        - customers
-            - CustomerList.js
-            - Customers.css
-        - Repairs.js
+        - auth
+            - Login.css
+            - Login.js
+            - Register.js
+        - nav
+            - NavBar.css
+            - NavBar.js
+        - tickets
+            - TicketList.js
+            - Tickets.css
+        - views
+            - ApplicationViews.js
+            - Authorized.js
         - Repairs.css
+        - Repairs.js
   index.js
-```
-
-## Default Styling
-
-Add the following code to `Repairs.css`.
-
-```css
-/* Import the google web fonts you want to use */
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
-
-/*Typography
---------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
-  color: #404040;
-  font-family: "Comfortaa", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Patua One", serif;
-  letter-spacing: 2px;
-}
-
-p {
-  margin-bottom: 1.5em;
-}
 ```
 
 ## Starting Your React Application
 
 In your terminal, make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory, and type the following command.
 
-It will take about 30 seconds to run all of your code. Unfortunately, because of all the changes you just made, the application won't start correctly. For now, just move on to chapters 2 and 3 and will start working again.
-
 ```sh
 npm start
 ```
+
+The process of building your React application will begin and the following things will happen.
+
+1. Your browser will automatically open the `http://localhost:3000` URL.
+1. You will see the following message in your terminal.
+    ```sh
+    Compiled successfully!
+
+    You can now view honey in the browser.
+
+      Local:            http://localhost:3000
+      On Your Network:  http://192.168.68.105:3000
+
+    Note that the development build is not optimized.
+    To create a production build, use npm run build.
+
+    webpack compiled successfully
+    ```
+
+If these two things do not happen, call in an instructor. Otherwise, move on to the next chapter.
