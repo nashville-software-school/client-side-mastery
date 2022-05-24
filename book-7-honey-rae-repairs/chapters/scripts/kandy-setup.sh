@@ -7,7 +7,7 @@ mkdir -p ./src/components/auth
 mkdir -p ./src/components/tickets
 mkdir -p ./src/components/views
 
-echo 'import { Repairs } from "./components/Repairs"
+echo 'import { KandyKorner } from "./components/KandyKorner"
 import { createRoot } from "react-dom/client"
 import "./index.css"
 import { BrowserRouter } from "react-router-dom"
@@ -16,7 +16,7 @@ const container = document.getElementById("root")
 const root = createRoot(container)
 root.render(
     <BrowserRouter>
-        <Repairs />
+        <KandyKorner />
     </BrowserRouter>
 )
 ' > ./src/index.js
