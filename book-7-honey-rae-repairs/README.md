@@ -21,7 +21,7 @@ For example, here's what the first few days should look like for you.
 | 5 | [Customer: List My Tickets](./chapters/HONEY_LIST_MY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #users</sub> | [Store Locations](./chapters/KK_STORES.md) | |
 | 6 | [Employee: Show Emergencies Only](./chapters/HONEY_EMERGENCIES.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | [Inventory](./chapters/KK_INVENTORY.md) |
 | 7 | [Customer: Create Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #POST</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
-| 8 | [Customer: Show Only Open Tickets](./chapters/HONEY_OPEN_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #useEffect</sub> | [Create Products](./chapters/KK_PRODUCT_TYPES.md) |
+| 8 | [Customer: Show Only Open Tickets](./chapters/HONEY_OPEN_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #useEffect</sub> | [Create Products](./chapters/KK_NEW_PRODUCT.md) |
 
 **🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 8**
 
