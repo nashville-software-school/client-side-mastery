@@ -4,7 +4,7 @@
 
 This section shows you how to use the `useEffect()` hook to observe when intial state is all done and then request data from your local API. Once the response from the API is captured, you will update the state of your component to display all of the tickets.
 
-Watch the [Fetch Initial Ticket State](https://watch.screencastify.com/v/awd91iAYTNPfOeeTmJCn) video and then implement the code yourself.
+Watch the [Fetch Initial Ticket State](https://watch.screencastify.com/v/F4ZpSuhaPCLwoJDOdyk8) video and then implement the code yourself.
 
 ## Using CSS in React
 
