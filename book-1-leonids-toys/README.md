@@ -2,20 +2,20 @@
 
 ## Prelude: Developer Skills
 
-Most people are mouse/touchpad users and rarely touch their keyboards on their computers. Professional developers are the complete opposite. We rarely touch the mouse during development of a project. It will be a long journey for you to see the value of, and become proficient with, using keyboard shortcuts. Here's where you start that journey.
 
-| # | 💀 🐭 💀 Using the Keyboard |
+
+
+| # |  Using the Terminal |
 |--|--|
-| 1 |[Core Keyboard Shortcuts](./chapters/KEYBOARD_CORE.md) <br/> <sub style="font-size:0.85rem;">#keyboard</sub> |
-| 2 |[Debugging Shortcuts](./chapters/KEYBOARD_DEBUG.md) <br/> <sub style="font-size:0.85rem;">#keyboard #debugging</sub> |
-| 3 | [Core Professional Skills](./chapters/THINKING.md) <br/> <sub style="font-size:0.85rem;">#mindset</sub> |
+| 1 |[Terminal Basics](./chapters/TERMINAL_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
+
 
 
 ## Core Chapters
 
 In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
 
-| # | 🏠 Foundations Review | 🧸 Leonid's Toys <br/><sub>(_Guided tour_)</sub> | 📔 Daily Notes |
+| # | 🏠 Arrays for Days  | 🧸 Leonid's Toys <br/><sub>(_Guided tour_)</sub> | 📔 Daily Notes |
 |--|--|--|--|
 | 1 |[All About Arrays](./chapters/ARRAYS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#arrays</sub> | [Data Types](./chapters/LT_DATA_TYPES.md) <br/> <sub style="font-size:0.85rem;">#data</sub> |  |
 | 2 |[Array Item Index](./chapters/ARRAYS_INDICES.md) <br/> <sub style="font-size:0.85rem;">#arrays #index</sub> | [Data Structures](./chapters/LT_DATA_STRUCTURES.md) <br/> <sub style="font-size:0.85rem;">#data #objects #arrays</sub> | [Project Requirements and Algorithm](./chapters/DN_REQUIREMENTS.md) |
