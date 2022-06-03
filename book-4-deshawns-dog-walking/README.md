@@ -8,7 +8,7 @@ In this book, you will be introduced to three concepts.
 
 | | |
 |:---:|:---|
-| <h1>&#x2757;</h1> |  _Using the debugger is how you will be expected to diagnose your code and fix bugs during your time at NSS. Use of other strategies like `console.log()` are to be used sparingly._ |
+| <h1>&#x2757;</h1> |  _Using the debugger is how you will be expected to diagnose your code and fix bugs during your time at NewForce. Use of other strategies like `console.log()` are to be used sparingly._ |
 
 ## Chapters
 
