@@ -12,14 +12,14 @@ In order to automate the installation of the tools you need _(which happens in t
 
     <img src="./images/github-token-developer-settings.gif" alt="Access Github settings" width="300px" />
 
-1. Then generate a Personal Access Token with a name of **NSS Installs Token**. Make it expire in 7 days. Scroll down into the permissions and check the `admin:public_key` checkbox and click it. Then scroll all the way down and save the token. **It is important you do not close, or refresh the browser tab until you complete the automated installs in the next section.**
+1. Then generate a Personal Access Token with a name of **NewForce Installs Token**. Make it expire in 7 days. Scroll down into the permissions and check the `admin:public_key` checkbox and click it. Then scroll all the way down and save the token. **It is important you do not close, or refresh the browser tab until you complete the automated installs in the next section.**
 
     <img src="./images/github-token-creating-token.gif" alt="Access Github settings" width="600px" />
 
 ## Basic Installations (automated)
 
 1. Open the Terminal application on your Mac.
-1. Copy pasta the following command into the terminal and hit enter to run it. It will attempt to install some of the basic tools you need for NSS.
+1. Copy pasta the following command into the terminal and hit enter to run it. It will attempt to install some of the basic tools you need for NewForce.
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-0-installations/chapters/scripts/installs-all-mac-users.sh)"
@@ -30,6 +30,10 @@ In order to automate the installation of the tools you need _(which happens in t
 [Download and install Rectangle](https://www.rectangleapp.com/). This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
 
 Invest 9 minutes of your time to watch the [Using Rectangle to Manage macOS Windows](https://www.youtube.com/watch?v=tFeDyqZG4z4) video now to learn how to use Rectangle. If you start using it **today**, then you will save yourself hours upon hours of headache and lost productivity as you learn to become a professional software developer.
+
+## Visual Studio Code
+
+Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the editor you will be using for the next 6 months.
 
 ## Launch Visual Studio Code From Command Line
 
