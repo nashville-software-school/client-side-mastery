@@ -4,9 +4,9 @@ The main learning goal for this book is the use of `git` and Github for versioni
 
 ## Chapters
 
-| # | 🐠 <br/> Martin's Aquarium |
-|--|--|
-| 1 | [Project Setup](./chapters/CLI_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> |
+| # | 🐠 <br/> Martin's Aquarium | 💼 <br/>Career Prep |
+|--|--|--|
+| 1 | [Project Setup](./chapters/CLI_BASICS.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub> | [Resume Design](./chapters/career-prep/CANVA.md)
 | 2 | [HTML Structure &amp; Layout with Sally's Interests](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |
 | 3 | [Wireframes for User Interfaces](./chapters/MA_WIREFRAMES.md) <br/> <sub style="font-size:0.85rem;">#html #wireframes</sub> |
 | 4 | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md) <br/> <sub style="font-size:0.85rem;">#html #design #properties</sub> |
