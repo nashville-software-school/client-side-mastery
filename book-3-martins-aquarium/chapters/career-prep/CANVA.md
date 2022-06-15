@@ -26,6 +26,7 @@ Do not put your headshot on your resume. Why? When hiring, recruiters are traine
 - You'll also notice that these templates have space for your LinkedIn and GitHub profiles. Go ahead and add your GitHub now. If you have a LinkedIn, go ahead and add it too-- if not, we'll get to LinkedIn in book 6!
 - Make a copy of the template by going to FILE, selecting MAKE A COPY, and renaming it **Please do not edit one of the original templates.** 
 - [Watch the vidoe tutorial on Canva!](https://drive.google.com/file/d/1UplTXcF5jamuDr3_dt7qD7CR9CL-N_kb/view?usp=sharing)
+- Enter in the resume text from your Google Doc into the template. Ideally, we'd want your resume all on one page but two pages is also okay. (Any more than two is probably too much.) _You don't have to include every single bullet point from your Google Doc._ Your Google Doc is like a "bank" of all the possible stuff you'd ever want to put on a resume. You'll swap those bullet points in and out, depending on the job. 
 - **When you're done, send an editable link to Jordan on slack so she can go over it!**
     - To share an editable link, click the top button that says "Share" and then click "Share Editable Link"
 
