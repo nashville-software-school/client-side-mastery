@@ -2,7 +2,7 @@
 
 Cultural interviews are an inevitable part of the job search process. A cultural interview just means the employer is trying to figure out if you'd be a "culture fit" for their workplace. This is likely the type of interview you're most familiar with-- there will be general, sometimes vague questions ("Tell me about yourself!" "What's your greatest weakness?") and your job is to tell the interviewer how amazing you are. 
 
-"But Jordan," you say, "I hate bragging about myself! And I don't even think I'm that amazing." Listen, I get it. There's nothing like a high-pressure interview (and launching a new career!) to make you forget how incredible you are. That's why we're here to help. And the good news is-- you've already aced at least one cultural interview! You blew your NewForce interview out of the water, or else we wouldn't have admitted you. You're already great at this. We're just honing your skills and hopefully helping you relax and enjoy your future interviews a bit more. 
+"But Jordan," you say, "I hate bragging about myself! And I don't even think I'm that amazing." Listen, I get it. There's nothing like a high-pressure interview (and launching a new career!) to make you forget how incredible you are. That's why we're here to help. And the good news is-- you've already aced at least one cultural interview! You blew your NewForce interview out of the water, or else you wouldn't be here. You're already great at this. We're just honing your skills and hopefully helping you relax and enjoy your future interviews a bit more. 
 
 
 ## The STAR Technique
