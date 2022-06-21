@@ -28,6 +28,13 @@ In this book's core chapters, you will gain the knowledge and understanding of w
 | 9 | [Array and String Methods](./chapters/ARRAY_STRING_METHODS.md) <br/> <sub style="font-size:0.85rem;">#methods #arrays #strings</sub> | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [Note Topics Subsection](./chapters/DN_TOPICS_SECTION.md) |
 | 🎓 | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
 
+## 👩‍👩‍👧‍👦 Team Collaboration Projects
+
+| # | Project Name | Summary |
+|--|--|--|
+| 1 | [Solar Eclipse Bank](https://codesandbox.io/s/solar-eclipse-bank-book-1-fq8oxd) |  |
+| 1 | [Funkify Streaming Music](https://codesandbox.io/s/funkify-streaming-music-book-1-80yyfw) |  |
+
 ## 🧭 Explorer Chapters
 
 | # | 🚀  Advanced Data Stuctures |
