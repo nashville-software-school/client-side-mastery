@@ -13,7 +13,16 @@ In this book, you will gain the knowlege and understanding of working with funct
 | 5 | [Design a Car Factory](./chapters/FUNCTIONS_CAR_FACTORY.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | [Grading Students](./chapters/FUNCTIONS_STUDENTS.md) |  [The Fishing Boat](./chapters/VEGGISH_BOAT.md) |
 | 6 | [Design a Candy Factory](./chapters/FUNCTIONS_CANDY_FACTORY.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | | [The Fishmonger](./chapters/VEGGISH_MONGER.md) |
 | 7 | [HTML Factory Functions](./chapters/FUNCTIONS_HOT_DOGS.md) <br/> <sub style="font-size:0.85rem;">#html #factory-function</sub> | [Get Rich and Famous by Throwing Pottery](./chapters/FUNCTIONS_POTTERY.md) | [The Restuarant](./chapters/VEGGISH_FUSION.md) |
-| 🎓 | [Self-Assessment](./chapters/FUNCTIONS_ASSESSMENT.md) | |  |
+| 🎓 | [Self-Assessment](./chapters/FUNCTIONS_ASSESSMENT.md) | | |
+
+## 👩‍👩‍👧‍👦 Team Collaboration Projects
+
+| # | Project Name | Summary |
+|--|--|--|
+| 1 | [Joey's Pizza](https://codesandbox.io/s/joeys-pizza-book-2-uckguz) | The owners of Joey's Pizza want your team to develop some software that allows employees to build customer pizzas with 2 toppings, at the right size, get it paid for, bake it, and then output a message that it is being delivered. |
+| 2 | [Trustpoint Medical Practice](https://codesandbox.io/s/trustpoint-medical-practice-book-2-zgs0iy) | TrustPoint medical practice administrators want us to create a program that takes an array of doctors, and an array of patients, and assign patients to doctors if the patient `illness` property matches the `specialty` property of the doctor. |
+| 3 | [Zanzibar Zoo](https://codesandbox.io/s/book-2-zanzibar-zoo-syq2ny) | This project puts you in the role of a zookeeper. You will be iterating arrays of animals and related foods, and then writing functions, each with its own responsibility for care of the animals. |
+
 
 ## 🏕 Pioneer Chapters
 

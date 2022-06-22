@@ -18,6 +18,14 @@ The main learning goal for this book is the use of `git` and Github for versioni
 | 10 | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) |
 | 11 | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
 
+## 👩‍👩‍👧‍👦 Team Collaboration Projects
+
+| # | Project Name | Summary |
+|--|--|--|
+| 1 | [Spring Hill Zoo](https://codesandbox.io/s/book-3-spring-hill-zoo-7sn1z9?file=/src/main.js) | You will be building a modular Web application that lists all of the animals in each exhibit currently at the Spring Hill Zoo. It will also list all concession stands. |
+| 2 | [Beyonce's Tour Dates](https://codesandbox.io/s/book-3-beyonce-tour-dates-b3x0pi?file=/src/index.js:272-321) | You will be building a modular Web application that converts your raw data objects into HTML to show a list of Beyonce tour dates in the browser. It will display the opening bands, and the cities on the tour. |
+
+
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
@@ -30,7 +38,7 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | 4 | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) | 🏭 [Factories and Generators](./chapters/FACTORY_GENERATOR.md) |
 
 
-## 🔐 Projects Unlocked
+## 🔐 Deep Learning Projects Unlocked
 
 These projects expand your knowledge of data, functions and modules. Each project has tests that run and verify that your code follows the requirements.
 

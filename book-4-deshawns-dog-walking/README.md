@@ -6,10 +6,6 @@ In this book, you will be introduced to three concepts.
 1. Handling browser generated events.
 1. Data relationships and how to visualize them.
 
-| | |
-|:---:|:---|
-| <h1>&#x2757;</h1> |  _Using the debugger is how you will be expected to diagnose your code and fix bugs during your time at NSS. Use of other strategies like `console.log()` are to be used sparingly._ |
-
 ## Chapters
 
 | # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | ☕️ 🧁 <br/> Brewed Awakenings <br/><sub>(_Pattern Practice_)</sub> |  🍎 🚣🏽‍♀️ <br/> Cider Falls Park <br/><sub>(_Creation_)</sub>
@@ -23,6 +19,13 @@ In this book, you will be introduced to three concepts.
 | 7 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#many-to-many #data</sub> |  |  |
 | 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | | |
 
+## 👩‍👩‍👧‍👦 Team Collaboration Projects
+
+| # | Project Name | Summary |
+|--|--|--|
+| 1 | [Bey's Blog](https://codesandbox.io/s/book-4-beys-blog-uxyuq) | You will be building a modular Web application that lists of all of articles for Bey's Blog along with the authors and categories. |
+| 2 | [Magnum TV](https://codesandbox.io/s/book-4-magnum-tv-96byt) | Magnum TV is a new service that wil revolutionize the way people watch television. You will build a modular Web application that show the recommended shows to watch for all of the platform's users. |
+
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
@@ -32,7 +35,7 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) |
 | 2 | [City State](./chapters/DD_CITY_STATE_.md) | |
 
-## 🔐 Projects Unlocked
+## 🔐 Deep Learning Projects Unlocked
 
 These projects build on the concepts in this book and prepare you for future books.
 
