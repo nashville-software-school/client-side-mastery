@@ -40,6 +40,13 @@ git add styles/main.css
 git add index.html
 ```
 
+OR you can add things from the root directory of your project --- wherever you see index.html and the other folders on your terminal. You can then do the following command
+```sh
+git add .
+```
+
+This will add everything to the staging area that is in that directory. 
+
 #### Check the current status of your files.
 
 ```sh
