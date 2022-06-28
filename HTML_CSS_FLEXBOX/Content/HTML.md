@@ -110,7 +110,7 @@ Semantic:  define the meaning, structure, or style of the element.
 
 ## More Information
 
-This is not required reading, but good references.
+This is not required reading/watchi, but good references.
 
 Written:
 
@@ -124,4 +124,4 @@ Video:
 
  https://www.youtube.com/watch?v=XXrpsQqAlIQ
 
- 
+
