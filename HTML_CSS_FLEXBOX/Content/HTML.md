@@ -11,7 +11,7 @@ Thinking of applications and web page as a collection of independent components 
 * Etsy
 * Pinterest
 
-All of these applications are written by teams of software developers who define the individual components that are used throughout their application. They then write each component separately and combine them in interesting ways and make them work together.
+All of these applications are written by teams of software developers who define the individual components that are used throughout their application. They then write each component separately, combine them in interesting ways, and make them work together.
 
 ## HTML Elements
 
@@ -38,15 +38,15 @@ vs.
 
 ![./Images/flexbox.png](https://github.com/nashville-software-school/client-side-mastery/blob/E20/HTML_CSS_FLEXBOX/Images/HTML_Tag_Anatomy.png)
 
-Opening Tag: The start of the html tag
+**Opening Tag**: The start of the html tag
 
-Attributes: Properties on an html element.  In the example above they are "id" and "class", but there can be other properties too.  Some comone properties indlude: id, class, href, src.   
+**Attributes**: Properties on an html element.  In the example above they are "id" and "class", but there can be other properties too.  Some common properties indlude: id, class, href, src.   
 
-Attribute Values: This is the value associated with an attribute.  In the example above the id="nurse".  If we are looking for the element with an id of nurse, this would be that element.  
+**Attribute Values**: This is the value associated with an attribute.  In the example above the id="nurse".  If we are looking for the element with an id of nurse, this would be that element.  
 
-Content: This is what gets displayed.  
+**Content**: This is what gets displayed.  
 
-Closing Tag: This indicates the element is now finished.  
+**Closing Tag**: This indicates the element is now finished.  
 
 ## Atributes
 

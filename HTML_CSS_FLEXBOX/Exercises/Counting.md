@@ -1,6 +1,6 @@
 ## Flexbox Counting
 
-This is a flexbox and CSS practice exercise.  Take the code below and using only css and create a webpage that displays the numbers in order.  You may use the boiler-plate code to get your project started.
+Take the code below and, using only CSS, create a webpage that displays the numbers in order.  Hint: flexbox is needed.  You may use the boiler-plate code to get your project started.
 
 ```html
   <section class="flex_practice">
@@ -19,7 +19,7 @@ This is a flexbox and CSS practice exercise.  Take the code below and using only
 
 ### Challenges
 
-Once you've done that, try these challenges.  All still use CSS only and each should build on the others.
+Once you've done that, try these challenges.  These challenges still use CSS only and each should build on the others.
 
 1. Make the numbers adjust to the screen size.
 1. Center the numbers on the page.

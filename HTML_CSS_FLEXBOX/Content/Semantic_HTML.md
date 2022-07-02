@@ -92,11 +92,10 @@ If you were creating an HTML component that represents you, here's an example of
 ```
 
 Each of those components can be styled individually with a clear, concise name that also provides some semantic context when looking at the CSS file. Before you style them, all you have is structure as some very basic, default styles that the browser applies to your elements.
-<<<<<<< HEAD
 
 ## More Informtion
 
-This is not required reading/watchi, but good references.
+This is not required reading/watching, but good references.
 
 Written:
 
@@ -109,5 +108,3 @@ https://developer.mozilla.org/en-US/docs/Glossary/Semantics
 Written and Video:
 
 https://blog.hubspot.com/website/semantic-html
-=======
->>>>>>> 6a2da8c1d38f4f54dc9a680baf701fcb1c324918
