@@ -27,4 +27,4 @@
 From that HTML, use Flexbox to achieve this layout. You don't need to add the border to each coffee house component, but you can if you like. It's been added in this example to highlight the alignment and spacing you're shooting for.
 
 
-![./Images/flexbox.png](https://github.com/nashville-software-school/client-side-mastery/raw/E20/book-1-martins-aquarium/chapters/images/flexbox.png)
+![./Images/flexbox.png](https://github.com/nashville-software-school/client-side-mastery/raw/E20/HTML_CSS_FLEXBOX/Images/flexbox.png)
