@@ -14,4 +14,4 @@ Review the page you just created. Based on the items above, identify some opport
 
 Background color/image - ensure the copy (text color) has good contrast and is legible. Use the Dev Tools to inspect your color choices.
 
-![../images/devtools-contrast.png](https://github.com/nashville-software-school/client-side-mastery/raw/E20/HTML_CSS_FLEXBOX/images/devtools-contrast.png)
+<img src="../Images/devtools-contrast.png" />
