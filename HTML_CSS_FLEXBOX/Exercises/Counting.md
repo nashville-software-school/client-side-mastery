@@ -23,7 +23,7 @@ Once you've done that, try these challenges.  These challenges still use CSS onl
 
 1. Make the numbers adjust to the screen size.
 1. Center the numbers on the page.
-1. Add a border and center the numbers in the border/box to make them individual card.
+1. Add a border and center the numbers in the bord3er/box to make them individual card.
 1. Make the size of the card displayed for each number the same size.
 1. Create a space between the cards on the left/right and the top/bottom.
 1. Use other CSS properties to style your cards.  You may do this in any way you like.  Think about color, shadowing, the border style and any other properties you like.
