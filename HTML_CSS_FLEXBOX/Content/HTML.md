@@ -48,7 +48,7 @@ vs.
 
 **Closing Tag**: This indicates the element is now finished.  
 
-## Atributes
+## Attributes
 
 - HTML elements can have many different attributes.
 
