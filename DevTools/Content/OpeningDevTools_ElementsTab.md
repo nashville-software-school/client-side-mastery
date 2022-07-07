@@ -10,11 +10,15 @@ There are several ways to open Dev Tools.  Navigate to the webpage you want to i
 
 1. F12
 1. Key combo: Ctrl Shift J (on Windows) or Ctrl Option J (on Mac)
-1. right click on the page and select `inspect`
+1. right click on the page and select `inspect`.  You should see a the webpage open something that looks like the image below.  
+
+**Note**: Dev tools might open on a different part of the webpage or new window depending on your settings.
+
+<img src="../images/devToolsOpen.png" />
 
 ## The Elements Tab
 
-The Elements tab is where you find the HTML that is rendered on the page and each HTML element's CSS.  Not only can you view it, but you can make changes to it as well.  
+The Elements tab is where you find the HTML that is rendered on the page and each HTML element's CSS.  Not only can you view it, but you can make changes to it as well.  You are not actually changing the real website and these changes only exist in their browser.  Once you refresh the page all changes will be lost, for better or worse.
 
 Take some time to review Chrome's documentation on the Elements Tab. Then practice with your already created projects and/or any webpage you choose!
 
