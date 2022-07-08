@@ -8,7 +8,7 @@ Outline:
 - Demo how to create a basic html project with html and css
 - Talk about the overall structure of the html page
 - Build out the webpage layout with the class using some hard-coded demo data
-- A a tint of style to your code 
+- A tint of style to your code 
   - demo the Elements Tab in Dev tools to do this.
 
 
