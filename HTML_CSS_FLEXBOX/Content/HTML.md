@@ -13,6 +13,10 @@ Thinking of applications and web page as a collection of independent components 
 
 All of these applications are written by teams of software developers who define the individual components that are used throughout their application. They then write each component separately, combine them in interesting ways, and make them work together.
 
+When you see an application or web page you might think of it as just one page. But a software developer sees it more as a collection of components, like this:
+
+![./Images/html_component_website_example.png](https://github.com/nashville-software-school/client-side-mastery/blob/E20/HTML_CSS_FLEXBOX/Images/html_component_website_example.png)
+
 ## HTML Elements
 
 The visual part of the UI is made up of the HTML content and the styles (CSS, SASS, etc.).  HTML is written in individual pieces, called elements.  An HTML element can be made of a single piece of content or it can contain other HTML elements.  
