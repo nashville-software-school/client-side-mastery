@@ -1,6 +1,6 @@
 # Dev Tools
 
-Dev Tools is short for developer tools.  Dev tools are built into the browser and allow you to access information about (and sometimeds manipulate) the code that is running on that page. Software developers use dev tools to track bugs, test solutions and more.  All modern browsers have them, but we are going to focus on using Chrome's dev tools. When you are writting code and testing it in your browser, you should **ALWAYS** have dev tools open even if it feels strange.
+Dev Tools is short for developer tools.  Dev tools are built into the browser and allow you to access information about (and sometimes manipulate) the code that is running on that page. Software developers use dev tools to track bugs, test solutions and more.  All modern browsers have them, but we are going to focus on using Chrome's dev tools. When you are writing code and testing it in your browser, you should **ALWAYS** have dev tools open even if it feels strange.
 
 There is so much you can do in dev tools, but we are going to start small and just focus on the `Elements` tab for now.
 
