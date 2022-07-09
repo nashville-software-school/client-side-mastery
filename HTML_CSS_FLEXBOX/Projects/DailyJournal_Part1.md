@@ -2,7 +2,7 @@
 
 The Daily Journal application will be your opportunity to take the concepts you learn in class, and practice with the exercises and apply them elaboratively throughout the course.
 
-Ultimately the daily journal will display a list of posts with the ability to add, edit, and delete a post.
+Ultimately the daily journal will display a list of posts with the ability to add, edit, and delete a post. For now, we are just focusing on our layout.
 
 ## Design and Layout
 Before coding, it is essential that you plan what you will build. Use an online tool (_we like [sketchboard.io](https://sketchboard.io/)_) or you can use the tried &amp; true pen with paper method to create a wireframe visual of your journal. Wireframes establish the basic structure of a page to determine where your components will appear once you are finished with the visual design stage of a project.
@@ -48,7 +48,7 @@ Refer to your wireframe and write semantic HTML for the page.
 
 * Start broad with `<header>`, `<main>` and `<footer>`.
 * Get more specific with `<section>`, `<article>`, and `<form>`. (Don't worry about the details of the form - you will build that out below).
-* Get more specific with `<h2-h6>`, `<p>`, and `<a>`.
+* Get more specific with `<h2>` to `<h6>`, `<p>`, and `<a>`.
 * Continue this process until you block in the page with all of the details from your wireframe.
 
 
@@ -86,7 +86,7 @@ Now you create the rest of the fields using HTML elements. When you are done, th
 
 Now use the `display: flex`, and `flex-direction: column` CSS properties to change your form to look like this.
 
-![](./images/P5FPNsVInT.gif)
+![image](./images/P5FPNsVInT.gif)
 
 ## List Element
 
