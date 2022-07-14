@@ -5,15 +5,16 @@ In this assessment, you are going to write some functions that will also continu
 Contact your instructor to get a link to your assessment repository. Once you get the link, make sure you are in your `workspace` directory and then clone the repository with the following process.
 
 1. Authorize with Github and click on the link it generates for your repository.
-2. Click on the `Code` button at the top of the repository code.
-3. Click the `SSH` link inside the box that appears.
-4. Copy the connection string by clicking the copy icon on the right.
-5. Go to your terminal.
-6. Run the `cd ~/workspace` command.
-7. Run `git clone {paste step 4 here}`
-8. `cd` into the directory that gets created. Remember to `ls` to see it. It should start with `book-2-assessment-something`.
-9. Open the directory with `code .`
-10. Read the instructions below.
+1. Click on the `Code` button at the top of the repository code.
+1. Click the `SSH` link inside the box that appears.
+1. Copy the connection string by clicking the copy icon on the right.
+1. Go to your terminal.
+1. Run the `cd ~/workspace` command.
+1. Run `git clone {paste step 4 here}`
+1. Type in "yes" if it prompts you, otherwise move to next step.
+1. `cd` into the directory that gets created. Remember to `ls` to see it. It should start with `book-2-assessment-something`.
+1. Open the directory with `code .`
+1. Read the instructions below.
 
 ## What You Need to Do
 
