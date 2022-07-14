@@ -9,3 +9,4 @@ obj
 .vscode
 .DS_Store
 zsh-reload.log
+.obsidian
