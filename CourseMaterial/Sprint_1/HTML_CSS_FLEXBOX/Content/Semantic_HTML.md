@@ -18,7 +18,7 @@ What is a component and how do HTML elements apply to the concept?
 
 Look at the image below to see an overview of semantic HTML elements and how they are intended to be used together.
 
-![semantic tags](https://github.com/nashville-software-school/client-side-mastery/blob/E20/HTML_CSS_FLEXBOX/Images/html-semantic-tags.png)
+![semantic tags](https://github.com/nashville-software-school/client-side-mastery/blob/E20/CourseMaterial/Sprint_1/HTML_CSS_FLEXBOX/Images/html-semantic-tags.png)
 
 
 ## Naming Conventions
