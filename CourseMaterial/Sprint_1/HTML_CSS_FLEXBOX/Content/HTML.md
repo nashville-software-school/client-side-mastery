@@ -41,7 +41,7 @@ vs.
 
 ## Anatomy of an HTML Element
 
-![./Images/flexbox.png](https://github.com/nashville-software-school/client-side-mastery/blob/E20/HTML_CSS_FLEXBOX/Images/HTML_Tag_Anatomy.png)
+<img src="../Images/HTML_Tag_Anatomy.png" />
 
 **Opening Tag**: The start of the html tag
 
