@@ -15,7 +15,8 @@ All of these applications are written by teams of software developers who define
 
 When you see an application or web page you might think of it as just one page. But a software developer sees it more as a collection of components, like this:
 
-![./Images/html_component_website_example.png](https://github.com/nashville-software-school/client-side-mastery/blob/E20/HTML_CSS_FLEXBOX/Images/html_component_website_example.png)
+<img src="../Images/html_component_website_example.png" />
+
 
 ## HTML Elements
 
