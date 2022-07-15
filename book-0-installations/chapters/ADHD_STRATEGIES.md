@@ -32,6 +32,8 @@ The inbox is a place for you to store every question and idea so your brain is n
 
 The daily log is where you keep track of your daily tasks as a running bullet list. Each list item _has_ to be _actionable_. This should be tracked in a fresh journal.
 
+This is a technique taken from _The Bullet Journal Method_. Vist [the bullet journal website](https://bulletjournal.com/) to learn more.
+
 **_Ex._**
 
 X Fish Fusion chapter 4
