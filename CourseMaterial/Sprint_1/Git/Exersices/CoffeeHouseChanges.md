@@ -1,10 +1,6 @@
-# Making Changes In Github
+# Making Changes To Coffee House
 
 ## Coffee House Changes
-
-The goal of this exercise is to learn to use git to track changes in a project. There are many different ways to complete this task. Below, we outline one way to complete it. As you work more with git and github, you will start to use these building blocks in different orders to work on your personal projects and with your teams.
-
-If you get stuck or something doesn't look correct, reach out to an instructor with whatever details you have and screenshots. Git is one of the most difficult things to learn when becoming a software developer. It takes practice, making mistakes, more practice and patience (with yourself and others).
 
 The steps we will be following are:
 
