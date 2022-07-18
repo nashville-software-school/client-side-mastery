@@ -135,7 +135,7 @@ Take a few minutes to click around on Github and prove to yourself:
 
 <img src="../Images/UpdateRepoLocally1.PNG" style="margin-left: 5%;" width=80%  />
 
-- Pull the current version of main from Github by typing `git pull main`
+- Pull the current version of main from Github by typing `git pull origin main`
 
 <img src="../Images/UpdateRepoLocally2.PNG" style="margin-left: 5%;" width=80%  />
 
