@@ -7,4 +7,4 @@
 1. Merge changes into the main branch with a PR.
 1. Update the main branch on your local computer
 
-Note: see detailed instructions in the Coffee House Changes Exersice.
+Note: see detailed instructions in the Coffee House Changes Exercise.

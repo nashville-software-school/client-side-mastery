@@ -2,6 +2,6 @@
 
 1. Create a git repository for your Daily Journal project on Github.
 2. Add that git repository to your local project.
-3. Upload the code in your local repositry to github.
+3. Upload the code in your local repository to github.
 
-Note: see detailed instructions in the Coffee House Repo Exersice.
+Note: see detailed instructions in the Coffee House Repo Exercise.
