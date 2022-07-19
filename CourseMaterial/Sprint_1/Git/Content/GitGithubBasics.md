@@ -28,7 +28,7 @@ First we have need to do a little set up in your terminal. **_You only need to d
 
 Let's start with setting a name and email in your global git `config` file. This makes it easy to know who committed those changes when you create a commit! Eventually, when a teammate looks at the commit log, your set name/email will show up like this:
 
-![username and email](../images/git-username-email.png)
+![username and email](../Images/git-username-email.png)
 
 First use the following command, but instead of typing `Your Github User Name`, enter your Github username for your Github account.
 
@@ -108,7 +108,7 @@ Here's how you would create itL
 1. Scroll down and click the green "Create Repository" button. You don't need to worry about the other options right now.
 1. Find the instructional section on the page for what you need and follow the steps. For creating a repo for a project you already started you would use the _"…or push an existing repository from the command line"_ section.
 
-![Github Repo Instructions](../images/github-create-repo.png)
+![Github Repo Instructions](../Images/github-create-repo.png)
 
 Once you have finished your code should be backed up and on Github!! You can go back to your browser where your Github instructions were, and refresh the page. You will see that your remote repository backup now has your coffee house project in it!
 
