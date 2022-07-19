@@ -27,17 +27,17 @@ When you open a PR you will send the link to your teammates and one of them will
 
 Let's follow the diagram above starting from the top. We can see that we have two teammates working in one repo. The first thing they are going to do is clone down the repo to their local machine.
 
-![](../Images/GitHub-Flow-1.png)
-
 Now they have two local copies of the main Github branch that they can work off of.
+
+![](../Images/Github-Flow-1.png)
 
 ### Create A Branch
 
 As we have learned in our Git & Github basics course we don't EVER want to work on the main branch. When our two teammates want to start new work they will create a branch off of their local main branch.
 
-![](../Images/GitHub-Flow-2.png)
-
 Now they can both begin coding! They have two separate branches on their local machines that they can work on.
+
+![](../Images/Github-Flow-2.png)
 
 ### Pushing Up Work For Review
 
@@ -45,7 +45,7 @@ Let's say that Teammate 2 finishes their work and is ready to push up their bran
 
 They can now push their work up to Github to be reviewed and merged. We can see in the diagram that they push their code, create a pull request, and ask their other teammate for a code review.
 
-![](../Images/GitHub-Flow-3.png)
+![](../Images/Github-Flow-3.png)
 
 If the teammate thinks that the code looks good they will then approve and merge the PR.
 
@@ -66,7 +66,7 @@ So, Teammate 1 is going to:
 - Pull their local main branch into that branch
 - Keep working!
 
-![](../Images/GitHub-Flow-4.png)
+![](../Images/Github-Flow-4.png)
 
 ### Starting A New Branch
 
@@ -75,10 +75,10 @@ Similarly, Teammate 2 now needs to get the new code in their local branch and st
 - Pull in the main branch from Github into their local main branch
 - Checkout to a new branch
 
-![](../Images/GitHub-Flow-5.png)
+![](../Images/Github-Flow-5.png)
 
 ### The process repeats
 
 And finally at the bottom of the diagram you can see how this process repeat when Teammate 1 finishes their work.
 
-![](../Images/GitHub-Flow-6.png)
+![](../Images/Github-Flow-6.png)
