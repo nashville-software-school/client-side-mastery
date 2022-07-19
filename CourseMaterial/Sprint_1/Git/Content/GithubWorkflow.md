@@ -13,7 +13,7 @@ The actions they will demonstrate are:
 - Pulling the new code into your local branches
 - Creating a new branch after finishing
 
-![](../images/GitHub-flow.png)
+![](../images/GitHub-Flow.png)
 
 ## Terms To Know
 
@@ -49,6 +49,8 @@ They can now push their work up to Github to be reviewed and merged. We can see 
 
 If the teammate thinks that the code looks good they will then approve and merge the PR.
 
+Afterwards, Teammate 2 checkouts out to their local main branch. They are done with the branch they were working on and are ready to start a new one.
+
 ### Pulling New Code In Locally
 
 As you can see on the other side of the diagram, Teammate 1 is still working on their branch and will need to make sure to include the code that Teammate 2 just merged into the main branch in Github.
@@ -70,7 +72,6 @@ So, Teammate 1 is going to:
 
 Similarly, Teammate 2 now needs to get the new code in their local branch and start a new branch. You can see here in the diagram that they:
 
-- Go ahead and checkout to their main branch
 - Pull in the main branch from Github into their local main branch
 - Checkout to a new branch
 
