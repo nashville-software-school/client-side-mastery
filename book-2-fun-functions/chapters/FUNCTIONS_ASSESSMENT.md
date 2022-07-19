@@ -2,6 +2,8 @@
 
 In this assessment, you are going to write some functions that will also continue to strengthen your knowledge of data types, data structures, and iteration that you learned in the previous book.
 
+## Project Setup
+
 Contact your instructor to get a link to your assessment repository. Once you get the link, make sure you are in your `workspace` directory and then clone the repository with the following process.
 
 1. Authorize with Github and click on the link it generates for your repository.
@@ -26,7 +28,7 @@ Please do not remove the functions, or rename the functions. They are there for 
 
 ### Step 1: Iterate Applicants
 
-Below the boilerplate array, you will see a comment that tells you where you should iterate the array. Write your code there and then once complete, move on to step 2.
+Below the boilerplate array, you will see a comment that tells you where you should iterate the array. Write your code there and then once complete, move on to step 2. It is important that your `for..of` loop is in the modules scope, and not inside the functions themselves.
 
 ### Step 2: Calculate Yearly Expenses
 
@@ -75,10 +77,26 @@ Becky Wiegand is qualified for a maximum mortage of $380,687.25 
 
 ## Testing Your Code
 
-When you believe you have code that works, and you're merged your branch into `main`, go to the **Actions** tab on your Github repository and see if your code passes the tests.
+This project has some pre-written automated tests that will run to verify that your code has been written correctly to implement the requirements above. Automated tests are used by many development teams to ensure code quality, and catch any unforseen errors before code is released to customers.
+
+When you believe you have code that works, follow this process.
+
+1. In the terminal, be sure you are in your project directory.
+1. Run the `git status` command and you will see a message from git that you have changes that need to be saved.
+1. Run the `git add main.js` command to tell git that you want to save the current version of your code.
+1. Run `git status` again and git will tell you that `main.js` is ready to be be committed.
+1. Then, to save this version, run the `git commit -m "Initial commit"` command. You now have a snapshot of this version of your code.
+1. To backup your code to Github and run the tests, run the `git push origin main` command.
+1. Back in the browser, go to the **Actions** tab on your Github repository and see if your code passes the tests.
 
 If your code works you should see a green checkmark. If your code did not pass the tests, you will see a red x.
 
+From this point on, you can follow the same three-step process to commit the current version of your code and back it up to the cloud.
+
+1. `git add main.js`
+1. `git commit -m "Short description of your changes"`
+1. `git push origin main`
+
 ## Reviewing Your Code
 
-If your code is successful, it is strongly recommended that you review it with a member of the instruction team, so you can get feedback about questions you may still have, or how to advance your learning.
+If your code is successful, ping a member of the instruction team for a review of your vocabulary and ask any questions you have about the project.
