@@ -1,115 +1,84 @@
 # Github Workflow
 
-Your instruction team will show you the Github workflow interactively on their own aquarium repository. They will demonstrate how to work on an independent branch of code, push the code to Github for a teammate to review, and then get the code merged into the main branch - almost always called the `main` branch.
+Your instruction team will show you the Github workflow interactively in class based on the diagram below.
 
-The checklist below is for you. You will use it during the practice exercise, and you will use it for your first few group projects until you learn it by heart.
+The actions they will demonstrate are:
+
+- Cloning a repo
+- Creating new branches to work on
+- Making changes and pushing up branches to Github
+- Creating a pull request for those changes in Github
+- Code reviewing a pull request
+- Approving and merging the pull request for a teammate
+- Pulling the new code into your local branches
+- Creating a new branch after finishing
+
+![](../images/GitHub-Flow.png)
+
+## Terms To Know
+
+**Pull Request**: Also known as a PR, a pull request is an action you can take in Github where you flag a branch with code changes to be approved and merged into your main branch.
+
+When you open a PR you will send the link to your teammates and one of them will look over the code and either approve it or ask for changes. This helps to make sure that every teammate has agreed on the code that is added to the main branch.
 
 ## Group Project Github Workflow
 
-> **Tip:** Remember that the curly braces below should not be typed by you. They indicate that you should place your own value there.
+### Cloning A Repo & Getting Started
 
-1. Everyone clone the same repository
-1. Each person create a branch
-   ```sh
-   git checkout -b {your initials}-fish
-   ```
-1. Add your fish component to the HTML
-1. Add, commit, push branch
-   ```sh
-   git add --all
-   git commit -m "Added Herbert the goldfish"
-   git push origin {your initials}-fish
-   ```
-1. When you feel your work is complete, go to Github and create a Pull Request (PR)
-1. Teammate decides to verify your PR and fetches your branch
-   ```sh
-   git fetch --all
-   git checkout {your initials}-fish
-   ```
-1. Teammate runs code in browser to verify it works
-1. Teammate approves PR by giving you a thumb's up
-1. Your merge your branch on Github by visiting your Pull Request page and clicking the big, green button.
-1. Teammates pull `main` when they feel like it but before they submit their PR
-   ```sh
-   git checkout main
-   git pull origin main
-   git checkout {their initials}-fish
-   ```
-1. When another teammate is ready to submit a pull request, they merge main into their branch, and push.
-   ```sh
-   git merge main
-   # Fix merge conflicts, if any
-   ```
-1. Repeat steps 4-9
+Let's follow the diagram above starting from the top. We can see that we have two teammates working in one repo. The first thing they are going to do is clone down the repo to their local machine.
 
-## Specific Workflows
+![](../images/GitHub-Flow-1.png)
 
-### Your Feature Branch is Ready for Review
+Now they have two local copies of the main Github branch that they can work off of.
 
-1. Make sure all your code is committed
-   ```sh
-   git commit -m "A good commit message"
-   ```
-1. Make sure you have the latest code on the `main` branch.
-   ```sh
-   git merge main
-   ```
-1. Push the code in your branch to Github
-   ```sh
-   git push origin <branch name here without brackets>
-   ```
-1. Create a Pull Request on Github.
-   1. Informative title
-   1. A description that explains how your teammate can test your code
-1. Tell your teammates that your pull request is ready to be reviewed
+### Create A Branch
 
-### Reviewing a Teammates Branch
+As we have learned in our Git & Github basics course we don't EVER want to work on the main branch. When our two teammates want to start new work they will create a branch off of their local main branch.
 
-1. Get reference to teammate's branch
-   ```sh
-   git fetch --all
-   ```
-1. Switch to teammates's branch
-   ```sh
-   git checkout <branch name>
-   ```
-1. Review and test the code as described in the pull request
-1. If the code all works and the syntax is good, then go to Github and approve the pull request.
-1. If the code does not work or has lazy/incorrect syntax, then go to Github and leave a respectful and descriptive command on the pull request and request that the teammate make changes.
+![](../images/GitHub-Flow-2.png)
 
-### Teammate has Reviewed Code and Approved the Pull Request
+Now they can both begin coding! They have two separate branches on their local machines that they can work on.
 
-1. Go to your pull request on Github and press the button to merge your branch.
-1. When the merge is complete, click the button to delete the branch.
-1. Tell your teammates that there is a new, updated `main` branch.
+### Pushing Up Work For Review
 
-### The `main` Branch is Updated
+Let's say that Teammate 2 finishes their work and is ready to push up their branch.
 
-1. Do you need the new code for your branch?
-   1. If yes, continue with the following steps
-   1. If no, keep working until you are ready for a pull request on your branch.
-1. Make sure all of your code is committed
-   ```sh
-   git add --all
-   git commit -m "Good commit message"
-   ```
-1. Switch to the main branch
-   ```sh
-   git checkout main
-   ```
-1. Get the latest code pulled to your machine
-   ```sh
-   git pull origin main
-   ```
-1. Switch back to your branch
-   ```sh
-   git checkout <your branch>
-   ```
-1. Merge the latest code into your branch
-   ```sh
-   git merge main
-   ```
+They can now push their work up to Github to be reviewed and merged. We can see in the diagram that they push their code, create a pull request, and ask their other teammate for a code review.
 
-## Visual Workflow of Github
+![](../images/GitHub-Flow-3.png)
 
-![](../images/github-workflow.png)
+If the teammate thinks that the code looks good they will then approve and merge the PR.
+
+Afterwards, Teammate 2 checkouts out to their local main branch. They are done with the branch they were working on and are ready to start a new one.
+
+### Pulling New Code In Locally
+
+As you can see on the other side of the diagram, Teammate 1 is still working on their branch and will need to make sure to include the code that Teammate 2 just merged into the main branch in Github.
+
+Just because the code is in Github does not mean that either Teammate has that code on their local machines. They have to pull it down first!
+
+So, Teammate 1 is going to:
+
+- Commit what they are working on
+- Checkout to their local main branch
+- Pull down the code from the main branch in Github to their local main branch
+- Check back out to the branch they were working on
+- Pull their local main branch into that branch
+- Keep working!
+
+![](../images/GitHub-Flow-4.png)
+
+### Starting A New Branch
+
+Similarly, Teammate 2 now needs to get the new code in their local branch and start a new branch. You can see here in the diagram that they:
+
+- Pull in the main branch from Github into their local main branch
+- Checkout to a new branch
+
+![](../images/GitHub-Flow-5.png)
+
+### The process repeats
+
+And finally at the bottom of the diagram you can see how this process repeat when Teammate 1 finishes their work.
+
+![](../images/GitHub-Flow-6.png)
