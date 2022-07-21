@@ -57,9 +57,11 @@ export const fetchRequests = () => {
 
 Define and export a function named `getRequests` that returns a copy of the requests state. Go back to a previous project and look at the functions that return copies of arrays in the `database` module.
 
-`export const getRequests = () => {
+```
+export const getRequests = () => {
     return applicationState.requests.map(request => ({...request}))
-}`
+}
+```
 
 ## Fetch State Before Displaying
 
