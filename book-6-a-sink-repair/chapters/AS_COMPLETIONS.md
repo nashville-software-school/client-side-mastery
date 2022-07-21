@@ -44,7 +44,7 @@ render()
 
 ## Double State for Display Plumbers
 
-You can place this `<select>` element wherever is easiest to start. Don't worry about the exact placement, just make sure that it is displayed for each service request.
+Please place this `<select>` element inside of your `serviceRequest.map()` in your Requests.js.
 
 Note that the value of each option in the select element has the primary key of the service request AND the primary key of the plumber delimited with 2 dashes. This is because you need to have both the request and the chosen plumber to mark a job complete.
 
