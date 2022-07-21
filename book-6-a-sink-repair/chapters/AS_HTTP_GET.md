@@ -9,7 +9,7 @@ Update your `sendRequest()` function's fetch call to dispatch the custom event a
 > #### `sink-repair/src/scripts/dataAccess.js`
 
 ```js
-    return fetch(`${API}/requests`, fetchOptions)
+    return fetch(`${API}/serviceRequests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
