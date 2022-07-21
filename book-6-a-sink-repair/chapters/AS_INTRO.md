@@ -28,5 +28,5 @@ Once you feel you have a good ERD, review it with an instructor.
 Run the following command to get your basic directory structure set up. It will create a project directory for you at `~/workspace/sink-repair`.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-6-a-sink-repair/chapters/scripts/sink-repair-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/newforce-at-mountwest/client-side-mastery/master/book-6-a-sink-repair/chapters/scripts/sink-repair-setup.sh)"
 ```
