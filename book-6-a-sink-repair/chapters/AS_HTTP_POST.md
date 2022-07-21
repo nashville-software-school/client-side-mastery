@@ -19,7 +19,7 @@ export const sendRequest = (userServiceRequest) => {
     }
 
 
-    return fetch(`${API}/requests`, fetchOptions)
+    return fetch(`${API}/serviceRequests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
 
