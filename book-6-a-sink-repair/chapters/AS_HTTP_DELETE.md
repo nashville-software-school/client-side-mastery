@@ -19,7 +19,7 @@ export const deleteRequest = (id) => {
     return fetch(`${API}/serviceRequests/${id}`, { method: "DELETE" })
         .then(
             () => {
-                mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+                document.dispatchEvent(new CustomEvent("stateChanged"))
             }
         )
 }
