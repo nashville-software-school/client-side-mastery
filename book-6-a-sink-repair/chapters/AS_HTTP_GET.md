@@ -12,7 +12,7 @@ Update your `sendRequest()` function's fetch call to dispatch the custom event a
     return fetch(`${API}/serviceRequests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
-            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+            document.dispatchEvent(new CustomEvent("stateChanged"))
         })
 ```
 
@@ -20,10 +20,10 @@ Update your `sendRequest()` function's fetch call to dispatch the custom event a
 
 Now your `main` module has to listen for the custom event and invoke the `render()` function to build all the HTML again.
 
-> #### `sink-repair/src/scripts/dataAccess.js`
+> #### `sink-repair/src/scripts/main.js`
 
 ```js
-mainContainer.addEventListener(
+document.addEventListener(
     "stateChanged",
     customEvent => {
         render()
