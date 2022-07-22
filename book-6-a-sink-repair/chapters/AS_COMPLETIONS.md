@@ -74,7 +74,7 @@ mainContainer.addEventListener(
 
             /*
                 This object should have 3 properties
-                   1. requestId
+                   1. serviceRequestId
                    2. plumberId
                    3. date_created
             */
