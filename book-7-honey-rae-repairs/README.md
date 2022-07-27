@@ -12,9 +12,9 @@ For example, here's what the first few days should look like for you.
 
 ## Chapters
 
-| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
-|--|--|--|
-| 1 | [Getting Started with React](./chapters/REACT_BASICS.md) |  |
+| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner | 💼 <br/>Career Prep |
+|--|--|--|--|
+| 1 | [Getting Started with React](./chapters/REACT_BASICS.md) |  | [Technical Interview 101](./chapters/career-prep/tech-interviews-intro.md)
 | 2 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub>| [Kandy Korner API](./chapters/KANDY_API.md) |
 | 3 | [Employee: List All Tickets Part 1](./chapters/HONEY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#routing #state</sub> | |
 | 4 | [Employee: List All Tickets Part 2](./chapters/HONEY_LIST_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch #state</sub> | |
@@ -25,18 +25,18 @@ For example, here's what the first few days should look like for you.
 
 **🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 8**
 
-| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
-|--|--|--|
-| 9 | [Employee: Find Tickets](./chapters/HONEY_FIND_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props</sub> | [Customer: Find Candy](./chapters/KK_FIND_CANDY.md) |
+| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner | 💼 <br/>Career Prep |
+|--|--|--|--|
+| 9 | [Employee: Find Tickets](./chapters/HONEY_FIND_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props</sub> | [Customer: Find Candy](./chapters/KK_FIND_CANDY.md) | [JavaScript Vocabulary](./chapters/career-prep/vocabulary.md)
 | 10 | [Different Views Per User Type](./chapters/HONEY_MULTI_VIEWS.md) <br/> <sub style="font-size:0.85rem;">#custom-routes</sub> |  |
 | 11 | [Employee: Employee Directory](./chapters/HONEY_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#props #route-parameters</sub> | [Employees](./chapters/KK_EMPLOYEES.md) |
 | 12 | [Employee: Customer List](./chapters/HONEY_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#props #route-parameters</sub> | [Customer List](./chapters/KK_CUSTOMERS.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 12**
 
-| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
-|--|--|--|
-| 13 | [Employee: Edit Profile](./chapters/HONEY_EDIT_EMPLOYEE.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> |  |
+| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner | 💼 <br/>Career Prep |
+|--|--|--|--|
+| 13 | [Employee: Edit Profile](./chapters/HONEY_EDIT_EMPLOYEE.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> |  | [Coding Interviews](./chapters/career-prep/coding-interviews.md)
 | 14 | [Customer: Edit Profile](./chapters/HONEY_EDIT_CUSTOMER.md) <br/> <sub style="font-size:0.85rem;">#forms #edit</sub> | [Replace Loyalty Card](./chapters/KK_CUSTOMER_LOYALTY.md) |
 | 15 | [Customer: Edit Ticket Details](./chapters/HONEY_EDIT_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #edit #route-parameters</sub> |  |
 | 16 | [Employee: Assign Ticket](./chapters/HONEY_ASSIGNMENTS.md) <br/> <sub style="font-size:0.85rem;">#POST #props</sub> | [Purchase History](./chapters/KK_PURCHASES.md) |

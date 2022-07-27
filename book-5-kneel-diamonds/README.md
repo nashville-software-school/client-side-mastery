@@ -2,7 +2,7 @@
 
 ## Core Chapters
 
-| # | 💎 💍  <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 <br/> Car Builder |
+| # | 💎 💍  <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 <br/> Car Builder | 
 |--|--|--|
 | 1 | [Kneel Diamonds](./chapters/KD_NARRATIVE.md) |  |
 | 2 | [Debugging Practice](./chapters/KD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> |  |
