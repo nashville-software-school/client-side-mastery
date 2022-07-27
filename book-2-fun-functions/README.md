@@ -13,7 +13,7 @@ In this book, you will gain the knowlege and understanding of working with funct
 | 5   | [Design a Car Factory](./chapters/FUNCTIONS_CAR_FACTORY.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | | [The Fishing Boat](./chapters/VEGGISH_BOAT.md)     |
 | 6   | [Design a Candy Factory](./chapters/FUNCTIONS_CANDY_FACTORY.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | [Get Rich and Famous by Throwing Pottery](./chapters/FUNCTIONS_POTTERY.md) | [The Fishmonger](./chapters/VEGGISH_MONGER.md) |
 | 7   | [HTML Factory Functions](./chapters/FUNCTIONS_HOT_DOGS.md) <br/> <sub style="font-size:0.85rem;">#html #factory-function</sub> | [Intro to Modules](./chapters/FUNCTIONS_MODULES.md) | [The Restuarant](./chapters/VEGGISH_FUSION.md)  |
-| 🎓  | [Self-Assessment](./chapters/FUNCTIONS_ASSESSMENT.md)                                                                                 |                                                                            |                                                    |
+| 🎓  | [Self-Assessment](./chapters/FUNCTIONS_ASSESSMENT.md)  |  |  |
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects
 
