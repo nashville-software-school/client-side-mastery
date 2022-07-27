@@ -28,6 +28,6 @@ for (const phone of phones) {
 
 With that condition in place, only one phone will be displayed instead of all phones.
 
-![](./images/finding-single-phone.gif)
+![](../../images/finding-single-phone.gif)
 
 This is a very basic implementation of tools that you use on the Web when you search for, or filter, products on a company's product page.

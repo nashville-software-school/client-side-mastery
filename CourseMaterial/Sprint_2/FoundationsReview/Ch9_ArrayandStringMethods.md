@@ -49,9 +49,6 @@ console.log(surName)  // Rodriguez
 
 ### Split Into Array
 
-
-
-
 ## Join Array into a String
 
 You can do the complete opposite as well. If you have an existing array that contains string values, you can combine them into a single string with the `.join()` method.

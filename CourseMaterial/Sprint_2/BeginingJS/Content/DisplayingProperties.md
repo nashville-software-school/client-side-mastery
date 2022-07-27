@@ -75,7 +75,7 @@ In this loop, the individual objects will now be stored in the variable `phone`.
 
 In this case, the value of the `phone` value varies as the `for` loop moves through the array one item at a time.
 
-![](images/iterating-phones.gif)
+![](../../images/iterating-phones.gif)
 
 Notice that there are no square brackets `[]` around the output. Each object is displayed, one at a time.
 
@@ -87,7 +87,7 @@ for (const phone of phones) {
 }
 ```
 
-![](images/display-phone-prices.gif)
+![](../../images/display-phone-prices.gif)
 
 
 You can even be fancy and use string interpolation to put a dollar sign in front of the prices when they are output.
@@ -98,4 +98,4 @@ for (const phone of phones) {
 }
 ```
 
-![](images/display-phone-prices-interpolation.gif)
+![](../../images/display-phone-prices-interpolation.gif)

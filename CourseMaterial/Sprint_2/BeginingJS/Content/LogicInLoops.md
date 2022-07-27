@@ -23,7 +23,7 @@ for (const phone of phones) {
 }
 ```
 
-![](./images/adding-weight-to-phones.gif)
+![](../../images/adding-weight-to-phones.gif)
 
 Yep. We see it, too. There's tons of extra numbers in the decimal places for some of those numbers. Don't worry. You didn't do anything wrong. Your computer isn't broken.
 

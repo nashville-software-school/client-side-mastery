@@ -18,11 +18,9 @@ You defined form fields for the following bits of data to collect from a user of
 
 In your `main.js` module create an array of objects that represents your journal entries. 
 
-/********Continue From HERE**********/
-
 ## More Journal Entries
 
-Take a few minutes and add two or three more JavaScript objects to represent journal entries for some other things that you have learned about so far at NSS.
+Take a few minutes and add more JavaScript objects to represent journal entries for some other things that you have learned about so far at NSS.  You should have at least 7 entries total when you are finished.
 
 Make sure you increment the `id` property of each journal entry by 1 each time you add a new object. For example, if you manually create another one right now it should looks like this.
 
@@ -39,4 +37,12 @@ Note the `id` property value is 2.
 ```
 
 Add those new objects to your journal entries array. Make sure you separate each object with a comma, and do not put a comma after the last one.
+
+1. Add a script tag to your index.html file that runs your JavaScript file
+1. Practice your JavaScript by console logging your journal entries array or objects.
+1. Create a loop that console logs each entry independently
+1. Create a second loop that only console logs the title of your journal entry
+1. Create a third loop that only console logs entries whose id is an odd number.
+1. Use your chrome debugger to walk through your Javascript and look at the value of different objects.
+
 

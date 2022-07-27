@@ -48,4 +48,4 @@ phones.push(pixel)
 
 Now, when your `for..of` loop runs, you will see three prices listed instead of two.
 
-![](./images/three-phones-after-push.gif)
+![](../../images/three-phones-after-push.gif)
