@@ -89,3 +89,5 @@ Then copy pasta this data into your `database.js` file to create the required re
         { id: 10, name: "Chicago"}
     ],
 ```
+
+This breaks your app. Immediately go to chapter 7 to get going again.
