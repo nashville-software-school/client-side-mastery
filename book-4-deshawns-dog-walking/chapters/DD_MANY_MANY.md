@@ -59,7 +59,9 @@ First, remove the `cityId` property from each walker object.
 
 Then copy pasta this data into your `database.js` file to create the required relationships. Notice that San Diego now has three walkers working there, and that Bernie Dreger, Tomlin Cutill, Elmira Bick, and Arv Biddle are now working multiple cities.
 
-```json
+> 🛑 **Alert:** As soon as you add this data and refresh your page, you will notice that the assignments at the bottom now display "undefined". This is ok for now. Immediately go to the next chapter to work on the new feature.
+
+```js
     walkerCities: [
         { id: 1, walkerId: 10, cityId: 1 },
         { id: 2, walkerId: 8, cityId: 6 },
@@ -90,4 +92,3 @@ Then copy pasta this data into your `database.js` file to create the required re
     ],
 ```
 
-This breaks your app. Immediately go to chapter 7 to get going again.
