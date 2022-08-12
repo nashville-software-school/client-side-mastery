@@ -12,6 +12,6 @@ San Francisco, CA
 Knoxville, TN
 Orlando, FL
 
-Not sure what to do, walk through the student example.
+Not sure what to do, walk through the student example and fill in the cities as students and the states as instructors.
 
 
