@@ -72,6 +72,15 @@ document.addEventListener("stateChanged", event => {
 })
 ```
 
+## Custom Order Button Click
+
+1. Open the `KneelDiamonds` module.
+1. At the top you will see a blank click event listener.
+1. Implement the correct code to check if the order button was clicked.
+1. Invoke the `addCustomOrder` function when it is clicked.
+
+## Trying it Out
+
 Now make some choices and place a custom order. You should see a new order show up in the browser.
 
 ![](./images/kneel-diamonds-first-order.gif)
