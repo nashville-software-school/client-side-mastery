@@ -157,7 +157,7 @@ In your terminal, run your code with the following command.
 node main.js
 ```
 
-When you run the code, it should display the following. Yours will be on one line and that's ok. If you want it to be formatted, you can use \n which adds a new line.
+When you run the code, it should display the following. Your's will be on one line and that's ok. If you want it to be formatted, you can use \n which adds a new line.
 
 ```html
 <div>Depression</div>
