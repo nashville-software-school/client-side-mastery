@@ -1,5 +1,7 @@
 ## The Flow of Using Functions
 
+![](./images/function-anatomy.png)
+
 The flow of using functions, sending data to them, capturing the data they return, and then sending that data somewhere else will be a challenge for you. Therefore, in this exercise, you are going to practice that flow.
 
 Here's an example of two tasks. One task depends on what the other outputs, or **returns**.

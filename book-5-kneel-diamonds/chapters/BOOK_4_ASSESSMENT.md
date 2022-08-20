@@ -14,6 +14,12 @@ This project will help you assess your ability to apply the JavaScript skills th
 1. Displaying state as HTML
 1. User input with radio options
 
+## Array Methods Refresh
+
+<img src="./images/array-method-diagram.png" width="800px"  />
+
+## Application Overview
+
 You will be building an application for a local food truck that offers food that is a fusion of American Southern and Greek cuisines.
 
 A customer should be able to choose a base dish, a vegetable, and a side dish and place their order. Once the order is placed, the total amount for the chosen foods will appear at the bottom.

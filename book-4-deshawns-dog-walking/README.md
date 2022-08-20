@@ -29,7 +29,7 @@ In this book, you will be introduced to three concepts.
 
 ## 🧭 Explorer Chapters
 
-Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
+Explorer chapters are optional, and give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
 
 | # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking | ☕️ 🧁 <br/> Brewed Awakenings |
 |--|--|--|
