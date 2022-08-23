@@ -9,7 +9,7 @@ When Maude or Merle have completed a job, they would like to choose their name f
 First, add the following function to your `dataAccess.js` module.
 
 ```js
-export const fetchRequests = () => {
+export const fetchPlumbers = () => {
     return fetch(`${API}/plumbers`)
         .then(response => response.json())
         .then(
@@ -23,7 +23,7 @@ export const fetchRequests = () => {
 Then update your `main.js` to request both resources using the following syntax. Notice the new `.then()` method which, in turn, invokes the `fetchPlumbers` function.
 
 ```js
-import { fetchRequests } from "./dataAccess.js"
+import { fetchPlumbers } from "./dataAccess.js"
 import { SinkRepair } from "./SinkRepair.js"
 
 
