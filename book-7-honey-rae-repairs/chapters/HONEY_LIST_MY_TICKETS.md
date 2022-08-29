@@ -4,3 +4,12 @@ This section shows you how to implement another state variable with `useState()`
 
 Watch the [Filtered State Depending On User Type](https://watch.screencastify.com/v/wH8Ia30YWlatzYj8spXg) video and then implement the code yourself.
 
+## Removing Key Warning
+
+After you are done implementing the code for filtering tickets by user, you may notice a waraning in your Console dev panel that says...
+
+```
+Warning: Each child in a list should have a unique "key" prop.
+```
+
+Watch this short [Honey Rae: React 18: Unique Key Prop](https://watch.screencastify.com/v/dShXYcOgb1aoMyBM7bpp) video to see how to stop getting that warning
