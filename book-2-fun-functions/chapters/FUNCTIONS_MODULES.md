@@ -4,6 +4,12 @@ When writing applications, you will be writing code in multiple files. The code 
 
 You call them modules, not files, when referring to them.
 
+## Video Introduction
+
+Watch the video below to learn the basic vocabulary of modular development and see an introductory implementation of module that work together to solve a problem.
+
+[Some berries, a pie pan, and an oven walk into a kitchen](./chapters/FUNCTIONS_MODULES.md)
+
 ## Project Setup
 
 Create a new project with three files in it.
