@@ -4,6 +4,17 @@ This section shows you how to implement another state variable with `useState()`
 
 Watch the [Filtered State Depending On User Type](https://watch.screencastify.com/v/wH8Ia30YWlatzYj8spXg) video and then implement the code yourself.
 
+# Key Concept Clips
+
+| Time | Concept |
+| --- | ----------- |
+|  1:05 | Basic authentication |
+|  4:00 | Getting logged in user object from local storage in application dev panel|
+|  4:45 | useEffect with dependency array to observe state variable change |
+|  8:01 | Filter array method to set new secondary state variable |
+| 10:05 | JSX to render new secondary state variable |
+
+
 ## Removing Key Warning
 
 After you are done implementing the code for filtering tickets by user, you may notice a waraning in your Console dev panel that says...
