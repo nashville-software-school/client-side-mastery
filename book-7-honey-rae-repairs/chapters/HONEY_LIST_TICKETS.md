@@ -6,7 +6,7 @@ This section shows you how to use the `useEffect()` hook to observe when intial 
 
 Watch the [Fetch Initial Ticket State](https://watch.screencastify.com/v/F4ZpSuhaPCLwoJDOdyk8) video and then implement the code yourself.
 
-##Key Concept Clips
+## Key Concept Clips
 
 | Time | Concept |
 | --- | ----------- |
