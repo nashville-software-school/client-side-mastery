@@ -8,12 +8,11 @@ Watch the [Filtered State Depending On User Type](https://watch.screencastify.co
 
 | Time | Concept |
 | --- | ----------- |
-|  1:05 | Logout and local storage |
-|  1:46 | Login |
-|  4:00 | Getting logged in user object from local storage |
+|  1:05 | Basic authentication |
+|  4:00 | Getting logged in user object from local storage in application dev panel|
 |  4:45 | useEffect with dependency array to observe state variable change |
-|  8:01 | Filter array method to set new state variable |
-| 10:05 | Getting logged in user object from local storage |
+|  8:01 | Filter array method to set new secondary state variable |
+| 10:05 | JSX to render new secondary state variable |
 
 
 ## Removing Key Warning
