@@ -14,7 +14,7 @@ Watch the [Fetch Initial Ticket State](https://watch.screencastify.com/v/F4ZpSuh
 | 1:05 | Inital fetch call to set inital state variable |
 | 1:40 | Implement setter function |
 | 3:06 | JSX to display state |
-| 4:04 | Terinary operator |
+| 4:04 | Ternary operator |
 
 ## Using CSS in React
 
