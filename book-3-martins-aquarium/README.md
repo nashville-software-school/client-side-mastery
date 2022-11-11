@@ -30,12 +30,12 @@ The main learning goal for this book is the use of `git` and Github for versioni
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
 
-| #   | 🐠 Martin's Aquarium                                      | 🧠 Advanced Concepts                                                |
-| --- | --------------------------------------------------------- | ------------------------------------------------------------------- |
-| 1   | [Organizing Your Code](./chapters/MA_ORGANIZATION.md)     | 🔬 🔭 🌡 [Different Scopes](./chapters/JS_SCOPE.md)                  |
-| 2   | [Filtering Fish](./chapters/MA_FILTERING_FISH.md)         |
-| 3   | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md)           | ƛ [Lambdas: The Anonymous Function](./chapters/FUNCTIONS_LAMBDA.md) |
-| 4   | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) | 🏭 [Factories and Generators](./chapters/FACTORY_GENERATOR.md)      |
+| #   | 🐠 Martin's Aquarium  |
+| --- | -- |
+| 1   | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
+| 2   | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
+| 3   | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md)|
+| 4   | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
 
 ## 🔐 Deep Learning Projects Unlocked
 
