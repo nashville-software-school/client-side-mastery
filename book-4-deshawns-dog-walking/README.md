@@ -44,5 +44,5 @@ These projects build on the concepts in this book and prepare you for future boo
 |--|--|--|
 |1|[Dothard&nbsp;&amp;&nbsp;Simbleton](../projects/tier-2/dothard-simbleton/)| This project introduces you to array methods, which are different ways to iterate arrays for specific purposes. |
 |2|[Daily&nbsp;Journal](../projects/tier-2/daily-journal/)| This project can be started now, but not finished now, as it is intended to be built upon as you grow your skills over the next few week. |
-|3|[🍎 🚣🏽‍♀️ Cider Falls Park](../projects/tier-2/daily-journal/)| This project can be started now, but not finished now, as it is intended to be built upon as you grow your skills over the next few week. |
+|3|[🍎 🚣🏽‍♀️ Cider Falls Park](../projects/tier-2/cider-falls/)| This project can be started now, but not finished now, as it is intended to be built upon as you grow your skills over the next few week. |
 
