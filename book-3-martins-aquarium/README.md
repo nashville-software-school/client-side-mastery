@@ -44,4 +44,3 @@ These projects expand your knowledge of data, functions and modules. Each projec
 | #   | Project Name  | Description |
 | --- | --- | --- |
 | 1   | [The&nbsp;Hairy&nbsp;Potter](../projects/tier-1/hairy-potter/) | This project has very specific requirements for how you should structure and organize your code. Attention to details is very important **before** you write your code. |
-|2|[Modern&nbsp;Farm](../projects/tier-1/modern-farm/)| This project has very specific requirements for how you should structure and organize your code. Attention to details is very important **before** you write your code. |
