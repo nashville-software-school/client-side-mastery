@@ -2,6 +2,14 @@
 
 You have been hired by Samantha Ducarte, a tour promoter, to build a website that allows her to see the venues that she manages, a list of all bands that will be performing for the next 6 months, and a list of all bookings.
 
+## Learning Objectives
+
+* Analytical Thinking: Understand requirements and data before development
+* Communication: Ask questions to clarify any vague or conflicting requirements
+* CSS: Using Flexbox to position elements on the web page
+* Events: Implementing event listeners to respond to the user clicking on DOM elements
+* Data: Understanding data relationship, and using `for..of` loops to find related data in a database
+
 ## Venues
 
 Each venue can accomodate 2 bands per night as Samantha only works with smaller places. You need to record the name of the venue, its address, square footage, and maximum occupancy.
@@ -20,4 +28,4 @@ Samantha also wants to see a list at the bottom of the page that shows which ban
 
 ## Layout
 
-The layout is going to be the same as DeShawn's and Brewed Awakenings. The list of the individual resources at the top of the screen, and the bookings at the bottom.
+The layout is going to be similar to DeShawn's and Brewed Awakenings, but slightly different. Samantha wants to see the current bookings at the top of the page. Below the bookings, she wants to see a list of all available venues, and a list of all available bands, side by side. Venues on the left, and bands on the right.
