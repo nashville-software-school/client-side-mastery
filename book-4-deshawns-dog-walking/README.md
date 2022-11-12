@@ -36,13 +36,11 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) | [Band Member Bios](./chapters/TOUR_BAND_MEMBERS.md) |
 | 2 | [City State](./chapters/DD_CITY_STATE_.md) | | |
 
-## 🔐 Deep Learning Projects Unlocked
+## 🔐 Deep Learning Group Projects Unlocked
 
 These projects build on the concepts in this book and prepare you for future books.
 
 | # | Project Name | Description |
 |--|--|--|
-|1|[Dothard&nbsp;&amp;&nbsp;Simbleton](../projects/tier-2/dothard-simbleton/)| This project introduces you to array methods, which are different ways to iterate arrays for specific purposes. |
-|2|[Daily&nbsp;Journal](../projects/tier-2/daily-journal/)| This project can be started now, but not finished now, as it is intended to be built upon as you grow your skills over the next few week. |
-|3|[🍎 🚣🏽‍♀️ Cider Falls Park](../projects/tier-2/cider-falls/)| This project can be started now, but not finished now, as it is intended to be built upon as you grow your skills over the next few week. |
+|1|[🍎 🚣🏽‍♀️ <br/> Cider Falls Park](../projects/tier-2/cider-falls/README.md)| In this group project, your team will build a web application for the rangers at Cider Falls Park to keep track of visitors at the park, and display all of the ameneties available in each park area. |
 

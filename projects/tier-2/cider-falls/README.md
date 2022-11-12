@@ -4,7 +4,7 @@ This is a deep learning group project that you can work on with 2 or 3 of your t
 
 ## Chapters
 
-| # |  🍎 🚣🏽‍♀️ Cider Falls Park |
+| # |  🍎 🚣🏽‍♀️ <br/> Cider Falls Park |
 |--|--|
 | 1 | [Design: Wireframes](./chapters/CIDERFALLS_INTRO.md) |
 | 2 | [Design: ERD](./chapters/CIDERFALLS_DATA.md) |
