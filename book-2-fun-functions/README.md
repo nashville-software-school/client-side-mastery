@@ -4,10 +4,19 @@ In this book, you will gain the knowlege and understanding of working with funct
 
 ## Chapters
 
-| #   | 🌴 🌳 🌴 <br/> Functionland Expedition <br/><sub>(_Guided tour_)</sub> | 🌊 🏄🏾‍♂️ 🌊<br/> Function Flow | 🐟 🍣 <br/> Fish Fusion |
+| #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided tour_)</sub> | 🌊 🏄🏾‍♂️ 🌊<br/> Function Flow | 🐟 🍣 <br/> Fish Fusion |
 | --- | --- | --- | --- |
-| 1   | [Introduction to Functions](./chapters/FUNCTIONS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions #ifelse</sub> | [Functions Refresher](./chapters/FUNCTIONS_REFRESH.md) | |
-| 2   | [Mouthy Functions](./chapters/FUNCTIONS_RETURN.md) <br/> <sub style="font-size:0.85rem;">#functions #return</sub> | [Data Flow Through Functions](./chapters/FUNCTIONS_FLOW.md) | |
+| 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Functions Refresher](./chapters/QUEEN_REFRESH.md) | |
+| 1   | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | | |
+| 1   | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | | |
+| 1   | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> | | |
+| 1   | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | | |
+| 1   | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub> | | |
+| 1   | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | | |
+| 1   | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | | |
+| 1   | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | | |
+| 1   | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | | |
+| 2   |  | [Data Flow Through Functions](./chapters/FUNCTIONS_FLOW.md) | |
 | 3   | [Problem Solving: Deconstruction](./chapters/FUNCTIONS_DECONSTRUCTION.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | [Add and Multiply](./chapters/FUNCTIONS_MATH.md) |[Intro to Modules](./chapters/FUNCTIONS_MODULES.md) |
 | 4   | [Design a Calculator](./chapters/FUNCTIONS_DECONSTRUCT_CALCULATOR.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | [Grading Students](./chapters/FUNCTIONS_STUDENTS.md) | [Fish Fusion Project](./chapters/VEGGISH_SETUP.md) |
 | 5   | [Design a Car Factory](./chapters/FUNCTIONS_CAR_FACTORY.md) <br/> <sub style="font-size:0.85rem;">#deconstruction</sub> | | [The Fishing Boat](./chapters/VEGGISH_BOAT.md)     |
