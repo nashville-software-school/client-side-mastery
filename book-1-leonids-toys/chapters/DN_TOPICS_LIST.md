@@ -1,6 +1,6 @@
 # Listing Only The Topics
 
-Now that you have listed all of the notes, now you need to list all of the topics that have been used to describe the notes.
+Now that you have listed all of the notes, you need to list all of the topics that have been used to describe the notes.
 
 ## Instructions
 
@@ -39,7 +39,7 @@ Remember, use all the other resources at your disposal before looking at hints. 
 ```js
 for (const note of notes) {
     for (const topic of note.topics) {
-
+        console.log()  // What is the data type of the `topic` variable?
     }
 }
 ```

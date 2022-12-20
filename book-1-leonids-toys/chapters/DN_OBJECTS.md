@@ -8,7 +8,7 @@ Keep doing that.
 
 ## Instructions
 
-For this chapter, you need to add at least 3 more notes to your array, but this time you must use the `.push` method on the array to add them, even if you did it in the last chapter. Chances are that you have already forgotten the syntax, or at least feel unsure about.
+For this chapter, you need to add at least 3 more notes to your array, but this time you must use the `.push()` array method on the array to add them, even if you did it in the last chapter. Chances are that you have already forgotten the syntax, or at least feel unsure about.
 
 That's normal and part of the life of a professional - especially a beginner.
 
