@@ -7,50 +7,47 @@ Now that you have worked with arrays and strings in various contexts, this chapt
 Take a look at the following string. It represents a person's full name, but in a very particular format. The first name, middle name, and last name are separated by commas. Juan is the first name. Carlos is the middle name. Rodriguez is the surname. You want to have each of those names stored in their own variable.
 
 ```js
-const fullName = "Juan,Carlos,Rodriguez"
+const fullName = 'Juan,Carlos,Rodriguez'
 ```
 
 ### Split Into Multiple Variables
 
-You can use `.split()` method on any string to pull out sub-strings that are separated by a common character - also called the delimiter.  The following code both declares each variable, and assigns each a value all in one line of code.
+You can use `.split()` method on any string to pull out sub-strings that are separated by a common character - also called the delimiter. The following code both declares each variable, and assigns each a value all in one line of code.
 
 Note that within the parenthesis after `.split`, there is a comma character.
 
 ```js
-const fullName = "Juan,Carlos,Rodriguez"
-const [ firstName, middleName, surName ] = fullName.split(",")
+const fullName = 'Juan,Carlos,Rodriguez'
+const [firstName, middleName, surName] = fullName.split(',')
 
-console.log(firstName)  // Juan
-console.log(middleName)  // Carlos
-console.log(surName)  // Rodriguez
+console.log(firstName) // Juan
+console.log(middleName) // Carlos
+console.log(surName) // Rodriguez
 ```
 
 If the sub-strings were separated by a colon instead, you would use that character inside the parenthesis.
 
 ```js
-const fullName = "Juan:Carlos:Rodriguez"
-const [ firstName, middleName, surName ] = fullName.split(":")
+const fullName = 'Juan:Carlos:Rodriguez'
+const [firstName, middleName, surName] = fullName.split(':')
 
-console.log(firstName)  // Juan
-console.log(middleName)  // Carlos
-console.log(surName)  // Rodriguez
+console.log(firstName) // Juan
+console.log(middleName) // Carlos
+console.log(surName) // Rodriguez
 ```
 
 What if the names are separated by two colons, though?? Send two colons to the split method.
 
 ```js
-const fullName = "Juan::Carlos::Rodriguez"
-const [ firstName, middleName, surName ] = fullName.split("::")
+const fullName = 'Juan::Carlos::Rodriguez'
+const [firstName, middleName, surName] = fullName.split('::')
 
-console.log(firstName)  // Juan
-console.log(middleName)  // Carlos
-console.log(surName)  // Rodriguez
+console.log(firstName) // Juan
+console.log(middleName) // Carlos
+console.log(surName) // Rodriguez
 ```
 
 ### Split Into Array
-
-
-
 
 ## Join Array into a String
 
@@ -60,13 +57,13 @@ Here is an example. A poem is currently stored in an array. Each line of the poe
 
 ```js
 const sentences = [
-	"Praise the spells and bless the charms,",
-	"I found April in my arms.",
-	"April golden, April cloudy,",
-	"Gracious, cruel, tender, rowdy;"
+  'Praise the spells and bless the charms,',
+  'I found April in my arms.',
+  'April golden, April cloudy,',
+  'Gracious, cruel, tender, rowdy;',
 ]
 
-const wholePoem = sentences.join("")
+const wholePoem = sentences.join('')
 
 console.log(wholePoem)
 ```
@@ -74,14 +71,15 @@ console.log(wholePoem)
 That output would be the following single string.
 
 ```html
-Praise the spells and bless the charms, I found April in my arms. April golden, April cloudy,  Gracious, cruel, tender, rowdy;
+Praise the spells and bless the charms, I found April in my arms. April golden,
+April cloudy, Gracious, cruel, tender, rowdy;
 ```
 
 Much like the `.split()` method on a string, you can specify a character by which all the individual strings in the array will be joined. Another example below.
 
 ```js
-const surprises = [ "lions", "tigers", "bears" ]
-const exclamation = surprises.join(" and ")
+const surprises = ['lions', 'tigers', 'bears']
+const exclamation = surprises.join(' and ')
 
 console.log(`${exclamation}, oh my`)
 ```
@@ -95,8 +93,13 @@ lions and tigers and bears, oh my
 You could also wrap the strings in HTML elements.
 
 ```js
-const employees = [ "Mary Bulshear", "Kelley Avignon", "Brian Wellington", "Cherie Midreaux" ]
-const listItems = employees.join("</li><li>")
+const employees = [
+  'Mary Bulshear',
+  'Kelley Avignon',
+  'Brian Wellington',
+  'Cherie Midreaux',
+]
+const listItems = employees.join('</li><li>')
 
 console.log(`<li>${listItems}</li>`)
 ```
@@ -117,8 +120,9 @@ The Luminous Association of Personality Disorders (LAPD) has a yearly conference
 They sent them all in one large string, with each disorder separated by the following characters: `|$|`.
 
 ### Original Disorders String
+
 ```js
-"Depression|$|Bipolar|$|Manic|$|Anxiety|$|Anorexia|$|Posttraumtic Stress|$|Seasonal Affective|$|Bulimia"
+'Depression|$|Bipolar|$|Manic|$|Anxiety|$|Anorexia|$|Posttraumtic Stress|$|Seasonal Affective|$|Bulimia'
 ```
 
 ### Setup
@@ -135,7 +139,8 @@ code .
 Once VS Code starts, open the `main.js` file copy the following code into the file.
 
 ```js
-const originalDisorderFormat = "Depression|$|Bipolar|$|Manic|$|Anxiety|$|Anorexia|$|Posttraumtic Stress|$|Seasonal Affective|$|Bulimia"
+const originalDisorderFormat =
+  'Depression|$|Bipolar|$|Manic|$|Anxiety|$|Anorexia|$|Posttraumtic Stress|$|Seasonal Affective|$|Bulimia'
 ```
 
 ### Instructions
@@ -152,7 +157,7 @@ In your terminal, run your code with the following command.
 node main.js
 ```
 
-When you run the code, it should display the following.
+When you run the code, it should display the following. Your's will be on one line and that's ok. If you want it to be formatted, you can use \n which adds a new line.
 
 ```html
 <div>Depression</div>

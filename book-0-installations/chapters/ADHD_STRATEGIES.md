@@ -23,10 +23,16 @@ The inbox is a place for you to store every question and idea so your brain is n
 |                | ~~Irrelevant~~ |
 
 ~~?~~ What's the difference between == and ===
+
 ? Why am I getting the error "cannot read properties of undefined"
+
 ! Look back through Book 2 - column 1 - chapter 3
+
 ! Practice writing for loops
+
 ? Why are some functions written differently
+
+~~! Why am I behind everyone else on my team?~~
 
 ## The Daily Log
 
