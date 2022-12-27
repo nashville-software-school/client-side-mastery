@@ -87,7 +87,7 @@ Run the code again in this terminal and you will see the output of the function 
 
 ## The Queens in Your Life
 
-Now invoke the function a couple more times, passing in arguments representing the queens in your life. Make sure you console the string that the function returns.
+Now invoke the function a couple more times, passing in arguments representing the queens in your life. Make sure you `console.log()` the string that the function returns.
 
 Make sure you run the following command in your terminal to execute your code.
 

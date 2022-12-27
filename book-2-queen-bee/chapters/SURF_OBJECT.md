@@ -1,0 +1,1 @@
+* Output an object to the console instead of a value type
