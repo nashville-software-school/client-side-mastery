@@ -1,6 +1,6 @@
 # Book 2 - Debugger Basics
 
-In this book, you will gain the knowlege and understanding of working with functions in the JavaScript language. You will apply that knowledge in two small projects and then take a self-assessment to gauge how much you have learned.
+In this book, you will develop your most important skill as a developer - debugging. You will be writing your own code to implement features and using the debugger to watch how it executes, and you will also be working with pre-written code that has errors for you to debug.
 
 ## Chapters
 
