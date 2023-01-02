@@ -25,7 +25,7 @@ Here is the correct vocabulary.
 
 > The value of `undefined` is at the end of the string that was returned by the function because no argument was provided when the function was invoked. Therefore, the `nameString` parameter retained its default value of `undefined` and that value was placed at the end of the string template.
 
-This is called a logical error. That means that all of your syntax was invalid, so JavaScript executed all of it without any problems. However, the output was invalid.
+This is called a logical error. That means that all of your syntax was valid, so JavaScript executed all of it without any problems. However, the output was invalid.
 
 These are the hardest errors to understand and resolve because JavaScript can't tell you what you did wrong. As far as it is concerned, you did not violate any syntax rules so your code is good.
 
