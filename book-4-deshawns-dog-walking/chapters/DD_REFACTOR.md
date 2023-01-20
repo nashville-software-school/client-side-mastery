@@ -24,6 +24,8 @@ First, define a function that will get all objects in the `walkerCities` array t
 
 Then, define a function that take in the array of matching objects, and use the `cityId` property on each one to find the matching city name. It should return a string containing all the city names.
 
+> **IMPORTANT:** Once you implement this refactor of the code, your assignments text at the bottom of the screen will all end with `undefined`. This is expected, and acceptable. You may choose to fix that, but we have no expectation as it is a significant refactoring of the code again.
+
 ### Helpful hints: Algorithms
 
 If you are stuck on how to break down the problems into algorithm comments, here are some helpful hints to get you started.

@@ -44,7 +44,7 @@ Visit the [Node.js](https://www.nodejs.org) site and click on the install button
 
 Watch the video on how to [set up global Git configuration](https://youtu.be/66EB9oxGMzQ) using your GitHub username and the email address associated with your GitHub account. This will allow you to successfully back up your code to GitHub in a few days... once we show you how to do it.
 
-<!-- ## SSH Key
+## SSH Key
 
 SSH is a technology that allows you to create a very secure connection between your computer, and a computer located somewhere else in the world. It's an acronym for Secure SHell. When you create an SSH key on your computer, it actually creates two files:
 
@@ -57,4 +57,4 @@ Watch a short video for [creating an SSH key in the terminal](https://youtu.be/z
 
 ## Add SSH Key to GitHub Account
 
-Now watch the video for [adding your SSH key to your GitHub account](https://youtu.be/8hlmIObpMd4). -->
+Now watch the video for [adding your SSH key to your GitHub account](https://youtu.be/8hlmIObpMd4).

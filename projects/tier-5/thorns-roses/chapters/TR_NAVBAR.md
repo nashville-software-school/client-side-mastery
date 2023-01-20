@@ -5,7 +5,9 @@
 You need the React Router package installed for this application. Run this command in the root directory of your project.
 
 ```sh
-npm i --save react-router-dom@5.3
+npx create-react-app honey-rae-repairs
+cd honey-rae-repairs
+npm install --save react-router-dom
 ```
 
 ## Instructions
@@ -29,7 +31,9 @@ For now, each one of your routes can specify a fragment until you build the list
 Example...
 
 ```jsx
-<Route exact path="/nurseries">
-    <></>
-</Route>
+<Routes>
+    <Route path="/" element={ <></> }>
+        <Route path="/nurseries" element={ <></> } />
+    </Route>
+</Routes>
 ```

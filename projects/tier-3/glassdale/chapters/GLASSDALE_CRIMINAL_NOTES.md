@@ -51,7 +51,6 @@ When you have two objects in different collections in your database that are rel
 import { useNotes } from './NoteProvider.js'
 import { useCriminals } from '../criminals/CriminalProvider.js'
 
-// This may be a slight refactor to what you have in your code. We added a render function to print our criminals to the DOM. You can use the render function as we do in this example, or you can keep your logic in your NoteList function-- it's up to you.
 
 const render = (noteCollection, criminalCollection) => {
     contentTarget.innerHTML = noteCollection.map(note => {
@@ -73,10 +72,8 @@ const NoteList = () => {
         .then(() => {
             const notes = useNotes()
             const criminals = useCriminals()
+
             render(notes, criminals)
         })
 }
 ```
-
-## Challenge
-Modify your edit form so that users select a criminal from a dropdown. When the edit form loads, the correct criminal should be pre-selected in the dropdown.

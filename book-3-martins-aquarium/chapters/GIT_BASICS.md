@@ -40,13 +40,6 @@ git add styles/main.css
 git add index.html
 ```
 
-OR you can add things from the root directory of your project --- wherever you see index.html and the other folders on your terminal. You can then do the following command
-```sh
-git add .
-```
-
-This will add everything to the staging area that is in that directory. 
-
 #### Check the current status of your files.
 
 ```sh
@@ -89,9 +82,9 @@ The first thing you need to do is create a new repository on Github's platform t
 1. Log into your Github account.
 1. Click the `+` sign in the top right corner.
 1. Choose "New repository".
-1. In the "Repository name" field, enter in `newforce-aquarium`.
+1. In the "Repository name" field, enter in `nss-aquarium`.
 1. Scroll down and click the green "Create Repository" button.
-1. **Make sure the HTTPS button is selected**, and copy the repository's connection string.
+1. **Make sure the SSH button is selected**, and copy the repository's connection string.
     ![](./images/copy-github-connection-string.gif)
 1. In your terminal, in the Martin's Aquarium directory, enter in the following commands.
     ```sh

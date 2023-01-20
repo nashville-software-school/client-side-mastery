@@ -16,10 +16,10 @@ Therefore, the function whose responsiblity it is to initiate the fetch request 
 
 ```js
 export const deleteRequest = (id) => {
-    return fetch(`${API}/serviceRequests/${id}`, { method: "DELETE" })
+    return fetch(`${API}/requests/${id}`, { method: "DELETE" })
         .then(
             () => {
-                document.dispatchEvent(new CustomEvent("stateChanged"))
+                mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
             }
         )
 }

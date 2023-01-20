@@ -22,7 +22,7 @@ Below is an animation showing how the application should look when complete and 
 Your instruction team will provide a link for you to create your assessment repository. Once your repo is created, clone it to your machine.
 
 1. Make sure you are in your `workspace` directory.
-1. `git clone {github repo HTTPS string}`.
+1. `git clone {github repo SSH string}`.
 1. `cd` into the directory it creates.
 1. Run `npm install` in the terminal and wait for the process to complete.
 1. `code .` to open the project code.

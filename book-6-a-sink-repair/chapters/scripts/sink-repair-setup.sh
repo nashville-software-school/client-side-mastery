@@ -9,7 +9,7 @@ cd "$HOME/workspace/sink-repair/api"
 echo '{
     "plumbers": [],
     "completions": [],
-    "serviceRequests": [
+    "requests": [
         {
             "id": 1,
             "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
@@ -85,7 +85,6 @@ render()
 ' > ./scripts/main.js
 
 echo 'const applicationState = {
-	serviceRequests: []
 
 }
 ' > ./scripts/dataAccess.js

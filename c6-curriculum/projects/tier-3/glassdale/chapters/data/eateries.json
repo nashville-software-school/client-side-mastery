@@ -1,0 +1,1347 @@
+{
+    "bizarreries": [
+        {
+            "id": 1,
+            "name": "Big White Shirt",
+            "state": "AL",
+            "city": "Andalusia",
+            "description": "Andalusia, Alabama, is the white dress-shirt capital of America, and this highly photographed enormous white shirt sign is a reminder of that. According to Roadside America, the tie is changed seasonally.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 2,
+            "name": "Giant Tattoo Needle",
+            "state": "AK",
+            "city": "Anchorage",
+            "description": "If you’re a big fan of tattoos, you’re definitely going to want to snap a pic in front of Anchorage’s giant tattoo needle. On display in the parking lot of a tattoo parlor, this needle is truly eye catching.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 3,
+            "name": "Elvis Memorial Chapel",
+            "state": "AZ",
+            "city": "Apache Junction",
+            "description": "You wouldn’t ever think Elvis Presley would have a place in Arizona, but “the King” lives on in Apache Junction. The Elvis Memorial Chapel survived the devastating fires at the former Apacheland Movie Ranch and has since been reconstructed at the Superstition Mountain Museum.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 4,
+            "name": "Snake World",
+            "state": "AR",
+            "city": "Berryville",
+            "description": "The next time you’re in Arkansas, be sure to stop by Snake World! Owner Dale Ertel claims that the tourist attraction houses over 70 snakes, which is even more than the Little Rock Zoo. The reviews on Trip Advisor are all glowing, and warn visitors not to be dissuaded by Snake World’s sketchy exterior.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 5,
+            "name": "Cabazon Dinosaurs",
+            "state": "CA",
+            "city": "Cabazon",
+            "description": "In the middle of nowhere, California, stand the Cabazon Dinosaurs. There are two dinosaurs, and they are glorious — not to mention highly photographed by tourists on their way to vacation in Palm Springs. These dinosaurs are also known for their appearance in Pee Wee’s Big Adventure. The long-necked dinosaur also houses stairs and a kitschy toy shop inside its body.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 6,
+            "name": "Largest Fork in the US",
+            "state": "CO",
+            "city": "Creede",
+            "description": "Creede, Colorado, is home to the largest fork in the United States. The enormous sculpture by Ted Yund is over 40 feet long and weights over 600 pounds, breaking the record of the previous world’s largest fork, which was in Springfield, Missouri.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 7,
+            "name": "Avery’s Beverages",
+            "state": "CT",
+            "city": "New Britain",
+            "description": "This tiny soda factory is also the oldest bottling plant in New England and has been around for almost 100 years. Tours of Avery’s Beverages are highly coveted, as visitors get to make three bottles of their own soda! Be sure to call in advance before your tour to make sure they are bottling the day you go.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 8,
+            "name": "Owney the Stuffed Dog Postal Mascot",
+            "state": "DC",
+            "city": "Washington",
+            "description": "You can see the unofficial postal system mascot, Owney, at the National Postal Museum where he sits wearing a vest decorated with honors for his travels assisting postal professionals. The little dog died in 1897 but has been displayed at the Post Office Headquarters in Washington, D.C., the St. Louis World’s Fair, and the Smithsonian before arriving at his final resting place, where visitors can see him today.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 9,
+            "name": "Fountain of Youth",
+            "state": "DE",
+            "city": "Lewes",
+            "description": "Although many states claim to have a Fountain of Youth, Delaware’s was discovered in 1631, making it one of (if not the) oldest. Unfortunately, the fountain is now dry. Only a small gazebo and a sign marks the spot where the magic waters once were.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 10,
+            "name": "World’s Largest ‘Gone With the Wind’ Collection",
+            "state": "FL",
+            "city": "Plant City",
+            "description": "If you’re a big fan of Gone With the Wind you’re going to want to stop by the world’s largest Gone With the Wind collection. It also houses the world’s largest gift shop dedicated to the movie.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 11,
+            "name": "White House Replica",
+            "state": "GA",
+            "city": "Atlanta",
+            "description": "Want to see the White House without having to go to D.C.? Consider traveling to Atlanta, where they have a replica three-quarters the size! The mini White House used to offer tours of its replica of the Oval Office and the Lincoln bedroom, but now it’s a private home.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 12,
+            "name": "World’s Most Scenic Urinal",
+            "state": "HI",
+            "city": "Kealakekua",
+            "description": "The Hotel Kona is home to the world’s most scenic urinal and they are proud of it. Men using the facilities get to enjoy a gorgeous view of the ocean and the green terrain while they relieve themselves.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 13,
+            "name": "Giant Abraham Lincoln",
+            "state": "ID",
+            "city": "Boise",
+            "description": "You can take a funny picture with an absolutely enormous Abraham Lincoln in Boise, Idaho. People have enjoyed posing with this comically large statute since its unveiling in 2010.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 14,
+            "name": "First Kiss Spot of the Obamas",
+            "state": "IL",
+            "city": "Chicago",
+            "description": "There is a plaque on one of the rocks in front of a Subway restaurant (that used to be a Baskin Robbins) in the Hyde Park neighborhood in Chicago where Barack and Michelle Obama had their first date and subsequently, their first kiss. Whatever you feel about the Obamas, you must admit this is a pretty adorable memorial.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 15,
+            "name": "World’s Largest Egg",
+            "state": "IN",
+            "city": "Mentone",
+            "description": "Mentone is known as “the egg basket of the Midwest” — and they have the world’s largest egg to prove it. No, it’s not real, but this enormous cement egg is still well worth taking a photo next to.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 16,
+            "name": "Mini Statue of Liberty",
+            "city": "Des Moines",
+            "state": "IA",
+            "description": "If you can’t make it to New York to see the real thing, try road-tripping it to Des Moines for a shot with the mini Statue of Liberty. Located on the east side of the Iowa State capitol, this replica isn’t green like the Lady Liberty we know and love on the East Coast but rather a ghostly white.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 17,
+            "name": "Teacher’s Hall of Fame",
+            "city": "Dodge City",
+            "state": "KS",
+            "description": "he Kansas Teachers’ Hall of Fame is a must-see kitschy attraction for anyone who wants to show their admiration of the people who taught us to read, count, and spell. There is even a room in the museum devoted to school artifacts like old wooden desks, mimeograph machines, chalkboards, and a piano!",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 18,
+            "name": "Funny Town Welcome Sign",
+            "city": "Hartford",
+            "state": "KY",
+            "description": "Clearly the town of Hartford has a good sense of humor. 'Home of 2000 happy people and a few soreheads,' reads the iconic welcome sign. Definitely Instagram that!",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 19,
+            "name": "Grave of Marie Laveau, the Voodoo Queen",
+            "city": "New Orleans",
+            "state": "LA",
+            "description": "Visit Marie Laveau’s grave… if you dare. The notorious Louisiana Voodoo queen may have died in 1881, but it’s still widely believed that her spirit will help you with whatever you need should you leave the right combination of offerings or draw three X’s on her tomb. Unfortunately, due to tons of grave-defacing, the only way to visit her final resting place is by taking a tour with a licensed tour guide.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 20,
+            "name": "Giant L.L. Bean Boot",
+            "city": "Freeport",
+            "state": "ME",
+            "description": "If this isn’t the most Instagrammed spot in Maine, it should be. The L.L. Bean flagship store has a 16-foot-tall rubber boot in front of it, perfect for posing with however you choose.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 21,
+            "name": "Ouija Board Inventor’s Tombstone",
+            "city": "Baltimore",
+            "state": "MD",
+            "description": "Carved into the back of Elijah Jefferson Bond’s tombstone is a Ouija Board with the traditional “yes” and “no” in the left and right corners. It’s the perfect spot to snap a cool Instagram or build your Tumblr aesthetic.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 22,
+            "name": "Turtle Boy",
+            "city": "Worcester",
+            "state": "MA",
+            "description": "This statue of a naked boy with a sea turtle is a big (and weird) tourist attraction for its possibly unintentionally suggestive nature. According to Roadside America, the sculptor died before he could complete the statue.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 23,
+            "name": "Man-Killing Clam",
+            "city": "Cheboygan",
+            "state": "MI",
+            "description": "Located inside Sea Shell City, this enormous man-killing clam is totally kitschy-cool- plus there are kooky signs for it on the road the closer you get. Although the clam is admittedly pretty large, it’s more silly than scary, and it’s one of the most photographed items inside Sea Shell City.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 24,
+            "name": "World’s Largest Paul Bunyan",
+            "city": "Akeley",
+            "state": "MN",
+            "description": "This Paul Bunyan statue stands out because you can sit in his huge palm and take the perfect road-trip vacation photo. Although the crouching figure is currently not technically the tallest Paul Bunyan statue in the U.S., his creators say that if he stood upright he would be about 60 feet fall, making him officially the largest Paul Bunyan.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 25,
+            "name": "Town Named Hot Coffee",
+            "city": "Hot Coffee",
+            "state": "MS",
+            "description": "There is a town named Hot Coffee in Mississippi, but if you blink you might miss it. The teeny tiny town is now just a green highway sign and an abandoned grocery store. People often stop to take photos that reaffirm their love of java.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 26,
+            "name": "1950s Gas Station With Dummies",
+            "city": "Clarence",
+            "state": "Mo",
+            "description": "This Missouri curiosity is an old MFA oil service station that appears to be busy with cars. Upon closer inspection, the cars turn out to be full of mannequins. According to one reviewer, the stuffed monkeys in the taxi cab are rumored to be from the Barnum and Bailey’s Circus.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 27,
+            "name": "The Sip ‘n Dip Lounge Mermaids",
+            "city": "Great Falls",
+            "state": "MT",
+            "description": "The O’Haire Motor Inn boasts one of the greatest attractions for people who love mermaids! In their Sip ‘n Dip Lounge is a window that looks into an indoor swimming pool where six “mermaids” entertain tiki-drink-sipping guests by swimming by.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 28,
+            "name": "Spinning Yellow Giant",
+            "city": "Omaha",
+            "state": "NE",
+            "description": "Only in Omaha can you see a 20-foot-tall man wearing a yellow rain coat, rotating in front of a car wash (and in multiple locations). These car washes are also staffed by much smaller animatronic mannequins, all wearing similar yellow raincoats, to delight and terrify you throughout your car wash experience.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 29,
+            "name": "E.T. Fresh Jerky",
+            "city": "Hiko",
+            "state": "NV",
+            "description": "If you love aliens, this is a must-see roadside attraction. E.T. Fresh Jerky, formerly known as “Alien Fresh Jerky,” is a kooky shop with fun alien murals, U.F.O. signage, alien souvenirs, and, yes, jerky that is simply out of this world.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 30,
+            "name": "Hot Dog Man",
+            "city": "Winchester",
+            "state": "NH",
+            "description": "He’s a little creepy, because he appears to be carved out of a dead tree, but he’s also kind of cute! What’s not to like about an enormous hot dog by the side of the road wearing nothing but a baseball cap, a tasteful smear of mustard, a bun, and a charming smile?",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 31,
+            "name": "Death Rock of Alexander Hamilton",
+            "city": "Weehawken",
+            "state": "NJ",
+            "description": "If you’re a Hamilton fan, this is a must-see. The actual rock where Alexander Hamilton rested his head after he lost his duel with Aaron Burr is now a monument! Plus it’s seriously close to the Lincoln Tunnel, so you could always see the Broadway show, hop in a cab, and go.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 32,
+            "name": "UFO Crashed Here",
+            "city": "Aztec",
+            "state": "NM",
+            "description": "Supposedly a UFO crash landed on this site in 1948. Now all that remains is a plaque with the gory details of the crash and some rocks gathered into the shape of an alien’s face.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 33,
+            "name": "Ghostbusters Headquarters",
+            "city": "New York",
+            "state": "NY",
+            "description": "The Tribeca firehouse Hook and Ladder Company 8 was used as the Ghostbusters headquarters in the film Ghostbusters and it’s still around and super easy to get to. This New York City attraction is right off of a subway line and full of nods to its film history. According to Roadside America, when actor Harold Ramis died in 2014, fans set up a memorial on the sidewalk outside of the fire house.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 34,
+            "name": "Plastic Flamingo Petting Zoo",
+            "city": "Cedar Point",
+            "state": "NC",
+            "description": "You can pet the birds without the fishy smell or the worry of getting pecked at this plastic flamingo petting zoo in North Carolina! Located in the front yard of a tourist information center next to the highway, this is an incredible Instagram opportunity just waiting to happen. The flamingos aren’t just for petting and photos — they can also be adopted (purchased).",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 35,
+            "name": "Enchanted Highway",
+            "city": "Regent",
+            "state": "ND",
+            "description": "You may think that there is a whole lot of nothing in North Dakota, but you would be wrong. The Enchanted Highway, a creation by retired school teacher and metal sculptor Gary Greff, features fantastical sculptures along an empty road in Regent, North Dakota. Visitors can see enormous birds, grasshoppers, deer jumping fences, fish, seaweed, and even more incredible designs. Greff has also opened the Enchanted Castle Hotel, where guests can stay while taking in his creative constructions, because other hotels may be hard to find. It truly is in the middle of nowhere.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 36,
+            "name": "Frankenstein’s Grave",
+            "city": "Canton",
+            "state": "OH",
+            "description": "This grave is rumored to belong to Dr. Frankenstein. According to one post on Roadside America, 'Rumor has it that a Timken family member in Germany wrote to his successful cousin in America and told him how the grave site of Victor Frankenstein was being defaced and spit upon in their small town. The American Timken and founder of Timken Roller Bearings paid for the remains of the body to be flown to Canton to give Dr. Frankenstein a peaceful resting place.'",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 37,
+            "name": "World’s Largest Peanut",
+            "city": "Durant",
+            "state": "OK",
+            "description": "The best and weirdest attractions are always large versions of everyday things. Durant’s “World’s Largest Peanut” is no exception. Although the hefty peanut was taken down in 2010 because college kids kept stealing it, it is now back on its pedestal, looking enormous as ever.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 38,
+            "name": "The Dave Vail Memorial Toilet",
+            "city": "Estacada",
+            "state": "OR",
+            "description": "The funny thing about the Memorial Toilet, according to my mom who lives in Estacada (and it's where I grew up), is that the guy it was named for was alive when they built the ‘memorial toilet’ in his honor.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 39,
+            "name": "Coffee Pot-Shaped Building",
+            "city": "Bedford",
+            "state": "PA",
+            "description": "There is truly an enormous coffee pot-shaped building in Pennsylvania that people like to pose by. Formerly a 1920s luncheonette, it was restored in 2003 and includes a gift shop next door.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 40,
+            "name": "Mrs. Potato Head Statue",
+            "city": "Westerly",
+            "state": "RI",
+            "description": "What’s cuter than Mr. Potato Head? Mrs. Potato Head. This version stands 6 feet tall in her bikini and sunglasses at the Westerly State Airport greeting visitors. She is certainly one hot potato.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 41,
+            "name": "Luke Skywalker’s House",
+            "city": "Sullivan’s Island",
+            "state": "SC",
+            "description": "This house became a hot spot for photos as it looks just like Star Wars character Luke Skywalker’s home on Tatooine. Don’t forget to bring your lightsabers.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 42,
+            "name": "Corn Palace",
+            "city": "Mitchell",
+            "state": "SD",
+            "description": "South Dakota’s Corn Palace is a magnificent building covered in creative murals made out of corn to resemble various themes. 2016’s theme, which coincidentally was 2017’s theme (for monetary reasons) happened to be “Rock of Ages” and included corn depictions of the likes of Elvis, Willie Nelson, and John Travolta.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": true
+            }
+        },
+        {
+            "id": 43,
+            "name": "Chicken Wire Minnie Pearl",
+            "city": "Centerville",
+            "state": "TN",
+            "description": "A local artist from the town of Centerville made various Minnie Pearl statues out of chicken wire. His first, an 8-foot-high chicken wire bust of the Grand Ole Opry and Hee Haw actress, was donated to the town of Centerville once completed.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 44,
+            "name": "Wax Last Supper",
+            "city": "Fort Worth",
+            "state": "TX",
+            "description": "Fort Worth is home to a life-size wax recreation of da Vinci’s “The Last Supper” that you can walk up to and take a photo of. The statues are complete with real human hair. Think of it as a more religious Madame Tussaud’s.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 45,
+            "name": "Nursing Home Stonehenge",
+            "city": "American Fork",
+            "state": "UT",
+            "description": "Strangely, there is a mini replica of Stonehenge on the front lawn of a nursing home in Utah. It was built in 2012 and has become a tourist attraction just because it’s impressive and a little odd.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 46,
+            "name": "Grave With a Window",
+            "city": "New Haven",
+            "state": "VT",
+            "description": "The grave of Timothy Clark Smith was outfitted with a little window because Mr. Smith feared being buried alive. Although it’s hard to see through the window (the man was buried in 1893) it is still worth a trip to see it (just for the pure spookiness).",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 47,
+            "name": "Love Butt",
+            "city": "Charlottesville",
+            "state": "VA",
+            "description": "This 10-foot-tall, 1,600-pound piece of artwork was originally featured on a comedy show pilot but is now a permanent fixture in Charlottesville, Virginia. Big, pink, and embarrassing, it’s the perfect road trip attraction for using the “I’m just pulling over to use the restroom” excuse.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 48,
+            "name": "Where Kurt Cobain Lived in a Refrigerator Box",
+            "city": "Aberdeen",
+            "state": "WA",
+            "description": "Devoted Kurt Cobain and Nirvana fans have made pilgrimage to the former home of Dale Crover (the Melvins drummer who was also the first drummer of Nirvana) to take pictures of the enclosed entryway where Cobain lived in a refrigerator box. Come as you are.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 49,
+            "name": "Pope John Paul II Outside a Restaurant",
+            "city": "Wheeling",
+            "state": "WV",
+            "description": "A 6-foot-tall statue of Pope John Paul II holds his arms open outside Generations Restaurant and Pub in West Virginia. The statue was commissioned by restaurant owner Mike Duplaga Jr. after seeing the impressive 45-foot-tall version in Poland.",
+            "ameneties": {
+                "souvenirs": true,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 50,
+            "name": "Forest of Chainsaw Totem Poles",
+            "city": "Medford",
+            "state": "WI",
+            "description": "If you’re looking to be terrified and impressed, look no further than the forest of “chainsaw totem poles” in Medford, Wisconsin. Don’t be too fearful — the hundreds of old chainsaws are “mounted” into roadside poles.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        },
+        {
+            "id": 51,
+            "name": "Pit of Buffalo Bones",
+            "city": "Vore",
+            "state": "WY",
+            "description": "Hunters once drove herds of bison off the neighboring cliff into this pit to kill them, and over roughly 300 years of use, the site accumulated the remains of between 10,000 to 20,000 buffalo. Visitors and archeologists are welcome, but only 5 percent of the bones have been excavated, so who really knows what could be under there! In the mood for a road trip now.",
+            "ameneties": {
+                "souvenirs": false,
+                "restrooms": false
+            }
+        }
+    ],
+    "eateries": [
+        {
+            "businessName": "Marge's Pancake House",
+            "description": "Marge has been making pancakes from her family recipe for 50 years. People love to eat at Marge's Pancake House because everyone who works there dresses as a famous actor every day for work.",
+            "state": "IN",
+            "city": "Gary",
+            "id": 1,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": false,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Big Bob Gibson Bar-B-Que",
+            "description": "Alabama's place in the great lexicon of barbecue rests squarely on the shoulders of one man: Big Bob Gibson. While other BBQ regions were dancing with brisket and ribs and pork, in 1925, Gibson started smoking chicken in a hand-dug pit in his backyard and serving folks on a picnic table. (He also served pork, but that's such a side note to the chicken here.) In addition to making chicken the star -- rather than the weird, dry BBQ’d poultry coated in a congealed sauce that's served at every company picnic ever -- Gibson rolled out his now-famous, peppery mayo-cider vinegar-lemon white sauce that’s synonymous with Alabama barbecue.",
+            "state": "AL",
+            "city": "Decatur",
+            "id": 2,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": true,
+                "wifi": false,
+                "diaperFacility": false,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Club Paris",
+            "description": "In a former funeral parlor built in Downtown Anchorage in the 1920s sits the oldest steakhouse in Alaska ('Home of the 4 inch thick Filet Mignon!'). At this point, it seems somewhat hilarious that the style was originally intended to 'look like a Parisian sidewalk cafe,' but no one is laughing at the very legit steaks (the signature is that 14oz filet, though we like the rib-eye), and, of course, Alaskan king crab legs.",
+            "state": "AK",
+            "city": "Anchorage",
+            "id": 3,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": true,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "El Charro Cafe",
+            "description": "Sure, there's more than one El Charro now, but the original Downtown location is the most iconic in the state. And its enduring popularity is no fluke -- people can't seem to get enough of the legendary carne seca, marinated Angus beef you can stuff inside tacos and enchiladas. They dry it themselves, of course. Sit on the patio on those cool desert nights with a house margarita, and you're made in the shade. You can also sit out there during the day, if you want to literally be in the shade.",
+            "state": "AZ",
+            "city": "Tucson",
+            "id": 4,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "McClard's BBQ",
+            "description": "Five generations of the McClard family have been working the smoker since they opened their spot in the '20s, which is a type of nepotism no one who's ever eaten their ribs or chicken is complaining about. One of the most popular dishes is the tamale spread, a vast pile of food that includes tamales covered in Fritos, beans, chopped meat, onions, and cheese -- it was initially thrown together in the early '70s to help one of the dishwashers sober up, but eventually caught on with the customers. It's uniquely McClard's and uniquely Arkansas.",
+            "state": "AR",
+            "city": "Hot Springs",
+            "id": 5,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "The Old Clam House",
+            "description": "With respect to the Tadich Grill in SF and Musso & Frank's in Hollywood, our choice is this legendary spot in Bayview. Anyone who has spent time playing soccer on Silver Ave or driving down Bayshore Blvd or just living around SF knows the Old Clam House's iconic sign and that giant clam sitting on the side of the roof and the fact that it's the oldest restaurant in the same location in SF (again, apologies to Tadich). But more people should know about the incredible clam bake cioppino and the amazing kettle bread that's brought out with hot clam juice and the restaurant's own 'Milwaukee steam beer,' which our SF-based editor swears by.",
+            "state": "CA",
+            "city": "San Francisco",
+            "id": 6,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Buckhorn Exchange",
+            "description": "The Colorado dining scene has come a long way since the Buckhorn Exchange opened. There's practically a brewery and a buzzed-about restaurant on every street corner in Denver these days. But the Buckhorn Exchange is a glimpse into what Colorado restaurants used to be famous for -- giant portions of steak that will feed you, your friends, and your friends' friends. Beyond the steak, there's also the opportunity to eat practically every animal that was on Noah's ark. And eating here puts you in good company, as Teddy Roosevelt and Eisenhower both dined here.",
+            "state": "CO",
+            "city": "Denver",
+            "id": 7,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Louis' Lunch",
+            "description": "There's a lot of debate as to who invented the hamburger as we know it today, but that debate kind of ends at Louis' Lunch, mainly because it's tired of arguing about it, but also because the Library of Congress declared it so. The tiny joint still uses its original cast-iron grills, which cook the hand-ground patties vertically by blasting them with fire. Want ketchup and mustard? Head to one of the other places that claim to have invented the burger: at Louis', your options are cheese, tomato, and onion on toast. That's the way it's been since it 'invented' the burger back in the day, and that's how it'll always be.",
+            "state": "CT",
+            "city": "New Haven",
+            "id": 8,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Deer Park Tavern",
+            "description": "While that one scene in Wayne's World helped define Delaware for an entire generation, every generation of Delawareans knows Deer Park as a historic spot where Edgar Allan Poe once hung out in the 1800s, right before he founded the Baltimore Ravens football team. It continues to operate as a Newark staple -- a place where townies and college students alike enjoy burgers, nachos, and a pint of local-ish Dogfish Head.",
+            "state": "DE",
+            "city": "Newark",
+            "id": 9,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Occidental Grill & Seafood",
+            "description": "DC is the country's seat of power -- I know this because I've seen one and a half seasons of House of Cards -- and Occidental is where the power goes out for a rib-eye or scallops. And it's been this way since the beginning, with everyone from Amelia Earhart to multiple presidents dining here. While the original was demolished in the '70s, it deserves a spot on this list because it reopened in the '80s super close to its original location and with its rep intact, as both of the presidents named Bush have since partaken of its steakhouse fare.",
+            "state": "DC",
+            "city": "Washington",
+            "id": 10,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Joe's Stone Crab",
+            "description": "Since Florida is home to many, many elderly people, it's fairly surprising we were able to find a restaurant older than most of them. While Joe's has opened up outposts across the country, the original has remained popular in Miami Beach since way back when. The only thing more famous than the iconic stone crabs are the people who've dined there: according to a book written about the restaurant, they include the likes of 'Sinatra, Ali, and Jennifer Lopez.' It's true, one of the judges from the 11th season of American Idol has eaten here!",
+            "state": "FL",
+            "city": "Miami",
+            "id": 11,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "H&H Soul Food",
+            "description": "Georgia has music in its blood. Atlanta is the country's epicenter of hip-hop (and also Love & Hip Hop: Atlanta). And Macon, a charming Southern town about an hour and a half outside of ATL, is where the Allman Brothers Band lived, partied, and recorded in the early '70s. As legend has it, they stopped by H&H when they were broke and starving, and one of the co-owners, Mama Louise, fed them. She became the legend after that, and continued to feed legions of Southern musicians who stopped by. Mama Louise shut the place down in 2013, but it recently reopened with new owners and with Mama helping out the kitchen staff, even into her 80s. And perhaps most importantly, Oprah's been here.",
+            "state": "GA",
+            "city": "Macon",
+            "id": 12,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Hy's Steak House",
+            "description": "There are older restaurants, and places with wackier backstories (House Without a Key was in the first Charlie Chan novel!), but -- for nearly 40 years -- everyone knows Hy's. The classic steakhouse is known for cooking its meats over native kiawe wood, so you can't really go wrong trying the roast rack of lamb seared over the hot charcoal, paired up with a Caesar prepared tableside. It may not have been in a book, but pretty soon these guys will be writing their own.",
+            "state": "HI",
+            "city": "Honolulu",
+            "id": 13,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Hudson's Hamburgers",
+            "description": "Burgers and fries. That's the all-American meal. And you can't get it at Hudson's, because it doesn't serve fries. But you can get a burger -- top it with hot mustard and spicy ketchup, if you know what's good for you -- with a side of a few different pies, if you want. There's a lunch counter that fits about 20, and it's packed every day at lunch. Squeeze yourself into a seat at the counter and have a double cheeseburger, a slice of chocolate pie, and a fountain drink. You won't miss the fries. Besides, you can get fries anywhere, so their absence will force you to focus on the deliciousness of everything else on your plate.",
+            "state": "ID",
+            "city": "Coeur d'Alene",
+            "id": 14,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Gene & Jude's",
+            "description": "Deep dish is often the first food outsiders associate with Illinois, but the hot dog, more than anything, is intertwined with the local DNA. Gene & Jude's stands as a giant among a crowded field of fine tubed-meat purveyors, having relocated to its present River Grove digs in 1950 after four years in Chicago. You know you're getting a perfectly cooked, natural-casing Vienna Beef dog. You know it's coming piled high with a mountain of perfect fresh-cut fries whether you like it or not. And you know you better not even think about asking for ketchup -- even for those fries.",
+            "state": "IL",
+            "city": "River Grove",
+            "id": 15,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "St. Elmo Steak House",
+            "description": "For a steakhouse that's been around 100+ years, it's a true feat to remain relevant and fresh. But St. Elmo's has somehow achieved it. It's one of the best steakhouses in the country. And sure, you can still order tried-and-true menu items like the shrimp cocktail (it's filled with horseradish, and may melt your throat), but it's also made key updates to the space, like opening an upstairs upscale lounge with a bar from the 1800s. Ron Swanson's even eaten here. Sounds like a good enough reason for it to stay popular for another 100+ years.",
+            "state": "IN",
+            "city": "Indianapolis",
+            "id": 16,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Northwestern Steakhouse",
+            "description": "When in Iowa, do as the Greeks do. About two hours north of Des Moines lies a steakhouse that's been around in one form or another since the '20s, and the steaks are all prepared one way: Greek-style. This means they're broiled in olive oil and doused with a special blend of Greek seasoning and secret ingredients, and the result is that you can cut your steak with a fork. The walls are plastered with old-timey movie posters featuring Chaplin and John Wayne in a cozy 50-seat space.",
+            "state": "IA",
+            "city": "Mason City",
+            "id": 17,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "The Cozy Inn",
+            "description": "You know who's sold a lot of sliders? White Castle. That company is also a Kansas product, like Raef LaFrentz. Yes, that Raef LaFrentz. But while Salina's famed slider shop doesn't have nearly as many locations as Harold and Kumar's favorite fast-food joint, The Cozy Inn stays popular to this day with its no-frills meat sandwiches topped with cooked onions and served on steamed buns.",
+            "state": "KS",
+            "city": "Salina",
+            "id": 18,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Jack Fry's",
+            "description": "Kentucky is the state version of your uncle who's always at the horse track. A man who thinks nothing of popping open a beer at 11am on a Thursday. It's no surprise it's where horse racing is celebrated, and where booze was bootlegged before it was legal. Jack Fry's was started by, umm, Jack Fry, who by all accounts was a shady dude, just like your uncle we mentioned earlier. Nowadays, it's a beloved Louisville spot with wall-to-wall racing programs, photos of Derby winners, and an old-school vibe retained from way back when. The menu's been updated since the '30s, thankfully -- the beef filet with prosciutto and asparagus in a sage beurre blanc proves that.",
+            "state": "KY",
+            "city": "Louisville",
+            "id": 19,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Commander's Palace",
+            "description": "New Orleans is laden with 100+ year-old power players -- Tujague's, Antoine’s, and Galatoire’s all have to be mentioned -- whose food has managed to improve over the last century, who boast impeccably choreographed service, and who could vie for a spot as the most iconic restaurant in Louisiana. But do any of them do that while pulling off a two-story turquoise facade complete with a turret and matching striped awning? Nope, only Commander’s Palace manages that feat, and it has been doing it in the Garden District since 1880. If a spoonful of the rich, sherried turtle soup doesn’t convince you that the grandam's plates are just as symbolic of the state's food hub as the building itself, let current chef Tory McPhail's 2013 James Beard Award and chef alumni like Paul Prudhomme and Emeril Lagasse, both of who helped spread the regional cuisine to the country, serve as a reminder.",
+            "state": "LA",
+            "city": "New Orleans",
+            "id": 20,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "The Lobster Shack Restaurant at Two Lights",
+            "description": "Yes, it gets crowded. And yes, it's touristy. And yes, it's not the cheapest lobster roll you're going to get. But the Leadbetter family spot on Cape Elizabeth earned its reputation as the place your mind wanders to when you think of fresh-off-the-boat Maine lobster rolls and summer and getting sunburned, before heading to L.L.Bean for a sick new backpack with your initials on it.",
+            "state": "ME",
+            "city": "Cape Elizabeth",
+            "id": 21,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Ocean Pride",
+            "description": "Marylanders have a love affair with seafood, and that love is expressed in their continued support of Ocean Pride. The restaurant steams its crabs fresh each day, and also serves up local oysters and rockfish. And while steamed crabs are the main event here, fried clams and crabcakes often supplement our clawed friends on the dinner table. The setting is as nautical as you'd expect, with photos of old-timey fisherman, fishing nets, and buoys covering the walls. And lest you forget the importance of the Ravens and Orioles in the region, a bar area sports 12 big-screen TVs to watch the game.",
+            "state": "MD",
+            "city": "Lutherville",
+            "id": 22,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Union Oyster House",
+            "description": "It can’t really be anywhere else. You can make arguments for a lot of other places, actually -- The Student Prince in Springfield and maybe Jacob Wirth or Chart House -- but they don't hold up. Whenever you ask anyone about old places to eat in MA, the brain immediately goes to Union Oyster, before all the rest. It has to. It sits right down by Quincy Market, was originally Atwood & Bacon, and the original menu has a choice between Virginia, Narragansett, or Cape oysters. Plus clams from Ipswich. Its very helpful timeline points out that Daniel Webster used to hang there eating plate after plate of oysters while drinking brandy and water, and it also informs that toothpicks were first used in the US there, when a dude from Maine used to pay Harvard guys to eat there and request them. So yes, it's Union Oyster by a knockout. Please pay the waiter.",
+            "state": "MA",
+            "city": "Boston",
+            "id": 23,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Bavarian Inn",
+            "description": "Like the long road to Wall Drug in South Dakota, signs for the German-modeled town of Frankenmuth can be spotted with alarming frequency for about 1,000 miles before you reach it. Mostly for Bronner’s, the largest 365-day Christmas store. But the real draw is the Bavarian Inn, a magical place where buxom, dirndl-clad waitresses serve up gigantic, all-you-can-eat fried chicken (and mashed potatoes, soup, bread, and, ugh, veggies) to folks who travel from all corners of the region for a taste. Yes, it's pretty corny inside the massive faux-German compound; especially when the polka bands get down. But damned if it isn't an institution. And giant beers make it all the more surreal.",
+            "state": "MI",
+            "city": "Frankenmuth",
+            "id": 24,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Matt's Bar",
+            "description": "It might seem odd that we let a bar sneak into this rundown of iconic restaurants, but that's because this is more restaurant than bar. Matt's qualifies as a restaurant because a real bar is stocked with hard liquor and is not frequented by families with kids. Most importantly, it's an iconic restaurant because Matt's invented the 'Jucy Lucy.' It's spelled differently here because someone 'forgot to add the i,' but it doesn't matter how you spell it, really, because the burger has hot, beautiful cheese pouring out of the middle of the patty. Thank you, Minnesota.",
+            "state": "MN",
+            "city": "Minneapolis",
+            "id": 25,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Mayflower Cafe",
+            "description": "Mississippi has a taste for Gulf fish, and Mayflower's current owner (his dad's uncle co-owned it back in the '30s) says it's unlike the seafood available anywhere else. Chalk it up to the brackish water the fish live in, with both fresh and saltwater. The legions of customers seem to enjoy it -- the redfish is the most popular menu item, and it's served up with shrimp & oysters or a sauteed soft-shell crab. And while the food is distinctly Mississippi, the decor is straight out of a New York diner of old, with black-and-white tile floors from the '30s and mirrored walls.",
+            "state": "MS",
+            "city": "Jackson",
+            "id": 26,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Arthur Bryant's",
+            "description": "Kansas City BBQ didn't get its start at Arthur Bryant's, but it's as close as you're gonna get to the original. Charlie and Arthur Bryant learned from Henry Perry, the originator of the style, in the '20s, and the brothers took over his operation in 1940. Since 1958, Arthur's Brooklyn Ave location -- he bought the whole shebang from his brother in '46 -- has been a temple of slow-cooked meats.",
+            "state": "MO",
+            "city": "Kansas City",
+            "id": 27,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Grand Union Hotel",
+            "description": "Located just east of Great Falls -- with its highfalutin waterfalls and Tiki mermaids -- the small town of Fort Benton itself is so old and iconic that a good portion of the town is a historic district thanks to its rich history of steamboats. The Grand Union Hotel is also on the National Registry of Historic Places, having established itself seven years before Montana even became a state, long before the city fell on hard times thanks to the railroad. Now restored to its original glory, the old hotel offers up a high-end, seasonally based menu in the Union Grille, which specializes in European and Indian twists on Montana classics, and where for 11 months a year (January's a no-no) you can gorge yourself before sleeping it off in one of the hotel's posh rooms.",
+            "state": "MT",
+            "city": "Fort Benton",
+            "id": 28,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "The Drover Restaurant & Lounge",
+            "description": "While the state has way more cattle than people, Nebraskans are trying to even things out by ordering plenty of whiskey steaks at The Drover. And even though it hasn't been around as long as some of the other spots on this rundown, there's no denying that the Certified Angus cuts with a whiskey marinade -- a combination of whiskey, soy, garlic, and pepper -- have been keeping butts in seats for 30+ years. Eat here and there's no doubt you're in Nebraska, with plenty of Western art on the walls and two fireplaces to keep you warm during those cold, cold winters.",
+            "state": "NE",
+            "city": "Omaha",
+            "id": 29,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "The Peppermill Restaurant and Fireside Lounge",
+            "description": "Since 1972, Peppermill's been the place in Vegas where you can order steak & eggs and a Bloody Mary when it's 4:30am and you've been up all night, then politely ask the person sitting across the table from you exactly who they are and how you both got there. No matter the time of day, this spot's got all the neon and indoor fire pits your heart desires. It's a gleaming, pulsing ball of energy and kitsch you'd be hard-pressed to find anywhere but in this city.",
+            "state": "NV",
+            "city": "Las Vegas",
+            "id": 30,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Hancock Inn",
+            "description": "How embedded in New Hampshire's history is the Hancock? Well, when it first opened its doors, George Washington was in his first year as president, so, you know, pretty embedded. While it's gone by many names over time, the bed & breakfast has the distinction of being the state's oldest continuously operated business. The menu ranges from burgers to pot roast and haddock, but for those looking for a more traditional taste of New England, come for the weekly Innkeeper's Sunday Supper, where you get all regal with a fixed menu served up like they did back when ol' George was running things and America was still in its teething phase.",
+            "state": "NH",
+            "city": "Hancock",
+            "id": 31,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Tops Diner",
+            "description": "The NJ Board of Tourism says that there's a higher concentration of diners in Jersey than anywhere else in the country, so it's fitting that a diner is the most iconic in the state. But unlike the typical greasy spoon you might envision when the word diner comes to mind (or maybe you're a huge fan of '80s-era Barry Levinson movies), Tops features a full bar and two full-time bakers whipping up fresh cheesecake, plus the usual diner-y fare of beef ribs, meatloaf, and burgers.",
+            "state": "NJ",
+            "city": "East Newark",
+            "id": 32,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "El Pinto",
+            "description": "Not only is this New Mexico's most iconic restaurant, it's also one of the best Mexican spots in the country. The red chile ribs are reason enough to schedule a visit soon, but it's also one of the largest restaurants you've ever been in, period. It's like how big your rich friend's house seemed when you were a kid: rooms open up into other rooms. After a few of the margaritas it gets even more difficult to navigate (trust us). Nevertheless, it has iconic status because, in a state of excellent Mexican food, this is a solid standby, and one that people have been returning to time after time.",
+            "state": "NM",
+            "city": "Albuquerque",
+            "id": 33,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Katz's Delicatessen",
+            "description": "New York is the entry point for many immigrants as they make their way into the US, and back before the Lower East Side had a Whole Foods, it was home to many of those same immigrants and their families. Katz's has been a linchpin of the neighborhood for over 100 years. It's a place where tourists and locals unite over one thing: the consumption of outrageously large meat sandwiches. If there's anything more American than a panoply of cultures, ages, and social classes coming together over food, I don't know what it is.",
+            "state": "NY",
+            "city": "New York",
+            "id": 34,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Skylight Inn",
+            "description": "Barbecue is as ingrained in the state's DNA as much as college basketball (or Dawson's Creek), and Skylight has been a shining beacon of the state's vinegar-doused 'cue for 50+ years. If whole-hog pork -- don't skimp on the skin -- is your thing, Skylight is the must-visit BBQ mecca in the state. Hell, it even calls itself 'The Capital of Barbecue.' We're not going to fight that.",
+            "state": "NC",
+            "city": "Ayden",
+            "id": 35,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Red Pepper",
+            "description": "Described even by the owner as a 'classic hole in the wall,' the Red Pepper has satisfied UND students' late-night cravings for 40+ years. And basically nothing about it has changed in that time... kinda like Susan Sarandon's face. The Grinder -- a strange mash-up of white sauce, lettuce, hot sauce, Swiss, and taco meat, plus either ham, salami, or turkey -- is what's ordered here more than anything else.",
+            "state": "ND",
+            "city": "Grand Forks",
+            "id": 36,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "The Golden Lamb",
+            "description": "Staking a claim as Ohio's oldest continually operated business, this joint's got some serious history. Located between Cincinnati and the old National Rd, the hotel and restaurant welcomed everyone from railroad workers to 12 presidents, writers like Mark Twain and Chuck Dickens, and everyone in between. More importantly, the food's good. And yes, lamb is served in the ancient, historic joint.",
+            "state": "OH",
+            "city": "Lebanon",
+            "id": 37,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Cattlemen's Steakhouse",
+            "description": "OKC remains an active hub in the state's huge cattle industry, and Cattlemen's is the steakhouse beef-crazy Oklahomans have embraced since it operated as a bootlegging and gambling shop that also happened to serve food. Whether you're dining in Cattlemen's older cafe section or the newer steakhouse side (decked out in wood paneling and large Western murals of cattle and cowboys), you're getting one of the best steaks in the state at a place where the rib-eye is king. It's even open for breakfast, just like it was in the '30s. And of course you can order a steak for breakfast -- you'd be wrong not to.",
+            "state": "OK",
+            "city": "Oklahoma City",
+            "id": 38,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Huber's",
+            "description": "You wouldn't know it looking at the gorgeously preserved vaulted ceilings of Portland's oldest restaurant, but Huber's has been through a lot since opening in 1879. Best known for its traditional turkey dinners and tableside Spanish coffee shows, the place survived Prohibition and Portland's seedy days as a hub of human trafficking on the shoreline. It even made it through a gigantic flood, and stayed open the whole time, serving hungry and stranded workers who rowed up to its windows via boat. To this day, the turkey is the best in the city, though you'd be forgiven for getting a steak to go with that flaming coffee. No boat required.",
+            "state": "OR",
+            "city": "Portland",
+            "id": 39,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "DeLuca's",
+            "description": "Pittsburgh is the steel city in a state full of proud, hardworking people, and at DeLuca's you can eat like you just got off work at the steel factory, even if you work as a social media manager for a brand of paper towels. Of course, you'll have to wait in line, as this is a hungry city. Inside, you're greeted with spacious, uncomfortable booths, gaudy tiled floors, and a lunch counter you'd expect in a greasy spoon from the '50s. The menu is enormous: it serves up a million different types of omelets, a calorie-bomb burrito called the MOAB (Mother of All Burritos), pancakes, and crepes. Even a social media manager's gotta eat.",
+            "state": "PA",
+            "city": "Pittsburgh",
+            "id": 40,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Haven Brothers Diner",
+            "description": "Though the diner was arguably popularized in Jersey, Providence lays claim to its creation. There's nothing anywhere quite like Haven Bros, which dutifully parks its trailer next to City Hall in the early evening and stays open all night, feeding burgers, shakes, and hot dogs to everyone from politicians to the late-night bar crowd. There's not a ton of room inside, so most get the food to go, sit on the steps of City Hall, or chill at one of the tiny plastic tables outside. There's even a new documentary about the truck, in which the director claims that it's the 'last continually operating survivor of the legacy that began the fast food' and food truck trends. Hard to argue with that.",
+            "state": "RI",
+            "city": "Providence",
+            "id": 41,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Scott's Bar-B-Que",
+            "description": "Scott's isn't just one of the best BBQ spots in SC, it's one of our best BBQ spots in the country. The pork is what keeps South Carolinians (and people from all over these United States) coming back time and time again, and it's manned by the son of the guy who started the whole operation, so he's got a pretty big stake in making sure everything's up to par, year after year. The inside's about as no-frills as it gets, with a few tables and a fridge full of soda. But people don't go to Scott's for the atmosphere -- it's for a pound of BBQ with its spicy sauce and fried skins on the side. As good as it was in '72.",
+            "state": "SC",
+            "city": "Hemingway",
+            "id": 42,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Wall Drug",
+            "description": "You begin to see signs for it about 1,000 miles before you arrive in South Dakota. They promise free ice water. Five-cent coffee. A goddamned Tyrannosaurus rex! There are many, many, many finer restaurants in South Dakota, but none are as famous, for good or ill, as the one in Wall Drug. It's impossible to avoid the Badlands-bordering, 76,000sqft wonder of tourist-trapping randomness, so just go in. Hit the cafe and score a hot beef sandwich and a maple donut. It won't hold a candle to the many, many better food options in the state. But you will emerge with a 'Where the Heck is Wall Drug' sticker. You will have chased that sandwich with a T. rex viewing. And you'll be happy you stopped every time you see a roadside Wall Drug sign every five minutes for the next 300 miles",
+            "state": "SD",
+            "city": "Wall",
+            "id": 43,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Pancake Pantry",
+            "description": "There are actually two different Pancake Pantrys in TN, opened a few years apart from one another (strangely, they have different owners), but the one in Nashville is our pick for the most iconic. From the hordes of people who wait in line to be seated there like extras in a Portlandia episode, to its status as one of America's best breakfast spots, to the generations of Tennesseeans who have frequented the place, Pancake Pantry is legendary. The sweet potato pancakes with homemade cinnamon cream syrup are the flapjacks to get, though you can also go offbeat with the Sante Fe, a cornbread pancake with cheddar, bacon, and green chile cooked right into it. No matter which of the 23 varieties you choose, you can't go wrong.",
+            "state": "TN",
+            "city": "Nashville",
+            "id": 44,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Salt Lick",
+            "description": "There are no pits that smell quite as much like Texas as the Salt Lick. Although other smokers' stars have risen higher in recent years, Salt Lick remains the state's quintessential meat pilgrimage because it's just so damn Texan. The whole experience is like the slow unfurling of a Lone Star flag, from the 30-minute journey from Austin down farm-to-ranch roads to the sprawling, wide-open ranch estate to the same circular smoking pit that's been turning out spectacular meat since 1967. There's a reason it goes through over a million pounds of brisket a year, and that reason is Texas.",
+            "state": "TX",
+            "city": "Driftwood",
+            "id": 45,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Ruth's Diner",
+            "description": "While some diners are in buildings shaped to look like trolley cars, Ruth's is inside an actual trolley car that rolled its way around SLC in the early 1900s. Nowadays, it's home to an iconic breakfast spot (though it serves lunch and dinner too) with an enormous patio providing creek views and a perfect place to soak up the great outdoors. The setting isn't the only reason people have been continually visiting since the '30s -- the gigantic, mile-high biscuits help, too. They come with every entree, including an extraordinary pulled pork Benedict.",
+            "state": "UT",
+            "city": "Salt Lake City",
+            "id": 46,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "The Common Man",
+            "description": "Skiing and sustainability are two of the Vermontiest things about Vermont, so it's fitting that the state's most iconic restaurant is linked to both of them. For one, it's located in Warren, which skiers and riders know as the home of Sugarbush. And two, it's committed to sustainability, as Common Man sources most of its ingredients from local producers. Plus, it's in a barn. And not just any barn, but a mid-19th-century Vermont barn -- one that originally burned down in 1987.",
+            "state": "VT",
+            "city": "Warren",
+            "id": 47,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Pierce's Pitt Bar-B-Que",
+            "description": "Sometimes, greatness springs from desperation. When Pierce's opened, the guy hired to paint the sign inexplicably added an extra 't' to 'pit' -- and then had the cojones to want more money to fix it, which the owners did not have. So it stuck. That may have been the only setback Pierce's has ever experienced, as the once-tiny operation cooked between 450,000lbs of Boston butt over hickory and oak last year. Not bad for a cinder-block building on the side of a highway. Its Tennessee-style ketchup/vinegar sauce gives the pork a tangy kick. Virginians know a good thing when they taste it, and they've been supporting Pierce's since it opened in the '70s.",
+            "state": "VA",
+            "city": "Williamsburg",
+            "id": 48,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Canlis",
+            "description": "Canlis almost shouldn't work. It's perched awkwardly on the side of a hill next to a highway, it's one of the few fine-dining spots in decidedly casual Seattle, and it's still serving dishes from the '50s (if you give 'em 48 hours' notice). But once you're inside this quintessential northwest eatery, which was subtly remodeled last year and is currently searching for its sixth chef in 63 years, it is obvious why it does: first, there is the unique and breathtaking view over Seattle's Lake Union/Ship Canal. Then there's the classic, yet effortlessly current food, including the city's best steak -- just make sure you've got a jacket and something that's very rare in Seattle... a reservation.",
+            "state": "WA",
+            "city": "Seattle",
+            "id": 49,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Frostop Drive-In",
+            "description": "You know that uplifting movie We Are Marshall? The legendary Frostop is about a mile from the campus of Marshall University. And here at Frostop, legions of West Virginians have experienced the joy of having a carhop bring a slaw dog and some homemade root beer in a frosted glass right to your door. It's like a more efficient version of picking up food through a drive-thru, but this way you won't have to do that awkward reach out of your window.",
+            "state": "WV",
+            "city": "Huntington",
+            "id": 50,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": true,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "Franks Diner",
+            "description": "One thing to know about Franks is that 'the garbage plate' is especially popular, even today. If it was the '60s and you were working a manufacturing job way back when Kenosha had those sorts of gigs, it probably tasted even better. Those hardworking guys got off of third shift and tore into that lusty combination of hash browns, grilled peppers, onion, meat, and cheese. Of course it has cheese: it's Wisconsin. The 'half' version of the dish has three eggs in it. Did we mention that it's in Wisconsin? Another fun fact: Franks seats 55 people in a rail car-style building that was made that way because it was easier to ship on the rails, not because it was a former rail car",
+            "state": "WI",
+            "city": "Kenosha",
+            "id": 51,
+            "ameneties": {
+                "wheelchairAccessible": false,
+                "petFriendly": false,
+                "wifi": true,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        },
+        {
+            "businessName": "The Virginian",
+            "description": "Located in the historic (and wonderfully preserved) Occidental Hotel in the center of this charming little mountain town, the Virginian looks like it could easily serve as a set for an old-timey period piece with its stately decor and Old West vibe. But you can't get icon status for being purty. Luckily, you're in cattle country, and the Virginian serves up amazing steaks. You don't count Teddy Roosevelt among your fans if you mess up your rib-eye. Or your bison. Or your elk. Hell, could be the ghost of the old Bull Moose is still designing the menu",
+            "state": "WY",
+            "city": "Buffalo",
+            "id": 52,
+            "ameneties": {
+                "wheelchairAccessible": true,
+                "petFriendly": false,
+                "wifi": false,
+                "diaperFacility": true,
+                "playground": false,
+                "restrooms": true
+            }
+        }
+    ]
+}

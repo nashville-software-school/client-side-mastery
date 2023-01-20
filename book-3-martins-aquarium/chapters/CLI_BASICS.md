@@ -6,11 +6,11 @@
 * You should be able to create new files in the terminal with the `touch` command.
 * You should be able to navigate directories in the terminal with the `cd` command.
 
-Before you start writing code for any application, you want to set up the directory structure and create some initial files on the file system first. In this book of the NewForce course, you are going to build a web page to track the inventory of a rare fish aquarium.
+Before you start writing code for any application, you want to set up the directory structure and create some initial files on the file system first. In this book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
 
 You can watch the [Martin's Aquarium Directories and Files](https://www.youtube.com/watch?v=ogHzpf4Kelk) video that will also show you the basic terminal commands to use for this.
 
-Since all of the work you will be doing at NewForce will be contained in the `~/workspace` directory, you need to create a `martins-aquarium` subdirectory.
+Since all of the work you will be doing at NSS will be contained in the `~/workspace` directory, you need to create a `martins-aquarium` subdirectory.
 
 > If you don't have a workspace directory yet, go to your terminal and type in the following commands.
 >    1. `cd` - This always takes you to your home directory

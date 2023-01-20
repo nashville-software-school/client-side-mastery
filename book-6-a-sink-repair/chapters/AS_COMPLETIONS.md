@@ -23,7 +23,7 @@ export const fetchPlumbers = () => {
 Then update your `main.js` to request both resources using the following syntax. Notice the new `.then()` method which, in turn, invokes the `fetchPlumbers` function.
 
 ```js
-import { fetchRequests } from "./dataAccess.js"
+import { fetchPlumbers } from "./dataAccess.js"
 import { SinkRepair } from "./SinkRepair.js"
 
 
@@ -44,7 +44,7 @@ render()
 
 ## Double State for Display Plumbers
 
-Please place this `<select>` element inside of your `serviceRequest.map()` in your Requests.js.
+You can place this `<select>` element wherever is easiest to start. Don't worry about the exact placement, just make sure that it is displayed for each service request.
 
 Note that the value of each option in the select element has the primary key of the service request AND the primary key of the plumber delimited with 2 dashes. This is because you need to have both the request and the chosen plumber to mark a job complete.
 
@@ -74,7 +74,7 @@ mainContainer.addEventListener(
 
             /*
                 This object should have 3 properties
-                   1. serviceRequestId
+                   1. requestId
                    2. plumberId
                    3. date_created
             */

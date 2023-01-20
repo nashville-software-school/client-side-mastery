@@ -194,7 +194,7 @@ echo '<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>NewForce</title>
+        <title>Nashville Software School</title>
         <link rel="stylesheet" href="./styles/main.css">
     </head>
 

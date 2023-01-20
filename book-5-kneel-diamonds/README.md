@@ -2,7 +2,7 @@
 
 ## Core Chapters
 
-| # | 💎 💍  <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 <br/> Car Builder | 
+| # | 💎 💍  <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 <br/> Car Builder |
 |--|--|--|
 | 1 | [Kneel Diamonds](./chapters/KD_NARRATIVE.md) |  |
 | 2 | [Debugging Practice](./chapters/KD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> |  |
@@ -15,6 +15,14 @@
 | 9 | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Price Quotes](./chapters/CB_BUILD_COST.md) |
 | 🎓 | [Self-assessment](./chapters/BOOK_4_ASSESSMENT.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> |  |
 
+## 👩‍👩‍👧‍👦 Team Collaboration Projects
+
+| # | Project Name | Summary |
+|--|--|--|
+| 1 | [Khandescending Grill](https://codesandbox.io/s/book-5-khandescending-grill-9s402) | The owners of Khandescending Grill have asked you to build a Web based UI that allows customers to pick which foods they want in their bowl and place an order. |
+| 2 | [Build a Chimera](https://codesandbox.io/s/book-5-create-a-chimera-x6d1n) | In this fun project, you will be building a Web based UI that lets people build their own stuffed chimera for their kids. |
+
+
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
@@ -22,12 +30,6 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | # | 💎 💍  <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
 |--|--|--|
 | 1 | [Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
-
-## 🔐 Projects Unlocked
-
-| # | Project&nbsp;Name | Description |
-|--|--|--|
-|1|[Exomine](https://github.com/nss-group-projects/exomine)| Exomine is a group project that uses all of the skills you have worked with to this point in the course. Your knowledge of data relationships and array methods will be grown tremendously and challenged. Can you face the challenge with some teammates? |
 
 ## 🏕 Pioneer Chapters
 
@@ -37,3 +39,11 @@ Pioneer chapters let you develop Deep Learning on the concepts that you practice
 |--|--|--|
 | 1 | [User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) |  |
 | 2 | [Data Access Layer](./chapters/KD_DAL.md) |  |
+
+
+## 🔐 Deep Learning Projects Unlocked
+
+| # | Project&nbsp;Name | Description |
+|--|--|--|
+|1|[Exomine](https://github.com/nss-group-projects/exomine)| Exomine is a group project that uses all of the skills you have worked with to this point in the course. Your knowledge of data relationships and array methods will be grown tremendously and challenged. Can you face the challenge with some teammates? |
+

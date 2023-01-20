@@ -25,11 +25,11 @@ export const TicketEdit = () => {
 
 ## Making Tickets Editable
 
-Update **`TicketList`** JSX so that the ticket id is in the header, and is a `<Link>` component that routes the user to `/ticket/{id}/edit`
+Update **`TicketList`** JSX so that the ticket id is in the header, and is a `<Link>` component that routes the user to `/tickets/{id}/edit`
 
 ```html
 <header>
-    <Link to={`/tickets/${}/edit`}>Ticket {ticket.id}</Link>
+    <Link to={`/tickets/${ticket.id}/edit`}>Ticket {ticket.id}</Link>
 </header>
 <section>{ticket.description}</section>
 <footer>Emergency: {ticket.emergency ? "🧨" : "No"}</footer>

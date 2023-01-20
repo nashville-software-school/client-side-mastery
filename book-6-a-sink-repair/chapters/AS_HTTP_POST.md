@@ -19,7 +19,7 @@ export const sendRequest = (userServiceRequest) => {
     }
 
 
-    return fetch(`${API}/serviceRequests`, fetchOptions)
+    return fetch(`${API}/requests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
 
@@ -49,10 +49,10 @@ const mainContainer = document.querySelector("#container")
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "submitRequest") {
         // Get what the user typed into the form fields
-        const userDescription = document.querySelector("#serviceDescription").value
-        const userAddress = document.querySelector("#serviceAddress").value
-        const userBudget = document.querySelector("#serviceBudget").value
-        const userDate = document.querySelector("#serviceDate").value
+        const userDescription = document.querySelector("input[name='serviceDescription']").value
+        const userAddress = document.querySelector("input[name='serviceAddress']").value
+        const userBudget = document.querySelector("input[name='serviceBudget']").value
+        const userDate = document.querySelector("input[name='serviceDate']").value
 
         // Make an object out of the user input
         const dataToSendToAPI = {

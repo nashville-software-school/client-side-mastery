@@ -23,7 +23,7 @@ export const FishList = () => {
     const fishes = invokeTheRightFunctionHere()
 
     // Start building a string filled with HTML syntax
-    let htmlString = '<article class="fishList">'
+    const htmlString = '<article class="fishList">'
 
     // Create HTNL representations of each fish here
     for (const fish of fishes) {
@@ -49,7 +49,7 @@ export const FishList = () => {
 
 Since we want the fish to be immediately rendered when the page loads, then that falls within the responsibility of the `main.js` module. Import the list component into main and invoke the component function.
 
-> **`workspace/martins-aquarium/scripts/main.js`**
+> **`workspace/martins-aquarium/scripts/FishList.js`**
 
 ```js
 // Import the FishList function from the correct module

@@ -4,7 +4,7 @@ You are currently showing a simple message for each jewelry order. Natasha wants
 
 ## Finding the Metal Price
 
-Go to your code where you are generating the HTML representation of the orders (buildOrderListItem)  that customers place. Add the following code to find the price of the chosen metal.
+Go to your code where you are generating the HTML representation of the orders that customers place. Add the following code to find the price of the chosen metal.
 
 ```js
 const metals = getMetals()

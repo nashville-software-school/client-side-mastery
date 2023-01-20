@@ -1,0 +1,1 @@
+* Invoke a function on a value that isn't a string or an array

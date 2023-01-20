@@ -1,0 +1,1 @@
+* Common beginner mistakes of trying to access a member object's property directly on the array.

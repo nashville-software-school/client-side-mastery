@@ -1,47 +1,7 @@
 # Filtering Criminals by Crime
 
-In the last chapter, you build a dropdown menu of crimes. Right now the dropdown menu doesn't work, but that's about to change!
+In this chapter, you are going to implement the idea of the Event Hub from the last chapter and get your components talking to each other with messages.
 
-<<<<<<< HEAD:book-2-glassdale-pd/chapters/GLASSDALE_EVENT_HUB.md
-
-## Let's talk about Event Delegation
-
-When we've built event listeners before, we targed elements that were hard coded into the HTML. But what if we want to put an event listener on an element that is build dynamically with JavaScript?
-
-If we use the example code above and try to select our convictions dropdown, we'll get an error message.
-
-> **`glassdale/scripts/convictions/ConvictionSelect.js`**
-```js
-// This code won't work!!
-document.querySelector("#crimeSelect").addEventListener("change", (eventObject) => {
-    console.log("You selected something from the convictions dropdown")
-})
-
-```
-We run into trouble when JavaScript tries to place an event listener on an element that doesn't exist yet when the page initially loads. To get around this, we can put the event listener on a parent element that _definitely_ exists when the page loads. Let's use the `<body>` element that we hard coded into our HTML in Chapter One.
-
-> **`glassdale/scripts/convictions/ConvictionSelect.js`**
-```js
-// This won't throw an error, but it will fire any time there's a change event anywhere in the main container
-const eventHub = document.querySelector("body")
-eventHub.addEventListener("change", (eventObject) => {
-    console.log("You clicked somewhere in the body element")
-
-    // To be more specific, we need to know specifically what we clicked on
-    console.log("Here is the element you clicked on: ", eventObject.target)
-
-    if(event.target.id === "crimeSelect"){
-        console.log("You selected something from the crime dropdown")
-        console.log("This is the crime that was selected: ", eventObject.target.value)
-        // Your code goes here!
-    }
-})
-```
-Okay, we've gotten our event listener to work. What next?
-
-
-## Let's Talk About Filtering
-=======
 ## Before this chapter...
 
 - Arrays
@@ -49,7 +9,6 @@ Okay, we've gotten our event listener to work. What next?
 - Events
 
 ## Let's Talk About Filter
->>>>>>> upstream/master:projects/tier-3/glassdale/chapters/GLASSDALE_EVENT_HUB.md
 
 The `filter()` method on an array creates a brand new array with a subset of items that exist in the original array. Only items in the original array that pass the test can make it into the new, happy, much better array. Here's an example.
 
@@ -114,64 +73,89 @@ console.log(legalPatrons)
 ```
 
 
-## Filtering Criminals Based on Which Crime was Chosen
+## Implement Event Hub and Get Your Components Talking and Listening
 
-Here's where we left the event listener in our conviction select component:
+Time for your to implement the Event Hub, get components sending and listening to messages, and then filtering the list of criminals with the `filter()` array method.
 
 > **`glassdale/scripts/convictions/ConvictionSelect.js`**
 
 ```js
+/*
+    Which element in your HTML contains all components?
+    That's your Event Hub. Get a reference to it here.
+*/
+const eventHub = document.querySelector(you_fill_this_in)
+const contentTarget = document.querySelector(".filters__crime")
 
-const eventHub = document.querySelector("body")
+// On the event hub, listen for a "change" event.
+eventHub.addEventListener("change", event => {
 
-eventHub.addEventListener("change", (eventObject) => {
+    // Only do this if the `crimeSelect` element was changed
+    if (event.target.id === "crimeSelect") {
+        // Create custom event. Provide an appropriate name.
+        const customEvent = new CustomEvent("crimeChosen", {
+            detail: {
+                crimeThatWasChosen: event.target.value
+            }
+        })
 
-    if(event.target.id === "crimeSelect"){
-        console.log("You selected something from the crime dropdown")
-        console.log("This is the crime that was selected: ", eventObject.target.value)
-        // ---------- Your code goes here ----------- //
-        /*
-        - When we select a crime, we need to filter the criminals in CriminalList.
-        - Start by importing the CriminalList component at the top of this file.
-        - Then call CriminalList, and pass in information about the crime that was chosen
-        */
-
+        // Dispatch to event hub
+        eventHub.dispatchEvent(customEvent)
     }
 })
-```
 
-This also means that we need to refactor our CriminalList component to accept an optional argument of a crime. If no crime is passed in, we should render all of the criminals. If a crime is passed in, we should filter our list of criminals and only render criminals who committed that crime.
+
+const render = convictionsCollection => {
+    contentTarget.innerHTML = `
+        <select class="dropdown" id="crimeSelect">
+            <option value="0">Please select a crime...</option>
+            ... you wrote awesome code here ...
+        </select>
+    `
+}
+
+
+export const ConvictionSelect = () => {
+    getConvictions()
+        .then(() => {
+            const convictions = useConvictions()
+            render(convictions)
+        })
+}
+```
 
 > **`glassdale/scripts/criminal/CriminalList.js`**
 
 ```js
-export const CriminalList = (convictionFilter) => {
-  let criminalListContainer = document.querySelector(".criminal-list");
+const eventHub = document.querySelector(".container")
 
-  criminalListContainer.innerHTML = ""
+// Listen for the custom event you dispatched in ConvictionSelect
+eventHub.addEventListener('what custom event did you dispatch in ConvictionSelect?', event => {
+    // Use the property you added to the event detail.
+    if (event.detail.crimeThatWasChosen !== "0"){
+        /*
+            Filter the criminals application state down to the people that committed the crime
+        */
+        const matchingCriminals = appStateCriminals.filter()
 
-  getCriminals().then(() => {
-    let criminals = useCriminals();
-
-    // If we get input from the convictions filter, filter our criminals so that we only see ones with that conviction
-    if(convictionFilter){
-    
-      criminals = criminals.filter(singleCriminalInLoop => {
-      // write the condition here to filter for criminals whose crime matches the convictionFilter value
-      })
-
+        /*
+            Then invoke render() and pass the filtered collection as
+            an argument
+        */
     }
+})
 
-    // at this point, the value criminals will either be all of the criminals (if no convictionFilter was selected) or the criminals that match the crime selected 
-    // either way, we want to print them!
-    criminals.forEach((singleCriminal) => {
-      criminalListContainer.innerHTML += Criminal(singleCriminal);
-    });
-  });
-};
+const render = criminalCollection => {
+    contentTarget.innerHTML = you_fill_this_in
+}
+
+
+// Render ALL criminals initally
+export const CriminalList = () => {
+    getCriminals()
+        .then(() => {
+            const appStateCriminals = useCriminals()
+            render(appStateCriminals)
+        })
+}
 ```
-
-## Videos to Watch
-
-1. NewForce Learning Team video [Basic JavaScript Event Listeners](https://www.youtube.com/watch?v=4XvM096cQF4&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC&index=3)
-1. NewForce Learning Team video [JavaScript Event Listener Types](https://www.youtube.com/watch?v=5zlueGaybjc&index=4&list=PLX0ucpUE_qIOUsxGNEPpP9yonb4zerVIC)

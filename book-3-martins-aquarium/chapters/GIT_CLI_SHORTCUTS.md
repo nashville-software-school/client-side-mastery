@@ -4,13 +4,7 @@
 
 When working with the Git/Github workflow, there are several commands that you type over, and over, and over again. One of those is `git push origin myBranchName`. It becomes tedious to constantly type `git push origin`. Let's create an alias for it.
 
-<<<<<<< HEAD:book-1-martins-aquarium/chapters/GIT_CLI_SHORTCUTS.md
-> If you're on a mac, you will be doing all of this work in your `.zshrc` file. If you're on Windows, you will be doing this in your `.bashrc` file. 
-
-Open the `.zshrc` / `.bashrc` initialization file in Visual Studio Code, and enter in the following alias.
-=======
 Open your shell's initialization file (`.bashrc` or `.zshrc`) in Visual Studio Code, and enter in the following alias.
->>>>>>> upstream/master:book-3-martins-aquarium/chapters/GIT_CLI_SHORTCUTS.md
 
 `alias gpo="git push origin "`
 
@@ -18,15 +12,11 @@ Open your shell's initialization file (`.bashrc` or `.zshrc`) in Visual Studio C
 
 Save the file, and reload your init file with the `source` command.
 
-<<<<<<< HEAD:book-1-martins-aquarium/chapters/GIT_CLI_SHORTCUTS.md
-`source ~/.zshrc` or `source ~/.bashrc`
-=======
 `source ~/.bashrc`
 
 or
 
 `source ~/.zshrc`
->>>>>>> upstream/master:book-3-martins-aquarium/chapters/GIT_CLI_SHORTCUTS.md
 
 The next time you need to push a local branch to Github, you can use this alias to save yourself a lot of typing.
 
@@ -76,7 +66,7 @@ alias gcm="git commit -m "
 alias gb="git checkout -b "
 
 # Change the remote repository URL. This is useful when you
-# clone an instructors, or one of NewForce's boilerate, repositories
+# clone an instructors, or one of NSS's boilerate, repositories
 # and want to then have the code on your account and you don't
 # want to fork.
 #
@@ -89,11 +79,7 @@ changeorigin () {
 
 ## Adding to your Help Function
 
-<<<<<<< HEAD:book-1-martins-aquarium/chapters/GIT_CLI_SHORTCUTS.md
-Open `~/.zshrc`/ `.bashrc` and add some git commands to your help manual.
-=======
 Open your shell's initialization file and add some git commands to your help manual.
->>>>>>> upstream/master:book-3-martins-aquarium/chapters/GIT_CLI_SHORTCUTS.md
 
 ```sh
 help () {
