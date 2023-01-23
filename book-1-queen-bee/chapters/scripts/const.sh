@@ -18,40 +18,55 @@ echo 'const inventory = [
 ]
 
 const isBargain = (inventoryItem) => {
-    if (item.price < 50.00) {
-        return true
+    const returnValue = false
+
+    if (inventoryItem.price < 50.00) {
+        returnValue = true
     }
 
-    return false
+    return returnValue
 }
 
 const isClothing = (item) => {
-    if (item.clothing.type === "clothing") {
-        return true
+    const returnValue = false
+
+    if (item.type === "clothing") {
+        returnValue = true
     }
 
-    return false
+    return returnValue
 }
 
 const isGear = (gear) => {
-    if (gear.item.price === "surfboard") {
-        return true
+    const returnValue = false
+
+    if (gear.price === "surfboard") {
+        returnValue = true
     }
 
-    return false
+    return returnValue
 }
 
 for (const surfProduct of inventory) {
-    console.log(product.description)
+    const isSurfboard = true
+
+    if (isClothing(surfProduct)) {
+        surfProduct = `${surfProduct.description} is a clothing product`
+        isSurfboard = false
+    }
+
+    if (isGear(surfProduct)) {
+        surfProduct = `${surfProduct.description} is a surfing gear product`
+        isSurfboard = false
+    }
 
     if (isBargain(surfProduct)) {
-        console.log("\t* Is currently on sale")
+        surfProduct = `${surfProduct.description} is currently on sale`
+        isSurfboard = false
     }
-    if (isClothing(surfProduct)) {
-        console.log("\t* Is a clothing product")
-    }
-    if (isGear(surfProduct)) {
-        console.log("\t* Is a surfing gear product")
+
+    if (!isSurfboard) {
+        console.log(surfProduct)
     }
 }
 ' > undefined.js
