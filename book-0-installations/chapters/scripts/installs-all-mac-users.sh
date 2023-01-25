@@ -49,7 +49,10 @@ killall Finder
 # End Mac Specific
 
 # Set up Zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ZSH_FOLDER=$HOME/.oh-my-zsh
+if [ ! -d "$FOLDER" ]; then    
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 
 current_shell=$(echo $SHELL)
 if [ $current_shell == "/bin/bash" ];
@@ -63,15 +66,19 @@ then
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     ZSH_PATH=$(which zsh) 
     chsh -s $ZSH_PATH
+
+    new_shell=$(echo $SHELL)
+    if [ $new_shell != "$ZSH_PATH" ]; then
+      # The rest of the installs will not work if zsh is not the default shell
+      echo "Shell did not change to zsh. Reach out to an instructor before continuing"
+      exit
+    fi
 else
     echo "Already using zsh as default shell"
 fi
 
-new_shell=$(echo $SHELL)
 
-if [ $new_shell != "/bin/zsh" ]; then
-  echo "Shell did not change to zsh. Reach out to an instructor before continuing"
-  exit
+
 # End zsh set up
 
 # Set up git and github - Needs to be below the brew install
