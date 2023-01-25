@@ -17,6 +17,16 @@ echo 'const inventory = [
     { "id": 10, "description": "Surfboard repair kit", "price": 19.99, type: "surfboard" }
 ]
 
+const isSurfbaord = (item) => {
+    let returnValue = false
+
+    if (item.type === "surfboard") {
+        returnValue = true
+    }
+
+    return returnValue
+}
+
 const isBargain = (inventoryItem) => {
     const returnValue = false
 
@@ -40,7 +50,7 @@ const isClothing = (item) => {
 const isGear = (gear) => {
     const returnValue = false
 
-    if (gear.price === "surfboard") {
+    if (gear.type === "surfboard") {
         returnValue = true
     }
 
@@ -48,26 +58,27 @@ const isGear = (gear) => {
 }
 
 for (const surfProduct of inventory) {
-    const isSurfboard = true
+    const message = ""
 
     if (isClothing(surfProduct)) {
         surfProduct = `${surfProduct.description} is a clothing product`
-        isSurfboard = false
-    }
-
-    if (isGear(surfProduct)) {
-        surfProduct = `${surfProduct.description} is a surfing gear product`
-        isSurfboard = false
     }
 
     if (isBargain(surfProduct)) {
         surfProduct = `${surfProduct.description} is currently on sale`
-        isSurfboard = false
     }
 
-    if (!isSurfboard) {
-        console.log(surfProduct)
+    if (isSurfbaord(surfProduct)) {
+        surfProduct = `${surfProduct.description} is a surfboard`
+    }
+
+    if (isGear(surfProduct)) {
+        surfProduct = `${surfProduct.description} is a surfing gear product`
+    }
+
+    if (message !== "") {
+        console.log(message)
     }
 }
-' > undefined.js
+' > const.js
 

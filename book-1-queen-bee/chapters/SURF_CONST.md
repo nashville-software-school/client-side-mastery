@@ -19,18 +19,21 @@ You will immediately see a stack trace in the **Debug Console** at the bottom. Y
 
 Run the debugger every time you change the code to see if you have fixed the error.
 
-There are several errors in this code, so you must use your debugger to examine the values of your variables and parameters to help you understand why the error is occurring.
+There are several errors in this code, so you must use your debugger to examine the values of your variables and parameters to help you understand why the errors are occurring.
 
 ## Final Output
 
-Once you have debugged and fixed all of the errors, you should see the following outout in the **Debug Console**.
+Once you have debugged and fixed all of the errors, you should see the following output in the **Debug Console**.
 
 ```txt
+9 ft longboard surfboard is a surfboard
+5 ft shortboard surfboard is a surfboard
 Full wetsuit with hood and boots is a clothing product
 Surfboard leash is currently on sale
 Surf wax is currently on sale
 Surfboard fins is currently on sale
-Rashguard shirt is a clothing product
-Beach towel is a clothing product
+Rashguard shirt is currently on sale
+Surfboard rack for car is a surfing gear product
+Beach towel is currently on sale
 Surfboard repair kit is currently on sale
 ```

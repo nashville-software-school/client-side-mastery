@@ -1,0 +1,1 @@
+Move the data into a module and show import/export syntax

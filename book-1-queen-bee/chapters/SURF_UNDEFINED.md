@@ -18,7 +18,7 @@ There are several errors in this code, so you must use your debugger to examine 
 
 ## Final Output
 
-Once you have debugged and fixed all of the errors, you should see the following outout in the **Debug Console**.
+Once you have debugged and fixed all of the errors, you should see the following output in the **Debug Console**.
 
 ```txt
 9 ft longboard surfboard

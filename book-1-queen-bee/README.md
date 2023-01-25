@@ -12,8 +12,8 @@ In this book, you will develop your most important skill as a developer - debugg
 | 4 | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> | [Wave Function](./chapters/SURF_NOT_A_FUNCTION.md) | [Björn Tôrvold](./chapters/BJORN_INTRO.md)|  |
 | 5 | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | [Inventory Object](./chapters/SURF_OBJECT.md) | [Björn Tôrvold](./chapters/BJORN_INTRO.md) |  |
 | 6 | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub> | [Lost at Sea](./chapters/SURF_ARRAY_PROPERTIES.md) | [Björn Tôrvold](./chapters/BJORN_INTRO.md) |  |
-| 7 | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub> | [Surf Shop](./chapters/SURF_INTRO.md) | [Björn Tôrvold](./chapters/BJORN_INTRO.md) |
-| 8 | [Show Tribute By Queen](./chapters/QUEEN_QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Surf Shop](./chapters/SURF_INTRO.md) | [Björn Tôrvold](./chapters/BJORN_INTRO.md) |  |
+| 7 | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub> | [Just the Data](./chapters/SURF_DATA_MODULE.md) | [Björn Tôrvold](./chapters/BJORN_INTRO.md) |
+| 8 | [Show Tribute By Queen](./chapters/QUEEN_QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Just a Function](./chapters/SURF_FUNCTIONS_MODULE.md) | [Björn Tôrvold](./chapters/BJORN_INTRO.md) |  |
 | 🎓 |  |  | [Self-Assessment](./chapters/DEBUGGER_ASSESSMENT.md) |  |
 
 ## 🧭 Explorer Chapters
