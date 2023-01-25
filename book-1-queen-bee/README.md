@@ -1,14 +1,14 @@
-# Book 2 - Debugger Basics
+# Book 1 - Debugger Basics
 
 In this book, you will develop your most important skill as a developer - debugging. You will be writing your own code to implement features and using the debugger to watch how it executes, and you will also be working with pre-written code that has errors for you to debug.
 
 ## Chapters
 
-| #   |  :taco placeholder: <br/> Fundamentals <br/><sub>(_Start Here_)</sub> | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub> | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | Activate GitHub|
+| #   |  :taco: <br/> Fundamentals <br/><sub>(_Start Here_)</sub> | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub> | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | Activate GitHub|
 | --- | --- | --- | --- | --- |
-| 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> |  [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>| [Surf Shop](./chapters/SURF_INTRO.md) | *gitgoeshere* |
-| 2 | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Underwater Undefined](./chapters/SURF_UNDEFINED.md)| *git also goes here* |
-| 3 | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Constant Tide](./chapters/SURF_CONST.md) | +++ |
+| 1   | [Introduction to Variables](./chapters/VARIABLEs_INTRO_TACO.md) <br/> <sub style="font-size:0.85rem;">#fundamentals #variables</sub> |  [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>| [Surf Shop](./chapters/SURF_INTRO.md) | *gitgoeshere* |
+| 2 | [All About Arrays](./chapters/ARRAYS_INTRO) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Underwater Undefined](./chapters/SURF_UNDEFINED.md)| *git also goes here* |
+| 3 | [OBJECTS](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Constant Tide](./chapters/SURF_CONST.md) | +++ |
 | 4 | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> |  [Wave Function](./chapters/SURF_NOT_A_FUNCTION.md)| +++ |
 | 5 | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | [Inventory Object](./chapters/SURF_OBJECT.md) | +++ |
 | 6 | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub> | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub> | [Lost at Sea](./chapters/SURF_ARRAY_PROPERTIES.md) |  |
