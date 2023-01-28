@@ -55,16 +55,6 @@ Then use the following command, but instead of typing `mary.williams@gmail.com`,
 git config --global user.email "mary.williams@gmail.com"
 ```
 
-## Creating a Git Repository for Aquarium
-
-1. Navigate to your project directory
-    ```sh
-    cd ~/workspace/martins-aquarium
-    ```
-1. Type in the `git init` command
-1. You now have a git repository
-
 The magic is the `.git` directory that gets created when the `git init` command is executed. To see this directory you can use `ls -la`, which shows hidden files and directories.
 
 > Operating systems will not show files and directories that begin with a period by default. They are considered hidden, or system assets.
-

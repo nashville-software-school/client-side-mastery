@@ -1,4 +1,4 @@
-# Book 5 - Kneel Diamonds
+# Book 4 - Kneel Diamonds
 
 ## Core Chapters
 

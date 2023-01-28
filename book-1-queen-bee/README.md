@@ -1,10 +1,10 @@
-# Book 2 - Debugger Basics
+# Book 1 - Language Basics by Debugging
 
 In this book, you will develop your most important skill as a developer - debugging. You will be writing your own code to implement features and using the debugger to watch how it executes, and you will also be working with pre-written code that has errors for you to debug.
 
 ## Chapters
 
-| #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub> | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Bjorn To Be Wild | 🐜 <br/>Camila's Extermination Service |
+| #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub> | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild | 🐜 <br/>Camila's Extermination Service |
 | --- | --- | --- | --- | --- |
 | 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Surf Shop](./chapters/SURF_INTRO.md) | [Björn Tôrvold's Wilderness Adventures](./chapters/BJORN_INTRO.md) |  |
 | 2 | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Underwater Undefined](./chapters/SURF_UNDEFINED.md) | [Björn Tôrvold](./chapters/BJORN_INTRO.md) |  |

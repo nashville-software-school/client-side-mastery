@@ -1,4 +1,4 @@
-# Book 4 - DeShawn's Dog Walking Service
+# Book 3 - DeShawn's Dog Walking Service
 
 In this book, you will be introduced to three concepts.
 
