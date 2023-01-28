@@ -37,7 +37,7 @@ const isClothing = (item) => {
     return returnValue
 }
 
-const isSurfbaord = (item) => {
+const isSurfboard = (item) => {
     let returnValue = false
 
     if (item.type === "surfboard") {
@@ -76,7 +76,7 @@ for (let surfProduct of inventory) {
     }
 
 
-    if (isSurfbaord(surfProduct)) {
+    if (isSurfboard(surfProduct)) {
         message = `${surfProduct.description} is a surfboard`
     }
 

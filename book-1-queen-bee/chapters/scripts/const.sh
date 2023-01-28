@@ -17,7 +17,7 @@ echo 'const inventory = [
     { "id": 10, "description": "Surfboard repair kit", "price": 19.99, type: "surfboard" }
 ]
 
-const isSurfbaord = (item) => {
+const isSurfboard = (item) => {
     let returnValue = false
 
     if (item.type === "surfboard") {
@@ -68,7 +68,7 @@ for (const surfProduct of inventory) {
         surfProduct = `${surfProduct.description} is currently on sale`
     }
 
-    if (isSurfbaord(surfProduct)) {
+    if (isSurfboard(surfProduct)) {
         surfProduct = `${surfProduct.description} is a surfboard`
     }
 
