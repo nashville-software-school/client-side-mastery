@@ -1,5 +1,3 @@
-* Invoke a function on a value that isn't a string or an array
-
 # Sequina's Accounting
 
 Sequina recently hired an accounting form to handle all of her taxes and quaarterly sales reports. The accounting firm has special software that required all of the data to be upper case. No lower case letters are allowed.
