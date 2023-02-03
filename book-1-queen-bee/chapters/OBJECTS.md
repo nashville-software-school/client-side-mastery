@@ -235,6 +235,17 @@ console.log(kennel.currentAnimals[3])
 ## Practice: Accessing Property Values
 ---
 
+### Setup
+
+```sh
+cd
+cd workspace
+mkdir objects-intro
+cd objects-intro
+touch main.js
+code .
+```
+
 ### <u>#1:</u>
 Given the object below, output each of the values to your terminal using dot notation.
 ```js

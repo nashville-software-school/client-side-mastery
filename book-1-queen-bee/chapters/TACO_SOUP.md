@@ -1,14 +1,10 @@
-# Traveling Salesperson
 
-## Instructions
-
-In this exercise, you will be doing what you did in the last one, but you will need to write more code yourself. You can even open up the last exercise in another browser window so that you can easily look at that code, and write code here.
 
 ## Setup
 
 ```sh
 cd
-cd workspace
+cd ~/workspace
 mkdir taco-soup
 cd taco-soup
 touch main.js
