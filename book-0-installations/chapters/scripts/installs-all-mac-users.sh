@@ -76,9 +76,6 @@ then
 else
     echo "Already using zsh as default shell"
 fi
-
-
-
 # End zsh set up
 
 # Set up git and github - Needs to be below the brew install
@@ -92,14 +89,14 @@ if [ ! -f "$PUBLIC_KEY" ]; then
 fi
 
 echo -e "\n\nAdding your SSH key to your Github account..."
-PUBLIC_KEY_CONTENT=$(cat $PUBLIC_KEY)
+PUBLIC_KEY_CONTENT=$(cat $HOME/.ssh/id_nss.pub)
 curl \
   -X POST \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer $githubPassword"\
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/user/keys \
-  -d '{"key":"$PUBLIC_KEY_CONTENT","title":"NSS Automated Key"}'
+  -d "{\"key\":\"$PUBLIC_KEY_CONTENT\",\"title\":\"NSS Automated Key\"}"
 
 git config --global user.name "$studentName"
 git config --global user.email $emailAddress
