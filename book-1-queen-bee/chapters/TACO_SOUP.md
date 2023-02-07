@@ -18,47 +18,9 @@ git init
 code .
 ```
 
-## Starter Code
-
-```js
-// You fill in some sample weekly miles traveled in this array
-const weeklyMiles = [  ]
-
-// Declare a variable to store the total. Initial value is 0.
-
-/*
-	Iterate the array of miles with a for..of loop.
-	Add each mileage to the total mileage variable.
-*/
-for () {
-
-}
-
-// Declare a new variable to store the average miles over time
-
-// Output the average miles and the total miles to the console
-console.log()
-```
-
-## Run Your Code
-
-In your terminal, run your code with the following command.
-
-```sh
-node main.js
-```
-
-When you run the code, it should display the following, but with actual numbers instead of the `xxx`.
-
-```sh
-I average xxx miles each week.
-I have driven a total of xxx miles.
-```
 
 
-
-
-### 5. Harry Potter Titles
+### Harry Potter Titles
 - Copy and paste the following array into your JavaScript file:
 ```js
 var harryPotterTitles = ["and the Sorcerer's Stone", "and the Chamber of Secrets", "and the Prisoner of Azkaban", "and the Goblet of Fire", "and the Order of the Phoenix", "and the Half-Blood Prince", "and the Deathly Hallows"];
@@ -74,7 +36,7 @@ var harryPotterTitles = ["and the Sorcerer's Stone", "and the Chamber of Secrets
 "Harry Potter and the Deathly Hallows"
 ```
 
-### 6. Student Grades
+### Student Grades
 - Copy and paste the folowing array of grades into your JavaScript file:
 ```js
 var grades = [92, 91, 75, 66, 52, 90, 83, 85, 64, 90, 72, 88, 77, 98, 100, 73, 92]
@@ -86,7 +48,16 @@ var grades = [92, 91, 75, 66, 52, 90, 83, 85, 64, 90, 72, 88, 77, 98, 100, 73, 9
     - If it's between 84 and 92, log "You got a B" to the console.
     - If it's between 93 and 100, log "You got an A" to the console.
 
-### 7. Two, Four, Six, Eight  - Who do we appreciate?! CHEER
+### Student Grades: Part 2
+Utilizing the array from the student grades exercise above, each entry in the array represents a different student's percentage grade for the entire course:
+
+Use JavaScript to answer the following questions:
+  1. How many students got A's?
+  1. How many students got B's?
+  1. Which was the most common letter grade?
+  1. What was the average percentage grade in the class?
+
+### Two, Four, Six, Eight  - Who do we appreciate?! CHEER
 1. Write a loop that counts by 2's and creates the following output.
 
 ##### Output
@@ -97,38 +68,63 @@ var grades = [92, 91, 75, 66, 52, 90, 83, 85, 64, 90, 72, 88, 77, 98, 100, 73, 9
 8
 Who do we appreciate?!
 
-### 8. Student Grades Take Two
-
-- Copy and paste the folowing array of grades into your JavaScript file:
-```js
-var grades = [92, 91, 75, 66, 52, 90, 83, 85, 64, 90, 72, 88, 77, 98, 100, 73, 92]
-```
-Loop through the grades with a for loop.  Use an if statement to find the highest and lowest grades and then write them to the console.
-
-
-### 9. Interrupting Cow
+### Interrupting Cow
 1. Copy and paste the following array into your JavaScript file:
 ```js
 var sentenceArray = ["the", "cow", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon"];
 ```
 
-3. Write a loop that builds `sentenceArray` into a real sentence, except every fourth word should be "MOOOOOO". Hint: look up the [modulus operator](https://www.w3schools.com/js/js_arithmetic.asp).
-4. Print your sentence ot the console.
+2. Write a loop that builds `sentenceArray` into a real sentence, except every fourth word should be "MOOOOOO". Hint: look up the [modulus operator](https://www.w3schools.com/js/js_arithmetic.asp).
+3. Run your sentence to the terminal.
 
 #### Output:
 ```
 the cow danced MOOOOOOOO through the trees MOOOOOOOO in the light MOOOOOOOO of the moon
 ```
 
-### 10. Student Grades
-Take the following array from the student grades exercise above. Each entry in the array represents a different student's percentage grade for the entire course:
+### The Beatles
+Given the following object...
+
 ```js
-var grades = [92, 91, 75, 66, 52, 90, 83, 85, 64, 90, 72, 88, 77, 98, 100, 73, 92]
+const beatles = {
+    albums: ["Abbey Road", "Sgt Peppers Lonely Heart's Club Band", "Revolver", "Magical Mystery Tour"],
+    history: {
+        formed: 1960,
+        disbanded: 1970
+    },
+    members: [
+        {
+            name: "George Harrison",
+            birth: 1943,
+            death: 2001
+        },
+        {
+            name: "Paul McCartney",
+            birth: 1942,
+            death: null
+        },
+        {
+            name: "John Lennon",
+            birth: 1940,
+            death: 1980
+        },
+        {
+            name: "Ringo Starr",
+            birth: 1940,
+            death: null
+        }
+    ]
+}
 ```
-Use JavaScript to answer the following questions:
-  1. How many students got A's?
-  1. How many students got B's?
-  1. Which was the most common letter grade?
-  1. What was the average percentage grade in the class?
 
+Output the following values to the terminal.
 
+```text
+${name} was in the Beatles from ${year} to ${year}. He was born in ${year}. He contributed heavily to the ${albumName} Album.
+
+Please note that these values are not correct. They're just placeholders that you will need to correctly fill out. 
+```
+
+## Push (and Shove) it to Github
+
+Once finished with the exercises, please push them up to GitHub like we have in the last two chapters.

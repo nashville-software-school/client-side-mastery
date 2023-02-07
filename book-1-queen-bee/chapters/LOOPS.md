@@ -104,22 +104,22 @@ var cohortOneStudents = ["Sable", "David", "Joey", "Nick", "Tommy", "Connor", "C
 
 #### Output:
 ```
-One of my interests is: hiking.
+One of my interests is: reading.
 One of my interests is: coding.
-One of my interests is: math.
-One of my interests is: 30 Rock.
-One of my interests is: pizza.
+One of my interests is: crying at videos of soldiers reuniting with dogs.
+One of my interests is: The Marvelous Mrs. Maisel.
+One of my interests is: cryptids.
 ```
 
 ### 3. Favorite Interest
 - Refactor your loop from the previous exercise. Pick one of your interests as your absolute favorite interest. Add a conditional to your loop to check if each interest in the array is your favorite. When the loop gets to your favorite interest, it should print `"My absolute favorite interest is:"` followed by the name of your interest. Any other interests can be printed the same way that they were in the previous exercise.
 ##### Output:
 ```
-One of my interests is: hiking.
+One of my interests is: reading.
 My absolute favorite interest is: coding.
-One of my interests is: math.
-One of my interests is: 30 Rock.
-One of my interests is: pizza.
+One of my interests is: crying at videos of soldiers reuniting with dogs.
+One of my interests is: The Marvelous Mrs. Maisel.
+One of my interests is: cryptids.
 ```
 ## Push it (Real Good) to Github
 ---
