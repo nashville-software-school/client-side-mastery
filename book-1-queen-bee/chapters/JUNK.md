@@ -252,3 +252,33 @@ addExcitement(sentence, "*", 4)
 > The walrus danced**** through the trees**** in
 >
 > etc..
+
+
+***
+## Lightning Exercise
+### Psychotic Bird
+In your JavaScript file, write a while loop that outputs the phrase "TWEET TWEET" 100 times to the console.
+***
+***
+## Lightning Exercise
+### Psychotic Bird: For Loop Edition
+In your JavaScript, write a for loop that outputs the phrase "TWEET TWEET TWEET" 100 times to the console.
+
+### Favorite Foods
+- In your JavaScript, create a new variable called `favoriteFoods`. It should store an array of strings representing five of your favorite foods.
+- Loop through the array and print each food item to the console.
+***
+
+***
+## Lightning Exercise
+### Bon Voyage!
+1. In your JavaScript file, declare a new variable called `likesToTravel` and set it equal to `true` or `false`.
+1. If `likesToTravel` is true, log "Bon voyage!" to the console. If not, log "Enjoy your couch!" to the console.
+***
+
+***
+## Lightning Exercise
+### Fried Pickles are the Best 
+1. In your JavaScript file, declare a new variable called `favoriteFood` and set it equal to your favorite food. 
+1. Write a conditional that checks to see if the `favoriteFood` variable is equal to `"fried pickles"` OR "pepperoni rolls". If so, log `"Congratulations! You have excellent taste!"` to the console. Otherwise, log `"Clearly you have not tried fried pickles or pepperoni rolls."` to the console. 
+***
