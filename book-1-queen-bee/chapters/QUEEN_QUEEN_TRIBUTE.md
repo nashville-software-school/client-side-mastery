@@ -17,10 +17,45 @@ At the end of this chapter you should be able to...
 
 This first video talks about nested loops, and why that logic is needed for this chapter. Once you are done watching it, write the same code in your `main.js` module.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/kGLzdJaGEaQufUSqThU9)
+[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/kGLzdJaGEaQufUSqThU9)+
+
+<details>
+    <summary>Code</summary>
+
+
+```js
+// iterate the queen objects to show tribute for each one
+for (const queenObject of queens) {
+
+for (const tributeObject of tributeChest) {
+
+}
+}
+```
+</details>
 
 The next video walks through how to use the power of the debugger to help you determine what logic you need to write. Then it explains how to use an `if` statement to check if two values are the same, and if so, run some conditional logic.
 
 Once you are done watching it, write the same code in your `main.js` module.
 
 [<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/hpBX2f5IJZab30CpP8cy)
+
+<details>
+    <summary>Code</summary>
+
+
+```js
+// iterate the queenObject to show tribute for each one
+for (const queenObject of queens) {
+
+//each queenObject will look at every tributeObject to see if it is hers
+for (const tributeObject of tributeChest) {
+ console.log(tributeObject)
+
+ if (tributeObject.queenId === queenObject.id) {
+ console.log(`${} has tribute ${}`)
+ }
+}
+}
+```
+</details>

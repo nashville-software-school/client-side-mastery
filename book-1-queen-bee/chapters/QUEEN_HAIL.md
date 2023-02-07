@@ -20,6 +20,7 @@ cd ~/workspace
 mkdir majesty
 cd majesty
 touch main.js
+git init
 code .
 ```
 
