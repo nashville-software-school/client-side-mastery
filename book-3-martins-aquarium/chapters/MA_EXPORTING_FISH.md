@@ -20,7 +20,7 @@ Don't worry about understanding all of the syntax here. Just remember that it co
 
 ```js
 export const getFish = () => {
-    return database.fish.map(fish => ({...fish}))
+    return database.fish.map(copyOfSingleFishObject => ({...copyOfSingleFishObject}))
 }
 ```
 
@@ -35,8 +35,8 @@ import { getFish } from './database.js'
 
 const allFish = getFish()
 
-for (const fish of allFish) {
-    console.log(fish)
+for (const singleFish of allFish) {
+    console.log(singleFish)
 }
 ```
 Now, you're ready to see if your fish print to the console. But, first you'll need to tell your browser to load and run your javascript. To do that, add a `<script>` tag to `index.html`, right above the closing `<body>` tag.

@@ -1,4 +1,4 @@
-# Book 3 - Martin's Aquarium
+# Book 2 - Martin's Aquarium
 
 The main learning goal for this book is the use of `git` and Github for versioning your code as you develop applications.
 
@@ -12,11 +12,10 @@ The main learning goal for this book is the use of `git` and Github for versioni
 | 4   | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md) <br/> <sub style="font-size:0.85rem;">#html #design #properties</sub>                       |
 | 5   | [Git Setup](./chapters/GIT_SETUP.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub>                                                       |
 | 6   | [Git Workflow](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub>                                                   |
-| 7   | [Github Setup](./chapters/GIT_REMOTE_BACKUP.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub>                                            |
-| 8   | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub>                            |
-| 9   | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md)                                                                                           |
-| 10  | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md)                                                                                                   |
-| 11  | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md)                                                                           |
+| 7   | [Github Workflow for Team Aquarium](./chapters/GIT_WORKFLOW.md) <br/> <sub style="font-size:0.85rem;">#git #github</sub>                            |
+| 8   | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md)                                                                                           |
+| 9  | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md)                                                                                                   |
+| 10  | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md)                                                                           |
 | 🎓  | [Self Assessment](../projects/tier-1/modern-farm/)                                                                                                  |
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects

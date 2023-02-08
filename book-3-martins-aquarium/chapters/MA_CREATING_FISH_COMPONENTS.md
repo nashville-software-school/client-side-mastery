@@ -26,16 +26,16 @@ export const FishList = () => {
     const htmlString = '<article class="fishList">'
 
     // Create HTNL representations of each fish here
-    for (const fish of fishes) {
+    for (const singleFish of fishes) {
 
         // Why is there a backtick used for this string?
         htmlString += `<section class="fish card">
-            <div><img  class="fish__image image--card" src="${fish.image}" /></div>
-            <div class="fish__name">${fish.name}</div>
-            <div class="fish__species">${fish.species}</div>
-            <div class="fish__length">${fish.length}</div>
-            <div class="fish__location">${fish.location}</div>
-            <div class="fish__diet">${fish.food}</div>
+            <div><img  class="fish__image image--card" src="${singleFish.image}" /></div>
+            <div class="fish__name">${singleFish.name}</div>
+            <div class="fish__species">${singleFish.species}</div>
+            <div class="fish__length">${singleFish.length}</div>
+            <div class="fish__location">${singleFish.location}</div>
+            <div class="fish__diet">${singleFish.food}</div>
         </section>
 `
     }

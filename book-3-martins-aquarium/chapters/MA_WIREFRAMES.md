@@ -21,7 +21,7 @@ Ok, enough talk, time to see what a wireframe looks like.
 
 ### Low Fidelity Wireframe
 
-Here is one that was developed by one of your predecessors for her capstone project. Note how the elements are just boxes or text. Nothing extra included, like colors, styling, or animations to confuse you.
+Here is one that was developed for a capstone project. Note how the elements are just boxes or text. Nothing extra included, like colors, styling, or animations to confuse you.
 
 ![](./images/low-fidelity-wireframe.png)
 
@@ -36,7 +36,7 @@ Note how each view of her application was clearly defined with low fidelity. The
 ![](./images/capstone-wireframe.png)
 
 ### Learn from Successful Students
-
+---
 Here is a great example from a group project team that was assigned to build a complex application that had many views. This team took the time to clearly understand which views they needed, which content would be displayed on each, the layout of the content, and how interactions would work.
 
 It took them 1.5 days to plan their project. It then took them 3 days to implement it, to completion.

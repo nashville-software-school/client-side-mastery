@@ -20,7 +20,7 @@ What is a component and how do HTML elements apply to the concept? Look at the i
 ![semantic tags](./images/html-semantic-tags.png)
 
 ## CSS Naming Conventions
-
+---
 Styling components intelligently can be handled through naming your classes according to the component name. One popular convention is the [BEM method](http://getbem.com/introduction/).
 
 If you were creating an HTML component that represents you, here's an example of how the code would look using HTML semantic elements and BEM class names.
@@ -74,7 +74,7 @@ Now you can style any HTML component with a class of `interest` and they will al
 ![](./images/sally-initial-css.png)
 
 ## Grid Layout with Flexbox
-
+---
 Flexbox is a tool that you can use in CSS to take the structure of your HTML and apply interesting layouts for it. One of the most common layout types is a grid, and it's straightforward to do with Flexbox.
 
 Unfortunately, these Flexbox properties are hard to remember, so you should come back to this chapter and review them whenever you need to use Flexbox to make a grid layout.
@@ -166,7 +166,7 @@ The final touch is to center align the text in each of the interest boxes.
 
 
 ## Practice: Coffee Houses of Nashville
-
+---
 > The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
 
 ```html
@@ -207,10 +207,11 @@ To see the changes you've made in Chrome: In the terminal with this this folder 
 
 
 ## Practice: Flexbox Froggie
+---
 [Flexbox Froggie](http://flexboxfroggy.com/) - online game with 24 challenges.
 
 ## Practice: Congressional Representative
-
+---
 You're going to create an HTML component to represent a political candidate. Specifically, the representative of your Congressional district. Visit the GovTrack site link below, enter in your home address, and you'll find basic information about your representative.
 
 [GovTrack - Congressional District Map](https://www.govtrack.us/congress/members/map)
@@ -221,6 +222,12 @@ You're going to create an HTML component to represent a political candidate. Spe
 1. The last component will hold links to any legislation that your representative has enacted.
 
 Make sure you use good BEM-style class names for each element in your components. Put a comment above each component explaining what it is.
+
+## If you're feeling it
+--- 
+There are a couple challenges below that will help you understand UI/UX better. PLEASE remember, when we finish our projects they do not have to look like a designer has created it. We just want it to have the feel of that clean girl aesthetic. Minimal, no white backgrounds (cream, light grey, light blue) with CONTRASTING font colors (black, navy, charcoal) that are EASILY legible and doesn't feel like you're looking into the sun when it pops up on a page. 
+<details>
+<summary> CHALLENGES </summary>
 
 ## Congressional Representative UI/UX Challenge
 
@@ -253,6 +260,8 @@ Creating visual hierarchies.
 1. Since you are defining several styles for the coffee shop component, write the CSS in `shop.css` and use `@import` to include those styles in the main CSS file.
 
 Background color/image - ensure the copy (text color) has good contrast and is legible. Use the Dev Tools to inspect your color choices. (see dev tool image above).
+
+</details>
 
 ## Additional References
 

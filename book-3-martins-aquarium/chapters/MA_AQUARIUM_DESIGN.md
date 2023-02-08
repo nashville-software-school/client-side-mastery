@@ -24,7 +24,7 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 >
 > Martin leans forward and put his hands on the table, "Actually yes. On the _'Fish Upon A Star'_ site, they had this content on the right side of the list of fish that explained the process of keeping the tank clean and the water at the right salinity and temperature. I'd love to have that so I can put my thoughts in there."
 >
-> You take notes as he talks and make sure that you jot down the you will need an `<aside>` element on that page.
+> You take notes as he talks and make sure that you jot down that you will need an `<aside>` element on that page.
 >
 > "All the sites had a navigation bar at the top. I'd like to have a navigation bar. Were you planning on having a navigation bar?" It's clear the way Martin places an emphasis on _navigation bar_ that he's proud that he knows what that's called.
 >
@@ -55,8 +55,6 @@ Let's build a couple HTML pages whose user will be an avid rare fish collector w
 ## Goal
 
 Use `index.html` to build a web page that lists fish, quotes, harvesting locations, and fish/tank care tips on the right side of the page. You will accomplish it by first decomposing the site into smaller components. You will be using your wireframing tool that you signed up for in the previous chapter.
-
-If you want to start with [pencil and paper](https://alessiobresciani.com/digital-marketing/use-pen-and-paper-wireframe-tools-to-create-incredible-user-experiences/), that's also perfectly fine.
 
 The more time you spend in the design stage, the less code you need to write.
 
