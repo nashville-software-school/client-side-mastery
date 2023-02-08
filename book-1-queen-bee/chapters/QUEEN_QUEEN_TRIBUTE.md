@@ -59,3 +59,7 @@ for (const tributeObject of tributeChest) {
 }
 ```
 </details>
+
+## *** Friendly Reminder ***
+
+Please, push this exercise up to your GitHub by following the same steps you did in Column 1 Chapter 5, 6, and 7. Here is the last time this handy dandy guide will be linked in the curriculum because by now you have surely bookmarked this and do not have it just open in one of your endless tabs in one of your multiple windows. [Git Solo Workflow ](./GITHUB_FLOW.md)
