@@ -1,4 +1,4 @@
-# HTML Components
+# 2. HTML Structure & Layout with Sally's Interests 
 
 ## Why Are You Learning This?
 

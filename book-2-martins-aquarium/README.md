@@ -16,7 +16,7 @@ The main learning goal for this book is the use of `git` and Github for versioni
 | 8   | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md)                                                                                           |
 | 9  | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md)                                                                                                   |
 | 10  | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md)                                                                           |
-| 🎓  | [Self Assessment](../projects/tier-1/modern-farm/)                                                                                                  |
+|                                                                                                   |
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects
 
@@ -35,6 +35,7 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | 2   | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
 | 3   | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md)|
 | 4   | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
+| 5   | [Challenge Exercise](../projects/tier-1/modern-farm/)
 
 ## 🔐 Deep Learning Projects Unlocked
 

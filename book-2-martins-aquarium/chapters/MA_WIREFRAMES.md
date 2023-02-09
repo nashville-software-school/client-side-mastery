@@ -1,4 +1,4 @@
-# Planning Before Coding: Wireframes
+# 3. Wireframes for User Interfaces
 
 Planning before you code leads to success.
 

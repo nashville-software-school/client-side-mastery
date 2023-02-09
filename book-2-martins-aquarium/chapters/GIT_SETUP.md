@@ -1,4 +1,4 @@
-# Setting up Git for Martin's
+# 5. Git Setup for Martin's
 
 ## Why Are You Learning This?
 

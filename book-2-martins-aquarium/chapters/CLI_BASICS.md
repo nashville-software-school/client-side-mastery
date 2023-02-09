@@ -1,4 +1,4 @@
-# Setting Up Your Project
+# 1. Project Setup
 
 ## Learning Objectives
 

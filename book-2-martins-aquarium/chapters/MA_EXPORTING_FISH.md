@@ -1,4 +1,4 @@
-# Using the Database
+# 9. Exporting Fish
 
 A database module in an application has the responsibility of maintaining the state of a particular type of data. In this application, the `database.js` module holds the state of each fish. Other modules in the application can request that state, and then use it for whatever they are responsible for.
 

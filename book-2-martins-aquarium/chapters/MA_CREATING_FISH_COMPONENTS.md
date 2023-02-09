@@ -1,4 +1,4 @@
-# Automating Martin's Website
+# 10. HTML Representation of Data
 
 Now that you have a module whose responsibility is to maintain the state of your application, now you need to convert that raw data into HTML representations and render them in the browser. In this chapter you will automate the creation of the HTML list of fish from the objects in your fish collection, so that you never have to copy/paste the HTML directly when a fish dies, or a fish is added.
 
