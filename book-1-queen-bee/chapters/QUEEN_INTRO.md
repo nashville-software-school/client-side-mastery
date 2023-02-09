@@ -1,4 +1,4 @@
-# Functions
+# 1. Introduction to Functions
 
 Functions are the heart and soul of JavaScript developers. Everything that a modern application does is done in a function. An application can have hundreds, possibly thousands, of tasks that it must perform to solve a problem or provide a service to humans. Each one of those tasks is in a function.
 

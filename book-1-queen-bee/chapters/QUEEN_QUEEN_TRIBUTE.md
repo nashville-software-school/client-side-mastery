@@ -1,4 +1,4 @@
-# The Queen's Nest
+# 10. Show Tribute by Queen
 
 In this chapter, you are going to practice iterating the items in arrays again. This time, however, you will be writing a `for..of` loop **inside** another `for..of` loop.
 

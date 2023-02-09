@@ -1,4 +1,4 @@
-# Your Majesty
+# 2. Her Majesty Function
 
 ## Learning Objectives
 

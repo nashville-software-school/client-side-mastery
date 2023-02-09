@@ -1,4 +1,4 @@
-# Objects
+# 3. Objects
 
 ## What is an Object
 ---

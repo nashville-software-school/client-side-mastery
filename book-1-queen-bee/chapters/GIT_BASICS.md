@@ -1,4 +1,4 @@
-# Setting up Git
+# 4. Git
 
 ## Why Are You Learning This?
 ---

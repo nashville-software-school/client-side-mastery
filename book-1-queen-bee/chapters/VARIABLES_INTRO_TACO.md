@@ -1,4 +1,6 @@
-# Let's Taco about Variables
+# 1. Introduction to Variables
+
+## Let's Taco about Variables
 
 JavaScript is the programming language of the web. This is how we'll make our web pages *do* things:
 - Respond to clicks

@@ -1,3 +1,5 @@
+# 2. All About Arrays
+
 ## Arrays (a.k.a. collections of things)
 
 In software, values don't only have to be assigned individually to variables.

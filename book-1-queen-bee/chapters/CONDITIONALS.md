@@ -1,4 +1,4 @@
-# JavaScript Conditionals
+# 6. Conditionals
 Conditionals decide whether or not pieces of code should run.
 ```js
 if(2+2 === 4){

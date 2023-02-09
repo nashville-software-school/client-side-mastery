@@ -1,4 +1,4 @@
-# Taco Soup
+# 7. Taco Soup
 
 ## Time to add everything together and practice!
 

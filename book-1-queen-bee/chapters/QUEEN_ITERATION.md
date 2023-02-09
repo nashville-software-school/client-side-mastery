@@ -1,4 +1,4 @@
-# Hail All Queens
+# 6. Iterating the Queens
 
 In this chapter, you are going to iterate the queens array to hail each one.
 

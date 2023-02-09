@@ -1,4 +1,4 @@
-# Loops
+# 5. Loops
 
 We've dealt with a few situations where we wanted to do something to every item in an array (log it to the console, etc). We purposefully kept our arrays short, but we won't always have that luxury.
 
