@@ -1,4 +1,4 @@
-# Event Listener to Show Service Area
+# 4. Show Walker Service Area
 
 ## Overview of JavaScript Events
 
@@ -51,15 +51,15 @@ document.addEventListener(
                 Now that you have the primary key of a walker object,
                 find the whole object by iterating the walkers array.
             */
-            for (const walker of walkers) {
+            for (const walkerObject of walkers) {
 
                 /*
                     Compare the primary key of each walker to the one
                     you have. As soon as you find the right one, display
                     the window alert message.
                 */
-                if (walker.id === parseInt(walkerId)) {
-                    window.alert(`${walker.name} services ${walker.city}`)
+                if (walkerObject.id === parseInt(walkerId)) {
+                    window.alert(`${walkerObject.name} services ${walkerObject.city}`)
                 }
             }
         }
@@ -70,7 +70,7 @@ document.addEventListener(
 Inside the `for..of` loop in the existing code, update the line of code to be the following code.
 
 ```js
-walkerHTML += `<li id="walker--${walker.id}">${walker.name}</li>`
+walkerHTML += `<li id="walker--${walkerObject.id}">${walkerObject.name}</li>`
 ```
 
 Refresh your browser to load the new code.

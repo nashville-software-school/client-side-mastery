@@ -1,4 +1,4 @@
-# Navigating ERD Relationships
+# 6. Navigating ERD Relationships
 
 In this chapter, you will write code that will iterate two arrays of data to find the information you need. When you click on a pet name, you want to display the name of the pet, and the name of the person who walks the pet.
 

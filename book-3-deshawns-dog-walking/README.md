@@ -1,4 +1,4 @@
-# Book 4 - DeShawn's Dog Walking Service
+# Book 3 - DeShawn's Dog Walking Service
 
 In this book, you will be introduced to three concepts.
 
@@ -18,7 +18,6 @@ In this book, you will be introduced to three concepts.
 | 6 | [Navigating ERD Relationships](./chapters/DD_FIND_DOG_WALKER.md) <br/> <sub style="font-size:0.85rem;">#one-to-many</sub> |  |  |
 | 7 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> |  |  |
 | 8 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#many-to-many #data</sub> |  |  |
-| 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | | |
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects
 
@@ -35,6 +34,7 @@ Explorer chapters are optional, and give you the opportunity to expand on the Co
 |--|--|--|--|
 | 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) | [Band Member Bios](./chapters/TOUR_BAND_MEMBERS.md) |
 | 2 | [City State](./chapters/DD_CITY_STATE_.md) | | |
+| 3 | [Exercise Challenge](./chapters/BOOK_3_ASSESSMENT.md) | | |
 
 ## 🔐 Deep Learning Group Projects Unlocked
 

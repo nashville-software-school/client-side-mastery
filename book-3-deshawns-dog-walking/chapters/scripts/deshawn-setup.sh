@@ -195,11 +195,11 @@ const database = {
 }
 
 export const getWalkers = () => {
-    return database.walkers.map(walker => ({...walker}))
+    return database.walkers.map(copyOfSingleWalker => ({...copyOfSingleWalker}))
 }
 
 export const getPets = () => {
-    return database.pets.map(pet => ({...pet}))
+    return database.pets.map(copyOfSinglePet => ({...copyOfSinglePet}))
 }
 ' > ./scripts/database.js
 
@@ -210,8 +210,8 @@ const pets = getPets()
 export const RegisteredPets = () => {
     let petHTML = "<ul>"
 
-    for (const pet of pets) {
-        petHTML += `<li>${pet.name}</li>`
+    for (const singlePet of pets) {
+        petHTML += `<li>${singlePet.name}</li>`
     }
 
     petHTML += "</ul>"
@@ -228,8 +228,8 @@ const walkers = getWalkers()
 export const Walkers = () => {
     let walkerHTML = "<ul>"
 
-    for (const walker of walkers) {
-        walkerHTML += `<li>${walker.fullName}</li>`
+    for (const singleWalker of walkers) {
+        walkerHTML += `<li>${singleWalker.fullName}</li>`
     }
 
     walkerHTML += "</ul>"
@@ -245,7 +245,7 @@ const walkers = getWalker()
 export const CityList = () => {
     let citiesHTML = "<ol>"
 
-    for (const walker of walkers) {
+    for (const singleWalker of walkers) {
         citiesHTML += `<li>${currentWalker.city}</li>`
     }
 
@@ -266,8 +266,8 @@ const walkers = getWalkers()
 const findWalker = (pet, allWalker) => {
     let petWalker = null
 
-    for (const walker of allWalkers) {
-        if (walker.id === pet.walkerId) {
+    for (const singleWalker of allWalkers) {
+        if (singleWalker.id === pet.walkerId) {
             petWalker = walker
         }
     }
