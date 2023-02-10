@@ -36,7 +36,7 @@
 In this chapter, you will be refactoring your application to implement a new button on each criminal representation. The button must be labeled "Associate Alibis". Give each button a unique id by interpolating the `id` property of the criminal in the value.
 
 ```html
-<button id="associates--${criminal.id}">Known Associates</button>
+<button id="associates--${criminal.id}">Associate Alibis</button>
 ```
 
 When the user clicks the button, you must iterate the array of `known_associates` for that criminal and then display the following information. You can display it in a dialog box, as a sidebar, at the top of the screen, or wherever you like.
@@ -50,6 +50,7 @@ If any of the alibis for some of your suspects are noteworthy, then make sure yo
 
 1. Which components do you need to create for this feature?
 1. Where is the data coming from in the API? Do you need a new provider?
-1. Which component should listen for the click event on the Alibis button?
-1. What should happen when the button is clicked?
+1. Which component should dispatch a custom event when the user clicks on the alibi button?
+1. Which component should react to that custom event?
+1. Does data need to be send along with the event?
 1. Which DOM element would contain the list of alibis? Do you need a new one, or can they go in an existing one?

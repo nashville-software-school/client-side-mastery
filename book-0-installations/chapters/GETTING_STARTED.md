@@ -6,7 +6,7 @@ Get a nice journal and a comfortable pen, and start keeping a daily journal of w
 
 ## Hardware
 
-Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending NewForce you will have that power. Go buy a backup drive _**RIGHT NOW**_ and start backing up your entire hard drive.
+Up until now, you didn't have the power to destroy your machine, but within the first two weeks of attending Nashville Software School you will have that power. Go buy a backup drive _**RIGHT NOW**_ and start backing up your entire hard drive.
 
 **Seriously, _right now!_**
 

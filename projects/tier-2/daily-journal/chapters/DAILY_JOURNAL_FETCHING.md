@@ -6,10 +6,6 @@ Your learning objective in this chapter is to set up JSON Server to store the da
 
 The [json-server](https://github.com/typicode/json-server) library was written to allow developers to quickly build an API to use as persistant storage while developing applications. You are going to expose your journal entries via an API, request that API over HTTP, and then populate your DOM when the data comes back in a response.
 
-<<<<<<< HEAD:book-2-glassdale-pd/chapters/DAILY_JOURNAL_FETCHING.md
-
-=======
->>>>>>> upstream/master:projects/tier-2/daily-journal/chapters/DAILY_JOURNAL_FETCHING.md
 ### Journal Entries as JSON
 
 In the root directory, create a new directory in your project named `api`, and create a new file in that directory named `database.json`.
@@ -77,6 +73,3 @@ export const getEntries = () => {
 Once you have your fetch written correctly, refresh your browser and go to the Network tab in your dev tools. You will see an entry labeled `fetch`. If you click on that request, you can preview the response.
 
 ![](./images/qqipDG07AL.gif)
-
-## Printing the Response
-Once you've confirmed that the data is coming back correctly from your `fetch`, call the printer functions you wrote in previous Daily Journal exercises to print the data from your json-server API to the DOM.

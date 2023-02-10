@@ -50,38 +50,36 @@ In this book, you will be using your _fancy coding skills_ to review all of the 
     1. `~/workspace/glassdale/scripts/officers`
     1. `~/workspace/glassdale/styles`
 1. Create your `scripts/main.js`, and `styles/main.css` files.
-<<<<<<< HEAD:book-2-glassdale-pd/chapters/GLASSDALE_PD_INTRO.md
-1. Run the command `npm i -g json-server` to install a tool we'll use later. If you get any error messages, come see an instructor.
-=======
->>>>>>> upstream/master:projects/tier-3/glassdale/chapters/GLASSDALE_PD_INTRO.md
 1. Make an `index.html` file in `~/workspace/glassdale` directory. You are provided some boilerplate HTML below to place in that file.
 1. Start your web server and verify that you get that HTML in Chrome.
 
 #### Boilerplate HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <meta charset="utf-8">
     <title>Glassdale PD</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body>
 
+    <main class="container">
+        <header>
+            <div class="filters">
+                <div class="filter filters__crime"></div>
+                <div class="filter filters__incarceration"></div>
+                <div class="filter filters__officer"></div>
+            </div>
+        </header>
+        <article class="criminalsContainer"></article>
+    </main>
 
-    <section class="criminals">
-        <h2>Criminals</h2>
-        <div class="convictions-select-container"></div>
-        <div class="criminal-list flex-container">
-
-        </div>
-    </section>
-
-
-
-    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>
 ```
