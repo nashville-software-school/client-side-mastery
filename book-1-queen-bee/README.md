@@ -19,7 +19,7 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 
 | # | 🎓  Self-Assessment |
 | --- | --- |
-|  | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) |
+| 1 | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) |
 
 ## 🧭 Explorer Chapters
 
