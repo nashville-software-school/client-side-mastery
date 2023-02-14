@@ -73,7 +73,7 @@ The magic is the `.git` directory that gets created when the `git init` command 
 
 ## Status
 ---
-The `git status` command is your BFF when working with git. It will always tell you the current status of your code. There is no such thing and typing `git status` too many times.
+The `git status` command is your BFF when working with git. It will always tell you the current status of your code. There is no such thing as typing `git status` too many times.
 
 As a professional developer, I use `git status` nearly 100% of the time when I'm working through the process of changing and committing code to history.
 
@@ -87,11 +87,11 @@ As you work on your files, git will immediately mark them as changed. Remember, 
 git status
 ```
 
-Since git tracks all changes - unless you tell it to ignore some files, which we will cover later - your two new files will be recognized as new, untracked files by git.
+Since git tracks all changes - unless you tell it to ignore some files, which we will cover later - your file will be recognized as a new, untracked file by git.
 
 Next, tell git that you want to start tracking those files with `git add .` command. The period means "add all untracked files from this directory, and any sub-directories". But be careful! Using the add . command means you're adding all untracked files. It's a good habit, at least for the time being, to type git status after using this command to make sure you're not adding something you didn't expect.
 
-So, go ahead and type `git status` again and git will have a new messages that those two files are ready to be committed.
+So, go ahead and type `git status` again and git will have a new messages that you file is ready to be committed.
 
 Next, you need to commit your changes. Every time you make a commit, git will keep track of how the code looked at that moment in time, in case you ever need to go back to a previous version. You commit your changes with the following command.
 
