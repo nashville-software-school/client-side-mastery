@@ -89,7 +89,7 @@ git status
 
 Since git tracks all changes - unless you tell it to ignore some files, which we will cover later - your two new files will be recognized as new, untracked files by git.
 
-Next, tell git that you want to start tracking those files with `git add . command`. The period means "add all untracked files from this directory, and any sub-directories". But be careful! Using the add . command means you're adding all untracked files. It's a good habit, at least for the time being, to type git status after using this command to make sure you're not adding something you didn't expect.
+Next, tell git that you want to start tracking those files with `git add .` command. The period means "add all untracked files from this directory, and any sub-directories". But be careful! Using the add . command means you're adding all untracked files. It's a good habit, at least for the time being, to type git status after using this command to make sure you're not adding something you didn't expect.
 
 So, go ahead and type `git status` again and git will have a new messages that those two files are ready to be committed.
 
