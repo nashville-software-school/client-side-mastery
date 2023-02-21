@@ -166,7 +166,13 @@ The final touch is to center align the text in each of the interest boxes.
 
 
 ## Practice: Coffee Houses of Nashville
----
+
+If the serve command doesn't work, please enter this command in your terminal
+`npm install --global serve`
+
+If it still doesn't work, come see an instructor!
+
+
 > The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
 
 ```html
