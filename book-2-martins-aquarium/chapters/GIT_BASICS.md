@@ -82,16 +82,10 @@ The first thing you need to do is create a new repository on Github's platform t
 1. Log into your Github account.
 1. Click the `+` sign in the top right corner.
 1. Choose "New repository".
-1. In the "Repository name" field, enter in `nss-aquarium`.
+1. In the "Repository name" field, enter in `newforce-aquarium`.
 1. Scroll down and click the green "Create Repository" button.
-1. **Make sure the SSH button is selected**, and copy the repository's connection string.
-    ![](./images/copy-github-connection-string.gif)
-1. In your terminal, in the Martin's Aquarium directory, enter in the following commands.
-    ```sh
-    git remote add origin {paste what you copied above, but not these curly braces}
-    git branch -M main
-    git push -u origin main
-    ```
+1. You will be directed towards a quick set up page. Please copy the commands in the …or push an existing repository from the command line block of code.
+1. In your terminal, paste the commands you copied. You can either right click and select paste or hit shift + insert
 
 Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your aquarium HTML, JavaScript and CSS files in it.
 
