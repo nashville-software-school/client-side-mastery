@@ -32,7 +32,7 @@ The diamond sizes are generated in a way that is both completely different, and 
 const listItemsArray = sizes.map(
     (size) => {
         return `<li>
-            <input type="radio" name="size" value="${size.id}" /> ${size.carets}
+            <input type="radio" name="size" value="${size.id}" /> ${size.carats}
         </li>`
     }
 )
@@ -48,7 +48,7 @@ This function.
 ```js
 (size) => {
     return `<li>
-        <input type="radio" name="size" value="${size.id}" /> ${size.carets}
+        <input type="radio" name="size" value="${size.id}" /> ${size.carats}
     </li>`
 }
 ```
@@ -61,11 +61,11 @@ So an _object_ comes into your function, and a _string_ gets returned. That stri
 
 ```js
 [
-    { id: 1, carets: 0.5, price: 405 },
-    { id: 2, carets: 0.75, price: 782 },
-    { id: 3, carets: 1, price: 1470 },
-    { id: 4, carets: 1.5, price: 1997 },
-    { id: 5, carets: 2, price: 3638 }
+    { id: 1, carats: 0.5, price: 405 },
+    { id: 2, carats: 0.75, price: 782 },
+    { id: 3, carats: 1, price: 1470 },
+    { id: 4, carats: 1.5, price: 1997 },
+    { id: 5, carats: 2, price: 3638 }
 ]
 ```
 

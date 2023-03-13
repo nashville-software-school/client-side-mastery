@@ -40,15 +40,15 @@ const metals = [
 ]
 ```
 
-Gems are a bit tricky, you discovered, as you read the information in the binder. Intead of price following a straightforward formula per caret, it increased as the caret got larger. A one carat stone costs more than double the cost of a half carat stone. Again, two carat stones will cost significantly more.
+Gems are a bit tricky, you discovered, as you read the information in the binder. Intead of price following a straightforward formula per carat, it increased as the carat got larger. A one carat stone costs more than double the cost of a half carat stone. Again, two carat stones will cost significantly more.
 
 ```js
 const diamonds = [
-    { carets: 0.5, price: 405 },
-    { carets: 0.75, price: 782 },
-    { carets: 1, price: 1470 },
-    { carets: 1.5, price: 1997 },
-    { carets: 2, price: 3638 }
+    { carats: 0.5, price: 405 },
+    { carats: 0.75, price: 782 },
+    { carats: 1, price: 1470 },
+    { carats: 1.5, price: 1997 },
+    { carats: 2, price: 3638 }
 ]
 ```
 
