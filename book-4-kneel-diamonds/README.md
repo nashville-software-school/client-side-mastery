@@ -1,4 +1,4 @@
-# Book 5 - Kneel Diamonds
+# Book 4 - Kneel Diamonds
 
 ## Core Chapters
 
@@ -13,7 +13,7 @@
 | 7 | [Saving Chosen Style and Size](./chapters/KD_SETTING_OTHER_STATE.md) <br/> <sub style="font-size:0.85rem;">#data #objects</sub> | [Saving Chosen Options](./chapters/CB_SETTING_STATE.md) |
 | 8 | [Automatically Display New Orders](./chapters/KD_STATECHANGED_EVENT.md) <br/> <sub style="font-size:0.85rem;">#events #custom</sub> | [Construction Queue](./chapters/CB_SHOWING_UPDATED_STATE.md) |
 | 9 | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> | [Price Quotes](./chapters/CB_BUILD_COST.md) |
-| 🎓 | [Self-assessment](./chapters/BOOK_4_ASSESSMENT.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> |  |
+
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects
 
@@ -30,6 +30,7 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | # | 💎 💍  <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
 |--|--|--|
 | 1 | [Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
+| 2 | [Assessment Challenge](./chapters/BOOK_4_ASSESSMENT.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> |  |
 
 ## 🏕 Pioneer Chapters
 
