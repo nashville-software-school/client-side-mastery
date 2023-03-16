@@ -1,6 +1,6 @@
 # Sequina's Surf Shop
 
-<img src="./images/sequina.png" width="300px" align="left" />
+<img src="./images/sequina.png" width="250px" align="left" />
 
 In this project, you will be debugging code that another developer has previously written. Your job is to use your debugger skills to understand where the error occurred, understand the error message itself, find a resolution for the error, and then test your solution.
 
