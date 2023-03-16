@@ -15,7 +15,7 @@ You will quickly discover some of the mistakes he made, but some of the mistakes
 
 1. Run the following command in your terminal. It will automatically create a `workspace/wilderness` directory for you, and create a file in that directory named `adventures.js`, and navigate you to that directory.
    ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/book-1-queen-bee/chapters/scripts/undefined.sh)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/book-1-queen-bee/chapters/scripts/adventure.sh)"
    ```
 2. Open the directory in VS Code with the `code .` command.
 3. Open the `adventures.js` file.
@@ -42,6 +42,19 @@ You should see the following output.
 *****              T R A I L S                *****
 ***************************************************
 We service 45.54 miles of wilderness trails across the US
+Process exited with code 1
+Uncaught ReferenceError ReferenceError: shortestTrail is not defined
+    at <anonymous> (/Users/you/workspace/cohort64/björn/chapter_01.js:462:20)
+    at Module._compile (internal/modules/cjs/loader:1239:14)
+    at Module._extensions..js (internal/modules/cjs/loader:1293:10)
+    at Module.load (internal/modules/cjs/loader:1096:32)
+    at Module._load (internal/modules/cjs/loader:935:12)
+    at executeUserEntryPoint (internal/modules/run_main:84:12)
+    at <anonymous> (internal/main/run_main_module:23:47)
 ```
 
-Björn knows that his company offers tours of nearly 717 miles of trails across the country. Your first task is to discover why the output does not reflect that.
+## Your First Tasks
+
+1. Björn knows that his company offers tours of nearly 717 kilometers of trails across the country.
+2. The shortest trail they offer tours of is 6.6 kilometers, but he can't get that to show up.
+3. The longest trail is 49.2 kilometers. Björn believes he has the right code for it, but since the shortest trail won't work, he can't verify if the longest code is correct.
