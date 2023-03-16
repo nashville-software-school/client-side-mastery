@@ -9,9 +9,9 @@ In this book, you will develop your most important skill as a developer - debugg
 | 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Surf Shop](./chapters/SURF_INTRO.md) | [Björn Tôrvold's Wilderness Adventures](./chapters/BJORN_INTRO.md) |
 | 2 | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Underwater Undefined](./chapters/SURF_UNDEFINED.md) | [River Tours](./chapters/BJORN_RIVERS.md) |
 | 3 | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Constant Tide](./chapters/SURF_CONST.md) | [Trail Tour Prices](./chapters/BJORN_PRICE_RANGES.md)|
-| 4 | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> | [Wave Function](./chapters/SURF_NOT_A_FUNCTION.md) | [Rover Tour Breakdown](./chapters/BJORN_RIVER_PRICE_RANGES.md) |
-| 5 | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | [Lost at Sea](./chapters/SURF_ARRAY_PROPERTIES.md) | [Presentation to Björn](./chapters/BJORN_CLEANUP.md) |
-| 6 | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub> | [Just the Data](./chapters/SURF_DATA_MODULE.md) | |
+| 4 | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> | [Wave Function](./chapters/SURF_NOT_A_FUNCTION.md) | [River Tour Breakdown](./chapters/BJORN_RIVER_PRICE_RANGES.md) |
+| 5 | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | [Lost at Sea](./chapters/SURF_ARRAY_PROPERTIES.md) | [Tour Details](./chapters/BJORN_TOUR_DETAILS.md) |
+| 6 | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub> | [Just the Data](./chapters/SURF_DATA_MODULE.md) | [Presentation to Björn](./chapters/BJORN_CLEANUP.md) |
 | 7 | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub> | [Just a Function](./chapters/SURF_FUNCTIONS_MODULE.md) | |
 | 8 | [Show Tribute By Queen](./chapters/QUEEN_QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> |  |  |
 
