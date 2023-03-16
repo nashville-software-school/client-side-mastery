@@ -13,11 +13,35 @@ You will quickly discover some of the mistakes he made, but some of the mistakes
 
 ## Getting Started
 
-1. Run the following command in your terminal. It will automatically create a `workspace/surf-shop` directory for you, and create a file in that directory named `undefined.js`, and take you to that directory.
+1. Run the following command in your terminal. It will automatically create a `workspace/wilderness` directory for you, and create a file in that directory named `adventures.js`, and navigate you to that directory.
    ```sh
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/book-1-queen-bee/chapters/scripts/undefined.sh)"
    ```
 2. Open the directory in VS Code with the `code .` command.
-3. Open the `undefined.js` file.
+3. Open the `adventures.js` file.
 4. Run the code with your debugger.
 
+You should see the following output.
+
+```sh
+   B J Ö R N ' S   W I L D N E R N E S S   A D V E N T U R E S
+   ***********************************************************
+
+                                                        ###
+        ______                                         #o###
+       /     /\     (              ______            #####o###
+      /     /  \     )            /     /\          #o#\#|#/###
+     /_____/----\_    (          /     /  \          ###\|/#o#
+    "     "          ).         /_____/----\_         # }|{  #
+   _ ___          O (:') o      "  "     "   "          }|{
+  (@))_))        O ~/~~\~ o                             }|{
+                  o     O                          ____/   \____
+                     O
+
+***************************************************
+*****              T R A I L S                *****
+***************************************************
+We service 45.54 miles of wilderness trails across the US
+```
+
+Björn knows that his company offers tours of nearly 717 miles of trails across the country. Your first task is to discover why the output does not reflect that.
