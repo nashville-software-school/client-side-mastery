@@ -4,16 +4,16 @@ In this book, you will develop your most important skill as a developer - debugg
 
 ## Chapters
 
-| #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub> | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild | 🐜 <br/>Camila's Extermination Service |
-| --- | --- | --- | --- | --- |
-| 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Surf Shop](./chapters/SURF_INTRO.md) | [Björn Tôrvold's Wilderness Adventures](./chapters/BJORN_INTRO.md) | [Camila's Extermination](./chapters/CAMILA_INTRO.md) |
-| 2 | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Underwater Undefined](./chapters/SURF_UNDEFINED.md) | [River Tours](./chapters/BJORN_RIVERS.md) | [Camila's](./chapters/CAMILA_INTRO.md) |
-| 3 | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Constant Tide](./chapters/SURF_CONST.md) | [Wildlife Tours](./chapters/BJORN_WILDLIFE.md)| [Camila's](./chapters/CAMILA_INTRO.md) |
-| 4 | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> | [Wave Function](./chapters/SURF_NOT_A_FUNCTION.md) | [Zipline Excursions](./chapters/BJORN_ZIPLINES.md) | [Camila's](./chapters/CAMILA_INTRO.md) |
-| 5 | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | [Lost at Sea](./chapters/SURF_ARRAY_PROPERTIES.md) |  | [Camila's](./chapters/CAMILA_INTRO.md) |
-| 6 | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub> | [Just the Data](./chapters/SURF_DATA_MODULE.md) |  |  |
-| 7 | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub> | [Just a Function](./chapters/SURF_FUNCTIONS_MODULE.md) |  |
-| 8 | [Show Tribute By Queen](./chapters/QUEEN_QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> |  |  |  |
+| #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub> | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild |
+| --- | --- | --- | --- |
+| 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Surf Shop](./chapters/SURF_INTRO.md) | [Björn Tôrvold's Wilderness Adventures](./chapters/BJORN_INTRO.md) |
+| 2 | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> | [Underwater Undefined](./chapters/SURF_UNDEFINED.md) | [River Tours](./chapters/BJORN_RIVERS.md) |
+| 3 | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | [Constant Tide](./chapters/SURF_CONST.md) | [Wildlife Tours](./chapters/BJORN_WILDLIFE.md)|
+| 4 | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> | [Wave Function](./chapters/SURF_NOT_A_FUNCTION.md) | [Zipline Excursions](./chapters/BJORN_ZIPLINES.md) |
+| 5 | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | [Lost at Sea](./chapters/SURF_ARRAY_PROPERTIES.md) | |
+| 6 | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub> | [Just the Data](./chapters/SURF_DATA_MODULE.md) | |
+| 7 | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub> | [Just a Function](./chapters/SURF_FUNCTIONS_MODULE.md) | |
+| 8 | [Show Tribute By Queen](./chapters/QUEEN_QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> |  |  |
 
 Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
 

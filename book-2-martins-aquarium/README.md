@@ -28,7 +28,13 @@ You will be referring back to these chapters throughout the entire course as you
 | 9   |  |  | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
 | 10  |  |
 | 11  |   |
-| 🎓  | [Self Assessment](../projects/tier-1/modern-farm/) |
+
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+
+| # | 🎓  Self-Assessment |
+| --- | --- |
+| 1 | [Self-Assess Your JavaScript Fundamentals](../projects/tier-1/modern-farm/) |
+
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects
 
