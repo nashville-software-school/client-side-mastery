@@ -41,3 +41,12 @@ Pioneer chapters are **optional** and let you develop Deep Learning on the conce
 | 1 |  |  |  |
 | 2 |  |  |  |
 | 3 |  |  |  |
+
+## 🔐 Deep Learning Group Projects Unlocked
+
+When you have completed all of the core chapters, you will work on a group project with other teammates who have also completed them. Group projects deepen your communication and collaboration Core Skills.
+
+| # | Project Name | Description |
+|--|--|--|
+|1|[🐡 🍣 <br/> Fish Fusion](../projects/tier-1/fish-fusion/README.md)| In this project, you are going to build a purchasing pipeline for a bargain fish restaurant in your city. From sea to boat to monger to restaurant. |
+

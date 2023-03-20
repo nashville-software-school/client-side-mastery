@@ -32,7 +32,7 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 
 | # | Project Name | Summary |
 |--|--|--|
-| 1 | [Gnome Mercy](https://codesandbox.io/s/book-6-gnome-mercy-uqyoy?file=/README.md:28-326) | A group of industrious forests gnomes has been busy for years making potions and elixirs for local witches and wizards. They have had difficulties keeping track of all the requests for their products. They want us to build an application where they can enter in requests to be stored in a database. <br/><br/> [Watch the setup video](https://watch.screencastify.com/v/dRLOfyWx9HCGQtARVtLw) for configuring your CodeSandbox fork|
+| 1 | [Gnome Mercy](https://github.com/nss-group-projects/book-6-gnome-mercy) | A group of industrious forests gnomes has been busy for years making potions and elixirs for local witches and wizards. They have had difficulties keeping track of all the requests for their products. They want us to build an application where they can enter in requests to be stored in a database.|
 
 ## 🔐 Deep Learning Projects Unlocked
 

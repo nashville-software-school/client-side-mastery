@@ -19,8 +19,8 @@
 
 | # | Project Name | Summary |
 |--|--|--|
-| 1 | [Khandescending Grill](https://codesandbox.io/s/book-5-khandescending-grill-9s402) | The owners of Khandescending Grill have asked you to build a Web based UI that allows customers to pick which foods they want in their bowl and place an order. |
-| 2 | [Build a Chimera](https://codesandbox.io/s/book-5-create-a-chimera-x6d1n) | In this fun project, you will be building a Web based UI that lets people build their own stuffed chimera for their kids. |
+| 1 | [Khandescending Grill](https://github.com/nss-group-projects/book-5-khandescending-grill) | The owners of Khandescending Grill have asked you to build a Web based UI that allows customers to pick which foods they want in their bowl and place an order. |
+| 2 | [Build a Chimera](https://github.com/nss-group-projects/book-5-create-a-chimera) | In this fun project, you will be building a Web based UI that lets people build their own stuffed chimera for their kids. |
 
 
 ## 🧭 Explorer Chapters

@@ -40,8 +40,8 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 
 | #   | Project Name  | Summary  |
 | --- | --- | --- |
-| 1   | [Spring Hill Zoo](https://codesandbox.io/s/book-3-spring-hill-zoo-7sn1z9?file=/src/main.js)                  | You will be building a modular Web application that lists all of the animals in each exhibit currently at the Spring Hill Zoo. It will also list all concession stands.                                          |
-| 2   | [Beyonce's Tour Dates](https://codesandbox.io/s/book-3-beyonce-tour-dates-b3x0pi?file=/src/index.js:272-321) | You will be building a modular Web application that converts your raw data objects into HTML to show a list of Beyonce tour dates in the browser. It will display the opening bands, and the cities on the tour. |
+| 1   | Spring Hill Zoo | You will be building a modular Web application that lists all of the animals in each exhibit currently at the Spring Hill Zoo. It will also list all concession stands.                                          |
+| 2   | Beyonce's Tour Dates | You will be building a modular Web application that converts your raw data objects into HTML to show a list of Beyonce tour dates in the browser. It will display the opening bands for each stop on the tour, and the cities on the tour. |
 
 ## 🧭 Explorer Chapters
 
