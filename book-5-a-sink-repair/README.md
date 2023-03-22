@@ -1,4 +1,4 @@
-# Book 6 - A Sink Repair Service
+# Book 5 - A Sink Repair Service
 
 In this book, you will be introduced to the basics of asynchronous programming and working with Web APIs. This book marks the end of your Vanilla JavaScript education. There are many projects and topics of exploration available to you before you begin your React journey.
 
@@ -12,10 +12,9 @@ In this book, you will be introduced to the basics of asynchronous programming a
 | 4 | [Listing Past Requests](./chapters/AS_FETCH_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET</sub> |
 | 5 | [Requesting Service](./chapters/AS_USER_INPUT.md) <br/> <sub style="font-size:0.85rem;">#input #form-fields</sub> |  |
 | 6 | [Submitting Service Request](./chapters/AS_HTTP_POST.md) <br/> <sub style="font-size:0.85rem;">#POST #fetch #JSON</sub> | [Reserving Buttons](./chapters/BC_RESERVATION_POST.md) |
-| 7 | [Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> | [Buttons' Schedule](./chapters/BC_SCHEDULE_LIST.md) |
+| 7 | [Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> | [Buttons's Schedule](./chapters/BC_SCHEDULE_LIST.md) |
 | 8 | [Denying Service Requests](./chapters/AS_HTTP_DELETE.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #DELETE</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) |
 | 9 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md)<br/> <sub style="font-size:0.85rem;">#fetch #then-chaining | [The Party is Over](./chapters/BC_PERFORMANCE_COMPLETE.md) |
-| 🎓 | [Self-assessment](./chapters/BOOK_5_ASSESSMENT.md) |  |
 
 ## 🧭 Explorer Chapters
 
@@ -26,6 +25,7 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | 1 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) | [Sorting Completed Parties](./chapters/BC_SORT_BY_COMPLETE.md) | Learn how to [deploy your API to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) for free |
 | 2 | | | Learn how to [deploy your client to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) for free |
 | 3 | | | Visit the [API Supplementary Book](../supplement-api/README.md) to learn more about tools to interact with APIs and dig into the concept of REST |
+| 4 | [Self-assessment](./chapters/BOOK_5_ASSESSMENT.md) |  |
 
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects

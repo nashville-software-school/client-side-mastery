@@ -1,4 +1,6 @@
-# Hire Buttons and Lollipop the Clowns
+# Hire a Clown for Your Next Party
+
+## Buttons and Lollipop the Clowns
 
 ![](./images/buttons.jpeg)
 

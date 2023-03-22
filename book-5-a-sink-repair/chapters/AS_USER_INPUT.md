@@ -1,4 +1,6 @@
-# Collecting User Input
+# Requesting Service
+
+## Collecting User Input
 
 HTML input fields are how you collect user data. Time for you to define some fields to collect the information from a user that Maude and Merle want about a service request.
 
