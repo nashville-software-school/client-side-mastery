@@ -116,11 +116,12 @@ export const SinkRepair = () => {
 }
 ```
 
-In the following code, you will need to define the function that will be passed to the `map()` method.\
+In the following code, you will need to define the function that will be passed to the `map()` method.
 
+|                   |                                                                                                             |
+| :---------------: | :---------------------------------------------------------------------------------------------------------- |
+| <h1>⭐</h1> | _Have questions about array methods like .map, .filter, and .find? Well, I have the link for you! For free.99 you can [click here to learn more](https://github.com/NewForce-at-Mountwest/client-side-mastery/blob/ts-arrayMethods/book-3-the-initiate/chapters/JS_ARRAY_METHODS_NEW.md). We stand by the quality of our link and are confident you will be satisified with the answers found there. If, for any reason, you are not happy with the link or still have questions, please reach out to an instructor. We will happily answer your questions._ |
 
-<span style="background-color: #2b023b;"> Have questions about array methods like .map, .filter, and .find? Well, I have the link for you! For free.99 you can [click here](https://github.com/NewForce-at-Mountwest/client-side-mastery/blob/ts-arrayMethods/book-3-the-initiate/chapters/JS_ARRAY_METHODS_NEW.md) and learn more.
- We stand by the quality of our link and are confident you will be satisified with the answers found there. If, for any reason, you are not happy with the link or still have questions, please reach out to an instructor. We will happily answer your questions. </span>
 
 
 
