@@ -1,4 +1,6 @@
-# Completing the Performance
+# The Party is Over
+
+## Completing the Performance
 
 When Mike or Leslie have completed a performance, they would like to choose their name from a `<select>` element and have it recorded permanently. The date of completion should also be recorded when a name is chosen.
 

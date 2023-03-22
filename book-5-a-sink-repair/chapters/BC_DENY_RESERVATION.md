@@ -1,4 +1,4 @@
-# Denied!
+# Rejected by Buttons
 
 Sometimes Buttons and Lollipop have conflicting reservations, or are just unavailable during a requested time. Add a `<button>` next to each reservation with the word "Deny" as the text of the button. Make sure the `id` attribute of each button contains the primary key of the request.
 

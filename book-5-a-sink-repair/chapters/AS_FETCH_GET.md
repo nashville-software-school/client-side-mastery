@@ -1,4 +1,6 @@
-# Getting Permanent State
+# Listing Past Requests
+
+## Getting Permanent State
 
 Before you get to saving new requests, you should list any previous requests. You are going to use a `fetch()` to get all existing requests and then list them in the UI.
 
@@ -26,9 +28,17 @@ Then open a new terminal and navigate to the `sink-repair/api` directory. Once t
 json-server database.json -p 8088 -w
 ```
 
-You should see the following output. If you don't, see an instructor.
+You should see the following output. 
 
 ![](./images/sink-repair-starting-json-server.gif)
+
+If you don't, run this command
+
+```sh
+npm install -g json-server
+```
+
+If it still isn't working, please see an instructor. 
 
 ## Application State
 
@@ -106,7 +116,13 @@ export const SinkRepair = () => {
 }
 ```
 
-In the following code, you will need to define the function that will be passed to the `map()` method.
+In the following code, you will need to define the function that will be passed to the `map()` method.\
+
+
+<span style="background-color: #2b023b;"> Have questions about array methods like .map, .filter, and .find? Well, I have the link for you! For free.99 you can [click here](https://github.com/NewForce-at-Mountwest/client-side-mastery/blob/ts-arrayMethods/book-3-the-initiate/chapters/JS_ARRAY_METHODS_NEW.md) and learn more.
+ We stand by the quality of our link and are confident you will be satisified with the answers found there. If, for any reason, you are not happy with the link or still have questions, please reach out to an instructor. We will happily answer your questions. </span>
+
+
 
 The function you write will convert each service request object into HTML representations. Since it is wrapped with a `<ul>` element, make each one an `<li>` element showing only the description of the request to start.
 

@@ -1,4 +1,6 @@
-# Reserving a Clown
+# Reserving Buttons
+
+## How to Reserve a Clown
 
 ## Setup
 
