@@ -52,7 +52,7 @@ killall Finder
 PUBLIC_KEY=$HOME/.ssh/id_nss.pub
 if [ ! -f "$PUBLIC_KEY" ]; then
   echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
-  echo "yes" | ssh-keygen -t rsa -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
+  echo "yes" | ssh-keygen -t ed25519 -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
   eval `ssh-agent`
   ssh-add ~/.ssh/id_nss
   echo -e "Host *\n\tAddKeysToAgent yes\n\tIdentityFile ~/.ssh/id_nss" >> ~/.ssh/config

@@ -14,3 +14,4 @@ There are 3 different actors in this system, and you will write functions in mul
 | 2   | [The Fishing Boat](./chapters/VEGGISH_BOAT.md) |
 | 3   | [The Monger](./chapters/VEGGISH_MONGER.md) |
 | 4   | [The Restaurant](./chapters/VEGGISH_FUSION.md) |
+| 4   | [Menu Du Jour](./chapters/VEGGISH_MENU.md) |
