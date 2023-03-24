@@ -10,14 +10,13 @@ Time to set up the fishing boat. First, you need to think about your data struct
     1. Price _(prices range from $3.00 to $10.00 per fish)_
     1. Amount _(how many of this species were caught today)_
 
-Open your `fishingBoat.js` module and write some comments describing the data structures that need to be created.
+Open your `fishingBoat.js` module and define a function that the other modules can invoke in order to see today's catch.
 
-Next, the fishing boat must have a function that the other modules can invoke in order to see today's catch.
-
-* This function must be named `boatInventory`.
+* This function must be defined as the value of a variable named `boatInventory`.
 * The array of fish objects will be the return value when the function is invoked _(see data below)_.
+* The array of fish must not be included in the scope of the function, but rather in scope of the module.
 
-Use this data.
+Use this data and assign it as the value of a variable at the module scope.
 
 ```js
 [
@@ -38,13 +37,12 @@ Use this data.
 1. Make sure you export the function _(example syntax below)_ so that other modules can import the function and invoke it.
     ```js
     // Example... do not copy pasta this. Write your own.
-    const functionVariable = (goodParameterName) => {
-
+    const functionVariable = () => {
+        // What will this function return?
     }
 
     module.exports = { functionVariable }
     ```
-1. When should the function be invoked, and the fish array passed as an argument?
 
 Now implement the algorithm as best you can. You won't know if you have the right algorithm until you build out other modules, but that's ok. Professional software developers know to start small with the knowledge that the algorithm is a living thing and will likely have to be adjusted as the project grows.
 

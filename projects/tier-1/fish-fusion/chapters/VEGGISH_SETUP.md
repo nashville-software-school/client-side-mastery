@@ -1,27 +1,22 @@
 # Fish Fusion Project Setup
 
-Run the following commands to create the directory structure and files for the project.
+Run the following command in your terminal to create the directory structure and files for the project.
 
 ```sh
-cd ~/workspace
-mkdir fish-fusion
-cd fish-fusion
-touch main.js fishingBoat.js fishMonger.js restaurant.js
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/projects/tier-1/fish-fusion/scripts/setup.sh)"
 ```
 
-Then open the project directory in Visual Studio Code.
+Once that completes, run the following two commands to navigate to the directory that was created and then install some open source software that will be needed.
 
-## Main Module
-
-Add the following code to `main.js`
-
-```js
-const { fishMenu } = require("./restaurant.js")
-
-/* Uncomment this code block when you're ready to test your logic
-
-const menu = fishMenu()
-console.log(menu)
-
-*/
+```sh
+cd ~/workspace/fish-fusion
+npm install
 ```
+
+Once the installation is complete, open up the project in Visual Studio Code.
+
+```sh
+code .
+```
+
+When the project opens, you can all move on to the next chapter and start reading the requirements for the project.
