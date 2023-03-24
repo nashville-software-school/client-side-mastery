@@ -16,13 +16,19 @@ This module must import and invoke the function that is exported by the fishing 
 
 The exported function must be named `mongerInventory`.
 
+> **Pro Tip:** It is very important that you read all of these requirements and constraints and define your algorithm before you write any code.
+
+## Fish Monger Purchasing Constraints
+
 1. Each day, the fishmonger buys exactly 10 of each inexpensive _(see below)_ fish caught by the fishing boat. If any of the fishing boat's fish quantity is less than 10, the fish monger does not buy it.
-1. The fishmonger does not buy any fish from the boat that is priced higher than $7.50 per fish.
-1. The fishmonger lets the chef of a restuarant specify what their maximum budget is per fish. For example, a chef can tell the monger that she can only spend $5.00 per fish. The function should then return only fish that cost $5.00 or less.
-1. Each fish object provided by the fish monger should have a quantity of 10 instead of the original quantity from the fishing boat.
+2. The fishmonger does not buy any fish from the boat that is priced higher than $7.50 per fish.
 
-## Algorithm
+Those are the basic requirements of the fish monger. Once you have an array of the fish objects that meet those requirements, you then need to determine which of **those** fish meet the requirements of a chef.
 
-Open your `fishMonger.js` module and write some comments describing the operations, data structures, function, and parameters needed to fulfill the above requirements.
+## Chef Purchasing Constraints
 
-Now implement the algorithm as best you can.
+The fishmonger lets the chef of a restuarant specify what their maximum budget is per fish. For example, a chef can tell the monger that she can only spend $5.00 per fish. The function should then return only fish that cost $5.00 or less. This could be any amount and will be information that will be provided to the monger inventory function.
+
+From your array of purchased fish, you must filter that down to the fish that meet the price constraint of the restaurant chef.
+
+Once you have that final array of fish, return that array.
