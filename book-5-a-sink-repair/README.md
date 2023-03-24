@@ -1,7 +1,5 @@
 # Book 6 - A Sink Repair Service
 
-In this book, you will be introduced to the basics of asynchronous programming and working with Web APIs. This book marks the end of your Vanilla JavaScript education. There are many projects and topics of exploration available to you before you begin your React journey.
-
 ## Chapters
 
 | # | 🔧 💧 <br/> A Sink Repair <sub> <br/> (_Guided Tour_)</sub> | 🤡 <br/> Buttons the Clown |
@@ -19,14 +17,12 @@ In this book, you will be introduced to the basics of asynchronous programming a
 
 ## 🧭 Explorer Chapters
 
-Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
+Explorer are **optional** chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
 
 | # | 🔧 💧 <br/> A Sink Repairs | 🤡 <br/> Buttons the Clown | API Deployment and Tools |
 |--|--|--|--|
 | 1 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) | [Sorting Completed Parties](./chapters/BC_SORT_BY_COMPLETE.md) | Learn how to [deploy your API to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) for free |
 | 2 | | | Learn how to [deploy your client to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) for free |
-| 3 | | | Visit the [API Supplementary Book](../supplement-api/README.md) to learn more about tools to interact with APIs and dig into the concept of REST |
-
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects
 
@@ -44,3 +40,14 @@ If you have completed all Core and Explorer chapters, let your instruction team 
 |2|[Honest&nbsp;Abe](../projects/tier-3/honest-abe/)| Honest Abe is an individual project which has three mini-projects that increase in complexity. If you completed all three, you will have mastered ERDs, data relationships, and using array methods to navigate them. |
 |3|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-4/truncheons/)| This is a group project for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
 |4|[Holiday Road](../projects/tier-4/holidayroad/)| This is a group project that will have your team building a National Parks itinerary builder by working with multiple public APIs. You will also get to pick an unique persona to build your user experience. |
+
+# Popular Tools for APIs
+
+These tools are listed in order from simplest UX to more advanced UX.
+
+| # | Tool | Description |
+|--|--|--|
+| 1 | [Visual Studio Code: REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) | This is an extension to Visual Studio Code and uses text files, which you can integrate into your source code repository, to define the requests you want to test. Watch [Using the REST Client VSCode Plugin](https://www.youtube.com/watch?v=RcxvrhQKv8I) |
+| 2 | [Insomnia](https://insomnia.rest/download) | Insomina has a clean, simple to use interface for managing a suite of API requests for a project. It does not have all the features of Postman _(see below)_ but is also easier to get started with. Watch the 26-minute [Insomnia REST Client Tutorial](https://www.youtube.com/watch?v=H16GUC9Svyk) YouTube video to get started. |
+| 3 | [Thunder Client for VS Code](https://www.thunderclient.com/) | Another Visual Studio code extension is ThunderClient. It has a bit more advanced functionality, but still fairly easy to learn and use. Watch [Thunder client - Vscode extension](https://www.youtube.com/watch?v=o-YUD9qF-eQ) to learn the basics. |
+| 4 | [Postman](https://www.postman.com/) | Postman is an extremely powerful API client, but is now also very hard to learn since it has dozens and dozens of features. The UX is quite complex, and will take more practice to learn how to use. There is a 2-hour [Postman Beginner's Course - API Testing](https://www.youtube.com/watch?v=VywxIQ2ZXw4) course on YouTube to get you started. Watching at 1.5x speed is recommended. |
