@@ -30,20 +30,3 @@ Use this data and assign it as the value of a variable at the module scope.
     { id: 8, species: "Puffer", weight: 2, price: 9.84, amount: 52 }
 ]
 ```
-
-## Algorithm Considerations
-
-1. Does the function need any input to do its job, or does it have access to all the information it needs without a parameter?
-1. Make sure you export the function _(example syntax below)_ so that other modules can import the function and invoke it.
-    ```js
-    // Example... do not copy pasta this. Write your own.
-    const functionVariable = () => {
-        // What will this function return?
-    }
-
-    module.exports = { functionVariable }
-    ```
-
-Now implement the algorithm as best you can. You won't know if you have the right algorithm until you build out other modules, but that's ok. Professional software developers know to start small with the knowledge that the algorithm is a living thing and will likely have to be adjusted as the project grows.
-
-Perfectionists struggle with this, so if that's you, start adjusting the way you think about your work.

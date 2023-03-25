@@ -21,3 +21,4 @@ It is **crucial** that your team reads all of the requirements and builds an alg
 | 3   | [The Monger](./chapters/VEGGISH_MONGER.md) |
 | 4   | [The Restaurant](./chapters/VEGGISH_FUSION.md) |
 | 5   | [Menu Du Jour](./chapters/VEGGISH_MENU.md) |
+| 6   | [Introducting to Automated Testing](./chapters/VEGGISH_TESTS.md) |

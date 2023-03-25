@@ -25,10 +25,3 @@ This module must import and invoke the function that is exported by the fish mon
         <section class="menu__item">Grilled Tuna</section>
     </article>
     ```
-
-## Algorithm
-
-Open your `restaurant.js` module and write some comments describing the operations, data structures, function, and parameters needed to fulfill the above requirements.
-
-Now implement the algorithm as best you can.
-
