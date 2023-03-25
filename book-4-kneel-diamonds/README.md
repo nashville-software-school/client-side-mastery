@@ -30,7 +30,8 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | # | 💎 💍  <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
 |--|--|--|
 | 1 | [Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
-
+| 1 | [Data Structure: Map](./chapters/JAVASCRIPT_MAPS.md) |
+| 2 | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |
 ## 🏕 Pioneer Chapters
 
 Pioneer chapters let you develop Deep Learning on the concepts that you practiced in this book.

@@ -89,7 +89,3 @@ Output:
 { id: 2, color: 'Mauve', type: 'orchid' } 
 */
 ```
-
-## Challenge: Toy Inventory Set
-
-Modify your Leonid's Toy code to use a Set for toy storage instead of an array to ensure that the same toy does not get added to the inventory more than once.

@@ -1,8 +1,19 @@
 # Book 1 - Learn by Debugging
 
-In this book, you will develop your most important skill as a developer - debugging. You will be writing your own code to implement features and using the debugger to watch how it executes, and you will also be working with pre-written code that has errors for you to debug.
+In this book, you will develop your most important skill as a developer - debugging.
 
-## Chapters
+## Prerequisite Material
+
+Please read these chapters before moving on to the core projects.
+
+| # | 💀 🐭 💀 Using the Keyboard |
+|--|--|
+| 1 |[Core Keyboard Shortcuts](./chapters/KEYBOARD_CORE.md) <br/> <sub style="font-size:0.85rem;">#keyboard</sub> |
+| 2 |[Debugging Shortcuts](./chapters/KEYBOARD_DEBUG.md) <br/> <sub style="font-size:0.85rem;">#keyboard #debugging</sub> |
+| 3 | [Core Professional Skills](./chapters/THINKING.md) <br/> <sub style="font-size:0.85rem;">#mindset</sub> |
+
+
+## Core Projects
 
 | #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub> | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild |
 | --- | --- | --- | --- |

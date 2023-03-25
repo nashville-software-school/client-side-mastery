@@ -28,16 +28,3 @@ In this book's core chapters, you will gain the knowledge and understanding of w
 | 9 | [Array and String Methods](./chapters/ARRAY_STRING_METHODS.md) <br/> <sub style="font-size:0.85rem;">#methods #arrays #strings</sub> | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [Note Topics Subsection](./chapters/DN_TOPICS_SECTION.md) |
 | 🎓 | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
 
-## 👩‍👩‍👧‍👦 Team Collaboration Projects
-
-| # | Project Name | Summary |
-|--|--|--|
-| 1 | [Solar Eclipse Bank](https://codesandbox.io/s/solar-eclipse-bank-book-1-fq8oxd) | Solar Eclipse Bank has a problem. They want to have an automated way to display the customer birthdays, for each month, for the next 10 years. They would like to see the customer's name, and their current age, displayed in the correct month. |
-| 2 | [Funkify Streaming Music](https://codesandbox.io/s/funkify-streaming-music-book-1-80yyfw) | Welcome to **Funkify**, the music streaming service that always brings you the funkiest music ever made!! We have acquired a large catalog of songs from several distributors. We need to see a collection of songs that are only funky. |
-
-## 🧭 Explorer Chapters
-
-| # | 🚀  Advanced Data Stuctures |
-|--|--|
-| 1 | [Data Structure: Map](./chapters/JAVASCRIPT_MAPS.md) |
-| 2 | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |
