@@ -34,13 +34,13 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 
 ## 🧭 Explorer Chapters
 
-These **optional** chapters are for learners who want to explore more advanced concepts beyond the core material.
+These Explorer chapters are **optional** for learners who want to explore more advanced concepts beyond the core material.
 
 | #   | 👸🏽  Her Majesty | 🏄🏾‍♂️ Surf Shop  | 🐻 Björn To Be Wild |
 | --- | --- | --- | --- |
-| 1 | [Modular Majesty](./chapters/QUEEN_EC_MODULAR.md) | [Separate Reports](./chapters/SURF_EC_MODULAR.md) |  |
-| 2 | [Finding Tribute](./chapters/QUEEN_EC_ARRAY_FIND.md) |  |  |
-| 3 | [Combined Data](./chapters/QUEEN_EC_DATABASE.md) |  |  |
+| 1 | [Modular Majesty](./chapters/QUEEN_EC_MODULAR.md) | [Separate Reports](./chapters/SURF_EC_MODULAR.md) | [Modular Madness](./chapters/BJORN_MODULE_MADNESS.md) |
+| 2 | [Combined Data](./chapters/QUEEN_EC_DATABASE.md) |  | [Tours Consolidated](./chapters/BJORN_DATABASEmd) |
+| 3 |  |  |  |
 
 
 ## 🏕 Pioneer Chapters
@@ -49,7 +49,7 @@ Pioneer chapters are **optional** and let you develop Deep Learning on the conce
 
 | #   | 👸🏽  Her Majesty | 🏄🏾‍♂️ Surf Shop  | 🐻 Björn To Be Wild |
 | --- | --- | --- | --- |
-| 1 |  |  |  |
+| 1 | [Finding Tribute](./chapters/QUEEN_EC_ARRAY_FIND.md) |  | [Filtering Tours](./chapters/BJORN_ARRAY_FIND.md) |
 | 2 |  |  |  |
 | 3 |  |  |  |
 

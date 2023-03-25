@@ -14,11 +14,19 @@ It is **crucial** that your team reads all of the requirements and builds an alg
 
 ## Setup and Requirements
 
-| #   | 🐡 🍣 <br/> Fish Fusion |
+| #   | 🐡 Fish Fusion 🍣 |
 | --- | --- |
 | 1   | [Project Setup](./chapters/VEGGISH_SETUP.md)|
 | 2   | [The Fishing Boat](./chapters/VEGGISH_BOAT.md) |
 | 3   | [The Monger](./chapters/VEGGISH_MONGER.md) |
 | 4   | [The Restaurant](./chapters/VEGGISH_FUSION.md) |
 | 5   | [Menu Du Jour](./chapters/VEGGISH_MENU.md) |
-| 6   | [Introducting to Automated Testing](./chapters/VEGGISH_TESTS.md) |
+
+## 🧭 Explorer Chapters
+
+These Explorer chapters are **optional** for teams who want to explore more advanced concepts beyond the core material.
+
+| #   | 🐡 Fish Fusion 🍣 |
+|---|---|
+| 1   | [Introducting to Automated Testing](./chapters/VEGGISH_TESTS.md) |
+| 2   | [Conversion With Map Array Method](./chapters/VEGGISH_MAP_METHOD.md) |
