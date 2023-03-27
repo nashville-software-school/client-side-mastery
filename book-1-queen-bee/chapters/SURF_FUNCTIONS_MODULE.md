@@ -29,7 +29,7 @@ This will not cause any change in functionality. You are simply splitting up you
 In the same directory as `averagePrice.js`, create a new file named `functions.js`.
 
 ```sh
-mkdir functions.js
+touch functions.js
 ```
 
 Then open `averagePrice.js`, highlight all of the functions and cut the code.

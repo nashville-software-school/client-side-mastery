@@ -1,5 +1,3 @@
-Move the data into a module and show import/export syntax
-
 # Modular Intro
 
 In this chapter, you are going to start to split up all of the code that exists in your current module into multiple modules. This has two side-effects for a beginner.
@@ -11,7 +9,7 @@ In this chapter, you are going to start to split up all of the code that exists 
 
 At the end of this chapter you should be able to...
 
-* Describe what a JavaScript module is, and why developers odularize their code.
+* Describe what a JavaScript module is, and why developers modularize their code.
 * Understand that each module does not automatically have access to code in other modules.
 * Understand that for modules to share code, they must export and import their code.
 
@@ -32,7 +30,7 @@ This will not cause any change in functionality. You are simply splitting up you
 In the same directory as `properties.js`, create a new file named `data.js`.
 
 ```sh
-mkdir data.js
+touch data.js
 ```
 
 Then open `properties.js`, highlight the entire array of data and cut the code _(i.e. Ctrl+X on Windows and Cmd+X on Mac)_.
@@ -44,7 +42,7 @@ Open `data.js` and paste the code in there _(i.e. Ctrl+V on Windows and Cmd+V on
 Then below the array, add the following line of code. This exports the data and allows other modules to import it for their own use.
 
 ```js
-module.exports = inventory
+module.exports = { inventory }
 ```
 
 ### Importing the Data
@@ -52,7 +50,7 @@ module.exports = inventory
 The last step is to import the data back into `properties.js` so that it has data to work with. Put this line of code at the top of the module.
 
 ```js
-const inventory = require("./data.js")
+const { inventory } = require("./data.js")
 ```
 
 Now run your logic with the debugger again and verify that everything works as intended.
