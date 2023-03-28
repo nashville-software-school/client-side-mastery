@@ -8,7 +8,7 @@ First, create a dependency graph to visualize the decisions you made for this pr
 
 Second, draw a sequence diagram that displays the algorithm for this project. Make sure you have a step in the sequence for every import, every loop _(wherever the loop happens)_.
 
-Here is an example to get started.
+Here is an example to get started. Yours may not look like this at all, it's just one possibility.
 
 ```mermaid
 sequenceDiagram

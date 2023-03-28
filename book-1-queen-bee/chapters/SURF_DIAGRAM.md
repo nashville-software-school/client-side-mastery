@@ -22,11 +22,11 @@ graph TD;
     Properties-->Functions;
 ```
 
-## Sequence Graph
+## Sequence Diagram
 
 One of your four Core Skills is [algoritmic thinking](https://www.wikihow.com/Think-Algorithmically). A person who cannot think algorithmically cannot be a high value software developer.
 
-One way to visualize an algorithm for a problem is with a sequence graph. This type of graph also shows all of the actors _(i.e. Properties, Data, and Functions)_ but also show the interactions between them, and the precise order in which those operations happen.
+One way to visualize an algorithm for a problem is with a sequence diagram. This type of diagram also shows all of the actors _(i.e. Properties, Data, and Functions)_ but also shows the interactions between them, and the precise order in which those operations happen.
 
 It tells the story, visually, of how the program operates.
 
