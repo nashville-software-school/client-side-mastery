@@ -1,5 +1,9 @@
 # List of Docks
 
+Your first task is to create a list of available docks.
+
+![](./chapters/../images/docks.png)
+
 Here are some dock objects that you can add to your database module.
 
 ```js
