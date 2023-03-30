@@ -8,15 +8,15 @@ In this book, you will be introduced to three concepts.
 
 ## Chapters
 
-| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | ☕️ 🧁 <br/> Brewed Awakenings <br/><sub>(_Pattern Practice_)</sub> |  🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me <br/><sub>(_Creation_)</sub>
-|--|--|--|--|
-| 1 | [Using the Debugger](./chapters/DEBUGGING_INTRO.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> |  | [Layout and Data Guidelines](./chapters/TOUR_INTRO.md) |
-| 2 | [Finding and Squashing Bugs](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #breakpoints</sub> | [Broken Receipts](./chapters/BA_DEBUGGING.md) | [Design: ERD](./chapters/TOUR_DATA.md) |
-| 3 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Coffee ERD](./chapters/BA_ERD.md) | [Analyze and Algorithmic Thinking](./chapters/TOUR_ALGORITHM.md) |
-| 4 | [Show Walker Service Area](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) | [Feature List](./chapters/TOUR_FEATURES.md) |
-| 5 | [Discover and Debug Event Listeners](./chapters/DD_EVENT_LISTENER_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) |  |
+| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | 🚢 <br/> Shipping Ship Ship Shipping Shipping Ships  | ☕️ 🧁 <br/> Brewed Awakenings |  🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me
+|--|--|--|--|--|
+| 1 | [Using the Debugger](./chapters/DEBUGGING_INTRO.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Shipping ERD](./chapters/SS_ERD.md) |  |[Layout and Data Guidelines](./chapters/TOUR_INTRO.md) |
+| 2 | [Finding and Squashing Bugs](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #breakpoints</sub> | [Dock List](./chapters/SS_DOCK_LIST.md) | [Broken Receipts](./chapters/BA_DEBUGGING.md) | [Design: ERD](./chapters/TOUR_DATA.md) |
+| 3 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Haulers List](./chapters/SS_HAULER_LIST.md) | [Coffee ERD](./chapters/BA_ERD.md) | [Analyze and Algorithmic Thinking](./chapters/TOUR_ALGORITHM.md) |
+| 4 | [Show Walker Service Area](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> | [Shipping Ship List](./chapters/SS_SHIPPING_SHIP_LIST.md) | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) | [Feature List](./chapters/TOUR_FEATURES.md) |
+| 5 | [Discover and Debug Event Listeners](./chapters/DD_EVENT_LISTENER_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> |  | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) |  |
 | 6 | [Navigating ERD Relationships](./chapters/DD_FIND_DOG_WALKER.md) <br/> <sub style="font-size:0.85rem;">#one-to-many</sub> |  |  |
-| 7 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> |  |  |
+| 7 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#many-to-many</sub> |  |  |
 | 8 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#many-to-many #data</sub> |  |  |
 | 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | | |
 
