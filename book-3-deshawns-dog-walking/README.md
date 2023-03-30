@@ -16,9 +16,16 @@ In this book, you will be introduced to three concepts.
 | 4 | [Show Walker Service Area](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> | [Haulers List](./chapters/SS_HAULER_LIST.md) | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) | [Feature List](./chapters/TOUR_FEATURES.md) |
 | 5 | [Discover and Debug Event Listeners](./chapters/DD_EVENT_LISTENER_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> | [Shipping Ship List](./chapters/SS_SHIPPING_SHIP_LIST.md) | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) |  |
 | 6 | [Navigating ERD Relationships](./chapters/DD_FIND_DOG_WALKER.md) <br/> <sub style="font-size:0.85rem;">#one-to-many</sub> | [Showing Hauler Inventory Count](./chapters/SS_HAULER_CARGO.md) |  |
-| 7 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#many-to-many</sub> | [Shipping Ships and Docks](./chapters/SS_SHIPS_DOCKS.md) |  |
-| 8 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#many-to-many #data</sub> | [Your Learning Goals](./chapters/SS_LEARNING.md) |  |
-| 🎓 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) | | |
+| 7 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#many-to-many</sub> | [Shipping Ship Hauler](./chapters/SS_SHIPS_DOCKS.md) |  |
+| 8 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#many-to-many #data</sub> | [Dock Current Service](./chapters/SS_DOCKS.md) |  |
+| 9 |  | [Your Learning Goals](./chapters/SS_LEARNING.md) |  |  |
+
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+
+| # | 🎓  Self-Assessment |
+| --- | --- |
+| 1 | [Self-assessment](./chapters/BOOK_3_ASSESSMENT.md) |
+
 
 ## 🧭 Explorer Chapters
 

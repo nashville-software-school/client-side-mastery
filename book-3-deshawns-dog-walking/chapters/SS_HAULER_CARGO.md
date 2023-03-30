@@ -4,9 +4,7 @@ The next step for you is to add a click event listener that displays the number 
 
 ![](./images/haulers-click.gif)
 
-## General Strategy
-
-### Step 2: Handling Click Event
+## Handling Click Event
 
 Add the following click event listener to the hauler list module and capture the DOM element that was clicked. The algorithm is included. Review it carefully.
 
