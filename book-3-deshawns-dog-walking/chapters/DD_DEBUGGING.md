@@ -45,10 +45,6 @@ graph TD;
 
 Here is the visual algorithm for the DeShawn's Dog Walking project when it first runs and generates the HTML that you see in the browser.
 
-<details>
-    <summary>Expand to see Sequence Diagram</summary>
-
-
 ```mermaid
 sequenceDiagram
     participant main
@@ -95,7 +91,6 @@ sequenceDiagram
     Assignments-->>main: Here's all the generated HTML
     Note right of main: Update the innerHTML of the <main> element in the DOM.
 ```
-</details>
 
 ## Bugs to Fix
 
