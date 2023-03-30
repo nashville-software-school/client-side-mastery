@@ -42,7 +42,6 @@ These Explorer chapters are **optional** for learners who want to explore more a
 | --- | --- | --- | --- |
 | 1 | [Modular Majesty](./chapters/QUEEN_EC_MODULAR.md) | [Separate Reports](./chapters/SURF_EC_MODULAR.md) | [Modular Madness](./chapters/BJORN_MODULE_MADNESS.md) |
 | 2 | [Combined Data](./chapters/QUEEN_EC_DATABASE.md) |  | [Tours Consolidated](./chapters/BJORN_DATABASEmd) |
-| 3 |  |  |  |
 
 
 ## 🏕 Pioneer Chapters
@@ -52,8 +51,6 @@ Pioneer chapters are **optional** and let you develop Deep Learning on the conce
 | #   | 👸🏽  Her Majesty | 🏄🏾‍♂️ Surf Shop  | 🐻 Björn To Be Wild |
 | --- | --- | --- | --- |
 | 1 | [Finding Tribute](./chapters/QUEEN_EC_ARRAY_FIND.md) |  | [Filtering Tours](./chapters/BJORN_ARRAY_FIND.md) |
-| 2 |  |  |  |
-| 3 |  |  |  |
 
 ## 🔐 Deep Learning Group Projects Unlocked
 

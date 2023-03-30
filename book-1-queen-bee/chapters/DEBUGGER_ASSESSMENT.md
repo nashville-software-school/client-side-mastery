@@ -1,6 +1,6 @@
 # Welcome to Bug Wrangler Ranch
 
-<img src="./images/bug-wrangler.png" width="200px" alt="Cowboy coder" align="right" />
+<img src="./images/bug-wrangler.png" width="300px" alt="Cowboy coder" align="right" />
 
 This first self-assessment is for you to hone several Core Skills that you need as a software developer.
 
@@ -28,6 +28,31 @@ Here are your learning objectives for this self-assessment.
 4. Drawing a dependency graph for a project.
 5. Drawing a sequence diagram for a project.
 6. Attention to detail.
+
+## Starter Code
+
+Slim Jenkins has the existing code on Github, so you need to download it from there. Actually, developers call this process _cloning a repository_.
+
+In your terminal, to go your workspace directory.
+
+```sh
+cd ~/workspace
+```
+
+Then clone the repository to your machine with the following command.
+
+```sh
+git clone git@github.com:Nashville-Software-School-Assessments/bug-wrangler-ranch.git
+```
+
+This will create a new sub-directory called `bug-wrangler-ranch`. Use the `cd` command to navigate into that directory and open it in VS Code.
+
+```sh
+cd bug-wrangler-ranch
+code .
+```
+
+Open the `main.js` and create your `launch.json` so that you can debug the code starting with `main.js`. Then run the program and start the investigation.
 
 ## Vocabulary and Learning Review
 
