@@ -29,3 +29,7 @@ Samantha also wants to see a list at the bottom of the page that shows which ban
 ## Layout
 
 The layout is going to be similar to DeShawn's and Brewed Awakenings, but slightly different. Samantha wants to see the current bookings at the top of the page. Below the bookings, she wants to see a list of all available venues, and a list of all available bands, side by side. Venues on the left, and bands on the right.
+
+## ERD
+
+Next, use dbdiagram to create an ERD for this project. Review the list of resources above and make sure you capture all of the required properties.
