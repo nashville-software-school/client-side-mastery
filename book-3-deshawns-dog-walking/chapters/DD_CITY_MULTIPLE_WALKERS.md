@@ -1,0 +1,1 @@
+Add more walkers that share the same city as another walker. Explore how the code changes when a city is clicked.

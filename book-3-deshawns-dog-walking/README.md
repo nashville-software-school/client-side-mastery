@@ -8,16 +8,16 @@ In this book, you will be introduced to three concepts.
 
 ## Chapters
 
-| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | 🚢 <br/> Shipping Ship Ships Shipping Shipping Ships  | ☕️ 🧁 <br/> Brewed Awakenings |  🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me
+| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | 🚢 <br/> Shipping Ship Ships  | ☕️ 🧁 <br/> Brewed Awakenings |  🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me
 |--|--|--|--|--|
-| 1 | [Using the Debugger](./chapters/DEBUGGING_INTRO.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Shipping ERD](./chapters/SS_ERD.md) | [Broken Receipts](./chapters/BA_DEBUGGING.md) |[Layout and ERD](./chapters/TOUR_INTRO.md) |
-| 2 | [Dependency Graph &amp; Bugs](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#graph #debugging #breakpoints</sub> | [Dependency Graph](./chapters/SS_DEPENDENCY_GRAPH.md) | [Brewed Awakenings ERD](./chapters/BA_ERD.md) | [Feature List](./chapters/TOUR_FEATURES.md) |
-| 3 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Dock List](./chapters/SS_DOCK_LIST.md) | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) |  |
-| 4 | [Show Walker Service Area](./chapters/DD_EVENT_LISTENER.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> | [Haulers List](./chapters/SS_HAULER_LIST.md) | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) |  |
-| 5 | [Discover and Debug Event Listeners](./chapters/DD_EVENT_LISTENER_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging #events</sub> | [Shipping Ship List](./chapters/SS_SHIPPING_SHIP_LIST.md) |  |  |
-| 6 | [Navigating ERD Relationships](./chapters/DD_FIND_DOG_WALKER.md) <br/> <sub style="font-size:0.85rem;">#one-to-many</sub> | [Showing Hauler Inventory Count](./chapters/SS_HAULER_CARGO.md) |  |
-| 7 | [Servicing Multiple Areas](./chapters/DD_MANY_MANY.md) <br/> <sub style="font-size:0.85rem;">#many-to-many</sub> | [Shipping Ship Hauler](./chapters/SS_SHIPS_DOCKS.md) |  |
-| 8 | [Show Walker Service Areas](./chapters/DD_REFACTOR.md) <br/> <sub style="font-size:0.85rem;">#many-to-many #data</sub> | [Dock Current Service](./chapters/SS_DOCKS.md) |  |
+| 1 | [Fixing DeShawn's Project](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#graph #debugging #breakpoints</sub> | [Shipping ERD](./chapters/SS_ERD.md) | [Broken Receipts](./chapters/BA_DEBUGGING.md) |[Layout and ERD](./chapters/TOUR_INTRO.md) |
+| 2 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Dependency Graph](./chapters/SS_DEPENDENCY_GRAPH.md) | [Brewed Awakenings ERD](./chapters/BA_ERD.md) | [Feature List](./chapters/TOUR_FEATURES.md) |
+| 3 | [Adding State to HTML](./chapters/DD_ADD_STATE_TO_DOM.md) <br/> <sub style="font-size:0.85rem;">#state #event-listeners</sub> | [Dock List](./chapters/SS_DOCK_LIST.md) | [Product Prices](./chapters/BA_PRODUCT_CLICK.md) |  |
+| 4 | [Using State for an Interactive Experience](./chapters/DD_ACCESSING_STATE.md) <br/> <sub style="font-size:0.85rem;">#events #event-listeners</sub> | [Haulers List](./chapters/SS_HAULER_LIST.md) | [Top Salesperson](./chapters/BA_EMPLOYEE_CLICK.md) |  |
+| 5 | [Adding State That Isn't Data](./chapters/DD_FIND_DOG_WALKER.md) <br/> <sub style="font-size:0.85rem;">#data-attributes #state</sub> | [Shipping Ship List](./chapters/SS_SHIPPING_SHIP_LIST.md) |  |  |
+| 6 | [Adding Foreign Keys to State](./chapters/DD_FIND_DOG_WALKER.md) <br/> <sub style="font-size:0.85rem;">#one-to-many data-attributes</sub> | [Showing Hauler Inventory Count](./chapters/SS_HAULER_CARGO.md) |  |
+| 7 | [Finding the Walker for a Pet](./chapters/DD_FIND_DOG_WALKER.md) <br/> <sub style="font-size:0.85rem;">#one-to-many data-attributes</sub> | [Shipping Ship Hauler](./chapters/SS_SHIPS_DOCKS.md) |  |
+| 8 | [Finding the Walker for a City](./chapters/DD_FIND_DOG_WALKER.md) <br/> <sub style="font-size:0.85rem;">#data-attributes</sub> | [Dock Current Service](./chapters/SS_DOCKS.md) |  |
 | 9 |  | [Your Learning Goals](./chapters/SS_LEARNING.md) |  |  |
 
 Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
@@ -33,7 +33,7 @@ Explorer chapters are optional, and give you the opportunity to expand on the Co
 
 | # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking | ☕️ 🧁 <br/> Brewed Awakenings | 🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me |
 |--|--|--|--|
-| 1 | [Who's Walking Whom](./chapters/DD_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) | [Band Member Bios](./chapters/TOUR_BAND_MEMBERS.md) |
+| 1 | [There Ain't Room in This City for the Both of Us](./chapters/DD_CITY_MULTIPLE_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) | [Band Member Bios](./chapters/TOUR_BAND_MEMBERS.md) |
 | 2 | [City State](./chapters/DD_CITY_STATE_.md) | | |
 
 ## 🔐 Deep Learning Group Projects Unlocked
