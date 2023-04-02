@@ -41,7 +41,7 @@ npm install --save react-router-dom
 We are giving you some boilerplate (starter) code that you will then customize as you build out the Honey Rae Repairs application with React. Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-7-honey-rae-repairs/chapters/scripts/react-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/book-6-honey-rae-repairs/chapters/scripts/react-setup.sh)"
 ```
 
 It will create the following directories and files for your project.

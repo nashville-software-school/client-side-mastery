@@ -14,7 +14,7 @@ npm install --save react-router-dom
 We are giving you some boilerplate code that you will then customize as you build out Kandy Korner. Run the following command in your terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-7-honey-rae-repairs/chapters/scripts/kandy-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/book-6-honey-rae-repairs/chapters/scripts/kandy-setup.sh)"
 ```
 
 # Kandy Korner Data
