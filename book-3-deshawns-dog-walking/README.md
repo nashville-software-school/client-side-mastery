@@ -6,7 +6,15 @@ In this book, you will be introduced to three concepts.
 1. Handling browser generated events.
 1. Data relationships and how to visualize them.
 
-## Chapters
+## Debugging In The Browser
+
+Before you get started on the core projects in this book, please read the content and watch the videos in this preparatory chapter. Debugging in the browser is very similar to what you've been doing in VS Code, but the tools are accessed very differently.
+
+| # | Debugging |
+| --- | --- |
+| 1 | [Gathering Evidence With The Debugger](./chapters/DEBUGGING_INTRO.md) |
+
+## Core Projects
 
 | # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | 🚢 <br/> Shipping Ship Ships  | ☕️ 🧁 <br/> Brewed Awakenings |  🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me
 |--|--|--|--|--|
@@ -34,7 +42,6 @@ Explorer chapters are optional, and give you the opportunity to expand on the Co
 | # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking | ☕️ 🧁 <br/> Brewed Awakenings | 🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me |
 |--|--|--|--|
 | 1 | [There Ain't Room in This City for the Both of Us](./chapters/DD_CITY_MULTIPLE_WALKERS.md) | [Multiple Locations ERD](./chapters/BA_LOCATIONS.md) | [Band Member Bios](./chapters/TOUR_BAND_MEMBERS.md) |
-| 2 | [City State](./chapters/DD_CITY_STATE_.md) | | |
 
 ## 🔐 Deep Learning Group Projects Unlocked
 

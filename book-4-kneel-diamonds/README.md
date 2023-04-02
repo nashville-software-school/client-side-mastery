@@ -1,6 +1,6 @@
 # Book 4 - Kneel Diamonds
 
-## Core Chapters
+## Core Projects
 
 | # | 💎 💍  <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 <br/> Car Builder |
 |--|--|--|

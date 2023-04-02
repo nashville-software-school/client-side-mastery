@@ -10,7 +10,7 @@ For example, here's what the first few days should look like for you.
 1. Move on to chapter 9 in Honey Rae Repairs.
 1. etc...
 
-## Chapters
+## Core Projects
 
 | # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
 |--|--|--|

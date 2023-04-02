@@ -1,6 +1,6 @@
 # Book 6 - A Sink Repair Service
 
-## Chapters
+## Core Projects
 
 | # | 🔧 💧 <br/> A Sink Repair <sub> <br/> (_Guided Tour_)</sub> | 🤡 <br/> Buttons the Clown |
 |--|--|--|

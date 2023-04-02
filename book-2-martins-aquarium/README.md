@@ -17,12 +17,12 @@ You will be referring back to these chapters throughout the entire course as you
 
 | # | 👩🏾‍⚕️ <br/> Sally's Interests | 🧨 💥 <br/> Dynamite Duo | 🐠 <br/> Martin's Aquarium |
 | --- | --- | --- | --- |
-| 1   | [Project Setup](./chapters/SALLY_SETUP.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub>  | [Dyno-Man and Blast Boy](./chapters/DUO_SETUP.md) | [Project Setup](./chapters/CLI_BASICS.md) |
-| 2   | [Wireframes for User Interfaces](./chapters/MA_WIREFRAMES.md) <br/> <sub style="font-size:0.85rem;">#html #wireframes</sub> | [Using the Debugger](./chapters/DEBUGGING_INTRO.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md)</sub> |
-| 3   | [HTML Structure &amp; Layout](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |  | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
-| 4   | [Coffee Houses](./chapters/COFFEE_HOUSES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |  | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) |
-| 5   | [Congressional Representatives](./chapters/REPRESENTATIVES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> |  | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
-| 6   | [Flexbox Froggy](./chapters/FROGGY.md) <br/> <sub style="font-size:0.85rem;">#flexbox</sub> |  | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
+| 1   | [Project Setup](./chapters/SALLY_SETUP.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub>  | [The Dynamite Duo Setup](./chapters/DUO_SETUP.md) | [Project Setup](./chapters/CLI_BASICS.md) |
+| 2   | [Wireframes for User Interfaces](./chapters/MA_WIREFRAMES.md) <br/> <sub style="font-size:0.85rem;">#html #wireframes</sub> |  | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md)</sub> |
+| 3   | [HTML Structure &amp; Layout](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining First Hero](./chapters/DUO_HERO_ONE_DATA.md) | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
+| 4   | [Coffee Houses](./chapters/COFFEE_HOUSES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining Second Hero](./chapters/DUO_HERO_TWO_DATA.md) | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) |
+| 5   | [Congressional Representatives](./chapters/REPRESENTATIVES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Targeting a DOM Element](./chapters/DUO_HTML_ELEMENT_REFERENCE.md) | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
+| 6   | [Flexbox Froggy](./chapters/FROGGY.md) <br/> <sub style="font-size:0.85rem;">#flexbox</sub> | [Convert Hero Objects to HTML](./chapters/DUO_HTML_GENERATORS.md) | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
 | 7   |  |  | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
 | 8   |  |  | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
 | 9   |  |  | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
