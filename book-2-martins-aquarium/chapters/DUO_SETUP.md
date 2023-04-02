@@ -45,16 +45,32 @@ mkdir scripts
 touch scripts/main.js
 ```
 
+## Add and Commit the Files
+
+Time to start tracking the changes you will be making to these three files as you build the project.
+
+First, stage these three files to be committed.
+
+```sh
+git add --all
+```
+
+Then commit these files to your repository. Even though you don't any content in these files yet, you can still commit the fact that they were created.
+
+```sh
+git commit -m "Initial commit"
+```
+
 ## Create Github Repo
 
-1. Log into your Github account.
-1. Click the `+` sign in the top right corner.
-1. Choose "New repository".
-1. In the "Repository name" field, enter in `dynamite-duo`.
-1. Scroll down and click the green "Create Repository" button.
-1. Copy the repository's connection string.
-    ![](./images/copy-github-connection-string.gif)
-1. Follow the second set of instructions.
-    ![](./images/add-origin.png)
+Follow the official documentation from Github on <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository" target="_blank">Creating a new repository</a>. You are not going to be doing any of the optional items.
+
+Now that you have a place to backup your code, make sure the SSH options is chosen and copy the repository's connection string.
+
+
+Then copy the second set of command, paste them into your terminal, and run them.
 
 Now that the code has successfully been backed up, go back to your browser, and refresh the Github page. You will see that your remote repository backup now has files uploaded.
+
+![](./images/first-repo-steps.gif)
+
