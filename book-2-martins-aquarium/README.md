@@ -15,19 +15,19 @@ You will be referring back to these chapters throughout the entire course as you
 
 ## Core Projects
 
-| # | 👩🏾‍⚕️ <br/> Sally's Interests | 🧨 💥 <br/> Dynamite Duo | 🐠 <br/> Martin's Aquarium |
+| # | 👩🏾‍⚕️ <br/> Sally's Interests &amp; More | 🧨 💥 <br/> Dynamite Duo | 🐠 <br/> Martin's Aquarium |
 | --- | --- | --- | --- |
 | 1   | [Project Setup](./chapters/SALLY_SETUP.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub>  | [The Dynamite Duo Setup](./chapters/DUO_SETUP.md) | [Project Setup](./chapters/CLI_BASICS.md) |
-| 2   | [Wireframes for User Interfaces](./chapters/MA_WIREFRAMES.md) <br/> <sub style="font-size:0.85rem;">#html #wireframes</sub> |  | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md)</sub> |
-| 3   | [HTML Structure &amp; Layout](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining First Hero](./chapters/DUO_HERO_ONE_DATA.md) | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
-| 4   | [Coffee Houses](./chapters/COFFEE_HOUSES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining Second Hero](./chapters/DUO_HERO_TWO_DATA.md) | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) |
-| 5   | [Congressional Representatives](./chapters/REPRESENTATIVES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Targeting a DOM Element](./chapters/DUO_HTML_ELEMENT_REFERENCE.md) | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
-| 6   | [Flexbox Froggy](./chapters/FROGGY.md) <br/> <sub style="font-size:0.85rem;">#flexbox</sub> | [Convert Hero Objects to HTML](./chapters/DUO_HTML_GENERATORS.md) | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
-| 7   |  |  | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
-| 8   |  |  | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
-| 9   |  |  | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
-| 10  |  |
-| 11  |   |
+| 2   | [Sally's Interests with Flex](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Introduction to Developer Tools](./chapters/DUO_DEV_TOOLS_INTRO.md) | [Wireframes for User Interfaces](./chapters/MA_WIREFRAMES.md) |
+| 3   | [Coffee Houses](./chapters/COFFEE_HOUSES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining First Hero](./chapters/DUO_HERO_ONE_DATA.md) | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md)</sub> |
+| 4   | [Congressional Representatives](./chapters/REPRESENTATIVES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining Second Hero](./chapters/DUO_HERO_TWO_DATA.md) | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
+| 5   | [Flexbox Froggy](./chapters/FROGGY.md) <br/> <sub style="font-size:0.85rem;">#flexbox</sub> | [Targeting a DOM Element](./chapters/DUO_HTML_ELEMENT_REFERENCE.md) | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) |
+| 6   |  | [Convert Hero Objects to HTML](./chapters/DUO_HTML_GENERATORS.md) | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
+| 7   |  | [Dynamically Adding HTML to the DOM]() | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
+| 8   |  |  | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
+| 9   |  |  | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
+| 10  |  |  | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
+| 11  |  |
 
 Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
 
