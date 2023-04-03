@@ -42,7 +42,7 @@ Create another sub-directory named `scripts` and create a file named `main.js` i
 
 ```sh
 mkdir scripts
-touch scripts/main.js
+touch scripts/main.js scripts/database.js
 ```
 
 ## Add and Commit the Files

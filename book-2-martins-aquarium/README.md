@@ -19,8 +19,8 @@ You will be referring back to these chapters throughout the entire course as you
 | --- | --- | --- | --- |
 | 1   | [Project Setup](./chapters/SALLY_SETUP.md) <br/> <sub style="font-size:0.85rem;">#terminal</sub>  | [The Dynamite Duo Setup](./chapters/DUO_SETUP.md) | [Project Setup](./chapters/CLI_BASICS.md) |
 | 2   | [Sally's Interests with Flex](./chapters/HTML_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Introduction to Developer Tools](./chapters/DUO_DEV_TOOLS_INTRO.md) | [Wireframes for User Interfaces](./chapters/MA_WIREFRAMES.md) |
-| 3   | [Coffee Houses](./chapters/COFFEE_HOUSES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining First Hero](./chapters/DUO_HERO_ONE_DATA.md) | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md)</sub> |
-| 4   | [Congressional Representatives](./chapters/REPRESENTATIVES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining Second Hero](./chapters/DUO_HERO_TWO_DATA.md) | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
+| 3   | [Coffee Houses](./chapters/COFFEE_HOUSES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining Heroes](./chapters/DUO_HEROES.md) | [Fish in my Aquarium](./chapters/MA_AQUARIUM_DESIGN.md)</sub> |
+| 4   | [Congressional Representatives](./chapters/REPRESENTATIVES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining Villans](./chapters/DUO_HERO_TWO_DATA.md) | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
 | 5   | [Flexbox Froggy](./chapters/FROGGY.md) <br/> <sub style="font-size:0.85rem;">#flexbox</sub> | [Targeting a DOM Element](./chapters/DUO_HTML_ELEMENT_REFERENCE.md) | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) |
 | 6   |  | [Convert Hero Objects to HTML](./chapters/DUO_HTML_GENERATORS.md) | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
 | 7   |  | [Dynamically Adding HTML to the DOM]() | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
@@ -34,25 +34,6 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 | # | 🎓  Self-Assessment |
 | --- | --- |
 | 1 | [Self-Assess Your JavaScript Fundamentals](../projects/tier-1/modern-farm/) |
-
-
-## 👩‍👩‍👧‍👦 Team Collaboration Projects
-
-| #   | Project Name  | Summary  |
-| --- | --- | --- |
-| 1   | Spring Hill Zoo | You will be building a modular Web application that lists all of the animals in each exhibit currently at the Spring Hill Zoo. It will also list all concession stands.                                          |
-| 2   | Beyonce's Tour Dates | You will be building a modular Web application that converts your raw data objects into HTML to show a list of Beyonce tour dates in the browser. It will display the opening bands for each stop on the tour, and the cities on the tour. |
-
-## 🧭 Explorer Chapters
-
-Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
-
-| #   | 🐠 Martin's Aquarium  | Terminal |
-| --- | --- | --- |
-| 1   |  | [A Personal Touch](./chapters/TERMINAL_WELCOME.md)  |
-| 2   |  |
-| 3   | |
-| 4   |  |
 
 ## 🔐 Deep Learning Projects Unlocked
 
