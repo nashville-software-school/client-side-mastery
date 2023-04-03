@@ -27,10 +27,13 @@ Right now, your `index.html` file doesn't have any content to display, so you ca
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamite Duo</title>
 </head>
+
 <body>
     <main id="container">
         <h1>The Dynamite Duo</h1>
     </main>
+
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
 ```
