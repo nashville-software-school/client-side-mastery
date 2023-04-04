@@ -50,15 +50,15 @@ Now you can write a function that can turn those ugly objects into beautiful HTM
 
 ```js
 export const VillainList = () => {
-    let heroHTML = "<ul>"
+    let villainHTML = "<ul>"
 
-    for (const hero of heroes) {
-        heroHTML += `<li>${hero.name}</li>`
+    for (const villain of villains) {
+        villainHTML += `<li>${villain.name}</li>`
     }
 
-    heroHTML += "</ul>"
+    villainHTML += "</ul>"
 
-    return heroHTML
+    return villainHTML
 }
 ```
 

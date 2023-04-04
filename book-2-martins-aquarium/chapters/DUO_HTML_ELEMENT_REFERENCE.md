@@ -24,6 +24,8 @@ Look in your `index.html` file again to see it.
 </main>
 ```
 
+## Debugger Breakpoints
+
 Now put a debugger keyword after the query selector code and then inspect the value of `theExistingMainElement` in the **Sources** tab when it appear when you refresh the page.
 
 The `debugger` keyword works just like your breakpoints did in Book 1. It pauses the execution of code on that line. Then you can inspect the values of all of your variables in the **Scope** panel that exists to the right.
@@ -32,3 +34,4 @@ Watch the animation below to see what happens when the browser hits the `debugge
 
 ![](./images/intro-to-sources-dev-panel.gif)
 
+Once you have seen how the debugger works and evaluated the variable, go back and remove the `debugger` keyword and head to the next chapter.
