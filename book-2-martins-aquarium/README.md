@@ -23,7 +23,7 @@ You will be referring back to these chapters throughout the entire course as you
 | 4   | [Congressional Representatives](./chapters/REPRESENTATIVES.md) <br/> <sub style="font-size:0.85rem;">#bem #html #flexbox</sub> | [Defining Villains](./chapters/DUO_VILLAINS.md) | [Objectifying the Fish](./chapters/MA_DATA_STRUCTURES.md) |
 | 5   | [Flexbox Froggy](./chapters/FROGGY.md) <br/> <sub style="font-size:0.85rem;">#flexbox</sub> | [Targeting a DOM Element](./chapters/DUO_HTML_ELEMENT_REFERENCE.md) | [Exporting Fish](./chapters/MA_EXPORTING_FISH.md) |
 | 6   |  | [Composing All HTML](./chapters/DUO_HTML_GENERATORS.md) | [HTML Representations of Data](./chapters/MA_CREATING_FISH_COMPONENTS.md) |
-| 7   |  | [Dynamically Adding HTML to the DOM]() | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
+| 7   |  | [Dynamically Adding HTML to the DOM](./chapters/DUO_DOM_UPDATE.md) | [Organizing Your Code](./chapters/MA_ORGANIZATION.md) |
 | 8   |  |  | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
 | 9   |  |  | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
 | 10  |  |  | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
