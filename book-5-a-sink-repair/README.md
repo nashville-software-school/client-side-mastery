@@ -13,7 +13,13 @@
 | 7 | [Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> | [Buttons' Schedule](./chapters/BC_SCHEDULE_LIST.md) |
 | 8 | [Denying Service Requests](./chapters/AS_HTTP_DELETE.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #DELETE</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) |
 | 9 | [Completing Service Requests](./chapters/AS_COMPLETIONS.md)<br/> <sub style="font-size:0.85rem;">#fetch #then-chaining | [The Party is Over](./chapters/BC_PERFORMANCE_COMPLETE.md) |
-| 🎓 | [Self-assessment](./chapters/BOOK_5_ASSESSMENT.md) |  |
+
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+
+| # | 🎓  Self-Assessment |
+| --- | --- |
+| 1 | [Assess Understanding of Fetch](./chapters/BOOK_5_ASSESSMENT.md) |
+
 
 ## 🧭 Explorer Chapters
 

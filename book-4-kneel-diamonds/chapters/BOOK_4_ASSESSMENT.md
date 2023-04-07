@@ -1,4 +1,4 @@
-# Core JavaScript Skills Assessment
+# Self-Assessment
 
 This project will help you assess your ability to apply the JavaScript skills that you practiced in this book.
 
@@ -63,22 +63,3 @@ Your instruction team will provide a link for you to create your assessment repo
 1. Open the URL provided in Chrome
 
 Make sure your Developer Tools are open at all times while working on this project. Use the messages provided in the Console to determine what code needs to be fixed or implemented, and use breakpoints in the Sources tab to step through your code as you debug.
-
-## Testing Your Code
-
-As you work on the self-assessment, you can see if it passes the automated tests by following these steps. Be aware that all of the tests will fail when you start, but as you develop the features, some will start passing.
-
-1. Open a new terminal and don't close your current ones.
-1. `cd` to the self-assessment directory.
-1. Run the `npm install` command.
-1. Run the `npm test` command.
-1. You will see the tests run and get feedback on which ones are passing and which ones are failing.
-
-## Deep Learning
-
-Another reminder from the instruction team. This is NOT A TEST. We are not looking for 100% completion, although if you can make it work completely, then huzzah for you.
-
-What we are looking for is effort, critical thinking about the concepts, creative thinking to bind the concepts together for a solution, and collaboration with your teammates and instruction team.
-
-If you only get 50% of it complete, but display the above Core Skills and can demonstrate understanding of the fundamental code concepts, then you are learning and growing - which is what we care about.
-
