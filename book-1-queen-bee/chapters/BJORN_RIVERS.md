@@ -8,6 +8,11 @@ Bjorn would like you to add new functions that output very similar information a
 2. The shortest river
 3. The longest river
 
+
+### Example Output
+
+Yours should looks like this when complete. Please note that the numbers below are not correct, this is just an example.
+
 ```sh
 ***************************************************
 *****              R I V E R S                *****

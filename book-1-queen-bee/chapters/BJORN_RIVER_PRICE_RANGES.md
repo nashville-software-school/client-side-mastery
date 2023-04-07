@@ -6,6 +6,9 @@ For the least expensive, only show rivers where the number of dollar signs in th
 
 For the most expensive, only show rivers where the number of dollar signs in the price is 4, or greater.
 
+### Example Output
+
+Yours should looks like this when complete. Please note that the data below is not necessarily correct, this is just an example.
 
 ```sh
 The least expensive river tours are

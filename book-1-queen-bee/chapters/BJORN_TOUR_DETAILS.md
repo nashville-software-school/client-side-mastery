@@ -8,7 +8,11 @@ Customers have provided more feedback, and Björn wants to respond ASAP. They ha
 
 Based on this feedback, Björn would like more output under the trails section. Here's the example he gave you of how the details should look for every trail.
 
-Write a function that produces the output.
+Write a function that produces output that looks like the example below.
+
+### Example Output
+
+Yours should looks like this when complete. Please note that the data below is not necessarily correct, this is just an example.
 
 
 ```txt

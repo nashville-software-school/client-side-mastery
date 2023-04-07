@@ -8,6 +8,11 @@ For the most expensive, only show trails where the number of dollar signs in the
 
 > **Note:** Once you get the correct trails being shown, you might discover a bug in the data, and you need to track it down.
 
+### Example Output
+
+Yours should looks like this when complete. Please note that the data below is not necessarily correct, this is just an example.
+
+
 ```sh
 The least expensive trails are
 	Rocky Bottom Way
