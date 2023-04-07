@@ -82,14 +82,10 @@ echo -e "\n\nMaking sure you have Command line tools installed"
 xcode-select --install >>progress.log 2>>error.log
 
 # Set up Zsh
-ZSH_FOLDER=$HOME/.oh-my-zsh
-if [ ! -d "$FOLDER" ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh )" >>progress.log 2>>error.log
-fi
 
 current_shell=$(echo $SHELL)
 if [ $current_shell == "/bin/bash" ]; then
-  echo -e "\n\n\n\n"
+  echo -e "\n\n\n"
   echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
   echo "@@                                                        @@"
   echo "@@   Change Needed: Switch to zsh                         @@"
@@ -115,6 +111,11 @@ if [ $current_shell == "/bin/bash" ]; then
 
 else
   echo "Already using zsh as default shell"
+fi
+
+ZSH_FOLDER=$HOME/.oh-my-zsh
+if [ ! -d "$FOLDER" ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh )" >>progress.log 2>>error.log
 fi
 # End zsh set up
 
@@ -181,7 +182,6 @@ if ! type json-server &>/dev/null; then
 else
   echo "json-server installed"
 fi
-
 #END verification
 
 echo -e "\n\n\n\n"

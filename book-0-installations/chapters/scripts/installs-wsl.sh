@@ -20,11 +20,14 @@ read -s -p "> " githubPassword
 
 # Set up workspace directory
 echo -e "\n\nCreating some directories that you will need..."
-mkdir -p $HOME/workspace
-mkdir -p $HOME/.ssh
-mkdir -p $HOME/.config
-mkdir -p $HOME/.npm-packages
-
+DIRS=("$HOME/workspace" "$HOME/.ssh" "$HOME/.config" "$HOME/.npm-packages")
+for DIR in "${DIRS[@]}"; do
+  if [ -d "$DIR" ]; then
+    echo "$DIR already exists"
+  else
+    mkdir -p $DIR
+  fi
+done
 
 # Create SSH key
 echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
@@ -35,8 +38,8 @@ echo -e "Host *\n\tAddKeysToAgent yes\n\tIdentityFile ~/.ssh/id_nss" >> ~/.ssh/c
 
 # Get latest updates
 echo -e "\n\nUpdating the Ubuntu operating system..."
-sudo apt-get update && sudo apt-get dist-upgrade -y
-sudo apt install -y curl file build-essential libssl-dev libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+sudo apt-get update && sudo apt-get dist-upgrade -y  >>progress.log 2>>error.log
+sudo apt install -y curl file build-essential libssl-dev libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb  >>progress.log 2>>error.log
 
 # Install Node
 echo -e "\n\n\n\n"
@@ -47,29 +50,36 @@ echo "@@   This installation might require your Ubuntu password.     @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - >>progress.log 2>>error.log
+sudo apt-get install -y nodejs >>progress.log 2>>error.log
 
 # Install global dependencies
 echo -e "\n\nInstalling a web server and a simple API server..."
 npm config set prefix $HOME/.npm-packages
 echo 'export PATH="$HOME/.npm-packages/bin:$PATH"' >> $HOME/.profile
 source $HOME/.profile &>profile-reload.log
-npm i -g serve json-server
+npm i -g serve json-server >>progress.log 2>>error.log
 
 # Add SSH key to Github account
 echo -e "\n\nAdding your SSH key to your Github account..."
 PUBLIC_KEY=$(cat $HOME/.ssh/id_nss.pub)
-curl \
+
+STATUS_CODE=$(curl \
+  -s \
+  --write-out %{http_code} \
   -X POST \
-  -H "Content-Type: application/json" \
-  -H "Accept: application/vnd.github.v3+json" \
-  -u "$githubUsername:$githubPassword" \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer $GH_PWD" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/user/keys \
-  -d "{\"key\":\"$PUBLIC_KEY\",\"title\":\"NSS Automated Key\"}"
+  -d "{\"key\":\"$PUBLIC_KEY_CONTENT\",\"title\":\"NSS Automated Key\"}" >>progress.log 2>>error.log)
+
+if [ ! $STATUS_CODE == 200 ]; then
+  echo -e "POST for SSH key returned status code $STATUS_CODE" >>error.log
+fi
 
 echo -e "\n\nInstalling git and terminal customization tools..."
-sudo apt install -y zsh git fonts-powerline
+sudo apt install -y zsh git fonts-powerline >>progress.log 2>>error.log
 
 # User settings for git
 echo -e "\n\nConfigurating git settings..."
@@ -78,24 +88,90 @@ git config --global user.email $emailAddress
 
 # Check if zsh is default shell. Switch if not.
 current_shell=$(echo $SHELL)
-if [ $current_shell == "/bin/bash" ];
-then
-    echo -e "\n\n\n\n"
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo "@@                                                        @@"
-    echo "@@   Change Needed: Switch to zsh                         @@"
-    echo "@@   This change might require your Ubuntu password.      @@"
-    echo "@@                                                        @@"
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    chsh -s /bin/zsh
+if [ $current_shell == "/bin/bash" ]; then
+  echo -e "\n\n\n"
+  echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+  echo "@@                                                        @@"
+  echo "@@   Change Needed: Switch to zsh                         @@"
+  echo "@@   This change might require your computer password.    @@"
+  echo "@@                                                        @@"
+  echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+  ZSH_PATH=$(which zsh >>progress.log 2>>error.log)
+  if [ $? != 0 ]; then
+    echo "FAILED: zsh not found. Skipping chsh" >>error.log
+  else
+    SWITCHED=$(chsh -s $ZSH_PATH >>progress.log 2>>error.log)
+    if [ $? != 0 ]; then
+      echo "FAILED: Could not chsh to zsh" >>error.log
+    else
+      new_shell=$(echo $SHELL)
+      if [ $new_shell != "$ZSH_PATH" ]; then
+        # The rest of the installs will not work if zsh is not the default shell
+        echo "Shell did not change to zsh. Reach out to an instructor before continuing"
+        exit
+      fi
+    fi
+  fi
+
 else
-    echo "Already using zsh as default shell"
+  echo "Already using zsh as default shell"
 fi
+# End zsh set up
+
 
 # Install ohmyzsh
-echo -e "\n\nInstalling more terminal customization tools..."
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ZSH_FOLDER=$HOME/.oh-my-zsh
+if [ ! -d "$FOLDER" ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh )" >>progress.log 2>>error.log
+fi
 
+
+# BEGIN verification
+echo -e "\n\n\n\n"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@                                                             @@"
+echo "@@                   VERIFYING INSTALLS                        @@"
+echo "@@                                                             @@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo ""
+
+VERIFIED=1
+
+if ! type brew &>/dev/null; then
+  echo "Brew not installed"
+  VERIFIED=0
+else
+  echo "Brew installed"
+fi
+
+if ! type node &>/dev/null; then
+  echo "Node not installed"
+  VERIFIED=0
+else
+  echo "Node installed"
+fi
+
+if ! type nvm &>/dev/null; then
+  echo "nvm not installed"
+  VERIFIED=0
+else
+  echo "nvm installed"
+fi
+
+if ! type serve &>/dev/null; then
+  echo "serve not installed"
+  VERIFIED=0
+else
+  echo "serve installed"
+fi
+
+if ! type json-server &>/dev/null; then
+  echo "json-server not installed"
+  VERIFIED=0
+else
+  echo "json-server installed"
+fi
+#END verification
 
 echo -e "\n\n\n\n"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
@@ -103,3 +179,5 @@ echo "@@                                                             @@"
 echo "@@                   S U C C E S S !!!                         @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo -e "\n\nRun the following command to finalize the installation"
+echo -e "\nsource ~/.zshrc"
