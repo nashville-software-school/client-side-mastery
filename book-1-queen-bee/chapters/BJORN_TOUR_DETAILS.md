@@ -15,7 +15,7 @@ Write a function that produces the output.
 ***************************************************
 *****              T R A I L S                *****
 ***************************************************
-We service 45.54 miles of wilderness trails across the US
+We service 45.54 kilometers of wilderness trails across the US
 The shortest trail is 0 kilometers
 The shortest trail is 6.6 kilometers
 The longest trail is 49.2 kilometers
