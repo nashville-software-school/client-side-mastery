@@ -12,6 +12,6 @@ Bjorn would like you to add new functions that output very similar information a
 ***************************************************
 *****              R I V E R S                *****
 ***************************************************
-We offer expert guidance on 87 miles of scenic rivers across the US
+We offer expert guidance on 87 kilometers of scenic rivers across the US
 The shortest river tour is 13 kilometers
 The longest river tour is 100 kilometers

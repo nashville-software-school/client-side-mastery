@@ -38,7 +38,8 @@ echo -e "Host *\n\tAddKeysToAgent yes\n\tIdentityFile ~/.ssh/id_nss" >> ~/.ssh/c
 
 # Get latest updates
 echo -e "\n\nUpdating the Ubuntu operating system..."
-sudo apt-get update && sudo apt-get dist-upgrade -y  >>progress.log 2>>error.log
+sudo apt-get update -y >>progress.log 2>>error.log
+sudo apt-get dist-upgrade -y >>progress.log 2>>error.log
 sudo apt install -y curl file build-essential libssl-dev libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb  >>progress.log 2>>error.log
 
 # Install Node
@@ -50,8 +51,8 @@ echo "@@   This installation might require your Ubuntu password.     @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - >>progress.log 2>>error.log
-sudo apt-get install -y nodejs >>progress.log 2>>error.log
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Install global dependencies
 echo -e "\n\nInstalling a web server and a simple API server..."
@@ -79,7 +80,7 @@ if [ ! $STATUS_CODE == 200 ]; then
 fi
 
 echo -e "\n\nInstalling git and terminal customization tools..."
-sudo apt install -y zsh git fonts-powerline >>progress.log 2>>error.log
+sudo apt install -y zsh git fonts-powerline 2>>error.log
 
 # User settings for git
 echo -e "\n\nConfigurating git settings..."
@@ -93,36 +94,37 @@ if [ $current_shell == "/bin/bash" ]; then
   echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
   echo "@@                                                        @@"
   echo "@@   Change Needed: Switch to zsh                         @@"
-  echo "@@   This change might require your computer password.    @@"
+  echo "@@   This change might require your Ubuntu password.      @@"
   echo "@@                                                        @@"
   echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-  ZSH_PATH=$(which zsh >>progress.log 2>>error.log)
+  ZSH_PATH=$(which zsh)
   if [ $? != 0 ]; then
     echo "FAILED: zsh not found. Skipping chsh" >>error.log
   else
-    SWITCHED=$(chsh -s $ZSH_PATH >>progress.log 2>>error.log)
+    echo "zsh found... switching to $ZSH_PATH"
+    SWITCHED=$(sudo chsh -s $ZSH_PATH 2>>error.log)
     if [ $? != 0 ]; then
       echo "FAILED: Could not chsh to zsh" >>error.log
     else
+      source ~/.zshrc &>zsh-reload.log
+      echo "Current shell is $(echo $SHELL)"
       new_shell=$(echo $SHELL)
       if [ $new_shell != "$ZSH_PATH" ]; then
         # The rest of the installs will not work if zsh is not the default shell
-        echo "Shell did not change to zsh. Reach out to an instructor before continuing"
-        exit
+        echo "FAILED: Shell did not change to zsh." >>error.log
       fi
     fi
   fi
-
 else
   echo "Already using zsh as default shell"
 fi
 # End zsh set up
 
-
 # Install ohmyzsh
 ZSH_FOLDER=$HOME/.oh-my-zsh
 if [ ! -d "$FOLDER" ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh )" >>progress.log 2>>error.log
+  echo "Installing oh-my-zsh"
+  yes "yes" | sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh )"
 fi
 
 
