@@ -6,7 +6,7 @@ cd "$HOME/workspace/wilderness"
 
 echo "const trails = [{
     'id': 1,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 8.99214,
     'longitude': 105.19602,
     'plantHighlight': 'Rock Melicgrass',
@@ -14,7 +14,7 @@ echo "const trails = [{
     'length': 10.46
 }, {
     'id': 2,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': -12.52614,
     'longitude': -76.5452105,
     'plantHighlight': 'Kane County Twinpod',
@@ -22,7 +22,7 @@ echo "const trails = [{
     'length': 6.88
 }, {
     'id': 3,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 2.013818,
     'longitude': -75.9373449,
     'plantHighlight': 'Pinewoods Horkelia',
@@ -30,7 +30,7 @@ echo "const trails = [{
     'length': 49.2
 }, {
     'id': 4,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': -24.1959097,
     'longitude': -65.2939441,
     'plantHighlight': 'Rosette Lichen',
@@ -38,7 +38,7 @@ echo "const trails = [{
     'length': 20.51
 }, {
     'id': 5,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 28.362805,
     'longitude': 118.400294,
     'plantHighlight': 'Spiny Hopsage',
@@ -46,7 +46,7 @@ echo "const trails = [{
     'length': 6.6
 }, {
     'id': 6,
-    'price': '$$$$$',
+    'price': '\$\$\$\$\$',
     'latitude': 39.4763332,
     'longitude': -8.6457376,
     'plantHighlight': 'Cantua',
@@ -54,7 +54,7 @@ echo "const trails = [{
     'length': 37.68
 }, {
     'id': 7,
-    'price': '$',
+    'price': '\$',
     'latitude': 30.233873,
     'longitude': 119.724733,
     'plantHighlight': 'Largeflower Skeletonplant',
@@ -62,7 +62,7 @@ echo "const trails = [{
     'length': 36.64
 }, {
     'id': 8,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 38.5796262,
     'longitude': 141.2777515,
     'plantHighlight': 'Rosette Lichen',
@@ -70,7 +70,7 @@ echo "const trails = [{
     'length': 30.37
 }, {
     'id': 9,
-    'price': '$$',
+    'price': '\$\$',
     ' latitude': 38.26667,
     ' longitude': 21.83333,
     'plantHighlight': 'Glory Of Texas',
@@ -78,7 +78,7 @@ echo "const trails = [{
     'length': 11.26
 }, {
     'id': 10,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 13.1317415,
     'longitude': 121.435112,
     'plantHighlight': 'Spreading Wallflower',
@@ -86,7 +86,7 @@ echo "const trails = [{
     'length': 37.49
 }, {
     'id': 11,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 32.123667,
     'longitude': 35.018481,
     'plantHighlight': 'Western Sandcherry',
@@ -94,7 +94,7 @@ echo "const trails = [{
     'length': 46.4
 }, {
     'id': 12,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 19.238934,
     'longitude': 108.957345,
     'plantHighlight': 'Tecate Tarweed',
@@ -102,7 +102,7 @@ echo "const trails = [{
     'length': 43.84
 }, {
     'id': 13,
-    'price': '$',
+    'price': '\$',
     'latitude': 48.8282801,
     'longi1ude': 2.7011678,
     'plantHighlight': 'Texas Geranium',
@@ -110,7 +110,7 @@ echo "const trails = [{
     'length': 31.28
 }, {
     'id': 14,
-    'price': '$',
+    'price': '\$',
     'latitede': 59.0883359,
     'longitude': 17.5704656,
     'plantHighlight': 'Point Reyes Ceanothus',
@@ -118,7 +118,7 @@ echo "const trails = [{
     'length': 23.57
 }, {
     'id': 15,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 13.91581,
     'longitude': 44.32414,
     'plantHighlight': 'Awl-leaf Wattle',
@@ -126,7 +126,7 @@ echo "const trails = [{
     'length': 13.47
 }, {
     'id': 16,
-    'price': '$$$$$',
+    'price': '\$\$\$\$\$',
     'latitude': -8.269535,
     'longitude': 122.8950755,
     'plantHighlight': 'Honeysuckle',
@@ -134,7 +134,7 @@ echo "const trails = [{
     'length': 28.39
 }, {
     'id': 17,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': -6.4534018,
     'longitude': -39.6105142,
     'plantHighlight': 'Coolwort',
@@ -142,7 +142,7 @@ echo "const trails = [{
     'length': 15.54
 }, {
     'id': 18,
-    'price': '$',
+    'price': '\$',
     'latitude': -23.0743544,
     'longitude': -44.9561012,
     'plantHighlight': 'Common Leopardbane',
@@ -150,7 +150,7 @@ echo "const trails = [{
     'length': 24.62
 }, {
     'id': 19,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 56.3815664,
     'longitude': 13.9920633,
     'plantHighlight': 'Climbing Fern',
@@ -158,7 +158,7 @@ echo "const trails = [{
     'length': 41.07
 }, {
     'id': 20,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 38.491235,
     'longitude': 111.033425,
     'plantHighlight': 'Distinct Map Lichen',
@@ -166,7 +166,7 @@ echo "const trails = [{
     'length': 32.2
 }, {
     'id': 21,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 43.7979981,
     'longitude': 25.9053209,
     'plantHighlight': 'Hooker's Milkwort',
@@ -174,7 +174,7 @@ echo "const trails = [{
     'length': 22.0
 }, {
     'id': 22,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 10.527572,
     'longitude': 125.16258,
     'plantHighlight': 'Mariposa Lily',
@@ -182,7 +182,7 @@ echo "const trails = [{
     'length': 44.14
 }, {
     'id': 23,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 44.6500125,
     'longitude': 17.9557436,
     'plantHighlight': 'Russethair Saxifrage',
@@ -190,7 +190,7 @@ echo "const trails = [{
     'length': 18.36
 }, {
     'id': 24,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 49.988725,
     'longitude': 20.7001411,
     'plantHighlights': 'Jepson's Linanthus',
@@ -198,7 +198,7 @@ echo "const trails = [{
     'length': 39.46
 }, {
     'id': 25,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 36.040428,
     'longitude': 50.5446161,
     'plantHighlight': 'Tushar Range Beardtongue',
@@ -209,7 +209,7 @@ echo "const trails = [{
 
 const rivers = [{
     'id': 1,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 57.6055534,
     'longitude': 12.2028691,
     'uniqueFish': 'Hystrix indica',
@@ -217,7 +217,7 @@ const rivers = [{
     'length': 22
 }, {
     'id': 2,
-    'price': '$$$$$',
+    'price': '\$\$\$\$\$',
     'latitude': -27.950568,
     'longitude': -51.8148609,
     'uniqueFish': 'Libellula quadrimaculata',
@@ -225,7 +225,7 @@ const rivers = [{
     'length': 73
 }, {
     'id': 3,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 58.5944316,
     'longitude': 49.6634858,
     'uniqueFish': 'Ceratotherium simum',
@@ -233,7 +233,7 @@ const rivers = [{
     'length': 19
 }, {
     'id': 4,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 41.6409278,
     'longitude': -8.5624704,
     'uniqueFish': 'Philetairus socius',
@@ -241,7 +241,7 @@ const rivers = [{
     'length': 15
 }, {
     'id': 5,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 56.9191069,
     'longitude': 60.4807823,
     'uniqueFish': 'Gopherus agassizii',
@@ -249,7 +249,7 @@ const rivers = [{
     'length': 32
 }, {
     'id': 6,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 10.6934511,
     'longitude': 122.4801854,
     'uniqueFish': 'Macropus fuliginosus',
@@ -257,7 +257,7 @@ const rivers = [{
     'length': 67
 }, {
     'id': 7,
-    'price': '$',
+    'price': '\$',
     'latitude': 21.2350622,
     'longitude': -102.3342182,
     'uniqueFish': 'Centrocercus urophasianus',
@@ -265,7 +265,7 @@ const rivers = [{
     'length': 88
 }, {
     'id': 8,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 30.8861589,
     'longitude': 104.2532768,
     'uniqueFish': 'Sceloporus magister',
@@ -273,7 +273,7 @@ const rivers = [{
     'length': 52
 }, {
     'id': 9,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 7.9414261,
     'longitude': 122.3862362,
     'uniqueFish': 'Numida meleagris',
@@ -281,7 +281,7 @@ const rivers = [{
     'length': 78
 }, {
     'id': 10,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 65.4026,
     'longitude': 21.1886684,
     'uniqueFish': 'Pteropus rufus',
@@ -289,7 +289,7 @@ const rivers = [{
     'length': 74
 }, {
     'id': 11,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 29.00707,
     'longitude': 114.246016,
     'uniqueFish': 'Phalaropus lobatus',
@@ -297,7 +297,7 @@ const rivers = [{
     'length': 100
 }, {
     'id': 12,
-    'price': '$$$$$',
+    'price': '\$\$\$\$\$',
     'latitude': 60.0528555,
     'longitude': 23.6314746,
     'uniqueFish': 'Alcelaphus buselaphus cokii',
@@ -305,7 +305,7 @@ const rivers = [{
     'length': 13
 }, {
     'id': 13,
-    'price': '$',
+    'price': '\$',
     'latitude': 58.3493356,
     'longitude': 13.8300629,
     'uniqueFish': 'Catharacta skua',
@@ -313,7 +313,7 @@ const rivers = [{
     'length': 61
 }, {
     'id': 14,
-    'price': '$',
+    'price': '\$',
     'latitude': 35.2099034,
     'longitude': 107.7918964,
     'uniqueFish': 'Spermophilus parryii',
@@ -321,7 +321,7 @@ const rivers = [{
     'length': 90
 }, {
     'id': 15,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 24.965651,
     'longitude': 102.591737,
     'uniqueFish': 'Oryx gazella callotis',
@@ -329,7 +329,7 @@ const rivers = [{
     'length': 55
 }, {
     'id': 16,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 34.810487,
     'longitude': 117.323725,
     'uniqueFish': 'Zenaida asiatica',
@@ -337,7 +337,7 @@ const rivers = [{
     'length': 50
 }, {
     'id': 17,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 53.5279314,
     'longitude': -114.001928,
     'uniqueFish': 'Coluber constrictor',
@@ -345,7 +345,7 @@ const rivers = [{
     'length': 84
 }, {
     'id': 18,
-    'price': '$',
+    'price': '\$',
     'latitude': 43.1227567,
     'longitude': 45.7420648,
     'uniqueFish': 'Upupa epops',
@@ -353,7 +353,7 @@ const rivers = [{
     'length': 70
 }, {
     'id': 19,
-    'price': '$',
+    'price': '\$',
     'latitude': 14.972892,
     'longitude': 8.8831506,
     'uniqueFish': 'Panthera leo',
@@ -361,7 +361,7 @@ const rivers = [{
     'length': 71
 }, {
     'id': 20,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 38.0625172,
     'longitude': 23.7946578,
     'uniqueFish': 'Phalacrocorax albiventer',
@@ -369,7 +369,7 @@ const rivers = [{
     'length': 65
 }, {
     'id': 21,
-    'price': '$',
+    'price': '\$',
     'latitude': 9.8422682,
     'longitude': 11.3885001,
     'uniqueFish': 'Phalacrocorax carbo',
@@ -377,7 +377,7 @@ const rivers = [{
     'length': 46
 }, {
     'id': 22,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 47.2186081,
     'longitude': 34.6661709,
     'uniqueFish': 'Ictonyx striatus',
@@ -385,7 +385,7 @@ const rivers = [{
     'length': 77
 }, {
     'id': 23,
-    'price': '$$$',
+    'price': '\$\$\$',
     'latitude': 43.2625974,
     'longitude': 23.6556259,
     'uniqueFish': 'Anhinga rufa',
@@ -393,7 +393,7 @@ const rivers = [{
     'length': 46
 }, {
     'id': 24,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 33.9485698,
     'longitude': 44.9159938,
     'uniqueFish': 'Theropithecus gelada',
@@ -401,7 +401,7 @@ const rivers = [{
     'length': 77
 }, {
     'id': 25,
-    'price': '$$',
+    'price': '\$\$',
     'latitude': 50.480431,
     'longitude': 121.682569,
     'uniqueFish': 'Phoenicopterus ruber',
@@ -411,7 +411,7 @@ const rivers = [{
 
 const wildlife = [{
     'id': 1,
-    'price': '$$$$',
+    'price': '\$\$\$\$',
     'latitude': 57.6055534,
     'longitude': 12.2028691,
     'uniqueFish': 'Hystrix indica',
