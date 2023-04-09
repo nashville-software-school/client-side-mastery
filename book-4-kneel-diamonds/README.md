@@ -2,17 +2,17 @@
 
 ## Core Projects
 
-| # | 💎 💍  <br/> Kneel Diamonds<br/><sub>(_Guided tour_)</sub> |  🚙 🚗 <br/> Car Builder |
-|--|--|--|
-| 1 | [Kneel Diamonds](./chapters/KD_NARRATIVE.md) | [Cars 'R Us Data and ERD](./chapters/CB_SETUP.md) |
-| 2 | [Debugging Practice](./chapters/KD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Dropdown Controls](./chapters/CB_SELECT_ELEMENTS.md) |
-| 3 | [Kneel Diamonds ERD](./chapters/KD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Modules and Components Setup](./chapters/CB_RADIO_BUTTONS.md) |
-| 4 | [Displaying Jewelry Options](./chapters/KD_RADIO_BUTTONS.md) <br/> <sub style="font-size:0.85rem;">#array-methods #map</sub> | [Choosing Car Options](./chapters/CB_CHANGE_LISTENERS.md) |
-| 5 | [Choosing Jewelry Options](./chapters/KD_CHANGE_EVENTS.md) <br/> <sub style="font-size:0.85rem;">#events #change</sub> | [Saving Chosen Options](./chapters/CB_SETTING_STATE.md) |
-| 6 | [Saving Chosen Metal State](./chapters/KD_SETTING_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #setters</sub> | [Construction Queue](./chapters/CB_SHOWING_UPDATED_STATE.md) |
-| 7 | [Saving Chosen Style and Size](./chapters/KD_SETTING_OTHER_STATE.md) <br/> <sub style="font-size:0.85rem;">#data #objects</sub> | [Price Quotes](./chapters/CB_BUILD_COST.md) |
-| 8 | [Automatically Display New Orders](./chapters/KD_STATECHANGED_EVENT.md) <br/> <sub style="font-size:0.85rem;">#events #custom</sub> |  |
-| 9 | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> |  |
+| # | 🦊 😼 <br/> Fox y Cat | 💎 💍  <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
+|--|--|--|--|
+| 1 | [Introduction to Fetch](./chapters/FC_INTRO.md) <br/> <sub style="font-size:0.85rem;">#fetch</sub> | [Kneel Diamonds](./chapters/KD_NARRATIVE.md) | [Cars 'R Us Data and ERD](./chapters/CB_SETUP.md) |
+| 2 | [ Fox y Cat Project Setup](./chapters/FC_SETUP.md) | [Debugging Practice](./chapters/KD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#debugging</sub> | [Dropdown Controls](./chapters/CB_SELECT_ELEMENTS.md) |
+| 3 | [First Fox Fetch](./chapters/FC_FIRST_FETCH.md) <br/> <sub style="font-size:0.85rem;">#fetch #devtools</sub> | [Kneel Diamonds ERD](./chapters/KD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Modules and Components Setup](./chapters/CB_RADIO_BUTTONS.md) |
+| 4 | [Second Cat Fetch](./chapters/FC_SECOND_FETCH.md) | [Displaying Jewelry Options](./chapters/KD_RADIO_BUTTONS.md) <br/> <sub style="font-size:0.85rem;">#array-methods #map</sub> | [Choosing Car Options](./chapters/CB_CHANGE_LISTENERS.md) |
+| 5 | [Knowing the Network](./chapters/FC_NETWORK_DEVTOOL.md) <br/> <sub style="font-size:0.85rem;">#devtools</sub> | [Choosing Jewelry Options](./chapters/KD_CHANGE_EVENTS.md) <br/> <sub style="font-size:0.85rem;">#events #change</sub> | [Saving Chosen Options](./chapters/CB_SETTING_STATE.md) |
+| 6 |  | [Saving Chosen Metal State](./chapters/KD_SETTING_STATE.md) <br/> <sub style="font-size:0.85rem;">#state #setters</sub> | [Construction Queue](./chapters/CB_SHOWING_UPDATED_STATE.md) |
+| 7 |  | [Saving Chosen Style and Size](./chapters/KD_SETTING_OTHER_STATE.md) <br/> <sub style="font-size:0.85rem;">#data #objects</sub> | [Price Quotes](./chapters/CB_BUILD_COST.md) |
+| 8 |  | [Automatically Display New Orders](./chapters/KD_STATECHANGED_EVENT.md) <br/> <sub style="font-size:0.85rem;">#events #custom</sub> |  |
+| 9 |  | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#array-methods #find</sub> |  |
 
 Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
 
