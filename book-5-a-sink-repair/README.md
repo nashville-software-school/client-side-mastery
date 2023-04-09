@@ -30,12 +30,6 @@ Explorer are **optional** chapters give you the opportunity to expand on the Cor
 | 1 | [Sorting Service Requests](./chapters/AS_SORT_BY_COMPLETE.md) | [Sorting Completed Parties](./chapters/BC_SORT_BY_COMPLETE.md) | Learn how to [deploy your API to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) for free |
 | 2 | | | Learn how to [deploy your client to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) for free |
 
-## 👩‍👩‍👧‍👦 Team Collaboration Projects
-
-| # | Project Name | Summary |
-|--|--|--|
-| 1 | [Gnome Mercy](https://github.com/nss-group-projects/book-6-gnome-mercy) | A group of industrious forests gnomes has been busy for years making potions and elixirs for local witches and wizards. They have had difficulties keeping track of all the requests for their products. They want us to build an application where they can enter in requests to be stored in a database.|
-
 ## 🔐 Deep Learning Projects Unlocked
 
 If you have completed all Core and Explorer chapters, let your instruction team know that you are interested in doing this project with some teammates.

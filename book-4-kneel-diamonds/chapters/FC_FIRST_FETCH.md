@@ -9,6 +9,3 @@ We also suggest that you bookmark the [Public APIs site](https://publicapis.io/)
 Watch **Fox y Cat First Fetch** video for an overview of making remote Web requests with `fetch()`. When you are done with the video, implement the code yourself.
 
 [<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/ecokeEWZZVnTwnl8iDb6)
-
-
-
