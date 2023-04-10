@@ -42,7 +42,7 @@ cd ~/workspace
 Then clone the repository to your machine with the following command.
 
 ```sh
-git clone git@github.com:Nashville-Software-School-Assessments/bug-wrangler-ranch.git
+https://github.com/Nashville-Software-School-Assessments/bug-wrangler-ranch.git
 ```
 
 This will create a new sub-directory called `bug-wrangler-ranch`. Use the `cd` command to navigate into that directory and open it in VS Code.

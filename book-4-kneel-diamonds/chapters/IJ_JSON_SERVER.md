@@ -23,8 +23,7 @@ The properties on the **Submissions** resource are as follows.
 
 * id (integer)
 * ownsBlueJeans (boolean)
-* pricePaid (float)
-* urban (boolean)
+* socioLocationId (integer foreign key)
 
 The properties on the **SocioLocations** resource are as follows.
 
@@ -37,7 +36,6 @@ erDiagram
     SUBMISSIONS {
         id int pk
         ownBlueJeans bool
-        pricePaid float
         socioLocationId int fk
     }
     SOCIOLOCATIONS {
@@ -54,7 +52,6 @@ You are going to store this data in the `api/database.json` file. This is your f
         {
             "id": 1,
             "ownsBlueJeans": false,
-            "pricePaid": 0,
             "socioLocationId": 1
         }
     ],
