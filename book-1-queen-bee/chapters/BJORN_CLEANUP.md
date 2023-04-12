@@ -7,4 +7,4 @@ You can follow one of two strategies.
 * By content type _(i.e. a module for all trail code, etc.)_
 * By function _(i.e. all data in one module, all functions in one module, etc.)_
 
-Then utilize `import` and `exports` correctly make the appropriate code available to other modules. The final result should be that the `adventure.js` module should contain only the code for displaying the information, and should import the data and/or the functions needed from other modules.
+Then utilize `require()` and `module.exports` correctly make the appropriate code available to other modules. The final result should be that the `adventure.js` module should contain only the code for displaying the information, and should import the data and/or the functions needed from other modules.
