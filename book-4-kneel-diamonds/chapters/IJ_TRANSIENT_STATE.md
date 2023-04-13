@@ -82,3 +82,13 @@ Watch the following, quick video to see the final step to hook everything up and
 
 [<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/6Jv5vZ7popGeOUnrZcOj)
 
+## Saving Location Question State
+
+The next step is to save the choice that the user makes for the second question about the type of area lived in. We encourage you to try implementing the code yourself first - the process is nearly identical. Note that you will have to use `parseInt()` to convert the value of the choice instead of `JSON.parse()` since the value of each radio button is an integer instead of a boolean.
+
+If you get stuck on the implementation, you can watch the video below to see how it is done.
+
+[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/2U2PbksARfJ37MED5pHB)
+
+
+
