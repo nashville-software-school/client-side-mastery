@@ -22,3 +22,20 @@ Implement the code once you are done watching the video.
 
 [<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/DLOBarNf9QHknqJymeKh)
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant main
+    participant SaveSubmission
+    participant TransientState
+    participant API
+    main->>SaveSubmission: Get button HTML
+    SaveSubmission-->>main: Here's a button to render
+    Note right of main: Render HTML
+    SaveSubmission->>TransientState: Save button clicked. Make state permanent.
+    TransientState->>API: Please save this new submission.
+    activate API
+    API-->>TransientState: Saved! Here's the new object
+    deactivate API
+```
