@@ -44,7 +44,7 @@ You spend the next several hours scouring all of the possible options, decide to
 
 Gems are a bit tricky, you discovered, as you read the information in the binder. Intead of price following a straightforward formula per caret, it increased as the caret got larger. A one carat stone costs more than double the cost of a half carat stone. Again, two carat stones will cost significantly more.
 
-#### Gem JSON Data
+#### Gem Size JSON Data
 
 ```json
 [

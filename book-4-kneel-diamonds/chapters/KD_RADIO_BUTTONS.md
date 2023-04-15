@@ -1,120 +1,97 @@
 # Showing Custom Jewelry Options
 
-If you hadn't noticed yet, the `main.js` module looks a bit different than it has in previous projects. It doesn't define the main HTML structure of your application. It is deferring _that_ responsibility to the **`KneelDiamonds`** component.
+Time to create all of the component functions for each of the option groups. Just like the **UrbanDweller** function in the Indian Jeans project, you will need to fetch the data from your local API for each of these components since all of the options are in the `database.json` file.
 
-There is a function named `renderAllHTML()` that is defined in the `main.js` module, then immediately invoked. This function is needed later in the growth of the application, because for Kneel Diamonds, you are going to react to the user choosing options.
+## Learning Objectives
 
-When the user chooses options, the state of your data is going to change. When the state of your data changes, then all of the HTML must be regenerated to display that new state.
+* You should be able to correct use **async** and **await** keywords to request data from an API.
+* You should be able to use a `for..of` loop to generate HTML representations of each object in the array.
+* You should be able to import the component functions into the main module, invoke them in the correct place, and compose all of the responses into a single HTML string.
+* You should be able to update the correct element on the DOM with your generated HTML.
 
-More on that later. Just setting the stage now.
 
 ## Render the Metal Options
 
-Your first step is to import and render the **`Metals`** component in the HTML structure defined in the **`KneelDiamonds`** component.
+Create a module to manage the display and selection of a metal by the customer. You can call this module **Metals**, or **MetalOptions** - whatever name makes sense to you. Then create your component function in that module. Don't forget to export the function for use in the main module.
 
-Give it a shot, and if you need to, you can [peek at the solution](./images/kneel-diamonds-show-metals.gif).
+Here's a bit of starter code for you.
 
-## Render Sizes and Styles
-
-Once you show metals, also render the components that show the options for diamond sizes and jewelry styles.
-
-## The Map Array Method
-
-| | |
-|:---:|:---|
-| <h1>&#x270e;</h1> |  _The **map()** array method is a conversion tool. It generates a new array with as many items as are in the original array, but in the new array, it puts items in the form that you specify._ |
-
-Open the **`Metals`** module and the **`DiamondSizes`** module. You will see that the list items for metals uses the `for..of` loop that you have seen in several previous projects for building all of the HTML representations of data.
-
-The diamond sizes are generated in a way that is both completely different, and exactly the same.
+##### `scripts/MetalOptions.js`
 
 ```js
-const listItemsArray = sizes.map(
-    (size) => {
-        return `<li>
-            <input type="radio" name="size" value="${size.id}" /> ${size.carets}
-        </li>`
-    }
-)
-html += listItemsArray.join("")
-```
-
-The `.map()` method also iterates the array, just like `for..of` does. Unlike a `for..of` loop, it invokes the function that you define.
-
-Wait, what function?
-
-This function.
-
-```js
-(size) => {
-    return `<li>
-        <input type="radio" name="size" value="${size.id}" /> ${size.carets}
-    </li>`
+export const MetalOptions = async () => {
+    const response = await fetch("http://localhost:8088/metals")
 }
 ```
 
-That function is the first, and only, argument that the `.map()` method will accept. As it iterates the array, it will take the object at the current location and pass it as an argument to **your** function. Your function defines the `size` parameter.
+Once you complete that, import the function into **main**, invoke it to get the generated HTML and use `innerHTML` to inject the HTML into the DOM. Again, here is some starter code, but it doesn't contain everything you need.
 
-So an _object_ comes into your function, and a _string_ gets returned. That string goes into a new _array_.
-
-### Original Array
+Refer back to the **main** module in Indiana Jeans to remember what else is needed in this module to make it all work. In this starter code, we are providing an overall structure for your HTML that you can use.
 
 ```js
-[
-    { id: 1, carets: 0.5, price: 405 },
-    { id: 2, carets: 0.75, price: 782 },
-    { id: 3, carets: 1, price: 1470 },
-    { id: 4, carets: 1.5, price: 1997 },
-    { id: 5, carets: 2, price: 3638 }
-]
+import { MetalOptions } from './MetalOptions.js'
+
+const render = () => {
+    const metalOptionsHTML = await MetalOptions()
+
+    const composedHTML = `
+        <h1>Kneel Diamonds</h1>
+
+        <article class="choices">
+            <section class="choices__metals options">
+                <h2>Metals</h2>
+                ${metalOptionsHTML}
+            </section>
+
+            <section class="choices__sizes options">
+                <h2>Sizes</h2>
+            </section>
+
+            <section class="choices__styles options">
+                <h2>Styles</h2>
+            </section>
+        </article>
+
+        <article>
+            <button id="orderButton">Create Custom Order</button>
+        </article>
+
+        <article class="customOrders">
+            <h2>Custom Jewelry Orders</h2>
+
+        </article>
+    `
+
+    container.innerHTML = composedHTML
+}
 ```
 
-### Array that Map() Generates
+## Render Sizes and Styles
+
+Once you show metals, follow the same process to show the options for diamond sizes and jewelry styles.
+
+##### `scripts/StyleOptions.js`
 
 ```js
-[
-   "<li> <input type="radio" name="size" value="1" /> 0.5 </li>",
-   "<li> <input type="radio" name="size" value="2" /> 0.75 </li>",
-   "<li> <input type="radio" name="size" value="3" /> 1 </li>",
-   "<li> <input type="radio" name="size" value="4" /> 1.5 </li>",
-   "<li> <input type="radio" name="size" value="5" /> 2 </li>"
-]
+export const StyleOptions = async () => {
+    const response = await fetch("http://localhost:8088/styles")
+
+    // Fill in the rest
+
+
+    return optionsHTML
+}
 ```
 
-Here's a quick example. An array filled with numbers. Observe how changes made to what the function returns affects the resulting array _(in blue at the end)_.
-
-![](./images/array-map-example.gif)
-
-## The Join() Array Method
-
-The `.join()` array method, luckily, does exactly what its name infers - it _joins_ things together.
-
-More specifically, it join **all** of the individual items in the array into a single string... all squished together.
-
-![](./images/array-join-method-demo.gif)
-
-If you join the strings in this array...
+##### `scripts/SizeOptions.js`
 
 ```js
-[
-   "<li> <input type="radio" name="size" value="1" /> 0.5 </li>",
-   "<li> <input type="radio" name="size" value="2" /> 0.75 </li>",
-   "<li> <input type="radio" name="size" value="3" /> 1 </li>",
-   "<li> <input type="radio" name="size" value="4" /> 1.5 </li>",
-   "<li> <input type="radio" name="size" value="5" /> 2 </li>"
-]
+export const SizeOptions = async () => {
+    const response = await fetch("http://localhost:8088/sizes")
+
+    // Fill in the rest
+
+
+    return optionsHTML
+}
 ```
-
-...you end up with one long string filled with HTML.
-
-```html
-"<li> <input type="radio" name="size" value="1" /> 0.5 </li>
-<li> <input type="radio" name="size" value="2" /> 0.75 </li>
-<li> <input type="radio" name="size" value="3" /> 1 </li>
-<li> <input type="radio" name="size" value="4" /> 1.5 </li>
-<li> <input type="radio" name="size" value="5" /> 2 </li>"
-```
-
-## Generate Jewelry Styles Options
-
-Now it's your turn. Use the `.map()` array method in the **`JewelryStyles`** component function to generate one long string of HTML that contains the `<li>` elements for the options.

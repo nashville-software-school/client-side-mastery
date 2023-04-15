@@ -18,6 +18,7 @@ Then create the starter files.
 
 ```sh
 touch index.html
+touch api/database.json
 touch styles/main.css
 touch scripts/main.js
 ```
@@ -36,15 +37,9 @@ Then you can use the `link` Intellisense helper to include your `main.css` file.
 
 ## JSON Database
 
-Time to create your database file that will be managed by the `json-server` application that you run in your terminal.
+Time to create your database file that will be managed by the `json-server` application that you run in your terminal. In the first chapter, you had seen how to define the data that is needed for this application. Time to put it in your database.
 
-```sh
-touch api/database.json
-```
-
-In the first chapter, you had seen how to define the data that is needed for this application. Time to put it in your database.
-
-Open the `database.json` file and add the following data.
+Open the `api/database.json` file and add the following data.
 
 ```json
 {
@@ -70,4 +65,3 @@ Open the `database.json` file and add the following data.
     "orders": []
 }
 ```
-
