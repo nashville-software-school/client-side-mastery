@@ -16,7 +16,7 @@ Create a module that produces HTML for a button labeled **Place Order**. Invoke 
 
 When the user clicks on the **Place Order** button in the application, you need to store their choices permanently. You will convert the transient state into permanent state by performing a `fetch()` with a method of **POST**.
 
-In your transient state module, create a function named `placeOrder()` that
+In your transient state module, create a function named `placeOrder()` that stringifies the transient state and sends it to the API over HTTP. Some starter code is provided below. You need to make sure that the options object is provided as an argument to the fetch function.
 
 ```js
 export const placeOrder = async () => {
