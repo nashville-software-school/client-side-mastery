@@ -52,8 +52,8 @@ const render = () => {
             </section>
         </article>
 
-        <article>
-            <button id="orderButton">Create Custom Order</button>
+        <article class="order">
+
         </article>
 
         <article class="customOrders">
