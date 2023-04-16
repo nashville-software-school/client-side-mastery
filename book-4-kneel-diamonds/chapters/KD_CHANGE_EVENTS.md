@@ -43,3 +43,5 @@ And in your component function, listen for the change event and specify the abov
 ## Log the New State
 
 If you want to make sure that transient state is changing correctly, use a `console.log()` inside the setter functions.
+
+![](./images/kneel-diamonds-transient-state.gif)
