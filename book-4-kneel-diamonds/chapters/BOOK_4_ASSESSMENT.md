@@ -14,10 +14,6 @@ This project will help you assess your ability to apply the JavaScript skills th
 1. Displaying state as HTML
 1. User input with radio options
 
-## Array Methods Refresh
-
-<img src="./images/array-method-diagram.png" width="800px"  />
-
 ## Application Overview
 
 You will be building an application for a local food truck that offers food that is a fusion of American Southern and Greek cuisines.
@@ -45,11 +41,20 @@ A customer should be able to choose a base dish, a vegetable, and a side dish an
 Given the description and animation above...
 
 1. Create an ERD for this application before you begin.
-1. Make a list of what modules need to be created to make your application as modular as possible.
+1. Make a list of what modules need to be created to make your application as modular as possible. Create a **Dependency Graph** for the project to be reviewed once you are complete with the assessment.
+1. Create a **Sequence Diagram** that visualizes what your algorithm is for this project. We'll give you a minimal starting point.
 
-Discuss these with your teammates, and then talk to an instructor to review your decisions. Be prepared to defend why you made your choices.
-
-Once an instruction reviews and approves your ERD and ideas about components, an invitation link will be provided to you to start the assessment.
+```mermaid
+sequenceDiagram
+    participant Main
+    Main->>Vegetables: Generate vegetable options
+    Vegetables-->>Main: Here are some radio buttons
+    participant Vegetables
+    participant TransientState
+    TransientState->>API: Save this dinner order
+    API-->>TransientState: Order saved
+    participant API
+```
 
 ## Setup
 
