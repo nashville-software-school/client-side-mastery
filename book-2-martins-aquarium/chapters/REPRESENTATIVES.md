@@ -25,28 +25,12 @@
    <!DOCTYPE html>
    <html lang="en">
      <head>
-       <title>Nashville Coffee Houses</title>
+       <title>Congressional Representative</title>
        <link rel="stylesheet" href="styles/main.css">
      </head>
      <body>
-   	<header class="pageHeader">Congressional Representative</header>
+      	<header class="pageHeader">Congressional Representative</header>
 
-       <section class="list">
-         <article class="shop">The Jam</article>
-         <article class="shop">The Well</article>
-         <article class="shop">Red Bicycle</article>
-         <article class="shop">Crema</article>
-         <article class="shop">Frothy Monkey</article>
-         <article class="shop">8th &amp; Roast</article>
-         <article class="shop">Bongo Java</article>
-         <article class="shop">Flatrock</article>
-         <article class="shop">Fido</article>
-         <article class="shop">Steadfast Coffee</article>
-         <article class="shop">Dose Coffee</article>
-         <article class="shop">Sam &amp; Zoes</article>
-         <article class="shop">Slow Hand Coffee</article>
-         <article class="shop">The Horn</article>
-       </section>
      </body>
    </html>
    ```
