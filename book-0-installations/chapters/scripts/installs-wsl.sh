@@ -38,9 +38,9 @@ echo -e "Host *\n\tAddKeysToAgent yes\n\tIdentityFile ~/.ssh/id_nss" >> ~/.ssh/c
 
 # Get latest updates
 echo -e "\n\nUpdating the Ubuntu operating system..."
-sudo apt-get update -y >>progress.log 2>>error.log
-sudo apt-get dist-upgrade -y >>progress.log 2>>error.log
-sudo apt install -y curl file build-essential libssl-dev libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb  >>progress.log 2>>error.log
+sudo apt-get update -y >>/dev/null 2>>error.log
+sudo apt-get dist-upgrade -y >>/dev/null 2>>error.log
+sudo apt install -y curl file build-essential libssl-dev libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb  >>/dev/null 2>>error.log
 
 # Install Node
 echo -e "\n\n\n\n"

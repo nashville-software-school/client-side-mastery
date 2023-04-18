@@ -2,17 +2,12 @@
 
 This project will help you assess your ability to apply the JavaScript skills that you practiced in this book.
 
-1. Functions
-1. Modules
-1. Iteration
-1. Objects
-1. Arrays
-1. Handling browser generated events
 1. Generating custom events
-1. Handling custom events
-1. State management
-1. Displaying state as HTML
-1. User input with radio options
+2. Handling browser generated, and custom, events
+4. State management (transient and permanent)
+5. Displaying state as HTML
+6. User input with radio options
+7. HTTP requests with async/await
 
 ## Application Overview
 

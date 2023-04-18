@@ -39,11 +39,11 @@ if ! type brew &>/dev/null; then
 fi
 
 echo -e "\n\nInstalling git and terminal customization tools..."
-brew install -q git tig zsh zsh-completions >>progress.log 2>>error.log
+brew install -q git tig zsh zsh-completions >>/dev/null 2>>error.log
 
 echo -e "\n\nConfiguring the Finder application to show hidden files..."
 defaults write com.apple.finder AppleShowAllFiles YES
-killall Finder >>progress.log 2>>error.log
+killall Finder >>/dev/null 2>>error.log
 # End Mac Specific
 
 # Set up git and github - Needs to be below the brew install
@@ -73,13 +73,13 @@ if [ ! $STATUS_CODE == 200 ]; then
   echo -e "POST for SSH key returned status code $STATUS_CODE" >>error.log
 fi
 
-git config --global user.name "$STUDENT_NAME" >>progress.log 2>>error.log
-git config --global user.email $EMAIL_ADDRESS >>progress.log 2>>error.log
+git config --global user.name "$STUDENT_NAME" >>/dev/null 2>>error.log
+git config --global user.email $EMAIL_ADDRESS >>/dev/null 2>>error.log
 # End Git set up
 
 # Install XCode Command line tools - May take awhile so run this one last
 echo -e "\n\nMaking sure you have Command line tools installed"
-xcode-select --install >>progress.log 2>>error.log
+xcode-select --install >>/dev/null 2>>error.log
 
 # Set up Zsh
 
@@ -115,7 +115,7 @@ fi
 
 ZSH_FOLDER=$HOME/.oh-my-zsh
 if [ ! -d "$FOLDER" ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh )" >>progress.log 2>>error.log
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh )" >>/dev/null 2>>error.log
 fi
 # End zsh set up
 
@@ -123,18 +123,18 @@ fi
 if ! type nvm &>/dev/null; then
   echo -e "Installing Node Version Manager..."
 
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash >>progress.log 2>>error.log
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash >>/dev/null 2>>error.log
   source ~/.zshrc &>zsh-reload.log
 fi
 
-nvm install --lts >>progress.log 2>>error.log
-nvm use --lts >>progress.log 2>>error.log
+nvm install --lts >>/dev/null 2>>error.log
+nvm use --lts >>/dev/null 2>>error.log
 
 echo -e "\n\nInstalling a web server and a simple API server..."
 npm config set prefix $HOME/.npm-packages
 echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >>~/.zshrc
 source ~/.zshrc &>zsh-reload.log
-npm i -g serve json-server cypress >>progress.log 2>>error.log
+npm i -g serve json-server cypress >>/dev/null 2>>error.log
 # End Node Set up
 
 # BEGIN verification
