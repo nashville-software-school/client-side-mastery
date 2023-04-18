@@ -57,7 +57,7 @@ sudo apt-get install -y nodejs
 # Install global dependencies
 echo -e "\n\nInstalling a web server and a simple API server..."
 npm config set prefix $HOME/.npm-packages
-echo 'export PATH="$HOME/.npm-packages/bin:$PATH"' >> $HOME/.profile
+echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> $HOME/.profile
 source $HOME/.profile &>profile-reload.log
 npm i -g serve json-server >>progress.log 2>>error.log
 

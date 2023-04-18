@@ -54,6 +54,15 @@ After you run `serve` a URL will be displayed in your terminal. Copy pasta that 
    └────────────────────────────────────────────────────┘
 ```
 
+If this doesn't work for you, the initial installations may not have worked correctly. Run the following commands in your terminal and see if you can run **serve** afterwards.
+
+```sh
+npm config set prefix $HOME/.npm-packages
+echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> $HOME/.profile
+source $HOME/.profile &> profile-reload.log
+npm i -g serve json-server >> /dev/null 2>> error.log
+```
+
 ## Description
 
 You're going to create an HTML component to represent a political candidate. Specifically, the representative of your Congressional district. Visit the GovTrack site link below, enter in your home address, and you'll find basic information about your representative.
