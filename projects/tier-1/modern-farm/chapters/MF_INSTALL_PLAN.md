@@ -5,48 +5,18 @@ In this project, you will be practicing the following skills.
 1. Declaring variables with `let` and `const`.
 1. Writing functions.
 1. Function parameters and arguments.
-1. Iteration with `for` loops and/or `forEach` array methods.
-1. Modular development to enforce the Single Responsibiity Principle to your code.
-1. Using `import` and `export` keywords between modules.
-1. Conditional logic using `if` and `else`.
+2. Iteration with `for` loops.
+3. Modular development to enforce the Single Responsibiity Principle to your code.
+4. Using `import` and `export` keywords between modules.
+5. Conditional logic using `if` and `else`.
 
 ## Setup
 
-Open a new terminal window, copy pasta the following command into the terminal and hit enter to run it. It will create a basic file structure for you and create some starter code in the `~/workspace/modern-farm` directory.
+Ask an instructor for the link that will create your self-assessment repository. Once the repo is created, click the green **Code** button at the top and copy the SSH connection string provided in the window that appears.
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/projects/tier-1/modern-farm/chapters/scripts/modern-farm-install.sh)"
-```
+Then clone the repository as a child of **workspace** and `cd` into that new directory. Then use the `code .` command to view the code, and then move on to the next section.
 
-Then run the following command in your terminal to change directory to the project directory.
-
-```sh
-cd ~/workspace/modern-farm
-```
-
-After that runs, you can use the `code .` command to view the code, and then move on to the next section.
-
-## Repository Setup
-
-The install script also ran the `git init` command for you in the `~/workspace/modern-farm` directory.
-
-> **Note:** If you need help with these steps, please talk to your instructors. It's important that they are done in the exact order specified and use the exact values specified.
-
-1. Log into your Github account.
-1. Create a new repository named `modern-farm`.
-1. Once the repo is created, click the "Clone or download" button. Make sure the "Clone with SSH" option is chosen, not HTTPS.
-1. Copy the URL.
-1. Then use the following command to connect your local repository to the Github repository.
-
-```sh
-git remote add origin paste_your_github_repo_url_here
-```
-
-For example, it would look like this. Make sure you use the SSH version when you copy the URL from your Github repository.
-
-```sh
-git remote add origin git@github.com:yourusername/modern-farm.git
-```
+All of the source code for this project will be in the directory of `src`.
 
 ## Automated Tests
 
