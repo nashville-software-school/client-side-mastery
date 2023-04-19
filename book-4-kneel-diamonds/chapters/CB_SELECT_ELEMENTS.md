@@ -26,15 +26,12 @@ To display a group of options, the two most common controls used by designers an
 To get the option that the user selected, you would access the `.value` property of the `<select>` element, not the individual options.
 
 ```js
-document.addEventListener(
-    "change",
-    (changeEvent) => {
-        if (changeEvent.target.id === "resource") {
-            const chosenOption = changeEvent.target.value
-            console.log(chosenOption)  // "1" or "2"
-        }
-    }
-)
+const changeHandler = (changeEvent) => {
+   if (changeEvent.target.id === "resource") {
+      const chosenOption = changeEvent.target.value
+      console.log(chosenOption)  // "1" or "2"
+   }
+}
 ```
 
 | | |
