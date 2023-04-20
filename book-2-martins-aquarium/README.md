@@ -27,7 +27,6 @@ You will be referring back to these chapters throughout the entire course as you
 | 8   |  | [Review of Signal Flow](./chapters/DUO_REVIEW.md) | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
 | 9   |  |  | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
 | 10  |  |  | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
-| 11  |  |
 
 Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
 

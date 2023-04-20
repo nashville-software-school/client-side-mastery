@@ -14,7 +14,13 @@ In this project, you will be practicing the following skills.
 
 Ask an instructor for the link that will create your self-assessment repository. Once the repo is created, click the green **Code** button at the top and copy the SSH connection string provided in the window that appears.
 
-Then clone the repository as a child of **workspace** and `cd` into that new directory. Then use the `code .` command to view the code, and then move on to the next section.
+Make sure you are in your workspace directory.
+
+```sh
+cd ~/workspace
+```
+
+Then clone the repository as a child of **workspace** and `cd modern-farm` to move to that new directory created by the clone. Then use the `code .` command to view the code, and then move on to the next section.
 
 All of the source code for this project will be in the directory of `src`.
 
