@@ -1,1 +1,0 @@
-* Show how to use `_expand` with JSON server to eliminate the the requests for metals, sizes and styles in the OrderList component

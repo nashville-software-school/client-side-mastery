@@ -28,4 +28,21 @@ In your meeting with Mike, here's that information that he wants people to provi
 
 When people request a reservation, he wants them all listed in chronological order - closest date first. He also wants the ability to delete requests.
 
-Once the party is over, he wants the ability to say if he or Leslie filled the reservation.
+Once a reservation is entered, he wants to be able to select the equipment that should be taken. Each type of equipment can be assigned to many parties. A party can have many kinds of equipment assigned to it.
+
+Here is the different equipment that can be taken to a party.
+
+* Balloons
+* Magic cards
+* Squirting flower
+* Vanishing cabinet
+* Helium tank
+* Music equipment
+* Air compressor
+
+
+# Entity Relationship Diagram
+
+Given the requirements above, create an ERD for the data and requirements that Mike and Leslie have for their project.
+
+

@@ -27,17 +27,15 @@ Explorer chapters are **optional** and give you the opportunity to expand on the
 
 | # | 🧑🏿‍🌾 👖 <br/>Indiana Jeans | 💎 💍  <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
 |--|--|--|--|
-| 1 | [TODO: Lose the For Loops](./chapters/IJ_EX_FOR_TO_MAP.md) |[Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
-| 1 | [TODO: Filter by Area](./chapters/IJ_EX_FILTER.md) | |
-| 2 |  | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |
+| 1 | [Lose the For Loops](./chapters/IJ_EX_FOR_TO_MAP.md) |[Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
 ## 🏕 Pioneer Chapters
 
 Pioneer chapters let you develop Deep Learning on the concepts that you practiced in this book.
 
-| # | 🧑🏿‍🌾 👖 <br/>Indiana Jeans | 💎 💍 <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
-|--|--|--|--|
-| 1 | [Storing State in a Map](./chapters/ID_PI_STATE_MAP.md) |[User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) |  |
-| 2 |  | [TODO: Expanding Order to Reduce Requests](./chapters/KD_PI_JSON_SERVER_EXPAND.md) |  |
+| # | 🧑🏿‍🌾 👖 <br/>Indiana Jeans | 💎 💍 <br/> Kneel Diamonds |
+|--|--|--|
+| 1 | [Storing State in a Map](./chapters/ID_PI_STATE_MAP.md) |[User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) |
+| 2 |  | [Data Structures](./chapters/KD_PI_STATE_MAP.md) |
 
 
 ## 🔐 Deep Learning Group Project Unlocked

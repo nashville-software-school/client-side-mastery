@@ -29,7 +29,7 @@ To get the option that the user selected, you would access the `.value` property
 const changeHandler = (changeEvent) => {
    if (changeEvent.target.id === "resource") {
       const chosenOption = changeEvent.target.value
-      console.log(chosenOption)  // "1" or "2"
+      console.log(parseInt(chosenOption))
    }
 }
 ```

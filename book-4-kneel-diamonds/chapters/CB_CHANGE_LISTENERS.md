@@ -12,6 +12,8 @@ There are two different ways that you have seen to build up the HTML for each se
 
 ```js
 export const Technologies = () => {
+    // Get data first
+
     let html = "<h2>Technologies</h2>"
 
     html += '<select id="tech">'
@@ -23,7 +25,6 @@ export const Technologies = () => {
 
     html += "</select>"
     return html
-    `
 }
 ```
 
