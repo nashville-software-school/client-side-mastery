@@ -2,7 +2,7 @@
 
 ## Setup
 
-Have a terminal window open and change directory to `~/workspace/modern-farm`.
+Have a terminal window open and make sure you are in the assessment repository..
 
 Run `npm run test` to start the automated testing task.
 
