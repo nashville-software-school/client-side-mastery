@@ -1,6 +1,6 @@
 # Git Basics
 
-This visualization is going to be a key resource for you and your teams as you go through the course. It is highly recommended that keep coming back to this chapter and have this image open in a browser tab every time you work with git until you are comfortable with the process.
+This visualization is going to be a key resource for you and your teams as you go through the course. It is highly recommended that you keep coming back to this chapter and have this image open in a browser tab every time you work with git until you are comfortable with the process.
 
 ![](./images/git-basic-workflow.png)
 
