@@ -1,11 +1,5 @@
 # Seed Producing Modules
 
-## Setup
-
-Have a terminal window open and change directory to `~/workspace/modern-farm`.
-
-Run `npm run test` to start the automated testing task.
-
 ## Seed Instructions
 
 1. Create a module for each type of possible plant in the `seeds` directory. For example, one of the types of food you grow is corn. Create a `scripts/seeds/corn.js` module. Make sure that each file uses all lowercase letters for the file name.

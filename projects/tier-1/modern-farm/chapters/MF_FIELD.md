@@ -1,11 +1,5 @@
 # Tilling the Field
 
-## Setup
-
-Have a terminal window open and make sure you are in the assessment repository..
-
-Run `npm run test` to start the automated testing task.
-
 ## Tilling Instructions
 
 1. Create a `scripts/field.js` module.

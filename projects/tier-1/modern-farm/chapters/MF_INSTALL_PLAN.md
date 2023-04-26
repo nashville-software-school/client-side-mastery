@@ -20,7 +20,7 @@ Make sure you are in your workspace directory.
 cd ~/workspace
 ```
 
-Then clone the repository as a child of **workspace** and `cd modern-farm` to move to that new directory created by the clone. Then use the `code .` command to view the code, and then move on to the next section.
+Then clone the repository as a child of **workspace** and then **cd** to the new directory created by the clone. Then use the `code .` command to view the code, and then move on to the next section.
 
 All of the source code for this project will be in the directory of `src`.
 

@@ -1,11 +1,5 @@
 # Sowing the Field With Your Tractor
 
-## Setup
-
-Have a terminal window open and change directory to `~/workspace/modern-farm`.
-
-Run `npm run test` to start the automated testing task.
-
 ## Sowing Instructions
 
 1. Create a `scripts/tractor.js` module.
