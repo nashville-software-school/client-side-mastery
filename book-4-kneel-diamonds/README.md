@@ -13,7 +13,6 @@
 | 7 |  | [Displaying Submissions](./chapters/IJ_SUBMISSIONS.md) <br/> <sub style="font-size:0.85rem;">#component</sub> | [Saving Orders to Permanent State](./chapters/KD_POST_ORDER_TO_API.md) <br/> <sub style="font-size:0.85rem;">#fetch #POST</sub> |  |
 | 8 |  | [Reacting to State Changes](./chapters/IJ_STATE_CHANGE.md) <br/> <sub style="font-size:0.85rem;">#custom-event</sub> | [Show Orders on Creation](./chapters/KD_CUSTOM_EVENT.md) <br/> <sub style="font-size:0.85rem;">#custom-event</sub> |  |
 | 9 |  |  | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#json-server #expand</sub> |  |
-| 10 |  |  |  |  |
 
 Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
 
@@ -38,9 +37,16 @@ Pioneer chapters let you develop Deep Learning on the concepts that you practice
 | 2 |  | [Data Structures](./chapters/KD_PI_STATE_MAP.md) |
 
 
+## 🔐 Deep Learning Individual Project Unlocked
+| # | Project&nbsp;Name | Description |
+|--|--|--|
+|1|[Honest&nbsp;Abe](../projects/tier-3/honest-abe/)| Honest Abe is an individual project which has three mini-projects that increase in complexity. If you completed all three, you will have mastered ERDs, data relationships, and using array methods to navigate them. |
+
 ## 🔐 Deep Learning Group Project Unlocked
 
 | # | Project&nbsp;Name | Description |
 |--|--|--|
 |1|[Exomine](https://github.com/nss-group-projects/exomine)| Exomine is a group project that uses all of the skills you have worked with to this point in the course. Your knowledge of data relationships and array methods will be grown tremendously and challenged. Can you face the challenge with some teammates? |
-
+|2|[Giffygram](../projects/tier-4/giffygram/)| In this group project, your team will deconstruct an existing project using your Dev Tools, and then rebuild it based on your technical specifications. |
+|3|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-4/truncheons/)| This is a group project for building a way to record scores for a Medieval tavern game. If you want to work on this, let your intructors know and they can coordinate a team. |
+|4|[Holiday Road](../projects/tier-4/holidayroad/)| This is a group project that will have your team building a National Parks itinerary builder by working with multiple public APIs. You will also get to pick an unique persona to build your user experience. |

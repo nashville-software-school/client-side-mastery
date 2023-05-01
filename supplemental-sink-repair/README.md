@@ -1,15 +1,31 @@
 # Book 5 - A Sink Repair Service
 
+## Learning Objectives
+
+## Brand New
+
+* Text input
+* Checkboxes
+* Set() data structure
+
+---
+
+## Expanded upon
+
+* Many to many
+* Chained/dependent fetch operations
+
 ## Core Projects
 
 | # | 🎭 🤹🏼‍♂️ <br/> Multitalented | 🔧 💧 <br/> A Sink Repair | 🤡 <br/> Buttons the Clown |
 |--|--|--|--|
-| 2 | [Many to Many Intro](./chapters/MT_MANY_INTRO.md) <br/> <sub style="font-size:0.85rem;">#ERD</sub> |[A Sink Repair Service](./chapters/AS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#context</sub> | [Hire a Clown for Your Next Party](./chapters/BC_INTRO.md) |
-| 3 | [Text Input Fields](./chapters/MT_TEXT_INPUT.md) <br/> <sub style="font-size:0.85rem;">#input #text</sub> |[Permanent State vs Transient State](./chapters/AS_STATE_TYPES.md) <br/> <sub style="font-size:0.85rem;">#state</sub>  | [Reserving Buttons](./chapters/BC_RESERVATION_POST.md) |
-| 4 | [Checkboxes](./chapters/MT_CHECKBOXES.md) <br/> <sub style="font-size:0.85rem;">#input #checkboxes</sub> |[Listing Past Requests](./chapters/AS_FETCH_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET</sub> | [Buttons' Schedule](./chapters/BC_SCHEDULE_LIST.md) |
-| 5 | [Add or Remove Talents](./chapters/MT_POST_DELETE.md) <br/> <sub style="font-size:0.85rem;">#POST #DELETE</sub> |[Requesting Service](./chapters/AS_USER_INPUT.md) <br/> <sub style="font-size:0.85rem;">#input #form-fields</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) |
-| 6 | [Checking Talents](./chapters/MT_CHECKED_STATE.md) <br/> <sub style="font-size:0.85rem;">#checked</sub> |[Submitting Service Request](./chapters/AS_HTTP_POST.md) <br/> <sub style="font-size:0.85rem;">#POST #fetch #JSON</sub> | [The Party is Over](./chapters/BC_PERFORMANCE_COMPLETE.md) |
-| 7 | [Editing Actors](./chapters/MT_EDIT_PUT.md) <br/> <sub style="font-size:0.85rem;">#PUT</sub> |[Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> |  |
+| 1 | [Many to Many Intro](./chapters/MT_MANY_INTRO.md) <br/> <sub style="font-size:0.85rem;">#ERD</sub> |[A Sink Repair Service](./chapters/AS_INTRO.md) <br/> <sub style="font-size:0.85rem;">#context</sub> | [Hire a Clown for Your Next Party](./chapters/BC_INTRO.md) |
+| 2 | [Text Input Fields](./chapters/MT_TEXT_INPUT.md) <br/> <sub style="font-size:0.85rem;">#input #text</sub> |[Permanent State vs Transient State](./chapters/AS_STATE_TYPES.md) <br/> <sub style="font-size:0.85rem;">#state</sub>  | [Reserving Buttons](./chapters/BC_RESERVATION_POST.md) |
+| 3 | [Checkboxes](./chapters/MT_CHECKBOXES.md) <br/> <sub style="font-size:0.85rem;">#input #checkboxes</sub> |[Listing Past Requests](./chapters/AS_FETCH_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET</sub> | [Buttons' Schedule](./chapters/BC_SCHEDULE_LIST.md) |
+| 4 | [Add Actor and Talents](./chapters/MT_POST_DELETE.md) <br/> <sub style="font-size:0.85rem;">#POST #response-data</sub> |[Requesting Service](./chapters/AS_USER_INPUT.md) <br/> <sub style="font-size:0.85rem;">#input #form-fields</sub> | [Rejected by Buttons](./chapters/BC_DENY_RESERVATION.md) |
+| 5 | [EXPLORER:Remove Talents](./chapters/MT_POST_DELETE.md) <br/> <sub style="font-size:0.85rem;">#DELETE</sub> | | |
+| 6 | [EXPLORER:Checking Talents](./chapters/MT_CHECKED_STATE.md) <br/> <sub style="font-size:0.85rem;">#checked</sub> |[Submitting Service Request](./chapters/AS_HTTP_POST.md) <br/> <sub style="font-size:0.85rem;">#POST #fetch #JSON</sub> | [The Party is Over](./chapters/BC_PERFORMANCE_COMPLETE.md) |
+| 7 | [EXPLORER:Editing Actors](./chapters/MT_EDIT_PUT.md) <br/> <sub style="font-size:0.85rem;">#PUT</sub> |[Updating Service Request List](./chapters/AS_HTTP_GET.md) <br/> <sub style="font-size:0.85rem;">#fetch #GET #state</sub> |  |
 | 8 |  |[Denying Service Requests](./chapters/AS_HTTP_DELETE.md) <br/> <sub style="font-size:0.85rem;">#JSON #fetch #DELETE</sub> |  |
 | 9 |  |[Completing Service Requests](./chapters/AS_COMPLETIONS.md)<br/> <sub style="font-size:0.85rem;">#fetch #then-chaining |  |
 

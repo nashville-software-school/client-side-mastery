@@ -87,8 +87,8 @@ Now each hauler list item will be rendered like this.
 You also need to specify what _kind of data_ that the list item represents. You will use another data attribute for this.
 
 ```js
-shipsHTML += `<li data-id="${ship.id}
-                  data-type='hauler'">
+shipsHTML += `<li data-id="${ship.id}"
+                  data-type="hauler">
                 ${ship.name}
               </li>`
 ```

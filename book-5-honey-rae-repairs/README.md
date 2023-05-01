@@ -1,4 +1,4 @@
-# Book 6 - Honey Rae's Repair Shop
+# Book 5 - Honey Rae's Repair Shop
 
 It is very important that you work on the concepts in this book in the segments that are suggested.
 
@@ -12,16 +12,16 @@ For example, here's what the first few days should look like for you.
 
 ## Core Projects
 
-| # | 🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
-|--|--|--|
-| 1 | [Getting Started with React](./chapters/REACT_BASICS.md) |  |
-| 2 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub>| [Kandy Korner API](./chapters/KANDY_API.md) |
-| 3 | [Employee: List All Tickets Part 1](./chapters/HONEY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#routing #state</sub> | |
-| 4 | [Employee: List All Tickets Part 2](./chapters/HONEY_LIST_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch #state</sub> | |
-| 5 | [Customer: List My Tickets](./chapters/HONEY_LIST_MY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #users</sub> | [Store Locations](./chapters/KK_STORES.md) | |
-| 6 | [Employee: Show Emergencies Only](./chapters/HONEY_EMERGENCIES.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | [Inventory](./chapters/KK_INVENTORY.md) |
-| 7 | [Customer: Create Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #POST</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
-| 8 | [Customer: Show Only Open Tickets](./chapters/HONEY_OPEN_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #useEffect</sub> | [Create Products](./chapters/KK_NEW_PRODUCT.md) |
+| # | 💎 💍 <br/> [Kneel Diamonds](./chapters/KD_NARRATIVE.md) |🍯 💻 Honey Rae's Repairs | 🍭 🍬 Kandy Korner |
+|--|--|--|--|
+| 1 | [Getting Started with React](./chapters/REACT_CORE_BASICS.md) | [Project Setup](./chapters/REACT_BASICS.md) |  |
+| 2 | [Your First Components](./chapters/KD_COMPONENT.md) | [Repair API](./chapters/REPAIR_API.md)| [Kandy Korner API](./chapters/KANDY_API.md) |
+| 3 | [Events and State](./chapters/KD_COMPONENT.md) | [Employee: List All Tickets Part 1](./chapters/HONEY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#routing #state</sub> | |
+| 4 | [Observing State](./chapters/KD_COMPONENT.md) | [Employee: List All Tickets Part 2](./chapters/HONEY_LIST_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch #state</sub> | |
+| 5 | [Updating Rendered State](./chapters/KD_COMPONENT.md) |[Customer: List My Tickets](./chapters/HONEY_LIST_MY_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #users</sub> | [Store Locations](./chapters/KK_STORES.md) | |
+| 6 | [Component Properties](./chapters/KD_COMPONENT.md) | [Employee: Show Emergencies Only](./chapters/HONEY_EMERGENCIES.md) <br/> <sub style="font-size:0.85rem;">#useEffect #state</sub> | [Inventory](./chapters/KK_INVENTORY.md) |
+| 7 | [Lifecycle Review](./chapters/KD_COMPONENT.md) | [Customer: Create Ticket](./chapters/HONEY_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #POST</sub> | [Product Types](./chapters/KK_PRODUCT_TYPES.md) |
+| 8 | [Your First Component](./chapters/KD_COMPONENT.md) | [Customer: Show Only Open Tickets](./chapters/HONEY_OPEN_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#state #useEffect</sub> | [Create Products](./chapters/KK_NEW_PRODUCT.md) |
 
 **🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 8**
 
