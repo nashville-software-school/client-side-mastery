@@ -30,6 +30,13 @@ A detailed way to visualize an algorithm for a problem is with a **Sequence Diag
 
 It is a visualization of your algorithmic thinking.
 
+### Favorite Tools of Learners Past
+
+1. The [sequencediagram.org](https://sequencediagram.org/) site is a wonderful cloud-based option to build your sequence diagram.
+2. The [draw.io VS Code Extension](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) allows you to have a local file in your project that contains your diagram.
+
+### Example Diagram
+
 ```mermaid
 sequenceDiagram
     participant "Properties"

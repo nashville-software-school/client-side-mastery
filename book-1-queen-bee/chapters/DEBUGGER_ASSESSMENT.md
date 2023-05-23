@@ -29,6 +29,12 @@ Here are your learning objectives for this self-assessment.
 5. Drawing a sequence diagram for a project.
 6. Attention to detail.
 
+### Favorite Tools of Learners Past
+
+1. The [sequencediagram.org](https://sequencediagram.org/) site is a wonderful cloud-based option to build your sequence diagram.
+2. The [draw.io VS Code Extension](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) allows you to have a local file in your project that contains your diagram.
+
+
 ## Starter Code
 
 Slim Jenkins has the existing code on Github, so you need to download it from there. Actually, developers call this process _cloning a repository_.
