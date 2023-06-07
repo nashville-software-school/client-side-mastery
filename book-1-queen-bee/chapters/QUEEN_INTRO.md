@@ -6,7 +6,7 @@ Functions are the heart and soul of JavaScript developers. Everything that a mod
 
 Functions are the first major hurdle of learning software development. One of the main reasons is that you need to understand the difference between a function definition and running the function.
 
-It is not sequential, which is how most human consume and understand text and instructions. The key to understanding is seeing them used in many different contexts.
+It is not sequential, which is how most humans consume and understand text and instructions. The key to understanding is seeing them used in many different contexts.
 
 Beginners often ask questions like the following.
 
