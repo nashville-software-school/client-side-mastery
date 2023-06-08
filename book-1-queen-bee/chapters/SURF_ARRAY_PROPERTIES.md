@@ -1,6 +1,6 @@
 # Average Prices
 
-Sequina now wants to find out what the average price of her entire inventory to see if that helps her understand why her profits aren't what she is expecting.
+Sequina now wants to find out the average price of her entire inventory to see if it helps her understand why her profits aren't what she is expecting.
 
 ## Instructions
 

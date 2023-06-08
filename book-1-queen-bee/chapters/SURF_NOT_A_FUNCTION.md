@@ -1,6 +1,6 @@
 # Sequina's Accounting
 
-Sequina recently hired an accounting form to handle all of her taxes and quaarterly sales reports. The accounting firm has special software that required all of the data to be upper case. No lower case letters are allowed.
+Sequina recently hired an accounting form to handle all of her taxes and quarterly sales reports. The accounting firm has special software that required all of the data to be upper case. No lower case letters are allowed.
 
 In JavaScript, you can convert any string into all caps like this.
 
