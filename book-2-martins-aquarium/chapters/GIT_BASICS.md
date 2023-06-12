@@ -6,7 +6,7 @@ This visualization is going to be a key resource for you and your teams as you g
 
 ## Status
 
-The `git status` command is your BFF when working with git. It will always tell you the current status of your code. There is no such thing and typing `git status` too many times.
+The `git status` command is your BFF when working with git. It will always tell you the current status of your code. There is no such thing as typing `git status` too many times.
 
 As a professional developer, I use `git status` nearly 100% of the time when I'm working through the process of changing and committing code to history.
 
