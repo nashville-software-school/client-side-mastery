@@ -168,7 +168,6 @@ The final touch is to center align the text in each of the interest boxes.
 
 This is supplementary content. It is not required, but is for your additional learning if you wish.
 
-1. [Flexbox Zombies](https://mastery.games/flexboxzombies/)
 1. [HTML Semantic Tag Cheatsheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
 1. [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 1. [CSS Tricks - BEM](https://css-tricks.com/bem-101/)
