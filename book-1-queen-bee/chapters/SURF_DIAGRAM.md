@@ -18,8 +18,8 @@ Data does import anything from functions. Functions does not import anything fro
 
 ```mermaid
 graph TD;
-    Properties-->Data;
-    Properties-->Functions;
+    averagePrice-->data;
+    averagePrice-->functions;
 ```
 
 ## Sequence Diagram for Detailed Algorithm Visualizations
@@ -39,23 +39,23 @@ It is a visualization of your algorithmic thinking.
 
 ```mermaid
 sequenceDiagram
-    participant "Properties"
-    participant Data
-    participant Functions
-    "Properties"->>Data: May I please have all the data?
-    Data-->>"Properties": Sure! Here you go.
-    "Properties"->>Functions: May I please have all the function references?
-    Functions-->>"Properties": Of course. Here's an object containing all of them.
+    participant averagePrice
+    participant data
+    participant functions
+    averagePrice->>Data: May I please have all the data?
+    Data-->>averagePrice: Sure! Here you go.
+    averagePrice->>functions: May I please have all the function references?
+    functions-->>averagePrice: Of course. Here's an object containing all of them.
     loop
-        "Properties"->>"Properties": Display type and if on sale
+        averagePrice->>averagePrice: Display type and if on sale
     end
     loop
-        "Properties"->>"Properties": Convert to accounting data
+        averagePrice->>averagePrice: Convert to accounting data
     end
-    "Properties"->>Functions: I need the average price of all products
+    averagePrice->>functions: I need the average price of all products
     loop
-        Functions->>Functions: Calculate and return average price
+        functions->>functions: Calculate and return average price
     end
-    Functions-->>"Properties": Here's the average price.
+    functions-->>averagePrice: Here's the average price.
 
 ```

@@ -12,15 +12,15 @@ At the end of this chapter you should be able to...
 * Understand that a module can only export one thing.
 * Explain that a module can export multiple functions, or data structures, by adding them all to a single object.
 
-## A Data Module
+## A Functions Module
 
-Your current module of code can be broken down into 3 main sections.
+Your current module of code can now be broken down into 3 main sections.
 
-1. Where the data is defined at the top of the module.
+1. Where the data is imported at the top of the module.
 2. Where the functions are defined that do operations on the data.
 3. Where the logic of your application is defined where the functions are invoked to obtain the required output for the business.
 
-You are going to move the data section into its own module. In that module you will export that data. Lastly, in the `averagePrice.js` module, you will import it.
+You are going to move the functions section into its own module. In that module you will export those functions. Lastly, in the `averagePrice.js` module, you will import it.
 
 This will not cause any change in functionality. You are simply splitting up your code into multiple modules for greater readability.
 
