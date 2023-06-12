@@ -20,7 +20,6 @@ Yours should looks like this when complete. Please note that the data below is n
 *****              T R A I L S                *****
 ***************************************************
 We service 45.54 kilometers of wilderness trails across the US
-The shortest trail is 0 kilometers
 The shortest trail is 6.6 kilometers
 The longest trail is 49.2 kilometers
 
@@ -39,34 +38,36 @@ The most expensive trails are
 
 TRAIL DETAILS:
 ---------------------------------
-Fallen Soldier's Route starts at [2.013818, -75.9373449] and is 49.2 miles long.
-The highlighted plant for the trip is Pinewoods Horkelia
+Fallen Soldier's Route starts at [2.013818, -75.9373449] and is 49.2 kilometers long.
+The highlighted plant for the trip is Pinewoods Horkelia.
 
-Wolf Howl Trail starts at [32.123667, 35.018481] and is 46.4 miles long.
-The highlighted plant for the trip is Western Sandcherry
+Wolf Howl Trail starts at [32.123667, 35.018481] and is 46.4 kilometers long.
+The highlighted plant for the trip is Western Sandcherry.
 
-Pinecone Pass starts at [36.040428, 50.5446161] and is 45.54 miles long.
-The highlighted plant for the trip is Tushar Range Beardtongue
+Pinecone Pass starts at [36.040428, 50.5446161] and is 45.54 kilometers long.
+The highlighted plant for the trip is Tushar Range Beardtongue.
 
-White Forest Trail starts at [10.527572, 125.16258] and is 44.14 miles long.
-The highlighted plant for the trip is Mariposa Lily
+White Forest Trail starts at [10.527572, 125.16258] and is 44.14 kilometers long.
+The highlighted plant for the trip is Mariposa Lily.
 
 ...
 ```
+
+Double check the output! There may be some mistakes in the data.
 
 Once you get trails working, write a function that produces does the same for River Tours.
 
 ```txt
 RIVER DETAILS:
 ---------------------------------
-Eleven Point National Scenic River starts at [57.6055534, 12.2028691] and is 22 miles long.
-The unique fish for the trip is Hystrix indica
+Eleven Point National Scenic River starts at [57.6055534, 12.2028691] and is 22 kilometers long.
+The unique fish for the trip is Hystrix indica.
 
-Missouri National Recreational River Water Trail starts at [58.5944316, 49.6634858] and is 19 miles long.
-The unique fish for the trip is Ceratotherium simum
+Missouri National Recreational River Water Trail starts at [58.5944316, 49.6634858] and is 19 kilometers long.
+The unique fish for the trip is Ceratotherium simum.
 
-Kenai River starts at [41.6409278, -8.5624704] and is 15 miles long.
-The unique fish for the trip is Philetairus socius
+Kenai River starts at [41.6409278, -8.5624704] and is 15 kilometers long.
+The unique fish for the trip is Philetairus socius.
 
 ...
 ```
