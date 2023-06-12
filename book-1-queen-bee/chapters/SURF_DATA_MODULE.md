@@ -27,13 +27,13 @@ This will not cause any change in functionality. You are simply splitting up you
 
 ### Creating the Module
 
-In the same directory as `properties.js`, create a new file named `data.js`.
+In the same directory as `averagePrice.js`, create a new file named `data.js`.
 
 ```sh
 touch data.js
 ```
 
-Then open `properties.js`, highlight the entire array of data and cut the code _(i.e. Ctrl+X on Windows and Cmd+X on Mac)_.
+Then open `averagePrice.js`, highlight the entire array of data and cut the code _(i.e. Ctrl+X on Windows and Cmd+X on Mac)_.
 
 Open `data.js` and paste the code in there _(i.e. Ctrl+V on Windows and Cmd+V on Mac)_.
 
@@ -47,7 +47,7 @@ module.exports = { inventory }
 
 ### Importing the Data
 
-The last step is to import the data back into `properties.js` so that it has data to work with. Put this line of code at the top of the module.
+The last step is to import the data back into `averagePrice.js` so that it has data to work with. Put this line of code at the top of the module.
 
 ```js
 const { inventory } = require("./data.js")

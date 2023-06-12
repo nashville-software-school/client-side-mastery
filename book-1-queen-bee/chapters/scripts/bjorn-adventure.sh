@@ -50,7 +50,7 @@ echo "const trails = [{
     latitude: 39.4763332,
     longitude: -8.6457376,
     plantHighlight: \"Cantua\",
-    trailName: \"Stepping Stone Route\",
+    trailname: \"Stepping Stone Route\",
     length: 37.68
 }, {
     id: 7,
@@ -71,8 +71,8 @@ echo "const trails = [{
 }, {
     id: 9,
     price: \"\$\$\",
-    ' latitude': 38.26667,
-    ' longitude': 21.83333,
+    latitude: 38.26667,
+    longitude: 21.83333,
     plantHighlight: \"Glory Of Texas\",
     trailName: \"Bear Cub Walk\",
     length: 11.26
@@ -104,14 +104,14 @@ echo "const trails = [{
     id: 13,
     price: \"\$\",
     latitude: 48.8282801,
-    'longi1ude': 2.7011678,
+    longi1ude: 2.7011678,
     plantHighlight: \"Texas Geranium\",
     trailName: \"Turkey Ambush Trail\",
     length: 31.28
 }, {
     id: 14,
     price: \"\$\",
-    'latitede': 59.0883359,
+    latitede: 59.0883359,
     longitude: 17.5704656,
     plantHighlight: \"Point Reyes Ceanothus\",
     trailName: \"Sunshine Straights\",

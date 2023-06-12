@@ -2,7 +2,7 @@
 
 Björn has decided to expand his business to river tours. You may have noticed that the code you were given already has data about river tours. Each river has several properties.
 
-Bjorn would like you to add new functions that output very similar information about river that is already being produced for trails.
+Bjorn would like you to add new functions that output very similar information about rivers that is already being produced for trails.
 
 1. Total length of all rivers
 2. The shortest river
