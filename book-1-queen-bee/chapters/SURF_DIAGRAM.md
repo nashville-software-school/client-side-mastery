@@ -14,7 +14,7 @@ Your first visual is a dependency graph. This shows how modules are depdendant u
 
 This is a simple project for drawing dependencies. The main module imports things from the data module, and it also imports things from the functions module.
 
-Data does import anything from functions. Functions does not import anything from data. Neither functions not data import anything from properties.
+data does import anything from functions. Functions does not import anything from data. Neither functions not data import anything from properties.
 
 ```mermaid
 graph TD;
@@ -42,8 +42,8 @@ sequenceDiagram
     participant averagePrice
     participant data
     participant functions
-    averagePrice->>Data: May I please have all the data?
-    Data-->>averagePrice: Sure! Here you go.
+    averagePrice->>data: May I please have all the data?
+    data-->>averagePrice: Sure! Here you go.
     averagePrice->>functions: May I please have all the function references?
     functions-->>averagePrice: Of course. Here's an object containing all of them.
     loop
