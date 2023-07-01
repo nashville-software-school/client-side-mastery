@@ -23,41 +23,78 @@ What is a component and how do HTML elements apply to the concept? Look at the i
 
 Styling components intelligently can be handled through naming your classes according to the component name. One popular convention is the [BEM method](http://getbem.com/introduction/).
 
-If you were creating an HTML component that represents you, here's an example of how the code would look using HTML semantic elements and BEM class names.
+If you were creating an HTML component that represents you, here's an example of how the code would look using HTML semantic elements and BEM class names. Copy and paste this code in the **index.html** file of **sallys-interests**.
 
 ```html
-<main>
-    <!-- Parent biography component -->
-    <article class="bio">
-
-        <!-- Child biography component -->
-        <section class="bio__name">
-            <h1>Sally Forthwright</h1>
-        </section>
-
-        <!-- Child biography component -->
-        <section class="bio__address">
-            100 Infinity Way, Nashville
-        </section>
-
-        <!-- Child biography component -->
-        <section class="bio__interests">
-            <div class="interest">
-                Oyster harvesting
-            </div>
-            <div class="interest">
-                Juggling
-            </div>
-            <div class="interest">
-                Triathlons
-            </div>
-        </section>
-
-    </article>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Sally's Interests</title>
+</head>
+<body>
+    <main>
+        <!-- Parent biography component -->
+        <article class="bio">
+    
+            <!-- Child biography component -->
+            <section class="bio__name">
+                <h1>Sally Forthwright</h1>
+            </section>
+    
+            <!-- Child biography component -->
+            <section class="bio__address">
+                100 Infinity Way, Nashville
+            </section>
+    
+            <!-- Child biography component -->
+            <section class="bio__interests">
+                <div class="interest">
+                    Oyster harvesting
+                </div>
+                <div class="interest">
+                    Juggling
+                </div>
+                <div class="interest">
+                    Triathlons
+                </div>
+            </section>
+    
+        </article>
+    </main>
+</body>
+</html>
 ```
 
 Each of those components can be styled individually with a clear, concise name that also provides some semantic context when looking at the CSS file. Before you style them, all you have is structure as some very basic, default styles that the browser applies to your elements.
+
+In the **sallys-interests** directory in your terminal, run the `serve` command to start your web server. Make sure you are not in your **styles** directory when you do this. Also make sure you are not in your **workspace** directory.
+
+After you run `serve` a URL will be displayed in your terminal. Copy pasta that URL into your browser.
+
+```sh
+   ┌────────────────────────────────────────────────────┐
+   │                                                    │
+   │   Serving!                                         │
+   │                                                    │
+   │   - Local:            http://localhost:3000        │
+   │   - On Your Network:  http://192.168.68.113:3000   │
+   │                                                    │
+   │   Copied local address to clipboard!               │
+   │                                                    │
+   └────────────────────────────────────────────────────┘
+```
+
+If this doesn't work for you, the initial installations may not have worked correctly. Run the following commands in your terminal and see if you can run **serve** afterwards.
+
+```sh
+npm config set prefix $HOME/.npm-packages
+echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> $HOME/.profile
+source $HOME/.profile &> profile-reload.log
+npm i -g serve json-server >> /dev/null 2>> error.log
+```
 
 ![](./images/sally-html-only.png)
 
