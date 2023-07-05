@@ -26,8 +26,6 @@ Look in your `index.html` file again to see it.
 
 ## Debugger Breakpoints
 
-Now put a debugger keyword after the query selector code and then inspect the value of `theExistingMainElement` in the **Sources** tab when it appear when you refresh the page.
-
 On the line after the query selector code, type the 'debugger' keyword. Then, refresh the page and inspect the value of `theExistingMainElement` in the **Sources** tab when it appears.
 
 The `debugger` keyword works just like your breakpoints did in Book 1. It pauses the execution of code on that line. Then you can inspect the values of all of your variables in the **Scope** panel that exists to the right.

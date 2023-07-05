@@ -133,6 +133,19 @@ Go back and read it again. This time following along.
 
 This way you don't miss anything and you understand all the requirements before you get started. You may feel like you're spending more time on each chapter by doing this but the reality is you are saving yourself time.
 
+## Asking for help
+
+Executive disfunction is real. I, Val, deal with it everyday. And when it hits, shame and guilt hit as well. This can make you shy away from asking for help for fear of being "found out". 
+
+"Gosh, I have no idea what to do or how to fix this problem but everyone is ahead of me. If I ask for help from my instructors they're gonna know how far behind I am. Now I'm stuck, behind, and I can't ask for help because they'll kick me out for not doing anything."
+
+1. We're not going to kick you out for asking for help. 
+2. We are _way_ more worried about you if you're not asking for help than if you're "behind"
+3. You may not actually be "behind". Don't compare your pace to others'.
+4. WE _WANT_ TO HELP YOU!!
+
+So please, _please_, DO NOT let fear, shame, or guilt keep you from asking us for help. No one is going to find you out. You're already found out. We already know. But the good news is: we care.
+
 ## Mantras
 
 > "Progress over perfection"
