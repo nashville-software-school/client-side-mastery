@@ -52,10 +52,10 @@ Pioneer chapters are **optional** and let you develop Deep Learning on the conce
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects
 
-| #   | Projects                                     |
-| --- | -------------------------------------------- |
-| 1   | [Cheugy Crocs](./chapters/CHUEGY_CROCS.md)   |
-| 2   | [Link's Kitche](./chapters/LINKS_KITCHEN.md) |
+| #   | Projects                                      |
+| --- | --------------------------------------------- |
+| 1   | [Cheugy Crocs](./chapters/CHUEGY_CROCS.md)    |
+| 2   | [Link's Kitchen](./chapters/LINKS_KITCHEN.md) |
 
 ## 🔐 Deep Learning Group Projects Unlocked
 
