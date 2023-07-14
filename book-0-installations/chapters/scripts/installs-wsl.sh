@@ -59,21 +59,21 @@ echo -e "\n\nInstalling a web server and a simple API server..."
 npm config set prefix $HOME/.npm-packages
 echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> $HOME/.profile
 source $HOME/.profile &>profile-reload.log
-npm i -g serve json-server >>progress.log 2>>error.log
+npm i -g serve json-server >>/dev/null 2>>error.log
 
 # Add SSH key to Github account
 echo -e "\n\nAdding your SSH key to your Github account..."
-PUBLIC_KEY=$(cat $HOME/.ssh/id_nss.pub)
+PUBLIC_KEY_CONTENT=$(cat $HOME/.ssh/id_nss.pub)
 
 STATUS_CODE=$(curl \
   -s \
   --write-out %{http_code} \
   -X POST \
   -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer $GH_PWD" \
+  -H "Authorization: Bearer $githubPassword" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/user/keys \
-  -d "{\"key\":\"$PUBLIC_KEY_CONTENT\",\"title\":\"NSS Automated Key\"}" >>progress.log 2>>error.log)
+  -d "{\"key\":\"$PUBLIC_KEY_CONTENT\",\"title\":\"NSS Automated Key\"}" >>/dev/null 2>>error.log)
 
 if [ ! $STATUS_CODE == 200 ]; then
   echo -e "POST for SSH key returned status code $STATUS_CODE" >>error.log
@@ -138,13 +138,6 @@ echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 echo ""
 
 VERIFIED=1
-
-if ! type brew &>/dev/null; then
-  echo "Brew not installed"
-  VERIFIED=0
-else
-  echo "Brew installed"
-fi
 
 if ! type node &>/dev/null; then
   echo "Node not installed"
