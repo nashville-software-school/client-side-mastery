@@ -139,13 +139,6 @@ echo ""
 
 VERIFIED=1
 
-if ! type brew &>/dev/null; then
-  echo "Brew not installed"
-  VERIFIED=0
-else
-  echo "Brew installed"
-fi
-
 if ! type node &>/dev/null; then
   echo "Node not installed"
   VERIFIED=0
