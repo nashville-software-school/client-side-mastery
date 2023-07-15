@@ -9,13 +9,13 @@ echo -e "configurations as we possibly can in an automated script. If this"
 echo -e "If this stops at any point, and you don't see a 'SUCCESS' message"
 echo -e "please notify an instructor for assistance.\n\n"
 echo "Enter your full name exactly as you entered it on Github settings:"
-read -p "> " studentName
+read -p "> " STUDENT_NAME
 echo -e "\nEnter email address you used for Github:"
-read -p "> " emailAddress
+read -p "> " EMAIL_ADDRESS
 echo -e "\nEnter your Github account name:"
-read -p "> " githubUsername
+read -p "> " GH_USERNAME
 echo -e "\nPaste personal access token for Github (you won't see it because security):"
-read -s -p "> " githubPassword
+read -s -p "> " GH_PWD
 
 
 # Set up workspace directory
@@ -31,7 +31,7 @@ done
 
 # Create SSH key
 echo -e "\n\nGenerating an SSH key so you can backup your code to Github..."
-echo "yes" | ssh-keygen -t ed25519 -f ~/.ssh/id_nss -N "" -b 4096 -C $emailAddress
+echo "yes" | ssh-keygen -t ed25519 -f ~/.ssh/id_nss -N "" -b 4096 -C $EMAIL_ADDRESS
 eval `ssh-agent`
 ssh-add ~/.ssh/id_nss
 echo -e "Host *\n\tAddKeysToAgent yes\n\tIdentityFile ~/.ssh/id_nss" >> ~/.ssh/config
@@ -51,8 +51,19 @@ echo "@@   This installation might require your Ubuntu password.     @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get install -y nodejs
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+if ! type nvm &>/dev/null; then
+  echo "nvm not installed"
+  VERIFIED=0
+else
+  echo "nvm installed"
+  nvm install node >>/dev/null 2>>error.log
+fi
+
+
+# curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+# sudo apt-get install -y nodejs
 
 # Install global dependencies
 echo -e "\n\nInstalling a web server and a simple API server..."
@@ -70,7 +81,7 @@ STATUS_CODE=$(curl \
   --write-out %{http_code} \
   -X POST \
   -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer $githubPassword" \
+  -H "Authorization: Bearer $GH_PWD" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/user/keys \
   -d "{\"key\":\"$PUBLIC_KEY_CONTENT\",\"title\":\"NSS Automated Key\"}" >>/dev/null 2>>error.log)
@@ -84,8 +95,8 @@ sudo apt install -y zsh git fonts-powerline 2>>error.log
 
 # User settings for git
 echo -e "\n\nConfigurating git settings..."
-git config --global user.name "$studentName"
-git config --global user.email $emailAddress
+git config --global user.name "$STUDENT_NAME"
+git config --global user.email $EMAIL_ADDRESS
 
 # Check if zsh is default shell. Switch if not.
 current_shell=$(echo $SHELL)
@@ -174,5 +185,5 @@ echo "@@                                                             @@"
 echo "@@                   S U C C E S S !!!                         @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-echo -e "\n\nRun the following command to finalize the installation"
+echo -e "\n\nQuit your terminal application and then start it again"
 echo -e "\nsource ~/.zshrc"
