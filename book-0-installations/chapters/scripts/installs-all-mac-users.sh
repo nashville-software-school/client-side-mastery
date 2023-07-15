@@ -17,7 +17,6 @@ read -p "> " GH_USERNAME
 echo -e "\nEnter personal access token for Github (it will be invisible because security):"
 read -s -p "> " GH_PWD
 
-
 # Set up standard directories
 echo -e "\n\nCreating some directories that you will need..."
 DIRS=("$HOME/workspace" "$HOME/.ssh" "$HOME/.config" "$HOME/.npm-packages")
@@ -29,19 +28,19 @@ for DIR in "${DIRS[@]}"; do
   fi
 done
 
-function installxcode() {
+installxcode() {
   # Install XCode Command line tools - May take awhile so run this one last
   echo -e "\n\nMaking sure you have Command line tools installed"
   xcode-select --install >>/dev/null
 }
 
-function installbrew() {
+installbrew() {
   if ! type brew &>/dev/null; then
     echo -e "\n\n\n\n Installing Homebrew..."
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    echo 'eval $(/opt/homebrew/bin/brew shellenv)' >>/Users/$USER/.zprofile
+    echo 'eval $(/opt/homebrew/bin/brew shellenv)' >>$HOME/.zprofile
     eval $(/opt/homebrew/bin/brew shellenv)
   fi
 
@@ -49,7 +48,7 @@ function installbrew() {
   brew install -q git tig zsh zsh-completions >>/dev/null
 }
 
-function setupgit() {
+setupgit() {
   # Set up git and github - Needs to be below the brew install
   PUBLIC_KEY=$HOME/.ssh/id_nss.pub
   if [ ! -f "$PUBLIC_KEY" ]; then
@@ -83,13 +82,13 @@ function setupgit() {
 
 }
 
-function showhidden() {
+showhidden() {
   echo -e "\n\nConfiguring the Finder application to show hidden files..."
   defaults write com.apple.finder AppleShowAllFiles YES
   killall Finder >>/dev/null
 }
 
-function setupzsh() {
+setupzsh() {
   # Set up Zsh
   current_shell=$(echo $SHELL)
   if [ $current_shell == "/bin/bash" ]; then
@@ -141,43 +140,45 @@ function setupzsh() {
 
 }
 
-function installnode() {
-  # Install Node - Needs to be below zsh set up because of the shell environment
+installnode() {
   if ! type nvm &>/dev/null; then
     echo -e "Installing Node Version Manager..."
 
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash >>/dev/null
-    source ~/.zshrc &>zsh-reload.log
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
   fi
 
-  nvm install --lts >>/dev/null
-  nvm use --lts >>/dev/null
+  nvm install --lts >>/dev/null 2>>error.log
+  nvm use --lts >>/dev/null 2>>error.log
+}
 
-  echo -e "\n\nInstalling a web server and a simple API server..."
+installpackages() {
+  echo -e "\nInstalling a web server and a simple API server..."
   npm config set prefix $HOME/.npm-packages
   echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >>~/.zshrc
   source ~/.zshrc &>zsh-reload.log
-  npm i -g serve json-server json >>/dev/null
+  npm i -g serve json-server json >>/dev/null 2>>error.log
 }
-
 
 spinner="/-\|"
 
 installbrew
 installnode
+setupzsh
+installpackages
 
 showhidden &
 setupgit &
-setupzsh &
-
 installxcode &
-while ps -p $! > /dev/null; do
-    # Print the next character in the spinner sequence
-    printf "\b${spinner:0:1} Installing Xcode..."
-    # Rotate the spinner sequence
-    spinner="${spinner:1}${spinner:0:1}"
-    # Wait for a short time
-    sleep 0.5
+while ps -p $! >/dev/null; do
+  # Print the next character in the spinner sequence
+  printf "\b${spinner:0:1} Installing Xcode..."
+  # Rotate the spinner sequence
+  spinner="${spinner:1}${spinner:0:1}"
+  # Wait for a short time
+  sleep 0.5
 done
 
 wait

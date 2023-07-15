@@ -53,6 +53,11 @@ echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 if ! type nvm &>/dev/null; then
   echo "nvm not installed"
   VERIFIED=0
@@ -61,7 +66,8 @@ else
   nvm install node >>/dev/null 2>>error.log
 fi
 
-
+# INSTRUCTOR NOTE:
+#   If intallation fails via nvm, have student run these
 # curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 # sudo apt-get install -y nodejs
 
@@ -148,34 +154,20 @@ echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 echo ""
 
-VERIFIED=1
-
 if ! type node &>/dev/null; then
-  echo "Node not installed"
-  VERIFIED=0
-else
-  echo "Node installed"
+  echo "Node not installed" >> error.log
 fi
 
 if ! type nvm &>/dev/null; then
-  echo "nvm not installed"
-  VERIFIED=0
-else
-  echo "nvm installed"
+  echo "nvm not installed" >> error.log
 fi
 
 if ! type serve &>/dev/null; then
-  echo "serve not installed"
-  VERIFIED=0
-else
-  echo "serve installed"
+  echo "serve not installed" >> error.log
 fi
 
 if ! type json-server &>/dev/null; then
-  echo "json-server not installed"
-  VERIFIED=0
-else
-  echo "json-server installed"
+  echo "json-server not installed" >> error.log
 fi
 #END verification
 
@@ -185,5 +177,4 @@ echo "@@                                                             @@"
 echo "@@                   S U C C E S S !!!                         @@"
 echo "@@                                                             @@"
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-echo -e "\n\nQuit your terminal application and then start it again"
-echo -e "\nsource ~/.zshrc"
+echo -e "\nQuit your terminal application and then open it again to finzalize installations"
