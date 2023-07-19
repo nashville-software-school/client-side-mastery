@@ -71,6 +71,7 @@ The more time you spend in the design stage, the less code you need to write.
 >   1. Date of purchase
 
 ## Planning
+> 🚨 Future chapters require that these planning steps be met. Make sure to follow all of the steps.🚨
 
 ### Low Fidelity Wireframe
 
