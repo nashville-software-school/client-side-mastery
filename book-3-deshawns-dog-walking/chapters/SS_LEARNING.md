@@ -2,7 +2,7 @@
 
 Time to grow your Learning Efficiency. Search the Web to find the answer to the following questions. Successfully implementing the knowledge that you find is a nice bonus, but is not the ultimate goal.
 
-If you can track down the knowledge, but need help with implementing it, reach out to your peers or your instructors.1
+If you can track down the knowledge, but need help with implementing it, reach out to your peers or your instructors.
 
 1. How can you change the layout of the lists from top-down to having three columns?
 2. How can you sort each list of names alphabetically?
