@@ -15,7 +15,7 @@ document.addEventListener(
         const itemClicked = clickEvent.target
 
         /*
-            Your job is to design an algorithms and implement it
+            Your job is to design an algorithm and implement it
         */
     }
 )
