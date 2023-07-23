@@ -21,7 +21,7 @@ document.addEventListener(
 )
 ```
 
-When a dock is clicked, present a message to the user that follow the format below if a hauler is current at that dock.
+When a dock is clicked, present a message to the user that follows the format below if a hauler is currently at that dock.
 
 ```txt
 The Shanghai, China dock is currently unloading Boaty McBoatface
