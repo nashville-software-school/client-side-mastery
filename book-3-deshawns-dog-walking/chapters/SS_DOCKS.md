@@ -6,7 +6,7 @@ The next step for you is to add a click event listener that displays the haulers
 
 ## Handling Click Event
 
-Add the following click event listener to the hauler list module and capture the DOM element that was clicked.
+Add the following click event listener to the docks list module and capture the DOM element that was clicked.
 
 ```js
 document.addEventListener(
