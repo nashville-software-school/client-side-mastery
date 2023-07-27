@@ -39,23 +39,23 @@ It is a visualization of your algorithmic thinking.
 
 ```mermaid
 sequenceDiagram
-    participant "Properties"
+    participant AveragePrice
     participant Data
     participant Functions
-    "Properties"->>Data: May I please have all the data?
-    Data-->>"Properties": Sure! Here you go.
-    "Properties"->>Functions: May I please have all the function references?
-    Functions-->>"Properties": Of course. Here's an object containing all of them.
+    AveragePrice->>Data: May I please have all the data?
+    Data-->>AveragePrice: Sure! Here you go.
+    AveragePrice->>Functions: May I please have all the function references?
+    Functions-->>AveragePrice: Of course. Here's an object containing all of them.
     loop
-        "Properties"->>"Properties": Display type and if on sale
+        AveragePrice->>AveragePrice: Display type and if on sale
     end
     loop
-        "Properties"->>"Properties": Convert to accounting data
+        AveragePrice->>AveragePrice: Convert to accounting data
     end
-    "Properties"->>Functions: I need the average price of all products
+    AveragePrice->>Functions: I need the average price of all products
     loop
         Functions->>Functions: Calculate and return average price
     end
-    Functions-->>"Properties": Here's the average price.
+    Functions-->>AveragePrice: Here's the average price.
 
 ```
