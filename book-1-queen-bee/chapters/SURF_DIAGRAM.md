@@ -14,12 +14,12 @@ Your first visual is a dependency graph. This shows how modules are depdendant u
 
 This is a simple project for drawing dependencies. The main module imports things from the data module, and it also imports things from the functions module.
 
-data does import anything from functions. Functions does not import anything from data. Neither functions not data import anything from properties.
+Data does import anything from functions. Functions does not import anything from data. Neither functions not data import anything from properties.
 
 ```mermaid
 graph TD;
-    averagePrice-->data;
-    averagePrice-->functions;
+    Properties-->Data;
+    Properties-->Functions;
 ```
 
 ## Sequence Diagram for Detailed Algorithm Visualizations
@@ -35,27 +35,38 @@ It is a visualization of your algorithmic thinking.
 1. The [sequencediagram.org](https://sequencediagram.org/) site is a wonderful cloud-based option to build your sequence diagram.
 2. The [draw.io VS Code Extension](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) allows you to have a local file in your project that contains your diagram.
 
+Below is a sample sequence diagram, and you can watch how it was built by watching the following video.
+
+[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/GvHoKaYhf17v0rQAbbmb)
+
 ### Example Diagram
 
 ```mermaid
 sequenceDiagram
-    participant averagePrice
-    participant data
-    participant functions
-    averagePrice->>data: May I please have all the data?
-    data-->>averagePrice: Sure! Here you go.
-    averagePrice->>functions: May I please have all the function references?
-    functions-->>averagePrice: Of course. Here's an object containing all of them.
-    loop
-        averagePrice->>averagePrice: Display type and if on sale
-    end
-    loop
-        averagePrice->>averagePrice: Convert to accounting data
-    end
-    averagePrice->>functions: I need the average price of all products
-    loop
-        functions->>functions: Calculate and return average price
-    end
-    functions-->>averagePrice: Here's the average price.
+   participant Data
+   participant AveragePrice
+   participant Functions
+   AveragePrice->>Data:Invoke getInventory() to get all of the inventory data
+   Data-->>AveragePrice:Here is the array of objects you need
+   loop
+   AveragePrice->Functions: Invoke isClothing() to check if current item is clothing
+   Functions-->>AveragePrice: True/False
+   AveragePrice->>Functions: Invoke isGear() to check if current item is gear
+   Functions-->>AveragePrice: True/False
+   AveragePrice->>Functions: Invoke isSurfboard() to check if current item is a surfboard
+   Functions-->>AveragePrice: True/False
+   AveragePrice->>Functions: Invoke isBargain() to check if current item is a bargain
+   Functions-->>AveragePrice: True/False
+   note right of AveragePrice: Display final message about inventory item
+   end
 
+   loop
+   AveragePrice->>Functions: Invoke convertDataForAccounting() to format the pricing information
+   Functions-->>AveragePrice:New string with correct format
+   note right of AveragePrice: Display accounting string
+   end
+
+   AveragePrice->>Functions: Invoke calculateAveragePrice() to get the average of all items
+   Functions-->>AveragePrice:Average price as a number
+   note right of AveragePrice: Display average price
 ```
