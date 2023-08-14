@@ -9,22 +9,6 @@ You've already learned the vast majority of what React does for you when buildin
 1. Updating the DOM with document elements or string templates
 1. Setting the state of a component
 
-## Creating the Application
-
-Run the following commands to do the basic software package installations
-
-```sh
-cd ~/workspace
-npx create-react-app honey-rae-repairs
-cd honey-rae-repairs
-```
-## Project Setup
-
-We are giving you some boilerplate (starter) code that you will then customize as you build out the Honey Rae Repairs application with React. Run the following command in your terminal.
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/book-5-honey-rae-repairs/chapters/scripts/react-setup.sh)"
-```
 ## Installing React Developer Tools
 
 You can install the React Developer Tools via the [Chrome Store](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).
@@ -41,6 +25,47 @@ Watch the Intro to React Dev Tools video below to review their usage. Again, jus
 
 [<img src="./images/react-dev-tools-video.png" />](https://www.youtube.com/watch?v=rb1GWqCJid4)
 
+## Creating the Application
+
+Run the following commands to do the basic software package installations
+
+```sh
+cd ~/workspace
+npx create-react-app honey-rae-repairs
+cd honey-rae-repairs
+npm install --save react-router-dom
+```
+
+## Project Setup
+
+We are giving you some boilerplate (starter) code that you will then customize as you build out the Honey Rae Repairs application with React. Run the following command in your terminal.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/book-5-honey-rae-repairs/chapters/scripts/react-setup.sh)"
+```
+
+It will create the following directories and files for your project.
+
+```
+- src
+    - components
+        - auth
+            - Login.css
+            - Login.js
+            - Register.js
+        - nav
+            - NavBar.css
+            - NavBar.js
+        - tickets
+            - TicketList.js
+            - Tickets.css
+        - views
+            - ApplicationViews.js
+            - Authorized.js
+        - Repairs.css
+        - Repairs.js
+  index.js
+```
 
 ## Starting Your React Application
 
