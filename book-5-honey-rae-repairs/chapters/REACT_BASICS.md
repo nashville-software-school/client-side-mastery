@@ -74,3 +74,7 @@ The process of building your React application will begin and the following thin
    <img src="./images/welcome.png" width="700" />
    
 If these three things do not happen, call in an instructor. Otherwise, move on to the next chapter.
+
+## Backup to Github
+
+Make sure you create a repository on your Github account for your app, and hook up the `honey-rae-repairs` directory. As you work through these chapters, regularly push up to Github.

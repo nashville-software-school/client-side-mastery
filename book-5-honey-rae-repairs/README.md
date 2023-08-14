@@ -16,11 +16,11 @@ For example, here's what the first few days should look like for you.
 |--|--|--|
 | 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | tbd |
 | 2 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub>| tbd |
-| 4 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 5 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd | |
+| 3 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | tbd |
+| 4 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd | |
+| 5 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 6 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 7 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 8 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 
 **🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 8**
 
