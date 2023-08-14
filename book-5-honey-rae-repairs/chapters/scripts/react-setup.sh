@@ -8,8 +8,6 @@ rm ./src/reportWebVitals.js
 rm ./src/setupTests.js
 rm ./public/*
 
-touch -p ./public/index.html
-
 # index.html
 echo '<!DOCTYPE html>
 <html lang="en">
