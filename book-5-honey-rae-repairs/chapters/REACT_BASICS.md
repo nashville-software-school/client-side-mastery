@@ -71,6 +71,6 @@ The process of building your React application will begin and the following thin
     webpack compiled successfully
     ```
 1. In your browser the app should be running with no errors and you should see this welcome page:
-   <img src="./images/welcome.png" width="600" border="3px solid black"/>
+   <img src="./images/welcome.png" width="700" />
    
 If these three things do not happen, call in an instructor. Otherwise, move on to the next chapter.
