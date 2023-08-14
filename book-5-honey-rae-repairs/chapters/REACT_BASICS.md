@@ -17,6 +17,7 @@ Run the following commands to do the basic software package installations
 cd ~/workspace
 npx create-react-app honey-rae-repairs
 cd honey-rae-repairs
+npm install --save react-router-dom
 ```
 ## Project Setup
 
@@ -59,10 +60,10 @@ The process of building your React application will begin and the following thin
     ```sh
     Compiled successfully!
 
-    You can now view honey in the browser.
+    You can now view honey-rae-repairs in the browser.
 
-      Local:            http://localhost:3000
-      On Your Network:  http://192.168.68.105:3000
+    Local:            http://localhost:3000
+    On Your Network:  http://10.0.0.27:3000
 
     Note that the development build is not optimized.
     To create a production build, use npm run build.
@@ -70,6 +71,6 @@ The process of building your React application will begin and the following thin
     webpack compiled successfully
     ```
 1. In your browser the app should be running with no errors and you should see this welcome page:
-   <img src="./images/welcome.png" />
+   <img src="./images/welcome.png" width="600" border="3px solid black"/>
    
 If these three things do not happen, call in an instructor. Otherwise, move on to the next chapter.
