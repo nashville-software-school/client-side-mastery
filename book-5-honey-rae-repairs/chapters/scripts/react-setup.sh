@@ -27,19 +27,18 @@ echo '<!DOCTYPE html>
 </html>' >./public/index.html
 
 # index.js
-echo 'import { Repairs } from "./components/Repairs"
+echo 'import { App } from "./App"
 import { createRoot } from "react-dom/client"
-import "./index.css"
 import { BrowserRouter } from "react-router-dom"
+import "./index.css"
 
 const container = document.getElementById("root")
 const root = createRoot(container)
 root.render(
-    <BrowserRouter>
-        <Repairs />
-    </BrowserRouter>
-)
-' >./src/index.js
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)' >./src/index.js
 
 # index.css
 echo '/* Import the google web fonts you want to use */
@@ -142,9 +141,20 @@ button {
 
 .btn-info:hover {
   background-color: #71a500;
-}' >./src/index.css
+}
+
+/* This CSS can be deleted. It is only used for the first chapter */
+.welcome {
+  text-align: center;
+  margin: 5rem 14rem;
+  font-size: 4rem;
+  color: aliceblue;
+  font-weight: bold;
+  text-shadow: 2px 3px 4px lightslategray;
+}
+' >./src/index.css
 
 # App.js
 echo 'export const App = () => {
-  return <></>
+  return <div className="welcome">Welcome to your first React Application!</div>
 }' >./src/App.js
