@@ -22,8 +22,10 @@ cd honey-rae-repairs
 
 We are giving you some boilerplate (starter) code that you will then customize as you build out the Honey Rae Repairs application with React. Run the following command in your terminal.
 
+<!-- TODO: Change this link to cohort 66 branch -->
+
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-64/book-5-honey-rae-repairs/chapters/scripts/react-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/react-redesign/book-5-honey-rae-repairs/chapters/scripts/react-setup.sh)"
 ```
 ## Installing React Developer Tools
 
