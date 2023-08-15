@@ -10,7 +10,7 @@ This is why professional developers use graphs to visually represent how a proje
 
 ## Dependency Graph
 
-Your first visual is a dependency graph. This shows how modules are depdendant upon other modules in the project and can give you a quick reference of how the data and logic flows through the system.
+Your first visual is a dependency graph. This shows how modules are dependent upon other modules in the project and can give you a quick reference of how the data and logic flows through the system.
 
 This is a simple project for drawing dependencies. The main module imports things from the data module, and it also imports things from the functions module.
 
