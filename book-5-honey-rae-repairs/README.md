@@ -1,4 +1,5 @@
 # Book 5 - Honey Rae's Repair Shop
+> VF-TODO: Update this section after writing all the chapters
 
 It is very important that you work on the concepts in this book in the segments that are suggested.
 

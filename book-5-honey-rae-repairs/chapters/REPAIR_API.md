@@ -204,10 +204,6 @@ json-server -p 8088 database.json
 
 Feel free to make more of each resource if you want to see more data in your API.
 
-<!-- | | |
-|:---:|:---|
-| <h1>&#x2757;</h1> |  _The [vscode-faker](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker) extension for Visual Studio Code or [ChatGPT](https://chat.openai.com/auth/login) are fast, easy ways to generate starter data._ | -->
-
 | <h1>&#x2757;</h1> | _The [vscode-faker](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker) extension for Visual Studio Code or [ChatGPT](https://chat.openai.com/auth/login) are fast, easy ways to generate starter data._ |
 | --- | --- |
 ## Backup to Github
