@@ -1,5 +1,5 @@
 # Writing Your First React Component
-In this chapter you will learn how write a basic React functional component, write in the JSX syntax, and utilize the useState hook. 
+In this chapter you will learn how to write a basic React functional component, write with the JSX syntax, and utilize the useState hook. 
 
 ## Watch Video
 Watch the video and implement the code yourself. Then read the rest of the chapter.

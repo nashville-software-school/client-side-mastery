@@ -204,11 +204,12 @@ json-server -p 8088 database.json
 
 Feel free to make more of each resource if you want to see more data in your API.
 
-| | |
+<!-- | | |
 |:---:|:---|
-| <h1>&#x2757;</h1> |  _The [vscode-faker](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker) extension for Visual Studio Code or [ChatGPT](https://chat.openai.com/auth/login) are fast, easy ways to generate starter data._ |
+| <h1>&#x2757;</h1> |  _The [vscode-faker](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker) extension for Visual Studio Code or [ChatGPT](https://chat.openai.com/auth/login) are fast, easy ways to generate starter data._ | -->
 
-
+| <h1>&#x2757;</h1> | _The [vscode-faker](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker) extension for Visual Studio Code or [ChatGPT](https://chat.openai.com/auth/login) are fast, easy ways to generate starter data._ |
+| --- | --- |
 ## Backup to Github
 
 Make sure you create a repository on your Github account for your API, and hook up the `honey-raes-api` directory. Yes, there's only one file being tracked in this repository, and that's ok.
