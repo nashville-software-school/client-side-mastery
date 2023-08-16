@@ -1,7 +1,7 @@
 # List all the tickets
 In this chapter you will begin modularizing your code by creating a `services` directory for interacting with the API and you will learn how to use the `useEffect` hook.
 
-## Watch Video
+## 📺 Watch Video
 Watch the video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 > VF-TODO: Record video and paste link here
 
@@ -166,7 +166,7 @@ export const App = () => {
 Now, with allTickets included in the dependency array, if the value of `showEmergency` ***or*** `allTickets` changes, the callback function gets executed. Once `allTickets` receives it's value from the api, this useEffect will execute the callback function, setting `filteredTickets` with the populated array from `allTickets`.
 
 That's a lot, I know. But the more you practice, the more sense it will make. Continue progressing through the course and and feel free to revisit this chapter if you need a refresher on how `useEffect` operates.
-## Vocabulary
+## 📓 Vocabulary
 > **Initial Render:**
 The _first_ time a React component renders. On the initial render of a component, the component's state variables contain the initial values passed to useState.
 
