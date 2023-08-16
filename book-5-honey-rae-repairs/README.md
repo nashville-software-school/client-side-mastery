@@ -18,7 +18,7 @@ For example, here's what the first few days should look like for you.
 | 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | tbd |
 | 2 | [Your First Component](./chapters/REPAIR_FIRST_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#jsx #useState</sub>| tbd |
 | 3 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | tbd |
-| 4 | tbd <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | tbd | |
+| 4 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | tbd | |
 | 5 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 6 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 7 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
