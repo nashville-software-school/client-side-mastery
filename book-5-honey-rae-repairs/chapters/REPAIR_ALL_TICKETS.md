@@ -60,7 +60,7 @@ return (
 )
 ```
 
-The `key` prop value for each ticket should be its unique identifier, in case, its id. _Be sure to add the `key` prop to the parent element._ 
+The `key` prop value for each ticket should be its unique identifier, in this case, its id. _Be sure to add the `key` prop to the parent element._ 
 ## useEffect
 ### The Anatomy of useEffect
 It's easy to be intimidated by `useEffect`, but it's just more Javascript! Remember that `useEffect` is a hook, which is a function provided by the React library enabling us to harness the state and lifecycle capabilities of components.
@@ -134,8 +134,8 @@ export const App = () => {
 Here we added a useEffect to watch for any time the value of `showEmergency` changes. If the value of `showEmergency` changes, the callback function executes. That being said, take a closer look at the code. There's a potential bug here that we witnessed and fixed in the video. Considering this callback function runs on **two** occasions, the first being on the initial render of the component, what issue does this pose for our `filteredTickets` on the initial render? **Hint:** The _initial_ value for `allTickets` is an empty array.
 
 <details>
-    <summary>Answer</summary>
-    During the initial render of our component, the state variables contain the initial value passed to the `useState` hook. Therefore, the first time the above useEffect runs (during the initial render of the component), the value of `allTickets` is is an empty array. So when we use `setFilteredTickets` to assign the value of `allTickets`, it's set to an empty array.
+    <summary style="font-weight: bold;font-style: italic">See Answer Below</summary>
+    During the initial render of our component, the state variables contain the initial value passed to the <span style="font-weight: bold;font-style: italic">useState</span> hook. Therefore, the first time the above <span style="font-weight: bold;font-style: italic">useEffect</span> runs (during the initial render of the component), the value of <span style="font-weight: bold;font-style: italic">allTickets</span> is is an empty array. So when we use <span style="font-weight: bold;font-style: italic">setFilteredTickets</span> to assign the value of <span style="font-weight: bold;font-style: italic">allTickets</span>, it's set to an empty array.
 </details>
 
 ### Watching for multiple state changes
