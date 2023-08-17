@@ -5,10 +5,10 @@ It is very important that you work on the concepts in this book in the segments 
 
 For example, here's what the first few days should look like for you.
 
-1. Watch videos and read documentation for Honey Rae Repairs up to chapter 8
-1. Read the features needed in [Project Two] and implement the code for them up to chapter 8
+1. Watch videos and read documentation for Honey Rae Repairs up to chapter 5
+1. Read the features needed in [Project Two] and implement the code for them up to chapter 5
 1. Review your vocabulary and discuss your questions with peers and instructors.
-1. Move on to chapter 9 in Honey Rae Repairs.
+1. Move on to chapter 6 in Honey Rae Repairs.
 1. etc...
 
 ## Core Projects
@@ -20,28 +20,26 @@ For example, here's what the first few days should look like for you.
 | 3 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | tbd |
 | 4 | [Repair Wireframe](./chapters/REPAIR_WIREFRAME.md) <br/> <sub style="font-size:0.85rem;">#wireframe #project-planning</sub> | tbd |
 | 5 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | tbd | 
-| 6 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 7 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 
 **🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 8**
 
 | # | 🍯 💻 Honey Rae's Repairs | Project Two |
 |--|--|--|
+| 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | tbd |
+| 7 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 8 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 9 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 10 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 11 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 12 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 12**
 
 | # | 🍯 💻 Honey Rae's Repairs | Project Two |
 |--|--|--|
+| 10 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 11 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 12 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 13 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 14 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 15 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 16 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 17 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 18 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 18**
 
