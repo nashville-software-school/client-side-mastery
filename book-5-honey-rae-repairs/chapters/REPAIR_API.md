@@ -11,6 +11,10 @@ This chapter provides information, and the data needed, for the API that will be
 Watch the [Honey Rae Client Side ERD](https://watch.screencastify.com/v/kZGoJhLMtuVFRjkrVm47) video for an explanation about the structure and relationships defined in the ERD.
 
 
+### Copy of the ERD
+
+Copy the code for the ERD below and paste it into dbdiagram to get your own copy of the ERD.
+
 ## Getting Started
 
 Before you start building your React application, you need a database to persist the data for it. Please follow these steps to get it set up.
