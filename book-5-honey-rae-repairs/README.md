@@ -21,12 +21,12 @@ For example, here's what the first few days should look like for you.
 | 4 | [Repair Wireframe](./chapters/REPAIR_WIREFRAME.md) <br/> <sub style="font-size:0.85rem;">#wireframe #project-planning</sub> | tbd |
 | 5 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | tbd | 
 
-**🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 8**
+**🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 5**
 
 | # | 🍯 💻 Honey Rae's Repairs | Project Two |
 |--|--|--|
 | 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | tbd |
-| 7 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 7 | [Search Tickets](./chapters/REPAIR_SEARCH_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props #dependency-array</sub> | tbd |
 | 8 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 9 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 
