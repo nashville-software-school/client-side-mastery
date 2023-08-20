@@ -1,19 +1,23 @@
 # Book 5 - Honey Rae's Repair Shop
 > VF-TODO: Update this section after writing all the chapters
 
+> ***Dear Cohort 66***, This portion of the course is brand new, so you might find some typos or mistakes. If so, kindly let me know so that I can correct it. -Val
+
 It is very important that you work on the concepts in this book in the segments that are suggested.
+Move top to bottom, left to right. 
 
-For example, here's what the first few days should look like for you.
 
-1. Watch videos and read documentation for Honey Rae Repairs up to chapter 5
-1. Read the features needed in [Project Two] and implement the code for them up to chapter 5
-1. Review your vocabulary and discuss your questions with peers and instructors.
-1. Move on to chapter 6 in Honey Rae Repairs.
-1. etc...
+Here's how that looks
+
+1. Watch videos, read documentation, and implement the code for Honey Rae Repairs up to chapter 5
+2. Read the features needed and implement the code for Chuckle Checklist up to chapter 5
+3. Review your vocabulary and discuss your questions with peers and instructors.
+4. Move on to chapter 6 in Honey Rae Repairs.
+5. etc...
 
 ## Core Projects
 
-| # | 🍯 💻 Honey Rae's Repairs | Project Two |
+| # | 🍯 💻 Honey Rae's Repairs | 😂🗒 Chuckle Checklist |
 |--|--|--|
 | 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | tbd |
 | 2 | [Your First Component](./chapters/REPAIR_FIRST_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#jsx #useState</sub>| tbd |
