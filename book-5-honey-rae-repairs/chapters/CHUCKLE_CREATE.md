@@ -1,7 +1,6 @@
 # Creating a New One Liner
 In this chapter you will begin fleshing out the jsx of this application and add the functionality to create a new one liner.
 
-### Completed Product
 <img src="./images/chuckle-create.gif" width="1000px" alt="Animation showing a new joke being created" />
 
 ## Add the header for the application
