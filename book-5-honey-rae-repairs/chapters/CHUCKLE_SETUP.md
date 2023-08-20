@@ -1,5 +1,5 @@
 # Chuckle Checklist
-You’re the funniest person you know, and your specialty is one-liners. You like to keep your adoring audience on their toes, but you have a hard time keeping track of which one-liners your friends have had the pleasure of hearing and which ones are still waiting to force the air out of their nose. That’s why you decided to create an app that will track them for you! You want the ability to record a new one-liner as soon as you think of it and track which ones have been told and which one's haven't.
+>You’re the funniest person you know, and your specialty is one-liners. You like to keep your adoring audience on their toes, but you have a hard time keeping track of which one-liners your friends have had the pleasure of hearing and which ones are still waiting to force the air out of their nose. That’s why you decided to create an app that will track them for you! You want the ability to record a new one-liner as soon as you think of it and track which ones have been told and which one's haven't.
 
 ## The Project
 This a fairly simple application designed to help you practice some of the basics of React that you learned while building Honey Rae's.
@@ -29,7 +29,7 @@ We're going to give you some boilerplate code for your Chuckle Checklist applica
 ```
 
 ### Data
-You'll need a database to store your incredible one liners. Follow the steps to get it set up.
+You'll need a database to store your awesome one liners. Follow the steps to get it set up.
 
 ```shell
 cd ~/workspace
@@ -74,4 +74,3 @@ Here's some one liners to get you started. Copy the JSON data below and paste it
   ]
 }
 ```
-<details>
