@@ -20,7 +20,7 @@ First, let's get all of our jokes from the database and store them in state. _Re
 Now let's populate `toldJokes` and `untoldJokes`! 
 Once `allJokes` contains our array of jokes, filter `allJokes` and set `untoldJokes` and `toldJokes` with the correct jokes.
 
-<img src="./images/joke.gif" width="1000px" alt="Mean girls say joke again" />
+#### Didja get that?
 
 <details>
   <summary>Troubleshooting</summary>
