@@ -17,7 +17,6 @@ Run the following commands to do the basic software package installations
 cd ~/workspace
 npx create-react-app honey-rae-repairs
 cd honey-rae-repairs
-npm install --save react-router-dom
 ```
 ## Project Setup
 
@@ -26,7 +25,7 @@ We are giving you some boilerplate (starter) code that you will then customize a
 <!-- TODO: Change this link to cohort 66 branch -->
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/react-redesign/book-5-honey-rae-repairs/chapters/scripts/react-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/react-redesign/book-5-honey-rae-repairs/chapters/scripts/repair-setup.sh)"
 ```
 ## Installing React Developer Tools
 
