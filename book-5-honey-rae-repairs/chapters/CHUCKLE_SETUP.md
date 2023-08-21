@@ -23,7 +23,7 @@ cd chuckle-checklist
 
 We're going to give you some boilerplate code for your Chuckle Checklist application. Run the following command in your terminal:
 
-> VF-TODO: Add link to bash script here
+<!-- TODO: Change this link to cohort 66 branch -->
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/react-redesign/book-5-honey-rae-repairs/chapters/scripts/chuckle-setup.sh)"
 ```
