@@ -1,5 +1,5 @@
 # Marking a Joke as Told/Untold
-In this chapter you will add a button to the items to either mark it as told or untold.
+In this chapter you will add a button to the jokes to either mark it as told or untold.
 
 <img src="./images/chuckle-update.gif" width="1000px" alt="Animation showing a joke being marked as told and untold." />
 
@@ -13,7 +13,7 @@ In this chapter you will add a button to the items to either mark it as told or 
   <script src="YourUniqueFontAwesomeLink" crossorigin="anonymous"></script>
   ```
 
-  Copy the script and add it to the `<head>` of the index.html file of your project. Now browse the icons library and choose which ones you want in your project. You can add them anywhere you would add text! For example, in the animation above those icons are the text for a button that's been styled to have no border:
+  Copy the script and add it to the `<head>` of the index.html file of your project. Now browse the icons library and choose which ones you want in your project. You can add them anywhere you would add text! For example, in the animation above, those icons are the text for a button that's been styled to have no border:
 
   ```jsx
   <button><i className="fa-regular fa-face-meh" /></button>
@@ -40,7 +40,7 @@ Try implementing this code on your own. If you get stuck, reference previous cod
 <details>
   <summary><b><i>The Action</i></b></summary>
 
-  Let's write a function to pass to the onClick of the buttons. This function should accept a joke as a parameter. It's responsibility will be to create an editedJoke object to pass to the edit joke function from the `jokeService`. 
+  Write a function to pass to the `onClick` of the buttons. This function should accept a joke as a parameter. It's responsibility will be to create an editedJoke object to pass to the edit joke function from the `jokeService`. 
   All the property values should remain the same expect for the `told` property. If told is `true`, it should change to `false`. If told it `false`, it should change to `true`. _Remember the `!` operator will convert a value to it's opposite boolean._
   <br>
   Post that edited joke! Don't forget to get your new list of jokes from the database after posting.
