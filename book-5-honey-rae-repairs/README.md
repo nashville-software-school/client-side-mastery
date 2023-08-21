@@ -21,7 +21,7 @@ Here's how that looks
 |--|--|--|
 | 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | [Chuckle Setup](./chapters/CHUCKLE_SETUP.md) |
 | 2 | [Your First Component](./chapters/REPAIR_FIRST_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#jsx #useState</sub>| [New Chuckles](./chapters/CHUCKLE_CREATE.md) |
-| 3 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | tbd |
+| 3 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | [View Chuckles](./chapters/CHUCKLE_READ.md) |
 | 4 | [Repair Wireframe](./chapters/REPAIR_WIREFRAME.md) <br/> <sub style="font-size:0.85rem;">#wireframe #project-planning</sub> | tbd |
 | 5 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | tbd | 
 
