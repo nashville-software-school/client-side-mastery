@@ -2,7 +2,7 @@
 In this chapter you will learn how to write a basic React functional component, write with the `JSX` syntax, and utilize the `useState` hook. 
 
 ## 📺 Watch Video
-Watch the video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
+Watch the [First Component](https://youtu.be/-WMvlULvBeU) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 > VF-TODO: Record video and paste link here
  
 ## Component Structure and JSX
