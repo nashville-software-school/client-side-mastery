@@ -3,7 +3,6 @@ In this chapter you will learn how to write a basic React functional component, 
 
 ## 📺 Watch Video
 Watch the [First Component](https://youtu.be/-WMvlULvBeU) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
-> VF-TODO: Record video and paste link here
  
 ## Component Structure and JSX
 You've been writing React-like components in vanilla JS, you just didn't know it! Take this code from _Tour Some Sugar On Me_ for example:
