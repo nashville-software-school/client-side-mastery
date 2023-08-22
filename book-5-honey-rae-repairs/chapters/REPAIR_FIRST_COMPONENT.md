@@ -119,6 +119,8 @@ In essence, `useState` simplifies and streamlines the way we handle state change
 
 > **JSX:** A JavaScript syntax extension that enables you to write HTML-like markup within a JavaScript file.
 
+> **Fragment:** Used via `<>...</>` syntax, lets you group elements without a wrapper node. It has no effect on the resulting DOM; it is the same as if the elements were not grouped. 
+
 > **React Hooks:** Functions provided by the React library (prefixed with "use") that allow you to "hook" into state and lifecycle features of components.
 
 > **useState:** A crucial React Hook that empowers you to introduce state to a component. It takes an initial value as its argument and returns an array. This array contains the state value (index 0) and a function (index 1) to modify that state.
