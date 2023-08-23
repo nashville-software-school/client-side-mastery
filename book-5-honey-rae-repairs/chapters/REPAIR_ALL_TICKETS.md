@@ -2,8 +2,7 @@
 In this chapter you will begin modularizing your code by creating a `services` directory for interacting with the API and you will learn how to use the `useEffect` hook.
 
 ## 📺 Watch Video
-Watch the video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
-> VF-TODO: Record video and paste link here
+Watch the [All Tickets](https://youtu.be/hoaH8RQjQBo) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ## The services module
 There are many ways to structure your code, and React leaves the choice of file organization to you. However, it's important to keep your code organized and maintainable. For this project, we'll adopt a practice of centralizing our `fetch` call functions within a services module. These functions will be divided into separate files for each resource. As we continue to build this application, you'll see why this choice was necessary to maintain a clean, organized codebase.
