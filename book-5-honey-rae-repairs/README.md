@@ -1,7 +1,5 @@
 # Book 5 - Honey Rae's Repair Shop
-> VF-TODO: Update this section after writing all the chapters
-
-> ***Dear Cohort 66***, This portion of the course is brand new, so you might find some typos or mistakes. If so, kindly let me know so that I can correct them. -Val
+> ***Dear Cohort 66***, This portion of the course is brand new, so you might find some typos or mistakes. If so, kindly let me know so that I can correct them. Your feedback is much appreciated. -Val
 
 It is very important that you work on the concepts in this book in the segments that are suggested.
 Move top to bottom, left to right. 

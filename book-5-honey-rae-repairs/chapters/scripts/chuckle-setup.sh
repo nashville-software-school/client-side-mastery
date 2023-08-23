@@ -238,26 +238,6 @@ these styles and create your own styles and layout for the application.
   flex-flow: column nowrap;
   align-items: center;
 
-  /*! VF-TODO: Exclude this from script */
-  .app-heading-circle {
-    background: var(--col-2);
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 4rem;
-    box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3),
-      2px 4px 20px hsla(0, 0%, 0%, 0.2);
-
-    .app-logo {
-      width: 5rem;
-      filter: drop-shadow(1px 1px 11px var(--col-0));
-    }
-  }
-
   /** Class for the text for the heading. It should be added to an h1 inside of the div with the .app-heading class*/
   .app-heading-text {
     font-size: 2.5rem;
