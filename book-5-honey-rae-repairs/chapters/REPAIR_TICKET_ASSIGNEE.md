@@ -2,8 +2,7 @@
 In this chapter you will learn how to render a React component, pass props, use optional chaining, and write ternary statements.
 
 ## 📺 Watch The Video
-Watch the video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
-> VF-TODO: Record video and paste link here
+Watch the [Ticket Assignee](https://youtu.be/8s4TQdJ3EBk) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ## Rendering the TicketList component
 Breaking our code into components to later be rendered as part of one large whole is nothing new to us. Take this code from DeShawn's Dog Walking: 
