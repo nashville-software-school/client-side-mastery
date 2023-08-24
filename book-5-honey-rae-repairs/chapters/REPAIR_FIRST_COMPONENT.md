@@ -75,7 +75,7 @@ export const App = () => {
 }
 ```
 
-But in React, we can add the `onClick` right on the element. 
+But in React, we can add the `onClick` right on the element. All we need to do is give the `onClick` the function we want to run.
 ```jsx
 export const App = () => {
 
@@ -90,6 +90,19 @@ export const App = () => {
 ```
 
 _Goodbye addEventListener!_
+
+Instead of predefining a function, we could just give our `onClick` an anonymous function like so:
+
+```javascript
+export const App = () => {
+
+  return (
+      <button onClick={() => { console.log("Clicked!") })}>Click me!</button>
+  );
+}
+``` 
+
+For functions that are single, small operations such as only setting state, an anonymous function works fine. But if your function is multiple lines of code, it's much cleaner to define a function instead in order to keep our JSX readable and tidy.
 
 ## State Changed
 Remember back in Book 4 when the state changed? Think about the times when the user placed a new order or saved a submission, and you had to dispatch a custom event to notify your application about it. Afterward, you had to write an event listener for that custom event, allowing you to update your HTML with the new state. 

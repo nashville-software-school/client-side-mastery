@@ -4,6 +4,25 @@ In this chapter you will practice what you learned in the previous chapters by i
 ## 📺 Watch The Video
 Watch the [Search Tickets](https://youtu.be/WPG09-cUJYg?si=sYHT7adRJVgaL0qr) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
+### 🔻🔸🔹 CSS for this chapter
+<details>
+  <summary>Ticket.css</summary>
+
+  ```css
+    .ticket-search {
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      border: 1px solid var(--outline);
+      border-radius: 0.25rem;
+      margin-left: auto;
+    }
+
+    .filter-bar {
+      display: flex;
+    }
+  ```
+</details>
+
 ## Missing Dependencies
 When we created the useEffect to watch for the searchTerm state change, we saw a green squiggly (if Eslint is installed) under our dependency array. This isn't an error but more of a warning that this code _might_ cause a bug. 
 ```sh
