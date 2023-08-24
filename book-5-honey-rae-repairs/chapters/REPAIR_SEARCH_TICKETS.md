@@ -2,8 +2,7 @@
 In this chapter you will practice what you learned in the previous chapters by implementing a search bar for the tickets.
 
 ## 📺 Watch The Video
-Watch the video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
-> VF-TODO: Record video and paste link here
+Watch the [Search Tickets](https://youtu.be/WPG09-cUJYg?si=sYHT7adRJVgaL0qr) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ## Missing Dependencies
 When we created the useEffect to watch for the searchTerm state change, we saw a green squiggly (if Eslint is installed) under our dependency array. This isn't an error but more of a warning that this code _might_ cause a bug. 
