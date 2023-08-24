@@ -53,7 +53,7 @@ JSX allows us to write HTML elements in JavaScript and place them in the DOM wit
 ### useState
 The `useState` hook allows you to add and manage state in a functional component. It takes one argument: the initial value for our state. It returns an array with two values: the current value of the state and a function to update it.
 
->For more information on how `useState` works, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
+>For more information on how `useState` works, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md#state-changed) chapter.
 
 ### Destructuring
 The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
