@@ -48,7 +48,7 @@ We've reached the end of our learning objectives for parts _one_ and _two_ of th
 ### JSX
 JSX allows us to write HTML elements in JavaScript and place them in the DOM without any `Document.querySelector` and appending to the `innerHTML` property.
 
->For more information on JSX, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
+>For more information on JSX, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md#component-structure-and-jsx) chapter.
 
 ### useState
 The `useState` hook allows you to add and manage state in a functional component. It takes one argument: the initial value for our state. It returns an array with two values: the current value of the state and a function to update it.
@@ -63,7 +63,7 @@ The destructuring assignment syntax is a JavaScript expression that makes it pos
 ### useEffect
 The `useEffect` hook will run a function when, and _only_ when we tell it to. It takes two arguments: the function we want to run and an array. 
 
->For more information on how `useEffect` works, revisit the [List All Tickets](./REPAIR_ALL_TICKETS.md) chapter.
+>For more information on how `useEffect` works, revisit the [List All Tickets](./REPAIR_ALL_TICKETS.md#useeffect) chapter.
 
 ### Event Handling
 Listening for events in React is easy peasy. You can just add the event right on the element you want to listen to!
@@ -123,7 +123,7 @@ export const ParentComponent = () => {
 }
 ```
 
->For more information about rendering components, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md) chapter
+>For more information about rendering components, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md#rendering-the-ticketlist-component) chapter
 
 ### Props
 Props are arguments passed into a React component. When a child component needs access to state from a parent component, you can pass props to the child component.
@@ -142,5 +142,5 @@ export const ParentComponent = () => {
 }
 ```
 
->For more information for how props work, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md) chapter.
+>For more information for how props work, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md#props) chapter.
 
