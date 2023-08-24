@@ -58,7 +58,7 @@ The `useState` hook allows you to add and manage state in a functional component
 ### Destructuring
 The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
 
-For more information on how destructuring works, revisit the [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). _That "Try it" box is interactive and a great way to learn._
+>For more information on how destructuring works, revisit the [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). _That "Try it" box is interactive and a great way to learn._
 
 ### useEffect
 The `useEffect` hook will run a function when, and _only_ when we tell it to. It takes two arguments: the function we want to run and an array. 
