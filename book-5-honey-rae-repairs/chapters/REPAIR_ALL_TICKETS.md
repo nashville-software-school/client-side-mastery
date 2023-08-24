@@ -4,7 +4,7 @@ In this chapter you will begin modularizing your code by creating a `services` d
 ## 📺 Watch Video
 Watch the [All Tickets](https://youtu.be/hoaH8RQjQBo) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
-### 🔻🔸🔹 CSS for this chapter
+### 🔸🔻🔹 CSS for this chapter
 <details>
   <summary>App.css</summary>
 

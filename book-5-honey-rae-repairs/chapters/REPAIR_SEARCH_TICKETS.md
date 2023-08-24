@@ -4,7 +4,7 @@ In this chapter you will practice what you learned in the previous chapters by i
 ## 📺 Watch The Video
 Watch the [Search Tickets](https://youtu.be/WPG09-cUJYg?si=sYHT7adRJVgaL0qr) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
-### 🔻🔸🔹 CSS for this chapter
+### 🔸🔻🔹 CSS for this chapter
 <details>
   <summary>Ticket.css</summary>
 

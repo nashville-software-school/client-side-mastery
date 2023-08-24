@@ -2,9 +2,9 @@
 In this chapter you will create a new component for listing the customers.
 
 ## 📺 Watch The Video
-Watch the [Search Tickets](https://youtu.be/JijX33KjDP4?si=Rj_Pp6-twBP4weVf) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
+Watch the [Customer List](https://youtu.be/JijX33KjDP4?si=Rj_Pp6-twBP4weVf) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
-### 🔻🔸🔹 CSS for this chapter
+### 🔸🔻🔹 CSS for this chapter
 <details>
   <summary>Customers.css</summary>
 
@@ -48,12 +48,12 @@ We've reached the end of our learning objectives for parts _one_ and _two_ of th
 ### JSX
 JSX allows us to write HTML elements in JavaScript and place them in the DOM without any `Document.querySelector` and appending to the `innerHTML` property.
 
-For more information on JSX, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
+>For more information on JSX, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
 
 ### useState
 The `useState` hook allows you to add and manage state in a functional component. It takes one argument: the initial value for our state. It returns an array with two values: the current value of the state and a function to update it.
 
-For more information on how `useState` works, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
+>For more information on how `useState` works, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
 
 ### Destructuring
 The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
@@ -63,13 +63,13 @@ For more information on how destructuring works, revisit the [mdn web docs](http
 ### useEffect
 The `useEffect` hook will run a function when, and _only_ when we tell it to. It takes two arguments: the function we want to run and an array. 
 
-For more information on how `useEffect` works, revisit the [List All Tickets](./REPAIR_ALL_TICKETS.md) chapter.
+>For more information on how `useEffect` works, revisit the [List All Tickets](./REPAIR_ALL_TICKETS.md) chapter.
 
 ### Event Handling
 Listening for events in React is easy peasy. You can just add the event right on the element you want to listen to!
 The two events we've written so far are `onClick` for a button and `onChange` for a text input.
 
-For more information on event handling, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
+>For more information on event handling, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
 
 ### Optional Chaining
 The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is `null` or `undefined`, the expression short-circuits with a return value of `undefined.` This is very helpful if our state that were displaying in our JSX contains nested objects but the initial value is an empty object. 
@@ -123,7 +123,7 @@ export const ParentComponent = () => {
 }
 ```
 
-For more information about rendering components, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md) chapter
+>For more information about rendering components, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md) chapter
 
 ### Props
 Props are arguments passed into a React component. When a child component needs access to state from a parent component, you can pass props to the child component.
@@ -142,5 +142,5 @@ export const ParentComponent = () => {
 }
 ```
 
-For more information for how props work, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md) chapter.
+>For more information for how props work, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md) chapter.
 
