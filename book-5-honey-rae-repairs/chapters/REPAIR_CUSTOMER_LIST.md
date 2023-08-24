@@ -69,7 +69,7 @@ The `useEffect` hook will run a function when, and _only_ when we tell it to. It
 Listening for events in React is easy peasy. You can just add the event right on the element you want to listen to!
 The two events we've written so far are `onClick` for a button and `onChange` for a text input.
 
->For more information on event handling, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md) chapter.
+>For more information on event handling, revisit the [Your First Component](./REPAIR_FIRST_COMPONENT.md#event-listener) chapter.
 
 ### Optional Chaining
 The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is `null` or `undefined`, the expression short-circuits with a return value of `undefined.` This is very helpful if our state that were displaying in our JSX contains nested objects but the initial value is an empty object. 
