@@ -13,7 +13,7 @@ cd learning-moments
 Run the following command in your terminal to receive the boilerplate code:
 <!-- TODO: Change this link to cohort 66 branch -->
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/react-redesign/book-5-honey-rae-repairs/chapters/scripts/learning-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-66/book-5-honey-rae-repairs/chapters/scripts/learning-setup.sh)"
 ```
 
 

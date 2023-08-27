@@ -25,7 +25,7 @@ We're going to give you some boilerplate code for your Chuckle Checklist applica
 
 <!-- TODO: Change this link to cohort 66 branch -->
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/react-redesign/book-5-honey-rae-repairs/chapters/scripts/chuckle-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-66/book-5-honey-rae-repairs/chapters/scripts/chuckle-setup.sh)"
 ```
 
 ### Data
