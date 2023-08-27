@@ -53,7 +53,7 @@ export const VenuesList = () => {
 }
 ```
 
-See? React is just Javascript. Just some new, slightly different syntax and much faster to implement! 
+See? React is just Javascript. Just some new, slightly different syntax and much faster to implement! Notice how we don't have to add the `.join("")` to the end our `.map()` method. That's because with JSX we don't have to convert that returned array to a string!
 
 > Don't worry about trying to understand every bit of the code above, we'll continue to draw comparisons between what we already know and what we're learning in later chapters. 
 > 
