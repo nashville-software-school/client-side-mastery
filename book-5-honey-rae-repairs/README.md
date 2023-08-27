@@ -25,9 +25,9 @@ Here's how that looks
 
 **🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 5**
 
-| # | 🍯 💻 Honey Rae's Repairs | Project Two |
+| # | 🍯 💻 Honey Rae's Repairs |💡💬 Learning Moments |
 |--|--|--|
-| 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | tbd |
+| 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | Learning Setup |
 | 7 | [Search Tickets](./chapters/REPAIR_SEARCH_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props #dependency-array</sub> | tbd |
 | 8 | [Customer List](./chapters/REPAIR_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#review</sub> | tbd |
 | 9 | [Employee List](./chapters/REPAIR_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#practice</sub> | tbd |
