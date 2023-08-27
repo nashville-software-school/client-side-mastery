@@ -47,3 +47,6 @@ Once you've successfully rendered the employees on the page, feel free to compar
   8. For each employee, render the User component and pass the employee to the user prop
   9.  Render the EmployeeList component in the App component
 </details>
+
+## 🧭 Explorer Exercise: Chuckle Checklist Components _(optional)_
+Now that you understand how to pass props and render components, see if you can break up the Chuckle Checklist code into smaller components. Currently, all the code and functionality for the application is in `App.js`. Can any of the code be reused? What props would the new components need? There's no right or wrong way of doing this. Have fun with it and as always, ***don't be afraid to break something!***
