@@ -27,7 +27,7 @@ Here's how that looks
 
 | # | 🍯 💻 Honey Rae's Repairs |💡💬 Learning Moments |
 |--|--|--|
-| 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | Learning Setup |
+| 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | [Learning Setup](./chapters/LEARN_SETUP.md) |
 | 7 | [Search Tickets](./chapters/REPAIR_SEARCH_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props #dependency-array</sub> | tbd |
 | 8 | [Customer List](./chapters/REPAIR_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#review</sub> | tbd |
 | 9 | [Employee List](./chapters/REPAIR_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#practice</sub> | tbd |
