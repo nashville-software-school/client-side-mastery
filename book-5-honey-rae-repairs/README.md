@@ -34,7 +34,7 @@ Here's how that looks
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 9**
 
-| # | 🍯 💻 Honey Rae's Repairs | Project Two |
+| # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
 | 10 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 11 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
@@ -49,7 +49,7 @@ Here's how that looks
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
 
-| # | 🍯 💻 Honey Rae's Repairs | Project Two |
+| # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
 | 1 | tbd | tbd |
 | 1 | tbd | tbd |
