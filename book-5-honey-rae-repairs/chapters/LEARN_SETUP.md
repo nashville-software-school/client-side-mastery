@@ -11,7 +11,11 @@ cd learning-moments
 ```
 
 Run the following command in your terminal to receive the boilerplate code:
->VF_TODO: Create install script
+<!-- TODO: Change this link to cohort 66 branch -->
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/react-redesign/book-5-honey-rae-repairs/chapters/scripts/learning-setup.sh)"
+```
+
 
 ## The Data
 The first step of planning this application is design the ERD and build the database.
