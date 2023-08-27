@@ -64,7 +64,7 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 >A view for all the posts. 
 
 **Given** the user wishes to view a list of all the posts<br>
-**When** the user visits the All Posts view<br>
+**When** the user is at the home route or visits the All Posts view<br>
 **Then** the ***title***, ***topic*** and ***number of likes*** will display for each post in the database. 
 
 **Given** the user wishes to filter the posts by topic<br>
