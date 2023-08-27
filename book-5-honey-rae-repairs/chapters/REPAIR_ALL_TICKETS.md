@@ -4,6 +4,61 @@ In this chapter you will begin modularizing your code by creating a `services` d
 ## 📺 Watch Video
 Watch the [All Tickets](https://youtu.be/hoaH8RQjQBo) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
+### 🔸🔻🔹 CSS for this chapter
+<details>
+  <summary>App.css</summary>
+
+  ```css
+    .tickets {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tickets-container {
+      margin: 1rem 5rem 0rem 5rem;
+    }
+
+    .tickets-container > h2 {
+      margin-top: 0;
+    }
+
+    .ticket {
+      background-color: var(--white);
+      border: 1px solid var(--outline);
+      margin: 0.5rem 0;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    /* This targets all the child elements of the element with the .ticket class */
+    .ticket > * {
+      padding: 0.5rem;
+    }
+
+    .ticket-info {
+      color: var(--outline);
+      font-family: "Roboto", sans-serif;
+    }
+
+    /* This targets any footer element that is a child of an element with the .ticket class */
+    .ticket > footer {
+      display: flex;
+      border-top: 1px solid var(--outline);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* This targets any element that is a child of a footer that is a child of an element with the .ticket class */
+    .ticket > footer > * {
+      flex-basis: 22%;
+    }
+
+    .filter-btn {
+      margin-right: 2rem;
+    }
+  ```
+</details>
+
 ## The services module
 There are many ways to structure your code, and React leaves the choice of file organization to you. However, it's important to keep your code organized and maintainable. For this project, we'll adopt a practice of centralizing our `fetch` call functions within a services module. These functions will be divided into separate files for each resource. As we continue to build this application, you'll see why this choice was necessary to maintain a clean, organized codebase.
 

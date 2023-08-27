@@ -2,8 +2,7 @@
 In this chapter you will learn how to render a React component, pass props, use optional chaining, and write ternary statements.
 
 ## 📺 Watch The Video
-Watch the video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
-> VF-TODO: Record video and paste link here
+Watch the [Ticket Assignee](https://youtu.be/8s4TQdJ3EBk) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ## Rendering the TicketList component
 Breaking our code into components to later be rendered as part of one large whole is nothing new to us. Take this code from DeShawn's Dog Walking: 
@@ -111,10 +110,8 @@ But why would we do that when destructuring is _so much_ cooler?
 Destructuring is not new with React, though we do use it with destructuring our props object and useState. You can do this in vanilla js, and it's likely you have! Just another example of how React is _just_ Javascript!
 
 ## 🧭 📺 Explorer Video _(optional)_
-If you're feeling comfortable with what we've learned so far and would like to see an alternative solution to what we did in this chapter, watch this video! 
+If you're feeling comfortable with what we've learned so far and would like to see an alternative solution to what we did in this chapter, watch [this video](https://youtu.be/Sq4CzHMLXTk?si=_PKOdYncLfGx-hHa)! 
 >_This is optional and the solution in this video will not be used in the rest of this walkthrough of Honey Rae Repairs._
-
->VF-TODO: Record alternative solution video and paste link here
 
 ## 📓 Vocabulary
 >**Render a component:** To invoke a React component in JSX, like calling a function, resulting in its display within the rendered user interface.
