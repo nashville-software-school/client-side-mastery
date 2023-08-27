@@ -32,7 +32,7 @@ Here's how that looks
 | 8 | [Customer List](./chapters/REPAIR_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#review</sub> | tbd |
 | 9 | [Employee List](./chapters/REPAIR_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#practice</sub> | tbd |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 12**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 9**
 
 | # | 🍯 💻 Honey Rae's Repairs | Project Two |
 |--|--|--|
@@ -43,7 +43,7 @@ Here's how that looks
 | 14 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 15 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 18**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 15**
 
 ## 🧭 Explorer Chapters
 
