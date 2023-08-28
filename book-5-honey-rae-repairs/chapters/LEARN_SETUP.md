@@ -36,7 +36,7 @@ Below are the resources for this application. _(You will need to connect the rel
 |**`topics`** | A topic of learning. _(e.g. Functions, Asynchronous Programming, etc...)_ Many posts can be written about a single topic. _(name)_  |
 
 ## The Plan
-This application will have several views, and just like in Honey Rae Repairs, you will begin to build these views piece by piece. Before you get started, however, having an end goal in mind will help with your decision making process as you build. What components will you build? What will your routes be? What components can you reuse? Some guidance will be given for these decisions and others will be left up to you. Carefully read the requirements for each view of this application, then, build a wireframe representing each view and its features. Of course, feel free to review your wireframe with an instructor when you are finished. 
+This application will have several views, and just like in Honey Rae Repairs, you will begin to build these views piece by piece. Before you get started, however, having an end product in mind will help with your decision making process as you build. _What components will you build? What will your routes be? What components can you reuse?_ Some guidance will be given for these decisions and others will be left up to you. Carefully read the requirements for each view of this application, then, build a wireframe representing each view and its features. Of course, feel free to review your wireframe with an instructor when you are finished. 
 
 ### The Nav Bar
 A navbar will persist in each view, allowing the user to navigate through the views of the application. The links on the navbar are as follows:
