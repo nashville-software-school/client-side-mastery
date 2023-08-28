@@ -1,6 +1,6 @@
 # Planning Honey Rae Repairs
 
-## 📺 Watch Video
+## 📺 Watch The Video
 Take a few minutes to watch the [video walkthrough](https://youtu.be/0eCYAQJNAUk) of the [Honey Rae Repairs wireframe](https://miro.com/app/board/uXjVMucRFUc=/?share_link_id=556612065166).
 
 ## Building Your Capstone Wireframe

@@ -38,7 +38,7 @@ All parts are ***not*** created equal. Part 3 adds more complexity with the intr
 
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
-| 10 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 10 | [Intro to Routes](./chapters/REPAIR_ROUTES_INTRO.md) <br/> <sub style="font-size:0.85rem;">#route #link</sub> | tbd |
 | 11 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 12 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 13 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
