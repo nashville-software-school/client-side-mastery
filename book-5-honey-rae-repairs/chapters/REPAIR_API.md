@@ -54,15 +54,15 @@ Copy the code for the ERD below and paste it into dbdiagram to get your own copy
     isStaff boolean
   }
 
-  Ref: "ServiceTickets"."id" < "EmployeeTickets"."serviceTicketId"
+  Ref: "serviceTickets"."id" < "employeeTickets"."serviceTicketId"
 
-  Ref: "Employees"."id" < "EmployeeTickets"."employeeId"
+  Ref: "employees"."id" < "employeeTickets"."employeeId"
 
-  Ref: "Users"."id" < "Employees"."userId"
+  Ref: "users"."id" < "employees"."userId"
 
-  Ref: "Users"."id" < "Customers"."userId"
+  Ref: "users"."id" < "customers"."userId"
 
-  Ref: "Users"."id" < "ServiceTickets"."userId"
+  Ref: "users"."id" < "serviceTickets"."userId"
   ```
 </details>
 
