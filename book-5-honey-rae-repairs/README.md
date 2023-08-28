@@ -13,6 +13,8 @@ Here's how that looks
 4. Move on to chapter 6 in Honey Rae Repairs.
 5. etc...
 
+All parts are ***not*** created equal. Part 3 adds more complexity with the introduction of Routing and will take you longer complete than parts 1 and 2. Keep this in mind while you pace yourself through this book.
+
 ## Core Projects
 
 | # | 🍯 💻 Honey Rae's Repairs | 😂🗒 Chuckle Checklist |
@@ -28,9 +30,9 @@ Here's how that looks
 | # | 🍯 💻 Honey Rae's Repairs |💡💬 Learning Moments |
 |--|--|--|
 | 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | [Learning Setup](./chapters/LEARN_SETUP.md) |
-| 7 | [Search Tickets](./chapters/REPAIR_SEARCH_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props #dependency-array</sub> | tbd |
-| 8 | [Customer List](./chapters/REPAIR_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#review</sub> | tbd |
-| 9 | [Employee List](./chapters/REPAIR_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#practice</sub> | tbd |
+| 7 | [Search Tickets](./chapters/REPAIR_SEARCH_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props #dependency-array</sub> | [MVP and Wireframe](./chapters/LEARN_WIREFRAME.md) |
+| 8 | [Customer List](./chapters/REPAIR_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#review</sub> | [All Posts](./chapters/LEARN_ALL_POSTS.md) |
+| 9 | [Employee List](./chapters/REPAIR_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#practice</sub> | [Filter Posts](./chapters/LEARN_FILTER.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 9**
 
