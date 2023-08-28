@@ -13,7 +13,7 @@ Here's how that looks
 4. Move on to chapter 6 in Honey Rae Repairs.
 5. etc...
 
-All parts are _not_ created equal. Part 3 adds more complexity with the introduction of Routing and will take you longer complete than parts 1 and 2. Keep this in mind while you pace yourself through this book.
+All parts are ***not*** created equal. Part 3 adds more complexity with the introduction of Routing and will take you longer complete than parts 1 and 2. Keep this in mind while you pace yourself through this book.
 
 ## Core Projects
 
