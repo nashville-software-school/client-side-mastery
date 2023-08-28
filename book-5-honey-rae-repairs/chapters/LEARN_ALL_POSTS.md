@@ -1,5 +1,5 @@
 # Displaying All The Posts
-In this chapter you will implement the following user stories for the ***All Posts*** view:
+In this chapter you will implement the following user stories for the ***[All Posts](./LEARN_SETUP.md#-homeall-posts)*** view:
 
 **Given** the user wishes to view a list of all the posts<br>
 **When** the user is at the home route or visits the All Posts view<br>
