@@ -15,6 +15,57 @@ Watch the [Honey Rae Client Side ERD](https://watch.screencastify.com/v/kZGoJhLM
 
 Copy the code for the ERD below and paste it into dbdiagram to get your own copy of the ERD.
 
+<details>
+  <summary>Expand to the your ERD tables</summary>
+
+  ```sql
+  table serviceTickets {
+    id int pk
+    userId int
+    description varchar
+    emergency boolean
+    dateCompleted date
+  }
+
+  table customers {
+    id int pk
+    address varchar
+    phoneNumber varchar
+    userId int
+  }
+
+  table employeeTickets {
+    id int pk
+    employeeId int
+    serviceTicketId int
+  }
+
+  table employees {
+    id int pk
+    specialty varchar
+    rate float
+    userId int
+  }
+
+  table users {
+    id int pk
+    fullName varchar
+    email varchar
+    isStaff boolean
+  }
+
+  Ref: "ServiceTickets"."id" < "EmployeeTickets"."serviceTicketId"
+
+  Ref: "Employees"."id" < "EmployeeTickets"."employeeId"
+
+  Ref: "Users"."id" < "Employees"."userId"
+
+  Ref: "Users"."id" < "Customers"."userId"
+
+  Ref: "Users"."id" < "ServiceTickets"."userId"
+  ```
+</details>
+
 ## Getting Started
 
 Before you start building your React application, you need a database to persist the data for it. Please follow these steps to get it set up.
