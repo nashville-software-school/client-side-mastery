@@ -23,9 +23,10 @@ echo '<!DOCTYPE html>
 </html>' >./public/index.html
 
 # index.js
-echo 'import { App } from "./App"
+echo 'import "./index.css"
+import { App } from "./App"
 import { createRoot } from "react-dom/client"
-import "./index.css"
+
 
 const container = document.getElementById("root")
 const root = createRoot(container)
