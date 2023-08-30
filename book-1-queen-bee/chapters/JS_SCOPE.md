@@ -186,6 +186,6 @@ console.log(nameMaker())
 
 These are supplementary videos you can choose to watch to deepen your learning.
 
-1. [JavaScript | The Scope Chain](https://www.youtube.com/watch?v=FCAOcYazy9c)
+1. [JavaScript | Scope Chain ](https://www.youtube.com/watch?v=vGGOOYOXoQ4&t=42s)
 1. [Javascript Tutorial | Scope & Closures | Ep20](https://www.youtube.com/watch?v=S3cBIww_6os)
 1. [Environment, Scope and Closures in JS / Intro to JavaScript ES6 programming, lesson 16](https://www.youtube.com/watch?v=LhSCEWHazAU)
