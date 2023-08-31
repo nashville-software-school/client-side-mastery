@@ -1,7 +1,7 @@
 # Customer Details View
 
 ## 📺 Watch The Videos
-First, watch the introduction to the [useParams hook](https://youtu.be/fPfQ4JjPQps?si=BvCeRUgf9YvKZpkD) video and implement the code yourself. Next, watch the [Customer Details](https://youtu.be/aiVEFIHDj4k?si=32JIaDbJwxbJ1P3I) and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
+First, watch the introduction to the [useParams hook](https://youtu.be/fPfQ4JjPQps?si=BvCeRUgf9YvKZpkD) video and implement the code yourself. Next, watch the [Customer Details](https://youtu.be/aiVEFIHDj4k?si=32JIaDbJwxbJ1P3I) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ### 🔸🔻🔹 CSS for this chapter
 <details>
@@ -166,7 +166,7 @@ Let's simplify this by nesting these routes and setting up an index route for th
 
 We were able to nest all these routes under a parent route for `/`. Now when the url of this app hits any of the child routes, they will render in the `<Outlet />` of the parent route between the `<Header />` and `<Footer />`. When, and _only_ when, the app url is at `/`, the child index route will render the `<Welcome />` component. 
 
-Let's look at another example by added some more routes to this app.
+Let's look at another example by adding some more routes to this app.
 
 ```jsx
 <Routes>
