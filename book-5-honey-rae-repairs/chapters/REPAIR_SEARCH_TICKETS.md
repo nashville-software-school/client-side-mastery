@@ -6,7 +6,7 @@ Watch the [Search Tickets](https://youtu.be/WPG09-cUJYg?si=sYHT7adRJVgaL0qr) vid
 
 ### 🔸🔻🔹 CSS for this chapter
 <details>
-  <summary>Ticket.css</summary>
+  <summary>Tickets.css</summary>
 
   ```css
     .ticket-search {

@@ -1,7 +1,7 @@
 # List all the tickets
 In this chapter you will begin modularizing your code by creating a `services` directory for interacting with the API and you will learn how to use the `useEffect` hook.
 
-## 📺 Watch Video
+## 📺 Watch The Video
 Watch the [All Tickets](https://youtu.be/hoaH8RQjQBo) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ### 🔸🔻🔹 CSS for this chapter

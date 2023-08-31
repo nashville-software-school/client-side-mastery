@@ -1,7 +1,7 @@
 # Writing Your First React Component
 In this chapter you will learn how to write a basic React functional component, write with the `JSX` syntax, and utilize the `useState` hook. 
 
-## 📺 Watch Video
+## 📺 Watch The Video
 Watch the [First Component](https://youtu.be/-WMvlULvBeU) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
  
 ## Component Structure and JSX
@@ -127,7 +127,7 @@ Now, here's the exciting part. In vanilla JavaScript, whenever we changed the va
 In essence, `useState` simplifies and streamlines the way we handle state changes, making our components more efficient and our code more readable.
 
 
-## 📓 Vocabulary Terms
+## 📓 Vocabulary
 > **React Components:**  Independent and reusable blocks of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
 
 > **JSX:** A JavaScript syntax extension that enables you to write HTML-like markup within a JavaScript file.

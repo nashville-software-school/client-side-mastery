@@ -13,10 +13,8 @@ Here's how that looks
 4. Move on to chapter 6 in Honey Rae Repairs.
 5. etc...
 
-All parts are ***not*** created equal. Part 3 adds more complexity with the introduction of Routing and will take you longer complete than parts 1 and 2. Keep this in mind while you pace yourself through this book.
-
 ## Core Projects
-
+### Part 1
 | # | 🍯 💻 Honey Rae's Repairs | 😂🗒 Chuckle Checklist |
 |--|--|--|
 | 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | [Chuckle Setup](./chapters/CHUCKLE_SETUP.md) |
@@ -25,8 +23,9 @@ All parts are ***not*** created equal. Part 3 adds more complexity with the intr
 | 4 | [Repair Wireframe](./chapters/REPAIR_WIREFRAME.md) <br/> <sub style="font-size:0.85rem;">#wireframe #project-planning</sub> | [Fulfilled Chuckles](./chapters/CHUCKLE_UPDATE.md) |
 | 5 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | [Rejected Chuckles](./chapters/CHUCKLE_DELETE.md) | 
 
-**🧨 STOP HERE AND COMPLETE PROJECTS UP TO CHAPTER 5**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 5**
 
+### Part 2
 | # | 🍯 💻 Honey Rae's Repairs |💡💬 Learning Moments |
 |--|--|--|
 | 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | [Learning Setup](./chapters/LEARN_SETUP.md) |
@@ -36,29 +35,32 @@ All parts are ***not*** created equal. Part 3 adds more complexity with the intr
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 9**
 
+### Part 3
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
-| 10 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 11 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 12 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 13 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 14 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 15 | tbd <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 10 | [Intro to Routes](./chapters/REPAIR_ROUTES_INTRO.md) <br/> <sub style="font-size:0.85rem;">#route #link</sub> | tbd |
+| 11 | [Customer Details](./chapters/REPAIR_CUST_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#index-route #useParams</sub> | tbd |
+| 12 | Claim vs Close <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 13 | Employee Edit <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 15**
+**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 13**
 
+### Part 4
+| # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
+|--|--|--|
+| 14 | Employee vs Customer <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 15 | Customer Tickets <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 16 | Create Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 17 | Update Profile <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
 
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
-| 1 | tbd | tbd |
-| 1 | tbd | tbd |
-| 2 | tbd | tbd |
-| 3 | tbd | tbd |
-| 4 | tbd | tbd |
-| 5 | tbd | tbd |
+| 1 | useContext | Radix |
+| 2 | tbd | Tailwind |
 
 ## 🔐 Projects Unlocked
 
