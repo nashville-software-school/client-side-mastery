@@ -59,8 +59,7 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
-| 1 | useContext | Radix |
-| 2 | tbd | Tailwind |
+| 1 | useContext | [CSS Libraries](./chapters/EXPLORE_CSS.md) |
 
 ## 🔐 Projects Unlocked
 
