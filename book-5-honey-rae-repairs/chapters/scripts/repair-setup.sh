@@ -85,6 +85,7 @@ h6 {
 /* This prevents all the links in the app from having default underline */
 a {
   text-decoration: none;
+  color: inherit;
 }
 /* This prevents all the links in the app from turning purple after visiting */
 a:visited {
