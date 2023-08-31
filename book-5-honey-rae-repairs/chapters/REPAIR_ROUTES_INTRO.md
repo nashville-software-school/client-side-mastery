@@ -97,9 +97,11 @@ Here, if the user navigates to _/about_, the `<AboutUs />` component will render
   <Route 
     path="/">
     element={
-      <Header />
-      <Outlet /> {/*This is where the child route element will render*/}
-      <Footer />
+      <>
+        <Header />
+        <Outlet /> {/*This is where the child route element will render*/}
+        <Footer />
+      </>
     }
   >
     <Route path="about" element={<AboutUs />} />
@@ -128,6 +130,8 @@ When the user clicks on that link, the url will change to _/about_. And then wha
 
 # 💪 Exercise Time!
 Now that you're an expert, write the routing functionality for the Employees List. When the user clicks on _Employees_ in the navbar, the user should be directed to _/employees_ and the employee list should render.  
+
+<img src="./images/employee-list.gif" width="1000px" alt="Animation showing a joke being marked as told and untold." />
 
 **Copy and pasting is _boring_**
 
