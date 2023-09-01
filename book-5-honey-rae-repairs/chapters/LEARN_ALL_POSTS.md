@@ -7,7 +7,7 @@ In this chapter you will implement the following user story for the ***[All Post
 
 ## Getting started
 
-Begin by creating a new component for `AllPosts`. A `components` and `services` directory have been provided for you. The rest of your file structure is up to you. The first user story mentions the `home route`. Don't worry about this for now, we'll introduce routes in Part 3 of this book. For the time being, render your `AllPosts` component in the `App` component, the same we have done with `CustomerList` and `EmployeeList` in Honey Rae Repairs. 
+Begin by creating a new component for `AllPosts`. A `components` and `services` directory have been provided for you. The rest of your file structure is up to you. The first user story mentions the `home route`. Don't worry about this for now, we'll introduce routes in Part 3 of this book. For the time being, render your `AllPosts` component in the `App` component, the same way we have done with `CustomerList` and `EmployeeList` in Honey Rae Repairs. 
 
 
 The layout and theme is entirely up to you! Go all out, or keep it simple. Just make it clean and tidy (_hello flexbox!_)

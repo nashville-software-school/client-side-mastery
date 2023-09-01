@@ -40,7 +40,7 @@ Here's how that looks
 |--|--|--|
 | 10 | [Intro to Routes](./chapters/REPAIR_ROUTES_INTRO.md) <br/> <sub style="font-size:0.85rem;">#route #link</sub> | tbd |
 | 11 | [Customer Details](./chapters/REPAIR_CUST_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#index-route #useParams</sub> | tbd |
-| 12 | Claim vs Close <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 12 | [Claim vs Close](./chapters/REPAIR_CLAIM_VS_CLOSE.md) <br/> <sub style="font-size:0.85rem;">#auth-setup</sub> | tbd |
 | 13 | Employee Edit <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 13**
