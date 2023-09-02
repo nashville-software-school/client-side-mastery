@@ -66,9 +66,6 @@ export const Login = () => {
       <section>
         <Link to="/register">Not a member yet?</Link>
       </section>
-
-      <div>Customer: dstoade0@cornell.edu</div>
-      <div>Employee: current email</div>
     </main>
   )
 }' >./src/components/auth/Login.js
@@ -212,6 +209,48 @@ echo '.container-login {
 }
 
 .login-btn:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/************* FORM STYLES *************/
+
+form {
+  margin: 3rem 5rem;
+  border: 1px solid var(--outline);
+  border-radius: 10px;
+  padding: 1rem 0rem 0rem 1rem;
+  box-shadow: 1px 2px 5px lightgray;
+  background-color: var(--offWhite);
+}
+
+fieldset {
+  min-width: 0;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  border: 0;
+}
+
+.form-control {
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--outline);
+  border-radius: 0.25rem;
+}
+
+.form-group {
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-btn {
+  align-self: flex-end;
+}
+
+.form-btn:focus {
   box-shadow: none;
   outline: 2px solid transparent;
   outline-offset: 2px;
