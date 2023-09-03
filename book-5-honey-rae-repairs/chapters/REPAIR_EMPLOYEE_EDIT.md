@@ -52,7 +52,7 @@ fieldset {
 ```
 </details>
 
-## The `useState` hook
+## The `useNavigate` hook
 In this chapter you were introduced to another hook we get from the **react-router-dom** library called `useNavigate`. This hook returns a function that allows us to navigate to a different url, much like the `Link` component. 
 
 ```javascript
