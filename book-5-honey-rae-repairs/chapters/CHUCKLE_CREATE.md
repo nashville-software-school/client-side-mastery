@@ -15,13 +15,26 @@ Add a text input to your JSX and _capture_ the user's input. What can be used to
 <input
   className=""
   type="text"
-  // value={/* What should go here? */}
   placeholder="New One Liner"
   onChange={(event) => {
     // What's the value of event?
   }}
 />
 ```
+
+<details>
+   <summary>💡Where's the user's input?</summary>
+
+   Try console logging the event in the onChange. The target property on that event is _what_ the user interacted with. In this case the user is interacting with the input element. We want to get the _value_ of the input element in order to capture what the user has typed.
+</details>
+
+
+<details>
+   <summary>💡 Where do we store the user's input?</summary>
+
+   Let's declare a new state variable to store the user's input! When the user types into that input field, update the state with the user's new joke.
+</details>
+
 
 ## Save the user input
 
@@ -33,7 +46,13 @@ Now add a button for posting the new joke. When the user clicks on the button, a
 
 ## Clear the input field 
 
-Yay! We can add new jokes! But our user experience is lacking a little. We want our input field to clear once the joke has been posted. How can we do this? Currently, our input field modifies our state every time it changes, so our state is _tied to our input field_. Is there a way to _tie our input field to our state_? Try using that `value` attribute on the `input` element.
+Yay! We can add new jokes! But our user experience is lacking a little. We want our input field to clear once the joke has been posted. How can we do this? Currently, our input field modifies our state every time it changes, so our state is _tied to our input field_. Is there a way to _tie our input field to our state_? Try adding a `value` attribute on the `input` element. We can manually set the value of an input field this way.
+
+<details>
+  <summary>💡 Still stuck?</summary>
+
+  After the new joke is posted to the database, reset the state that holds the user's input to an empty string. We don't need it to hold that new joke anymore. Now set the `value` attribute on the `input` to the state. This way the value of the `input` will always be whatever the value of the state is. Therefore when you clear the state, you will also clear the input.
+</details>
 
 ## Optional Fun!
 
