@@ -7,24 +7,23 @@ mkdir ./src/views
 echo 'import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-import "./Login.css"
+// import "./Login.css"
 import { getUserByEmail } from "../../services/userService"
 
 export const Login = () => {
-  const [email, set] = useState("hpassfield7@netvibes.com")
+  const [email, set] = useState("")
   const navigate = useNavigate()
 
   const handleLogin = (e) => {
     e.preventDefault()
 
-    getUserByEmail(email).then((foundUsers) => {
+    return getUserByEmail(email).then((foundUsers) => {
       if (foundUsers.length === 1) {
         const user = foundUsers[0]
         localStorage.setItem(
-          "honey_user",
+          "learning_user",
           JSON.stringify({
             id: user.id,
-            isStaff: user.isStaff,
           })
         )
 
@@ -36,39 +35,38 @@ export const Login = () => {
   }
 
   return (
-    <main className="container-login">
+    <main className="auth-container">
       <section>
-        <form className="form-login" onSubmit={handleLogin}>
-          <h1>Honey Rae Repairs</h1>
+        <form className="auth-form" onSubmit={handleLogin}>
+          <h1 className="header">Learning Moments</h1>
           <h2>Please sign in</h2>
-          <fieldset>
-            <div className="form-group">
+          <fieldset className="auth-fieldset">
+            <div>
               <input
                 type="email"
                 value={email}
+                className="auth-form-input"
                 onChange={(evt) => set(evt.target.value)}
-                className="form-control"
                 placeholder="Email address"
                 required
                 autoFocus
               />
             </div>
           </fieldset>
-          <fieldset>
-            <div className="form-group">
-              <button className="login-btn btn-info" type="submit">
-                Sign in
-              </button>
+          <fieldset className="auth-fieldset">
+            <div>
+              <button type="submit">Sign in</button>
             </div>
           </fieldset>
         </form>
       </section>
-      <section>
+      <section className="register-link">
         <Link to="/register">Not a member yet?</Link>
       </section>
     </main>
   )
-}' >./src/components/auth/Login.js
+}
+' >./src/components/auth/Login.js
 
 echo 'import { useState } from "react"
 import { useNavigate } from "react-router-dom"
@@ -76,18 +74,23 @@ import "./Login.css"
 import { createUser, getUserByEmail } from "../../services/userService"
 
 export const Register = (props) => {
-  const [customer, setCustomer] = useState({
+  const [user, setUser] = useState({
     email: "",
     fullName: "",
-    isStaff: false,
+    cohort: 0,
   })
   let navigate = useNavigate()
 
   const registerNewUser = () => {
-    createUser(customer).then((createdUser) => {
+    const newUser = {
+      ...user,
+      cohort: parseInt(user.cohort),
+    }
+
+    createUser(newUser).then((createdUser) => {
       if (createdUser.hasOwnProperty("id")) {
         localStorage.setItem(
-          "honey_user",
+          "learning_user",
           JSON.stringify({
             id: createdUser.id,
             staff: createdUser.isStaff,
@@ -101,7 +104,7 @@ export const Register = (props) => {
 
   const handleRegister = (e) => {
     e.preventDefault()
-    getUserByEmail(customer.email).then((response) => {
+    getUserByEmail(user.email).then((response) => {
       if (response.length > 0) {
         // Duplicate email. No good.
         window.alert("Account with that email address already exists")
@@ -112,63 +115,57 @@ export const Register = (props) => {
     })
   }
 
-  const updateCustomer = (evt) => {
-    const copy = { ...customer }
+  const updateUser = (evt) => {
+    const copy = { ...user }
     copy[evt.target.id] = evt.target.value
-    setCustomer(copy)
+    setUser(copy)
   }
 
   return (
-    <main style={{ textAlign: "center" }}>
-      <form className="form-login" onSubmit={handleRegister}>
-        <h1>Honey Rae Repairs</h1>
+    <main className="auth-container">
+      <form className="auth-form" onSubmit={handleRegister}>
+        <h1 className="header">Learning Moments</h1>
         <h2>Please Register</h2>
-        <fieldset>
-          <div className="form-group">
+        <fieldset className="auth-fieldset">
+          <div>
             <input
-              onChange={updateCustomer}
+              onChange={updateUser}
               type="text"
               id="fullName"
-              className="form-control"
+              className="auth-form-input"
               placeholder="Enter your name"
               required
               autoFocus
             />
           </div>
         </fieldset>
-        <fieldset>
-          <div className="form-group">
+        <fieldset className="auth-fieldset">
+          <div>
             <input
-              onChange={updateCustomer}
+              onChange={updateUser}
               type="email"
               id="email"
-              className="form-control"
+              className="auth-form-input"
               placeholder="Email address"
               required
             />
           </div>
         </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <label>
-              <input
-                onChange={(evt) => {
-                  const copy = { ...customer }
-                  copy.isStaff = evt.target.checked
-                  setCustomer(copy)
-                }}
-                type="checkbox"
-                id="isStaff"
-              />
-              I am an employee{" "}
-            </label>
+        <fieldset className="auth-fieldset">
+          <div>
+            <input
+              onChange={updateUser}
+              type="number"
+              id="cohort"
+              className="auth-form-input"
+              placeholder="Cohort #"
+              required
+            />
           </div>
         </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <button className="login-btn btn-info" type="submit">
-              Register
-            </button>
+        <fieldset className="auth-fieldset">
+          <div>
+            <button type="submit">Register</button>
           </div>
         </fieldset>
       </form>
@@ -176,84 +173,33 @@ export const Register = (props) => {
   )
 }' >./src/components/auth/Register.js
 
-echo '.container-login {
-  text-align: center;
+echo '.auth-container {
+  border: 1px solid gray;
+  margin: 3rem 15rem;
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
-.container-login > section > a {
-  text-decoration: underline;
-  color: var(--secondary);
+.header {
+  font-size: 2rem;
 }
 
-.form-login {
-  width: 60%;
-  margin: 2rem auto;
-}
-
-.form-login > h1 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.form-login > h2 {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-.form-login > fieldset > input[type="email"] {
-  width: 25em;
-}
-
-.login-btn {
-  align-self: flex-end;
-}
-
-.login-btn:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-/************* FORM STYLES *************/
-
-form {
-  margin: 3rem 5rem;
-  border: 1px solid var(--outline);
-  border-radius: 10px;
-  padding: 1rem 0rem 0rem 1rem;
-  box-shadow: 1px 2px 5px lightgray;
-  background-color: var(--offWhite);
-}
-
-fieldset {
-  min-width: 0;
-  padding-bottom: 1.5rem;
-  margin: 0;
-  border: 0;
-}
-
-.form-control {
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  border: 1px solid var(--outline);
-  border-radius: 0.25rem;
-}
-
-.form-group {
-  margin-right: 1rem;
+.auth-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.form-btn {
-  align-self: flex-end;
+.auth-form-input {
+  padding: 0.25rem;
 }
 
-.form-btn:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.register-link {
+  text-align: center;
+}
+
+.auth-fieldset {
+  margin: 0.25rem 0rem;
 }' >./src/components/auth/Login.css
 
 echo 'export const getUserByEmail = (email) => {
@@ -262,13 +208,13 @@ echo 'export const getUserByEmail = (email) => {
   )
 }
 
-export const createUser = (customer) => {
+export const createUser = (user) => {
   return fetch("http://localhost:8088/users", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(customer),
+    body: JSON.stringify(user),
   }).then((res) => res.json())
 }' >>./src/services/userService.js
 
@@ -281,7 +227,7 @@ export const Authorized = ({ children }) => {
   let location = useLocation()
 
   // Check if user is logged in. If they are, render the CHILD components (in this case, the ApplicationViews component)
-  if (localStorage.getItem("honey_user")) {
+  if (localStorage.getItem("learning_user")) {
     return children
   }
   // If the user is NOT logged in, redirect them to the login page using the Navigate component from react-router-dom
@@ -289,7 +235,3 @@ export const Authorized = ({ children }) => {
     return <Navigate to={`/login`} state={{ from: location }} replace />
   }
 }' >./src/views/Authorized.js
-
-echo 'export const ApplicationViews = () => {
-  return <></>
-}' >./src/views/ApplicationViews.js
