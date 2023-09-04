@@ -11,20 +11,19 @@ import "./Login.css"
 import { getUserByEmail } from "../../services/userService"
 
 export const Login = () => {
-  const [email, set] = useState("hpassfield7@netvibes.com")
+  const [email, set] = useState("john@example.com")
   const navigate = useNavigate()
 
   const handleLogin = (e) => {
     e.preventDefault()
 
-    getUserByEmail(email).then((foundUsers) => {
+    return getUserByEmail(email).then((foundUsers) => {
       if (foundUsers.length === 1) {
         const user = foundUsers[0]
         localStorage.setItem(
-          "honey_user",
+          "learning_user",
           JSON.stringify({
             id: user.id,
-            isStaff: user.isStaff,
           })
         )
 
@@ -39,7 +38,7 @@ export const Login = () => {
     <main className="container-login">
       <section>
         <form className="form-login" onSubmit={handleLogin}>
-          <h1>Honey Rae Repairs</h1>
+          <h1>Learning Moments</h1>
           <h2>Please sign in</h2>
           <fieldset>
             <div className="form-group">
@@ -76,18 +75,18 @@ import "./Login.css"
 import { createUser, getUserByEmail } from "../../services/userService"
 
 export const Register = (props) => {
-  const [customer, setCustomer] = useState({
+  const [user, setUser] = useState({
     email: "",
     fullName: "",
-    isStaff: false,
+    cohort: 0,
   })
   let navigate = useNavigate()
 
   const registerNewUser = () => {
-    createUser(customer).then((createdUser) => {
+    createUser(user).then((createdUser) => {
       if (createdUser.hasOwnProperty("id")) {
         localStorage.setItem(
-          "honey_user",
+          "learning_user",
           JSON.stringify({
             id: createdUser.id,
             staff: createdUser.isStaff,
@@ -101,7 +100,7 @@ export const Register = (props) => {
 
   const handleRegister = (e) => {
     e.preventDefault()
-    getUserByEmail(customer.email).then((response) => {
+    getUserByEmail(user.email).then((response) => {
       if (response.length > 0) {
         // Duplicate email. No good.
         window.alert("Account with that email address already exists")
@@ -112,10 +111,10 @@ export const Register = (props) => {
     })
   }
 
-  const updateCustomer = (evt) => {
-    const copy = { ...customer }
+  const updateUser = (evt) => {
+    const copy = { ...user }
     copy[evt.target.id] = evt.target.value
-    setCustomer(copy)
+    setUser(copy)
   }
 
   return (
@@ -126,7 +125,7 @@ export const Register = (props) => {
         <fieldset>
           <div className="form-group">
             <input
-              onChange={updateCustomer}
+              onChange={updateUser}
               type="text"
               id="fullName"
               className="form-control"
@@ -139,7 +138,7 @@ export const Register = (props) => {
         <fieldset>
           <div className="form-group">
             <input
-              onChange={updateCustomer}
+              onChange={updateUser}
               type="email"
               id="email"
               className="form-control"
@@ -150,18 +149,14 @@ export const Register = (props) => {
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <label>
-              <input
-                onChange={(evt) => {
-                  const copy = { ...customer }
-                  copy.isStaff = evt.target.checked
-                  setCustomer(copy)
-                }}
-                type="checkbox"
-                id="isStaff"
-              />
-              I am an employee{" "}
-            </label>
+            <input
+              onChange={updateUser}
+              type="number"
+              id="cohort"
+              className="form-control"
+              placeholder="Cohort #"
+              required
+            />
           </div>
         </fieldset>
         <fieldset>
@@ -262,13 +257,13 @@ echo 'export const getUserByEmail = (email) => {
   )
 }
 
-export const createUser = (customer) => {
+export const createUser = (user) => {
   return fetch("http://localhost:8088/users", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(customer),
+    body: JSON.stringify(user),
   }).then((res) => res.json())
 }' >>./src/services/userService.js
 
@@ -281,7 +276,7 @@ export const Authorized = ({ children }) => {
   let location = useLocation()
 
   // Check if user is logged in. If they are, render the CHILD components (in this case, the ApplicationViews component)
-  if (localStorage.getItem("honey_user")) {
+  if (localStorage.getItem("learn_user")) {
     return children
   }
   // If the user is NOT logged in, redirect them to the login page using the Navigate component from react-router-dom
@@ -289,7 +284,3 @@ export const Authorized = ({ children }) => {
     return <Navigate to={`/login`} state={{ from: location }} replace />
   }
 }' >./src/views/Authorized.js
-
-echo 'export const ApplicationViews = () => {
-  return <></>
-}' >./src/views/ApplicationViews.js
