@@ -17,9 +17,9 @@ This script will make the following directories and files in your project:
 - src
     - components
       - auth
+          - Login.css
           - Login.js
           - Register.js
-          - Login.css
     - services
         - userService.js
     - views
@@ -106,7 +106,7 @@ This route for the `AllPosts` view should render when the path is at the home ro
 </details>
 
 ### Authentication Routes
-Now it's time to set up our routes for authentication. In `App.js`, define three more routes.
+Now it's time to set up our routes for authentication. In `App.js`, remove the code to render the `<AllPosts />` component and define three more routes.
 
 1. Add a route for the path `/login` that will render the `Login` component.
 2. Add a route for the path `/register` that will render the `Register` component.

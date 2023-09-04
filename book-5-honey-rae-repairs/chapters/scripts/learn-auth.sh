@@ -7,11 +7,11 @@ mkdir ./src/views
 echo 'import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-import "./Login.css"
+// import "./Login.css"
 import { getUserByEmail } from "../../services/userService"
 
 export const Login = () => {
-  const [email, set] = useState("")
+  const [email, set] = useState("john@example.com")
   const navigate = useNavigate()
 
   const handleLogin = (e) => {
@@ -35,39 +35,38 @@ export const Login = () => {
   }
 
   return (
-    <main className="container-login">
+    <main className="auth-container">
       <section>
-        <form className="form-login" onSubmit={handleLogin}>
-          <h1>Learning Moments</h1>
+        <form className="auth-form" onSubmit={handleLogin}>
+          <h1 className="header">Learning Moments</h1>
           <h2>Please sign in</h2>
-          <fieldset>
-            <div className="form-group">
+          <fieldset className="auth-fieldset">
+            <div>
               <input
                 type="email"
                 value={email}
+                className="auth-form-input"
                 onChange={(evt) => set(evt.target.value)}
-                className="form-control"
                 placeholder="Email address"
                 required
                 autoFocus
               />
             </div>
           </fieldset>
-          <fieldset>
-            <div className="form-group">
-              <button className="login-btn btn-info" type="submit">
-                Sign in
-              </button>
+          <fieldset className="auth-fieldset">
+            <div>
+              <button type="submit">Sign in</button>
             </div>
           </fieldset>
         </form>
       </section>
-      <section>
+      <section className="register-link">
         <Link to="/register">Not a member yet?</Link>
       </section>
     </main>
   )
-}' >./src/components/auth/Login.js
+}
+' >./src/components/auth/Login.js
 
 echo 'import { useState } from "react"
 import { useNavigate } from "react-router-dom"
@@ -123,52 +122,50 @@ export const Register = (props) => {
   }
 
   return (
-    <main style={{ textAlign: "center" }}>
-      <form className="form-login" onSubmit={handleRegister}>
-        <h1>Learning Moments</h1>
+    <main className="auth-container">
+      <form className="auth-form" onSubmit={handleRegister}>
+        <h1 className="header">Learning Moments</h1>
         <h2>Please Register</h2>
-        <fieldset>
-          <div className="form-group">
+        <fieldset className="auth-fieldset">
+          <div>
             <input
               onChange={updateUser}
               type="text"
               id="fullName"
-              className="form-control"
+              className="auth-form-input"
               placeholder="Enter your name"
               required
               autoFocus
             />
           </div>
         </fieldset>
-        <fieldset>
-          <div className="form-group">
+        <fieldset className="auth-fieldset">
+          <div>
             <input
               onChange={updateUser}
               type="email"
               id="email"
-              className="form-control"
+              className="auth-form-input"
               placeholder="Email address"
               required
             />
           </div>
         </fieldset>
-        <fieldset>
-          <div className="form-group">
+        <fieldset className="auth-fieldset">
+          <div>
             <input
               onChange={updateUser}
               type="number"
               id="cohort"
-              className="form-control"
+              className="auth-form-input"
               placeholder="Cohort #"
               required
             />
           </div>
         </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <button className="login-btn btn-info" type="submit">
-              Register
-            </button>
+        <fieldset className="auth-fieldset">
+          <div>
+            <button type="submit">Register</button>
           </div>
         </fieldset>
       </form>
