@@ -11,7 +11,7 @@ import "./Login.css"
 import { getUserByEmail } from "../../services/userService"
 
 export const Login = () => {
-  const [email, set] = useState("john@example.com")
+  const [email, set] = useState("")
   const navigate = useNavigate()
 
   const handleLogin = (e) => {
@@ -83,7 +83,12 @@ export const Register = (props) => {
   let navigate = useNavigate()
 
   const registerNewUser = () => {
-    createUser(user).then((createdUser) => {
+    const newUser = {
+      ...user,
+      cohort: parseInt(user.cohort),
+    }
+
+    createUser(newUser).then((createdUser) => {
       if (createdUser.hasOwnProperty("id")) {
         localStorage.setItem(
           "learning_user",
@@ -120,7 +125,7 @@ export const Register = (props) => {
   return (
     <main style={{ textAlign: "center" }}>
       <form className="form-login" onSubmit={handleRegister}>
-        <h1>Honey Rae Repairs</h1>
+        <h1>Learning Moments</h1>
         <h2>Please Register</h2>
         <fieldset>
           <div className="form-group">
@@ -171,84 +176,33 @@ export const Register = (props) => {
   )
 }' >./src/components/auth/Register.js
 
-echo '.container-login {
-  text-align: center;
+echo '.auth-container {
+  border: 1px solid gray;
+  margin: 3rem 15rem;
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
-.container-login > section > a {
-  text-decoration: underline;
-  color: var(--secondary);
+.header {
+  font-size: 2rem;
 }
 
-.form-login {
-  width: 60%;
-  margin: 2rem auto;
-}
-
-.form-login > h1 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.form-login > h2 {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-.form-login > fieldset > input[type="email"] {
-  width: 25em;
-}
-
-.login-btn {
-  align-self: flex-end;
-}
-
-.login-btn:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-/************* FORM STYLES *************/
-
-form {
-  margin: 3rem 5rem;
-  border: 1px solid var(--outline);
-  border-radius: 10px;
-  padding: 1rem 0rem 0rem 1rem;
-  box-shadow: 1px 2px 5px lightgray;
-  background-color: var(--offWhite);
-}
-
-fieldset {
-  min-width: 0;
-  padding-bottom: 1.5rem;
-  margin: 0;
-  border: 0;
-}
-
-.form-control {
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  border: 1px solid var(--outline);
-  border-radius: 0.25rem;
-}
-
-.form-group {
-  margin-right: 1rem;
+.auth-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.form-btn {
-  align-self: flex-end;
+.auth-form-input {
+  padding: 0.25rem;
 }
 
-.form-btn:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.register-link {
+  text-align: center;
+}
+
+.auth-fieldset {
+  margin: 0.25rem 0rem;
 }' >./src/components/auth/Login.css
 
 echo 'export const getUserByEmail = (email) => {
@@ -276,7 +230,7 @@ export const Authorized = ({ children }) => {
   let location = useLocation()
 
   // Check if user is logged in. If they are, render the CHILD components (in this case, the ApplicationViews component)
-  if (localStorage.getItem("learn_user")) {
+  if (localStorage.getItem("learning_user")) {
     return children
   }
   // If the user is NOT logged in, redirect them to the login page using the Navigate component from react-router-dom
