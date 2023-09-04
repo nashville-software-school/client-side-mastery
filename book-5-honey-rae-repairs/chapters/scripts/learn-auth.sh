@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom"
 import { getUserByEmail } from "../../services/userService"
 
 export const Login = () => {
-  const [email, set] = useState("john@example.com")
+  const [email, set] = useState("")
   const navigate = useNavigate()
 
   const handleLogin = (e) => {

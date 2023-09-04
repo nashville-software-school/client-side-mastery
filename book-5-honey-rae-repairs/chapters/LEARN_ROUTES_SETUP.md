@@ -142,11 +142,11 @@ Now it's time to set up our routes for authentication. In `App.js`, remove the c
 </details>
 
 ### Time to Test! 
-Navigate to `localhost:3000/login` and confirm that the `Login` component renders. Try logging in! You should be navigated to `localhost:3000` and the `AllPosts` component should render. Open the devtools check out the Application tab. Check to see that the key `learning_user` is added and the value is an object with an `id` property. 
+Navigate to `localhost:3000/login` and confirm that the `Login` component renders. Try logging in! You should be navigated to `localhost:3000` and the `AllPosts` component should render. Open the devtools and check out the Application tab. Check to see that the key `learning_user` is added and the value is an object with an `id` property. 
 
 <img src="./images/learning-user.png" width="700" />
 
-Right click on it to delete it. Refresh the page. You should be navigated back to `localhost:3000/login`. Now register a new user. After registering you should once again be navigated to `localhost:3000` and the `AllPosts` component should render. Check your JSON server that the user was added to the database and that it's properties match the rest of your users. 
+Right click on it to delete it. Refresh the page. You should be navigated back to `localhost:3000/login`. Now register a new user. After registering you should once again be navigated to `localhost:3000` and the `AllPosts` component should render. Check your JSON server to confirm the user was added to the database and that it's properties match the rest of your users. 
 
 You're all set!
 
@@ -155,13 +155,12 @@ Time to add your NavBar! Create a `NavBar` component like the one you have in Ho
 
 ```jsx
 {localStorage.getItem("learning_user") ? (
-  <li className="navbar-item navbar-logout">
+  <li>
     <Link
-      className="navbar-link"
       to=""
       onClick={() => {
         localStorage.removeItem("learning_user")
-        navigate("/", { replace: true })
+        navigate("/login", { replace: true })
       }}
     >
       Logout
@@ -171,6 +170,17 @@ Time to add your NavBar! Create a `NavBar` component like the one you have in Ho
   ""
 )}
 ```
+
+The logout Link will remove the `learning_user` from local storage and then navigate back to the login route. However, the navigate function has not bee defined yet. Import `useNavigate` from *react-router-dom* and store the returned function in a variable called navigate.
+
+<details>
+  <summary>🔎 Need some help?</summary>
+
+  ```jsx
+  export const NavBar = () => {
+    const navigate = useNavigate()
+  ```
+</details>
 
 ### Render The Navbar
 Render the NavBar in the parent home route in `ApplicationViews` so that it renders with all other child routes. Don't forget the `Outlet` component!
