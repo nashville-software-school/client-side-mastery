@@ -38,7 +38,7 @@ Here's how that looks
 ### Part 3
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
-| 10 | [Intro to Routes](./chapters/REPAIR_ROUTES_INTRO.md) <br/> <sub style="font-size:0.85rem;">#route #link</sub> | tbd |
+| 10 | [Intro to Routes](./chapters/REPAIR_ROUTES_INTRO.md) <br/> <sub style="font-size:0.85rem;">#route #link</sub> | [Auth & Routes](./chapters/LEARN_ROUTES_SETUP.md) |
 | 11 | [Customer Details](./chapters/REPAIR_CUST_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#index-route #useParams</sub> | tbd |
 | 12 | [Claim vs Close](./chapters/REPAIR_CLAIM_VS_CLOSE.md) <br/> <sub style="font-size:0.85rem;">#auth-setup #prop-drilling</sub> | tbd |
 | 13 | [Employee Edit](./chapters/REPAIR_EMPLOYEE_EDIT.md) <br/> <sub style="font-size:0.85rem;">#useNavigate #forms</sub> | tbd |
@@ -48,7 +48,7 @@ Here's how that looks
 ### Part 4
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
-| 14 | Employee vs Customer <br/> <sub style="font-size:0.85rem;">#tags</sub> | [Auth & Routes](./chapters/LEARN_ROUTES_SETUP.md) |
+| 14 | Employee vs Customer <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 15 | Customer Tickets <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 16 | Create Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
 | 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
