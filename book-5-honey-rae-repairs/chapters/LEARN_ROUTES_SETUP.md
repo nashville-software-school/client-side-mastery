@@ -171,7 +171,7 @@ Time to add your NavBar! Create a `NavBar` component like the one you have in Ho
 )}
 ```
 
-The logout Link will remove the `learning_user` from local storage and then navigate back to the login route. However, the navigate function has not bee defined yet. Import `useNavigate` from *react-router-dom* and store the returned function in a variable called navigate.
+The logout Link will remove the `learning_user` from local storage and then navigate back to the login route. However, the navigate function has not bee defined yet. Import `useNavigate` from *react-router-dom* and store the returned function in a variable called `navigate`.
 
 <details>
   <summary>🔎 Need some help?</summary>
