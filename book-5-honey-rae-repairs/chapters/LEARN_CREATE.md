@@ -19,8 +19,9 @@ In this chapter you will add a link to New Post in the Nav Bar and implement the
 
 >💡 Try adding some TODO comments for yourself to keep track of where you need to add additional functionality in the future.
 
-
+>💡 You might want to parse the topicId to an int before posting the post to the database
 ### Helpful Chapters To Revisit
 
 *[Creating a Link](./REPAIR_ROUTES_INTRO.md#creating-a-link)*<br>
 *[Refactoring the onChange functions](./REPAIR_EMPLOYEE_EDIT.md#refactoring-the-onchange-functions)*
+*[Prevent Default for Forms](./REPAIR_EMPLOYEE_EDIT.md#prevent-default-for-forms)*

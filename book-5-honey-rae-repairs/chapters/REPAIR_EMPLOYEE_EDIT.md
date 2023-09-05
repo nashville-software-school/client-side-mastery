@@ -65,6 +65,9 @@ We stored that function in a variable called ***navigate***. In order to use tha
 navigate(`/employee/${currentUser.id}`)
 ```
 
+## Prevent Default for Forms
+Forms are a special element in HTML. If you have a `button` inside of a `form` element, when you click on that button it will submit the form. On the form's submission, the page will refresh. To prevent this from happening, you can capture the event in the `onClick` function for the button and call `preventDefault()` on the event. This will prevent the page from refreshing.
+
 ## What's up with that warning?
 After creating the form and populating the inputs with the values from our employee state, we got this warning in the console: 
 
