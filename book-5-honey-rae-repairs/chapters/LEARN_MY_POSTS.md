@@ -18,7 +18,7 @@ In this chapter you will add a link to My Posts in the Nav Bar and implement the
 **And** the user has entered the ***body*** for the post<br>
 **And** the user has selected a ***topic*** for the post<br>
 **When** the user clicks the save button<br>
-**Then** the post will save to the database and <mark>the application will navigate to the My Posts view</mark>
+**Then** the post will save to the database and ***the application will navigate to the My Posts view***
 
 ### Helpful Chapters To Revisit
 
