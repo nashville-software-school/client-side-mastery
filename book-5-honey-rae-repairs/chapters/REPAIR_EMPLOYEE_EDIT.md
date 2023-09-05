@@ -114,7 +114,7 @@ The initial value for `employee` when the component renders is an empty object. 
 This way we're first checking if `employee.specialty` and `employee.rate` are defined before setting them as the values for our inputs.
 
 ## Refactoring the `onChange` functions
-Let's try to simply our code a bit by writing a function we can use for any `onChange` that updates our state. Here's the way we're currently handling the `onChange` of our inputs.
+Let's try to simplify our code a bit by writing a function we can use for any `onChange` that updates our state. Here's the way we're currently handling the `onChange` of our inputs.
 
 ```jsx
 <input

@@ -17,9 +17,11 @@ In this chapter you will add a link to New Post in the Nav Bar and implement the
 
 ***No need to add the navigate functionality to the My Posts since you have not implemented this view yet.*** 
 
->💡 Try adding some TODO comments for yourself to keep track of where you need to add additional functionality in the future.
-
 >💡 You might want to parse the topicId to an int before posting the post to the database
+
+>💡 Remember to reference your ERD when creating a new post object to send to the database. Make sure the new post has all the needed properties.
+
+>💡 Try adding some TODO comments for yourself to keep track of where you need to add additional functionality in the future.
 ### Helpful Chapters To Revisit
 
 *[Creating a Link](./REPAIR_ROUTES_INTRO.md#creating-a-link)*<br>
