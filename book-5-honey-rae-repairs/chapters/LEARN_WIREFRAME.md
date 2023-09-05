@@ -3,6 +3,9 @@ This application will have several views, and just like in Honey Rae Repairs, yo
 
 Below is a list of user stories describing every feature you will implement in this project. Carefully read the user stories for each view of this application, then, build a wireframe representing each view and its features. Of course, feel free to review your wireframe with an instructor when you are finished. 
 
+
+Revisit the [Honey Rae's Wireframe](REPAIR_WIREFRAME.md#building-your-capstone-wireframe) chapter for guidance on building this wireframe.
+
 ### The Nav Bar
 A navbar will persist in each view, allowing the user to navigate through the views of the application. The links on the navbar are as follows:
   1. **All Posts** > links to the view of all the posts
@@ -50,18 +53,18 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 
 **Given** the user wishes to read a post<br>
 **When** the user has clicked to view a specific post<br>
-**Then** the ***title***, ***author***, ***topic***, ***date***, ***body***, and ***number of likes** should display for the post.
+**Then** the ***title***, ***author***, ***topic***, ***date***, ***body***, and ***number of likes*** should display for the post.
 
 **Given** the user wishes to view the profile of the author <br>
 **When** the user clicks the author's name<br>
 **Then** the application will navigate to the Profile View for the author
 
-**Given** the user ***is not** the author of the post<br>
+**Given** the user ***is not*** the author of the post<br>
 **Then** a button to like the post should display<br>
 **When** the user clicks the like button<br>
 **Then** the like relationship will save to the database and the application will navigate to the Favorites view
 
-**Given** the user ***is** the author of the post<br>
+**Given** the user ***is*** the author of the post<br>
 **Then** a button to edit the post should display<br>
 **When** the user clicks the edit button<br>
 **Then** the application will navigate to the Edit Post view for the post
@@ -97,7 +100,7 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 
 **Given** the wishes to view a list of the posts they have liked<br>
 **When** the user visits the Favorites view<br>
-**Then** the ***title** will display for each post the user has liked. A button to remove to post from their favorites will display next to each post
+**Then** the ***title*** will display for each post the user has liked. A button to remove to post from their favorites will display next to each post
 
 **Given** the user wishes to view one of their favorite posts<br>
 **When** the user clicks on the title of the post<br>
@@ -114,8 +117,8 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 **When** the user visits the User Profile view<br>
 **Then** the ***full name***, ***cohort number***, ***number of posts written*** will display for the selected user
 
-**Given** the user is viewing ***their** profile<br>
-***Then** a button to edit should display<br>
+**Given** the user is viewing ***their*** profile<br>
+**Then** a button to edit should display<br>
 **When** the user clicks the edit button<br>
 **Then** the application will navigate to the Edit Profile view
 
