@@ -41,7 +41,7 @@ Here's how that looks
 | 10 | [Intro to Routes](./chapters/REPAIR_ROUTES_INTRO.md) <br/> <sub style="font-size:0.85rem;">#route #link</sub> | [Auth & Routes](./chapters/LEARN_ROUTES_SETUP.md) |
 | 11 | [Customer Details](./chapters/REPAIR_CUST_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#index-route #useParams</sub> | [Post Details](./chapters/LEARN_POST_DETAILS.md) |
 | 12 | [Claim vs Close](./chapters/REPAIR_CLAIM_VS_CLOSE.md) <br/> <sub style="font-size:0.85rem;">#auth-setup #prop-drilling</sub> | [New Post](./chapters/LEARN_CREATE.md) |
-| 13 | [Employee Edit](./chapters/REPAIR_EMPLOYEE_EDIT.md) <br/> <sub style="font-size:0.85rem;">#useNavigate #forms</sub> | tbd |
+| 13 | [Employee Edit](./chapters/REPAIR_EMPLOYEE_EDIT.md) <br/> <sub style="font-size:0.85rem;">#useNavigate #forms</sub> | [My Posts](./chapters/LEARN_MY_POSTS.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 13**
 
