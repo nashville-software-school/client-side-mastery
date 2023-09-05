@@ -13,4 +13,14 @@ In this chapter you will add a link to My Posts in the Nav Bar and implement the
 **When** the user clicks on the delete button<br>
 **Then** the post will be deleted from the database and no longer display on the page. 
 
-## It's all you! You've got this 😎
+### Let's Finish This User Story!
+**Given** the user has entered a ***title*** for the post<br>
+**And** the user has entered the ***body*** for the post<br>
+**And** the user has selected a ***topic*** for the post<br>
+**When** the user clicks the save button<br>
+**Then** the post will save to the database and ***the application will navigate to the My Posts view***
+
+### Helpful Chapters To Revisit
+
+*[Creating a Link](./REPAIR_ROUTES_INTRO.md#creating-a-link)*<br>
+*[The useNavigate Hook](./REPAIR_EMPLOYEE_EDIT.md#the-usenavigate-hook)*
