@@ -27,9 +27,9 @@ In this chapter you will implement the following user stories for the [Post Deta
 
 ### Helpful Chapters To Revisit
 
+*[Creating a Link](./REPAIR_ROUTES_INTRO.md#creating-a-link)*<br>
 *[Route Parameters and the useParams hook](./REPAIR_CUST_DETAILS.md#route-parameters-and-the-useparams-hook)*<br>
 *[Ternary Statements](./REPAIR_CUSTOMER_LIST.md#ternary-statements)*
-
 
 ### 💡 JSON Server: Get by Id
 If you wish to get a resource by it's primary key (`id`) in json server, rather than adding a query to the url (ex. `?id=`) you can get the single resource by its `id` by adding the `id` to the end of the url: 
