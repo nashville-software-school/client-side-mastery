@@ -27,7 +27,7 @@ In this chapter you will implement the following user stories for the [Post Deta
 
 ### Helpful Chapters To Revisit
 
-*[Route Parameters and the `useParams` hook](./REPAIR_CUST_DETAILS.md#route-parameters-and-the-useparams-hook)*<br>
+*[Route Parameters and the useParams hook](./REPAIR_CUST_DETAILS.md#route-parameters-and-the-useparams-hook)*<br>
 *[Ternary Statements](./REPAIR_CUSTOMER_LIST.md#ternary-statements)*
 
 
