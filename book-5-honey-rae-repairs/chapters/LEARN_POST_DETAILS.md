@@ -1,4 +1,5 @@
-# In this chapter you will implement the following user stories for the [Post Details](./LEARN_WIREFRAME.md#-post-details) view:
+# Viewing a Post
+In this chapter you will implement the following user stories for the [Post Details](./LEARN_WIREFRAME.md#-post-details) view:
 
 **Given** the user wishes to view a post
 **When** the user clicks on the title of a post
