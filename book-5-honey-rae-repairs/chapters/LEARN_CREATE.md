@@ -23,5 +23,5 @@ In this chapter you will add a link to New Post in the Nav Bar and implement the
 ### Helpful Chapters To Revisit
 
 *[Creating a Link](./REPAIR_ROUTES_INTRO.md#creating-a-link)*<br>
-*[Refactoring the onChange functions](./REPAIR_EMPLOYEE_EDIT.md#refactoring-the-onchange-functions)*
+*[Refactoring the onChange functions](./REPAIR_EMPLOYEE_EDIT.md#refactoring-the-onchange-functions)*<br>
 *[Prevent Default for Forms](./REPAIR_EMPLOYEE_EDIT.md#prevent-default-for-forms)*
