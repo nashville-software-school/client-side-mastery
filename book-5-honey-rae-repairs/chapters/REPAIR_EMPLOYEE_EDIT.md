@@ -65,6 +65,9 @@ We stored that function in a variable called ***navigate***. In order to use tha
 navigate(`/employee/${currentUser.id}`)
 ```
 
+## Prevent Default for Forms
+Forms are a special element in HTML. If you have a `button` inside of a `form` element, when you click on that button it will submit the form. On the form's submission, the page will refresh. To prevent this from happening, you can capture the event in the `onClick` function for the button and call `preventDefault()` on the event. This will prevent the page from refreshing.
+
 ## What's up with that warning?
 After creating the form and populating the inputs with the values from our employee state, we got this warning in the console: 
 
@@ -111,7 +114,7 @@ The initial value for `employee` when the component renders is an empty object. 
 This way we're first checking if `employee.specialty` and `employee.rate` are defined before setting them as the values for our inputs.
 
 ## Refactoring the `onChange` functions
-Let's try to simply our code a bit by writing a function we can use for any `onChange` that updates our state. Here's the way we're currently handling the `onChange` of our inputs.
+Let's try to simplify our code a bit by writing a function we can use for any `onChange` that updates our state. Here's the way we're currently handling the `onChange` of our inputs.
 
 ```jsx
 <input

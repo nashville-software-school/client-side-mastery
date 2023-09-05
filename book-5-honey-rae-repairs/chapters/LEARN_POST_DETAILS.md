@@ -2,8 +2,8 @@
 In this chapter you will implement the following user stories for the [Post Details](./LEARN_WIREFRAME.md#-post-details) view:
 
 **Given** the user wishes to view a post<br>
-**When** the user clicks on the title of a post<br>
-**Then**  the application will navigate to the Post Details view for the post
+**When** the user clicks on the title of a post (in the All Posts view)<br>
+**Then** the application will navigate to the Post Details view for the post
 
 **Given** the user wishes to read a post<br>
 **When** the user has clicked to view a specific post<br>
@@ -12,12 +12,12 @@ In this chapter you will implement the following user stories for the [Post Deta
 **Given** the user ***is not*** the author of the post<br>
 **Then** a button to like the post should display<br>
 **When** the user clicks the like button<br>
-**Then** the like relationship will save to the database and the application will navigate to the Favorites view
+**Then** the like relationship will save to the database and ~~the application will navigate to the Favorites view~~
 
 **Given** the user ***is*** the author of the post<br>
 **Then** a button to edit the post should display<br>
 **When** the user clicks the edit button<br>
-**Then** the application will navigate to the Edit Post view for the post
+**Then** ~~the application will navigate to the Edit Post view for the post~~
 
 
 ***No need to add the navigate functionality to the Favorites View or the Edit view since you have not implemented those views yet.*** 

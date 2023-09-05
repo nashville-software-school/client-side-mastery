@@ -18,6 +18,10 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 ### 🖥 New Post
 >A form for the user to create a new post with a title, body, and topic.
 
+**Given** the user wishes to create a new post<br>
+**When** the user clicks on ***New Post*** in the Nav Bar<br>
+**Then** a form to create a new post will display
+
 **Given** the user wishes to select a topic for the post<br>
 **When** the user clicks on the topic dropdown<br>
 **Then** a list of the topics should appear<br>
