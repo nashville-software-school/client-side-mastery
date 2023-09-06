@@ -253,6 +253,28 @@ Let's say the the user navigates to `www.someapp.com/projects/2`.
 
 In the `Route` above, we defined our route parameter as `projectId`. When the user visits this path, `ProjectDetails` component is rendered. Within this component, we use the `useParams` hook, which returns an object containing the `projectId` as a key with the value `3`. By deconstructing this object, we retrieve the `projectId` and display it within a `div`. As a result, the user sees "Project #3" displayed on the page.
 
+### More on Route Params
+We can place a route parameter anywhere in the url, as long as it's prefaced with a `:`
+
+```jsx
+<Route path="projects"> 
+  <Route index element={<Projects />} />
+  <Route path=":projectId" element={<ProjectDetails />} /> 
+  <Route path="edit/:projectId" element={<EditProject />} />
+</Route>
+```
+
+In the `EditProject` route above, we defined another route parameter as `projectId` just like we did in the `ProjectDetails` route. When the url of the application is `/projects/edit/4`, the `EditProject` component will render. In the `EditProject` component, we can once again access the route parameter via the `useParams` hook. 
+
+```jsx
+export const EditProject = () => {
+  const { projectId } = useParams()
+
+  return (
+    <div>Project #{projectId}</div>
+  )
+}
+```
 
 # 💪 Exercise Time!
 Time to code to learn! Write the routing functionality for the Employees Details. When the user clicks on an Employee in the Employees List, the user should be directed to _/employees/[the id of the user that was clicked on]_ and the employee's details should render.  
