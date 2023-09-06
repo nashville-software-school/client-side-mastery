@@ -1,4 +1,4 @@
-# Viewing My Posts
+# Editing My Post
 In this chapter you will implement the following user stories for the [Edit Post](./LEARN_WIREFRAME.md#-edit-post) view:
 
 ### Let's Finish This User Story for Post Details!
