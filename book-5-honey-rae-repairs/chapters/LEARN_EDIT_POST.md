@@ -1,5 +1,5 @@
 # Viewing My Posts
-In this chapter you will implement the following user stories for the [Edit Post](./LEARN_WIREFRAME.md#-my-posts) view:
+In this chapter you will implement the following user stories for the [Edit Post](./LEARN_WIREFRAME.md#-edit-posts) view:
 
 ### Let's Finish This User Story!
 **Given** the user ***is*** the author of the post<br>
