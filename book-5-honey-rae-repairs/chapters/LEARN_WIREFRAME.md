@@ -102,7 +102,7 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 ### 🖥 Favorites
 >A view for all the posts the user has liked
 
-**Given** the wishes to view a list of the posts they have liked<br>
+**Given** the user wishes to view a list of the posts they have liked<br>
 **When** the user visits the Favorites view<br>
 **Then** the ***title*** will display for each post the user has liked. A button to remove to post from their favorites will display next to each post
 

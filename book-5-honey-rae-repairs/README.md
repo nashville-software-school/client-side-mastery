@@ -49,10 +49,10 @@ Here's how that looks
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
 | 14 | Employee vs Customer <br/> <sub style="font-size:0.85rem;">#tags</sub> | [Edit Post](./chapters/LEARN_EDIT_POST.md) |
-| 15 | Customer Tickets <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 16 | Create Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
-| 17 | Update Profile <br/> <sub style="font-size:0.85rem;">#tags</sub> | tbd |
+| 15 | Customer Tickets <br/> <sub style="font-size:0.85rem;">#tags</sub> | [Favorites](./chapters/LEARN_FAVORITES.md) |
+| 16 | Create Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | Profile |
+| 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | Edit Profile |
+| 17 | Update Profile <br/> <sub style="font-size:0.85rem;">#tags</sub> |  |
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
