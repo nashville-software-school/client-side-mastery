@@ -13,7 +13,7 @@ In this chapter you will add a link to My Posts in the Nav Bar and implement the
 **When** the user clicks on the delete button<br>
 **Then** the post will be deleted from the database and no longer display on the page. 
 
-### Let's Finish This User Story!
+### Let's Finish This User Story For New Post!
 **Given** the user has entered a ***title*** for the post<br>
 **And** the user has entered the ***body*** for the post<br>
 **And** the user has selected a ***topic*** for the post<br>
