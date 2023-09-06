@@ -7,7 +7,8 @@ In this chapter you will implement the following user stories for the [Edit Post
 **When** the user clicks the edit button<br>
 **Then** ***the application will navigate to the Edit Post view for the post***
 
-### Edit Post User Stories
+---
+
 **Given** the user wishes to edit their post<br>
 **When** the user clicks to edit a post<br>
 **Then** a form to edit will display, populated with the current values for the post
