@@ -21,4 +21,4 @@ In this chapter you will add a link to Favorites in the Nav Bar and implement th
 **When** the user clicks the like button<br>
 **Then** the like relationship will save to the database and the application will navigate to the ***Favorites*** view
 
-## It's all you! You've got this 😎
+## You're killin' it
