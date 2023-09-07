@@ -48,7 +48,7 @@ Here's how that looks
 ### Part 4
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
-| 14 | Employee vs Customer <br/> <sub style="font-size:0.85rem;">#tags</sub> | [Edit Post](./chapters/LEARN_EDIT_POST.md) |
+| 14 | [Employee vs Customer](./chapters/REPAIR_EMPLOYEE_VS_CUSTOMER.md) <br/> <sub style="font-size:0.85rem;">#conditional-routes</sub> | [Edit Post](./chapters/LEARN_EDIT_POST.md) |
 | 15 | Customer Tickets <br/> <sub style="font-size:0.85rem;">#tags</sub> | [Favorites](./chapters/LEARN_FAVORITES.md) |
 | 16 | Create Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | [User Profile](./chapters/LEARN_VIEW_PROFILE.md) |
 | 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | [Edit Profile](./chapters/LEARN_EDIT_PROFILE.md) |
