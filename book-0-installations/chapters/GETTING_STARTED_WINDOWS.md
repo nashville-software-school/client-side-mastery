@@ -13,6 +13,7 @@ Once Visual Studio Code is installed, there are several extensions that will be 
 * [Auto close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 * [Live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 * [Multiple cursor case preserve](https://marketplace.visualstudio.com/items?itemName=Cardinal90.multi-cursor-case-preserve)
+* [Code spell checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
 ## Install the Windows Subsystem for Linux
 
