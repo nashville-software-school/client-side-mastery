@@ -4,6 +4,16 @@
 
 Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the code editor you will be using for the next 3 months.
 
+### Extensions
+
+Once Visual Studio Code is installed, there are several extensions that will be helpful for you as a beginner. Click on the links below to visit each extension page and click the **Install** button for each one.
+
+* [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+* [Prettier Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+* [Auto close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+* [Live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+* [Multiple cursor case preserve](https://marketplace.visualstudio.com/items?itemName=Cardinal90.multi-cursor-case-preserve)
+
 ## Install the Windows Subsystem for Linux
 
 This process will install a new operating system _inside_ your Windows operating system. I know it sounds intimidating, but it's not.
