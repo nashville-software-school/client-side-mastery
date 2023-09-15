@@ -10,7 +10,7 @@ There are additional, short videos to watch about specific concepts. Discuss wit
 
 Time for your first event listener. You are going to use your debugger to step through the code to see how it all works.
 
-Add the following code after the import statement in the Walkers module.
+Add the following code after the `walkers = GetWalkers()` statement in the Walkers module.
 
 > #### `workspace/dog-walking/scripts/Walkers.js`
 
@@ -70,7 +70,7 @@ document.addEventListener(
 Inside the `for..of` loop in the existing code, update the line of code to be the following code.
 
 ```js
-walkerHTML += `<li id="walker--${walkerObject.id}">${walkerObject.name}</li>`
+walkerHTML += `<li id="walker--${walker.id}">${walker.name}</li>`
 ```
 
 Refresh your browser to load the new code.
