@@ -1,6 +1,6 @@
 # Honey Rae's API
 
-This chapter provides information, and the data needed, for the API that will be the permanent state for Honey Rae's Tech Repair application.
+This chapter provides information, and the data needed, for the API that will be the permanent state for Honey Rae's Tech Repair application. As we build this application, bit by bit, we will slowly introduce more of the data into our app, starting with the service tickets. 
 
 ## ERD
 
@@ -10,6 +10,61 @@ This chapter provides information, and the data needed, for the API that will be
 
 Watch the [Honey Rae Client Side ERD](https://watch.screencastify.com/v/kZGoJhLMtuVFRjkrVm47) video for an explanation about the structure and relationships defined in the ERD.
 
+
+### Copy of the ERD
+
+Copy the code for the ERD below and paste it into dbdiagram to get your own copy of the ERD.
+
+<details>
+  <summary>Expand to the your ERD tables</summary>
+
+  ```sql
+  table serviceTickets {
+    id int pk
+    userId int
+    description varchar
+    emergency boolean
+    dateCompleted date
+  }
+
+  table customers {
+    id int pk
+    address varchar
+    phoneNumber varchar
+    userId int
+  }
+
+  table employeeTickets {
+    id int pk
+    employeeId int
+    serviceTicketId int
+  }
+
+  table employees {
+    id int pk
+    specialty varchar
+    rate float
+    userId int
+  }
+
+  table users {
+    id int pk
+    fullName varchar
+    email varchar
+    isStaff boolean
+  }
+
+  Ref: "serviceTickets"."id" < "employeeTickets"."serviceTicketId"
+
+  Ref: "employees"."id" < "employeeTickets"."employeeId"
+
+  Ref: "users"."id" < "employees"."userId"
+
+  Ref: "users"."id" < "customers"."userId"
+
+  Ref: "users"."id" < "serviceTickets"."userId"
+  ```
+</details>
 
 ## Getting Started
 
@@ -82,22 +137,22 @@ Then copy the following JSON into the `database.json` file.
     },
     {
       "id": 2,
-      "address": "56849 Fadel Gateway",
+      "address": "568 Fadel Gateway",
       "phoneNumber": "202-244-7090",
       "userId": 1
     },
     {
       "id": 3,
-      "address": "7346 Ritchie Road",
-      "phoneNumber": "(507) 720-1157",
+      "address": "161 Wessington Place",
+      "phoneNumber": "865-266-0357",
       "userId": 3
     }
   ],
   "employees": [
     {
       "id": 1,
-      "specialty": "PC Repair",
-      "rate": 72.47,
+      "specialty": "Macbook Pros",
+      "rate": "100",
       "userId": 4
     },
     {
@@ -111,43 +166,63 @@ Then copy the following JSON into the `database.json` file.
       "specialty": "Printer Repair",
       "rate": 29.45,
       "userId": 6
+    },
+    {
+      "id": 3,
+      "specialty": "Android",
+      "rate": 35.99,
+      "userId": 7
     }
   ],
   "serviceTickets": [
     {
       "id": 1,
       "userId": 3,
-      "description": "Saepe ex sapiente deserunt et voluptas fugiat vero quasi. Ipsam est non ipsa. Occaecati rerum ipsa consequuntur. Ratione commodi unde sint non rerum. Sit quia et aut sunt.",
+      "description": "Cracked phone screen",
       "emergency": false,
       "dateCompleted": "Fri Apr 29 2022 14:02:20 GMT-0500 (Central Daylight Time)"
     },
     {
       "id": 2,
       "userId": 3,
-      "description": "Vero est adipisci sed natus quasi consectetur occaecati. Modi maxime sunt officia cumque. Vel at culpa. Sint accusamus deserunt dolorem qui.",
+      "description": "Xbox has red ring of death",
       "emergency": true,
       "dateCompleted": ""
     },
     {
       "id": 3,
-      "userId": 1,
-      "description": "Sunt pariatur et quidem hic voluptatem. Neque aliquam voluptas eos incidunt repellendus. Vero expedita non sit quaerat sit et eum. Quasi dolor voluptatem illum eum qui est expedita sequi accusamus.",
-      "emergency": false,
-      "dateCompleted": ""
-    },
-    {
-      "id": 4,
       "userId": 2,
-      "description": "A deleniti est sed vel. Dolores aliquid enim vero. Quia eligendi vel voluptas. Nihil nihil quasi ullam officia doloremque amet non. Officia atque quae.",
+      "description": "Dropped iPhone in toilet",
+      "emergency": true,
+      "dateCompleted": "2023-08-12T03:06:27.975Z"
+    },
+    {
+      "userId": 1,
+      "description": "Desktop wont turn on",
+      "emergency": false,
+      "dateCompleted": "",
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "description": "Speaker phone does not work on iPhone",
+      "emergency": true,
+      "dateCompleted": "",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "description": "Airpods wont connect",
       "emergency": false,
       "dateCompleted": ""
     },
     {
-      "id": 5,
-      "userId": 1,
-      "description": "Pariatur nihil animi eos doloremque laborum fugiat consequuntur iusto. Et tempore a enim.",
+      "userId": 2,
+      "description": "Router is broken",
       "emergency": true,
-      "dateCompleted": "Fri Apr 29 2022 21:24:29 GMT-0500 (Central Daylight Time)"
+      "dateCompleted": "",
+      "id": 7
     }
   ],
   "employeeTickets": [
@@ -157,14 +232,19 @@ Then copy the following JSON into the `database.json` file.
       "serviceTicketId": 1
     },
     {
-      "id": 2,
-      "employeeId": 2,
-      "serviceTicketId": 5
-    },
-    {
       "id": 3,
       "employeeId": 1,
       "serviceTicketId": 4
+    },
+    {
+      "employeeId": 2,
+      "serviceTicketId": 2,
+      "id": 4
+    },
+    {
+      "employeeId": 2,
+      "serviceTicketId": 7,
+      "id": 6
     }
   ]
 }
@@ -179,11 +259,8 @@ json-server -p 8088 database.json
 
 Feel free to make more of each resource if you want to see more data in your API.
 
-| | |
-|:---:|:---|
-| <h1>&#x2757;</h1> |  _The [vscode-faker](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker) extension for Visual Studio Code is a fast, easy way to generate starter data._ |
-
-
+| <h1>&#x2757;</h1> | _The [vscode-faker](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker) extension for Visual Studio Code or [ChatGPT](https://chat.openai.com/auth/login) are fast, easy ways to generate starter data._ |
+| --- | --- |
 ## Backup to Github
 
 Make sure you create a repository on your Github account for your API, and hook up the `honey-raes-api` directory. Yes, there's only one file being tracked in this repository, and that's ok.
