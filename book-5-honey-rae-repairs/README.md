@@ -38,8 +38,8 @@ Here's how that looks
 |--|--|--|
 | 10 | [Intro to Routes](./chapters/REPAIR_ROUTES_INTRO.md) <br/> <sub style="font-size:0.85rem;">#route #link</sub> | [Auth & Routes](./chapters/LEARN_ROUTES_SETUP.md) |
 | 11 | [Customer Details](./chapters/REPAIR_CUST_DETAILS.md) <br/> <sub style="font-size:0.85rem;">#index-route #useParams</sub> | [Post Details](./chapters/LEARN_POST_DETAILS.md) |
-| 12 | [Claim vs Close](./chapters/REPAIR_CLAIM_VS_CLOSE.md) <br/> <sub style="font-size:0.85rem;">#auth-setup #prop-drilling</sub> | [New Post](./chapters/LEARN_CREATE.md) |
-| 13 | [Employee Edit](./chapters/REPAIR_EMPLOYEE_EDIT.md) <br/> <sub style="font-size:0.85rem;">#useNavigate #forms</sub> | [My Posts](./chapters/LEARN_MY_POSTS.md) |
+| 12 | [Claim vs Close](./chapters/REPAIR_CLAIM_VS_CLOSE.md) <br/> <sub style="font-size:0.85rem;">#auth-setup #prop-drilling #put</sub> | [New Post](./chapters/LEARN_CREATE.md) |
+| 13 | [Employee Edit](./chapters/REPAIR_EMPLOYEE_EDIT.md) <br/> <sub style="font-size:0.85rem;">#useNavigate #forms #put</sub> | [My Posts](./chapters/LEARN_MY_POSTS.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 13**
 
@@ -48,9 +48,9 @@ Here's how that looks
 |--|--|--|
 | 14 | [Employee vs Customer](./chapters/REPAIR_EMPLOYEE_VS_CUSTOMER.md) <br/> <sub style="font-size:0.85rem;">#conditional-routes</sub> | [Edit Post](./chapters/LEARN_EDIT_POST.md) |
 | 15 | [Customer Tickets](./chapters/REPAIR_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#conditional-rendering #filter #delete</sub> | [Favorites](./chapters/LEARN_FAVORITES.md) |
-| 16 | Create Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | [User Profile](./chapters/LEARN_VIEW_PROFILE.md) |
-| 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#tags</sub> | [Edit Profile](./chapters/LEARN_EDIT_PROFILE.md) |
-| 17 | Edit Profile <br/> <sub style="font-size:0.85rem;">#tags</sub> |  |
+| 16 | [Create Ticket](./chapters/REPAIR_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #post</sub> | [User Profile](./chapters/LEARN_VIEW_PROFILE.md) |
+| 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#forms #put</sub> | [Edit Profile](./chapters/LEARN_EDIT_PROFILE.md) |
+| 17 | Edit Profile <br/> <sub style="font-size:0.85rem;">#forms #put</sub> |  |
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
