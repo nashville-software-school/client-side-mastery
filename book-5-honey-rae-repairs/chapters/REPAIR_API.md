@@ -166,12 +166,6 @@ Then copy the following JSON into the `database.json` file.
       "specialty": "Printer Repair",
       "rate": 29.45,
       "userId": 6
-    },
-    {
-      "id": 3,
-      "specialty": "Android",
-      "rate": 35.99,
-      "userId": 7
     }
   ],
   "serviceTickets": [
