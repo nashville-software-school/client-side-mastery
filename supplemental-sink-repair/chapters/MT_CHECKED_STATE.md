@@ -1,1 +1,0 @@
-* Automatically check talents when actor selected

@@ -1,6 +1,6 @@
 # Book 5 - Honey Rae's Repair Shop
 It is very important that you work on the concepts in this book in the segments that are suggested.
-Move top to bottom, left to right. 
+Move top to bottom, left to right.
 
 
 Here's how that looks
@@ -19,7 +19,7 @@ Here's how that looks
 | 2 | [Your First Component](./chapters/REPAIR_FIRST_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#jsx #useState</sub>| [New Chuckles](./chapters/CHUCKLE_CREATE.md) |
 | 3 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | [View Chuckles](./chapters/CHUCKLE_READ.md) |
 | 4 | [Repair Wireframe](./chapters/REPAIR_WIREFRAME.md) <br/> <sub style="font-size:0.85rem;">#wireframe #project-planning</sub> | [Fulfilled Chuckles](./chapters/CHUCKLE_UPDATE.md) |
-| 5 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | [Rejected Chuckles](./chapters/CHUCKLE_DELETE.md) | 
+| 5 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | [Rejected Chuckles](./chapters/CHUCKLE_DELETE.md) |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 5**
 
@@ -58,6 +58,8 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
 | 1 | useContext | [CSS Libraries](./chapters/EXPLORE_CSS.md) |
+| 2 |  Learn how to [deploy your API to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) for free |
+| 3 | Learn how to [deploy your client to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) for free |
 
 ## 🔐 Projects Unlocked
 
