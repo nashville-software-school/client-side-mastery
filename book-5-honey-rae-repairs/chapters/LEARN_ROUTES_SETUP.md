@@ -9,7 +9,7 @@ npm install --save react-router-dom
 ```
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-66/book-5-honey-rae-repairs/chapters/scripts/learn-auth.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/learn-auth.sh)"
 ```
 
 This script will make the following directories and files in your project:
@@ -49,7 +49,7 @@ In `index.js`, wrap the `<App />` component in the `root.render` function with t
 </details>
 
 ### The Register Component
-In the `Register` component, the user can fill out a form and register for the application. This will create a new user in the database. Double check the code in this component to see that the property names match what's in your database. Make any necessary changes. 
+In the `Register` component, the user can fill out a form and register for the application. This will create a new user in the database. Double check the code in this component to see that the property names match what's in your database. Make any necessary changes.
 
 ```javascript
 const [user, setUser] = useState({
@@ -85,11 +85,11 @@ const registerNewUser = () => {
 ### ApplicationViews
 Create an `ApplicationViews` component in the `views` directory. Here you are going to define the routes for your application the same way you have done in _Honey Rae Repairs_. ***Don't forget to wrap all your `Route` components in a `Routes` component.***
 
-Define a parent `Route` for the `/` _(home)_ path. Nested inside that route, define a child `Route` to render `AllPosts`. Consider the user story for all posts: 
+Define a parent `Route` for the `/` _(home)_ path. Nested inside that route, define a child `Route` to render `AllPosts`. Consider the user story for all posts:
 
 >**Given** the user wishes to view a list of all the posts<br>
 >**When** the user is at the ***home route*** or visits the All Posts view<br>
->**Then** the title, topic and number of likes will display for each post in the database. 
+>**Then** the title, topic and number of likes will display for each post in the database.
 
 This route for the `AllPosts` view should render when the path is at the home route. Considering we've made it a child route of the home route, what needs to be added to this route if we want it to render at it's parent route's path?
 
@@ -141,12 +141,12 @@ Now it's time to set up our routes for authentication. In `App.js`, remove the c
   ```
 </details>
 
-### Time to Test! 
-Navigate to `localhost:3000/login` and confirm that the `Login` component renders. Try logging in! You should be navigated to `localhost:3000` and the `AllPosts` component should render. Open the devtools and check out the Application tab. Check to see that the key `learning_user` is added and the value is an object with an `id` property. 
+### Time to Test!
+Navigate to `localhost:3000/login` and confirm that the `Login` component renders. Try logging in! You should be navigated to `localhost:3000` and the `AllPosts` component should render. Open the devtools and check out the Application tab. Check to see that the key `learning_user` is added and the value is an object with an `id` property.
 
 <img src="./images/learning-user.png" width="700" />
 
-Right click on it to delete it. Refresh the page. You should be navigated back to `localhost:3000/login`. Now register a new user. After registering you should once again be navigated to `localhost:3000` and the `AllPosts` component should render. Check your JSON server to confirm the user was added to the database and that it's properties match the rest of your users. 
+Right click on it to delete it. Refresh the page. You should be navigated back to `localhost:3000/login`. Now register a new user. After registering you should once again be navigated to `localhost:3000` and the `AllPosts` component should render. Check your JSON server to confirm the user was added to the database and that it's properties match the rest of your users.
 
 You're all set!
 

@@ -1,7 +1,7 @@
 # Learning Moments
-> You love to help your fellow classmates, and they love to help you! You've decided to build a social app for sharing those _"Aha!"_ moments of learning how to become a developer. 
+> You love to help your fellow classmates, and they love to help you! You've decided to build a social app for sharing those _"Aha!"_ moments of learning how to become a developer.
 
-You are going to build your own React application based off everything you've learned in Honey Rae's. This is a rather complex project with many possible solutions and many edge cases. It's designed to challenge you and put what you've learned to the test. The goal of this project is not to write a flawless, enterprise-level application. That is not even the desired outcome. The goal is to develop your analytical thinking, algorithmic thinking, and learning efficiency. The desired outcome is a deeper understanding of React and the ability to build a capstone! Revisit previous chapters, rewatch videos, reference the Honey Rae's code, and of course reach out to your peers to help you build this application. 
+You are going to build your own React application based off everything you've learned in Honey Rae's. This is a rather complex project with many possible solutions and many edge cases. It's designed to challenge you and put what you've learned to the test. The goal of this project is not to write a flawless, enterprise-level application. That is not even the desired outcome. The goal is to develop your analytical thinking, algorithmic thinking, and learning efficiency. The desired outcome is a deeper understanding of React and the ability to build a capstone! Revisit previous chapters, rewatch videos, reference the Honey Rae's code, and of course reach out to your peers to help you build this application.
 
 ### Project Setup
 ```shell
@@ -13,7 +13,7 @@ cd learning-moments
 Run the following command in your terminal to receive the boilerplate code:
 <!-- TODO: Change this link to cohort 66 branch -->
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-66/book-5-honey-rae-repairs/chapters/scripts/learning-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/learning-setup.sh)"
 ```
 
 
@@ -27,7 +27,7 @@ touch database.json
 ```
 
 ### The Resources
-Below are the resources for this application. _(You will need to connect the relationships)_ Use these requirements to build your ERD. Once you are finished, if you would like to run your ERD by an instructor, they would be more than happy to review it with you. Once you are confident you have an accurate ERD, seed your database. 
+Below are the resources for this application. _(You will need to connect the relationships)_ Use these requirements to build your ERD. Once you are finished, if you would like to run your ERD by an instructor, they would be more than happy to review it with you. Once you are confident you have an accurate ERD, seed your database.
 
 | Resource | Description |
 | -- | -- |

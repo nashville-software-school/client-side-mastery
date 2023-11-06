@@ -1,9 +1,9 @@
 # Authorizing Users
-In this chapter you will set up your Honey Rae's application for user authentication. The authentication functionality is provided for you as it is not a learning objective of this course. 
+In this chapter you will set up your Honey Rae's application for user authentication. The authentication functionality is provided for you as it is not a learning objective of this course.
 
-In the root of your project in the terminal, run the script below. 
+In the root of your project in the terminal, run the script below.
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-66/book-5-honey-rae-repairs/chapters/scripts/repair-auth.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/repair-auth.sh)"
 ```
 
 ## 📺 Watch the videos
@@ -45,6 +45,6 @@ Watch the [authentication setup](https://youtu.be/nDGJUeN1biY?si=HZmcMzjb-7Xu_mz
 </details>
 
 ## Prop Drilling
-In this chapter we defined a new state variable to hold the logged in user. We defined this state in the `ApplicationViews` component so that we can pass the current user down to any component that needs it. We encountered this when writing the logic for the **Claim** and **Close** buttons for each ticket. We needed to know the `id` and `isStaff` value of the user when deciding which button, if any, the user should see on a ticket. 
+In this chapter we defined a new state variable to hold the logged in user. We defined this state in the `ApplicationViews` component so that we can pass the current user down to any component that needs it. We encountered this when writing the logic for the **Claim** and **Close** buttons for each ticket. We needed to know the `id` and `isStaff` value of the user when deciding which button, if any, the user should see on a ticket.
 
-In order to provide the `currentUser` state to the `Ticket` component, we has to pass it down from `ApplicationViews` to `TicketList` and from `TicketList` to `Ticket`. Passing props down multiple levels like this is called ***prop drilling***. It can be messy and hard to follow and there are advanced, better ways around this. But it's likely, if you're working on a legacy React application, that you will run into this on the job. 
+In order to provide the `currentUser` state to the `Ticket` component, we has to pass it down from `ApplicationViews` to `TicketList` and from `TicketList` to `Ticket`. Passing props down multiple levels like this is called ***prop drilling***. It can be messy and hard to follow and there are advanced, better ways around this. But it's likely, if you're working on a legacy React application, that you will run into this on the job.
