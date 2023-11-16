@@ -1,1 +1,0 @@
-* POST on checked. DELETE on unchecked.

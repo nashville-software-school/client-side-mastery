@@ -1,1 +1,0 @@
-* Select an actor and choose skills to create relationships

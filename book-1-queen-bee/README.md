@@ -31,7 +31,8 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 
 | #   | 🎓 Self-Assessment                                                     |
 | --- | ---------------------------------------------------------------------- |
-| 1   | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) |
+| 1   | [Reflect on your Conceptual Understanding](./chapters/SELF_REFLECTION.md) |
+| 2   | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) |
 
 ## 🧭 Explorer Chapters
 
@@ -61,6 +62,6 @@ Pioneer chapters are **optional** and let you develop Deep Learning on the conce
 
 When you have completed all of the core chapters, you will work on a group project with other teammates who have also completed them. Group projects deepen your communication and collaboration Core Skills.
 
-| #   | Project Name                                                        | Description                                                                                                                                         |
-| --- | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| #   | Project Name | Description |
+| --- | --- | --- |
 | 1   | [🐡 🍣 <br/> Fish Fusion](../projects/tier-1/fish-fusion/README.md) | In this project, you are going to build a purchasing pipeline for a bargain fish restaurant in your city. From sea to boat to monger to restaurant. |

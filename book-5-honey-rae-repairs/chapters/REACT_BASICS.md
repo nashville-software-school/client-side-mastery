@@ -25,7 +25,7 @@ We are giving you some boilerplate (starter) code that you will then customize a
 <!-- TODO: Change this link to cohort 66 branch -->
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-66/book-5-honey-rae-repairs/chapters/scripts/repair-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/repair-setup.sh)"
 ```
 ## Installing React Developer Tools
 
@@ -71,7 +71,7 @@ The process of building your React application will begin and the following thin
     ```
 1. In your browser the app should be running with no errors and you should see this welcome page:
    <img src="./images/welcome.png" width="700" />
-   
+
 If these three things do not happen, call in an instructor. Otherwise, move on to the next chapter.
 
 ## Backup to Github

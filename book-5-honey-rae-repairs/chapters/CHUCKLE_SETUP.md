@@ -8,7 +8,7 @@ It has a simple database and full CRUD functionality. Here's what you'll be buil
 
 <img src="./images/chuckle-wireframe.png" width="10000" />
 
-This application involves **C**reating, **R**eading, **U**pdating, and **D**eleting a One Liner from the database. 
+This application involves **C**reating, **R**eading, **U**pdating, and **D**eleting a One Liner from the database.
 
 ### Learning Objectives
 After building this application, you should have a deepened understanding of: ***JSX***, handling ***events***, ***useState***, and ***useEffect***
@@ -25,7 +25,7 @@ We're going to give you some boilerplate code for your Chuckle Checklist applica
 
 <!-- TODO: Change this link to cohort 66 branch -->
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/cohort-66/book-5-honey-rae-repairs/chapters/scripts/chuckle-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/chuckle-setup.sh)"
 ```
 
 ### Data
