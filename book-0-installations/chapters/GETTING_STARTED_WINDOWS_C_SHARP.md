@@ -20,15 +20,15 @@ Later in the instructions, we will ask you to type a command into your terminal.
 
 Visit the [Git Bash](http://www.git-scm.com/downloads) download page click the "Download for Windows" button, and once complete, install the software.
 
-## Windows Terminal Preview
+## Windows Terminal
 
-Visit the [Windows Terminal Preview](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n8g5rfz9xk3?cid=msft_web_chart&activetab=pivot:overviewtab) download page and open it in the Microsoft Store App. This will be your default terminal which you will use to navigate your file system, and run development tools throughout the course.
+Visit the [Windows Terminal](https://apps.microsoft.com/detail/9N0DX20HK701?cid=msft_web_chart&activetab=pivot%3Aoverviewtab&hl=en-us&gl=US) download page and open it in the Microsoft Store App. This will be your default terminal which you will use to navigate your file system, and run development tools throughout the course.
 
-Once Windows Terminal Preview is installed:
+Once Windows Terminal is installed:
 
 1. Go to the `Start` menu (Windows key)
-2. Search for `Windows Terminal Preview`
-3. Open `Windows Terminal Preview`
+2. Search for `Windows Terminal`
+3. Open `Windows Terminal`
 4. By default, this will open a new PowerShell terminal window. _Do **not** use the PowerShell terminal window._
 5. Click the down arrow <kbd>﹀</kbd> located at the top of the terminal window.
 6. Select **Git Bash** from the dropdown menu to start a new **Git Bash** terminal window.
