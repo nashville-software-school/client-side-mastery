@@ -1,28 +1,94 @@
 # Installations
 
-## Security Token for Installations
+## Install XCode
 
-In order to automate the installation of the tools you need _(which happens in the next section)_, you need to create a Github Personal Access Token.
-
-1. Go to your Github account, and access your settings by clicking on your profile avatar at the top-right of the screen.
-
-<img src="./images/github-token-access-settings.gif" alt="Access Github settings" width="600px" />
-
-1. In the menu options on the left, scroll to, and click, the last item labeled **Developer Settings**. Then click on **Personal access tokens**.
-
-<img src="./images/github-token-developer-settings.gif" alt="Access Github settings" width="300px" />
-
-1. Then generate a Personal Access Token with a name of **NSS Installs Token**. Make it expire in 7 days. Scroll down into the permissions and check the `admin:public_key` checkbox and click it. Then scroll all the way down and save the token. **It is important you do not close, or refresh the browser tab until you complete the automated installs in the next section.**
-
-<img src="./images/github-token-creating-token.gif" alt="Access Github settings" width="600px" />
-
-## Basic Installations (automated)
-
-1. Open the Terminal application on your Mac.
-1. Copy pasta the following command into the terminal and hit enter to run it. It will attempt to install some of the basic tools you need for NSS.
+This process will take some time, and it is needed for future steps, so you get it out of the way first. If you have an older or slower computer, it may appear as if nothing is happening, but it is. Just wait until the process is complete.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-0-installations/chapters/scripts/installs-all-mac-users.sh)"
+xcode-select --install
+```
+
+## Security Token for Installations
+
+In order to automate the installation of the tools you need, you need to create a Github Personal Access Token.
+
+1. Open a new tab in your browser.
+2. Go to this site [https://github.com/settings/profile](https://github.com/settings/profile)
+3. In the menu options on the left, scroll down to and click the item labeled **Developer Settings**.
+4. Click **Personal access tokens**
+5. Click **Tokens (classic)**
+6. Click **Generate new token** button
+7. Choose **Generate new token (classic)**
+8. Complete 2-factor authentication if you set that up
+
+You will now see the screen to generate a token.
+
+1. In the **Note** field, enter _NSS Installs Token_.
+2. Make it expire in 7 days.
+3. Scroll down into the permissions and check the `admin:public_key` checkbox and click it.
+4. Scroll all the way down and click **Generate token**.
+5. Your new token will then be displayed to you with a green background color, and will start with `ghp_`.
+6. Click the copy icon next to it to copy it to your clipboard.
+7. Open the **Terminal** application on your Mac.
+8. Enter the following text into the Terminal but don't press the return key.
+   ```sh
+   export PERSONAL_ACCESS_TOKEN=
+   ```
+9. Press **Command+V** to paste your personal access token at the end. If nothing happened, go back to the browser and copy your access token again.
+10. Press the return key.
+11. Copy and paste the following command into the terminal. It will ask you to enter in some information about your Github account.
+    ```sh
+    /bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/163e9eb5ba26458f13a51508b80ea462ec4c708e/create-key.sh)"
+    ```
+12. Once that process is complete, you should see the following output. If you see anything different contact an instructor.
+    ```txt
+    POST for SSH key returned status code 200
+    ```
+
+## Install Homebrew
+
+Run the following command in your Terminal. You will be prompted for your computer password. It will not display the characters as you type them for security reasons.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/47a842f39a43a4b7d7c3dafcb127c74f99082580/install-homebrew.sh)"
+```
+
+Once the process is complete, run the `brew` command in your terminal. If you see the output `command not found: brew` then contact an instructor.
+
+## Install Modern Shell
+
+Run the following command in your Terminal.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/47a842f39a43a4b7d7c3dafcb127c74f99082580/configure-zsh.sh)"
+```
+
+Once complete, run the following command in your Terminal.
+
+```sh
+echo $SHELL
+```
+
+You should see either `/usr/local/bin/zsh` or `/bin/zsh` as the output of that command. If you don't, contact an instructor.
+
+## Install Node
+
+Run the following command in your Terminal.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/47a842f39a43a4b7d7c3dafcb127c74f99082580/install-nvm-node.sh)"
+```
+
+Once the process is complete, quit your Terminal application completely, and then open it again immediately.
+
+Run the `node -v` command in your Terminal. If you see the output `command not found: node` then contact an instructor.
+
+## Verify Developer Installations
+
+Run the following command to verify all developer installations are complete. If you see any error message that something isn't installed, contact an instructor.
+
+```sh
+/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/a1f8f3bebf7fab75e5bfb0d1ecabc89ab22baec8/verify-installs.sh)"
 ```
 
 ## Rectangle
@@ -60,7 +126,7 @@ Invest 9 minutes of your time to watch the [Using Rectangle to Manage macOS Wind
 <br/>
 <br/>
 
-## Troubleshooting
+## Troubleshooting for Instructors
 
 <details>
 <summary>Expand if you are an instructor troubleshooting an issue</summary>
