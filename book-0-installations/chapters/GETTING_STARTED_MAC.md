@@ -81,7 +81,7 @@ Run the following command in your Terminal.
 
 Once the process is complete, quit your Terminal application completely, and then open it again immediately.
 
-Run the `node` command in your Terminal. If you see the output `command not found: node` then contact an instructor.
+Run the `node -v` command in your Terminal. If you see the output `command not found: node` then contact an instructor.
 
 ## Verify Developer Installations
 
