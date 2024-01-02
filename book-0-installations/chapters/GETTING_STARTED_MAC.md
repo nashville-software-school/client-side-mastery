@@ -1,5 +1,13 @@
 # Installations
 
+## Install XCode
+
+This process will take some time, and it is needed for future steps, so you get it out of the way first. If you have an older or slower computer, it may appear as if nothing is happening, but it is. Just wait until the process is complete.
+
+```sh
+xcode-select --install
+```
+
 ## Security Token for Installations
 
 In order to automate the installation of the tools you need, you need to create a Github Personal Access Token.
@@ -74,14 +82,6 @@ Run the following command in your Terminal.
 Once the process is complete, quit your Terminal application completely, and then open it again immediately.
 
 Run the `node` command in your Terminal. If you see the output `command not found: node` then contact an instructor.
-
-### Install XCode
-
-This process will take some time, which is why it is last. If you have an older or slower computer, it will appear as if nothing is happening, but it is. Just wait until the process is complete.
-
-```sh
-xcode-select --install >>/dev/null
-```
 
 ## Verify Developer Installations
 
