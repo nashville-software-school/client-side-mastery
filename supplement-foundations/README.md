@@ -2,7 +2,9 @@
 
 ## Core Chapters
 
-In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
+In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned. 
+
+Note: when you're going through these lessons (and others in the coursework) you should start on the left and work your way down that column, then progress to the next column. Once you've finished all the columns in the table, move to the next part of the page.
 
 | # | 🏠 Foundations Review | 🧸 Leonid's Toys <br/><sub>(_Guided tour_)</sub> | 📔 Daily Notes |
 |--|--|--|--|
