@@ -26,5 +26,9 @@ In this book's core chapters, you will gain the knowledge and understanding of w
 | 7 | [Sleep and Moods](./chapters/ARRAYS_CONDITIONS_PRACTICE.md) <br/> <sub style="font-size:0.85rem;">#iteration #conditions</sub> | [Toy Catalog](./chapters/LT_ARRAY_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#data #arrays #iteration</sub> | [List of Notes by Topic](./chapters/DN_NOTES_BY_TOPIC.md) |
 | 8 | [Building Strings with Iteration](./chapters/ARRAYS_STRINGS.md) <br/> <sub style="font-size:0.85rem;">#iteration #string-templates</sub> | [Raising Prices](./chapters/LT_ITERATION_WITH_LOGIC.md) <br/> <sub style="font-size:0.85rem;">#data #arrays #iteration</sub> | [HTML Note Articles](./chapters/DN_NOTE_ARTICLES.md) |
 | 9 | [Array and String Methods](./chapters/ARRAY_STRING_METHODS.md) <br/> <sub style="font-size:0.85rem;">#methods #arrays #strings</sub> | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [Note Topics Subsection](./chapters/DN_TOPICS_SECTION.md) |
-| 🎓 | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
 
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+
+| #   | 🎓 Self-Assessment                                                     |
+| --- | ---------------------------------------------------------------------- |
+| 1   | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) |
