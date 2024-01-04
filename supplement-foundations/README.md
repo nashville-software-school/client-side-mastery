@@ -1,4 +1,4 @@
-# Book 1 - Leonid's Bespoke Toy Shoppe
+# Foundational Concepts Review - Leonid's Bespoke Toy Shoppe
 
 ## Core Chapters
 
