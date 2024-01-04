@@ -1,16 +1,5 @@
 # Book 1 - Leonid's Bespoke Toy Shoppe
 
-## Prelude: Developer Skills
-
-Most people are mouse/touchpad users and rarely touch their keyboards on their computers. Professional developers are the complete opposite. We rarely touch the mouse during development of a project. It will be a long journey for you to see the value of, and become proficient with, using keyboard shortcuts. Here's where you start that journey.
-
-| # | 💀 🐭 💀 Using the Keyboard |
-|--|--|
-| 1 |[Core Keyboard Shortcuts](./chapters/KEYBOARD_CORE.md) <br/> <sub style="font-size:0.85rem;">#keyboard</sub> |
-| 2 |[Debugging Shortcuts](./chapters/KEYBOARD_DEBUG.md) <br/> <sub style="font-size:0.85rem;">#keyboard #debugging</sub> |
-| 3 | [Core Professional Skills](./chapters/THINKING.md) <br/> <sub style="font-size:0.85rem;">#mindset</sub> |
-
-
 ## Core Chapters
 
 In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
