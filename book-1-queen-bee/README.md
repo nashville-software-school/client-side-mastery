@@ -1,6 +1,6 @@
 # Book 1 - Think Like a Professional
 
-In this first book, you will learn the core, fundamental competencies and habits of mind needed to succeed as a profession software developer.
+In this first book, you will learn the core, fundamental competencies and habits of mind needed to succeed as a professional software developer.
 
 And you thought you'd be learning how to code...
 
