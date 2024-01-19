@@ -3,7 +3,7 @@
 Run the following command in your terminal to create the directory structure and files for the project.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/projects/tier-1/fish-fusion/scripts/setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/fish-fusion-setup.sh)"
 ```
 
 Once that completes, run the following two commands to navigate to the directory that was created and then install some open source software that will be needed.
