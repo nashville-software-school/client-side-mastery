@@ -50,7 +50,7 @@ echo "const trails = [{
     latitude: 39.4763332,
     longitude: -8.6457376,
     plantHighlight: \"Cantua\",
-    trailname: \"Stepping Stone Route\",
+    trailName: \"Stepping Stone Route\",
     length: 37.68
 }, {
     id: 7,
