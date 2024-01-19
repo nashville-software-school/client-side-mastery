@@ -38,6 +38,10 @@ mkdir styles
 touch styles/main.css
 ```
 
+1. Run the `git add --all` command
+1. Run the `git commit -m "First commit"` command
+
+
 ## Create Github Repo
 
 1. Log into your Github account.
