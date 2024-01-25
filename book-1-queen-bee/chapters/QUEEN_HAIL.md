@@ -45,7 +45,7 @@ This is a task that you can execute later. It doesn't execute when you define it
 
 Now that you have a function defined, you can invoke it and pass a string to it as an argument. In this invocation, the argument is the string of "Athena Perez".
 
-Copy pasta the follow code into the `main.js` file below the function definition.
+Copy pasta the following code into the `main.js` file below the function definition.
 
 ```js
 const athena = hailTheQueen("Athena Perez") // Argument value is "Athena Perez"
