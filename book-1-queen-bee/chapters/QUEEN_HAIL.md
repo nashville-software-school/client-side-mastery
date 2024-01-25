@@ -66,7 +66,7 @@ And you should see the following string in the output.
 
 ## Another Queen
 
-Copy pasta the follow code into the `main.js` file below the function definition. In this invocation, the argument is the string of "Charisse Ford".
+Copy pasta the following code into the `main.js` file below the function definition. In this invocation, the argument is the string of "Charisse Ford".
 
 ```js
 const charisse = hailTheQueen("Charisse Ford") // Argument value is "Charisse Ford"
