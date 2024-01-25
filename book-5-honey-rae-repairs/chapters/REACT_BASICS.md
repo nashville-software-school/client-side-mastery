@@ -11,12 +11,13 @@ You've already learned the vast majority of what React does for you when buildin
 
 ## Creating the Application
 
-Run the following commands to do the basic software package installations
+Run the following commands _one at a time_ to do the basic software package installations
 
 ```sh
 cd ~/workspace
-npx create-react-app honey-rae-repairs
+npm create vite@latest honey-rae-repairs -- --template react
 cd honey-rae-repairs
+npm install
 ```
 ## Project Setup
 
@@ -49,27 +50,19 @@ Watch the Intro to React Dev Tools video below to review their usage. Again, jus
 In your terminal, make sure you are in the top-level project directory, and not in the `public` or `src` sub-directory, and type the following command.
 
 ```sh
-npm start
+npm run dev
 ```
 
 The process of building your React application will begin and the following things will happen.
 
-1. Your browser will automatically open the `http://localhost:3000` URL.
 1. You will see the following message in your terminal.
     ```sh
-    Compiled successfully!
-
-    You can now view honey-rae-repairs in the browser.
-
-    Local:            http://localhost:3000
-    On Your Network:  http://10.0.0.27:3000
-
-    Note that the development build is not optimized.
-    To create a production build, use npm run build.
-
-    webpack compiled successfully
+      ➜  Local:   http://localhost:5173/
+      ➜  Network: use --host to expose
+      ➜  press h + enter to show help
     ```
-1. In your browser the app should be running with no errors and you should see this welcome page:
+1. Navigate to http://localhost:5173/ in your browser
+2. In your browser the app should be running with no errors and you should see this welcome page:
    <img src="./images/welcome.png" width="700" />
 
 If these three things do not happen, call in an instructor. Otherwise, move on to the next chapter.
