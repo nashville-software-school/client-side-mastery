@@ -45,6 +45,13 @@ mkdir scripts
 touch scripts/main.js
 ```
 
+Once all of the files are created, make sure you add and commit them before pushing them to Github.
+
+```sh
+git add index.html styles/main.css scripts/main.js
+git commit -m "First commit for Martin"
+```
+
 ## Create Github Repo
 
 1. Log into your Github account.
