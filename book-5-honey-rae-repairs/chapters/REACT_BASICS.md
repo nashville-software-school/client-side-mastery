@@ -26,7 +26,7 @@ We are giving you some boilerplate (starter) code that you will then customize a
 <!-- TODO: Change this link to cohort 66 branch -->
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/repair-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/vf-react-vite-implementation/book-5-honey-rae-repairs/chapters/scripts/repair-setup.sh)"
 ```
 ## Installing React Developer Tools
 
