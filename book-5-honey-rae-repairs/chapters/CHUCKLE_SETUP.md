@@ -15,17 +15,19 @@ After building this application, you should have a deepened understanding of: **
 
 ### Setup
 
+Run the following commands _one at a time_ to do the basic software package installations
+
 ```shell
 cd ~/workspace
-npx create-react-app chuckle-checklist
+npm create vite@latest chuckle-checklist -- --template react
 cd chuckle-checklist
+npm install
 ```
 
 We're going to give you some boilerplate code for your Chuckle Checklist application. Run the following command in your terminal:
 
-<!-- TODO: Change this link to cohort 66 branch -->
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/chuckle-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/vf-react-vite-implementation/book-5-honey-rae-repairs/chapters/scripts/chuckle-setup.sh)"
 ```
 
 ### Data

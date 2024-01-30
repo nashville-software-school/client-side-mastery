@@ -1,11 +1,7 @@
 #!/bin/bash
 set -u
 
-rm ./src/App.test.js
-rm ./src/logo.svg
-rm ./src/reportWebVitals.js
-rm ./src/setupTests.js
-rm ./public/*
+rm -rf ./public
 mkdir ./src/assets
 mkdir ./src/services
 
@@ -20,9 +16,9 @@ echo '<!DOCTYPE html>
   <body>
     <div id="root"></div>
   </body>
-</html>' >./public/index.html
+</html>' >./index.html
 
-# index.js
+# main.jsx
 echo 'import "./index.css"
 import { App } from "./App"
 import { createRoot } from "react-dom/client"
@@ -30,7 +26,7 @@ import { createRoot } from "react-dom/client"
 
 const container = document.getElementById("root")
 const root = createRoot(container)
-root.render(<App />)' >./src/index.js
+root.render(<App />)' >./src/main.jsx
 
 # index.css
 echo '/*Reset
@@ -160,13 +156,14 @@ table {
   border-spacing: 0;
 }' >./src/index.css
 
-# App.js
+# App.jsx
 echo 'import "./App.css"
 
 export const App = () => {
   return <div>Hello World!</div>
-}' >./src/App.js
+}' >./src/App.jsx
 
+# App.css
 echo '@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 
