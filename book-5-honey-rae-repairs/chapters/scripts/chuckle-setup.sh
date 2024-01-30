@@ -2,6 +2,7 @@
 set -u
 
 rm -rf ./public
+rm ./assets/react.svg
 mkdir ./src/services
 
 # index.html
