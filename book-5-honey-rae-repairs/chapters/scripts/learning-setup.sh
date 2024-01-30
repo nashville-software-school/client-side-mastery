@@ -2,37 +2,36 @@
 set -u
 
 rm ./src/App.css
-rm ./src/App.test.js
-rm ./src/logo.svg
-rm ./src/reportWebVitals.js
-rm ./src/setupTests.js
-rm ./public/*
+rm -rf ./public
+rm -rf ./src/assets
 
 mkdir ./src/services
 mkdir ./src/components
 
 # index.html
-echo '<!DOCTYPE html>
+echo '<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning Moments</title>
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
-</html>
-' >./public/index.html
+</html>' >./index.html
 
-# index.js
-echo 'import { App } from "./App"
-import { createRoot } from "react-dom/client"
+# main.jsx
+echo 'import React from "react"
+import ReactDOM from "react-dom/client"
+import { App } from "./App.jsx"
 import "./index.css"
 
 const container = document.getElementById("root")
-const root = createRoot(container)
-root.render(<App />)' >./src/index.js
+const root = ReactDOM.createRoot(container)
+root.render(<App />)' >./src/main.jsx
 
 # index.css
 echo '/*Reset Default Styling
@@ -163,11 +162,11 @@ table {
 }
 ' >./src/index.css
 
-# App.js
+# App.jsx
 echo '
 export const App = () => {
   return <div>Hello World!</div>
-}' >./src/App.js
+}' >./src/App.jsx
 
 echo '# README
 ## Writing a Readme
