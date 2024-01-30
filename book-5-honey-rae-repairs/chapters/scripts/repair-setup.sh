@@ -3,7 +3,7 @@ set -u
 
 rm ./src/App.css
 rm -rf ./src/assets
-rm ./public/*
+rm -rf ./public
 
 # index.html
 echo '<!doctype html>
