@@ -26,3 +26,5 @@ In this chapter you will implement the following user stories for the [Edit Post
 *[Prevent Default for Forms](./REPAIR_EMPLOYEE_EDIT.md#prevent-default-for-forms)*<br>
 *[Uncontrolled input warning](./REPAIR_EMPLOYEE_EDIT.md#whats-up-with-that-warning)*<br>
 *[Refactoring the onChange functions](./REPAIR_EMPLOYEE_EDIT.md#refactoring-the-onchange-functions)*
+
+Up Next: [Viewing favorites](./LEARN_FAVORITES.md)

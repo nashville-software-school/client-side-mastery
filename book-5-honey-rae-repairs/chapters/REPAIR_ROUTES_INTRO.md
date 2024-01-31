@@ -150,3 +150,5 @@ Now that you're an expert, write the routing functionality for the Employees Lis
 
 ### _Disclaimer_
 React-Router-Dom is a very powerful tool and it's constantly evolving. In this course, you will learn the basics of routing with React-Router-Dom, enough to build a solid application, but this is only the tip of the iceberg and it does not include the latest features. If at any point you are feeling curious and would like to learn more about React-Router-Dom and what it can do, visit the [docs](https://reactrouter.com/en/main). We will continue to cover more features of React Router Dom as you make your way through this project.
+
+Up Next: [Viewing a customer's details](./REPAIR_CUST_DETAILS.md)

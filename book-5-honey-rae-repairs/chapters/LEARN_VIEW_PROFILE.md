@@ -26,3 +26,5 @@ In this chapter you will add a link to Profile in the Nav Bar and implement the 
 
 ### 💡 Which Profile?
 Try making only one component for this view. If the user clicks on the Profile link in the NavBar, their details should be displayed in the profile component. If the user clicks on another user's name in the Post Details view, that user's details should be displayed in the profile component. 
+
+Up Next: [Editing the user's profile](./LEARN_EDIT_PROFILE.md)

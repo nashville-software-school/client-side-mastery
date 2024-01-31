@@ -52,3 +52,5 @@ Watch the [authentication setup](https://youtu.be/nDGJUeN1biY?si=HZmcMzjb-7Xu_mz
 In this chapter we defined a new state variable to hold the logged in user. We defined this state in the `ApplicationViews` component so that we can pass the current user down to any component that needs it. We encountered this when writing the logic for the **Claim** and **Close** buttons for each ticket. We needed to know the `id` and `isStaff` value of the user when deciding which button, if any, the user should see on a ticket.
 
 In order to provide the `currentUser` state to the `Ticket` component, we has to pass it down from `ApplicationViews` to `TicketList` and from `TicketList` to `Ticket`. Passing props down multiple levels like this is called ***prop drilling***. It can be messy and hard to follow and there are advanced, better ways around this. But it's likely, if you're working on a legacy React application, that you will run into this on the job.
+
+Up Next: [Editing an employee](./REPAIR_EMPLOYEE_EDIT.md)

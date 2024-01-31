@@ -200,3 +200,5 @@ useEffect(() => {
 
 ### Time to Test!
 When you click on "Logout" in the navbar, the `learning_user` in local storage should be removed and you should be navigated to the login page. Log back in. Open the devtool and inspect the `ApplicationViews` component. Confirm that your user is being stored in state.
+
+Up Next: [Viewing a post's details](./LEARN_POST_DETAILS.md)

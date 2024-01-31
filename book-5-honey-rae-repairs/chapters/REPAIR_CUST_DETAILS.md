@@ -373,3 +373,5 @@ Time to code to learn! Write the routing functionality for the Employees Details
 > **Route Params:**  Placeholders in the URL that begin with a colon `:`. 
 
 > **usePrams:** A hook from the react-router-dom library that returns the route parameter as a key/value pair on an object. The key being the route parameter defined for the Route that rendered the component and the value being the value in the url at the position the route parameter was defined. 
+
+Up Next: [Introducing authentication](./REPAIR_CLAIM_VS_CLOSE.md)

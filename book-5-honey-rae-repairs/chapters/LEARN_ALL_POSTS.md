@@ -14,3 +14,5 @@ The layout and theme is entirely up to you! Go all out, or keep it simple. Just 
 
 ## Optional Fun!
 Tired of writing CSS? Check out this [explorer chapter](./EXPLORE_CSS.md) about CSS libraries! ⚠️**EXPLORER BEWARE**⚠️ These libraries can have a bit of a learning curve. You can always try them out later or use them in your capstone if you're not ready to take on something new. 
+
+Up Next: [Filter the posts](./LEARN_FILTER.md)

@@ -26,3 +26,5 @@ In this chapter you will add a link to My Posts in the Nav Bar and implement the
 
 *[Creating a Link](./REPAIR_ROUTES_INTRO.md#creating-a-link)*<br>
 *[The useNavigate Hook](./REPAIR_EMPLOYEE_EDIT.md#the-usenavigate-hook)*
+
+Up Next: [Introducing conditional routes in Honey Rae's](./REPAIR_EMPLOYEE_VS_CUSTOMER.md)

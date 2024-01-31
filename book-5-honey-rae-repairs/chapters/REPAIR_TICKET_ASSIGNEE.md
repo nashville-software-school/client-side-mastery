@@ -1,4 +1,4 @@
-# Chapter 6
+# Ticket Assignee
 In this chapter you will learn how to render a React component, pass props, use optional chaining, and write ternary statements.
 
 ## 📺 Watch The Video
@@ -125,3 +125,5 @@ If you're feeling comfortable with what we've learned so far and would like to s
 >**Optional Chaining:** An operator that accesses an object's property. If the object accessed using this operator is `undefined` or `null`, the expression stops and evaluates to undefined instead of throwing an error.
 
 >**Ternary Operator:** An operator that provides a way to shorten a _simple_ if else block. The `if` condition is on the left of the `?`. If the condition evaluates to `true`, the statement after the `?` is executed. If the condition evaluates to false, the statement after the `:` is executed.
+
+Up Next: [Searching the tickets](./REPAIR_SEARCH_TICKETS.md)

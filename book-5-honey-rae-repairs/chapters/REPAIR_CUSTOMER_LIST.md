@@ -148,3 +148,4 @@ export const ParentComponent = () => {
 
 >For more information for how props work, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md#props) chapter.
 
+Up Next: [Listing the Employees](./REPAIR_EMPLOYEE_LIST.md)

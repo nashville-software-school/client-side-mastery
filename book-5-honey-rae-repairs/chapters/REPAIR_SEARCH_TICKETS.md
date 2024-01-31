@@ -50,3 +50,5 @@ The “React Hook useEffect has a missing dependency” error is a common issue 
 When fixing the error, it’s important to consider your specific use case. Try to address the issue by including the missing dependency in the dependency array or ignore it if you're certain it's not needed. 
 
 However, if you run into some tricky bugs while developing your react application, it's very likely you do have a missing dependency. Try installing [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) if you haven't already to help you find these tricky bugs.
+
+Up Next: [Listing the customers](./REPAIR_CUSTOMER_LIST.md)
