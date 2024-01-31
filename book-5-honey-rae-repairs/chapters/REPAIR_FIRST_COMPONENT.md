@@ -147,4 +147,4 @@ In essence, `useState` simplifies and streamlines the way we handle state change
 
 > **useState:** A crucial React Hook that empowers you to introduce state to a component. It takes an initial value as its argument and returns an array. This array contains the state value (index 0) and a function (index 1) to modify that state.
 
-Up Next: [Repair API](./REPAIR_API.md)
+Up Next: [Setting up the API](./REPAIR_API.md)
