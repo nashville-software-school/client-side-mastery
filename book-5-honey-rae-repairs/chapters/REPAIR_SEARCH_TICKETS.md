@@ -2,6 +2,10 @@
 In this chapter you will practice what you learned in the previous chapters by implementing a search bar for the tickets.
 
 ## 📺 Watch The Video
+
+### ⚠️ Note on the video: 
+This video instructs you to make the file `components/TicketFilterBar.js`. Make sure your file ends in `.jsx` instead of `.js`.u
+
 Watch the [Search Tickets](https://youtu.be/WPG09-cUJYg?si=sYHT7adRJVgaL0qr) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ### 🔸🔻🔹 CSS for this chapter

@@ -2,6 +2,10 @@
 In this chapter you will learn how to render a React component, pass props, use optional chaining, and write ternary statements.
 
 ## 📺 Watch The Video
+
+### ⚠️ Note on the video: 
+This video instructs you to make the files `components/Ticket.js` and `components/TicketList.js`. Make sure your files end in `.jsx` instead of `.js`.
+
 Watch the [Ticket Assignee](https://youtu.be/8s4TQdJ3EBk) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ## Rendering the TicketList component

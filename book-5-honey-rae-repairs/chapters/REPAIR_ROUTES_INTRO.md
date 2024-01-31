@@ -7,6 +7,10 @@ npm install --save react-router-dom
 ```
 
 ## 📺 Watch The Video
+
+### ⚠️ Note on the video: 
+This video instructs you to make the files`components/nav/NavBar.js` and `components/users/User.js`. Make sure your files end in `.jsx` instead of `.js`.
+
 Watch the [Intro to Routes](https://youtu.be/IIb47gZBFbY?si=_ZhOwvEDdOQL_3y1) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ### 🔸🔻🔹 CSS for this chapter

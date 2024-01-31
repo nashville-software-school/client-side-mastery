@@ -259,7 +259,7 @@ fieldset {
   outline-offset: 2px;
 }' >./src/components/auth/Login.css
 
-# userService.jsx
+# userService.js
 echo 'export const getUserByEmail = (email) => {
   return fetch(`http://localhost:8088/users?email=${email}`).then((res) =>
     res.json()
@@ -274,7 +274,7 @@ export const createUser = (customer) => {
     },
     body: JSON.stringify(customer),
   }).then((res) => res.json())
-}' >>./src/services/userService.jsx
+}' >>./src/services/userService.js
 
 # Authorized.jsx
 echo 'import { Navigate, useLocation } from "react-router-dom"

@@ -2,6 +2,10 @@
 In this chapter you will implement the form for the logged in employee to edit their profile.
 
 ## 📺 Watch the video
+
+### ⚠️ Note on the video: 
+This video instructs you to make the file `components/forms/EmployeeEdit.js`. Make sure your file ends in `.jsx` instead of `.js`.
+
 Watch the [Employee Form](https://youtu.be/fg6g5rs5hh4?si=xTBsRD8G8hjjHgNn) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 

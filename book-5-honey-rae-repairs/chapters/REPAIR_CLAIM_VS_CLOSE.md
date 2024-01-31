@@ -7,6 +7,10 @@ In the root of your project in the terminal, run the script below.
 ```
 
 ## 📺 Watch the videos
+
+### ⚠️ Note on the video: 
+This video instructs you to make the file `components/welcome/Welcome.js`. Make sure your file ends in `.jsx` instead of `.js`.
+
 Watch the [authentication setup](https://youtu.be/nDGJUeN1biY?si=HZmcMzjb-7Xu_mzW) video and implement the code yourself. Once you have successfully set up authentication for your Honey Rae's project, watch the [Claim vs Close](https://youtu.be/4OVltZMwbzc?si=oXNsN101p77BTwOB) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 <details>
