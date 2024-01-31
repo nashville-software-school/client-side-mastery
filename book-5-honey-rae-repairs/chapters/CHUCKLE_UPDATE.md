@@ -45,3 +45,5 @@ Try implementing this code on your own. If you get stuck, reference previous cod
   <br>
   Post that edited joke! Don't forget to get your new list of jokes from the database after posting.
 </details>
+
+Up Next: [Deleting chuckles](./CHUCKLE_DELETE.md)

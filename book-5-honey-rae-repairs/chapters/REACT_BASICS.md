@@ -70,3 +70,5 @@ If these three things do not happen, call in an instructor. Otherwise, move on t
 ## Backup to Github
 
 Make sure you create a repository on your Github account for your app, and hook up the `honey-rae-repairs` directory. As you work through these chapters, regularly push up to Github.
+
+Up Next: [Your First Components](./REPAIR_FIRST_COMPONENT.md)

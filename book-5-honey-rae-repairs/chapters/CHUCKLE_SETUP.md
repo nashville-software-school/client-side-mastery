@@ -76,3 +76,5 @@ Here's some one liners to get you started. Copy the JSON data below and paste it
   ]
 }
 ```
+
+Up Next: [Creating chuckles](./CHUCKLE_CREATE.md)

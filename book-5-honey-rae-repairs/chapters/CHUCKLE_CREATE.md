@@ -89,3 +89,5 @@ Would you like the Head Coach of Dad Jokes to be the logo of your app? If so, fo
     }
     ```
 5. You should be good to go!
+
+Up Next: [Reading chuckles](./CHUCKLE_READ.md)

@@ -49,3 +49,4 @@ Try adding a new joke now. Hmmmmm. Not getting your new joke in the list? You've
   quite a few times. Try wrapping it in it's own function so you can just call it whenever you need to fetch and set all jokes instead of writing this functionality over and over again. 
 </details>
 
+Up Next: [Editing chuckles](./CHUCKLE_UPDATE.md)
