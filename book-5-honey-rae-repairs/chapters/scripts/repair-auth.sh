@@ -4,6 +4,7 @@ set -u
 mkdir ./src/components/auth
 mkdir ./src/views
 
+# Login.jsx
 echo 'import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
@@ -68,8 +69,9 @@ export const Login = () => {
       </section>
     </main>
   )
-}' >./src/components/auth/Login.js
+}' >./src/components/auth/Login.jsx
 
+# Register.jsx
 echo 'import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
@@ -174,8 +176,9 @@ export const Register = (props) => {
       </form>
     </main>
   )
-}' >./src/components/auth/Register.js
+}' >./src/components/auth/Register.jsx
 
+# Login.css
 echo '.container-login {
   text-align: center;
 }
@@ -256,6 +259,7 @@ fieldset {
   outline-offset: 2px;
 }' >./src/components/auth/Login.css
 
+# userService.jsx
 echo 'export const getUserByEmail = (email) => {
   return fetch(`http://localhost:8088/users?email=${email}`).then((res) =>
     res.json()
@@ -270,8 +274,9 @@ export const createUser = (customer) => {
     },
     body: JSON.stringify(customer),
   }).then((res) => res.json())
-}' >>./src/services/userService.js
+}' >>./src/services/userService.jsx
 
+# Authorized.jsx
 echo 'import { Navigate, useLocation } from "react-router-dom"
 
 // We can access child components the same way we access props. Child components are passed to our props as a key/value pair where
@@ -288,8 +293,9 @@ export const Authorized = ({ children }) => {
   else {
     return <Navigate to={`/login`} state={{ from: location }} replace />
   }
-}' >./src/views/Authorized.js
+}' >./src/views/Authorized.jsx
 
+# ApplicationViews.jsx
 echo 'export const ApplicationViews = () => {
   return <></>
-}' >./src/views/ApplicationViews.js
+}' >./src/views/ApplicationViews.jsx
