@@ -234,3 +234,5 @@ The second argument passed to the useEffect hook. If the array is empty, the cal
 
 > **Callback Function:**
 A function passed as an argument to another function to be later executed.
+
+Up Next: [Introducing Chuckle Checklist](./CHUCKLE_SETUP.md)
