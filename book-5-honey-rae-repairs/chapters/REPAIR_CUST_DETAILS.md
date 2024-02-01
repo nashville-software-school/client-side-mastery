@@ -1,6 +1,10 @@
 # Customer Details View
 
 ## 📺 Watch The Videos
+
+### ⚠️ Note on the video: 
+This video instructs you to make the file `components/customers/CustomerDetails.js`. Make sure your file ends in `.jsx` instead of `.js`.
+
 First, watch the introduction to the [useParams hook](https://youtu.be/fPfQ4JjPQps?si=BvCeRUgf9YvKZpkD) video and implement the code yourself. Next, watch the [Customer Details](https://youtu.be/aiVEFIHDj4k?si=32JIaDbJwxbJ1P3I) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ### 🔸🔻🔹 CSS for this chapter
@@ -284,7 +288,7 @@ Time to code to learn! Write the routing functionality for the Employees Details
 
 ### Hints
 <details>
-  <summary>💡 App.js</summary>
+  <summary>💡 App.jsx</summary>
 
   ### The Route
   Add a new `Route` for the employee details. Set up a route param to capture the `userId` of the employee.
@@ -305,7 +309,7 @@ Time to code to learn! Write the routing functionality for the Employees Details
 <br>
 
 <details>
-  <summary>💡 EmployeeList.js</summary>
+  <summary>💡 EmployeeList.jsx</summary>
 
   ### The Link
   Wrap the user component with a `Link` component. The link should navigate to the the new route you set up. Use string interpolation to add the id to the `to` path for the link. 
@@ -333,7 +337,7 @@ Time to code to learn! Write the routing functionality for the Employees Details
 <br>
 
 <details>
-  <summary>💡 EmployeeDetails.js</summary>
+  <summary>💡 EmployeeDetails.jsx</summary>
   
   ### Get the id
   Capture the id from the url using the `useParams` hook. Remember the key on the returned object is the route parameter you defined when setting up the `Route` in `App.js`.
@@ -369,3 +373,5 @@ Time to code to learn! Write the routing functionality for the Employees Details
 > **Route Params:**  Placeholders in the URL that begin with a colon `:`. 
 
 > **usePrams:** A hook from the react-router-dom library that returns the route parameter as a key/value pair on an object. The key being the route parameter defined for the Route that rendered the component and the value being the value in the url at the position the route parameter was defined. 
+
+Up Next: [Introducing authentication](./REPAIR_CLAIM_VS_CLOSE.md)

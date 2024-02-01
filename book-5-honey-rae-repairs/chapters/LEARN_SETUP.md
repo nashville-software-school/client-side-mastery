@@ -6,12 +6,12 @@ You are going to build your own React application based off everything you've le
 ### Project Setup
 ```shell
 cd ~/workspace
-npx create-react-app learning-moments
+npm create vite@latest learning-moments -- --template react
 cd learning-moments
+npm install
 ```
 
 Run the following command in your terminal to receive the boilerplate code:
-<!-- TODO: Change this link to cohort 66 branch -->
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/learning-setup.sh)"
 ```
@@ -35,3 +35,4 @@ Below are the resources for this application. _(You will need to connect the rel
 |**`posts`** | A post created by a user to share what they've learned. A post can belong to a single topic. A post can be liked by many users. _(title, body, date)_ |
 |**`topics`** | A topic of learning. _(e.g. Functions, Asynchronous Programming, etc...)_ Many posts can be written about a single topic. _(name)_  |
 
+Up Next: [Building the wireframe](./LEARN_WIREFRAME.md)

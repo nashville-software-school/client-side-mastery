@@ -2,6 +2,10 @@
 In this chapter you will create a new component for listing the customers.
 
 ## 📺 Watch The Video
+
+### ⚠️ Note on the video: 
+This video instructs you to make the file `components/customers/CustomerList.js`. Make sure your file ends in `.jsx` instead of `.js`.
+
 Watch the [Customer List](https://youtu.be/JijX33KjDP4?si=Rj_Pp6-twBP4weVf) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
 
 ### 🔸🔻🔹 CSS for this chapter
@@ -144,3 +148,4 @@ export const ParentComponent = () => {
 
 >For more information for how props work, revisit the [Ticket Assignee](./REPAIR_TICKET_ASSIGNEE.md#props) chapter.
 
+Up Next: [Listing the Employees](./REPAIR_EMPLOYEE_LIST.md)

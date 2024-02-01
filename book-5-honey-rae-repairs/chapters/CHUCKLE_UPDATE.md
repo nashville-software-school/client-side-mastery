@@ -28,7 +28,7 @@ Try implementing this code on your own. If you get stuck, reference previous cod
 <details>
   <summary><b><i>The Post</i></b></summary>
 
-  You'll want to add and export a new function from `jokeService.js` to return a fetch call with the `PUT` method. This function should accept the edited joke object as a parameter.
+  You'll want to add and export a new function from `jokeService.jsx` to return a fetch call with the `PUT` method. This function should accept the edited joke object as a parameter.
 </details>
 <br>
 <details>
@@ -45,3 +45,5 @@ Try implementing this code on your own. If you get stuck, reference previous cod
   <br>
   Post that edited joke! Don't forget to get your new list of jokes from the database after posting.
 </details>
+
+Up Next: [Deleting chuckles](./CHUCKLE_DELETE.md)

@@ -136,3 +136,5 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 **Given** the user wishes to save their changes<br>
 **When** the user clicks the save button<br>
 **Then** the user will be updated in the database and the application will navigate to the User Profile view for the logged in user
+
+Up Next: [View all posts](./LEARN_ALL_POSTS.md)
