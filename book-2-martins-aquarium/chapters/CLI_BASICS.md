@@ -21,6 +21,12 @@
 3. Type in the `git init` command
 4. You now have a git repository for tracking your progress
 
+### Configure Auto Import in Visual Studio Code
+
+1. In VS Code, press ctrl+, on Windows, or cmd+, on Mac to open settings
+2. Search for the word "import"
+3. Scroll down to the setting **JavaScript > Preference > Import module specifier ending** and change it to `.js/.ts`.
+
 ## Project Files
 
 Once the directory is created, you need to create the HTML file and the CSS file. The standard name for the initial HTML for any web site is `index.html`.
