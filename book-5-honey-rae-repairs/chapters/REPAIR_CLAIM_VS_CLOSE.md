@@ -3,7 +3,7 @@ In this chapter you will set up your Honey Rae's application for user authentica
 
 In the root of your project in the terminal, run the script below.
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/vf-react-vite-implementation/book-5-honey-rae-repairs/chapters/scripts/repair-auth.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/repair-auth.sh)"
 ```
 
 ## 📺 Watch the videos

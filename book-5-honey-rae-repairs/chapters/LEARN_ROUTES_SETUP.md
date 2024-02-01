@@ -9,7 +9,7 @@ npm install --save react-router-dom
 ```
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/vf-react-vite-implementation/book-5-honey-rae-repairs/chapters/scripts/learn-auth.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/learn-auth.sh)"
 ```
 
 This script will make the following directories and files in your project:
