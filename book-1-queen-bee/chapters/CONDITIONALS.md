@@ -97,8 +97,9 @@ code .
 ### 1. Check Your Math
 1. Use JavaScript to check and see if the following comparisons are true. For each of the following, log `"True fact!"` to the console if the condition evaluates to true and `"LIES!"` to the console if it doesn't.
     - Is the sum of 1 and 1 greater than 5?  
-    - Is the product of 4 and 5 less than our equal to 20?
+    - Is the product of 4 and 5 less than or equal to 20?
     - Is the difference between 6 and 2 greater than or equal to 0?
+    - Is the quotient of 100 divided by 4 greater than 20? 
 
 ### 2. Dog People vs. Cat People
 1. In your JavaScript file, declare a new variable called `likesDogs` and set it equal to `true` or `false`.
