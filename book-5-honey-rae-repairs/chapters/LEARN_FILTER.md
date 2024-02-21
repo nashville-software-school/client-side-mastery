@@ -11,3 +11,5 @@ In this chapter you will implement the following user stories for the ***[All Po
 **Then** only the posts with a title that contains the search term will display
 
 ## It's all you! You've got this 😎
+
+Up Next: [Learning Routes with Honey Rae's](./REPAIR_ROUTES_INTRO.md)

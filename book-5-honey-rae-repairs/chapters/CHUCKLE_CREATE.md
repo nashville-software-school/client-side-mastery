@@ -40,8 +40,6 @@ Add a text input to your JSX and _capture_ the user's input. What can be used to
 
 Start by adding a `jokeService` module to your services directory. Add a function here for Posting a new joke.
 
->***Good news, everyone!*** In react applications, you don't need to add `.js` to the end of file imports! The bundler for React takes care of this for us, so automatic imports are actually useful!
-
 Now add a button for posting the new joke. When the user clicks on the button, a new joke with the text the user inputted should be added to the database. All new jokes added to the database should have the `told` property set to `false`. 
 
 ## Clear the input field 
@@ -59,7 +57,7 @@ Yay! We can add new jokes! But our user experience is lacking a little. We want 
 Would you like the Head Coach of Dad Jokes to be the logo of your app? If so, follow the steps below: 
 
 1. Download [this photo](./images/steve.png) and add it to the `assets` folder of your application. 
-2. Import the picture into your `App.js` module.
+2. Import the picture into your `App.jsx` module.
    ```javascript
    import stevePic from "./assets/steve.png"
    ```
@@ -91,3 +89,5 @@ Would you like the Head Coach of Dad Jokes to be the logo of your app? If so, fo
     }
     ```
 5. You should be good to go!
+
+Up Next: [Reading chuckles](./CHUCKLE_READ.md)

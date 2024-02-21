@@ -49,4 +49,6 @@ Once you've successfully rendered the employees on the page, feel free to compar
 </details>
 
 ## 🧭 ***Explorer Exercise :*** 😂🗒 Chuckle Checklist Components
-Now that you understand how to pass props and render components, see if you can break up the Chuckle Checklist code into smaller components. Currently, all the code and functionality for the application is in `App.js`. Can any of the code be reused? What props would the new components need? There's no right or wrong way of doing this. Have fun with it and as always, ***don't be afraid to break something!***
+Now that you understand how to pass props and render components, see if you can break up the Chuckle Checklist code into smaller components. Currently, all the code and functionality for the application is in `App.jsx`. Can any of the code be reused? What props would the new components need? There's no right or wrong way of doing this. Have fun with it and as always, ***don't be afraid to break something!***
+
+Up Next: [Introducing Learning Moments](./LEARN_SETUP.md)

@@ -2,6 +2,15 @@
 In this chapter you will learn how to write a basic React functional component, write with the `JSX` syntax, and utilize the `useState` hook. 
 
 ## 📺 Watch The Video
+### ⚠️ Important note on the videos: 
+These videos were recorded before a change to the course. There will be a few differences between your project and the one in the video: 
+1. Your javascript files will end in `.jsx` instead of `.js`. 
+2. Your `index.html` is in the root of the project instead of in a `public` folder.
+3. You have `main.jsx` instead of `index.jsx`
+4. Lastly you have two more files in your root that are not in the video: `.eslintrc.cjs` and `vite.config.js`. You will not need to modify or do anything with these.
+
+Keep these differences in mind as you follow along in this course.
+
 Watch the [First Component](https://youtu.be/-WMvlULvBeU) video and implement the code yourself. Then read the rest of the chapter summarizing what you've learned.
  
 ## Component Structure and JSX
@@ -137,3 +146,5 @@ In essence, `useState` simplifies and streamlines the way we handle state change
 > **React Hooks:** Functions provided by the React library (prefixed with "use") that allow you to "hook" into state and lifecycle features of components.
 
 > **useState:** A crucial React Hook that empowers you to introduce state to a component. It takes an initial value as its argument and returns an array. This array contains the state value (index 0) and a function (index 1) to modify that state.
+
+Up Next: [Setting up the API](./REPAIR_API.md)

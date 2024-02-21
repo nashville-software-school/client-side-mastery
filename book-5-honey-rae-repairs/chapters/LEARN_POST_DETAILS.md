@@ -37,3 +37,5 @@ If you wish to get a resource by it's primary key (`id`) in json server, rather 
 ```javascript
 fetch(`http://localhost:8088/resources/${id}`)
 ```
+
+Up Next: [Creating a new post](./LEARN_CREATE.md)
