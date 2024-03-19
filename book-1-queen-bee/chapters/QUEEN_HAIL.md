@@ -1,11 +1,11 @@
-# 2. Her Majesty Function
+# Your Majesty
 
 ## Learning Objectives
 
 * You should be able to describe the purpose of a function in software
 * You should be able to identify a parameter in a function definition
 * You should be able to describe the purpose of a parameter
-* You should be able to identify where a function in invoked
+* You should be able to identify where a function is invoked
 * You should be able to identify an argument
 * You should be able to describe what purpose an argument serves
 * You should be able to describe what a function returns
@@ -20,7 +20,6 @@ cd ~/workspace
 mkdir majesty
 cd majesty
 touch main.js
-git init
 code .
 ```
 

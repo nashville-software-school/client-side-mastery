@@ -64,6 +64,7 @@ echo '.details {
 echo 'import { Walkers } from "./Walkers.js"
 import { CityList } from "./CityList.js"
 import { Assignments } from "./Assignments.js"
+import { RegisteredPets } from "./RegisteredPets.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -195,11 +196,11 @@ const database = {
 }
 
 export const getWalkers = () => {
-    return database.walkers.map(copyOfSingleWalker => ({...copyOfSingleWalker}))
+    return database.walkers.map(walker => ({...walker}))
 }
 
 export const getPets = () => {
-    return database.pets.map(copyOfSinglePet => ({...copyOfSinglePet}))
+    return database.pets.map(pet => ({...pet}))
 }
 ' > ./scripts/database.js
 
@@ -210,8 +211,8 @@ const pets = getPets()
 export const RegisteredPets = () => {
     let petHTML = "<ul>"
 
-    for (const singlePet of pets) {
-        petHTML += `<li>${singlePet.name}</li>`
+    for (const pet of pets) {
+        petHTML += `<li>${pet.name}</li>`
     }
 
     petHTML += "</ul>"
@@ -228,8 +229,8 @@ const walkers = getWalkers()
 export const Walkers = () => {
     let walkerHTML = "<ul>"
 
-    for (const singleWalker of walkers) {
-        walkerHTML += `<li>${singleWalker.fullName}</li>`
+    for (const walker of walkers) {
+        walkerHTML += `<li>${walker.fullName}</li>`
     }
 
     walkerHTML += "</ul>"
@@ -245,7 +246,7 @@ const walkers = getWalker()
 export const CityList = () => {
     let citiesHTML = "<ol>"
 
-    for (const singleWalker of walkers) {
+    for (const walker of walkers) {
         citiesHTML += `<li>${currentWalker.city}</li>`
     }
 
@@ -266,8 +267,8 @@ const walkers = getWalkers()
 const findWalker = (pet, allWalker) => {
     let petWalker = null
 
-    for (const singleWalker of allWalkers) {
-        if (singleWalker.id === pet.walkerId) {
+    for (const walker of allWalkers) {
+        if (walker.id === pet.walkerId) {
             petWalker = walker
         }
     }

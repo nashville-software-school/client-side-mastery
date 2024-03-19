@@ -1,4 +1,4 @@
-# 5. Queen Colony
+# Collection of Queens
 
 In this chapter, you are going to define a new function that will perform the task of adding objects that represent each queen to an array. Thus, you will practice the syntax for arrays and objects that you were introduced to in the Foundations Course.
 

@@ -1,4 +1,4 @@
-# 4. Bug Queen
+# Understanding Errors
 
 Your whole life, you've been trained to make mistakes disappear as quickly as possible. Part of this program is to begin the process of re-training your brain.
 

@@ -24,25 +24,11 @@ Your instruction team will provide a link for you to create your assessment repo
 1. Make sure you are in your `workspace` directory.
 1. `git clone {github repo SSH string}`.
 1. `cd` into the directory it creates.
-1. Run `npm install` in the terminal and wait for the process to complete.
 1. `code .` to open the project code.
 1. Use the `serve` command to start the web server.
 1. Open the URL provided in Chrome.
 
 Make sure your Developer Tools are open at all times while working on this project. Use the messages provided in the Console to determine what code needs to be fixed or implemented, and use breakpoints in the Sources tab to step through your code as you debug.
-
-## Testing Your Code
-
-As you work on the self-assessment, you can see if it passes the automated tests by following these steps. Be aware that all of the tests will fail when you start, but as you develop the features, some will start passing.
-
-1. Open a new terminal and don't close your current ones.
-1. `cd` to the self-assessment directory.
-1. Run the `npm test` command.
-1. Run the `npm install` command.
-1. You will see the tests run and get feedback on which ones are passing and which ones are failing.
-
-
-> Test output can sometimes be confusing for beginners to read, so please reach out to an instructor if you can't make sense of why a test is failing.
 
 ## Deep Learning
 

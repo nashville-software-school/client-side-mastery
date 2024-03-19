@@ -13,25 +13,11 @@ The first thing you need to do is create a new repository on Github's platform t
 1. Log into your Github account.
 1. Click the `+` sign in the top right corner.
 1. Choose "New repository".
-1. In the "Repository name" field, enter in `nss-aquarium`.
+1. In the "Repository name" field, enter in a name you want to use for your repository.
 1. Scroll down and click the green "Create Repository" button.
 1. Copy the repository's connection string.
     ![](./images/copy-github-connection-string.gif)
 1. Follow the second set of instructions.
     ![](./images/add-origin.png)
 
-Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your aquarium HTML, JavaScript and CSS files in it.
-
-
-## Practice: Backup Exercise
-
-* Create a Github repository for the Congressional Representative exercise, and push up that code.
-* Create a Github repository for the Coffee Houses exercise, and push up that code.
-
-When you are done, you should have three new repositories in your Github account.
-
-1. Aquarium
-1. Coffee Houses
-1. Congressional Representative
-
-> **Tip:** If you have any issues getting your code onto Github, see a member of your instructional team immediately so that you have a backup of your code. Pushing your code to Github is not optional. It's a required part of this program.
+Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your files have been uploaded.

@@ -1,11 +1,5 @@
 # Collecting the Harvest
 
-## Setup
-
-Have a terminal window open and change directory to `~/workspace/modern-farm`.
-
-Run `npm run test` to start the automated testing task.
-
 ## Harvesting Instructions
 
 1. Create a `scripts/harvester.js` module.

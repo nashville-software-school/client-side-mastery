@@ -1,17 +1,11 @@
 # Sowing the Field With Your Tractor
 
-## Setup
-
-Have a terminal window open and change directory to `~/workspace/modern-farm`.
-
-Run `npm run test` to start the automated testing task.
-
 ## Sowing Instructions
 
 1. Create a `scripts/tractor.js` module.
 1. In this module, define and export a `plantSeeds` function.
 1. The function must accept the year's planting plan as input _(i.e. it must define a parameter)_.
-1. The plan is an array. It contains 4 arrays representing the rows in the field to be plants. Figure out how to iterate both the parent array and the child arrays.
+1. The plan is an array. It contains 3 arrays representing the rows in the field to be plants. Figure out how to iterate both the parent array and the child arrays.
     ```js
     // Example growing plan. Actual plan is bigger.
     [

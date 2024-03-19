@@ -1,4 +1,4 @@
-# 7. Servicing Multiple Areas
+# Mobile Walkers
 
 As DeShawn Dog Walking platform grows in popularity, some of the walkers decide that they want to operate in multiple areas instead of just one. This has a major impact on the data for the project because it changes the relationship between walkers and cities.
 

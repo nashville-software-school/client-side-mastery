@@ -92,7 +92,7 @@ As you can see, the `addEventListener` function got passed two arguments.
 
 ## For The Brave Of Heart
 
-If you'd like to practice passing anonymous functions around and using lambda expressions, see if you can tackle this challenge.
+If you'd like to practice passing functions around and using lambda expressions, see if you can tackle this challenge.
 
 1. Define a function named `broadCast`. It should define a single parameter, whose value will be a function.
 1. Define a function named `announceRain` that should log this message to the console: "Grab an umbrella. It's going to rain today."

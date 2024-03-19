@@ -1,4 +1,4 @@
-# 6. Iterating the Queens
+# Hail All Queens
 
 In this chapter, you are going to iterate the queens array to hail each one.
 
@@ -28,8 +28,8 @@ Type in `forof` in the editor, and then press your Tab key and you will have som
 
 Then replace the default variable names it provides with more appropriate variable names.
 
-* The first variable will store each queen object in the array, so `queenObject` would be appropriate
-* The second variable must be the one whose value is the array, so this **must** be `queens` because that is what we named our array
+* The first variable will store each queen object in the array, so `queen` or `queenObject` would be appropriate
+* The second variable must be the one whose value is the array, so this **must** be `queens`
 
 ![](./images/queen-for-of-loop.gif)
 
@@ -38,7 +38,7 @@ The final step is to invoke the hailing function and pass the queen's name to it
 You need to access the correct property on the object inside the parenthesis when the function is invoked. There is a hint below if you can't figure it out with your peers.
 
 ```js
-for (const queenObject of queens) {
+for (const queen of queens) {
 
     const hailMessage = hailTheQueen()  // What should be passed as an argument?
     console.log(hailMessage)
@@ -51,7 +51,7 @@ for (const queenObject of queens) {
 
 
 ```js
-const hailMessage = hailTheQueen(queenObject.name)
+const hailMessage = hailTheQueen(queen.name)
 ```
 </details>
 

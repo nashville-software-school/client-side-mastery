@@ -7,8 +7,9 @@ For this application, you are going to allow customers to design their own car d
 ## Setup
 
 1. Create `workspace/cars-r-us` directory.
-1. Create `scripts` and `styles` sub-directories
-1. Create `main.js` and `database.js` in scripts directory
+1. Create `scripts`, `database`, and `styles` sub-directories
+2. Create `main.js` in scripts directory
+3. Create `database.json` in API directory
 
 ## Options
 
@@ -56,8 +57,6 @@ Before you create any actual state data structures in your code, create an ERD f
 
 Once you have an ERD created, but are unsure if you got it right, feel free to run it by your peers or an instructor.
 
-## Database
+## API
 
-Once your ERD is complete, then go to the `database` module and start setting up your data structures for each resource. Also set up the `get*()`functions for each collection of customizations so that other modules can import the data and convert it to HTML.
-
-You might forget some of them now, and that's fine. You'll discover what you missed when you start to build out the functionality.
+Once your ERD is complete, create the basic structure in your `database.json` file and enter in the data for the options above.

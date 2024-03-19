@@ -1,4 +1,4 @@
-# 1. Project Setup
+# Setting Up Your Project
 
 ## Learning Objectives
 
@@ -6,26 +6,28 @@
 * You should be able to create new files in the terminal with the `touch` command.
 * You should be able to navigate directories in the terminal with the `cd` command.
 
-Before you start writing code for any application, you want to set up the directory structure and create some initial files on the file system first. In this book of the NSS course, you are going to build a web page to track the inventory of a rare fish aquarium.
 
-You can watch the [Martin's Aquarium Directories and Files](https://www.youtube.com/watch?v=ogHzpf4Kelk) video that will also show you the basic terminal commands to use for this.
+## Getting Started
 
-Since all of the work you will be doing at NewForce will be contained in the `~/workspace` directory, you need to create a `martins-aquarium` subdirectory.
+1. Make a new project directory in workspace
+    ```sh
+    cd ~/workspace
+    mkdir martins-aquarium
+    ```
+2. Navigate to your project directory
+    ```sh
+    cd martins-aquarium
+    ```
+3. Type in the `git init` command
+4. You now have a git repository for tracking your progress
 
-> If you don't have a workspace directory yet, go to your terminal and type in the following commands.
->    1. `cd` - This always takes you to your home directory
->    2. `mkdir workspace` - This makes the directory which will contain all of your projects
->    3. `cd workspace` - This changes the active directory to `workspace` which is now a sub-directory of your home directory.
+### Configure Auto Import in Visual Studio Code
 
-While in your workspace directory, type `mkdir martins-aquarium` to make a new sub-directory which will contain the files for this project.
+1. In VS Code, press ctrl+, on Windows, or cmd+, on Mac to open settings
+2. Search for the word "import"
+3. Scroll down to the setting **JavaScript > Preference > Import module specifier ending** and change it to `.js/.ts`.
 
-```sh
-{home directory}
-    +-- workspace
-        +-- martins-aquarium
-```
-
-Go ahead and `cd martins-aquarium` so that you are working in your project directory.
+## Project Files
 
 Once the directory is created, you need to create the HTML file and the CSS file. The standard name for the initial HTML for any web site is `index.html`.
 
@@ -49,35 +51,23 @@ mkdir scripts
 touch scripts/main.js
 ```
 
-That's all you need to do in this chapter. Below are optional challenges you can try if you want to.
+Once all of the files are created, make sure you add and commit them before pushing them to Github.
 
+```sh
+git add index.html styles/main.css scripts/main.js
+git commit -m "First commit for Martin"
+```
 
-## Optional Challenge: Terminal Welcome Message
+## Create Github Repo
 
-> **NOTE:** Challenges are only to be attempted once the practice exercises are complete and you feel you both (a) a solid grasp on the basic knowledge of the current topic, and (b) you have adequate time to devote to them. They are intended to be difficult to solve and you must spend time researching it before any instructor will offer guidance.
-<details>
-<summary> Bash </summary>
-The terminal can do everything that all of your other applications you have, or ever will have, can do. There's just not a visual interface for doing it. It's all just text.
+1. Log into your Github account.
+1. Click the `+` sign in the top right corner.
+1. Choose "New repository".
+1. In the "Repository name" field, enter in `martins-aquarium`.
+1. Scroll down and click the green "Create Repository" button.
+1. Copy the repository's connection string.
+    ![](./images/copy-github-connection-string.gif)
+1. Follow the second set of instructions.
+    ![](./images/add-origin.png)
 
-In this challenge, you should research bash variables, bash aliases, and find out how to customize your `zsh` _(.zshrc)_ or `bash` _(.bashrc)_ initialization script to have a welcome message show up every time your launch a terminal session.
-
-![welcome message in the terminal](./images/terminal-welcome.gif)
-
-Helpful searches to get you started:
-
-1. https://duckduckgo.com/?q=bash+my+username&ia=web
-1. https://duckduckgo.com/?q=bash+current+day&ia=web
-1. https://duckduckgo.com/?q=bash+display+calendar&ia=web
-1. https://duckduckgo.com/?q=bash+script+for+beginners&ia=web
-1. https://github.com/robbyrussell/oh-my-zsh
-
-</details>
-
-## Videos to watch if you want to learn more
-
-These are supplementary, and are not required content. They are for your additional learning if you wish to watch them.
-
-1. [Bash Basics Part 1 of 8 | Access and Navigation](https://youtu.be/eH8Z9zeywq0?t=885)
-1. [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
-1. [The Most Important Thing You'll Learn in the Command Line](https://www.youtube.com/watch?v=q7-aEspwwEI)
-1. [Shell Scripting Tutorial](https://www.youtube.com/watch?v=hwrnmQumtPw)
+Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your aquarium HTML, JavaScript and CSS files in it.

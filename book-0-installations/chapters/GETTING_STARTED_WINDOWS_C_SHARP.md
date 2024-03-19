@@ -4,21 +4,31 @@
 
 Visit the [Visual Studio Code](https://code.visualstudio.com/) website to download and install the code editor. This is the editor you will be using for the next 6 months.
 
+### Extensions
+
+Once Visual Studio Code is installed, there are several extensions that will be helpful for you as a beginner. Click on the links below to visit each extension page and click the **Install** button for each one.
+
+* [Prettier Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+* [Auto close tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+* [Live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+* [Multiple cursor case preserve](https://marketplace.visualstudio.com/items?itemName=Cardinal90.multi-cursor-case-preserve)
+* [Code spell checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+
 ## Git Bash (i.e. the terminal)
 
 Later in the instructions, we will ask you to type a command into your terminal. For Windows, this is the **Git Bash** application.
 
 Visit the [Git Bash](http://www.git-scm.com/downloads) download page click the "Download for Windows" button, and once complete, install the software.
 
-## Windows Terminal Preview
+## Windows Terminal
 
-Visit the [Windows Terminal Preview](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n8g5rfz9xk3?cid=msft_web_chart&activetab=pivot:overviewtab) download page and open it in the Microsoft Store App. This will be your default terminal which you will use to navigate your file system, and run development tools throughout the course.
+Visit the [Windows Terminal](https://apps.microsoft.com/detail/9N0DX20HK701?cid=msft_web_chart&activetab=pivot%3Aoverviewtab&hl=en-us&gl=US) download page and open it in the Microsoft Store App. This will be your default terminal which you will use to navigate your file system, and run development tools throughout the course.
 
-Once Windows Terminal Preview is installed:
+Once Windows Terminal is installed:
 
 1. Go to the `Start` menu (Windows key)
-2. Search for `Windows Terminal Preview`
-3. Open `Windows Terminal Preview`
+2. Search for `Windows Terminal`
+3. Open `Windows Terminal`
 4. By default, this will open a new PowerShell terminal window. _Do **not** use the PowerShell terminal window._
 5. Click the down arrow <kbd>﹀</kbd> located at the top of the terminal window.
 6. Select **Git Bash** from the dropdown menu to start a new **Git Bash** terminal window.
