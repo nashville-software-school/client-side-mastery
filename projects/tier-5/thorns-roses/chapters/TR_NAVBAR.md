@@ -2,13 +2,7 @@
 
 ## Setup
 
-You need the React Router package installed for this application. Run this command in the root directory of your project.
-
-```sh
-npx create-react-app thorns-roses
-cd thorns-roses
-npm install --save react-router-dom
-```
+Follow the same setup instruction that you followed for Honey Rae's Repair Shop. Make sure React Router is install as well.
 
 ## Instructions
 
