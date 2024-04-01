@@ -49,8 +49,7 @@ Here's how that looks
 | 14 | [Employee vs Customer](./chapters/REPAIR_EMPLOYEE_VS_CUSTOMER.md) <br/> <sub style="font-size:0.85rem;">#conditional-routes</sub> | [Edit Post](./chapters/LEARN_EDIT_POST.md) |
 | 15 | [Customer Tickets](./chapters/REPAIR_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#conditional-rendering #filter #delete</sub> | [Favorites](./chapters/LEARN_FAVORITES.md) |
 | 16 | [Create Ticket](./chapters/REPAIR_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #post</sub> | [User Profile](./chapters/LEARN_VIEW_PROFILE.md) |
-| 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#forms #put</sub> | [Edit Profile](./chapters/LEARN_EDIT_PROFILE.md) |
-| 17 | Edit Profile <br/> <sub style="font-size:0.85rem;">#forms #put</sub> |  |
+| 17 |  | [Edit Profile](./chapters/LEARN_EDIT_PROFILE.md) |
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
