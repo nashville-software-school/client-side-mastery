@@ -23,7 +23,7 @@ In order to automate the installation of the tools you need, you need to create 
 
 You will now see the screen to generate a token.
 
-1. In the **Note** field, enter _NSS Installs Token_.
+1. In the **Note** field, enter _NewForce Installs Token_.
 2. Make it expire in 7 days.
 3. Scroll down into the permissions and check the `admin:public_key` checkbox and click it.
 4. Scroll all the way down and click **Generate token**.

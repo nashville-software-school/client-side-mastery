@@ -11,7 +11,7 @@ Successful software developers are highly proficient at a the follow skills.
 1. **Efficient learning**. Efficient learners are able to objectively and critically identify gaps in their skills and devise a coherent strategy for gaining those skills.
 1. **Communication**. To be truly valuable, you have to master complex communication - both to your technical and non-technical teammates. Developers who cannot communicate effectively bring little value to modern teams.
 
-Visit the [Learning Platform](https://learning.nss.team) to learn more.
+
 
 ## Advice From Professionals
 

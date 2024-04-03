@@ -164,7 +164,7 @@ const Article = {
     date: 1512877301083,
     author: "Steve Brownlee",
     content: "Using Object.create() gives you such incredible control when creating objects in your system that are actors with properties and behaviors",
-    tags: ["nss", "objects", "javascript"]
+    tags: ["newforce", "objects", "javascript"]
 }
 ```
 
@@ -199,7 +199,7 @@ const Article = Object.create(null, {
         enumerable: true
     },
     _tags: {
-        value: ["nss", "objects", "javascript"],
+        value: ["newforce", "objects", "javascript"],
         enumerable: true
     },
     tags {

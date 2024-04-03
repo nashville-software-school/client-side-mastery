@@ -32,7 +32,7 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 | #   | 🎓 Self-Assessment                                                     |
 | --- | ---------------------------------------------------------------------- |
 | 1   | [Reflect on your Conceptual Understanding](./chapters/SELF_REFLECTIONS.md) |
-| 2   | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) |
+<!-- | 2   | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) | -->
 
 ## 🧭 Explorer Chapters
 
