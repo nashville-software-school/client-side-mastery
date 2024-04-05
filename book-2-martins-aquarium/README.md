@@ -4,7 +4,7 @@ In this book, you will learn how to build your first dynamic web page with HTML,
 
 ## Git &amp; Github Reference Chapters
 
-:point_up: Please note that these four chapters are for you to refrence as you work through the core projects. Start at Sallys Interests and refer back to this section only when you have began working with github.
+ Please note that these four chapters are for you to refrence as you work through the core projects. Start at Sallys Interests and refer back to this section only when you have began working with github.
 
 
 | # | Tracking and Backing Up Your Code |

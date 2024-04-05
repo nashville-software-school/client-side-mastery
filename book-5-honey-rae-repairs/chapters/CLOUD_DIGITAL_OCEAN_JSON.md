@@ -21,7 +21,7 @@ Your applicatons are considered to be static apps, so you won't be charged for t
         "keywords": [
             "json-server, node, REST API"
         ],
-        "author": "NSS Student",
+        "author": "NewForce Student",
         "license": "ISC",
         "dependencies": {
             "json-server": "latest"

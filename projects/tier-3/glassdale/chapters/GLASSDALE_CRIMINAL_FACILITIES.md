@@ -111,7 +111,7 @@ There is a new `<div>` element in the criminal HTML representation that uses the
 
 Be aware that this is all highly abstract code that will push your ability to visualize the data flow to **the extreme**!!
 
-You are going to pattern match how to write code for a many-to-many relationship for quite a while. Doing this from scratch requires a neural rewiring that takes much longer than your time here at NSS.
+You are going to pattern match how to write code for a many-to-many relationship for quite a while. Doing this from scratch requires a neural rewiring that takes much longer than your time here at NewForce.
 
 ```js
 export const Criminal = (criminalObject, facilities) => {

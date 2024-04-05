@@ -68,7 +68,7 @@ One of the main differences between these two data structures is what values are
 1. String
 1. Symbol
 
-Now, you will not be using the `Symbol` data type during your time at NSS, and likely never as a professional either, so in essence, keys can only be strings.
+Now, you will not be using the `Symbol` data type during your time at NewForce, and likely never as a professional either, so in essence, keys can only be strings.
 
 For a Map, a key can be anything.
 

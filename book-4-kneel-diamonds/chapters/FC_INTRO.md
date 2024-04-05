@@ -10,7 +10,7 @@ In this introduction, you are going to request data from someone else's computer
 
 This is one of the most significant cognitive challenges that beginner software developers face. The asynchronous nature of how the web browser handles WWW requests stretches your working memory to capacity. It will take weeks and weeks of practice before you have any chance of truly understanding the mechanism.
 
-You may not gain understanding until your time after NSS and a year or two on the job.
+You may not gain understanding until your time after NewForce and a year or two on the job.
 
 However, you will learn how to write the correct syntax for one, and where you need to make the requests.
 

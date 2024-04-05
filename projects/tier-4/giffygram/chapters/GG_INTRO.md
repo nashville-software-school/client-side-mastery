@@ -4,7 +4,7 @@ Perhaps you've used other social media platforms that allow users to share beaut
 
 ## Minimally Viable Product (MVP)
 
-MVP is an acronym that you are going to hear many times here at NSS and when you are working as a professional. Very briefly, an MVP is the absolute minimal amount of features that are needed for an application so that it can be put in the hands on users to get feedback.
+MVP is an acronym that you are going to hear many times here at NewForce and when you are working as a professional. Very briefly, an MVP is the absolute minimal amount of features that are needed for an application so that it can be put in the hands on users to get feedback.
 
 Here are some example MVP features.
 
