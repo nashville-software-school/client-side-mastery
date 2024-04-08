@@ -22,4 +22,4 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 
 | #   | 🎓 Self-Assessment                                                     |
 | --- | ---------------------------------------------------------------------- |
-| 1   | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) |
+| 1   | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) | 

@@ -37,4 +37,4 @@ Tier 4 projects must be worked on as a team. They are broad in scope, require co
 Tier 5 projects are intended only for those students who have completed the core React course chapters and would like to explore other features of the React library.
 
 1. [Nashville Kennels](./tier-5/kennels/) - This project introduces you to the Context API. You will use context provider components and a new `useContext()` hook to get state from the provider components.
-1. [Thorns 'N Roses](./tier-5/thorns-roses/) - This project doesn't introduce any new concepts, but it will stretch your understanding of data relationships. There are many resources, and it is crucial that you design a correct ERD before you start, or it will end in disaster.
+1. [Thorns 'N Roses](./tier-5/thorns-roses/) - This project doesn't introduce any new concepts, but it will stretch your understanding of data relationships. There are many resources, and it is crucial that you design a correct ERD before you start, or it will end in disaster. 

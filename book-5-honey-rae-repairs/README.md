@@ -65,4 +65,4 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 
 | # | Project&nbsp;Name | Description |
 |--|--|--|
-|1| [🌹&nbsp;Thorns&nbsp;&amp;&nbsp;Roses](../projects/tier-5/thorns-roses/) | Want the ultimate challenge? Using complex data relationships with React, build a project that manages state for flowers, nurseries, distributors, retailers, and customers buying flowers at the retailers. |
+|1| [🌹&nbsp;Thorns&nbsp;&amp;&nbsp;Roses](../projects/tier-5/thorns-roses/) | Want the ultimate challenge? Using complex data relationships with React, build a project that manages state for flowers, nurseries, distributors, retailers, and customers buying flowers at the retailers. | 
