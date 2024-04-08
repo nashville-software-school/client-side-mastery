@@ -239,7 +239,7 @@ export const Products = () => {
     let html = "<ul>`
 
     for (const product of products) {
-        html += `<li id="product--${product.id}">${product.title}</li>`
+        html += `<li>${product.title}</li>`
     }
 
     html += "</ul>"
@@ -256,7 +256,7 @@ export const Employees = () => {
     let html = "<ul>"
 
     for (const employee of employees) {
-        html += `<li id="employee--${employeeId}">${employee.name}</li>`
+        html += `<li>${employee.name}</li>`
     }
 
     html += "</ul>"

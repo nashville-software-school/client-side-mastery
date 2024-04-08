@@ -6,13 +6,9 @@ You seen the following phrase several times in the chapters of this book.
 
 However, there's one case in your existing application where you are **not** following that design pattern.
 
-When the user chooses a size, styles, or metal, you are updating the value of one of the keys in the `orderBuilder` state in your database. Right now, the HTML is not regenerated when that happens.
+When the user chooses a size, styles, or metal, you are updating the value of one of the keys in the transient state. Right now, the HTML is not regenerated when that happens.
 
-Your challenge is to regenerate the HTML every time one of the following functions is invoked in your `database.js` module.
-
-1. `setType()`
-1. `setStyle()`
-1. `setMetal()`
+Your challenge is to regenerate the HTML every time one of the transient state properties changes.
 
 ## Expressing User Choices in HTML
 

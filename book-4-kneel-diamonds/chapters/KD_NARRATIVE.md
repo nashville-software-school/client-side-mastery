@@ -28,60 +28,50 @@ Today, you used your new key card to enter in through the back door, walked thro
 >
 > "All of the metals, gems both precious and semi, colors, engravings, and styles for our jewelry is in there," her long index finger, tipped with a purple-painted nail, is extended towards the binder.
 
-You spend the next several hours scouring all of the possible options, decide to start with custom rings, and finally write some JavaScript code that represents what is in the binder. You decide to price metals by the ounce.
+You spend the next several hours scouring all of the possible options, decide to start with custom rings, and design the data structure to reflect what is in the binder. You decide to price metals by the ounce.
 
-```js
-const metals = [
-    { metal: "Sterling Silver", price: 12.42 },
-    { metal: "14K Gold", price: 736.4 },
-    { metal: "24K Gold", price: 1258.9 },
-    { metal: "Platinum", price: 795.45 },
-    { metal: "Palladium", price: 1241.0 }
+#### Metals JSON Data
+
+```json
+[
+    { "metal": "Sterling Silver", "price": 12.42 },
+    { "metal": "14K Gold", "price": 736.4 },
+    { "metal": "24K Gold", "price": 1258.9 },
+    { "metal": "Platinum", "price": 795.45 },
+    { "metal": "Palladium", "price": 1241.0 }
 ]
 ```
 
-Gems are a bit tricky, you discovered, as you read the information in the binder. Intead of price following a straightforward formula per carat, it increased as the carat got larger. A one carat stone costs more than double the cost of a half carat stone. Again, two carat stones will cost significantly more.
+Gems are a bit tricky, you discovered, as you read the information in the binder. Intead of price following a straightforward formula per caret, it increased as the caret got larger. A one carat stone costs more than double the cost of a half carat stone. Again, two carat stones will cost significantly more.
 
-```js
-const diamonds = [
-    { carats: 0.5, price: 405 },
-    { carats: 0.75, price: 782 },
-    { carats: 1, price: 1470 },
-    { carats: 1.5, price: 1997 },
-    { carats: 2, price: 3638 }
+#### Gem Size JSON Data
+
+```json
+[
+    { "carets": 0.5, "price": 405 },
+    { "carets": 0.75, "price": 782 },
+    { "carets": 1, "price": 1470 },
+    { "carets": 1.5, "price": 1997 },
+    { "carets": 2, "price": 3638 }
 ]
 ```
 
 Luckily, you find that Natasha prices styles with a consistent pattern. Classic band style costs the least, modern styles cost a bit more, and vitage style cost the most because they require the most detailing.
 
-```js
-const ringStyles = [
-    { style: "Classic", price: 500 },
-    { style: "Modern", price: 710 },
-    { style: "Vintage", price: 965 }
+#### Styles JSON Data
+
+```json
+[
+    { "style": "Classic", "price": 500 },
+    { "style": "Modern", "price": 710 },
+    { "style": "Vintage", "price": 965 }
 ]
 ```
 
-## How Application Should Work
+## User Experience
 
 The following animation shows how the layout of the application, and how the user can select options and then click a button to generate a custom jewelry order. As soon as the order is generated, it should immediately appear in the DOM without refreshing the browser.
 
 Up to this point, you've only handled "click" events. In this application, you will handle "change" events as well.
 
 ![](./images/kneel-diamonds-working.gif)
-
-## Project Setup
-
-Now that you have a paying job working for Kneel Diamonds, you are going to build out an application for producing different kinds of custom jewelry orders.
-
-Run the following command in your terminal.
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-kneel-diamonds/chapters/scripts/kneel-diamonds-setup.sh)"
-```
-
-It will create the following directory for your project and provider some boilerplate code. Once it is complete, move on to the next chapter.
-
-```sh
-~/workspace/kneel-diamonds
-```

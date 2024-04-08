@@ -29,7 +29,7 @@ Just like with your phones and toys from the previous project, start with a vari
 > **Vocabulary check:** What is the data type of each property? Which ones should be a string type, and which should be an integer?
 
 
-Here's some starter code. You add the rest of the properties to each object. You decide what the values of each property should be. Think back on the last few days of what you have worked on at NSS.
+Here's some starter code. You add the rest of the properties to each object. You decide what the values of each property should be. Think back on the last few days of what you have worked on at NewForce.
 
 > #### `~/workspace/daily-notes/notes.js`
 

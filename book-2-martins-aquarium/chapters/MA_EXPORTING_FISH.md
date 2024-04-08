@@ -1,4 +1,4 @@
-# 9. Exporting Fish
+# Using the Database
 
 A database module in an application has the responsibility of maintaining the state of a particular type of data. In this application, the `database.js` module holds the state of each fish. Other modules in the application can request that state, and then use it for whatever they are responsible for.
 
@@ -20,7 +20,7 @@ Don't worry about understanding all of the syntax here. Just remember that it co
 
 ```js
 export const getFish = () => {
-    return database.fish.map(copyOfSingleFishObject => ({...copyOfSingleFishObject}))
+    return database.fish.map(fish => ({...fish}))
 }
 ```
 
@@ -35,8 +35,8 @@ import { getFish } from './database.js'
 
 const allFish = getFish()
 
-for (const singleFish of allFish) {
-    console.log(singleFish)
+for (const fish of allFish) {
+    console.log(fish)
 }
 ```
 Now, you're ready to see if your fish print to the console. But, first you'll need to tell your browser to load and run your javascript. To do that, add a `<script>` tag to `index.html`, right above the closing `<body>` tag.

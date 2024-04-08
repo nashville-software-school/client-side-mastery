@@ -1,4 +1,4 @@
-# 3. Watching Your Code Run
+# Watching JavaScript Work
 
 In this chapter, you are going to see how to run a tool called the debugger which allows you to watch, step by step, how JavaScript executes your code.
 

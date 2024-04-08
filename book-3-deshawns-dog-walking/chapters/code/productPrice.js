@@ -2,12 +2,11 @@ document.addEventListener(
     "click",
     (clickEvent) => {
         const itemClicked = clickEvent.target
-        if (itemClicked.id.startsWith("product")) {
-            const [, productId] = itemClicked.id.split("--")
 
+        if (itemClicked.dataset.type === "product") {
             for (const product of products) {
                 if (product.id === parseInt()) {
-                    window.alert(` ${} costs ${} `)
+                    window.alert(`${} costs ${} `)
                 }
             }
         }

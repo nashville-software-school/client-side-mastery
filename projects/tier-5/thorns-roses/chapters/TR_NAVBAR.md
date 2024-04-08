@@ -5,8 +5,8 @@
 You need the React Router package installed for this application. Run this command in the root directory of your project.
 
 ```sh
-npx create-react-app honey-rae-repairs
-cd honey-rae-repairs
+npx create-react-app thorns-roses
+cd thorns-roses
 npm install --save react-router-dom
 ```
 

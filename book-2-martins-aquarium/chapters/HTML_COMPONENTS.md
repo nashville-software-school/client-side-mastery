@@ -1,4 +1,4 @@
-# 2. HTML Structure & Layout with Sally's Interests 
+# HTML Components
 
 ## Why Are You Learning This?
 
@@ -20,44 +20,81 @@ What is a component and how do HTML elements apply to the concept? Look at the i
 ![semantic tags](./images/html-semantic-tags.png)
 
 ## CSS Naming Conventions
----
+
 Styling components intelligently can be handled through naming your classes according to the component name. One popular convention is the [BEM method](http://getbem.com/introduction/).
 
-If you were creating an HTML component that represents you, here's an example of how the code would look using HTML semantic elements and BEM class names.
+If you were creating an HTML component that represents you, here's an example of how the code would look using HTML semantic elements and BEM class names. Copy and paste this code in the **index.html** file of **sallys-interests**.
 
 ```html
-<main>
-    <!-- Parent biography component -->
-    <article class="bio">
-
-        <!-- Child biography component -->
-        <section class="bio__name">
-            <h1>Sally Forthwright</h1>
-        </section>
-
-        <!-- Child biography component -->
-        <section class="bio__address">
-            100 Infinity Way, Nashville
-        </section>
-
-        <!-- Child biography component -->
-        <section class="bio__interests">
-            <div class="interest">
-                Oyster harvesting
-            </div>
-            <div class="interest">
-                Juggling
-            </div>
-            <div class="interest">
-                Triathlons
-            </div>
-        </section>
-
-    </article>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Sally's Interests</title>
+</head>
+<body>
+    <main>
+        <!-- Parent biography component -->
+        <article class="bio">
+    
+            <!-- Child biography component -->
+            <section class="bio__name">
+                <h1>Sally Forthwright</h1>
+            </section>
+    
+            <!-- Child biography component -->
+            <section class="bio__address">
+                100 Infinity Way, Nashville
+            </section>
+    
+            <!-- Child biography component -->
+            <section class="bio__interests">
+                <div class="interest">
+                    Oyster harvesting
+                </div>
+                <div class="interest">
+                    Juggling
+                </div>
+                <div class="interest">
+                    Triathlons
+                </div>
+            </section>
+    
+        </article>
+    </main>
+</body>
+</html>
 ```
 
 Each of those components can be styled individually with a clear, concise name that also provides some semantic context when looking at the CSS file. Before you style them, all you have is structure as some very basic, default styles that the browser applies to your elements.
+
+In the **sallys-interests** directory in your terminal, run the `serve` command to start your web server. Make sure you are not in your **styles** directory when you do this. Also make sure you are not in your **workspace** directory.
+
+After you run `serve` a URL will be displayed in your terminal. Copy pasta that URL into your browser.
+
+```sh
+   ┌────────────────────────────────────────────────────┐
+   │                                                    │
+   │   Serving!                                         │
+   │                                                    │
+   │   - Local:            http://localhost:3000        │
+   │   - On Your Network:  http://192.168.68.113:3000   │
+   │                                                    │
+   │   Copied local address to clipboard!               │
+   │                                                    │
+   └────────────────────────────────────────────────────┘
+```
+
+If this doesn't work for you, the initial installations may not have worked correctly. Run the following commands in your terminal and see if you can run **serve** afterwards.
+
+```sh
+npm config set prefix $HOME/.npm-packages
+echo 'export PATH="$PATH:$HOME/.npm-packages/bin"' >> $HOME/.profile
+source $HOME/.profile &> profile-reload.log
+npm i -g serve json-server >> /dev/null 2>> error.log
+```
 
 ![](./images/sally-html-only.png)
 
@@ -74,7 +111,7 @@ Now you can style any HTML component with a class of `interest` and they will al
 ![](./images/sally-initial-css.png)
 
 ## Grid Layout with Flexbox
----
+
 Flexbox is a tool that you can use in CSS to take the structure of your HTML and apply interesting layouts for it. One of the most common layout types is a grid, and it's straightforward to do with Flexbox.
 
 Unfortunately, these Flexbox properties are hard to remember, so you should come back to this chapter and review them whenever you need to use Flexbox to make a grid layout.
@@ -163,111 +200,6 @@ The final touch is to center align the text in each of the interest boxes.
 ```
 
 ![](./images/sally-center-aligned-text.png)
-
-
-## Practice: Coffee Houses of Nashville
-
-If the serve command doesn't work, please enter this command in your terminal
-`npm install --global serve`
-
-If it still doesn't work, come see an instructor!
-
-
-> The learning objective for this practice exercise is to use `display:flex` on a list component, and then add additional CSS properties to achieve a desired layout.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Nashville Coffee Houses</title>
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
-  <body>
-	<header class="pageHeader">Coffee Houses of Nashville</header>
-
-    <section class="list">
-      <article class="shop">The Jam</article>
-      <article class="shop">The Well</article>
-      <article class="shop">Red Bicycle</article>
-      <article class="shop">Crema</article>
-      <article class="shop">Frothy Monkey</article>
-      <article class="shop">8th &amp; Roast</article>
-      <article class="shop">Bongo Java</article>
-      <article class="shop">Flatrock</article>
-      <article class="shop">Fido</article>
-      <article class="shop">Steadfast Coffee</article>
-      <article class="shop">Dose Coffee</article>
-      <article class="shop">Sam &amp; Zoes</article>
-      <article class="shop">Slow Hand Coffee</article>
-      <article class="shop">The Horn</article>
-    </section>
-  </body>
-</html>
-```
-
-From that HTML, use Flexbox to achieve this layout. You don't need to add the border to each coffee house component, but you can if you like. It's been added in this example to highlight the alignment and spacing you're shooting for. Add this html code to an `index.html` file. Add a folder called `styles` as a sibling to the html file. Inside the `styles` folder create a `main.css`. This is where you will add your styling.
-
-To see the changes you've made in Chrome: In the terminal with this this folder type in `serve`. This looks at the code you have in the `index.html` and shows it in the browser. While the `serve` command is running you can go to `http://localhost:3000` to see your new webpage. After you make changes to the css, you'll need to refresh the page to see those updates.
-
-![flexbox layout](./images/flexbox.png)
-
-
-## Practice: Flexbox Froggie
----
-[Flexbox Froggie](http://flexboxfroggy.com/) - online game with 24 challenges.
-
-## Practice: Congressional Representative
----
-You're going to create an HTML component to represent a political candidate. Specifically, the representative of your Congressional district. Visit the GovTrack site link below, enter in your home address, and you'll find basic information about your representative.
-
-[GovTrack - Congressional District Map](https://www.govtrack.us/congress/members/map)
-
-1. In your HTML, create an `article` element that will serve as your main representative component. Give the element a unique identifier.
-1. In this component, create a sub-component for basic information using the `section` element. In this section create elements for the representative's image, name, district info, and political affiliation.
-1. Beneath the basic information, you will create a sub-component, using a `section` element, to list any committees the candidate is serving on.
-1. The last component will hold links to any legislation that your representative has enacted.
-
-Make sure you use good BEM-style class names for each element in your components. Put a comment above each component explaining what it is.
-
-## If you're feeling it
---- 
-There are a couple challenges below that will help you understand UI/UX better. PLEASE remember, when we finish our projects they do not have to look like a designer has created it. We just want it to have the feel of that clean girl aesthetic. Minimal, no white backgrounds (cream, light grey, light blue) with CONTRASTING font colors (black, navy, charcoal) that are EASILY legible and doesn't feel like you're looking into the sun when it pops up on a page. 
-<details>
-<summary> CHALLENGES </summary>
-
-## Congressional Representative UI/UX Challenge
-
-**This is an optional challenge once you meet the requirements above. Make a new directory for this challenge.**
-
-> UX CONCEPT: Web pages should be designed in such a way that they are easy to scan.
-
-How to improve scannability?
-* Create visual hierarchies: What is the most important information on the page? What is supportive information? Can you use bulleted lists?
-* Use universally accepted conventions: These may include logo/tagline position, buttons/links, social networking options, etc.
-* Break a page into clearly defined sections.
-* Make it obvious what’s clickable.
-
-Review the page you just created. Based on the items above, identify some opportunities to improve the UI/UX. Refactor your page to improve the usability. You may add semantic tags, content, and styles.
-
-Background color/image - ensure the copy (text color) has good contrast and is legible. Use the Dev Tools to inspect your color choices.
-
-![dev tools](./images/devtools-contrast.png)
-
-
-
-## Coffee Houses UI/UX Challenge
-**This is an optional challenge once you meet MVP. Make a new Github branch for this challenge.**
-
-Creating visual hierarchies.
-
-1. Add an address, phone number, website link, and menu link to each coffee house (you may use mock/fake data).
-1. Each coffee house component should utilize Flexbox for the layout.
-1. Use semantic HTML and CSS to style each coffee house component with the goal of easy scannability. Consider which semantic tags you will use for each piece of content. At a minimum, you will emphasize the name of each shop and make the links clearly clickable.
-1. Since you are defining several styles for the coffee shop component, write the CSS in `shop.css` and use `@import` to include those styles in the main CSS file.
-
-Background color/image - ensure the copy (text color) has good contrast and is legible. Use the Dev Tools to inspect your color choices. (see dev tool image above).
-
-</details>
 
 ## Additional References
 

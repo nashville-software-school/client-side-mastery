@@ -2,37 +2,100 @@
 
 You are currently showing a simple message for each jewelry order. Natasha wants to see the cost of each order in the list because if there are two orders that need to be done at the same time, she can focus on the one(s) that generate the most revenue first.
 
-## Finding the Metal Price
+## Expanding the Response
 
-Go to your code where you are generating the HTML representation of the orders that customers place. Add the following code to find the price of the chosen metal.
+JSON Server has a cool feature that you haven't seen yet. Up to this point, you have been making simple requests to get all objects in a collection...
 
 ```js
-const metals = getMetals()
+const ordersFetch = await fetch("http://localhost:8088/orders")
+const orders = await ordersFetch.json()
+```
 
-// Remember that the function you pass to find() must return true/false
-const foundMetal = metals.find(
-    (metal) => {
-        return metal.id === order.metalId
+Here is the data you get in the response.
+
+```json
+[
+    {
+        "id": 1,
+        "metalId": 3,
+        "sizeId": 2,
+        "styleId": 3
+    },
+    {
+        "metalId": 5,
+        "sizeId": 2,
+        "styleId": 1,
+        "id": 2
     }
-)
-const totalCost = foundMetal.price
+]
 ```
 
-Then, you can interpolate the price in the HTML string.
+You also have the ability to tell JSON Server to expand the objects based on the foreign keys.
+
+Open Postman and request orders again, but with the following URL. Note that there is a query string parameter at the end.
+
+```txt
+http://localhost:8088/orders?_expand=metal
+```
+
+Notice that each order now has a new key on it called metal, which is the corresponding metal for the order.
+
+```json
+[
+    {
+        "metalId": 3,
+        "sizeId": 1,
+        "styleId": 3,
+        "id": 2,
+        "metal": {
+            "id": 3,
+            "metal": "24K Gold",
+            "price": 1258.9
+        }
+    },
+    {
+        "metalId": 5,
+        "sizeId": 2,
+        "styleId": 1,
+        "id": 3,
+        "metal": {
+            "id": 5,
+            "metal": "Palladium",
+            "price": 1241
+        }
+    }
+]
+```
+
+Next, expand the style by adding another query string parameter.
+
+```txt
+http://localhost:8088/orders?_expand=metal&_expand=style
+```
+
+There is now an expanded style object embedded in each order.
+Lastly, expand the size by adding a third query string parameter. You will now see all of the related objects for the order embedded in the response.
+
+```txt
+http://localhost:8088/orders?_expand=metal&_expand=style&_expand=size
+```
+
+## Calculating and Using Total Price
+
+Next, update your component function code to fetch the orders with all foreign keys expanded to their full, related objects. Each order object will now have the prices of the chosen metal, size and style that the user made.
+
+Update your iteration code to add up the price of the metal, style, and size.
 
 ```js
-const costString = totalCost.toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD"
-})
-
-`<li>
-    Order #${order.id} cost ${costString}
-</li>`
+const orderPrice = order.metal.price + order.style.price + order.size.price
 ```
 
-## Finding all the Prices
+Once that is calculated, interpolate that total in the HTML string that you currently are generating. Here is an example.
 
-Now it's your turn. Follow the same process as above to find the price for the chosen size and style for each order. Then take those values and add them to the value of the `totalCost` variable.
+```js
+`<div>Order #${order.id} cost ${orderPrice}</div>`
+```
+
+When you're done, the correct price will appear for each placed order.
 
 <img src="./images/kneel-diamonds-show-price.gif" width="800px" alt="animation showing total price on each order" />

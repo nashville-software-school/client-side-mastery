@@ -1,37 +1,67 @@
-# Book 1 - Debugger Basics
+# Book 1 - Think Like a Professional
 
-In this book, you will develop your most important skill as a developer - debugging. You will be writing your own code to implement features and using the debugger to watch how it executes, and you will also be working with pre-written code that has errors for you to debug.
+In this first book, you will learn the core, fundamental competencies and habits of mind needed to succeed as a profession software developer.
 
-## Chapters
+And you thought you'd be learning how to code...
 
-| #   |  :taco: <br/> Fundamentals <br/><sub>(_Start Here_)</sub> | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub> |
-| --- | --- | --- | 
-| 1   | [Introduction to Variables](./chapters/VARIABLES_INTRO_TACO.md) <br/> <sub style="font-size:0.85rem;">#fundamentals #variables</sub> |  [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>|
-| 2 | [All About Arrays](./chapters/ARRAYS.md) <br/> <sub style="font-size:0.85rem;">#fundamentals #arrays</sub> | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub> |
-| 3 | [Objects](./chapters/OBJECTS.md) <br/> <sub style="font-size:0.85rem;">#fundamentals #objects</sub> | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | 
-| 4 | [Git](./chapters/GIT_BASICS.md) <br/> <sub style="font-size:0.85rem;">#fundamentals #git</sub> | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub> | | |
-| 5 | [Loops](./chapters/LOOPS.md) <br/> <sub style="font-size:0.85rem;">#fundamentals #loops</sub> | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | 
-| 6 | [Conditionals](./chapters/CONDITIONALS.md) <br/> <sub style="font-size:0.85rem;">#fundamentals #conditionals</sub> | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub> | 
-| 7 | [Taco Soup](./chapters/TACO_SOUP.md) <br/> <sub style="font-size:0.85rem;">#fundamentals #practice</sub> | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub> | 
-| 8 | | [Show Tribute By Queen](./chapters/QUEEN_QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub> | 
+## Prerequisite Material
 
+Please read these chapters before moving on to the core projects.
 
+| #   | 💀 🐭 💀 Using the Keyboard                                                                                          |
+| --- | -------------------------------------------------------------------------------------------------------------------- |
+| 1   | [Core Keyboard Shortcuts](./chapters/KEYBOARD_CORE.md) <br/> <sub style="font-size:0.85rem;">#keyboard</sub>         |
+| 2   | [Debugging Shortcuts](./chapters/KEYBOARD_DEBUG.md) <br/> <sub style="font-size:0.85rem;">#keyboard #debugging</sub> |
+| 3   | [Core Professional Skills](./chapters/THINKING.md) <br/> <sub style="font-size:0.85rem;">#mindset</sub>              |
+
+## Core Projects
+
+| #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub>                                                                    | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild                                          |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>                      | [Surf Shop](./chapters/SURF_INTRO.md)                              | [Björn Tôrvold's Wilderness Adventures](./chapters/BJORN_INTRO.md) |
+| 2   | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>                            | [Underwater Undefined](./chapters/SURF_UNDEFINED.md)               | [River Tours](./chapters/BJORN_RIVERS.md)                          |
+| 3   | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub>                       | [Constant Tide](./chapters/SURF_CONST.md)                          | [Trail Tour Prices](./chapters/BJORN_PRICE_RANGES.md)              |
+| 4   | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub>                                        | [Wave Function](./chapters/SURF_NOT_A_FUNCTION.md)                 | [River Tour Breakdown](./chapters/BJORN_RIVER_PRICE_RANGES.md)     |
+| 5   | [Queen Colony](./chapters/QUEEN_COLLECTION.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects #parameters</sub> | [Lost at Sea](./chapters/SURF_ARRAY_PROPERTIES.md)                 | [Tour Details](./chapters/BJORN_TOUR_DETAILS.md)                   |
+| 6   | [Iterating the Queens](./chapters/QUEEN_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#iteration</sub>                       | [Just the Data](./chapters/SURF_DATA_MODULE.md)                    | [Presentation to Björn](./chapters/BJORN_CLEANUP.md)               |
+| 7   | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub>              | [Just a Function](./chapters/SURF_FUNCTIONS_MODULE.md)             | [Visualizations for Björn](./chapters/BJORN_DIAGRAM.md)            |
+| 8   | [Show Tribute By Queen](./chapters/QUEEN_QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub>                   | [Diagrams: A Visual for Code](./chapters/SURF_DIAGRAM.md)          |                                                                    |
+
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+
+| #   | 🎓 Self-Assessment                                                     |
+| --- | ---------------------------------------------------------------------- |
+| 1   | [Reflect on your Conceptual Understanding](./chapters/SELF_REFLECTIONS.md) |
+<!-- | 2   | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) | -->
+
+## 🧭 Explorer Chapters
+
+These Explorer chapters are **optional** for learners who want to explore more advanced concepts beyond the core material.
+
+| #   | 👸🏽 Her Majesty                                    | 🏄🏾‍♂️ Surf Shop                                      | 🐻 Björn To Be Wild                                   |
+| --- | ------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| 1   | [Modular Majesty](./chapters/QUEEN_EC_MODULAR.md) | [Separate Reports](./chapters/SURF_EC_MODULAR.md) | [Modular Madness](./chapters/BJORN_MODULE_MADNESS.md) |
+| 2   | [Combined Data](./chapters/QUEEN_EC_DATABASE.md)  |                                                   | [Tours Consolidated](./chapters/BJORN_DATABASEmd)     |
 
 ## 🏕 Pioneer Chapters
 
 Pioneer chapters are **optional** and let you develop Deep Learning on the concepts that you practiced in this book.
 
-| #   | Deep Learning Concepts |
-| --- | ---------------------- |
-| 1   | 🔭 [Different Scopes](./chapters/JS_SCOPE.md)                  |
-| 2   | ƛ [Lambdas: The Anonymous Function](./chapters/FUNCTIONS_LAMBDA.md) |
-| 3   | 🏭 [Factories and Generators](./chapters/FACTORY_GENERATOR.md)      |
+| #   | 👸🏽 Her Majesty                                       | 🏄🏾‍♂️ Surf Shop | 🐻 Björn To Be Wild                               |
+| --- | ---------------------------------------------------- | ------------ | ------------------------------------------------- |
+| 1   | [Finding Tribute](./chapters/QUEEN_EC_ARRAY_FIND.md) |              | [Filtering Tours](./chapters/BJORN_ARRAY_FIND.md) |
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects
 
-| #   | Project Name | Summary |
-| --- | ------------ | ------- |
-| 1   | [Joey's Pizza](https://codesandbox.io/s/joeys-pizza-book-2-uckguz)  | The owners of Joey's Pizza want your team to develop some software that allows employees to build customer pizzas with 2 toppings, at the right size, get it paid for, bake it, and then output a message that it is being delivered. |
-| 2   | [Trustpoint Medical Practice](https://codesandbox.io/s/trustpoint-medical-practice-book-2-zgs0iy) | TrustPoint medical practice administrators want us to create a program that takes an array of doctors, and an array of patients, and assign patients to doctors if the patient `illness` property matches the `specialty` property of the doctor. |
-| 3   | [Zanzibar Zoo](https://codesandbox.io/s/book-2-zanzibar-zoo-syq2ny)  | This project puts you in the role of a zookeeper. You will be iterating arrays of animals and related foods, and then writing functions, each with its own responsibility for care of the animals. |
-| 4   | [Webflix Watchlist](https://codesandbox.io/s/webflix-watchlist-uwclyt)  | Webflix movie streaming service wants your team to create an automated watchlist feature that automatically adds movies to a user's watchlist based on what genres they like. |
+| #   | Projects                                      |
+| --- | --------------------------------------------- |
+| 1   | [Cheugy Crocs](./chapters/CHUEGY_CROCS.md)    |
+| 2   | [Link's Kitchen](./chapters/LINKS_KITCHEN.md) |
+
+## 🔐 Deep Learning Group Projects Unlocked
+
+When you have completed all of the core chapters, you will work on a group project with other teammates who have also completed them. Group projects deepen your communication and collaboration Core Skills.
+
+| #   | Project Name | Description |
+| --- | --- | --- |
+| 1   | [🐡 🍣 <br/> Fish Fusion](../projects/tier-1/fish-fusion/README.md) | In this project, you are going to build a purchasing pipeline for a bargain fish restaurant in your city. From sea to boat to monger to restaurant. | 

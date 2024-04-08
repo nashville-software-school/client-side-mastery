@@ -1,19 +1,10 @@
-# Book 1 - Leonid's Bespoke Toy Shoppe
-
-## Prelude: Developer Skills
-
-Most people are mouse/touchpad users and rarely touch their keyboards on their computers. Professional developers are the complete opposite. We rarely touch the mouse during development of a project. It will be a long journey for you to see the value of, and become proficient with, using keyboard shortcuts. Here's where you start that journey.
-
-| # | 💀 🐭 💀 Using the Keyboard |
-|--|--|
-| 1 |[Core Keyboard Shortcuts](./chapters/KEYBOARD_CORE.md) <br/> <sub style="font-size:0.85rem;">#keyboard</sub> |
-| 2 |[Debugging Shortcuts](./chapters/KEYBOARD_DEBUG.md) <br/> <sub style="font-size:0.85rem;">#keyboard #debugging</sub> |
-| 3 | [Core Professional Skills](./chapters/THINKING.md) <br/> <sub style="font-size:0.85rem;">#mindset</sub> |
-
+# Foundational Concepts Review - Leonid's Bespoke Toy Shoppe
 
 ## Core Chapters
 
-In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
+In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned. 
+
+Note: when you're going through these lessons (and others in the coursework) you should start on the left and work your way down that column, then progress to the next column. Once you've finished all the columns in the table, move to the next part of the page.
 
 | # | 🏠 Foundations Review | 🧸 Leonid's Toys <br/><sub>(_Guided tour_)</sub> | 📔 Daily Notes |
 |--|--|--|--|
@@ -26,18 +17,9 @@ In this book's core chapters, you will gain the knowledge and understanding of w
 | 7 | [Sleep and Moods](./chapters/ARRAYS_CONDITIONS_PRACTICE.md) <br/> <sub style="font-size:0.85rem;">#iteration #conditions</sub> | [Toy Catalog](./chapters/LT_ARRAY_ITERATION.md) <br/> <sub style="font-size:0.85rem;">#data #arrays #iteration</sub> | [List of Notes by Topic](./chapters/DN_NOTES_BY_TOPIC.md) |
 | 8 | [Building Strings with Iteration](./chapters/ARRAYS_STRINGS.md) <br/> <sub style="font-size:0.85rem;">#iteration #string-templates</sub> | [Raising Prices](./chapters/LT_ITERATION_WITH_LOGIC.md) <br/> <sub style="font-size:0.85rem;">#data #arrays #iteration</sub> | [HTML Note Articles](./chapters/DN_NOTE_ARTICLES.md) |
 | 9 | [Array and String Methods](./chapters/ARRAY_STRING_METHODS.md) <br/> <sub style="font-size:0.85rem;">#methods #arrays #strings</sub> | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [Note Topics Subsection](./chapters/DN_TOPICS_SECTION.md) |
-| 🎓 | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) |  |
 
-## 👩‍👩‍👧‍👦 Team Collaboration Projects
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
 
-| # | Project Name | Summary |
-|--|--|--|
-| 1 | [Solar Eclipse Bank](https://codesandbox.io/s/solar-eclipse-bank-book-1-fq8oxd) | Solar Eclipse Bank has a problem. They want to have an automated way to display the customer birthdays, for each month, for the next 10 years. They would like to see the customer's name, and their current age, displayed in the correct month. |
-| 2 | [Funkify Streaming Music](https://codesandbox.io/s/funkify-streaming-music-book-1-80yyfw) | Welcome to **Funkify**, the music streaming service that always brings you the funkiest music ever made!! We have acquired a large catalog of songs from several distributors. We need to see a collection of songs that are only funky. |
-
-## 🧭 Explorer Chapters
-
-| # | 🚀  Advanced Data Stuctures |
-|--|--|
-| 1 | [Data Structure: Map](./chapters/JAVASCRIPT_MAPS.md) |
-| 2 | [Data Structure: Sets](./chapters/JAVASCRIPT_SETS.md) |
+| #   | 🎓 Self-Assessment                                                     |
+| --- | ---------------------------------------------------------------------- |
+| 1   | [Self Assessment](./chapters/JS_DATA_ASSESSMENT.md) | 

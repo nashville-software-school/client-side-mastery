@@ -5,7 +5,7 @@
 Run the following command in your terminal. It doesn't matter what directory you are in. You can run it from anywhere.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-1-leonids-toys/scripts/flower-assessment.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/flower-assessment.sh)"
 ```
 
 That script creates a `~/workspace/flowers` directory, with two files in it.

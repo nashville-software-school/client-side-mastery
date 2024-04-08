@@ -1,4 +1,4 @@
-# 1. Using the Debugger
+# Using the Debugger
 
 <img src="./images/debugger.jpeg" width="200px" align="left" />
 

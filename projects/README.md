@@ -6,8 +6,9 @@ After you complete the work in the Core Books of the course, you instructors wil
 
 Tier 1 projects are for students to start working on in the after they have done the core course projects for data types, functions, import/export, and working with the DOM.
 
+1. [Fish Fusion](./tier-1/fish-fusion/) - Your team will build a modular project that gets from from the ocean, to a fishing boat, to a fish monger, and finally served in a restaurant.
 2. [Modern Farm](./tier-1/modern-farm/) - This project will deepen your JavaScript fundamental skills of functions, import/export, iteration and object properties. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
-1. [The Hairy Potter](./tier-1/hairy-potter/) - This project will deepen your JavaScript fundamental skills of functions, import/export, iteration and object properties. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
+3. [The Hairy Potter](./tier-1/hairy-potter/) - This project will deepen your JavaScript fundamental skills of functions, import/export, iteration and object properties. The project also has automated testing implemented so that you can see how tests provide feedback about your progress.
 
 ## Tier 2 - Advanced Beginner
 
@@ -36,4 +37,4 @@ Tier 4 projects must be worked on as a team. They are broad in scope, require co
 Tier 5 projects are intended only for those students who have completed the core React course chapters and would like to explore other features of the React library.
 
 1. [Nashville Kennels](./tier-5/kennels/) - This project introduces you to the Context API. You will use context provider components and a new `useContext()` hook to get state from the provider components.
-1. [Thorns 'N Roses](./tier-5/thorns-roses/) - This project doesn't introduce any new concepts, but it will stretch your understanding of data relationships. There are many resources, and it is crucial that you design a correct ERD before you start, or it will end in disaster.
+1. [Thorns 'N Roses](./tier-5/thorns-roses/) - This project doesn't introduce any new concepts, but it will stretch your understanding of data relationships. There are many resources, and it is crucial that you design a correct ERD before you start, or it will end in disaster. 

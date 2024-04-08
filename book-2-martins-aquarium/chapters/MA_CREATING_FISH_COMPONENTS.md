@@ -1,4 +1,4 @@
-# 10. HTML Representation of Data
+# Automating Martin's Website
 
 Now that you have a module whose responsibility is to maintain the state of your application, now you need to convert that raw data into HTML representations and render them in the browser. In this chapter you will automate the creation of the HTML list of fish from the objects in your fish collection, so that you never have to copy/paste the HTML directly when a fish dies, or a fish is added.
 
@@ -26,16 +26,16 @@ export const FishList = () => {
     const htmlString = '<article class="fishList">'
 
     // Create HTNL representations of each fish here
-    for (const singleFish of fishes) {
+    for (const fish of fishes) {
 
         // Why is there a backtick used for this string?
         htmlString += `<section class="fish card">
-            <div><img  class="fish__image image--card" src="${singleFish.image}" /></div>
-            <div class="fish__name">${singleFish.name}</div>
-            <div class="fish__species">${singleFish.species}</div>
-            <div class="fish__length">${singleFish.length}</div>
-            <div class="fish__location">${singleFish.location}</div>
-            <div class="fish__diet">${singleFish.food}</div>
+            <div><img  class="fish__image image--card" src="${fish.image}" /></div>
+            <div class="fish__name">${fish.name}</div>
+            <div class="fish__species">${fish.species}</div>
+            <div class="fish__length">${fish.length}</div>
+            <div class="fish__location">${fish.location}</div>
+            <div class="fish__diet">${fish.food}</div>
         </section>
 `
     }
@@ -49,7 +49,7 @@ export const FishList = () => {
 
 Since we want the fish to be immediately rendered when the page loads, then that falls within the responsibility of the `main.js` module. Import the list component into main and invoke the component function.
 
-> **`workspace/martins-aquarium/scripts/main.js`**
+> **`workspace/martins-aquarium/scripts/FishList.js`**
 
 ```js
 // Import the FishList function from the correct module
