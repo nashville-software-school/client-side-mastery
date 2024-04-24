@@ -27,7 +27,7 @@ npm install
 We're going to give you some boilerplate code for your Chuckle Checklist application. Run the following command in your terminal:
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-5-honey-rae-repairs/chapters/scripts/chuckle-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/chuckle-setup.sh)"
 ```
 
 ### Data

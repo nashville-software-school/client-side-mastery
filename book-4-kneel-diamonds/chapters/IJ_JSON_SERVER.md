@@ -30,6 +30,11 @@ The properties on the **SocioLocations** resource are as follows.
 * id (integer)
 * label (string)
 
+> JSON Server has a couple rules on how your arrays and foreign keys should be named.
+>
+> 1. Collections should be plural and lower case _(e.g. balloons, products, customers)_
+> 2. Foreign keys to those collections should be singular and always end in `Id` _(e.g. balloonId, productId, customerId)_
+
 ```mermaid
 erDiagram
     SUBMISSIONS ||--o{ SOCIOLOCATIONS : ""

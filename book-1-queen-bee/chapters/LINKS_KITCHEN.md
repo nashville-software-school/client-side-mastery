@@ -12,6 +12,8 @@ On his travels, he found some recipes on the walls of the stables he’s visited
 - `Tabantha Wheat` and `Hateno Cheese` will make a `Cheesy Hylian Pizza`
 - `Raw Prime Meat` and `Hylian Rice` will make `Prime Meat and Rice Bowl`
 
+Your first job is to agree on how, using arrays and objects, this data should be represented in your code. 
+
 ## Part 2
 
 Link found some more materials in the Tabantha Frontier, he also stopped in Rito village to buy a few items. Add the following items to his materials array:
