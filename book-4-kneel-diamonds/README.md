@@ -14,7 +14,7 @@
 | 8 |  | [Reacting to State Changes](./chapters/IJ_STATE_CHANGE.md) <br/> <sub style="font-size:0.85rem;">#custom-event</sub> | [Show Orders on Creation](./chapters/KD_CUSTOM_EVENT.md) <br/> <sub style="font-size:0.85rem;">#custom-event</sub> |  |
 | 9 |  |  | [Displaying Prices for Orders](./chapters/KD_ORDER_PRICE.md) <br/> <sub style="font-size:0.85rem;">#json-server #expand</sub> |  |
 
-Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an mentor to review your vocabulary.
 
 | # | 🎓  Self-Assessment |
 | --- | --- |

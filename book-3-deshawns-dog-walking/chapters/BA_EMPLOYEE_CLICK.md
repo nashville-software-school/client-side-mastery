@@ -4,7 +4,7 @@ Using code from the last project as an example, attempt adding a click event lis
 
 ![](./images/employee-sales.gif)
 
-If you find yourself creeping up on 30 minutes of trying to get the code to work, it's time to go to a peer, or an instructor for assistance.
+If you find yourself creeping up on 30 minutes of trying to get the code to work, it's time to go to a peer, or an mentor for assistance.
 
 You can peek at [some of the solution](./code/employeeSales.js) if you need to.
 

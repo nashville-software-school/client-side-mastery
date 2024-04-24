@@ -10,4 +10,4 @@ There is a fourth entity that the user does not directly interact with, but it g
 
 Use [dbdiagram.io](https://dbdiagram.io/d) to generate a visualization of this database. Work with your teammates, or talk to a member of the instruction team to work past any concepts that still confuse you.
 
-If you're truly stuck after talking to peers and instructors you can view [one possible visualization](https://vimeo.com/523171683).
+If you're truly stuck after talking to peers and mentors you can view [one possible visualization](https://vimeo.com/523171683).

@@ -7,7 +7,7 @@ Here's how that looks
 
 1. Watch videos, read documentation, and implement the code for Honey Rae Repairs up to chapter 5
 2. Read the features needed and implement the code for Chuckle Checklist up to chapter 5
-3. Review your vocabulary and discuss your questions with peers and instructors.
+3. Review your vocabulary and discuss your questions with peers and mentors.
 4. Move on to chapter 6 in Honey Rae Repairs.
 5. etc...
 

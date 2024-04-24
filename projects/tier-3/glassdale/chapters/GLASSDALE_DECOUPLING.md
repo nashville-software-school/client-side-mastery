@@ -299,7 +299,7 @@ eventHub.addEventListener("friendSelected", event => {
 
 Thinking about components talking to each other using custom messages is a large cognitive leap. Your brain needs to build a fairly complex mental model to understand how the signal flow of information works in a system like this.
 
-You are not going to get this right away. It requires practice, conversations with your teammates &amp; instructors, and trying it in different contexts.
+You are not going to get this right away. It requires practice, conversations with your teammates &amp; mentors, and trying it in different contexts.
 
 ## Next Steps
 

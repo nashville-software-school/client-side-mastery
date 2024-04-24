@@ -77,7 +77,7 @@ The last thing to refactor is the `<select>` element that holds all of the `<opt
 
 > **Note**: Remember, challenges should only be attempted once you have completed the main exercise(s) and understand the concept.
 
-1. Add an `instructors` resource collection in your API.
+1. Add an `mentors` resource collection in your API.
 1. Add an object representing each of the three members of your instruction team.
     ```json
     {
@@ -86,7 +86,7 @@ The last thing to refactor is the `<select>` element that holds all of the `<opt
         "lastName": "Korte"
     }
     ```
-1. Refactor your entry form to include a `<select>` HTML component containing an `<option>` for each instructor.
+1. Refactor your entry form to include a `<select>` HTML component containing an `<option>` for each mentor.
 1. Refactor your method for saving an entry to include a foreign key on your entry object to the chosen intructor.
 
 ## Advanced Challenge

@@ -1,6 +1,6 @@
 # Truncheons &amp; Flagons
 
-> **Instructor Note:** This application is complex, but once complete, provides people with a strong foundation in how modern component-based applications work. It is **strongly encouraged** that you work on this application with your teammates and not alone.
+> **mentor Note:** This application is complex, but once complete, provides people with a strong foundation in how modern component-based applications work. It is **strongly encouraged** that you work on this application with your teammates and not alone.
 
 ## The Making of the Most Popular Tavern Game of the Middle Ages
 
@@ -84,7 +84,7 @@ Given those feature requests, what you need to do in this chapter is the followi
 1. Come see a member of the instruction team to review your component layout.
 1. After discussing your layout, you can then create a new project directory of `~/workspace/flagons`, and start building the HTML and CSS of your components and layout.
 
-> **Reminder:** Remember to create a CSS file for each component, and use the `@import` statement in `main.css` to include each one. Also consider what sub-directories you will need under the `scripts` directory, if any. Discuss with your instructor.
+> **Reminder:** Remember to create a CSS file for each component, and use the `@import` statement in `main.css` to include each one. Also consider what sub-directories you will need under the `scripts` directory, if any. Discuss with your mentor.
 
 ## Previous Cohort Implementation
 

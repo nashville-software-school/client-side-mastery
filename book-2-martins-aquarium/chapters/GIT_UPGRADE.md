@@ -24,6 +24,6 @@ Close your terminal and reopen, then check version.
 
 ```$ git --version```
 
-If you were unable to upgrade your git to the latest version, let one of your instructors help you.
+If you were unable to upgrade your git to the latest version, let one of your mentors help you.
 
 To return to the GIT_BASICS chapter, click [here](./GIT_BASICS.md)

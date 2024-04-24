@@ -41,7 +41,7 @@ Right now, your `index.html` file doesn't have any content to display, so you ca
 
 Then go back to your terminal and type in the `serve` command. This starts a simple web server that will load the contents of your `index.html` file into browser.
 
-It should give you the output below. If you don't see this, talk to an instructor for guidance.
+It should give you the output below. If you don't see this, talk to an mentor for guidance.
 
 ![](./images/running-serve.gif)
 

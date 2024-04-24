@@ -10,7 +10,7 @@ This time, it's more complex. Instead of a misspelled variable, or a missing `+`
 
 Once you have updated that code so that no more errors are happening, move on to the next chapter.
 
-Remember to use all of the resources at your disposal. the Web, your peers and your instructors.
+Remember to use all of the resources at your disposal. the Web, your peers and your mentors.
 
 This is a good time to remind you that this isn't school. We don't want you to do this by yourself. Professional software developers use **every** possible resource to get things working and do their best to learn what they can as they do it.
 

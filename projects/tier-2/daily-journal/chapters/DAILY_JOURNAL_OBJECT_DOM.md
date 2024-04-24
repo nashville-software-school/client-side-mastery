@@ -70,6 +70,6 @@ Note the `id` property value is 2.
 
 Add those new objects to your journal entries array. Make sure you separate each object with a comma, and do not put a comma after the last one.
 
-## Talk to your Instructors
+## Talk to your mentors
 
-Once you are done with this chapter, we strongly suggest that you meet with one of your instructors to verify that you've got the concepts down, and have the correct syntax for defining these data structures. Not understanding these foundational data structures will have an impact on your future understanding, so you'll want to discuss them now.
+Once you are done with this chapter, we strongly suggest that you meet with one of your mentors to verify that you've got the concepts down, and have the correct syntax for defining these data structures. Not understanding these foundational data structures will have an impact on your future understanding, so you'll want to discuss them now.

@@ -12,7 +12,7 @@ In this project, you will be practicing the following skills.
 
 ## Setup
 
-Ask an instructor for the link that will create your self-assessment repository. Once the repo is created, click the green **Code** button at the top and copy the SSH connection string provided in the window that appears.
+Ask an mentor for the link that will create your self-assessment repository. Once the repo is created, click the green **Code** button at the top and copy the SSH connection string provided in the window that appears.
 
 Make sure you are in your workspace directory.
 
@@ -32,7 +32,7 @@ The next step is to get some tools installed. In your terminal, run the followin
 npm install
 ```
 
-You will then see some required software to start getting installed. If you don't see this happening, or see an error, visit one of your instructors.
+You will then see some required software to start getting installed. If you don't see this happening, or see an error, visit one of your mentors.
 
 ![](./images/modern-farm-npm-install.gif)
 
@@ -42,7 +42,7 @@ Once the process completes, then run the following command to start the automate
 npm run test
 ```
 
-You should see the following output. Again, if you don't visit an instructor.
+You should see the following output. Again, if you don't visit an mentor.
 
 ![](./images/modern-farm-automated-tests.gif)
 

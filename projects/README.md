@@ -1,6 +1,6 @@
 # Deep Learning Projects
 
-After you complete the work in the Core Books of the course, you instructors will provide guidance on which of these projects that you can choose to work on. There are four tiers of projects.
+After you complete the work in the Core Books of the course, you mentors will provide guidance on which of these projects that you can choose to work on. There are four tiers of projects.
 
 ## Tier 1 - Beginner
 

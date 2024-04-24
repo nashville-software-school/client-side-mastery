@@ -27,7 +27,7 @@ touch database.json
 ```
 
 ### The Resources
-Below are the resources for this application. _(You will need to connect the relationships)_ Use these requirements to build your ERD. Once you are finished, if you would like to run your ERD by an instructor, they would be more than happy to review it with you. Once you are confident you have an accurate ERD, seed your database.
+Below are the resources for this application. _(You will need to connect the relationships)_ Use these requirements to build your ERD. Once you are finished, if you would like to run your ERD by an mentor, they would be more than happy to review it with you. Once you are confident you have an accurate ERD, seed your database.
 
 | Resource | Description |
 | -- | -- |

@@ -1,6 +1,6 @@
 # Mock Authentication
 
-> **Instructor Note:** Authentication is not a learning objective of your time here at NSS. The code in this chapter is intended to be copied and used, but not understood for now. Your job is still to render UI components using related data.
+> **mentor Note:** Authentication is not a learning objective of your time here at NSS. The code in this chapter is intended to be copied and used, but not understood for now. Your job is still to render UI components using related data.
 
 In this chapter, you are going to enable two things:
 
@@ -9,7 +9,7 @@ In this chapter, you are going to enable two things:
 
 This is not going to be a real authentication system. Real authentication systems are vastly more secure, complex, and robust.
 
-The best part about this chapter is that you don't need to understand **any of it**. Follow the instructions, verify that registration and login works, or talk to your instructors if it doesn't so they can fix it.
+The best part about this chapter is that you don't need to understand **any of it**. Follow the instructions, verify that registration and login works, or talk to your mentors if it doesn't so they can fix it.
 
 Here's the process that this code follows.
 

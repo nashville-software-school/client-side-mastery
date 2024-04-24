@@ -97,11 +97,11 @@ Once Windows Terminal is installed:
 <br/>
 <br/>
 
-## Troubleshooting for Instructors
+## Troubleshooting for mentors
 
 <details>
 <summary>
-Instructors: Expand for help
+mentors: Expand for help
 </summary>
 If you run into problems during installation, someone on the instruction team will use the following info to help you. You can ignore this section.
 

@@ -55,7 +55,7 @@ Customer can choose from the follow options for wheels. You set the price for ea
 
 Before you create any actual state data structures in your code, create an ERD for this application. Consider not only the resources above, but also how the customer's order will be stored and the properties on those objects.
 
-Once you have an ERD created, but are unsure if you got it right, feel free to run it by your peers or an instructor.
+Once you have an ERD created, but are unsure if you got it right, feel free to run it by your peers or an mentor.
 
 ## API
 

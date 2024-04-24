@@ -8,16 +8,10 @@ And you thought you'd be learning how to code...
 
 Please read these chapters before moving on to the core projects.
 
-| #   | 💀 🐭 💀 Using the Keyboard                                                                                          |
-| --- | -------------------------------------------------------------------------------------------------------------------- |
-| 1   | [Core Keyboard Shortcuts](./chapters/KEYBOARD_CORE.md) <br/> <sub style="font-size:0.85rem;">#keyboard</sub>         |
-| 2   | [Debugging Shortcuts](./chapters/KEYBOARD_DEBUG.md) <br/> <sub style="font-size:0.85rem;">#keyboard #debugging</sub> |
-| 3   | [Core Professional Skills](./chapters/THINKING.md) <br/> <sub style="font-size:0.85rem;">#mindset</sub>              |
-
 ## Core Projects
 
-| #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub>                                                                    | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild                                          |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub>  | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild |
+| --- | --- | --- | --- |
 | 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>                      | [Surf Shop](./chapters/SURF_INTRO.md)                              | [Björn Tôrvold's Wilderness Adventures](./chapters/BJORN_INTRO.md) |
 | 2   | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>                            | [Underwater Undefined](./chapters/SURF_UNDEFINED.md)               | [River Tours](./chapters/BJORN_RIVERS.md)                          |
 | 3   | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub>                       | [Constant Tide](./chapters/SURF_CONST.md)                          | [Trail Tour Prices](./chapters/BJORN_PRICE_RANGES.md)              |
@@ -27,12 +21,11 @@ Please read these chapters before moving on to the core projects.
 | 7   | [Paying Tribute](./chapters/QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#functions #arrays #objects</sub>              | [Just a Function](./chapters/SURF_FUNCTIONS_MODULE.md)             | [Visualizations for Björn](./chapters/BJORN_DIAGRAM.md)            |
 | 8   | [Show Tribute By Queen](./chapters/QUEEN_QUEEN_TRIBUTE.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub>                   | [Diagrams: A Visual for Code](./chapters/SURF_DIAGRAM.md)          |                                                                    |
 
-Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an mentor to review your vocabulary.
 
-| #   | 🎓 Self-Assessment                                                     |
-| --- | ---------------------------------------------------------------------- |
-| 1   | [Reflect on your Conceptual Understanding](./chapters/SELF_REFLECTIONS.md) |
-| 2   | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) |
+| #   | 🎓 Self-Assessment  |
+| --- | ---- |
+| 1   | [Self-Assess Your Debugging Skills](./chapters/DEBUGGER_ASSESSMENT.md) |
 
 ## 🧭 Explorer Chapters
 
@@ -47,8 +40,8 @@ These Explorer chapters are **optional** for learners who want to explore more a
 
 Pioneer chapters are **optional** and let you develop Deep Learning on the concepts that you practiced in this book.
 
-| #   | 👸🏽 Her Majesty                                       | 🏄🏾‍♂️ Surf Shop | 🐻 Björn To Be Wild                               |
-| --- | ---------------------------------------------------- | ------------ | ------------------------------------------------- |
+| #   | 👸🏽 Her Majesty | 🏄🏾‍♂️ Surf Shop | 🐻 Björn To Be Wild |
+| --- | ----- | --- | --- |
 | 1   | [Finding Tribute](./chapters/QUEEN_EC_ARRAY_FIND.md) |              | [Filtering Tours](./chapters/BJORN_ARRAY_FIND.md) |
 
 ## 👩‍👩‍👧‍👦 Team Collaboration Projects

@@ -57,7 +57,7 @@ The `-m` flag in the command is important so that you, as the author, can leave 
 git commit -m "My first version of my aquarium code"
 ```
 
-> _Beginner Hint!_ If you accidentally type `git commit` and hit enter without the `-m` and the message, you'll be taken to a screen that will make you feel like Alice through the looking glass. If this happens, for now just come see an instructor and we'll get you back to reality safely.
+> _Beginner Hint!_ If you accidentally type `git commit` and hit enter without the `-m` and the message, you'll be taken to a screen that will make you feel like Alice through the looking glass. If this happens, for now just come see an mentor and we'll get you back to reality safely.
 
 #### Check the current status of your files.
 

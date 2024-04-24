@@ -1,7 +1,7 @@
 # The Plan
-This application will have several views, and just like in Honey Rae Repairs, you will begin to build these views piece by piece. Before you get started, however, having an end product in mind will help with your decision making process as you build. _What components will you build? What will your routes be? What components can you reuse?_ Some guidance will be given for these decisions and others will be left up to you. 
+This application will have several views, and just like in Honey Rae Repairs, you will begin to build these views piece by piece. Before you get started, however, having an end product in mind will help with your decision making process as you build. _What components will you build? What will your routes be? What components can you reuse?_ Some guidance will be given for these decisions and others will be left up to you.
 
-Below is a list of user stories describing every feature you will implement in this project. Carefully read the user stories for each view of this application, then, build a wireframe representing each view and its features. Of course, feel free to review your wireframe with an instructor when you are finished. 
+Below is a list of user stories describing every feature you will implement in this project. Carefully read the user stories for each view of this application, then, build a wireframe representing each view and its features. Of course, feel free to review your wireframe with an mentor when you are finished.
 
 
 Revisit the [Honey Rae's Wireframe](REPAIR_WIREFRAME.md#building-your-capstone-wireframe) chapter for guidance on building this wireframe.
@@ -33,11 +33,11 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 **Then** the post will save to the database and the application will navigate to the My Posts view
 
 ### 🖥 Home/All Posts
->A view for all the posts. 
+>A view for all the posts.
 
 **Given** the user wishes to view a list of all the posts<br>
 **When** the user is at the home route or visits the All Posts view<br>
-**Then** the ***title***, ***topic*** and ***number of likes*** will display for each post in the database. 
+**Then** the ***title***, ***topic*** and ***number of likes*** will display for each post in the database.
 
 **Given** the user wishes to filter the posts by topic<br>
 **When** the user clicks on the topic dropdown<br>
@@ -97,7 +97,7 @@ A navbar will persist in each view, allowing the user to navigate through the vi
 
 **Given** the user wishes to delete their post<br>
 **When** the user clicks on the delete button<br>
-**Then** the post will be deleted from the database and no longer display on the page. 
+**Then** the post will be deleted from the database and no longer display on the page.
 
 ### 🖥 Favorites
 >A view for all the posts the user has liked

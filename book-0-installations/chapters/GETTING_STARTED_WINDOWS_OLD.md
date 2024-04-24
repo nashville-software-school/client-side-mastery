@@ -58,7 +58,7 @@ Watch the [WSL Ubuntu Starting Directory](https://www.youtube.com/watch?v=n1YSFT
 
 ## Required Linux (WSL) Commands
 
-Once you are done installing and configuring Ubuntu, open a new Ubuntu shell in Windows Terminal and run the following commands. If something doesn't work, or you see error messages, call an instructor immediately.
+Once you are done installing and configuring Ubuntu, open a new Ubuntu shell in Windows Terminal and run the following commands. If something doesn't work, or you see error messages, call an mentor immediately.
 
 ```sh
 sudo apt-get install build-essential
@@ -93,7 +93,7 @@ In order to automate the installation of the tools you need _(which happens in t
 
 
 
-## Troubleshooting for Instructors
+## Troubleshooting for mentors
 
 1. Open Powershell as admin
 1. Run `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`

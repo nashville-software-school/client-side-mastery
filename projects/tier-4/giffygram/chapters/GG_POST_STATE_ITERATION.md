@@ -112,7 +112,7 @@ renderApp()
 
 The other file you will need is the **`GiffyGram`** component, whose Sole Reponsbility is to display the posts - at least for now. You are starting off with the simple stuff.
 
-There are concept checking questions sprinkled throughout the file. You should ponder these yourself, discuss them with your teammates, or discuss with instructors.
+There are concept checking questions sprinkled throughout the file. You should ponder these yourself, discuss them with your teammates, or discuss with mentors.
 
 > #### `giffygram/src/scripts/GiffyGram.js`
 

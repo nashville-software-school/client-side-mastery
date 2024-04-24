@@ -10,7 +10,7 @@ There are 3 different actors in this system, and you will write functions in mul
 
 ## Before You Start
 
-It is **crucial** that your team reads all of the requirements and builds an algorithm with comments before you write a single line of code. It is highly recommended that you build the algorithm completely and review it with one of your instructors before starting on implementation.
+It is **crucial** that your team reads all of the requirements and builds an algorithm with comments before you write a single line of code. It is highly recommended that you build the algorithm completely and review it with one of your mentors before starting on implementation.
 
 ## Setup and Requirements
 

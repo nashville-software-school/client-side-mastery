@@ -17,5 +17,5 @@ sequenceDiagram
     participant Rivers
     Bjorn->>Data: May I please have all the trail data?
     Data-->>Bjorn: Sure! Here you go.
-    note right of Bjorn: Display ASCII Banner
+    note over Bjorn: Iterate some data to do a thing
 ```

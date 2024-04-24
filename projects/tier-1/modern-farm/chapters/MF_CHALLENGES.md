@@ -1,6 +1,6 @@
 # Optional Challenges
 
-Optional challenges are exactly that, optional. Your instructors will not expect that you have any of it done. It is for your own learning, curiosity and exploration. If you still have work to do in Martin's Aquarium or Daily Journal, then you probably shouldn't be here.
+Optional challenges are exactly that, optional. Your mentors will not expect that you have any of it done. It is for your own learning, curiosity and exploration. If you still have work to do in Martin's Aquarium or Daily Journal, then you probably shouldn't be here.
 
 ## Ordering the Harvest
 

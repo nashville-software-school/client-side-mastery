@@ -20,4 +20,4 @@ This is an application that students can build throughout the client side course
 | # | 📔 <br/> Daily Journal |
 |--|--|
 | 1 | [Tagging Journal Entries](./chapters/DAILY_JOURNAL_TAGS.md) |
-| 2 | [Instructor Help](./chapters/DAILY_JOURNAL_INSTRUCTOR.md) |
+| 2 | [mentor Help](./chapters/DAILY_JOURNAL_mentor.md) |

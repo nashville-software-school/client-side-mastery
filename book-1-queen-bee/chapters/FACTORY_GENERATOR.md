@@ -121,8 +121,8 @@ const blogObjectFactory = function (title, entry, ...tags) {
 // Create a blog article about your first day at NSS
 const firstDay = blogObjectFactory("My first day at NSS", "I felt completely lost", "nss", "life changes", "software")
 
-// Create a blog article about your instructor
-const instructor = blogObjectFactory("Our instructor", "This guy is a jerk", "nss", "teachers", "loser")
+// Create a blog article about your mentor
+const mentor = blogObjectFactory("Our mentor", "This guy is a jerk", "nss", "teachers", "loser")
 ```
 
 ![generator function](./images/facgen.gif)

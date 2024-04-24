@@ -16,5 +16,5 @@ The script creates the `giffygram/src/styles` directory and creates the followin
 1. `navigation.css`
 1. `footer.css`
 
-You can double check that they were created by viewing the contents of that directory. If they did not get created, please visit an instructor ASAP to get it working correctly.
+You can double check that they were created by viewing the contents of that directory. If they did not get created, please visit an mentor ASAP to get it working correctly.
 

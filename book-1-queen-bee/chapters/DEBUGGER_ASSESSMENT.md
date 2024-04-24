@@ -23,17 +23,12 @@ Unfortunately, someone gained access to the code that produces an outline of the
 Here are your learning objectives for this self-assessment.
 
 1. Able to use the debugger to step through existing code to discover root causes of bugs.
-2. Demonstrate learning efficiency by researching concepts you haven't seen before using your peers, instructors, and the World Wide Web as resources.
+2. Demonstrate learning efficiency by researching concepts you haven't seen before using your peers, mentors, and the World Wide Web as resources.
 3. Awareness of when you need help, and then seeking it out.
 4. Drawing a dependency graph for a project.
 5. Drawing a sequence diagram for a project.
-6. Attention to detail.
 
-### Favorite Tools of Learners Past
-
-1. The [sequencediagram.org](https://sequencediagram.org/) site is a wonderful cloud-based option to build your sequence diagram.
-2. The [draw.io VS Code Extension](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) allows you to have a local file in your project that contains your diagram.
-
+Use the [sequencediagram.org](https://sequencediagram.org/) site to generate your sequence diagram. Make sure you save your work as you go.
 
 ## Starter Code
 
@@ -62,9 +57,7 @@ Open the `main.js` and create your `launch.json` so that you can debug the code 
 
 ## Vocabulary and Learning Review
 
-You will discuss your challenges and learning growth with an instructor when you have done the following steps. Your instructional team will ensure that your vocabulary is solid so that you can impress hiring managers when you are interviewing.
-
-> _Remember, everything we do is to help you be successful getting a job and producing at a high level when hired._
+When you have completed all of the following tasks, use the Learning Platform to let your mentors know that you are ready for a vocabulary review.
 
 * Produced a dependency graph for the project
 * Drawn a sequence diagram for the algorithm of the project

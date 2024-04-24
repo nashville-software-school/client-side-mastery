@@ -29,7 +29,7 @@ In this book, you will learn how to build your first dynamic web page with HTML,
 | 9   |  |  | [Automate Tips](./chapters/MA_AUTOMATE_TIPS.md) |
 | 10  |  |  | [Automate Locations](./chapters/MA_AUTOMATE_LOCATIONS.md) |
 
-Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an mentor to review your vocabulary.
 
 | # | 🎓  Self-Assessment |
 | --- | --- |

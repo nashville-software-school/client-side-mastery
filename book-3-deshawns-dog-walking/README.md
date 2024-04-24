@@ -20,7 +20,7 @@ In this book, you will be introduced to three concepts.
 | 8 | [Finding the Walker for a City](./chapters/DD_FIND_CITY_WALKER.md) <br/> <sub style="font-size:0.85rem;">#data-attributes</sub> | [Dock Current Service](./chapters/SS_DOCKS.md) |  |
 | 9 |  | [Your Learning Goals](./chapters/SS_LEARNING.md) |  |  |
 
-Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an mentor to review your vocabulary.
 
 | # | 🎓  Self-Assessment |
 | --- | --- |

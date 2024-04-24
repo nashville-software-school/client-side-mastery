@@ -7,7 +7,7 @@ echo -e "   ************************************************"
 echo -e "\nWe are going to try to install as much software, and make as many"
 echo -e "configurations as we possibly can in an automated script. If this"
 echo -e "If this stops at any point, and you don't see a 'SUCCESS' message"
-echo -e "please notify an instructor for assistance.\n\n"
+echo -e "please notify an mentor for assistance.\n\n"
 echo "Enter your full name exactly as you entered it on Github settings:"
 read -p "> " studentName
 echo -e "\nEnter email address you used for Github:"
@@ -70,7 +70,7 @@ then
     new_shell=$(echo $SHELL)
     if [ $new_shell != "$ZSH_PATH" ]; then
       # The rest of the installs will not work if zsh is not the default shell
-      echo "Shell did not change to zsh. Reach out to an instructor before continuing"
+      echo "Shell did not change to zsh. Reach out to an mentor before continuing"
       exit
     fi
 else

@@ -2,7 +2,7 @@
 
 ## Core Chapters
 
-In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned. 
+In this book's core chapters, you will gain the knowledge and understanding of working with data in the JavaScript language. You will apply that knowledge in a projects and then take a self-assessment to gauge how much you have learned.
 
 Note: when you're going through these lessons (and others in the coursework) you should start on the left and work your way down that column, then progress to the next column. Once you've finished all the columns in the table, move to the next part of the page.
 
@@ -18,7 +18,7 @@ Note: when you're going through these lessons (and others in the coursework) you
 | 8 | [Building Strings with Iteration](./chapters/ARRAYS_STRINGS.md) <br/> <sub style="font-size:0.85rem;">#iteration #string-templates</sub> | [Raising Prices](./chapters/LT_ITERATION_WITH_LOGIC.md) <br/> <sub style="font-size:0.85rem;">#data #arrays #iteration</sub> | [HTML Note Articles](./chapters/DN_NOTE_ARTICLES.md) |
 | 9 | [Array and String Methods](./chapters/ARRAY_STRING_METHODS.md) <br/> <sub style="font-size:0.85rem;">#methods #arrays #strings</sub> | [Helping Customers Find the Right Toy](./chapters/LT_FIND.md) <br/> <sub style="font-size:0.85rem;">#data #iteration #if-else</sub> | [Note Topics Subsection](./chapters/DN_TOPICS_SECTION.md) |
 
-Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
+Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an mentor to review your vocabulary.
 
 | #   | 🎓 Self-Assessment                                                     |
 | --- | ---------------------------------------------------------------------- |

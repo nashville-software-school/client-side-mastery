@@ -101,7 +101,7 @@ If your syntax is correct, you should see your array of objects immediately disp
 
 ![](./images/good-array-of-toys.gif)
 
-If you syntax is incorrect, you will see a lot of gibberish that won't make much, if any, sense. If this happens, check your syntax again, but if you can't make it work, talk to a teammate or an instructor.
+If you syntax is incorrect, you will see a lot of gibberish that won't make much, if any, sense. If this happens, check your syntax again, but if you can't make it work, talk to a teammate or an mentor.
 
 ![](./images/bad-array-of-toys.gif)
 

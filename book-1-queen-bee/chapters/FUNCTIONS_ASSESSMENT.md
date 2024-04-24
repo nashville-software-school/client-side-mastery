@@ -4,7 +4,7 @@ In this assessment, you are going to write some functions that will also continu
 
 ## Project Setup
 
-Contact your instructor to get a link to your assessment repository. Once you get the link, make sure you are in your `workspace` directory and then clone the repository with the following process.
+Contact your mentor to get a link to your assessment repository. Once you get the link, make sure you are in your `workspace` directory and then clone the repository with the following process.
 
 1. Authorize with Github and click on the link it generates for your repository.
 1. Click on the `Code` button at the top of the repository code.

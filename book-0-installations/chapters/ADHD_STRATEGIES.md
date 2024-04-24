@@ -10,7 +10,7 @@ The inbox is a place for you to store every question and idea so your brain is n
 2.  Label it "Inbox"
 3.  Set up a key. A great start is to have an icon for questions and an icon for ideas. You can use whatever works best for you.
 4.  Every time a thought or a question comes to mind, record it as a bullet point with the correct icon.
-5.  When an instructor comes to you for help, reference your inbox questions. Mark it as completed.
+5.  When an mentor comes to you for help, reference your inbox questions. Mark it as completed.
 6.  At the end of the day, review your inbox. Strike through anything that is irrelevant.
 
 #### Example:
@@ -137,7 +137,7 @@ This way you don't miss anything and you understand all the requirements before 
 
 Executive dysfunction is real. People deal with it everyday. And when it hits, shame and guilt hit as well. This can make you shy away from asking for help for fear of being "found out".
 
-"Gosh, I have no idea what to do or how to fix this problem but everyone is ahead of me. If I ask for help from my instructors they're gonna know how far behind I am. Now I'm stuck, behind, and I can't ask for help because they'll kick me out for not doing anything."
+"Gosh, I have no idea what to do or how to fix this problem but everyone is ahead of me. If I ask for help from my mentors they're gonna know how far behind I am. Now I'm stuck, behind, and I can't ask for help because they'll kick me out for not doing anything."
 
 1. We're not going to kick you out for asking for help.
 2. We are _way_ more worried about you if you're not asking for help than if you're "behind"

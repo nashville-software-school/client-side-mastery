@@ -23,4 +23,4 @@ For Giffygram, here's a list of the main resources that need to be represented i
 1. Messages - People will send messages to other users of the application.
 1. Likes - Messages can be liked by many users. Users can like many messages.
 
-Create an ERD for Giffygram and get it approved by an instructor.
+Create an ERD for Giffygram and get it approved by an mentor.

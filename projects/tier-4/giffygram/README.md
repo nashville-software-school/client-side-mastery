@@ -16,7 +16,7 @@ Your job is to deconstruct the deployed version of the application. Given your k
 6. What fetch calls are used in this application to modify state? What method (GET, POST, DELETE) is used on each?
 7. What bugs/incomplete features still need to be fixed or implemented?
 
-Once your team feels that you have adequately deconstructed Giffygram, schedule a review with an instructor and present your findings.
+Once your team feels that you have adequately deconstructed Giffygram, schedule a review with an mentor and present your findings.
 
 ## Accounts
 
