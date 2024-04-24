@@ -2,12 +2,6 @@
 
 In this first book, you will learn the core, fundamental competencies and habits of mind needed to succeed as a profession software developer.
 
-And you thought you'd be learning how to code...
-
-## Prerequisite Material
-
-Please read these chapters before moving on to the core projects.
-
 ## Core Projects
 
 | #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub>  | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild |

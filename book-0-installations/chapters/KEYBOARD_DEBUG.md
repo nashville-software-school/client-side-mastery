@@ -10,5 +10,3 @@ You will learn how to do the following tasks.
 1. Stop debugger
 1. Step through code
 1. Continue execution
-
-Your team will also give you your first _(of many)_ walkthroughs of using the debugger in Visual Studio Code. Seriously, we'll demonstrate its usage and answer questions about 10 times so that everyone is comfortable with it.

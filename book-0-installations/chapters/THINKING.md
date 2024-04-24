@@ -34,7 +34,13 @@ let myApples = 5
 let yourApples = 11
 ```
 
-You need to switch the value of each variable. You can't define any other variables as part of the algorithm. When your algorithm runs, the value of `myApples` should be 11, and the value of `yourApples` should be 5.
+
+You are going to write some additional code that will switch the value of each variable.  When your algorithm runs, the value of `myApples` should be 11, and the value of `yourApples` should be 5.
+
+* You can't define any other variables as part of the algorithm.
+* Changing these two lines of code to replace `5` with `11`, and `11` with `5` is not an algorithm.
+* You don't need any functions implement this algorithm, just a few lines of code.
+
 
 ## Helpful Hints
 
