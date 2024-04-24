@@ -1,10 +1,6 @@
 # Modern Farm
 
-This project has very specific requirements for how you should structure and organize your code. Attention to details is very important **before** you write your code.
-
-## Required Assets
-
-Your team must present a complete **Dependency Graph** and **Sequence Diagram** during your self-assessment review. All of the tests that exist for the project must pass.
+This project has very specific requirements for how you should structure and organize your code. Attention to details is very important **before** you write your code. We strongly recommend that after reading the requirements, that your team generate a **Dependency Graph** and **Sequence Diagram**. You may not get it right at first, so make sure you update it as you build the project.
 
 ## Requirements
 
