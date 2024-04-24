@@ -1,28 +1,11 @@
 # Modern Farm Management
 
-In this project, you will be practicing the following skills.
-
-1. Declaring variables with `let` and `const`.
-1. Writing functions.
-1. Function parameters and arguments.
-2. Iteration with `for` loops.
-3. Modular development to enforce the Single Responsibiity Principle to your code.
-4. Using `import` and `export` keywords between modules.
-5. Conditional logic using `if` and `else`.
 
 ## Setup
 
-Ask an mentor for the link that will create your self-assessment repository. Once the repo is created, click the green **Code** button at the top and copy the SSH connection string provided in the window that appears.
+Your mentors will provide a Github Classroom link that will create the Github repository. Make sure that the team follows the guidance provided in the [Github Workflow Guides](https://nashville-software-school.github.io/github-workflow/) during this project.
 
-Make sure you are in your workspace directory.
-
-```sh
-cd ~/workspace
-```
-
-Then clone the repository as a child of **workspace** and then **cd** to the new directory created by the clone. Then use the `code .` command to view the code, and then move on to the next section.
-
-All of the source code for this project will be in the directory of `src`.
+Once the team's repository has been made and everyone has joined the Github Classroom team, you will start with the [Begin a Project With Starter Code](https://nashville-software-school.github.io/github-workflow/START_REMOTE.html) process.
 
 ## Automated Tests
 
@@ -56,7 +39,7 @@ As you start to create the files, and then write the correct JavaScript code for
 
 ![](./images/modern-farm-web-server.gif)
 
-## Creating a Harvest Plan
+## Creation of the Harvest Plan
 
 There is an existing `plan.js` module in this application that is reponsible for defining 3 rows of crops to be planted. In each row, there are 6 plots of land. Each plot is randomly assigned one of the following types of food to grow.
 
@@ -75,4 +58,4 @@ Remember that to assign what a function returns as a value of a variable, the sy
 const appropriatelyNamedVariable = theFunctionThatReturnsAValue()
 ```
 
-Then use `console.log()` to output the value of `yearlyPlan` to the developer console in Chrome.
+Use the **Sources** tab in your browser to set a breakpoint and verify that the value of this variable is the yearly planting plan.
