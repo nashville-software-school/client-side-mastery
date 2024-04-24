@@ -4,7 +4,7 @@ This project has very specific requirements for how you should structure and org
 
 ## Required Assets
 
-You must present a complete **Dependency Graph** and **Sequence Diagram** during your self-assessment review. All of the tests that exist for the project must pass.
+Your team must present a complete **Dependency Graph** and **Sequence Diagram** during your self-assessment review. All of the tests that exist for the project must pass.
 
 ## Requirements
 
@@ -16,3 +16,6 @@ You must present a complete **Dependency Graph** and **Sequence Diagram** during
 | 4 | [Sowing the Field](./chapters/MF_SOWING.md) |
 | 5 | [Harvest Time](./chapters/MF_HARVEST.md) |
 | 6 | [Selling the Harvest](./chapters/MF_RENDER_HARVEST.md) |
+| 7 | [Optional Advanced Challenges](./chapters/MF_CHALLENGES.md) |
+
+

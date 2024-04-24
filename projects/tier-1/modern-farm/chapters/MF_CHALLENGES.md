@@ -31,3 +31,71 @@ Add a unique, incrementing `id` property to each harvested plant. The first plan
 Add an `icon` property to each of your seed objects so that the user can see a picture of the food.
 
 ![](./images/emoji-plants.png)
+
+## Sequence Diagram
+
+Your team must generate a sequence diagram for this project.
+
+<details>
+<summary>Helpful hint if you're stuck</summary>
+
+```mermaid
+sequenceDiagram
+    participant main
+    participant plan
+    participant tractor
+    participant seedModule
+    participant field
+    participant harvester
+    participant Catalog
+    participant DOM
+
+    main->>plan: createPlan()
+    activate plan
+    loop 3 times
+        loop 6 times
+            plan->>plan: add plant to row
+        end
+        plan->>plan: add row to plan
+    end
+    plan-->>main: plan array
+    deactivate plan
+
+    main->>tractor: plan
+    activate tractor
+    loop for each row in plan
+        loop for each plant type in row
+            tractor->>seedModule: create*()
+            activate seedModule
+            seedModule-->>tractor: New seed
+            deactivate seedModule
+            tractor->>field: addPlant()
+            activate field
+            field->>field: Push seed to plants[]
+            deactivate field
+        end
+    end
+    deactivate tractor
+
+    main->>field: usePlants()
+    activate field
+    field-->>main: planted seeds array
+    deactivate field
+
+    main->>harvester: planted seeds
+    activate harvester
+    loop for each plant in planted seeds
+        harvester->>harvester: Add plant to food array
+    end
+    harvester-->>main: array of plants to sell
+    deactivate harvester
+
+    main->>Catalog: plants to sell
+    activate Catalog
+    loop for each plant in plants
+        Catalog->>Catalog: Generate plant HTML
+        Catalog->>DOM: Display plant
+    end
+    deactivate Catalog
+```
+</details>
