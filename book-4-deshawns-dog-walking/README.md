@@ -1,4 +1,4 @@
-# Book 3 - DeShawn's Dog Walking Service
+# DeShawn's Dog Walking Service
 
 In this book, you will be introduced to three concepts.
 
@@ -6,9 +6,11 @@ In this book, you will be introduced to three concepts.
 1. Handling browser generated events.
 1. Data relationships and how to visualize them.
 
+> Historical average time to complete this book is 8 days with an additional 3 days for the group project.
+
 ## Core Projects
 
-| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | 🚢 <br/> Shipping Ship Ships  | ☕️ 🧁 <br/> Brewed Awakenings |  🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me
+| # | 🐕‍🦺 🐩 <br/> DeShawn's Dog Walking <br/><sub>(_Guided tour_)</sub> | 🚢 <br/> Shipping Ship Ships  | ☕️ 🧁 <br/> Brewed Awakenings |  🎶 👨🏼‍🎤 🎶 <br/> Tour Some Sugar On Me <br/>
 |--|--|--|--|--|
 | 1 | [Fixing DeShawn's Project](./chapters/DD_DEBUGGING.md) <br/> <sub style="font-size:0.85rem;">#graph #debugging #breakpoints</sub> | [Shipping ERD](./chapters/SS_ERD.md) | [Broken Receipts](./chapters/BA_DEBUGGING.md) |[Layout and ERD](./chapters/TOUR_INTRO.md) |
 | 2 | [Visualizing Data and Relationships](./chapters/DD_ERD.md) <br/> <sub style="font-size:0.85rem;">#data #ERD</sub> | [Dependency Graph](./chapters/SS_DEPENDENCY_GRAPH.md) | [Brewed Awakenings ERD](./chapters/BA_ERD.md) | [Feature List](./chapters/TOUR_FEATURES.md) |

@@ -1,4 +1,4 @@
-# Book 2 - Martin's Aquarium
+# Martin's Aquarium
 
 In this book, you will learn how to build your first dynamic web page with HTML, CSS, and JavaScript. You will also start backing up your code consistently to Github.
 

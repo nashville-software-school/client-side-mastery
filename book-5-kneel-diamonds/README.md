@@ -1,4 +1,13 @@
-# Book 4 - Kneel Diamonds
+# Kneel Diamonds
+
+In this book, you will be introduced to three concepts.
+
+1. Performing HTTP requests to external data sources.
+1. Asynchronous operations in code.
+2. Radio button groups and dropdowns _(a.k.a. `<select>` elements)_
+3. Array methods of `map()`, `find()`, and `filter()`.
+
+> Historical average time to complete this book is 9 days with an additional 4 days for the group project.
 
 ## Core Projects
 
