@@ -2,17 +2,7 @@
 
 In this book, you will learn how to build your first dynamic web page with HTML, CSS, and JavaScript. You will also start backing up your code consistently to Github.
 
-## Git &amp; Github Reference Chapters
-
-:point_up: Please note that these four chapters are for you to refrence as you work through the core projects. Start at Sallys Interests and refer back to this section only when you have began working with github.
-
-
-| # | Tracking and Backing Up Your Code |
-| --- | --- |
-| 1 | [Git Setup](./chapters/GIT_SETUP.md) |
-| 2 | [Git Workflow](./chapters/GIT_BASICS.md) |
-| 3 | [Github Setup](./chapters/GIT_REMOTE_BACKUP.md) |
-| 4 | [Github Workflow for Teams](./chapters/GIT_WORKFLOW.md) |
+> Historical average time to complete this book is 8 days with an additional 3 days for the group project.
 
 ## Core Projects
 
@@ -33,7 +23,16 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 
 | # | 🎓  Self-Assessment |
 | --- | --- |
-| 1 | [Self-Assess JavaScript Fundamentals](../projects/tier-1/modern-farm/README.md) |
+| 1 | [Self-Assess JavaScript Fundamentals](./chapters/HAIRY_POTTER.md) |
+
+
+## 🔐 Group Project
+
+When you have completed all of the core chapters, you will work on a group project with other teammates who have also completed them. Group projects deepen your communication and collaboration Core Skills. Your mentors will assign you to a team when it's time.
+
+| #   | Project Name | Description |
+| --- | --- | --- |
+| 1   | [🚜<br/>Modern Farm](../projects/tier-1/fish-fusion/README.md) | In this group project, your team is going to build an application that simulates the process of planning, planting, harvesting and selling crops for a modern farming operation. |
 
 ## 🔐 Deep Learning Projects Unlocked
 

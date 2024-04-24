@@ -1,12 +1,14 @@
-# Book 1 - Think Like a Professional
+# Algorithmic Thinking as Code
 
 In this first book, you will learn the core, fundamental competencies and habits of mind needed to succeed as a profession software developer.
+
+> Historical average time to complete this book is 6 days with another 2 days spent on the group project.
 
 ## Core Projects
 
 | #   | 👸🏽 <br/> Her Majesty, The Queen <br/><sub>(_Guided Tour_)</sub>  | 🌊 🏄🏾‍♂️ <br/> Sequina's Surf Shop <br/><sub>(_Debugging Tour_)</sub> | 🐻 <br/> Björn To Be Wild |
 | --- | --- | --- | --- |
-| 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>                      | [Surf Shop](./chapters/SURF_INTRO.md)                              | [Björn Tôrvold's Wilderness Adventures](./chapters/BJORN_INTRO.md) |
+| 1   | [Introduction to Functions](./chapters/QUEEN_INTRO.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>  | [Surf Shop](./chapters/SURF_INTRO.md)   | [Björn Tôrvold's Wilderness Adventures](./chapters/BJORN_INTRO.md) |
 | 2   | [Her Majesty Function](./chapters/QUEEN_HAIL.md) <br/> <sub style="font-size:0.85rem;">#functions</sub>                            | [Underwater Undefined](./chapters/SURF_UNDEFINED.md)               | [River Tours](./chapters/BJORN_RIVERS.md)                          |
 | 3   | [Watching Your Code Run](./chapters/QUEEN_DEBUGGER.md) <br/> <sub style="font-size:0.85rem;">#debugger</sub>                       | [Constant Tide](./chapters/SURF_CONST.md)                          | [Trail Tour Prices](./chapters/BJORN_PRICE_RANGES.md)              |
 | 4   | [Bug Queen](./chapters/QUEEN_ERRORS.md) <br/> <sub style="font-size:0.85rem;">#errors</sub>                                        | [Wave Function](./chapters/SURF_NOT_A_FUNCTION.md)                 | [River Tour Breakdown](./chapters/BJORN_RIVER_PRICE_RANGES.md)     |
@@ -45,9 +47,9 @@ Pioneer chapters are **optional** and let you develop Deep Learning on the conce
 | 1   | [Cheugy Crocs](./chapters/CHUEGY_CROCS.md)    |
 | 2   | [Link's Kitchen](./chapters/LINKS_KITCHEN.md) |
 
-## 🔐 Deep Learning Group Projects Unlocked
+## 🔐 Group Project
 
-When you have completed all of the core chapters, you will work on a group project with other teammates who have also completed them. Group projects deepen your communication and collaboration Core Skills.
+When you have completed all of the core chapters, you will work on a group project with other teammates who have also completed them. Group projects deepen your communication and collaboration Core Skills. Your mentors will assign you to a team when it's time.
 
 | #   | Project Name | Description |
 | --- | --- | --- |

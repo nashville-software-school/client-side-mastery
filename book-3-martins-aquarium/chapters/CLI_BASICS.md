@@ -67,7 +67,7 @@ git commit -m "First commit for Martin"
 1. Scroll down and click the green "Create Repository" button.
 1. Copy the repository's connection string.
     ![](./images/copy-github-connection-string.gif)
-1. Follow the second set of instructions.
+2. Follow the instructions for pushing an existing repository from the command line.
     ![](./images/add-origin.png)
 
 Now that the code has successfully been backed up, go back to your browser, and refresh the page. You will see that your remote repository backup now has your aquarium HTML, JavaScript and CSS files in it.

@@ -7,7 +7,7 @@ In this project, your task to build a workflow for making, and firing pottery, a
 1. Open a new terminal window, copy pasta the following command into the terminal and hit enter to run it. It will create a basic file structure for you and create some starter code in the `~/workspace/hairy-potter-project` directory.
 
    ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/projects/tier-1/hairy-potter/scripts/hairy-potter-install.sh)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/hairy-potter.sh)"
    ```
 
 1. Navigate to the project directory
@@ -30,14 +30,9 @@ In this project, your task to build a workflow for making, and firing pottery, a
    cd ~/workspace/hairy-potter-project
    ```
 
-1. Run the `npm install` command to install all of the tools used for this project.
-1. Once the installations are complete, run the `npm test` command (_see animation below_). You will see all of the tests for your code - which ones pass, and which ones fail. As soon as you make changes to your code, the tests will run automatically, so keep this terminal window open while you are working on this project. When you need to stop working on it, use the `Ctrl+C` keyboard shortcut to stop the tests from running.
+## Requirements
 
-   ![](./images/jest-initial.gif)
-
-> **Note:** All of the code for this project will be created the `src` directory of the project. Open a new terminal session, and `cd` to the project directory. Then you can `cd src` to change to that directory in your terminal. To check what's already in the `src` directory, use the `ls` command to see its contents.
-
-## Making Pottery at the Wheel
+### Making Pottery at the Wheel
 
 1. Create a `scripts/PotteryWheel.js` module.
 1. Define a variable in the module to have the value of the primary key for each piece of pottery. It should have an initial value of 1.
@@ -60,7 +55,7 @@ Once you have it working, make 5 pieces of pottery in `main.js`.
 
 **THEN PUSH YOUR CODE TO GITHUB**
 
-## Firing the Pottery in the Kiln
+### Firing the Pottery in the Kiln
 
 1. Define a `scripts/Kiln.js` module.
 1. Define and export a function named `firePottery` that is responsible for acting as a kiln.
@@ -81,7 +76,7 @@ To check your work, make sure that at least one of your pieces of pottery is fir
 
 **THEN PUSH YOUR CODE TO GITHUB**
 
-## Pricing Uncracked Pottery
+### Pricing Uncracked Pottery
 
 1. Create a `scripts/PotteryCatalog.js` module.
 1. Define a variable in the module with a value of an empty array. This array will store pottery that will be sold. Do not export this array.
@@ -100,16 +95,16 @@ In the `main.js` module, invoke the `toSellOrNotToSell` function for each of the
 
 **THEN PUSH YOUR CODE TO GITHUB**
 
-## Display the Catalog
+### Display the Catalog
 
 Your next task is to create HTML representations of the pottery you want to sell at the craft fair and display them on the DOM. Then you will track which ones you sell.
 
-### Define DOM Target
+#### Define DOM Target
 
 1. Create an `<article>` element in the `index.html` file.
 1. The article element must have a class of `potteryList`.
 
-### Create Pottery HTML
+#### Create Pottery HTML
 
 1. Create a `scripts/PotteryList.js` module.
 1. Define and export a `PotteryList` function.
@@ -132,14 +127,5 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 
 ![example output](./images/pottery.png)
 
-Then look at your terminal window that is running the tests and make sure that the following tests pass.
-
-- `Pottery is rendered to DOM`
-
 **THEN PUSH YOUR CODE TO GITHUB**
 
-## Final Results
-
-Once all of your tests pass, this will be the output of the terminal that is running the tests.
-
-![](./images/jest-test-run.gif)
