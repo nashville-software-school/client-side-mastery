@@ -49,7 +49,7 @@ export const MetalOptions = async () => {
     )
 
     // This function needs to return a single string, not an array of strings
-    const optionsHTML += divStringArray.join("")
+    optionsHTML += divStringArray.join("")
 
     return optionsHTML
 }
