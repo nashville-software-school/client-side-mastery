@@ -13,25 +13,24 @@ Here's how that looks
 
 ## Core Projects
 ### Part 1
-| # | 🍯 💻 Honey Rae's Repairs | 😂🗒 Chuckle Checklist |
+| # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
 |--|--|--|
-| 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | [Chuckle Setup](./chapters/CHUCKLE_SETUP.md) |
-| 2 | [Your First Component](./chapters/REPAIR_FIRST_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#jsx #useState</sub>| [New Chuckles](./chapters/CHUCKLE_CREATE.md) |
-| 3 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | [View Chuckles](./chapters/CHUCKLE_READ.md) |
-| 4 | [Repair Wireframe](./chapters/REPAIR_WIREFRAME.md) <br/> <sub style="font-size:0.85rem;">#wireframe #project-planning</sub> | [Fulfilled Chuckles](./chapters/CHUCKLE_UPDATE.md) |
-| 5 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> | [Rejected Chuckles](./chapters/CHUCKLE_DELETE.md) |
+| 1 | [Getting Started with React](./chapters/REACT_BASICS.md) | [Learning Setup](./chapters/LEARN_SETUP.md) |
+| 2 | [Your First Component](./chapters/REPAIR_FIRST_COMPONENT.md) <br/> <sub style="font-size:0.85rem;">#jsx #useState</sub>| [MVP and Wireframe](./chapters/LEARN_WIREFRAME.md) |
+| 3 | [Repair API](./chapters/REPAIR_API.md) <br/> <sub style="font-size:0.85rem;">#api #json</sub> | [All Posts](./chapters/LEARN_ALL_POSTS.md) |
+| 4 | [Repair Wireframe](./chapters/REPAIR_WIREFRAME.md) <br/> <sub style="font-size:0.85rem;">#wireframe #project-planning</sub> | [Filter Posts](./chapters/LEARN_FILTER.md) |
+| 5 | [List All Tickets](./chapters/REPAIR_ALL_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#useEffect #fetch</sub> |
 
 **🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 5**
 
 ### Part 2
-| # | 🍯 💻 Honey Rae's Repairs |💡💬 Learning Moments |
+| # | 🍯 💻 Honey Rae's Repairs | |
 |--|--|--|
-| 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> | [Learning Setup](./chapters/LEARN_SETUP.md) |
-| 7 | [Search Tickets](./chapters/REPAIR_SEARCH_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props #dependency-array</sub> | [MVP and Wireframe](./chapters/LEARN_WIREFRAME.md) |
-| 8 | [Customer List](./chapters/REPAIR_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#review</sub> | [All Posts](./chapters/LEARN_ALL_POSTS.md) |
-| 9 | [Employee List](./chapters/REPAIR_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#practice</sub> | [Filter Posts](./chapters/LEARN_FILTER.md) |
+| 6 | [Ticket Assignee](./chapters/REPAIR_TICKET_ASSIGNEE.md) <br/> <sub style="font-size:0.85rem;">#props #optional-chaining #ternary</sub> |
+| 7 | [Search Tickets](./chapters/REPAIR_SEARCH_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#props #dependency-array</sub> |
+| 8 | [Customer List](./chapters/REPAIR_CUSTOMER_LIST.md) <br/> <sub style="font-size:0.85rem;">#review</sub> |
+| 9 | [Employee List](./chapters/REPAIR_EMPLOYEE_LIST.md) <br/> <sub style="font-size:0.85rem;">#practice</sub> |
 
-**🧨 STOP HERE AND COMPLETE ALL PROJECTS UP TO CHAPTER 9**
 
 ### Part 3
 | # | 🍯 💻 Honey Rae's Repairs | 💡💬 Learning Moments |
@@ -51,6 +50,17 @@ Here's how that looks
 | 16 | [Create Ticket](./chapters/REPAIR_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #post</sub> | [User Profile](./chapters/LEARN_VIEW_PROFILE.md) |
 | 17 | Edit Ticket <br/> <sub style="font-size:0.85rem;">#forms #put</sub> | [Edit Profile](./chapters/LEARN_EDIT_PROFILE.md) |
 | 17 | Edit Profile <br/> <sub style="font-size:0.85rem;">#forms #put</sub> |  |
+
+### Part 5
+| # | 😂🗒 Chuckle Checklist | |
+|--|--|--|
+| 1 | [Chuckle Setup](./chapters/CHUCKLE_SETUP.md) |
+| 2 | [New Chuckles](./chapters/CHUCKLE_CREATE.md) |
+| 3 | [View Chuckles](./chapters/CHUCKLE_READ.md) |
+| 4 | [Fulfilled Chuckles](./chapters/CHUCKLE_UPDATE.md) |
+| 5 | [Rejected Chuckles](./chapters/CHUCKLE_DELETE.md) |
+
+
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
@@ -60,9 +70,3 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | 1 | useContext | [CSS Libraries](./chapters/EXPLORE_CSS.md) |
 | 2 |  Learn how to [deploy your API to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) for free |
 | 3 | Learn how to [deploy your client to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) for free |
-
-## 🔐 Projects Unlocked
-
-| # | Project&nbsp;Name | Description |
-|--|--|--|
-|1| [🌹&nbsp;Thorns&nbsp;&amp;&nbsp;Roses](../projects/tier-5/thorns-roses/) | Want the ultimate challenge? Using complex data relationships with React, build a project that manages state for flowers, nurseries, distributors, retailers, and customers buying flowers at the retailers. | 
