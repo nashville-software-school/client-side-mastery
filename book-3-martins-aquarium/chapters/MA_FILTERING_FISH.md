@@ -45,7 +45,7 @@ for (const sock of socks) {
 
 ## Martin's Mayan Vision
 
-> A year has gone by since you built, and got paid for, Martin's fish site. You had nearly forgotten all about Martin and his odd requests until two nights ago when you received a strange phone call.
+> A year has gone by since you built, and got paid for, Martin's fish site. You had nearly forgotten all about Martin and his odd site until two nights ago when you received a strange phone call.
 >
 > _"Hi, it's Martin, and I really need to talk to you about my site. Something important has come up and I need some changes right away,"_ he said in his hurried phone message. While he's talking, you hear a loud whirring, or whooshing, in the background. It makes it hard to understanding a few words in his message.
 >
@@ -96,16 +96,33 @@ for (const number of numbers) {
 }
 ```
 
-## Goal
+## Step 1: Generate More Fish
 
-You need to build three functions in your fish data provider. One to return an array of fish that are multiples of 3 in length, one for multiples of 5, and one for all others.
+Use a generative AI tool to generate 10 more fish objects that you can put into your database.
+
+> **Prompt:** Generate 15 JavaScript objects that represent fish. Here is an existing object. Make sure some of the fish have a length evenly divisible by 3 and some have a length evenly divisible by 5.
+>
+>   ```js
+>   {
+>     name: "Dory",
+>     species: "Blue Tang",
+>     length: 2,
+>     location: "Great Barrier Reef",
+>     diet: "Omnivore",
+>     image: "https://example.com/images/dory.jpg"
+>   }
+>   ```
+
+## Step 2: Multiple Fish HTML Function
+
+You need to build three functions module that generates fish HTML. One to return an array of fish that are multiples of 3 in length, one for multiples of 5, and one for all others.
 
 Some starter code is provided below. Use the example code blocks above to have each function filter out the appropriate fish.
 
 ```js
 export const mostHolyFish = () => {
     // 3, 6, 9, 12, etc... fish
-    const holyFish = []
+    const holyFish = ""
 
     for () {
 
@@ -116,11 +133,28 @@ export const mostHolyFish = () => {
 
 export const soldierFish = () => {
     // 5, 10, 15, 20, 25, etc... fish
-    return soldiers
 }
 
-export const nonHolyFish = () => {
+export const regularFish = () => {
     // Any fish not a multiple of 3 or 5
-    return regularFish
 }
 ```
+
+## Step 3: Update the DOM in Correct Order
+
+Open the `main.js` module and make sure you import all three functions from the module. Then invoke each one and store the generated strings into variables.
+
+Finally, at the bottom of the module, update the DOM with all three HTML strings. You can use interpolation for this.
+
+```js
+domReference.innerHTML = `${string1}${string2}${string3}`
+```
+
+## Step 4: Verify Correct Display
+
+Refresh your browser and verify that the fish are now displayed in the grid in the order in which Martin's has specified.
+
+
+## Step 5: Github
+
+You've been making commits and pushing your code to Github during this process, right?

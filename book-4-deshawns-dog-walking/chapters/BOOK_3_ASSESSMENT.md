@@ -19,7 +19,7 @@ Below is an animation showing how the application should look when complete and 
 
 ## Setup
 
-Your instruction team will provide a link for you to create your assessment repository. Once your repo is created, clone it to your machine.
+Your coaching team will provide a link for you to create your assessment repository. Once your repo is created, clone it to your machine.
 
 1. Make sure you are in your `workspace` directory.
 1. `git clone {github repo SSH string}`.
@@ -32,8 +32,8 @@ Make sure your Developer Tools are open at all times while working on this proje
 
 ## Deep Learning
 
-Another reminder from the instruction team. This is NOT A TEST. We are not looking for 100% completion, although if you can make it work completely, then huzzah for you.
+Another reminder from the coaching team. This is NOT A TEST. We are not looking for 100% completion, although if you can make it work completely, then huzzah for you.
 
-What we are looking for is analytical thinking, algorithmic thinking, and efficient learning techniques to bind the concepts together for a solution, and communication with your teammates and instruction team.
+What we are looking for is analytical thinking, algorithmic thinking, and efficient learning techniques to bind the concepts together for a solution, and communication with your teammates and coaching team.
 
 If you only get 50% of it complete, but display the above Core Skills and can demonstrate understanding of the fundamental code concepts, then you are learning and growing - which is what we care about.

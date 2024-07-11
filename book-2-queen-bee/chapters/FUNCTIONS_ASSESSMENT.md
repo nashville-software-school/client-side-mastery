@@ -99,4 +99,4 @@ From this point on, you can follow the same three-step process to commit the cur
 
 ## Reviewing Your Code
 
-If your code is successful, ping a member of the instruction team for a review of your vocabulary and ask any questions you have about the project.
+If your code is successful, ping a member of the coaching team for a review of your vocabulary and ask any questions you have about the project.

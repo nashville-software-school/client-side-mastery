@@ -52,7 +52,7 @@ In order to automate the installation of the tools you need _(which happens in t
 1. Copy pasta the following command into the Ubuntu terminal from the last section and hit enter to run it. It will attempt to install some of the basic tools you need for NSS.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-0-installations/chapters/scripts/installs-wsl.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/installs-wsl.sh)"
 ```
 
 ## Windows Terminal
@@ -103,7 +103,7 @@ Once Windows Terminal is installed:
 <summary>
 mentors: Expand for help
 </summary>
-If you run into problems during installation, someone on the instruction team will use the following info to help you. You can ignore this section.
+If you run into problems during installation, someone on the coaching team will use the following info to help you. You can ignore this section.
 
 For reference, here's the [Microsoft Install WSL instructions](https://docs.microsoft.com/en-us/windows/wsl/install).
 

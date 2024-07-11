@@ -85,7 +85,7 @@ const database = {
 }
 ```
 
-> **Tip:** Some confusion and some bugs at this point are natural. You will likely forget some punctuation like commas and curly braces. If you want to discuss your ideas or bugs with the instruction team, you should visit one of them.
+> **Tip:** Some confusion and some bugs at this point are natural. You will likely forget some punctuation like commas and curly braces. If you want to discuss your ideas or bugs with the coaching team, you should visit one of them.
 
 ## Concept Checking Questions
 

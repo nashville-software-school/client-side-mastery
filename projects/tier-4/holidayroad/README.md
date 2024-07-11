@@ -43,4 +43,4 @@ Once the user has saved an itinerary, and it is listed on the aside bar, refacto
 
 ## Getting Started
 
-If your team chooses to work on this project, inform your instruction team, and they will get you started.
+If your team chooses to work on this project, inform your coaching team, and they will get you started.

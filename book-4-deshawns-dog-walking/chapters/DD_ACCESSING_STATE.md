@@ -19,4 +19,4 @@ Again, refer to the [Using data attributes](https://developer.mozilla.org/en-US/
 
 Watch the following video to see how to access state when the user clicks on an HTML element, and then use state to present a message.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/W4M5h99Ka8Z5v3TFBY3d)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/W4M5h99Ka8Z5v3TFBY3d)

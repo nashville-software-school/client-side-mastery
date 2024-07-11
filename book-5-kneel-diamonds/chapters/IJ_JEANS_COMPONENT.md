@@ -22,4 +22,4 @@ export const PageFooter = () => {
 
 Watch the following video for a walkthrough of how to do it. Then implement the code yourself.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/GqHoMoTEjb8XBRHouTHA)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/GqHoMoTEjb8XBRHouTHA)

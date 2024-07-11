@@ -96,9 +96,9 @@ added.
 
 ## Reviewing Your Code
 
-If your code is successful, please review it with a member of the instruction team so that any questions you may have can be answered and a teammate can give your tips on how to deepen your knowledge.
+If your code is successful, please review it with a member of the coaching team so that any questions you may have can be answered and a teammate can give your tips on how to deepen your knowledge.
 
 If you cannot make the code work, make sure you do the three projects in this book of the course.
 
-If you have already done all three projects, but still can't figure out how to make the test pass, sit with a member of the instruction team to help strengthen your knowledge and understanding of the concepts and get your code on the right track.
+If you have already done all three projects, but still can't figure out how to make the test pass, sit with a member of the coaching team to help strengthen your knowledge and understanding of the concepts and get your code on the right track.
 

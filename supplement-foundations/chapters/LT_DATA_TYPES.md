@@ -55,4 +55,4 @@ const accountIsActive = true
 
 Think about what kind of data that Leonid would need to store about his toys. For example, the name of the toy. What data type would that be?
 
-Write down some other properties of toys that he would need to keep track of, and the data type for each. When you're done, talk with your teammates, or talk to a member of your instruction team to review your ideas.
+Write down some other properties of toys that he would need to keep track of, and the data type for each. When you're done, talk with your teammates, or talk to a member of your coaching team to review your ideas.

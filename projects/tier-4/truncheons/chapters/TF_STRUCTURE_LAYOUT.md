@@ -81,7 +81,7 @@ Given those feature requests, what you need to do in this chapter is the followi
 1. Identify the components that need to be rendered in this application.
 1. Identify the structure and relationship of the components _(e.g. a **`TeamForm`** component is rendered as a child of the **`Game`** component, etc...)_
 1. Decide on a layout for your Truncheon &amp; Flagons application. Draw a simple wireframe that shows where each component will be rendered.
-1. Come see a member of the instruction team to review your component layout.
+1. Come see a member of the coaching team to review your component layout.
 1. After discussing your layout, you can then create a new project directory of `~/workspace/flagons`, and start building the HTML and CSS of your components and layout.
 
 > **Reminder:** Remember to create a CSS file for each component, and use the `@import` statement in `main.css` to include each one. Also consider what sub-directories you will need under the `scripts` directory, if any. Discuss with your mentor.

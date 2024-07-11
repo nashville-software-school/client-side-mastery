@@ -27,7 +27,7 @@ Tier 3 projects combine all of the skills that you learn in the client-side cour
 
 ## Tier 4 - Professional Readiness
 
-Tier 4 projects must be worked on as a team. They are broad in scope, require coordination of effort, and have a large number of complex features. When 2 or more students have reached the level of proficiency to accomplish a project of this scale, the instruction team will coordinate the effort of starting one.
+Tier 4 projects must be worked on as a team. They are broad in scope, require coordination of effort, and have a large number of complex features. When 2 or more students have reached the level of proficiency to accomplish a project of this scale, the coaching team will coordinate the effort of starting one.
 
 1. [Truncheons & Flagons](./tier-4/truncheons/) - This project involves implementing an ancient tavern game so that modern enthusiasts can enjoy a blast from the past.
 1. [Giffygram](./tier-4/giffygram/) - This project has your entire team examining an already deployed application, and then testing your ability to deconstuct it. Deconstruction is an advanced skill that challenges your ability to think critically, and creatively when examining someone else's code.

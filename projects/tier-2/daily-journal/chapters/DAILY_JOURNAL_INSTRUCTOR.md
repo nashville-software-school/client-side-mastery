@@ -5,7 +5,7 @@ For this feature, you will provide an affordance that allows the user to select 
 ## Steps
 
 1. Add an `mentors` resource collection in your API.
-1. Add an object representing each of the three members of your instruction team.
+1. Add an object representing each of the three members of your coaching team.
     ```json
     {
         "id": 1,

@@ -10,7 +10,7 @@ Add a new table to your ERD in dbdiagram.io to visualize the departments and upd
 
 1. Add a new resource in your database named `departments` and create an 4 department objects in the array.
 1. Modify each employee object to have a foreign key to one department.
-1. Refactor **`EmployeeList`** to display the department name in the employee's HTML representation.
+1. Refactor the code the generates the employee HTML to display the department name in each representation.
 
 The final HTML representation should look like this.
 

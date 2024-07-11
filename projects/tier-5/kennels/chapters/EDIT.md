@@ -86,7 +86,7 @@ Create a new button in the **`AnimalDetails`** component that redirects the user
 
 This component will populate the input fields with the current values from the API. We will obtain all necessary values using a `useEffect()` hook.
 
-Replace the current contents of the **`AnimalForm`** component with the following code. You will walk through all of this code with your instruction team.
+Replace the current contents of the **`AnimalForm`** component with the following code. You will walk through all of this code with your coaching team.
 
 ```js
 import React, { useContext, useEffect, useState } from "react"

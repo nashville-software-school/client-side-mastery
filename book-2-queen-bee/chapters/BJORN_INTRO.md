@@ -15,7 +15,7 @@ You will quickly discover some of the mistakes he made, but some of the mistakes
 
 1. Run the following command in your terminal. It will automatically create a `workspace/wilderness` directory for you, and create a file in that directory named `adventure.js`, and navigate you to that directory.
    ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-1-queen-bee/chapters/scripts/bjorn-adventure.sh)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/bjorn-adventure.sh)"
    ```
 2. Open the directory in VS Code with the `code .` command.
 3. Open the `adventure.js` file.

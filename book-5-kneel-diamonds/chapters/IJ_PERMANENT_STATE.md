@@ -11,7 +11,7 @@ This video will walk you through the code and concepts for a new type of `fetch(
 
 Implement the code once you are done watching the video.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/rXmqZaBt9JUs6ZOy8fEY)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/rXmqZaBt9JUs6ZOy8fEY)
 
 
 ## Save Submission Component
@@ -20,7 +20,7 @@ This video shows you how to add a button to your UI, listen for a click event, a
 
 Implement the code once you are done watching the video.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/DLOBarNf9QHknqJymeKh)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/DLOBarNf9QHknqJymeKh)
 
 ## Sequence Diagram
 

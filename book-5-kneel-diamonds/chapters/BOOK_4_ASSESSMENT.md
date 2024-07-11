@@ -19,6 +19,4 @@ A customer should be able to choose a base dish, a vegetable, and a side dish an
 
 ## Getting Started
 
-Ask a member of your instruction team for a link that will create your assessment repository. Once your repository is created, read the requirements that are provided there.
-
-Once all of your diagrams are complete, and you have a working application, notify them that you are ready for a vocabulary review.
+Let your coaches know you're ready by clicking the appropriate  button on the Learning Platform. You will be given a Github Classroom link that will generate your repository with instructions included.

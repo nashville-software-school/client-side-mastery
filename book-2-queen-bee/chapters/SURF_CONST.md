@@ -10,7 +10,7 @@ Since they don't know how to fix it, they sent the script to you - the debugging
 
 1. Run the following command in your terminal. It will create a new file in surf-shop directory named `const.js`.
    ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-1-queen-bee/chapters/scripts/const.sh)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/const.sh)"
    ```
 3. Open the `const.js` file in VS Code.
 4. Run the code with your debugger.

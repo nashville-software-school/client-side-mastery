@@ -29,7 +29,7 @@ Think of permanent state as completed, and unchanging.
     ```
 3. Then watch the following video that implements the initial state and the functions to modify each transient state property. Then you update your code to match.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/TK5rRPQzsC8EBCRbBLQX)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/TK5rRPQzsC8EBCRbBLQX)
 
 
 ## Updating Transient State
@@ -80,7 +80,7 @@ export const OwnJeansChoices = () => {
 
 Watch the following, quick video to see the final step to hook everything up and add some `console.log()` statements to watch your transient state change when you select the radio buttons.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/6Jv5vZ7popGeOUnrZcOj)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/6Jv5vZ7popGeOUnrZcOj)
 
 ## Saving Location Question State
 
@@ -88,7 +88,7 @@ The next step is to save the choice that the user makes for the second question 
 
 If you get stuck on the implementation, you can watch the video below to see how it is done.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/2U2PbksARfJ37MED5pHB)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/2U2PbksARfJ37MED5pHB)
 
 
 

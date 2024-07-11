@@ -23,7 +23,7 @@ Once again they need to rely upon your debugging skills to find out why JavaScri
 
 1. Run the following command in your terminal. It will create a new file in surf-shop directory named `not-a-function.js`.
    ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-1-queen-bee/chapters/scripts/function.sh)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/function.sh)"
    ```
 3. Open the `not-a-function.js` file in VS Code.
 4. Run the code with your debugger.

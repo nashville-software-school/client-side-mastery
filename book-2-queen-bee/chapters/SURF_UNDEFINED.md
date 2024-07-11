@@ -4,7 +4,7 @@ Now that you have a paying job working for the Surf Shop, you are going to build
 
 1. Run the following command in your terminal. It will automatically create a `workspace/surf-shop` directory for you, and create a file in that directory named `undefined.js`, and take you to that directory.
    ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-1-queen-bee/chapters/scripts/undefined.sh)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/undefined.sh)"
    ```
 2. Open the directory in VS Code with the `code .` command.
 3. Open the `undefined.js` file.

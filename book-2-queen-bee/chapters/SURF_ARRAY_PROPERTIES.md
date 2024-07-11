@@ -6,7 +6,7 @@ Sequina now wants to find out the average price of her entire inventory to see i
 
 1. Run the following command in your terminal. It will create a new file in surf-shop directory named `averagePrice.js`.
    ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-1-queen-bee/chapters/scripts/averagePrice.sh)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/averagePrice.sh)"
    ```
 3. Open the `averagePrice.js` file in VS Code.
 4. Run the code with your debugger.

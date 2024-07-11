@@ -1,4 +1,4 @@
-# Fox y Cat Project Setup
+# Fox y Dog Project Setup
 
 In your workspace directory, create a new project directory.
 
@@ -26,15 +26,15 @@ Copy pasta the following code into your HTML file. As you can see, there is just
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Fox y Cat</title>
+        <title>Fox y Dog</title>
         <link rel="stylesheet" href="./styles/main.css">
     </head>
 
     <body>
-        <h1>Fox y Cat</h1>
+        <h1>Fox y Dog</h1>
         <main id="container">
             <img id="fox" class="animal" src="" />
-            <img id="cat" class="animal" src="" />
+            <img id="dog" class="animal" src="" />
         </main>
 
         <script type="module" src="./scripts/main.js"></script>
@@ -42,8 +42,6 @@ Copy pasta the following code into your HTML file. As you can see, there is just
 </html>
 ```
 
-Then run the `serve` command in your terminal and open the URL in your browser. You should see just the header.
-
-![](./images/fox-y-cat-initial.png)
+Then run the `serve` command in your terminal and open the URL in your browser. You should see just the header text displayed.
 
 On to the next chapter to write your first `fetch()` function to get remote data from the Web.

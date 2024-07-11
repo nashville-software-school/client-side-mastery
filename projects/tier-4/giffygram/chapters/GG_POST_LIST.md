@@ -66,7 +66,7 @@ Time for your first code refactor.
 | <h1>&#x270e;</h1> |  _Code refactoring is the process of restructuring existing computer code._ |
 
 
-Follow these steps to see if you can do the refactor yourself. If you have a hard time with the instructions, you can talk to your teammates or a member of the instruction team.
+Follow these steps to see if you can do the refactor yourself. If you have a hard time with the instructions, you can talk to your teammates or a member of the coaching team.
 
 1. Create a new directory: `giffygram/src/scripts/post`
 1. In that directory, create a module named `PostList.js`
@@ -111,4 +111,4 @@ export const GiffyGram = () => {
 
 This 2nd way is, visually, much more like the code you will write when you start to learn React in a few weeks. We recommend that you write it this way.
 
-If it doesn't make sense, please see a member of the instruction team to build your understanding.
+If it doesn't make sense, please see a member of the coaching team to build your understanding.

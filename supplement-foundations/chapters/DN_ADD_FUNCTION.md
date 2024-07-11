@@ -31,5 +31,5 @@ Whatever the reason, you want to record the exact moment that the note was store
 
 In your function, add another property named `dateCreated` and make its value be the current date and time. The [JavaScript Date()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) object is something to investigate to find out the current date/time.
 
-If you want to try this challenge, and give it a few tries but get stuck, talk to your teammates or instruction team and get some helpful hints.
+If you want to try this challenge, and give it a few tries but get stuck, talk to your teammates or coaching team and get some helpful hints.
 

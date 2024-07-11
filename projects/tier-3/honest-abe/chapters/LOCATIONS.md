@@ -10,7 +10,7 @@ Add a new table to your ERD in dbdiagram.io to visualize the locations resource 
 
 1. Add a new resource in your database named `locations` and create an object representation of each office location.
 1. Modify each employee object to have a foreign key to one office location.
-1. Refactor **`EmployeeList`** to display the office location in the employee's HTML representation.
+1. Refactor the employee list code to display the office location in the employee's HTML representation.
 
 The final HTML representation should look like this.
 

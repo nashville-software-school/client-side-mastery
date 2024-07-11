@@ -23,4 +23,4 @@ export const ShelterAnimals = async () => {
 
 Watch the following video for a walkthrough of creating the component that generates an HTML option for each location in the `socioLocations` collection in your API.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/YsT8D4vrGbfdlPPbLFcY)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/YsT8D4vrGbfdlPPbLFcY)

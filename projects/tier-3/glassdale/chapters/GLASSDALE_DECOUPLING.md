@@ -161,7 +161,7 @@ That is going to be the event hub because it's the element in which all componen
 
 The first step in this process is to have the theme buttons component have control over what happens with itself, and also control what information it wants to share with other components.
 
-Replace what's currently in the file with the following code. Your instruction team will walk through this code with you.
+Replace what's currently in the file with the following code. Your coaching team will walk through this code with you.
 
 > #### `scripts/themes/ThemeButtons.js`
 

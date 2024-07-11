@@ -24,6 +24,6 @@ That's where metadata comes in. Data about data.
 
 Watch the following video to see an implementation of metadata for your list items and then practice it in your code.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/5SgQ7iYuQaMaISOBaB52)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/5SgQ7iYuQaMaISOBaB52)
 
 

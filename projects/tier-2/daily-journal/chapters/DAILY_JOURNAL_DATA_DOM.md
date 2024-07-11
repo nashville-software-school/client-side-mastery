@@ -73,6 +73,6 @@ export const Entries = () => {
 
 ## Rendering the Entry List
 
-Replace all of the `???` in the example code with the proper syntax to see your journal entries be displayed. Talk to your teammates and your instruction team if you are still struggling with import/export of functions.
+Replace all of the `???` in the example code with the proper syntax to see your journal entries be displayed. Talk to your teammates and your coaching team if you are still struggling with import/export of functions.
 
 Also try drawing out the import/export flow on a piece of paper with boxes and lines. It truly does help to visualize the process.

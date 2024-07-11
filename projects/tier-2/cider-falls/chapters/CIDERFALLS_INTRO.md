@@ -2,6 +2,12 @@
 
 You have been contracted to build an interactive web site for a public park in your county - Cider Falls. Here are the features that the administrator of the park wants to have.
 
+## Setup
+
+Your mentors will provide a Github Classroom link that will create the Github repository. Make sure that the team follows the guidance provided in the [Github Workflow Guides](https://nashville-software-school.github.io/github-workflow/) during this project.
+
+Once the team's repository has been made and everyone has joined the Github Classroom team, you will start with the [Begin a Project With Starter Code](https://nashville-software-school.github.io/github-workflow/START_REMOTE.html) process.
+
 ## Destinations
 
 There are six major destinations in the park. This application will display information about the park areas, their services, and about the guests. We will only track first and last name for each guest.

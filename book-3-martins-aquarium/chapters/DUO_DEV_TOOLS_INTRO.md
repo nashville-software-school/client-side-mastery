@@ -10,7 +10,7 @@ Time to get started.
 
 In your terminal, make sure you are in the `dynamite-duo` directory.
 
-Open the directory in Visual Studio code with the following command. A single dot `.` in a shell environment mean _"current directory"_.
+Open the directory in Visual Studio Code with the following command. A single dot `.` in a shell environment mean _"current directory"_.
 
 ```sh
 code .

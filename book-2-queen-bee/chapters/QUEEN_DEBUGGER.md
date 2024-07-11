@@ -13,6 +13,6 @@ In this chapter, you are going to see how to run a tool called the debugger whic
 
 Watch the following video to learn how to use Visual Studio Code to execute your code, evaluate values, and use the debugger toolbar.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/QVi2XBu7XsOm0v03ILVl)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/QVi2XBu7XsOm0v03ILVl)
 
 

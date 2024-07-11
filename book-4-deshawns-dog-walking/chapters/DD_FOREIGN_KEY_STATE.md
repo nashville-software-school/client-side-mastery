@@ -15,4 +15,4 @@ petHTML += `<li data-walkerforeignkey="${pet.walkerId}">
 Watch the following video to see a walkthrough of the process and then implement it yourself.
 
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/erLMBeeKY5CZrDZ4k4RE)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/erLMBeeKY5CZrDZ4k4RE)

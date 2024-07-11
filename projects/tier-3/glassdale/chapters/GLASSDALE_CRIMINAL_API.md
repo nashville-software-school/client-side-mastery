@@ -4,7 +4,7 @@ For this book, you will be consuming the Glassdale Police Department Criminal AP
 
 ## Setup
 
-1. Install [Postman](https://www.postman.com/downloads/). You instruction team will walk you through the basics of usage.
+1. Install [Postman](https://www.postman.com/downloads/). You coaching team will walk you through the basics of usage.
 
 ## Introduction
 

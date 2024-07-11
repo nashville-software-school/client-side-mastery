@@ -52,7 +52,7 @@ Time to start tracking the changes you will be making to these three files as yo
 First, stage these three files to be committed.
 
 ```sh
-git add --all
+git add .
 ```
 
 Then commit these files to your repository. Even though you don't any content in these files yet, you can still commit the fact that they were created.

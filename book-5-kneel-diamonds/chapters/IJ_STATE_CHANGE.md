@@ -14,4 +14,4 @@ document.dispatchEvent(customEvent)
 
 Watch the following video to see how you can implement a custom event to trigger the re-rendering of the HTML when a new submission has been successfuly sent to your local API and saved in permanent state.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/0IpjcmmbJ53F3KYn1oyg)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/0IpjcmmbJ53F3KYn1oyg)

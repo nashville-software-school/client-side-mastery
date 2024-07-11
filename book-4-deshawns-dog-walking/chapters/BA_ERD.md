@@ -10,7 +10,7 @@ Use dbdiagram to visualize your database.
 
 There should be two 1 -> many relationships visualized in your ERD. They both will converge on a single entity.
 
-This is a great opportunity to discuss these concepts with your teammates and your instruction team, because if you don't understand your data structure, data types, and relationships, then it simply doesn't matter how much knowledge you have of a programming language.
+This is a great opportunity to discuss these concepts with your teammates and your coaching team, because if you don't understand your data structure, data types, and relationships, then it simply doesn't matter how much knowledge you have of a programming language.
 
 All programming languages are written with one goal in mind - how to manipulate and represent data that is stored in a database.
 

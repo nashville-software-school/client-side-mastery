@@ -1,4 +1,4 @@
-# Getting Started at NSS
+# Getting Started
 
 ## Installations
 

@@ -40,7 +40,6 @@ Here's some JSON to get you started. Add at least 4 more computers, and 4 more e
 
 ## HTML Representations
 
-1. Create your employee data provider, employee list, and employee components
-1. Create your computer data provider
-1. Use the employee and computer data in the employee list component to display the employee's name, and age. Also display the model and manufacture year for the computer she is using.
+1. Using the strategies that you learned in previous projects in this book, generate the initial modules that you will need to generate HTML representations of employees _(e.g. main.js, employees.js)_.
+1. Use the employee and computer data in the employee list component to display the employee's name, and age. Also display the model and manufacture year for the computer she is using. Remember to use the `_expand` query string parameter when fetching employees.
 

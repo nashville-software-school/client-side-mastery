@@ -22,4 +22,4 @@ Once you complete the component function, you will invoke it from the main modul
 
 Can you implement the code for this feature before you watch the video? Give it a shot. If you get stuck, watch the video for a walkthrough.
 
-[<img src="../../book-0-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/8CxaWPIEULhSuMpFeHAq)
+[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/8CxaWPIEULhSuMpFeHAq)

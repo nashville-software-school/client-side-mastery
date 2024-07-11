@@ -6,7 +6,7 @@ Create new component that displays above the buttons that will display the total
 
 ## Component State
 
-So far, your instruction team has talked about how the API has state - the objects and values that are currently stored there.
+So far, your coaching team has talked about how the API has state - the objects and values that are currently stored there.
 
 Your application also has state. Each time you use the `fetch()` function in JavaScript to request data from the API, you are updating the state of your provider components to match the state of the corresponding API resource.
 

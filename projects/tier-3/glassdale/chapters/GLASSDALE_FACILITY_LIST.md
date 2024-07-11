@@ -2,7 +2,7 @@
 
 Now it is time to do the reverse of what you did in the last chapter. You listed facilities per criminal, now you are going to list criminals per facility. You will be writing code similar to what you did for the witness statement list.
 
-Give it your best shot. Your instruction team will let you know how long to work on this, and then they will review the code with you.
+Give it your best shot. Your coaching team will let you know how long to work on this, and then they will review the code with you.
 
 ## Getting Started
 
