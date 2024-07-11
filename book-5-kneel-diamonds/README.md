@@ -7,7 +7,7 @@ In this book, you will be introduced to three concepts.
 2. Radio button groups and dropdowns _(a.k.a. `<select>` elements)_
 3. Array methods of `map()`, `find()`, and `filter()`.
 
-> You have 6 days to complete the core chapters. Then you will spend 5 days doing the group project.
+> You have 6 days to complete the core chapters. Then you will spend 4 days doing the group project.
 
 ## Core Projects
 

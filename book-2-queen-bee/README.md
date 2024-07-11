@@ -2,7 +2,7 @@
 
 In this first book, you will learn the core, fundamental competencies and habits of mind needed to succeed as a profession software developer.
 
-> You have 6 days to complete the core chapters. Then you will spend 2 days doing the group project.
+> You have 5 days to complete the core chapters. Then you will spend 2 days doing the group project.
 
 ## Core Projects
 
