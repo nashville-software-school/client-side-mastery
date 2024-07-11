@@ -38,9 +38,9 @@ You will now see the screen to generate a token.
 10. Press the return key.
 11. Copy and paste the following command into the terminal. It will ask you to enter in some information about your Github account.
     ```sh
-    /bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/163e9eb5ba26458f13a51508b80ea462ec4c708e/create-key.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/create-key.sh)"
     ```
-12. Once that process is complete, you should see the following output. If you see anything different contact an instructor.
+12. Once that process is complete, you should see the following output. If you see anything different contact an mentor.
     ```txt
     POST for SSH key returned status code 200
     ```
@@ -50,17 +50,17 @@ You will now see the screen to generate a token.
 Run the following command in your Terminal. You will be prompted for your computer password. It will not display the characters as you type them for security reasons.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/47a842f39a43a4b7d7c3dafcb127c74f99082580/install-homebrew.sh)"
+/bin/bash -c "$(curl -fsSL https://github.com/nashville-software-school/course-bash-scripts/blob/main/client/install-homebrew.sh)"
 ```
 
-Once the process is complete, run the `brew` command in your terminal. If you see the output `command not found: brew` then contact an instructor.
+Once the process is complete, run the `brew` command in your terminal. If you see the output `command not found: brew` then contact an mentor.
 
 ## Install Modern Shell
 
 Run the following command in your Terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/47a842f39a43a4b7d7c3dafcb127c74f99082580/configure-zsh.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/configure-zsh.sh)"
 ```
 
 Once complete, run the following command in your Terminal.
@@ -69,26 +69,26 @@ Once complete, run the following command in your Terminal.
 echo $SHELL
 ```
 
-You should see either `/usr/local/bin/zsh` or `/bin/zsh` as the output of that command. If you don't, contact an instructor.
+You should see either `/usr/local/bin/zsh` or `/bin/zsh` as the output of that command. If you don't, contact an mentor.
 
 ## Install Node
 
 Run the following command in your Terminal.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/47a842f39a43a4b7d7c3dafcb127c74f99082580/install-nvm-node.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/install-nvm-node.sh)"
 ```
 
 Once the process is complete, quit your Terminal application completely, and then open it again immediately.
 
-Run the `node -v` command in your Terminal. If you see the output `command not found: node` then contact an instructor.
+Run the `node -v` command in your Terminal. If you see the output `command not found: node` then contact an mentor.
 
 ## Verify Developer Installations
 
-Run the following command to verify all developer installations are complete. If you see any error message that something isn't installed, contact an instructor.
+Run the following command to verify all developer installations are complete. If you see any error message that something isn't installed, contact an mentor.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/stevebrownlee/b146bf49071c46c41eddf5778b147a71/raw/a1f8f3bebf7fab75e5bfb0d1ecabc89ab22baec8/verify-installs.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/verify-installs.sh)"
 ```
 
 ## Rectangle
@@ -126,10 +126,10 @@ Invest 9 minutes of your time to watch the [Using Rectangle to Manage macOS Wind
 <br/>
 <br/>
 
-## Troubleshooting for Instructors
+## Troubleshooting for mentors
 
 <details>
-<summary>Expand if you are an instructor troubleshooting an issue</summary>
+<summary>Expand if you are an mentor troubleshooting an issue</summary>
 <h2>Visual Studio Code</h2>
 
 Follow the [Troubleshooting Visual Studio Code](./TROUBLESHOOT_VSCODE.md) steps to resolve student issues
