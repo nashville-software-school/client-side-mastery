@@ -32,19 +32,24 @@ Here are your learning objectives for this self-assessment.
 
 ## Starter Code
 
+> Before you do the steps below, make sure your Slack ID is updated in the [Learning Platform](https://leaning.nss.team)
+
 Slim Jenkins has the existing code on Github, so you need to download it from there. Actually, developers call this process _cloning a repository_.
 
-In your terminal, to go your workspace directory.
-
-```sh
-cd ~/workspace
-```
-
-Then clone the repository to your machine with the following command.
-
-```sh
-git clone https://github.com/Nashville-Software-School-Assessments/bug-wrangler-ranch.git
-```
+1. Go to the [Learning Platform](https://leaning.nss.team) and click the button to start your self-assessment
+2. You will receive a Slack message with the URL for your very own repository _(if this does not happen, contact one of the coaches immediately)_
+3. Click on that URL
+4. Click the **Code** button
+5. Click on *SSH* in the window that appears
+6. Copy that string
+7. Go to your workspace directory
+   ```sh
+   cd ~/workspace
+   ```
+8. Then clone the repository to your machine with the following command.
+   ```sh
+   git clone {copy what you pasted here... no curly braces}
+   ```
 
 This will create a new sub-directory called `bug-wrangler-ranch`. Use the `cd` command to navigate into that directory and open it in VS Code.
 
