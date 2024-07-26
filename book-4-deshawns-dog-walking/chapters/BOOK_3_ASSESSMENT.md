@@ -19,21 +19,12 @@ Below is an animation showing how the application should look when complete and 
 
 ## Setup
 
-Your coaching team will provide a link for you to create your assessment repository. Once your repo is created, clone it to your machine.
+> 🧨 Make sure you answer the vocabulary and understanding questions at the end of the README in the project before notifying your coaches that you are done.
 
-1. Make sure you are in your `workspace` directory.
-1. `git clone {github repo SSH string}`.
-1. `cd` into the directory it creates.
-1. `code .` to open the project code.
-1. Use the `serve` command to start the web server.
-1. Open the URL provided in Chrome.
+1. Go to the [Learning Platform](https://learning.nss.team) and click the button that you are ready for your self-assessment project.
+2. You will receive a Slack message with the repository you will use.
+3. Clone the project, making sure you use the **SSH** connection string.
+4. Open the directory that gets created for you after cloning in VS Code.
+5. Follow the instructions in the main README.
 
-Make sure your Developer Tools are open at all times while working on this project. Use the messages provided in the Console to determine what code needs to be fixed or implemented, and use breakpoints in the Sources tab to step through your code as you debug.
-
-## Deep Learning
-
-Another reminder from the coaching team. This is NOT A TEST. We are not looking for 100% completion, although if you can make it work completely, then huzzah for you.
-
-What we are looking for is analytical thinking, algorithmic thinking, and efficient learning techniques to bind the concepts together for a solution, and communication with your teammates and coaching team.
-
-If you only get 50% of it complete, but display the above Core Skills and can demonstrate understanding of the fundamental code concepts, then you are learning and growing - which is what we care about.
+When you are done, go back to the [Learning Platform](https://learning.nss.team) and click the button that notifies the coaching team that it's ready for review.

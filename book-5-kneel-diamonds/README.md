@@ -27,7 +27,7 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 
 | # | 🎓  Self-Assessment |
 | --- | --- |
-| 1 | [Array Methods and Fetch](./chapters/BOOK_4_ASSESSMENT.md) |
+| 1 | [Async, State, and Array Method Self-Assessment](./chapters/BOOK_4_ASSESSMENT.md) |
 
 ## 🧭 Explorer Chapters
 
