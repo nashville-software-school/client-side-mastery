@@ -32,11 +32,11 @@ Here are your learning objectives for this self-assessment.
 
 ## Starter Code
 
-> Before you do the steps below, make sure your Slack ID is updated in the [Learning Platform](https://leaning.nss.team)
+> Before you do the steps below, make sure your Slack ID is updated in the [Learning Platform](https://learning.nss.team)
 
 Slim Jenkins has the existing code on Github, so you need to download it from there. Actually, developers call this process _cloning a repository_.
 
-1. Go to the [Learning Platform](https://leaning.nss.team) and click the button to start your self-assessment
+1. Go to the [Learning Platform](https://learning.nss.team) and click the button to start your self-assessment
 2. You will receive a Slack message with the URL for your very own repository _(if this does not happen, contact one of the coaches immediately)_
 3. Click on that URL
 4. Click the **Code** button
