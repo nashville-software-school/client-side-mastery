@@ -6,7 +6,7 @@ In this book, you will be introduced to three concepts.
 1. Handling browser generated events.
 1. Data relationships and how to visualize them.
 
-> You have 4 days to complete the core chapters. Then you will spend 4 days doing the group project.
+> You have 4 days to complete the core chapters. Then you will spend 3 days doing the group project.
 
 ## Core Projects
 
