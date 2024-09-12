@@ -81,7 +81,7 @@ Open the `index.html` file in a text editor and add the following HTML code:
     <p>&copy; 2023 Movie Majesty. All rights reserved.</p>
   </footer>
 
-  <script src="scripts/main.js"></script>
+  <script src="scripts/main.js" type="module"></script>
 </body>
 </html>
 ```
