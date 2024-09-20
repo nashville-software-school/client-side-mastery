@@ -11,7 +11,7 @@ Here's how that looks
 4. Move on to chapter 6 in Honey Rae Repairs.
 5. etc...
 
-> You have 9 days to complete the core chapters. Then you will spend 5 days doing the group project.
+> You have 10 days to complete the core chapters. Then you will spend 5 days doing the group project.
 
 ## Core Projects
 ### Part 1
