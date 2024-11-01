@@ -25,7 +25,7 @@ Slim Jenkins has the existing code on Github, so you need to download it from th
    ```
 8. Then clone the repository to your machine with the following command.
    ```sh
-   git clone {copy what you pasted here... no curly braces}
+   git clone {paste what you copied here... no curly braces}
    ```
 9. This will create a new sub-directory called `bug-wrangler-ranch`. Use the `cd` command to navigate into that directory and open it in VS Code.
     ```sh
