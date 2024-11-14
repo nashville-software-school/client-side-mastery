@@ -17,7 +17,7 @@ Create the JavaScript modules
 
 ```bash
 mkdir scripts
-touch scripts/main.js scripts/aquariumData.js scripts/fishList.js scripts/tipList.js scripts/locationList.js
+touch scripts/main.js scripts/fishData.js scripts/fishList.js scripts/tipList.js scripts/locationList.js
 ```
 
 ```bash
