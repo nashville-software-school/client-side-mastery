@@ -75,7 +75,7 @@ Open the `index.html` file and add the following basic HTML structure:
        </section>
    </main>
 
-   <script src="./scripts/main.js"></script>
+   <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>
 ```
