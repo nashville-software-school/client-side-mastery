@@ -1,6 +1,12 @@
 # List of Docks
 
-Your first task is to create a list of available docks.
+## Preparing the Project
+
+Create a directory of your choice in the `workspace` directory. Then create the `index.html`, `styles/main.css`, `scripts/database.js`, and `scripts/main.js` files.
+
+## Dock List
+
+Now it's time to prepare some docks in a list.
 
 ![](./chapters/../images/docks.png)
 
