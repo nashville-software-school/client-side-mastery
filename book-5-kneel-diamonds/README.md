@@ -62,6 +62,6 @@ Pioneer chapters are let you develop Deep Learning on the concepts that you have
 | # | Project&nbsp;Name | Description |
 |--|--|--|
 |1|[Pen Pal Society](./chapters/PEN_PAL_SOCIETY.md)| In this project, you will be building an online form for two people to send letters to each other. You get to learn how to implement input fields and checkboxes. |
-|1|[Giffygram](../projects/tier-4/giffygram/)| In this group project, your team will deconstruct an existing project using your Dev Tools, and then rebuild it based on your technical specifications. |
-|2|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-4/truncheons/)| In this project, you will be building a way to record scores for a Medieval tavern game. |
-|3|[Holiday Road](../projects/tier-4/holidayroad/)| This is a group project that will have your team building a National Parks itinerary builder by working with multiple public APIs. You will also get to pick an unique persona to build your user experience. |
+|2|[Giffygram](../projects/tier-4/giffygram/)| In this group project, your team will deconstruct an existing project using your Dev Tools, and then rebuild it based on your technical specifications. |
+|3|[Truncheons&nbsp;&amp;&nbsp;Flagons](../projects/tier-4/truncheons/)| In this project, you will be building a way to record scores for a Medieval tavern game. |
+|4|[Holiday Road](../projects/tier-4/holidayroad/)| This is a group project that will have your team building a National Parks itinerary builder by working with multiple public APIs. You will also get to pick an unique persona to build your user experience. |
