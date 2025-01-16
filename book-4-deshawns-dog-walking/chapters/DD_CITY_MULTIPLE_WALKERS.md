@@ -19,7 +19,7 @@ Having duplicate state, especially without additional context, show up in your u
 
 ## Foreign Keys
 
-Your task for this Explorer Chapter is to think about, discuss, and design a plan for how to ensure that each city only shows up once in the city list. Over time, there may be dozens of walkers working in a single city as DeShawn's business grows.
+Your task for this chapter is to think about, discuss, and design a plan for how to ensure that each city only shows up once in the city list. Over time, there may be dozens of walkers working in a single city as DeShawn's business grows.
 
 Consider making the `city` property on a walker a foreign key instead of a string value. Design an algorithm before you make any code changes.
 
