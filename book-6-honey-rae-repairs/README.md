@@ -60,9 +60,3 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 |--|--|
 | 2 |  Learn how to [deploy your API to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) for free |
 | 3 | Learn how to [deploy your client to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) for free |
-
-## 🔐 Group
-
-| # | Project&nbsp;Name | Description |
-|--|--|--|
-|1| [🌹&nbsp;Thorns&nbsp;&amp;&nbsp;Roses](../projects/tier-5/thorns-roses/) | Want the ultimate challenge? Using complex data relationships with React, build a project that manages state for flowers, nurseries, distributors, retailers, and customers buying flowers at the retailers. |
