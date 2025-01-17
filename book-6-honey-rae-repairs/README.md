@@ -1,4 +1,4 @@
-# Book 5 - Honey Rae's Repair Shop
+# Honey Rae's Repair Shop
 It is very important that you work on the concepts in this book in the segments that are suggested.
 
 Move top to bottom, left to right.
