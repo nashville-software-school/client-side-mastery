@@ -2,10 +2,13 @@
 
 ## Getting Started
 
-1. Open the [Capstone Proposal Template](https://docs.google.com/document/d/1FGMU-wQqIciig0JhtOBBKOORSPCROUW0Y27w9io4qMg/edit?usp=sharing) and make a copy. Do not ask for edit access on the template.
-2. [View an example of good wireframes](./images/capstone-wireframe-example.png)
-3. [View another example of good wireframes](./images/wireframe-example-001.png)
-4. When you have a complete proposal, ERD, and wireframe, submit your proposal on the [Learning Platform](https://learning.nss.team/).
+1. Visit the [Learning Platform](https://learning.nss.team/) and click the **Proposal Template** button. Make a copy of the Google Doc that you see to use for your proposal.
+2. Make sure you track that your proposal meets all requirements by click the **Capstones** link on the Learning Platform.
+3. Start with your wireframes.
+   * [View an example of good wireframes](./images/capstone-wireframe-example.png)
+   * [View another example of good wireframes](./images/wireframe-example-001.png)
+4. Then build your ERD with dbdiagram.io.
+5. When you have completed the ERD, wireframes, and user stories, submit your proposal on the [Learning Platform](https://learning.nss.team/) by clicking the **Submit Proposal** button.
 
 ---
 
