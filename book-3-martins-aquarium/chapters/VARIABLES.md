@@ -1,14 +1,22 @@
 # Variable types in JavaScript
 
-In JavaScript, variables store values, and those values can be categorized into **primitive types** and **reference types**. The key difference between them is **how they are stored and accessed in memory**.
+In JavaScript, variables act like containers that store data. This data can be described as being in two main categories: **value types**  _(which store the actual data directly)_ and **reference types** _(which store a reference to where the data actually exists in your computer's memory)_."
 
-### **1. Primitive Types**
+Another term for **value type** is **primitive type** which supports the idea that a variable's data type is simpler. Here's some examples.
 
-#### **Types of Primitive Values**
-- `string` → `"hello"`
-- `number` → `42`
-- `boolean` → `true`
-- `null` → `null`
+| Data | Type | Category |
+|------|------|----------|
+| 42 | Number | value/primitive |
+| "Hello" | String | value/primitive |
+| true | Boolean | value/primitive |
+| null | Null | value/primitive |
+| undefined | Undefined | value/primitive |
+| { name: "Alice" } | Object | reference |
+| ["apple", "banana"] | Array | reference |
+| function sayHi() {} | Function | reference |
+| new Date() | Date | reference |
+| new Map() | Map | reference |
+
 
 #### **How They Work**
 When you assign a primitive value to a variable, JavaScript **stores the value directly in the variable**.
@@ -78,5 +86,5 @@ Why is this the case?
 
 [video guide: Reference Vs Value In JavaScript](https://www.youtube.com/watch?v=-hBJz2PPIVE)
 
-[article: Primitive and Reference value in JavaScript](https://www.geeksforgeeks.org/primitive-and-reference-value-in-javascript/)
+[article: Value and Reference types in JavaScript](https://www.geeksforgeeks.org/primitive-and-reference-value-in-javascript/)
 
