@@ -26,9 +26,12 @@ Then write a function to export a copy of that villain data.
 
 ```js
 export const getVillains = () => {
-    return database.villains.map(villain => ({...villain}))
+    return structuredClone(database.villains);
 }
 ```
+
+### What is structuredClone?
+`structuredClone` is a built-in JavaScript function that creates a deep copy of a value. This means it duplicates objects, arrays, and even complex data structures without keeping any references to the original.
 
 ## Importing the Data
 
