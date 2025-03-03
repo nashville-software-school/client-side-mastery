@@ -50,7 +50,7 @@ You will now see the screen to generate a token.
 Run the following command in your Terminal. You will be prompted for your computer password. It will not display the characters as you type them for security reasons.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://github.com/nashville-software-school/course-bash-scripts/blob/main/client/install-homebrew.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/refs/heads/main/client/install-homebrew.sh)"
 ```
 
 Once the process is complete, run the `brew` command in your terminal. If you see the output `command not found: brew` then contact an mentor.
