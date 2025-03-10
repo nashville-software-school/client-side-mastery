@@ -196,11 +196,11 @@ const database = {
 }
 
 export const getWalkers = () => {
-    return database.walkers.map(walker => ({...walker}))
+    return structuredClone(database.walkers)
 }
 
 export const getPets = () => {
-    return database.pets.map(pet => ({...pet}))
+    return structuredClone(database.pets)
 }
 ' > ./scripts/database.js
 

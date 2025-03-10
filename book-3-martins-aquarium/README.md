@@ -23,6 +23,16 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 | --- | --- |
 | 1 | [Self-Assess JavaScript Fundamentals](./chapters/HAIRY_POTTER.md) |
 
+## 🧭 Explorer Chapters
+
+Explorer chapters are **optional** and give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
+
+| # | 🧨 💥 Dynamite Duo | 🎥 🍿 Movie Majesty | 🐠  Martin's Aquarium |
+|--|--|--|--|
+| 1 | [Are you primitive?](./chapters/VARIABLES.md) | N/A | N/A |
+| 2 | [Copy me if you can](./chapters/COPIES.md) | N/A | N/A |
+
+
 ## 🔐 Group Project
 
 When you have completed all of the core chapters, you will work on a group project with other teammates who have also completed them. Group projects deepen your communication and collaboration Core Skills. Your mentors will assign you to a team when it's time.

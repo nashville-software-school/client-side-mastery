@@ -219,15 +219,15 @@ const database = {
 }
 
 export const getProducts = () => {
-    return database.products.map(product => ({...product}))
+    return structuredClone(database.products);
 }
 
 export const getEmployees = () => {
-    return database.employees.map(employee => ({...employee}))
+    return structuredClone(database.employees)
 }
 
 export const getOrders = () => {
-    return database.orders.map(order => ({...order}))
+    return structuredClone(database.orders)
 }
 ' > ./scripts/database.js
 
