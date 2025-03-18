@@ -157,4 +157,4 @@ In the upcoming chapters, we'll:
 - Explore the modern `async/await` syntax for handling asynchronous operations
 - Build a fun application that displays random fox and dog images
 
-Up Next: [Next Chapter]()
+Up Next: [Fox y Dog Project Setup](./FD_SETUP.md)
