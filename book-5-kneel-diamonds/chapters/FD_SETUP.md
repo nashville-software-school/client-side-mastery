@@ -3,8 +3,8 @@
 In your workspace directory, create a new project directory.
 
 ```sh
-mkdir fox-y-cat
-cd fox-y-cat
+mkdir fox-y-dog
+cd fox-y-dog
 ```
 
 Then create your HTML file, a main CSS file, and a main JavaScript file.
