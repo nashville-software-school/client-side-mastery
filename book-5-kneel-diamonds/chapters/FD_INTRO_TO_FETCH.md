@@ -70,19 +70,15 @@ This tab shows important metadata about the request and response:
   - Request Method: GET (in this case)
   - Status Code: 200 OK (for a successful request)
 
+![](./images/network-headers.png)
+
 #### Preview/Response Tab
 This tab shows the actual data returned by the server:
 
 - **Preview**: A nicely formatted view of the JSON data
 - **Response**: The raw response text
 
-For our Random Fox API, you should see something like:
-```json
-{
-  "image": "https://randomfox.ca/images/42.jpg",
-  "link": "https://randomfox.ca/?i=42"
-}
-```
+![](./images/network-preview.png)
 
 ## Testing Error Scenarios
 
