@@ -49,7 +49,7 @@ Copy pasta the following code into your HTML file. As you can see, there is just
 Copy pasta the following code into your CSS file for a little bit of added fun.
 
 <details>
-    <summary>Expand to the code</summary>
+    <summary>Expand to get the code</summary>
 
 ```css
 /* Cute Fox y dog Styles */
@@ -247,9 +247,7 @@ dogButton.addEventListener("click", () => {
 })
 ```
 
-Then run the `serve` command in your terminal and open the URL in your browser. You should see something that looks like your 12 year old niece's art project. 
-
-The buttons don't work yet, that's our job for the next few chapters.
+Then run the `serve` command in your terminal and open the URL in your browser. You should see something that looks like your 12 year old niece's art project. The buttons don't work yet, that's our job for the next few chapters.
 
 On to the next chapter to write your first `fetch()` function to get remote data from the Web.
 
