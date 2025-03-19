@@ -113,7 +113,7 @@ Let's see what that looks like.
 
 Now it's your turn to test the Random Dog API:
 
-Using Yaak, make a **GET** request to the [Random Dog Api](#introducing-fun-image-apis).
+Using Yaak, make a **GET** request to the [Random Dog Api](#-introducing-fun-image-apis).
 
 ### Questions to Answer:
 
