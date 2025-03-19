@@ -90,7 +90,7 @@ In `main.js` change the URL passed to the fetch function to `"https://randomfox.
 
 This demonstrates how to identify network errors in your fetch requests - a critical skill for building reliable applications.
 
-## Practice Exercise: Experimenting with Fetch Calls
+## 🎓 Practice Exercise: Experimenting with Fetch Calls
 
 Now it's your turn to practice! Make a fetch call to the [random dog api](./FD_INTRO_TO_API.md#-introducing-fun-image-apis) when the user clicks on the **Get Dog** button.
 
@@ -114,3 +114,5 @@ In this chapter, we've:
 In the upcoming chapters, we'll learn how to:
 - Work with the data that comes back from a fetch request
 - Display the images we receive from the animal APIs on our webpage
+
+Up Next: ["Then" We Display](./FD_INTRO_TO_THEN.md)
