@@ -105,11 +105,11 @@ Now let's put it all together to display the random fox image on the webpage.
 
 ## 📓 Key Concepts to Remember
 
->1. **Asynchronous Operations**: Operations like API calls don't complete immediately—they take time.
->2. **Promises**: Objects that represent the eventual completion or failure of an asynchronous operation.
->3. **States of a Promise**: Pending (initial), Fulfilled (success), or Rejected (failed).
->4. **`.then()`**: A method to specify what to do when a Promise is fulfilled.
->5. **Chaining**: You can chain multiple `.then()` calls to create a sequence of asynchronous operations.
+1. **Asynchronous Operations**: Operations like API calls don't complete immediately—they take time.
+2. **Promises**: Objects that represent the eventual completion or failure of an asynchronous operation.
+3. **States of a Promise**: Pending (initial), Fulfilled (success), or Rejected (failed).
+4. **`.then()`**: A method to specify what to do when a Promise is fulfilled.
+5. **Chaining**: You can chain multiple `.then()` calls to create a sequence of asynchronous operations.
 
 ## 🎓 Practice Exercise: Displaying a random dog
 

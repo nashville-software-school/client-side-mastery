@@ -170,6 +170,13 @@ const displayDogImage = async () => {
 }
 ```
 
+## 📓 Key Concepts to Remember
+
+1. **async**: A keyword that makes a function return a Promise and allows the use of await inside it
+2. **await**: A keyword that pauses execution until a Promise resolves and returns its value
+4. **Function requirement**: Any function that uses `await` must be declared with the `async` keyword
+5. **Promises underneath**: `async/await` is just a different way to write Promise-based code - Promises are still working behind the scenes
+
 ## What We've Learned
 
 In this chapter, we've:
@@ -179,13 +186,6 @@ In this chapter, we've:
 - Compared the `.then()` approach with the `async/await` approach
 - Built a working application that fetches and displays a dog image using `async/await`
 - Learned common mistakes to avoid when using `async/await`
-
-## 📓 Key Concepts to Remember
-
-1. **async**: A keyword that makes a function return a Promise and allows the use of await inside it
-2. **await**: A keyword that pauses execution until a Promise resolves and returns its value
-4. **Function requirement**: Any function that uses `await` must be declared with the `async` keyword
-5. **Promises underneath**: `async/await` is just a different way to write Promise-based code - Promises are still working behind the scenes
 
 ## Next Steps
 
