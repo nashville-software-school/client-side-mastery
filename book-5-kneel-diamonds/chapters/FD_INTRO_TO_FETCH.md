@@ -114,3 +114,5 @@ In this chapter, we've:
 In the upcoming chapters, we'll learn how to:
 - Work with the data that comes back from a fetch request
 - Display the images we receive from the animal APIs on our webpage
+
+Up Next: ["Then" We Display](./FD_INTRO_TO_THEN.md)

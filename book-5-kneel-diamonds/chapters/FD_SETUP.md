@@ -251,4 +251,4 @@ Then run the `serve` command in your terminal and open the URL in your browser. 
 
 On to the next chapter to write your first `fetch()` function to get remote data from the Web.
 
-Up Next: [First Fox Fetch](./FD_INTRO_TO_FETCH.md)
+Up Next: [First We "Fetch"](./FD_INTRO_TO_FETCH.md)
