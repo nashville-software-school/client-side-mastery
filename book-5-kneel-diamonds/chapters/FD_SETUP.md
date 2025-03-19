@@ -49,7 +49,7 @@ Copy pasta the following code into your HTML file. As you can see, there is just
 Copy pasta the following code into your CSS file for a little bit of added fun.
 
 <details>
-    <summary>Expand to get your data</summary>
+    <summary>Expand to the code</summary>
 
 ```css
 /* Cute Fox y dog Styles */
@@ -238,12 +238,12 @@ Finally, add the following lines of code to the `main.js` file.
 ```js
 const foxButton = document.querySelector("#fox-button")
 foxButton.addEventListener("click", () => {
-  fetch("https://randomfox.ca/floof/")
+  
 })
 
 const dogButton = document.querySelector("#dog-button")
 dogButton.addEventListener("click", () => {
-  fetch("https://random.dog/woof.json")
+  
 })
 ```
 
