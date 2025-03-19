@@ -113,7 +113,7 @@ Now let's put it all together to display the random fox image on the webpage.
 
 ## 🎓 Practice Exercise: Displaying a random dog
 
-Now it's your turn to practice! Use what you've learned to to display the random dog image you get back from the Random Dog api. 
+Now it's your turn to practice! Use what you've learned to display the random dog image you get back from the Random Dog api. 
 
 >💡 Make sure you look at the response in the network tab so that you know what property to target to get the dog image.
 
