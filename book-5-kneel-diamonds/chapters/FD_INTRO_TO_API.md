@@ -109,7 +109,17 @@ Let's see what that looks like.
 
 ![](./images/yaak-fox-diagram.png)
 
-## Practice Exercise: Testing the Random Dog API
+
+## 📓 Key Concepts to Remember
+1. **Client:** The application that sends a request for data or services. This is like you, the customer, in a restaurant.
+2. **API:** (Application Programming Interface): A set of rules that allows one piece of software to talk to another. Think of it as a menu in a restaurant - it lists what you can order and how to ask for it.
+3. **Server:** The computer that receives requests from clients and sends back responses. This is like the kitchen in a restaurant that prepares your food.
+4. **Endpoint:** A specific URL where an API can be accessed. Think of it as a specific counter or window where you place your order in a restaurant.
+5. **Request:** The message a client sends to a server asking for something. This is like placing your order in a restaurant.
+6. **Response:** The data that the server sends back to the client after receiving a request. This is like the food you receive after ordering.
+6. **Status Code:** A number that indicates whether a request was successful or not. Think of it as the waiter telling you "Your food is ready" (200 OK) or "Sorry, we're out of that dish" (404 Not Found).
+
+## 🎓 Practice Exercise: Testing the Random Dog API
 
 Now it's your turn to test the Random Dog API:
 
@@ -130,22 +140,6 @@ In this chapter, we've:
 - Discovered two fun animal image APIs
 - Used Yaak to test API endpoints
 - Made GET requests and examined the responses
-
-### 📓 Vocabulary
-> **Client:** The application that sends a request for data or services. This is like you, the customer, in a restaurant.
-
-> **API:** (Application Programming Interface): A set of rules that allows one piece of software to talk to another. Think of it as a menu in a restaurant - it lists what you can order and how to ask for it.
-
-> **Server:** The computer that receives requests from clients and sends back responses. This is like the kitchen in a restaurant that prepares your food.
-
-> **Endpoint:** A specific URL where an API can be accessed. Think of it as a specific counter or window where you place your order in a restaurant.
-
-> **Request:** The message a client sends to a server asking for something. This is like placing your order in a restaurant.
-
-> **Response:** The data that the server sends back to the client after receiving a request. This is like the food you receive after ordering.
-
-> **Status Code:** A number that indicates whether a request was successful or not. Think of it as the waiter telling you "Your food is ready" (200 OK) or "Sorry, we're out of that dish" (404 Not Found).
-
 
 This foundational knowledge will prepare you for the next steps where we'll learn how to integrate these APIs into our application using JavaScript's fetch API and handle the responses using promises.
 
