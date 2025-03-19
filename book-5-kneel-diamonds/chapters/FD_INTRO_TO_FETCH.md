@@ -17,7 +17,7 @@ Think of fetch as your web browser's way of "reaching out" across the internet t
 3. The server processes the request and sends back a response
 4. Your code can then use the data from the response
 
-![](./images/chrome-fox-diagram.png)
+![](./images/chrome-foxy-diagram.png)
 
 ## Writing Your First Fetch Call
 
