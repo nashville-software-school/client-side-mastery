@@ -22,6 +22,22 @@ touch index.html styles/main.css scripts/main.js api/database.json
 ```
 
 Then open the directory in Visual Studio Code.
+You should see the following file structure:
+
+```
+indiana-jeans/
+│
+├── api/
+│   └── database.json
+│
+├── scripts/
+│   └── main.js
+│
+├── styles/
+│   └── main.css
+│
+└── index.html
+```
 
 ### HTML
 
