@@ -75,45 +75,52 @@ JSON Server is a Node.js package that allows you to create a fake API with zero 
 
 You should already have json-server installed. Check this by running the following command in your terminal:
 
-If you haven't already installed JSON Server globally, run this command in your terminal:
-
 ```sh
-npm install -g json-server
+json-server --version
 ```
 
-This installs JSON Server as a global tool on your computer.
+You should see `0.17.3` as the output. 
+
+If you get a different version output or an error, run the following commands in your terminal:
+
+```sh
+npm uninstall -g json-server
+npm install -g json-server@0.17.4
+```
+
+Run the `json-server --version` command in your terminal once more. If you *still* do not see `0.17.3`, ask an instructor for help.
 
 ### Starting JSON Server
 
-Navigate to your project directory in the terminal and run:
+Open a new tab in your terminal. (`cmd + t` or `ctrl + t`) Navigate to the `api` directory in your project and run:
 
 ```sh
-json-server -p 8088 -w api/database.json
+json-server -p 8088 -w database.json
 ```
 
 This command:
 - Starts JSON Server on port 8088
 - Watches (-w) the database.json file for changes
-- Creates RESTful routes based on the top-level keys in your JSON file
+- Creates endpoints based on the top-level keys in your JSON file
 
 You should see output similar to:
 
 ```
 \{^_^}/ hi!
 
-JSON Server is running on port 8088
+  Loading database.json
+  Done
 ```
 
-## Understanding the API Communication Flow
+JSON server will also list the available endpoints it made based on your JSON file.
 
-When using JSON Server, the communication flow works like this:
+```sh
+Resources
+  http://localhost:8088/submissions
+  http://localhost:8088/socioLocations
+```
 
-![JSON Server Communication Flow](./images/json-server-flow.png)
-
-1. Your JSON file (database.json) serves as the data store
-2. JSON Server creates a RESTful API based on this file
-3. Client applications (like Yaak) can make HTTP requests to this API
-4. The API processes these requests and updates the JSON file as needed
+And finally, it provides you 
 
 ## Testing the API with Yaak
 
@@ -124,20 +131,24 @@ Now let's use Yaak to test our API and see how it works.
 First, let's retrieve all the socioLocations from our database:
 
 1. Open Yaak
-2. Create a new HTTP request
+2. Create a new HTTP request 
 3. Set the method to `GET`
-4. Enter the URL: `http://localhost:8088/socioLocations`
-5. Click "Send"
+4. Enter the endpoint for `socioLocations` (take a look at your terminal)
+5. Click ➤
 
-You should receive a response with a status code of 200 (OK) and a JSON array containing all four socioLocations.
+***Well looky here!***
+
+You should have received a response with a status code of `200 OK` and a JSON array containing all four socioLocations. This data should look pretty familiar! It's the socioLocation data we added to the `database.json` file. 🎉 Yaak made an HTTP request to the JSON server api we spun up on localhost:8088. The JSON-server api retrieved the socioLocations from our JSON "database". The JSON-server api then returned the socioLocations back to Yaak in the HTTP response. Let's see that in color:
+
+![](./images/yaak-ij-json-server.png)
 
 ### Understanding the POST Method
 
-While the GET method retrieves data, the POST method allows us to create new data. Here's how it works:
+While the GET method *retrieves* data, the POST method allows us to *create* new data. Here's how it works:
 
-1. The client sends a POST request with new data in the request body
-2. The server processes the request and adds the data to the database
-3. The server responds with the newly created data, including an auto-generated ID
+1. The client sends a POST request with new data in the **request body**
+2. The api processes the request and adds the data to the database
+3. The api responds with the newly created data, including an auto-generated ID
 
 ### Making a POST Request
 
@@ -161,6 +172,17 @@ You should receive a response with:
 - A JSON object of your new submission, now with an auto-generated ID
 
 To verify the submission was saved, make a GET request to `http://localhost:8088/submissions`. You should see both the original submission and your new one.
+
+## Understanding the API Communication Flow
+
+When using JSON Server, the communication flow works like this:
+
+![JSON Server Communication Flow](./images/json-server-flow.png)
+
+1. Your JSON file (database.json) serves as the data store
+2. JSON Server creates a RESTful API based on this file
+3. Client applications (like Yaak) can make HTTP requests to this API
+4. The API processes these requests and updates the JSON file as needed
 
 ## What We've Learned
 
