@@ -15,7 +15,7 @@ This diagram shows:
 
 ## Introduction to JSON Database
 
-For our client-side applications, we will be using a JSON file to simulate a structured database, similar to what you'd find in a real-world application. While it won't have the full capabilities of a relational database like PostgreSQL or MySQL (we'll use one of these in the server-side portion of this course), it will allow us to work with data in a way that mimics how a backend stores and retrieves information.
+For our client-side applications, we will be using a JSON file to simulate a structured database, similar to what you'd find in a real-world application. While it won't have the full capabilities of a relational database like PostgreSQL or MySQL (we'll set up one of these in the server-side portion of this course), it will allow us to work with data in a way that mimics how a backend stores and retrieves information.
 
 JSON (JavaScript Object Notation) is a lightweight data format that's easy for humans to read and write, and easy for machines to parse and generate.
 
@@ -120,8 +120,6 @@ Resources
   http://localhost:8088/socioLocations
 ```
 
-And finally, it provides you 
-
 ## Testing the API with Yaak
 
 Now let's use Yaak to test our API and see how it works.
@@ -133,12 +131,12 @@ First, let's retrieve all the socioLocations from our database:
 1. Open Yaak
 2. Create a new HTTP request 
 3. Set the method to `GET`
-4. Enter the endpoint for `socioLocations` (take a look at your terminal)
-5. Click ➤
+4. Enter the endpoint for `socioLocations` (take a look at the terminal output from json-server if you're unsure what the endpoint is)
+5. Hit enter or click ➤ (send)
 
 ***Well looky here!***
 
-You should have received a response with a status code of `200 OK` and a JSON array containing all four socioLocations. This data should look pretty familiar! It's the socioLocation data we added to the `database.json` file. 🎉 Yaak made an HTTP request to the JSON server api we spun up on localhost:8088. The JSON-server api retrieved the socioLocations from our JSON "database". The JSON-server api then returned the socioLocations back to Yaak in the HTTP response. Let's see that in color:
+You should have received a response with a status code of `200 OK` and a JSON array containing all four socioLocations. This data should look pretty familiar! It's the socioLocation data we added to the `database.json` file. 🎉 Yaak made an HTTP GET request to the JSON server api we spun up on localhost:8088. The JSON-server api retrieved the socioLocations from our JSON "database". The JSON-server api then returned the socioLocations back to Yaak in the HTTP response. Let's see that in color:
 
 ![](./images/yaak-ij-json-server.png)
 
@@ -156,8 +154,8 @@ Let's create a new survey submission:
 
 1. In Yaak, create a new HTTP request
 2. Set the method to `POST`
-3. Enter the URL: `http://localhost:8088/submissions`
-4. Add a request header: `Content-Type: application/json`
+3. Enter the endpoint for `submissions` (take a look at the terminal output from json-server if you're unsure what the endpoint is)
+4. Click the **Body** dropdown and select `JSON`. This is the type of data we are sending in our request.
 5. In the request body, add:
    ```json
    {
@@ -165,37 +163,30 @@ Let's create a new survey submission:
      "socioLocationId": 2
    }
    ```
-6. Click "Send"
+   This is the submission we want to add to the database.
+6. Hit enter or click ➤
 
 You should receive a response with:
 - Status code 201 (Created)
 - A JSON object of your new submission, now with an auto-generated ID
 
-To verify the submission was saved, make a GET request to `http://localhost:8088/submissions`. You should see both the original submission and your new one.
+To verify the submission was saved, make a GET request to the `submissions` endpoint. You should see both the original submission and your new one.
 
-## Understanding the API Communication Flow
+Let's break down what happened again: Yaak made an HTTP POST request to the JSON server api we spun up on localhost:8088, sending along the data for a new submission in the request body. The JSON-server api received this data and added it to our JSON 'database' in the submissions array. The JSON-server api then returned the newly created submission (now with an ID) back to Yaak in the HTTP response. Let's see that in color:
 
-When using JSON Server, the communication flow works like this:
-
-![JSON Server Communication Flow](./images/json-server-flow.png)
-
-1. Your JSON file (database.json) serves as the data store
-2. JSON Server creates a RESTful API based on this file
-3. Client applications (like Yaak) can make HTTP requests to this API
-4. The API processes these requests and updates the JSON file as needed
+![](./images/yaak-ij-json-server-post.png)
 
 ## What We've Learned
 
 In this chapter, we've:
-- Designed a database structure using an ERD
 - Created a JSON database file
-- Started a JSON Server to create a RESTful API
-- Learned about GET and POST HTTP methods
-- Used Yaak to test API endpoints
+- Started a JSON Server to create an API
+- Learned about the POST HTTP method
+- Used Yaak to test our API endpoints
 
 ## Next Steps
 
-In the next chapter, we'll build the client-side interface for our survey, allowing users to select from radio buttons and submit their responses to our API.
+In the next chapters, we'll build the client-side interface for our survey, allowing users to select from radio buttons and submit their responses to our API.
 
 ## Practice Exercise
 
@@ -203,5 +194,5 @@ In the next chapter, we'll build the client-side interface for our survey, allow
    - `ownsBlueJeans`: false
    - `socioLocationId`: 3
 2. Verify it was added by making a GET request to `/submissions`
-3. Try making a GET request to `/submissions/2` to retrieve just the second submission
-4. Bonus: Try making a GET request to `/submissions?_expand=socioLocation` - What's different about the response?
+3. 🧭 **Explorer Exercise**: Try making a GET request to `/submissions/2` to retrieve just the second submission
+4. 🏕 **Pioneer Exercise**: Try making a GET request to `/submissions?_expand=socioLocation` - What's different about the response?
