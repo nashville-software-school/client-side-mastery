@@ -263,3 +263,6 @@ input[type="radio"]:first-of-type {
 ```    
 </details>
 
+---
+
+Up Next: [Your own API with JSON-Server](./IJ_JSON_SERVER.md)
