@@ -17,7 +17,7 @@ This diagram shows:
 
 For our client-side applications, we will be using a JSON file to simulate a structured database, similar to what you'd find in a real-world application. While it won't have the full capabilities of a relational database like PostgreSQL or MySQL (we'll set up one of these in the server-side portion of this course), it will allow us to work with data in a way that mimics how a backend stores and retrieves information.
 
-JSON (JavaScript Object Notation) is a lightweight data format that's easy for humans to read and write, and easy for machines to parse and generate.
+> JSON (JavaScript Object Notation) is a lightweight data format that's easy for humans to read and write, and easy for machines to parse and generate.
 
 Our ERD acts as a blueprint for this database. It has defined each table (or in the case for our JSON file, each array) and each row in the tables (properties for each object in the tables)
 
@@ -176,19 +176,7 @@ Let's break down what happened again: Yaak made an HTTP POST request to the JSON
 
 ![](./images/yaak-ij-json-server-post.png)
 
-## What We've Learned
-
-In this chapter, we've:
-- Created a JSON database file
-- Started a JSON Server to create an API
-- Learned about the POST HTTP method
-- Used Yaak to test our API endpoints
-
-## Next Steps
-
-In the next chapters, we'll build the client-side interface for our survey, allowing users to select from radio buttons and submit their responses to our API.
-
-## Practice Exercise
+## 🎓 Practice Exercise
 
 1. Use Yaak to make another POST request to add a new submission with:
    - `ownsBlueJeans`: false
@@ -196,3 +184,18 @@ In the next chapters, we'll build the client-side interface for our survey, allo
 2. Verify it was added by making a GET request to `/submissions`
 3. 🧭 **Explorer Exercise**: Try making a GET request to `/submissions/2` to retrieve just the second submission
 4. 🏕 **Pioneer Exercise**: Try making a GET request to `/submissions?_expand=socioLocation` - What's different about the response?
+
+## 📝 What We've Learned
+
+In this chapter, we've:
+- Created a JSON database file
+- Started a JSON Server to create an API
+- Learned about the POST HTTP method
+- Used Yaak to test our API endpoints
+
+
+## 🔜 Next Steps
+
+In the next chapters, we'll build the client-side interface for our survey, allowing users to select from radio buttons and submit their responses to our API.
+
+Up Next: [Do You Own Jeans?](./IJ_JEANS_COMPONENT.md)
