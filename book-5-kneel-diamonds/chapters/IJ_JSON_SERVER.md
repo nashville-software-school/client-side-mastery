@@ -176,6 +176,26 @@ Let's break down what happened again: Yaak made an HTTP POST request to the JSON
 
 ![](./images/yaak-ij-json-server-post.png)
 
+## 📓 Key Concepts to Remember
+
+1. **JSON Database**: A simple file-based way to store structured data for client-side applications, organized as arrays of objects.
+
+2. **JSON Server**: A Node.js tool that creates an API from a JSON file without requiring backend code.
+
+3. **API Endpoints**: URLs that your application can interact with to perform CRUD (Create, Read, Update, Delete) operations on your data.
+
+4. **HTTP Methods**:
+   - **GET**: Retrieves data from the server
+   - **POST**: Creates new data on the server
+
+5. **Status Codes**:
+   - **200 OK**: Successful GET request
+   - **201 Created**: Successful POST request
+
+6. **Request Body**: Data sent to the server in a POST request, typically in JSON format.
+
+7. **Relational Data**: Connecting data between tables using foreign keys (like linking submissions to socioLocations).
+
 ## 🎓 Practice Exercise
 
 1. Use Yaak to make another POST request to add a new submission with:
