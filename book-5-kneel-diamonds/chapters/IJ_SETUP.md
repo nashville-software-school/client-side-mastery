@@ -22,6 +22,22 @@ touch index.html styles/main.css scripts/main.js api/database.json
 ```
 
 Then open the directory in Visual Studio Code.
+You should see the following file structure:
+
+```
+indiana-jeans/
+│
+├── api/
+│   └── database.json
+│
+├── scripts/
+│   └── main.js
+│
+├── styles/
+│   └── main.css
+│
+└── index.html
+```
 
 ### HTML
 
@@ -247,3 +263,6 @@ input[type="radio"]:first-of-type {
 ```    
 </details>
 
+---
+
+Up Next: [Your own API with JSON-Server](./IJ_JSON_SERVER.md)
