@@ -216,6 +216,6 @@ In this chapter, we've:
 
 ## 🔜 Next Steps
 
-In the next chapters, we'll build the client-side interface for our survey, allowing users to select from radio buttons and submit their responses to our API.
+In the upcoming chapters, we'll build the client-side interface for our survey, allowing users to select from radio buttons and submit their responses to our API.
 
 Up Next: [Do You Own Jeans?](./IJ_JEANS_COMPONENT.md)
