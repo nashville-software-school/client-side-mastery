@@ -132,7 +132,7 @@ Using Yaak, make a **GET** request to the [Random Dog Api](#-introducing-fun-ima
 3. How is it different from the Fox API response?
 4. Copy the image URL from the response and paste it into a browser. What happens?
 
-## What We've Learned
+## 📝 What We've Learned
 
 In this chapter, we've:
 - Learned what an API is and how it enables communication between applications
@@ -143,7 +143,7 @@ In this chapter, we've:
 
 This foundational knowledge will prepare you for the next steps where we'll learn how to integrate these APIs into our application using JavaScript's fetch API and handle the responses using promises.
 
-## Next Steps
+## 🔜 Next Steps
 
 In the upcoming chapters, we'll:
 - Write client-side JavaScript to fetch data from our animal APIs

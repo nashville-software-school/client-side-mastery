@@ -111,13 +111,13 @@ Now let's put it all together to display the random fox image on the webpage.
 4. **`.then()`**: A method to specify what to do when a Promise is fulfilled.
 5. **Chaining**: You can chain multiple `.then()` calls to create a sequence of asynchronous operations.
 
-## 🎓 Practice Exercise: Displaying a random dog
+## 🎓 Practice Exercise: Displaying a Random Dog
 
 Now it's your turn to practice! Use what you've learned to display the random dog image you get back from the Random Dog api. 
 
 >💡 Make sure you look at the response in the network tab so that you know what property to target to get the dog image.
 
-## What We've Learned
+## 📝 What We've Learned
 
 In this chapter, we've:
 - Learned what Promises are and why they're important in JavaScript
@@ -125,7 +125,7 @@ In this chapter, we've:
 - Used `.then()` to work with the data when a Promise is fulfilled
 - Built a working application that fetches and displays a fox image
 
-## Next Steps
+## 🔜 Next Steps
 
 In the next chapter, we'll explore a more modern way to work with Promises: the `async` and `await` keywords. These provide a cleaner, more readable syntax for working with asynchronous operations.
 
