@@ -31,7 +31,7 @@ export const LocationChoices = () => {
 > 💡 **FUN TIP:** 
 >  |             |  | 
 > :-------------------------|:-------------------------:
->  TODO Highlight is a fun vscode extension that automatically highlights the word, `TODO:` in your editor.  | <img src="./images/todo-highlight.png" width="300"> 
+>  ***TODO Highlight*** is a fun vscode extension that automatically highlights the word `TODO:` in your editor.  | <img src="./images/todo-highlight.png" width="300"> 
 
 ## Fetching Data from the JSON Server API
 
