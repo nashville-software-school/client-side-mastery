@@ -205,28 +205,23 @@ sequenceDiagram
     DOM-->>User: Display rendered HTML
 ```
 
-1. The browser loads main.js, which calls render()
-2. render() calls LocationChoices()
-3. LocationChoices() makes a GET request to the JSON Server API
+1. The browser loads `main.js`, which calls `render()`
+2. `render()` calls `LocationChoices()`
+3. `LocationChoices()` makes a GET request to the JSON Server API
 4. The JSON Server API reads data from database.json
-5. database.json returns the socioLocations array
-6. The API returns the location data to LocationChoices()
-7. LocationChoices() generates HTML with the data and returns it
-8. render() combines the HTML from all components and updates the DOM
+5. `database.json` returns the `socioLocations` array
+6. The API returns the location data to `LocationChoices()`
+7. `LocationChoices()` generates HTML with the data and returns it
+8. `render()` combines the HTML from all components and updates the DOM
 9. The user sees the rendered HTML in the browser
 
-## Testing Our Component
-
-Let's test our work:
-
-1. Make sure your JSON server is still running (if not, start it with `json-server -p 8088 -w api/database.json`)
-2. Open your browser to the local server URL (usually http://localhost:3000)
+## The Rendered Component
 
 You should now see:
 - The "Do you own a pair of blue jeans?" question with Yes/No options
 - A new question "What type of area do you live in?" with four radio button options: Urban, Suburban, Semi-Rural, and Rural
 
-![Location Choices Component](./images/indiana-jeans-locations-component.png)
+![](./images/indiana-jeans-location-component.png)
 
 ## 📓 Key Concepts to Remember
 
@@ -236,15 +231,13 @@ You should now see:
 4. **Network Tab**: A developer tool that allows you to inspect HTTP requests and responses
 5. **Radio Button Groups**: Radio buttons with the same `name` attribute work as a group where only one can be selected
 
-## 🎓 Practice Exercise: Inspecting Network Requests
+## 🎓 Practice Exercise: Dr. Jones' Research Expansion
 
-1. Open your browser's developer tools and go to the Network tab
-2. Refresh the page and find the request to `socioLocations`
-3. Click on the request and examine:
-   - The Headers tab: What's the request method, URL, and status code?
-   - The Preview tab: How many location objects are returned?
-4. Try adding a new location to your `database.json` file (in the `socioLocations` array)
-5. Refresh the page and see if your new location appears in the radio buttons
+Dr. Jones has rushed into your office with exciting news! Her research grant has been expanded to include metropolitan areas, and she needs you to update the survey right away.
+
+"I need to add 'Metropolitan' as a new location category before my presentation tomorrow," she explains, adjusting her iconic hat. "The urban/rural spectrum is incomplete without it!"
+
+Where should you make this change?
 
 ## 📝 What We've Learned
 
