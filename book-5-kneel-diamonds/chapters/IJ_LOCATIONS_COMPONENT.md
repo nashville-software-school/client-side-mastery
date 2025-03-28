@@ -33,6 +33,10 @@ export const LocationChoices = () => {
 > :-------------------------|:-------------------------:
 >  ***TODO Highlight*** is a fun vscode extension that automatically highlights the word `TODO:` in your editor.  | <img src="./images/todo-highlight.png" width="300"> 
 
+> 💡 **FUN TIP:** 
+> | ***TODO Highlight*** is a fun vscode extension that automatically highlights the word `TODO:` in your editor.  | <img src="./images/todo-highlight.png" width="300"> |
+> |-|-|
+
 ## Fetching Data from the JSON Server API
 
 Now, let's add the code to fetch the location choices from our API:
