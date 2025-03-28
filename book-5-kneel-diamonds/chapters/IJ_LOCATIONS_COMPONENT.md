@@ -4,7 +4,7 @@ In the previous chapter, we created our first component with static radio button
 
 This is a key concept in modern web development: instead of hardcoding options in our HTML, we'll fetch the available choices from our database and generate the HTML programmatically. This approach makes our application more flexible and easier to maintain.
 
-> ⚠️ **REMEMBER:** Simply copying and pasting the provided code snippets is not recommended as it does not produce understanding or retention. We encourage you to type out the code, or at the very least read the code line by line. This way you think about what the code snippet actually does as you add it to your project.
+> ⚠️ **REMEMBER:** Simply copying and pasting the provided code snippets is not recommended as it does not produce understanding or retention. We encourage you to type out the code, or at the very least read the code line by line. This way you think about what the code snippet actually does as you add it to your project. If at any point the code doesn't make sense to you, revisit the Fox y Cat chapters to brush up on promises and async/await.
 
 ## Creating the LocationChoices Component
 
@@ -18,9 +18,13 @@ export const LocationChoices = () => {
    // TODO: Fetch locations from the API
     
     let html = `
-        <div class="survey-input" id="location-choice">
+        <div class="survey-input">
             <h2>What type of area do you live in?</h2>
-            <!-- TODO: generate radio buttons here -->
+    `
+    
+    // TODO: generate radio buttons and add to html
+
+    html += `
         </div>
     `
     
@@ -29,7 +33,7 @@ export const LocationChoices = () => {
 ``` 
 
 > 💡 **FUN TIP:** 
-> | ***TODO Highlight*** is a fun vscode extension that automatically highlights the word `TODO:` in your editor.  | <img src="./images/todo-highlight.png" width="300"> |
+> | <img src="./images/todo-highlight.png" width="300"> | ***TODO Highlight*** is a fun vscode extension that automatically highlights the text `TODO:` in your editor. |
 > |-|-|
 
 ## Fetching Data from the JSON Server API
@@ -38,35 +42,80 @@ Now, let's add the code to fetch the location choices from our API:
 
 ```javascript
 export const LocationChoices = async () => {
-  const response = await fetch("http://localhost:8088/socioLocations")
-  const locations = await response.json()
+    const response = await fetch("http://localhost:8088/socioLocations")
+    const locations = await response.json()
 
-  let html = `
-      <div class="survey-input" id="location-choice">
-          <h2>What type of area do you live in?</h2>
-          <!-- TODO: generate radio buttons here -->
-      </div>
-  `
+    let html = `
+        <div class="survey-input">
+            <h2>What type of area do you live in?</h2>
+    `
+    
+    // TODO: generate radio buttons and add to html
 
-  return html
+    html += `
+        </div>
+    `
+
+    return html
 }
 ```
 
-Notice that we've marked our function as `async`. This is because we'll be using `fetch()` to get data from our API, which is an asynchronous operation.
-
 In this code, we:
 1. Make a GET request to our JSON Server API endpoint for socioLocations
-2. Wait for the response and convert it to a JavaScript object using `.json()`
-3. Store the locations in a variable that we'll use to generate our radio buttons
+2. Wait for the response (`fetch()` is asynchronous)
+3. Convert the response to a JavaScript object using `.json()` and wait for the converted data (`.json()` is asynchronous)
+4. Store the locations in a variable that we'll use to generate our radio buttons
+
+Notice that we've marked our function as `async`. This is because we had to await our `fetch()` and `.json()` operations.
+
+## Updating the Main Module
+
+Though we have not generated our radio buttons yet, let's go ahead and update our `main.js` file to include our new component, this way we can invoke the function and view the request in the network tab to confirm everything is working properly. It's very important to continually test your code as you implement it. 
+
+See if you can do this on your own. Expand the hints below if you need some help.
+
+<details>
+    <summary>💡 Algorithm</summary>
+
+1. Import the new `LocationChoices` component
+2. Invoke `LocationChoices` in the render function using the `await` keyword since this function is defined as `async` and therefore returns a promise.
+3. Store the returned html in a variable
+5. Make the `render` function `async` since it invokes an async function
+6. Add the `locationsHTML` to the container
+</details>
+
+<details>
+    <summary>💡 Code</summary>
+
+```javascript
+import { JeanChoices } from "./JeanChoices.js"
+import { LocationChoices } from "./LocationChoices.js"
+
+const container = document.querySelector("#container")
+
+const render = async () => {
+    const jeansHTML = JeanChoices()
+    const locationsHTML = await LocationChoices()
+    
+    container.innerHTML = `
+        ${jeansHTML}
+        ${locationsHTML}
+    `
+}
+
+render()
+```
+</details>
 
 ## Examining Network Requests with the Network Tab
 
-Let's pause and examine what happens behind the scenes when we make this fetch request. The browser's Network tab is an invaluable tool for seeing HTTP requests and responses.
+Let's examine what happens behind the scenes when we make this fetch request. 
 
 To view your request:
-1. Open your browser's developer tools (F12 or right-click and select "Inspect")
+1. Open the developer tools 
 2. Click on the "Network" tab
-3. Refresh the page to see the requests
+3. Choose `Fetch/XHR` to reduce some of the noise
+4. Refresh the page to see the requests
 
 When the `LocationChoices` component runs, you'll see a request to `socioLocations` in the Network tab. Clicking on this request reveals:
 
@@ -90,20 +139,17 @@ When the `LocationChoices` component runs, you'll see a request to `socioLocatio
   ]
   ```
 
-![Network Tab Request](./images/location-request-network.png)
-
 This visual inspection helps you understand:
 - If your request was successful
 - What data you received
-- How it's structured (which helps when you need to access specific properties)
+- How it's structured (now we know which properties to access to generate our radio buttons)
 
 ## Generating Radio Buttons Dynamically
 
-Now that we have our locations data, let's generate a radio button for each location option:
+Now that we have our locations data and we understand the structure of the data, let's generate a radio button for each location option:
 
 ```javascript
 export const LocationChoices = async () => {
-    // Fetch locations from the API
     const response = await fetch("http://localhost:8088/socioLocations")
     const locations = await response.json()
     
@@ -111,8 +157,7 @@ export const LocationChoices = async () => {
         <div class="survey-input" id="location-choice">
             <h2>What type of area do you live in?</h2>
     `
-    
-    // Generate a radio button for each location
+
     for (const location of locations) {
         html += `<input type="radio" name="location" value="${location.id}" /> ${location.label}`
     }
@@ -132,48 +177,43 @@ In this code, we:
    - The `value` attribute is set to the location's ID (which we'll use later to store the user's choice)
    - After the radio button, we display the location's label
 
-## Updating the Main Module
-
-Now, let's update our `main.js` file to include our new component:
-
-```javascript
-import { JeanChoices } from "./JeanChoices.js"
-import { LocationChoices } from "./LocationChoices.js"
-
-const container = document.querySelector("#container")
-
-const render = async () => {
-    const jeansHTML = JeanChoices()
-    const locationsHTML = await LocationChoices()
-    
-    container.innerHTML = `
-        ${jeansHTML}
-        ${locationsHTML}
-    `
-}
-
-render()
-```
-
-Note the important changes:
-1. We import the new `LocationChoices` component
-2. We make the `render` function `async` since it calls an async function
-3. We use `await` when calling `LocationChoices()` since it returns a Promise
-4. We add the `locationsHTML` to our container
-
 ## The System at Work
 
-Let's visualize what's happening in our application with a system diagram:
+Let's visualize what's happening in our application with a sequence diagram:
 
-![System Diagram](./images/system-diagram-location-choices.png)
+```mermaid
+sequenceDiagram
+    participant Browser
+    participant main.js
+    participant LocationChoices.js
+    participant API as JSON Server API
+    participant DB as database.json
+    participant DOM
+    participant User
 
-1. The browser loads `main.js`, which calls `render()`
-2. `render()` calls `LocationChoices()`
-3. `LocationChoices()` makes a GET request to the JSON Server API
-4. The API returns the location data
-5. `LocationChoices()` generates HTML with the data and returns it
-6. `render()` combines the HTML from all components and updates the DOM
-7. The user sees the rendered HTML in the browser
+    Browser->>main.js: Load and execute
+    main.js->>main.js: Call render()
+    main.js->>LocationChoices.js: Call LocationChoices()
+    LocationChoices.js->>API: GET request to /socioLocations
+    API->>DB: Read socioLocations data
+    DB-->>API: Return socioLocations array
+    API-->>LocationChoices.js: Return location data
+    LocationChoices.js->>LocationChoices.js: Generate HTML with location data
+    LocationChoices.js-->>main.js: Return generated HTML
+    main.js->>main.js: Combine HTML from all components
+    main.js->>DOM: Update innerHTML
+    DOM-->>User: Display rendered HTML
+```
+
+1. The browser loads main.js, which calls render()
+2. render() calls LocationChoices()
+3. LocationChoices() makes a GET request to the JSON Server API
+4. The JSON Server API reads data from database.json
+5. database.json returns the socioLocations array
+6. The API returns the location data to LocationChoices()
+7. LocationChoices() generates HTML with the data and returns it
+8. render() combines the HTML from all components and updates the DOM
+9. The user sees the rendered HTML in the browser
 
 ## Testing Our Component
 
