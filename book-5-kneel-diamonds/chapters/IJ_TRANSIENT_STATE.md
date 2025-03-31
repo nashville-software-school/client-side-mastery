@@ -215,3 +215,5 @@ In this chapter, we've:
 ## 🔜 Next Steps
 
 Now that we can capture user choices, our next step is to create a submission button and a function to save the transient state to our database (permanent state). 
+
+Up Next: [Storing Submissions](./IJ_PERMANENT_STATE.md)
