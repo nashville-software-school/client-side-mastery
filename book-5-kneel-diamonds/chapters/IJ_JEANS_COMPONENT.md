@@ -124,4 +124,4 @@ In this chapter, we've:
 
 Although our radio buttons display correctly, they don't actually do anything yet when clicked. We'll get to that in a later chapter. In the next chapter, we'll create another component for location choices, this time the choice options will come from our database. 
 
-Up Next: [Location Component](./IJ_LOCATION_COMPONENT.md)
+Up Next: [Building the Location Choices Component](./IJ_LOCATION_COMPONENT.md)

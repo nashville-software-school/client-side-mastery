@@ -1,4 +1,4 @@
-# Capturing User Choices with Transient State
+# Capturing User Choices
 
 ## Introduction to State Management
 
@@ -216,4 +216,4 @@ In this chapter, we've:
 
 Now that we can capture user choices, our next step is to create a submission button and a function to save the transient state to our database (permanent state). 
 
-Up Next: [Storing Submissions](./IJ_PERMANENT_STATE.md)
+Up Next: [Saving Survey Submissions](./IJ_PERMANENT_STATE.md)

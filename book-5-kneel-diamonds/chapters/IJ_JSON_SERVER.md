@@ -1,6 +1,4 @@
-# Database Design and API
-
-## Entity Relationship Diagram (ERD)
+# Your own API with JSON-Server
 
 In the previous chapter, we learned about Dr. Henrietta Jones and her research project on blue jeans. Now, we need to create a database to store the survey data.
 
@@ -218,4 +216,4 @@ In this chapter, we've:
 
 In the upcoming chapters, we'll build the client-side interface for our survey, allowing users to select from radio buttons and submit their responses to our API.
 
-Up Next: [Do You Own Jeans?](./IJ_JEANS_COMPONENT.md)
+Up Next: [Creating a Radio Button Component](./IJ_JEANS_COMPONENT.md)
