@@ -7,21 +7,19 @@ In the previous chapter, we created our transient state module and updated our c
 To accomplish this, we'll need to:
 
 1. Create a submission button component
-2. Add functionality to submit transient state to permanent state
+2. Add functionality to post our transient state object to the database (permanent state)
 3. Create an event listener to trigger the submission process
 
 ## Creating the Submission Button Component
 
-Let's start by creating a button that users can click to submit their survey responses.
+Let's start by creating a simple button that users can click to submit their survey responses.
 
 Create a new file called `SubmissionButton.js` in your `scripts` directory:
 
 ```javascript
-import { saveSurveySubmission } from "./transientState.js"
-
 const handleSurveySubmission = (clickEvent) => {
     if (clickEvent.target.id === "submission-button") {
-        saveSurveySubmission()
+        console.log("Button clicked!")
     }
 }
 
@@ -34,12 +32,12 @@ export const SubmissionButton = () => {
 
 Let's break down what this component does:
 
-1. We import the `saveSurveySubmission` function (which we'll create next)
-2. We define a `handleSurveySubmission` function that:
+1. We define a `handleSurveySubmission` function that:
    - Checks if the clicked element has the ID "submission-button"
-   - If so, calls our `saveSurveySubmission` function
-3. We create and export the `SubmissionButton` component that:
-   - Adds an event listener for click events
+   - If so, logs a message to the console
+   
+2. We create and export the `SubmissionButton` component that:
+   - Adds an event listener for click events and invokes `handleSurveySubmission` when a click happens
    - Returns HTML for a button with the ID "submission-button"
 
 ## Adding the Button to Main.js
@@ -72,6 +70,8 @@ We've added:
 1. An import for the `SubmissionButton` component
 2. A call to the `SubmissionButton()` function to get the button HTML
 3. The button HTML in our container's content
+
+This gives us a simple way to verify that our button is working before we add more complex functionality. **Time to test.** Refresh the browser and click the button. Do you see the console log?
 
 ## Updating the Transient State Module
 
@@ -123,6 +123,33 @@ We've added the `saveSurveySubmission` function that:
    
 3. Dispatches a custom event to notify other parts of our application that a submission has been created
 
+## Connecting the Button to the Submission Function
+
+Now that we have our `saveSurveySubmission` function, let's update our `SubmissionButton.js` file to use it:
+
+```javascript
+import { saveSurveySubmission } from "./transientState.js"
+
+const handleSurveySubmission = (clickEvent) => {
+    if (clickEvent.target.id === "submission-button") {
+        // Replace the console.log with a call to saveSurveySubmission
+        saveSurveySubmission()
+    }
+}
+
+export const SubmissionButton = () => {
+    document.addEventListener("click", handleSurveySubmission)
+
+    return `<button id='submission-button'>Save Submission</button>`
+}
+```
+
+We've made two important changes:
+1. Added an import for the `saveSurveySubmission` function
+2. Replaced our console.log with a call to this function
+
+Now when a user clicks the button, it will save their selections to the database.
+
 ## Understanding the POST Request
 
 When we call `saveSurveySubmission`, we're making a POST request to our JSON Server API. Let's look at what's happening behind the scenes:
@@ -149,29 +176,31 @@ When the server receives this request, it:
 
 Let's visualize the entire process from the user clicking the button to the data being saved in the database:
 
-```
-┌────────────────┐      ┌───────────────────┐      ┌───────────────┐      ┌─────────────────┐
-│                │      │                   │      │               │      │                 │
-│  User clicks   │      │ handleSurvey      │      │ saveSurvey    │      │ JSON Server API │
-│  submit button │─────▶│ Submission()      │─────▶│ Submission()  │─────▶│                 │
-│                │      │                   │      │               │      │                 │
-└────────────────┘      └───────────────────┘      └───────────────┘      └────────┬────────┘
-                                                                                    │
-                                                                                    │ Save data
-                                                                                    ▼
-                                                                          ┌─────────────────┐
-                                                                          │                 │
-                                                                          │  database.json  │
-                                                                          │                 │
-                                                                          └─────────────────┘
+```mermaid
+sequenceDiagram
+    participant User
+    participant Button as SubmissionButton
+    participant TransientState
+    participant API as JSON Server API
+    participant DB as database.json
+    
+    User->>Button: Clicks submit button
+    Button->>TransientState: handleSurveySubmission()
+    TransientState->>TransientState: saveSurveySubmission()
+    TransientState->>API: POST request with transient state
+    API->>DB: Save data to database
+    API-->>TransientState: Return response (201 Created)
+    TransientState-->>Button: Dispatch custom event
 ```
 
-This sequence shows how:
+This sequence diagram shows how:
 1. The user clicks the submission button
 2. The click event triggers `handleSurveySubmission()`
 3. This function calls `saveSurveySubmission()`
 4. `saveSurveySubmission()` makes a POST request to the JSON Server API
 5. The API saves the data to our database.json file
+6. The API returns a response with status 201
+7. A custom event is dispatched to notify other components
 
 ## Testing the Submission Process
 
