@@ -148,25 +148,12 @@ export const saveSurveySubmission = async () => {
 
     // Send the data to the API
     const response = await fetch("http://localhost:8088/submissions", postOptions)
-    
-    // Dispatch a custom event
-    const customEvent = new CustomEvent("submissionCreated")
-    document.dispatchEvent(customEvent)
 }
 ```
+This fetch call takes two arguments:
+  - The URL for our submissions endpoint
+  - The postOptions object which defines the **method** (POST), the type of data we're sending (application/json), and the data itself (our submission object converted to a JSON string).
 
-We've added two important pieces:
-
-1. The `fetch()` call that:
-   - Takes the URL for our submissions endpoint
-   - Includes our postOptions object
-   - Uses `await` since fetch returns a Promise
-   
-2. A custom event that:
-   - Creates a new event of type "submissionCreated"
-   - Dispatches it to the document so other components can listen for it
-
-The custom event will be used later to trigger a refresh of our submission list when a new submission is created.
 
 ### The Complete Transient State Module
 
@@ -182,12 +169,10 @@ const transientState = {
 // Functions to modify each property of transient state
 export const setOwnsBlueJeans = (chosenOwnership) => {
     transientState.ownsBlueJeans = chosenOwnership
-    console.log(transientState)
 }
 
 export const setSocioLocationId = (chosenLocation) => {
     transientState.socioLocationId = chosenLocation
-    console.log(transientState)
 }
 
 // Function to convert transient state to permanent state
@@ -201,38 +186,8 @@ export const saveSurveySubmission = async () => {
     }
 
     const response = await fetch("http://localhost:8088/submissions", postOptions)
-
-    const customEvent = new CustomEvent("submissionCreated")
-    document.dispatchEvent(customEvent)
 }
 ```
-
-## Connecting the Button to the Submission Function
-
-Now that we have our `saveSurveySubmission` function, let's update our `SubmissionButton.js` file to use it:
-
-```javascript
-import { saveSurveySubmission } from "./transientState.js"
-
-const handleSurveySubmission = (clickEvent) => {
-    if (clickEvent.target.id === "submission-button") {
-        // Replace the console.log with a call to saveSurveySubmission
-        saveSurveySubmission()
-    }
-}
-
-export const SubmissionButton = () => {
-    document.addEventListener("click", handleSurveySubmission)
-
-    return `<button id='submission-button'>Save Submission</button>`
-}
-```
-
-We've made two important changes:
-1. Added an import for the `saveSurveySubmission` function
-2. Replaced our console.log with a call to this function
-
-Now when a user clicks the button, it will save their selections to the database.
 
 ## Understanding the POST Request
 
@@ -274,7 +229,6 @@ sequenceDiagram
     TransientState->>API: POST request with transient state
     API->>DB: Save data to database
     API-->>TransientState: Return response (201 Created)
-    TransientState-->>Button: Dispatch custom event
 ```
 
 This sequence diagram shows how:
@@ -284,7 +238,6 @@ This sequence diagram shows how:
 4. `saveSurveySubmission()` makes a POST request to the JSON Server API
 5. The API saves the data to our database.json file
 6. The API returns a response with status 201
-7. A custom event is dispatched to notify other components
 
 ## Testing the Submission Process
 
