@@ -75,7 +75,102 @@ This gives us a simple way to verify that our button is working before we add mo
 
 ## Updating the Transient State Module
 
-Now, let's add the `saveSurveySubmission` function to our `transientState.js` file:
+Now we need to add functionality to our transient state module to convert our temporary data into permanent data in the database. 
+
+### Building the POST Request
+
+So far in this course, you've used `fetch()` to make GET requests to retrieve data from an API. Now we need to use `fetch()` to make a POST request to create data.
+
+Think about what we'll need:
+1. What HTTP method will we use instead of GET?
+2. What data will we need to send to the server?
+3. How will we format that data?
+
+Let's add a new function to our `transientState.js` file that will handle this conversion:
+
+```javascript
+// Function to convert transient state to permanent state
+export const saveSurveySubmission = async () => {
+    // Start building the POST request here
+    console.log("Saving survey to database...")
+    console.log(transientState)
+}
+```
+
+If you test your button now (after updating the `SubmissionButton.js` file to import and call this function), you should see your transient state object logged to the console. This confirms that we have access to the data we want to save.
+
+### Creating the POST Request Options
+
+When making a POST request, we need to provide more configuration than we did with GET requests. Specifically, we need to:
+1. Specify the HTTP method as "POST"
+2. Set headers to tell the server we're sending JSON data
+3. Include a body with the data we want to create
+
+Update your `saveSurveySubmission` function:
+
+```javascript
+export const saveSurveySubmission = async () => {
+    // Create the options for fetch()
+    const postOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(transientState)
+    }
+    
+    // TODO: Add fetch() call here
+}
+```
+
+Let's analyze what we've added:
+
+1. We create a `postOptions` object with:
+   - `method: "POST"` to specify we're creating data
+   - `headers` object with `"Content-Type": "application/json"` to tell the server we're sending JSON
+   - `body` containing our transient state converted to a JSON string using `JSON.stringify()`
+
+The `JSON.stringify()` function is critical - it converts our JavaScript object to a JSON string that the server can understand.
+
+### Making the POST Request
+
+Now let's complete our function by making the actual fetch request:
+
+```javascript
+export const saveSurveySubmission = async () => {
+    const postOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(transientState)
+    }
+
+    // Send the data to the API
+    const response = await fetch("http://localhost:8088/submissions", postOptions)
+    
+    // Dispatch a custom event
+    const customEvent = new CustomEvent("submissionCreated")
+    document.dispatchEvent(customEvent)
+}
+```
+
+We've added two important pieces:
+
+1. The `fetch()` call that:
+   - Takes the URL for our submissions endpoint
+   - Includes our postOptions object
+   - Uses `await` since fetch returns a Promise
+   
+2. A custom event that:
+   - Creates a new event of type "submissionCreated"
+   - Dispatches it to the document so other components can listen for it
+
+The custom event will be used later to trigger a refresh of our submission list when a new submission is created.
+
+### The Complete Transient State Module
+
+Your complete `transientState.js` file should now look like this:
 
 ```javascript
 // Set up the transient state data structure and provide initial values
@@ -111,17 +206,6 @@ export const saveSurveySubmission = async () => {
     document.dispatchEvent(customEvent)
 }
 ```
-
-We've added the `saveSurveySubmission` function that:
-
-1. Creates a configuration object (`postOptions`) for our fetch request with:
-   - The HTTP method set to "POST"
-   - A header specifying we're sending JSON data
-   - The body containing our transient state converted to a JSON string
-   
-2. Makes a POST request to our submissions endpoint with these options
-   
-3. Dispatches a custom event to notify other parts of our application that a submission has been created
 
 ## Connecting the Button to the Submission Function
 
