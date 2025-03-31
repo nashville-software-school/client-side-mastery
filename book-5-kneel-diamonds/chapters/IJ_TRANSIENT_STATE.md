@@ -148,8 +148,8 @@ Time to capture the user's location choice! Try to implement this code on your o
 
    1. Import the `setSocioLocationId` function
    2. Create a `handleLocationChange` function that:
-      - Checks if the changed element is a radio button with name "location"
-      - Converts the string value to a number using `parseInt()`
+      - Check if the changed element is a radio button with name "location"
+      - Convert the string value to a number using `parseInt()`
       - Call the setter function with the numeric ID
    3. Add an event listener to the document
 
