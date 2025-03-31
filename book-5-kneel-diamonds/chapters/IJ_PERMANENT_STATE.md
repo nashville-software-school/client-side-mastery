@@ -97,7 +97,7 @@ export const saveSurveySubmission = async () => {
 }
 ```
 
-If you test your button now (after updating the `SubmissionButton.js` file to import and call this function), you should see your transient state object logged to the console. This confirms that we have access to the data we want to save.
+**Time to test.** Update your `SubmissionButton.js` file to import and call this function on the button click. If you test your button now, you should see your transient state object logged to the console. This confirms that we have access to the data we want to save.
 
 ### Creating the POST Request Options
 
@@ -152,7 +152,7 @@ export const saveSurveySubmission = async () => {
 ```
 This fetch call takes two arguments:
   - The URL for our submissions endpoint
-  - The postOptions object which defines the **method** (POST), the type of data we're sending (application/json), and the data itself (our submission object converted to a JSON string).
+  - The postOptions object which defines the method of our request (POST), the type of data we're sending (application/json), and the data itself (our submission object converted to a JSON string).
 
 
 ### The Complete Transient State Module
@@ -189,67 +189,9 @@ export const saveSurveySubmission = async () => {
 }
 ```
 
-## Understanding the POST Request
-
-When we call `saveSurveySubmission`, we're making a POST request to our JSON Server API. Let's look at what's happening behind the scenes:
-
-1. **Request URL**: `http://localhost:8088/submissions`
-2. **Request Method**: POST
-3. **Request Headers**: 
-   - `Content-Type: application/json`
-4. **Request Body** (Payload):
-   ```json
-   {
-     "ownsBlueJeans": true,
-     "socioLocationId": 2
-   }
-   ```
-
-When the server receives this request, it:
-1. Adds an `id` property with a unique value
-2. Adds the new object to the submissions array in our database
-3. Returns the newly created object with its assigned ID
-4. Sends a `201 Created` status code to indicate success
-
-## Visualizing the Submission Process
-
-Let's visualize the entire process from the user clicking the button to the data being saved in the database:
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant Button as SubmissionButton
-    participant TransientState
-    participant API as JSON Server API
-    participant DB as database.json
-    
-    User->>Button: Clicks submit button
-    Button->>TransientState: handleSurveySubmission()
-    TransientState->>TransientState: saveSurveySubmission()
-    TransientState->>API: POST request with transient state
-    API->>DB: Save data to database
-    API-->>TransientState: Return response (201 Created)
-```
-
-This sequence diagram shows how:
-1. The user clicks the submission button
-2. The click event triggers `handleSurveySubmission()`
-3. This function calls `saveSurveySubmission()`
-4. `saveSurveySubmission()` makes a POST request to the JSON Server API
-5. The API saves the data to our database.json file
-6. The API returns a response with status 201
-
 ## Testing the Submission Process
 
-To test your submission process:
-
-1. Make sure both your JSON server and web server are running
-2. Open your application in the browser
-3. Select options for jeans ownership and location
-4. Click the "Save Submission" button
-5. Open your browser's developer tools (F12 or right-click → Inspect)
-6. Navigate to the Network tab
-7. Look for the POST request to "submissions"
+**Time to test** your submission process. Refresh the browser, open the devtools to the Network tab, and make a submission. Look for the POST request to "submissions".
 
 Clicking on this request reveals detailed information:
 
@@ -292,6 +234,35 @@ This is what the server sent back:
 
 Notice that the server added an `id` property to your data. This unique identifier allows you to reference this specific submission later.
 
+## Visualizing the Submission Process
+
+Let's visualize the entire process from the user clicking the button to the data being saved in the database:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Button as SubmissionButton
+    participant TransientState
+    participant API as JSON Server API
+    participant DB as database.json
+    
+    User->>Button: Clicks submit button
+    Button->>TransientState: handleSurveySubmission()
+    TransientState->>TransientState: saveSurveySubmission()
+    TransientState->>API: POST request with transient state
+    API->>DB: Save data to database
+    API-->>TransientState: Return response (201 Created)
+```
+
+This sequence diagram shows how:
+1. The user clicks the submission button
+2. The click event triggers `handleSurveySubmission()`
+3. This function calls `saveSurveySubmission()`
+4. `saveSurveySubmission()` makes a POST request to the JSON Server API
+5. The API saves the data to our database.json file
+6. The API returns a response with status 201
+
+
 ## 📓 Key Concepts to Remember
 
 1. **Converting Transient to Permanent State**: When we save form data to a database, we're converting transient state (temporary, in-memory data) to permanent state (persisted data).
@@ -306,13 +277,9 @@ Notice that the server added an `id` property to your data. This unique identifi
 
 4. **Status Code 201**: Indicates that a resource was successfully created.
 
-5. **Network Tab**: A developer tool that allows you to inspect HTTP requests and responses in detail.
-
-6. **Custom Events**: Allow different parts of your application to communicate without being directly connected.
-
 ## 🎓 Practice Exercise: Complete or Incomplete?
 
-Dr. Jones has asked for a new feature: she'd like to know if a survey submission is complete (has both jeans ownership and location data).
+Dr. Jones has asked for a new feature: she'd like to make sure a survey submission is complete (has both jeans ownership and location data) before submission. Too many incomplete survey responses have come through.
 
 Your task:
 1. Update the `saveSurveySubmission` function to check if both required fields have valid values:
@@ -329,9 +296,8 @@ In this chapter, we've:
 - Created a submission button component
 - Added an event handler to capture button clicks
 - Implemented the function to convert transient state to permanent state
-- Made POST requests to save data to our JSON Server API
-- Used the Network tab to inspect HTTP requests and responses
-- Created and dispatched custom events
+- Made a POST request with `fetch()` to save data to our JSON Server API
+- Used the Network tab to inspect HTTP POST requests and responses
 
 ## 🔜 Next Steps
 
