@@ -84,7 +84,7 @@ Open your `JeanChoices.js` file and modify it to match the following:
 import { setOwnsBlueJeans } from "./transientState.js"
 
 const handleOwnershipChange = (changeEvent) => {
-    if (changeEvent.target.name === "ownsJeans") {
+    if (changeEvent.target.name === "ownJeans") {
         const convertedToBoolean = JSON.parse(changeEvent.target.value)
         setOwnsBlueJeans(convertedToBoolean)
     }
@@ -110,115 +110,89 @@ Let's analyze what we've added:
 1. We import the `setOwnsBlueJeans` function from our transient state module
    
 2. We create a new function `handleOwnershipChange` that:
-   - Checks if the changed element is a radio button with name "ownsJeans"
+   - Checks if the changed element is a radio button with name "ownJeans"
    - Converts the string value ("true" or "false") to an actual boolean using `JSON.parse()`
    - Calls our setter function with the boolean value
    
 3. We add an event listener to the entire document that listens for "change" events and calls our handler function
 
-The event listener is attached to the document because our component's HTML hasn't been added to the DOM yet when the function runs. This approach ensures the event will be captured regardless of when the elements are added to the page.
+## Testing the Code 
+
+> ⚠️ You've just added substantial logic to your program - now it's time to test it thoroughly. But testing is only half the equation. You also need to fully understand what each part of the code does. 
+>
+> Never let any code in your program remain a mystery. If there's even a single line you're struggling to understand, make use of all available resources to clarify it:
+>
+> - Step through it with the debugger
+> - Ask an AI assistant to explain the concept
+> - Discuss it with teammates 
+> - Reach out to your instructors
+>
+> Building this habit of ensuring understanding will save you countless hours of debugging in the future and make you a more effective developer. Remember: professional developers don't just write code that works - they write code they understand.
+
+Place a breakpoint or a `debugger` statement on the first line of the `handleOwnershipChange` function. Refresh the browser and choose an option for "**Do you own a pair of blue jeans?"** Observe and/or confirm the following and make changes if needed. 
+
+1. What is the value of `changeEvent.target.name`? Does the if statement pass? 
+2. What is the value of `changeEvent.target.value`? What is the value after it is converted with `JSON.parse()`? Why is this necessary?
+3. Step **into** the `setOwnsBlueJeans` function. What's the value of `chosenOwnership`? What is the value of `transientState`?
+4. Step **over**. What is the value of `transientState` now? What has changed?
+5. Choose a location option. Does the same code run? Why or why not? 
 
 ## Updating the LocationChoices Component
 
-Similarly, let's update our `LocationChoices.js` file to capture location selections:
+Time to capture the user's location choice! Try to implement this code on your own. Expand the hints below if you need some help. 
 
-```javascript
-import { setSocioLocationId } from "./transientState.js"
+<details>
+  <summary>💡 Algorithm</summary>
 
-const handleLocationChange = (changeEvent) => {
-    if (changeEvent.target.name === "location") {
-        const locationId = parseInt(changeEvent.target.value)
-        setSocioLocationId(locationId)
-    }
-}
+  As you might have guessed, the process is similar to what we did with the JeanChoices component:
 
-export const LocationChoices = async () => {
-    const response = await fetch("http://localhost:8088/socioLocations")
-    const locations = await response.json()
+   1. Import the `setSocioLocationId` function
+   2. Create a `handleLocationChange` function that:
+      - Checks if the changed element is a radio button with name "location"
+      - Converts the string value to a number using `parseInt()`
+      - Call the setter function with the numeric ID
+   3. Add an event listener to the document
 
-    document.addEventListener("change", handleLocationChange)
+   Note that we convert the value to a number with `parseInt()` because we need a numeric ID to match our database structure.
 
-    let html = `
-        <div class='survey-input' id='location-choice'>
-            <h2>What type of area do you live in?</h2>
-    `
-    
-    for (const location of locations) {
-        html += `<input type="radio" name="location" value="${location.id}" /> ${location.label}`
-    }
-    
-    html += `
-        </div>
-    `
-    
-    return html
-}
-```
+</details>
 
-The process is similar to what we did with the JeanChoices component:
+<details>
+  <summary>💡 Code</summary>
 
-1. We import the `setSocioLocationId` function
-2. We create a `handleLocationChange` function that:
-   - Checks if the changed element is a radio button with name "location"
-   - Converts the string value to a number using `parseInt()`
-   - Calls our setter function with the numeric ID
-3. We add an event listener to the document
+  ```javascript
+  import { setSocioLocationId } from "./transientState.js"
 
-Note that we convert the value to a number with `parseInt()` because we need a numeric ID to match our database structure.
+  const handleLocationChange = (changeEvent) => {
+      if (changeEvent.target.name === "location") {
+          const locationId = parseInt(changeEvent.target.value)
+          setSocioLocationId(locationId)
+      }
+  }
 
-## Testing Transient State
+  export const LocationChoices = async () => {
+      const response = await fetch("http://localhost:8088/socioLocations")
+      const locations = await response.json()
 
-To see your transient state in action:
+      document.addEventListener("change", handleLocationChange)
 
-1. Make sure both your JSON server and web server are running
-2. Open your application in the browser
-3. Open the browser's developer tools (F12 or right-click → Inspect)
-4. Navigate to the Console tab
-5. Click on different radio button options
-
-You should see the transient state object logged to the console each time you make a selection, with the updated values:
-
-When you select "Yes" for jeans ownership:
-```
-{ownsBlueJeans: true, socioLocationId: 0}
-```
-
-When you select "Suburban" for location:
-```
-{ownsBlueJeans: true, socioLocationId: 2}
-```
-
-## Visualizing the System
-
-Let's visualize how the components and transient state work together:
-
-```
-┌─────────────────┐         ┌───────────────────┐
-│                 │         │                   │
-│  JeanChoices    │         │  LocationChoices  │
-│  Component      │         │  Component        │
-│                 │         │                   │
-└────────┬────────┘         └────────┬──────────┘
-         │                           │
-         │ setOwnsBlueJeans          │ setSocioLocationId
-         │                           │
-         ▼                           ▼
-┌─────────────────────────────────────────────┐
-│                                             │
-│              Transient State                │
-│                                             │
-│      {                                      │
-│        ownsBlueJeans: true|false,           │
-│        socioLocationId: number              │
-│      }                                      │
-│                                             │
-└─────────────────────────────────────────────┘
-```
-
-This diagram shows how:
-1. The `JeanChoices` component updates the `ownsBlueJeans` property via the `setOwnsBlueJeans` function
-2. The `LocationChoices` component updates the `socioLocationId` property via the `setSocioLocationId` function
-3. Both components work with the same transient state object
+      let html = `
+          <div class='survey-input' id='location-choice'>
+              <h2>What type of area do you live in?</h2>
+      `
+      
+      for (const location of locations) {
+          html += `<input type="radio" name="location" value="${location.id}" /> ${location.label}`
+      }
+      
+      html += `
+          </div>
+      `
+      
+      return html
+  }
+  ```
+</details>
 
 ## 📓 Key Concepts to Remember
 
@@ -226,28 +200,7 @@ This diagram shows how:
 
 2. **Module Pattern**: We keep the state object private and only expose functions to modify it in controlled ways.
 
-3. **Event Delegation**: By attaching event listeners to the document, we can capture events from elements that might not exist yet.
-
-4. **Type Conversion**: We need to convert string values from inputs to appropriate data types (boolean, number) before storing them.
-
-5. **Unidirectional Data Flow**: Data flows one way - from user inputs through event handlers to our transient state.
-
-## 🎓 Practice Exercise: Blue Jeans Cost
-
-Dr. Jones is excited about your progress! She would like to add a new question to the survey:
-
-"Approximately how much did your blue jeans cost?"
-
-Your task:
-1. Update the transient state object to include a new property `blueJeansCost` with an initial value of 0
-2. Create a new setter function `setBlueJeansCost` in the transient state module
-3. Create a new component called `JeansCost.js` that:
-   - Displays the cost question
-   - Provides a number input field
-   - Includes an event handler to update the transient state
-4. Add your new component to the main render function
-
-Hint: For a number input, use `<input type="number" name="jeansCost" />` and remember to convert the value to a number before storing it.
+3. **Type Conversion**: We need to convert string values from inputs to appropriate data types (boolean, number) before storing them.
 
 ## 📝 What We've Learned
 
@@ -261,4 +214,4 @@ In this chapter, we've:
 
 ## 🔜 Next Steps
 
-Now that we can capture user choices, our next step is to create a submission button and a function to save the transient state to our database (permanent state). We'll also display the list of existing submissions on the page.
+Now that we can capture user choices, our next step is to create a submission button and a function to save the transient state to our database (permanent state). 
