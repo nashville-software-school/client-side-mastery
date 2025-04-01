@@ -1,5 +1,7 @@
 # Displaying Submissions with .map()
 
+## Introduction to Data Display
+
 In the previous chapter, we implemented the ability to save survey submissions to our database. Now, we need to display those submissions on the page. This will require us to:
 
 1. Fetch the existing submissions from the database
@@ -10,45 +12,47 @@ For this task, we'll leverage the `.map()` array method, which is an essential t
 
 ## Creating the SubmissionList Component
 
-Let's start by creating a new component that will be responsible for fetching and generating html for our submissions.
+Let's start by creating a new component that will be responsible for fetching and displaying our submissions.
 
-Create a new file called `SubmissionList.js` in your `scripts` directory and start writing the `SubmissionList` component function. The html returned from this function will be a `div` with an id of `survey-submission-list`. The div will contain an `h2` that says "Survey Submissions" and a list of all the submissions. Don't worry about generating the html for all the submissions yet, we'll use `.map` for this. Don't forget to fetch the submissions from the api!
+Create a new file called `SubmissionList.js` in your `scripts` directory:
 
-<details>
-  <summary>Expand the code below if you need help:</summary>
+```javascript
+export const SubmissionList = async () => {
+    // Fetch the submissions from your API
+    const response = await fetch("http://localhost:8088/submissions")
+    const submissions = await response.json()
 
-  ```javascript
-  export const SubmissionList = async () => {
-      // Fetch the submissions from your API
-      const response = await fetch("http://localhost:8088/submissions")
-      const submissions = await response.json()
+    let html = `
+        <div id='survey-submissions-list'>
+            <h2>Survey Submissions</h2>
+    `
+    
+    // TODO: Generate HTML for each submission
+    
+    html += `
+        </div>
+    `
+    
+    return html
+}
+```
 
-      let html = `
-          <div id='survey-submissions-list'>
-              <h2>Survey Submissions</h2>
-      `
-      
-      // TODO: Generate HTML for each submission
-      
-      html += `
-          </div>
-      `
-      
-      return html
-  }
-  ```
-</details>
+In this code, we:
+1. Declare an async function since we'll be using `await` with our fetch call
+2. Make a GET request to our submissions endpoint
+3. Convert the response to a JavaScript array using `.json()`
+4. Create the beginning of our HTML string with a container and heading
 
 ## Introduction to the .map() Method
 
 Now that we have our submissions data, we need to generate HTML for each submission. This is where the `.map()` method becomes incredibly useful.
 
-The `.map()` method creates a new array by applying a function to each element of the original array. In our case, we want to transform each submission object into an HTML string.
+The `.map()` method creates a new array by transforming each element of the original array. For each item in the array, you provide instructions on how to convert it into something new. In our case, we want to transform each submission object into an HTML string.
 
 Here's how the `.map()` method works:
 
 ```javascript
-const newArray = originalArray.map((item) => {
+const newArray = originalArray.map(function(item) {
     return transformedItem;
 });
 ```
