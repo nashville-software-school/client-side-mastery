@@ -35,8 +35,8 @@ Explorer chapters are **optional** and give you the opportunity to expand on the
 
 | # | 🧑🏿‍🌾 👖 <br/>Indiana Jeans | 💎 💍  <br/> Kneel Diamonds |  🚙 🚗 <br/> Car Builder |
 |--|--|--|--|
-| 1 |  |[Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
-| 2 | [Replace Object With Map](./chapters/IJ_PI_STATE_MAP.md) |[User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) |  |
+| 1 | [Adding Form Inputs](./chapters/IJ_EX_MORE_INPUTS.md) |[Ordering Earrings &amp; Necklaces](./chapters/KD_EARRINGS.md) | [Expanded Auto Offerings](./chapters/CB_MORE_FACTORIES.md) |
+| 2 | [Replace Object With Map](./chapters/ID_PI_STATE_MAP.md) |[User Option Choices as State](./chapters/KD_ADVANCED_STATE.md) |  |
 
 ## 🏕 Pioneer Chapters
 
