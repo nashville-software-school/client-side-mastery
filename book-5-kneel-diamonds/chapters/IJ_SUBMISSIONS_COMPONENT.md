@@ -184,7 +184,7 @@ Now, instead of showing just the location ID, we'll display the human-readable l
 
 After making this change to the submissions fetch call, check the network tab to view the structure of the response data. Refactor the `SubmissionList` component to display the Location name rather than the Location ID. 
 
-![](./images/indiana-jeans-submissions-location.png)
+![](./images/indiana-jeans-submissions-locations.png)
 
 ## 📓 Key Concepts to Remember
 
