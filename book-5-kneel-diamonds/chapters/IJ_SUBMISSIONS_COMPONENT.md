@@ -212,3 +212,5 @@ In this chapter, we've:
 ## 🔜 Next Steps
 
 Now that we can display submissions, our next step is to add an event listener that refreshes the submission list automatically whenever a new submission is created. This will involve using custom events to communicate between different parts of our application.
+
+Up Next: [Reacting To State Changes](./IJ_CUSTOM_EVENT.md)

@@ -1,4 +1,4 @@
-# Custom Events for State Changes
+# Reacting To State Changes
 
 ## The Re-render Problem
 
@@ -124,46 +124,15 @@ This sequence shows how:
 4. The event triggers a re-render
 5. The latest data is fetched and displayed
 
-## Benefits of Custom Events
-
-Custom events provide several advantages:
-
-1. **Loose Coupling**: Components can communicate without direct dependencies on each other
-2. **Scalability**: As your application grows, events allow for more modular code
-3. **Readability**: Events make the flow of your application easier to understand
-4. **Reusability**: Multiple components can listen for the same event
-
-## Testing the Custom Event
-
-To test our custom event:
-
-1. Make sure both your JSON server and web server are running
-2. Open your application in the browser
-3. Fill out the survey form and click the "Save Submission" button
-4. Watch as the list of submissions updates automatically with your new entry
-
 ## 📓 Key Concepts to Remember
 
-1. **Custom Events**: User-defined events that signal when something important happens in your application.
+1. **Custom Events**: developer-defined events that signal when something important happens in your application.
 
 2. **Event Dispatch**: Use `document.dispatchEvent(new CustomEvent("eventName"))` to trigger an event.
 
 3. **Event Listeners**: Use `document.addEventListener("eventName", handlerFunction)` to listen for events.
 
-4. **Event-Driven Architecture**: Different parts of your application communicate through events rather than direct function calls.
-
-5. **Re-rendering**: Updating the DOM to reflect changes in your application's state.
-
-## 🎓 Practice Exercise: Survey Clearing
-
-Dr. Jones has requested a new feature: after submitting a survey, the radio buttons should be cleared (unselected) to make it easier to submit another survey.
-
-Your task:
-1. Modify your application to clear the form selections after a successful submission
-2. Think about where this code should go - should it be part of the event handler? A separate function?
-3. Consider how you might need to add another custom event or modify existing ones
-
-Hint: You can set a radio button's `checked` property to `false` to unselect it, but you'll need to select all radio buttons first.
+4. **Re-rendering**: Updating the DOM to reflect changes in your application's state.
 
 ## 📝 What We've Learned
 
@@ -171,11 +140,10 @@ In this chapter, we've:
 - Identified the need for automatic re-rendering when data changes
 - Created a custom event to signal when a new submission is saved
 - Added an event listener to re-render the page when this event occurs
-- Explored the benefits of event-driven architecture
 - Visualized the flow of events in our application
 
 ## 🔜 Next Steps
 
 With our Indiana Jeans survey application now complete, we've covered important concepts in client-side web development: working with APIs, capturing user input, managing state, and implementing event-driven updates. These concepts will serve as a foundation as we move on to more complex applications.
 
-In the next project, we'll explore more advanced techniques for filtering data, working with more complex relationships, and creating more interactive user interfaces.
+[Table of Contents](../README.md)
