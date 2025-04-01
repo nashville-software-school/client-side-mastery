@@ -177,7 +177,7 @@ const displayDogImage = async () => {
 4. **Function requirement**: Any function that uses `await` must be declared with the `async` keyword
 5. **Promises underneath**: `async/await` is just a different way to write Promise-based code - Promises are still working behind the scenes
 
-## What We've Learned
+## 📝 What We've Learned
 
 In this chapter, we've:
 - Learned what `async/await` is and why it's useful
@@ -187,7 +187,7 @@ In this chapter, we've:
 - Built a working application that fetches and displays a dog image using `async/await`
 - Learned common mistakes to avoid when using `async/await`
 
-## Next Steps
+## 🔜 Next Steps
 
 In modern JavaScript, `async/await` is generally preferred for its readability and ease of use, but understanding both approaches will help you read and work with all kinds of JavaScript code. As we continue in this book we will use the `async/await` approach for the projects. However, you will encounter `.then()` again once you get to the React coursework as certain React functions don't allow the `async/await` approach. 
 

@@ -100,7 +100,7 @@ Now it's your turn to practice! Make a fetch call to the [random dog api](./FD_I
    - What headers are included in the response
    - What the response data looks like in the Preview tab
 
-## What We've Learned
+## 📝 What We've Learned
 
 In this chapter, we've:
 - Learned what the javascript fetch function is and how to make basic requests
@@ -109,7 +109,7 @@ In this chapter, we've:
 - Examined the structure of HTTP responses including headers and response data
 - Identified different two HTTP status codes and what they mean
 
-## Next Steps
+## 🔜 Next Steps
 
 In the upcoming chapters, we'll learn how to:
 - Work with the data that comes back from a fetch request
