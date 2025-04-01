@@ -23,7 +23,7 @@ Custom events work similarly to built-in events:
 
 ## Modifying the Transient State Module
 
-Let's update our `saveSurveySubmission` function in `transientState.js` to dispatch a custom event after a submission is saved:
+Let's update our `saveSurveySubmission` function in `transientState.js` to dispatch a custom event ***after a submission is saved***:
 
 ```javascript
 export const saveSurveySubmission = async () => {
@@ -45,7 +45,7 @@ export const saveSurveySubmission = async () => {
 
 Let's break down what we've added:
 
-1. After the POST request completes, we create a new `CustomEvent` with the type "newSubmissionCreated"
+1. After the POST request completes, we create a new `CustomEvent` and defined the type "newSubmissionCreated"
 2. We then dispatch this event on the document object, making it available to any listeners in our application
 
 The `CustomEvent` constructor takes a string argument which is the name of the event. This name can be anything we choose, but it should be descriptive of what happened.
