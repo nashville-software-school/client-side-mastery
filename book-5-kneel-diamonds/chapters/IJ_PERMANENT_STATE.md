@@ -246,7 +246,7 @@ sequenceDiagram
     participant API as JSON Server API
     participant DB as database.json
     
-    User->>Button: Clicks submit button and\n"click" event listener is triggered
+    User->>Button: Clicks submit button
     Button->>TransientState: handleSurveySubmission()
     TransientState->>TransientState: saveSurveySubmission()
     TransientState->>API: POST request with transient state
