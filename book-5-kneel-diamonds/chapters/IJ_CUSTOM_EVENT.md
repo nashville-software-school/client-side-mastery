@@ -102,13 +102,14 @@ sequenceDiagram
     participant API as JSON Server API
     participant DB as database.json
     
-    User->>Button: Clicks submit button
+    User->>Document: Clicks submit button
+    Document->>Button: "click" event listener triggered
     Button->>TransientState: handleSurveySubmission()
     TransientState->>API: POST request
     API->>DB: Save submission
     API-->>TransientState: Response (201 Created)
     TransientState->>Document: Dispatch "newSubmissionCreated"
-    Document->>Main: Event listener triggered
+    Document->>Main: "newSubmissionCreated" event listener triggered
     Main->>API: Fetch latest submissions
     API->>DB: GET request
     DB-->>API: Return submissions
