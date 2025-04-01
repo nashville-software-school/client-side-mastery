@@ -302,3 +302,5 @@ In this chapter, we've:
 ## 🔜 Next Steps
 
 Now that we can save submissions to our database, the next step is to display the list of existing submissions on the page. We'll create a new component that fetches all submissions and displays them in a formatted list.
+
+Up Next: [Displaying Submissions with .map()](./chapters/IJ_SUBMISSIONS_COMPONENT.md)
