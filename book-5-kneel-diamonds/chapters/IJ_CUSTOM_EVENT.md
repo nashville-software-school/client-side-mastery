@@ -95,11 +95,11 @@ Let's visualize the full event-driven flow in our application:
 ```mermaid
 sequenceDiagram
     participant User
+    participant Document as Document (DOM)
+    participant Main as main.js
     participant Button as SubmissionButton
     participant TransientState
     participant API as JSON Server API
-    participant Document as Document (DOM)
-    participant Main as main.js
     participant DB as database.json
     
     User->>Button: Clicks submit button
