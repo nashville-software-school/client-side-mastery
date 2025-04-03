@@ -1,13 +1,13 @@
 ---
-name: 'Book 5 Update: Kneel Diamonds'
-about: Template ticket for Kneel Diamonds chapter
-title: 'Kneel Diamonds: Chapter on'
+name: 'Book 5 Update: Breaking Beats'
+about: Template ticket for Breaking Beats chapter
+title: 'Breaking Beats: Chapter for'
 labels: ''
 assignees: ''
 
 ---
 
-### This ticket involves the following section in the *Kneel Diamonds* outline:
+### This ticket involves the following section in the *Breaking Beats* outline:
 
 * <sub>ERD</sub>
 * <sub>JSON database</sub>
@@ -23,7 +23,7 @@ assignees: ''
     * <sub>DELETE</sub>
     * <sub>User selection - drop down select</sub>
     * <sub>User input - text</sub>
-    * <sub>.find()</sub>
+    * <sub>.filter()</sub>
     * <sub>Network tab</sub>
         * <sub>Headers</sub>
             * <sub>url, method, code - 204</sub>
