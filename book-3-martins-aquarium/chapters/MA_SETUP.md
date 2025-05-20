@@ -17,7 +17,7 @@ Create the JavaScript modules
 
 ```bash
 mkdir scripts
-touch scripts/main.js scripts/fishData.js scripts/fishList.js scripts/tipList.js scripts/locationList.js
+touch scripts/main.js scripts/aquariumData.js scripts/fishList.js scripts/tipList.js scripts/locationList.js
 ```
 
 ```bash
@@ -37,7 +37,7 @@ Create the following files and directories inside the project directory:
   - `main.css`: The main CSS file for styling the aquarium showcase.
 - `scripts`: Directory to store JavaScript files.
   - `main.js`: The main JavaScript file for handling the aquarium functionality.
-  - `fishData.js`: File to store the fish data.
+  - `aquariumData.js`: File to store the fish data.
   - `fishList.js`: File to handle the rendering of the fish list.
   - `tipList.js`: File to handle the rendering of the care tips.
   - `locationList.js`: File to handle the rendering of the location list.
@@ -75,7 +75,7 @@ Open the `index.html` file and add the following basic HTML structure:
        </section>
    </main>
 
-   <script src="./scripts/main.js"></script>
+   <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>
 ```

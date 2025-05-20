@@ -44,7 +44,7 @@ Visit the [Node.js](https://www.nodejs.org) site and click on the install button
 1. Open Windows Terminal Preview and start a new **Git Bash** terminal window.
 1. Run the following command in the terminal to install both `serve` and `json-server`:
     ```sh
-    npm i -g serve json-server
+    npm i -g serve json-server@0.17.4
     ```
 
 ## Configuring Git

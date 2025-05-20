@@ -81,7 +81,7 @@ Open the `index.html` file in a text editor and add the following HTML code:
     <p>&copy; 2023 Movie Majesty. All rights reserved.</p>
   </footer>
 
-  <script src="scripts/main.js"></script>
+  <script src="scripts/main.js" type="module"></script>
 </body>
 </html>
 ```
@@ -103,7 +103,7 @@ At this point, our movie showcase page is still empty, but we have set up the ne
 
 ## Step 4: Initialize Repository and First Commit
 
-1. Make a new repository named `dynamite-duo` on Github.
+1. Make a new repository named `movie-majesty` on Github.
 2. In your project directory, run `git init` to create the local repository.
 3. Run `git add .` to stage the files.
 4. Run `git commit -m "Initial commit"` to commit the initial version of all of your files to the commit history.

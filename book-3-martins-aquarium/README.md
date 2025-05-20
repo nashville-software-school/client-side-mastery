@@ -14,7 +14,7 @@ In this book, you will learn how to build your first dynamic web page with HTML,
 | 4   | [Defining Villains](./chapters/DUO_VILLAINS.md) <br/> <sub style="font-size:0.85rem;">#components</sub> | [Displaying Movies in the Browser](./chapters/MM_RENDER.md) <br/> <sub style="font-size:0.85rem;">#DOM #getElementById</sub> |  [Style and Layout](./chapters/MA_LAYOUT.md) |
 | 5   | [Targeting a DOM Element](./chapters/DUO_HTML_ELEMENT_REFERENCE.md) <br/> <sub style="font-size:0.85rem;">#dom-query #debugger</sub> | [The Main Algorithm](./chapters/MM_MAIN.md) <br/> <sub style="font-size:0.85rem;">#modules #algorithm</sub> | [Filtering Fish](./chapters/MA_FILTERING_FISH.md) |
 | 6   | [Composing All HTML](./chapters/DUO_HTML_GENERATORS.md) <br/> <sub style="font-size:0.85rem;">#debugger #string-templates</sub> | [Card Styles](./chapters/MM_CARD_STYLE.md) <br/> <sub style="font-size:0.85rem;">#css #flexbox #css-transition</sub> |  |
-| 7   | [Dynamically Adding HTML to the DOM](./chapters/DUO_DOM_UPDATE.md) <br/> <sub style="font-size:0.85rem;">#innerHTML</sub> | [Grid Layout for Movie Cards](./chapters/MM_CARD_LAYOUT) <br/> <sub style="font-size:0.85rem;">#css #flexbox</sub> | |
+| 7   | [Dynamically Adding HTML to the DOM](./chapters/DUO_DOM_UPDATE.md) <br/> <sub style="font-size:0.85rem;">#innerHTML</sub> | [Grid Layout for Movie Cards](./chapters/MM_CARD_LAYOUT.md) <br/> <sub style="font-size:0.85rem;">#css #flexbox</sub> | |
 | 8   | [Review of Signal Flow](./chapters/DUO_REVIEW.md) |  |  |
 
 Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an mentor to review your vocabulary.
@@ -22,6 +22,16 @@ Once you have completed all of the Core Projects, your job is to do a self-asses
 | # | 🎓  Self-Assessment |
 | --- | --- |
 | 1 | [Self-Assess JavaScript Fundamentals](./chapters/HAIRY_POTTER.md) |
+
+## 🧭 Explorer Chapters
+
+Explorer chapters are **optional** and give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
+
+| # | 🧨 💥 Dynamite Duo | 🎥 🍿 Movie Majesty | 🐠  Martin's Aquarium |
+|--|--|--|--|
+| 1 | [Are you primitive?](./chapters/VARIABLES.md) | N/A | N/A |
+| 2 | [Copy me if you can](./chapters/COPIES.md) | N/A | N/A |
+
 
 ## 🔐 Group Project
 

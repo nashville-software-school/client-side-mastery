@@ -1,4 +1,4 @@
-# Book 5 - Honey Rae's Repair Shop
+# Honey Rae's Repair Shop
 It is very important that you work on the concepts in this book in the segments that are suggested.
 
 Move top to bottom, left to right.
@@ -52,6 +52,7 @@ Here's how that looks
 | 15 | [Customer Tickets](./chapters/REPAIR_CUSTOMER_TICKETS.md) <br/> <sub style="font-size:0.85rem;">#conditional-rendering #filter #delete</sub> | [Favorites](./chapters/LEARN_FAVORITES.md) |
 | 16 | [Create Ticket](./chapters/REPAIR_CREATE_TICKET.md) <br/> <sub style="font-size:0.85rem;">#forms #post</sub> | [User Profile](./chapters/LEARN_VIEW_PROFILE.md) |
 | 17 |  | [Edit Profile](./chapters/LEARN_EDIT_PROFILE.md) |
+
 ## 🧭 Explorer Chapters
 
 Explorer chapters give you the opportunity to expand on the Core chapters and the concepts in the book without any guidance or boilerplate code.
@@ -61,8 +62,8 @@ Explorer chapters give you the opportunity to expand on the Core chapters and th
 | 2 |  Learn how to [deploy your API to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_JSON.md) for free |
 | 3 | Learn how to [deploy your client to Digital Ocean](./chapters/CLOUD_DIGITAL_OCEAN_STATIC.md) for free |
 
-## 🔐 Group
+## Preparing for Capstones
 
-| # | Project&nbsp;Name | Description |
-|--|--|--|
-|1| [🌹&nbsp;Thorns&nbsp;&amp;&nbsp;Roses](../projects/tier-5/thorns-roses/) | Want the ultimate challenge? Using complex data relationships with React, build a project that manages state for flowers, nurseries, distributors, retailers, and customers buying flowers at the retailers. |
+After you are done with the core projects and group project, it will be time to build your first official assessment at NSS - the capstone.
+
+Read the [helpful capstone resources](./chapters/CAPSTONES.md) chapter

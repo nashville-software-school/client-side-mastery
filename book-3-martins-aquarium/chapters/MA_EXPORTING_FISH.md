@@ -14,15 +14,15 @@ The database module will maintain the state, but other modules need copies of th
 
 The function is exported so other modules can import it and use it.
 
-Don't worry about understanding all of the syntax here. Just remember that it copies the objects in an array. Understanding comes with time and practice.
-
 > **`workspace/martins-aquarium/scripts/database.js`**
 
 ```js
 export const getFish = () => {
-    return database.fish.map(fish => ({...fish}))
+    return structuredClone(database.fish);
 }
 ```
+### What is structuredClone?
+`structuredClone` is a built-in JavaScript function that creates a deep copy of a value. This means it duplicates objects, arrays, and even complex data structures without keeping any references to the original.
 
 Next, you import that function into the main module. Then you can invoke the function and store the fish collection in a variable that is scoped to the main module. Then just log each fish object to the developer console.
 

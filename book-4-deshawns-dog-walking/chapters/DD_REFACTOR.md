@@ -133,11 +133,11 @@ const assignedCityNames = (assignments) => {
 
 ```js
 export const getCities = () => {
-    return database.cities.map(city => ({...city}))
+    return structuredClone(database.cities);
 }
 
 export const getWalkerCities = () => {
-    return database.walkerCities.map(assignment => ({...assignment}))
+    return structuredClone(database.walkerCities)
 }
 ```
 </details>
