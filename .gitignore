@@ -10,3 +10,7 @@ obj
 .DS_Store
 zsh-reload.log
 .obsidian
+
+.roo/
+.roomodes
+memory-bank/
