@@ -115,7 +115,7 @@ Use a generative AI tool to generate 10 more fish objects that you can put into 
 
 ## Step 2: Multiple Fish HTML Function
 
-You need to build three functions module that generates fish HTML. One to return an array of fish that are multiples of 3 in length, one for multiples of 5, and one for all others.
+You need to build three functions module that generates fish HTML. One to return a string of HTML containing fish that are multiples of 3 in length, one for multiples of 5, and one for all others.
 
 Some starter code is provided below. Use the example code blocks above to have each function filter out the appropriate fish.
 
