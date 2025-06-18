@@ -102,6 +102,7 @@ Invest 9 minutes of your time to watch the [Using Rectangle to Manage macOS Wind
 [Follow these steps](https://code.visualstudio.com/docs/setup/mac) to set up Visual Studio Code to be launched from the command line.
 
 ---
+⬅ Back to [Table of Contents](../README.md)
 
 <br/>
 <br/>

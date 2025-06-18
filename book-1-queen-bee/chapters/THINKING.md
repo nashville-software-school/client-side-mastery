@@ -51,3 +51,6 @@ In many of the early chapters, there are helpful hint scattered through the cont
 
 If you're stuck on coming up with an algorithm to solve this problem, try a strategy that involves math - addition and subtraction.
 </details>
+
+---
+⬅ Back to [Table of Contents](../README.md)

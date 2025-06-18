@@ -10,3 +10,6 @@ You will learn how to do the following tasks.
 1. Stop debugger
 1. Step through code
 1. Continue execution
+
+---
+⬅ Back to [Table of Contents](../README.md)

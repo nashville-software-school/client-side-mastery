@@ -68,3 +68,7 @@ Watch a short video for [creating an SSH key in the terminal](https://youtu.be/z
 ## Add SSH Key to GitHub Account
 
 Now watch the video for [adding your SSH key to your GitHub account](https://youtu.be/8hlmIObpMd4).
+
+
+---
+⬅ Back to [Table of Contents](../README.md)
