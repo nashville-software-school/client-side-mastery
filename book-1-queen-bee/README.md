@@ -9,7 +9,7 @@
 | 💻 | [Installations for Windows Users - Python Edition](./chapters/GETTING_STARTED_WINDOWS.md) <br/> <sub><em>Use this chapter if you have Windows OS and are in a Python cohort</em></sub> | | |
 | 💻 | [Installations for Windows Users - C# Edition](./chapters/GETTING_STARTED_WINDOWS_C_SHARP.md) <br/> <sub><em>Use this chapter if you have Windows OS and are in a C# cohort</em></sub> | | |
 
-## Prerequisite Material
+<!-- ## Prerequisite Material
 
 |  |  |
 | --- | --- |
@@ -21,7 +21,7 @@
 |     | Setting Up Your Brain |
 | --- | --- |
 | 💡  | [ADHD Strategies](./chapters/ADHD_STRATEGIES.md) </br> <sub><em>Read this if you have ADHD or struggle with similar symptoms</em></sub> |
-
+ -->
 
 # Algorithmic Thinking as Code
 
