@@ -9,7 +9,7 @@ This is accomplished by using the `.innerHTML` property of any HTML element.
 You can watch a brief video that shows how the `.innerHTML` and `.textContent` properties of HTML elements work.
 
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://www.youtube.com/watch?v=1UsllDMhvN4)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://www.youtube.com/watch?v=1UsllDMhvN4)
 
 
 ## Updating Your DOM

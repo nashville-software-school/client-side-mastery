@@ -41,4 +41,4 @@ You also have the power to define your own attributes to store state, or data, i
 
 There is an article linked above that you are encourage to read. Then watch a video for how to implement additional state in your HTML when generating it with JavaScript.
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/JI0eaiPwi4bZ8AmSoYCK)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/JI0eaiPwi4bZ8AmSoYCK)

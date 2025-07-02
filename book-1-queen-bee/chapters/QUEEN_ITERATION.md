@@ -63,4 +63,4 @@ This is a top priority skill that you must have as a developer, so skipping this
 
 Watch the following video for an overview of using the debugger for this version of your code.
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/1sIKYzOFt8qEfrlIic6T)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/1sIKYzOFt8qEfrlIic6T)

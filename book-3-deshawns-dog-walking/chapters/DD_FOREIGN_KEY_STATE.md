@@ -15,4 +15,4 @@ petHTML += `<li data-walkerforeignkey="${pet.walkerId}">
 Watch the **DeShawn - Add Walker Foreign Key** video to see a walkthrough of the process and then implement it yourself.
 
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/PAMYsa0EtwSSRZlmbFVD)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/PAMYsa0EtwSSRZlmbFVD)
