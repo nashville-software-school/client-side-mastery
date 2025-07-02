@@ -19,4 +19,4 @@ Currently, you have a loop to see if a particular tribute item is assigned to a 
 
 Watch a short video that shows the syntax and operation of the `.find()` method on an array and see if you can replace the `for..of` loop above with an array method operation instead.
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://www.youtube.com/watch?v=N1QcR8F3xFY)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://www.youtube.com/watch?v=N1QcR8F3xFY)

@@ -10,4 +10,4 @@ Since those two bits of information are in different arrays, you will need to ac
 
 Watch the following video to see how this can be accomplished using the state stored in the DOM and iterating an array of related data to find an object that matches a foreign key.
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/I0aherA2ukoKjwZ6AA4E)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/I0aherA2ukoKjwZ6AA4E)

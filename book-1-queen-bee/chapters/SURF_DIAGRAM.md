@@ -39,7 +39,7 @@ It is a visualization of your algorithmic thinking.
 
 Below is a sample sequence diagram, and you can watch how it was built by watching the following video.
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/GvHoKaYhf17v0rQAbbmb)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/GvHoKaYhf17v0rQAbbmb)
 
 ### Example Diagram
 

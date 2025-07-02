@@ -20,4 +20,4 @@ for (const item of todaysIngredients) {
 
 Watch a short video that shows the syntax and operation of the `.map()` method on an array and see if you can replace your `for..of` loop in your code.
 
-[<img src="../../../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://www.youtube.com/watch?v=G3BS3sh3D8Q)
+[<img src="../../../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://www.youtube.com/watch?v=G3BS3sh3D8Q)

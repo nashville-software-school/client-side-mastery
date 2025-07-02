@@ -59,7 +59,7 @@ Time to practice using the debugger again. Put a breakpoint on the first line of
 
 For a review, you can watch a video that steps through the code and examines that values of variables as they change.
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/MUKQNQMgqHOH3OFYnQOB)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/MUKQNQMgqHOH3OFYnQOB)
 
 ## Hints
 

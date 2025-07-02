@@ -87,7 +87,7 @@ In order to automate the installation of the tools you need _(which happens in t
 1. Copy pasta the following command into the terminal and hit enter to run it. It will attempt to install some of the basic tools you need for NSS.
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-1-installations/chapters/scripts/installs-wsl.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-1-queen-bee/chapters/scripts/installs-wsl.sh)"
 ```
 
 

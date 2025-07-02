@@ -105,5 +105,5 @@ That will generate list items in this format.
 
 Now watch a 7:23 long video that demonstrates how to use those data attributes on the list items to implement the algorithm. After watching the video, implement the code yourself.
 
-[<img src="../../book-1-installations/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/kaWPyxCnewek1lgFyX7e)
+[<img src="../../book-1-queen-bee/chapters/images/video-play-icon.gif" height="75rem" />](https://watch.screencastify.com/v/kaWPyxCnewek1lgFyX7e)
 
