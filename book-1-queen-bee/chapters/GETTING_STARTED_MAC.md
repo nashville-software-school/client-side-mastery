@@ -40,10 +40,6 @@ You will now see the screen to generate a token.
     ```sh
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nashville-software-school/course-bash-scripts/main/client/create-key.sh)"
     ```
-12. Once that process is complete, you should see the following output. If you see anything different contact an mentor.
-    ```txt
-    POST for SSH key returned status code 200
-    ```
 
 ## Install Homebrew
 
